@@ -1,0 +1,6 @@
+@ExceptionHandlingModule_HostAddress = http://localhost:5243
+
+GET {{ExceptionHandlingModule_HostAddress}}/validation/
+Accept: application/json
+
+###
