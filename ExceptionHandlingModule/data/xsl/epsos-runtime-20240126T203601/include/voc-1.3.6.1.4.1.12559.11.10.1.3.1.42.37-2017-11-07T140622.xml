@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:pharm="urn:hl7-org:pharm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.37"
+             name="epSOSNullFavor"
+             displayName="epSOSNullFavor"
+             effectiveDate="2017-11-07T14:06:22"
+             officialReleaseDate="2017-11-07T14:06:22"
+             statusCode="deprecated"
+             versionLabel="201711">
+      <desc language="en-US">epSOSNullFavor</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.1008"
+                        identifierName="Null Flavor"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.1008"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.1008"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.1008"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.1008"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <exception code="ASKU"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="asked but unknown"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="asked but unknown" type="fsn">Information was sought but not found (e.g., patient was asked but didn't know)</designation>
+                    <desc language="en-US">asked but unknown</desc>
+                </exception>
+                <exception code="MSK"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="masked"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="masked" type="fsn">There is information on this item available but it has not been provided by the sender due to security, privacy or other reasons. There may be an alternate mechanism for gaining access to this information.Note: using this null flavor does provide information that may be a breach of confidentiality, even though no detail data is provided. Its primary purpose is for those circumstances where it is necessary to inform the receiver that the information does exist without providing any detail.</designation>
+                    <desc language="en-US">masked</desc>
+                </exception>
+                <exception code="NA"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="not applicable"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="not applicable" type="fsn">Known to have no proper value (e.g., last menstrual period for a male).</designation>
+                    <desc language="en-US">not applicable</desc>
+                </exception>
+                <exception code="NASK"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="not asked"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="not asked" type="fsn">This information has not been sought (e.g., patient was not asked)</designation>
+                    <desc language="en-US">not asked</desc>
+                </exception>
+                <exception code="NAV"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="temporarily unavailable"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="temporarily unavailable" type="fsn">Information is not available at this time but it is expected that it will be available later.</designation>
+                    <desc language="en-US">temporarily unavailable</desc>
+                </exception>
+                <exception code="NI"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="NoInformation"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="NoInformation" type="fsn">The value is exceptional (missing, omitted, incomplete, improper). No information as to the reason for being an exceptional value is provided. This is the most general exceptional value. It is also the default exceptional value.</designation>
+                    <desc language="en-US">NoInformation</desc>
+                </exception>
+                <exception code="NINF"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="negative infinity"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="negative infinity" type="fsn">Negative infinity of numbers.</designation>
+                    <desc language="en-US">negative infinity</desc>
+                </exception>
+                <exception code="OTH"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="other"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="other" type="fsn">The actual value is not a member of the set of permitted data values in the constrained value domain of a variable. (e.g., concept not provided by required code system).</designation>
+                    <desc language="en-US">other</desc>
+                </exception>
+                <exception code="PINF"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="positive infinity"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="positive infinity" type="fsn">Positive infinity of numbers.</designation>
+                    <desc language="en-US">positive infinity</desc>
+                </exception>
+                <exception code="TRC"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="trace"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="trace" type="fsn">The content is greater than zero, but too small to be quantified.</designation>
+                    <desc language="en-US">trace</desc>
+                </exception>
+                <exception code="UNK"
+                    codeSystem="2.16.840.1.113883.5.1008"
+                    displayName="unknown"
+                    level="0"
+                    type="L">
+                    <designation language="en-GB" displayName="unknown" type="fsn">A proper value is applicable, but not known.</designation>
+                    <desc language="en-US">unknown</desc>
+                </exception>
+            </conceptList>
+   </valueSet>
+</valueSets>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:pharm="urn:hl7-org:pharm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.13"
+             name="epSOSSeverity"
+             displayName="epSOSSeverity"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="deprecated"
+             versionLabel="201711">
+      <desc language="en-US">epSOSSeverity</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.96"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="24484000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Severe"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Severe" type="fsn">Severe</designation>
+                    <desc language="en-US">Severe</desc>
+                </concept>
+                <concept code="255604002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Mild"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Mild" type="fsn">Mild</designation>
+                    <desc language="en-US">Mild</desc>
+                </concept>
+                <concept code="371923003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Mild to moderate"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Mild to moderate" type="fsn">Mild to moderate</designation>
+                    <desc language="en-US">Mild to moderate</desc>
+                </concept>
+                <concept code="371924009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Moderate to severe"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Moderate to severe" type="fsn">Moderate to severe</designation>
+                    <desc language="en-US">Moderate to severe</desc>
+                </concept>
+                <concept code="442452003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Life threatening severity"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Life threatening severity" type="fsn">Life threatening severity</designation>
+                    <desc language="en-US">Life threatening severity</desc>
+                </concept>
+                <concept code="6736007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Moderate"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Moderate" type="fsn">Moderate</designation>
+                    <desc language="en-US">Moderate</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

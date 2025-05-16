@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:pharm="urn:hl7-org:pharm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.19"
+             name="epSOSAllergenNoDrugs"
+             displayName="epSOSAllergenNoDrugs"
+             statusCode="deprecated"
+             versionLabel="201912"
+             officialReleaseDate="2017-11-07T14:06:20"
+             effectiveDate="2019-12-23T15:35:42">
+      <desc language="en-US">epSOSAllergenNoDrugs</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.96"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="418920007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Adhesive agent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Adhesive agent" type="fsn">Adhesive agent</designation>
+                    <desc language="en-US">Adhesive agent</desc>
+                </concept>
+                <concept code="14423008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Adhesive bandage"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Adhesive bandage" type="fsn">Adhesive bandage</designation>
+                    <desc language="en-US">Adhesive bandage</desc>
+                </concept>
+                <concept code="52454007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Albumin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Albumin" type="fsn">Albumin</designation>
+                    <desc language="en-US">Albumin</desc>
+                </concept>
+                <concept code="391737006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Almond oil"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Almond oil" type="fsn">Almond oil</designation>
+                    <desc language="en-US">Almond oil</desc>
+                </concept>
+                <concept code="264287008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Animal dander"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Animal dander" type="fsn">Animal dander</designation>
+                    <desc language="en-US">Animal dander</desc>
+                </concept>
+                <concept code="276310004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Animal hair"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Animal hair" type="fsn">Animal hair</designation>
+                    <desc language="en-US">Animal hair</desc>
+                </concept>
+                <concept code="406472009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Animal protein and epidermal allergen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Animal protein and epidermal allergen"
+                         type="fsn">Animal protein and epidermal allergen</designation>
+                    <desc language="en-US">Animal protein and epidermal allergen</desc>
+                </concept>
+                <concept code="735215001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Apple"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Apple" type="fsn">Apple</designation>
+                    <desc language="en-US">Apple</desc>
+                </concept>
+                <concept code="226491003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Apple juice"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Apple juice" type="fsn">Apple juice</designation>
+                    <desc language="en-US">Apple juice</desc>
+                </concept>
+                <concept code="11526002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Aspartame"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Aspartame" type="fsn">Aspartame</designation>
+                    <desc language="en-US">Aspartame</desc>
+                </concept>
+                <concept code="386936005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Azelaic acid"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Azelaic acid" type="fsn">Azelaic acid</designation>
+                    <desc language="en-US">Azelaic acid</desc>
+                </concept>
+                <concept code="256307007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Banana"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Banana" type="fsn">Banana</designation>
+                    <desc language="en-US">Banana</desc>
+                </concept>
+                <concept code="288328004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Bee venom"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bee venom" type="fsn">Bee venom</designation>
+                    <desc language="en-US">Bee venom</desc>
+                </concept>
+                <concept code="91598004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Benzoyl peroxide"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Benzoyl peroxide" type="fsn">Benzoyl peroxide</designation>
+                    <desc language="en-US">Benzoyl peroxide</desc>
+                </concept>
+                <concept code="255640000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Biocide"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Biocide" type="fsn">Biocide</designation>
+                    <desc language="en-US">Biocide</desc>
+                </concept>
+                <concept code="412061001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Blueberries"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Blueberries" type="fsn">Blueberries</designation>
+                    <desc language="en-US">Blueberries</desc>
+                </concept>
+                <concept code="261243003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Brass"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Brass" type="fsn">Brass</designation>
+                    <desc language="en-US">Brass</desc>
+                </concept>
+                <concept code="726764009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Broad bean"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Broad bean" type="fsn">Broad bean</designation>
+                    <desc language="en-US">Broad bean</desc>
+                </concept>
+                <concept code="9021002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Carbaryl"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Carbaryl" type="fsn">Carbaryl</designation>
+                    <desc language="en-US">Carbaryl</desc>
+                </concept>
+                <concept code="256319004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Carrot"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Carrot" type="fsn">Carrot</designation>
+                    <desc language="en-US">Carrot</desc>
+                </concept>
+                <concept code="260152009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cat dander"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cat dander" type="fsn">Cat dander</designation>
+                    <desc language="en-US">Cat dander</desc>
+                </concept>
+                <concept code="256326004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Celery"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Celery" type="fsn">Celery</designation>
+                    <desc language="en-US">Celery</desc>
+                </concept>
+                <concept code="23182003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cereal"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cereal" type="fsn">Cereal</designation>
+                    <desc language="en-US">Cereal</desc>
+                </concept>
+                <concept code="102264005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cheese"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cheese" type="fsn">Cheese</designation>
+                    <desc language="en-US">Cheese</desc>
+                </concept>
+                <concept code="105590001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Substance"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Substance" type="fsn">Substance</designation>
+                    <desc language="en-US">Substance</desc>
+                </concept>
+                <concept code="735248001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cherry"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cherry" type="fsn">Cherry</designation>
+                    <desc language="en-US">Cherry</desc>
+                </concept>
+                <concept code="102262009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Chocolate"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Chocolate" type="fsn">Chocolate</designation>
+                    <desc language="en-US">Chocolate</desc>
+                </concept>
+                <concept code="227388008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cinnamon"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cinnamon" type="fsn">Cinnamon</designation>
+                    <desc language="en-US">Cinnamon</desc>
+                </concept>
+                <concept code="59351004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Citrate"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Citrate" type="fsn">Citrate</designation>
+                    <desc language="en-US">Citrate</desc>
+                </concept>
+                <concept code="102259006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Citrus fruit"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Citrus fruit" type="fsn">Citrus fruit</designation>
+                    <desc language="en-US">Citrus fruit</desc>
+                </concept>
+                <concept code="11894001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Clostridium botulinum toxin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Clostridium botulinum toxin"
+                         type="fsn">Clostridium botulinum toxin</designation>
+                    <desc language="en-US">Clostridium botulinum toxin</desc>
+                </concept>
+                <concept code="80237000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cocoa butter"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cocoa butter" type="fsn">Cocoa butter</designation>
+                    <desc language="en-US">Cocoa butter</desc>
+                </concept>
+                <concept code="406473004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Contact allergen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Contact allergen" type="fsn">Contact allergen</designation>
+                    <desc language="en-US">Contact allergen</desc>
+                </concept>
+                <concept code="425620007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Metal"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Metal" type="fsn">Metal</designation>
+                    <desc language="en-US">Metal</desc>
+                </concept>
+                <concept code="66925006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Copper"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Copper" type="fsn">Copper</designation>
+                    <desc language="en-US">Copper</desc>
+                </concept>
+                <concept code="412357001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Corn"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Corn" type="fsn">Corn</designation>
+                    <desc language="en-US">Corn</desc>
+                </concept>
+                <concept code="289122001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cosmetic material"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cosmetic material" type="fsn">Cosmetic material</designation>
+                    <desc language="en-US">Cosmetic material</desc>
+                </concept>
+                <concept code="260153004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cow dander"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cow dander" type="fsn">Cow dander</designation>
+                    <desc language="en-US">Cow dander</desc>
+                </concept>
+                <concept code="264295007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cow's milk protein"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cow's milk protein" type="fsn">Cow's milk protein</designation>
+                    <desc language="en-US">Cow's milk protein</desc>
+                </concept>
+                <concept code="289949002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cypress pollen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cypress pollen" type="fsn">Cypress pollen</designation>
+                    <desc language="en-US">Cypress pollen</desc>
+                </concept>
+                <concept code="226760005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Dairy foods"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dairy foods" type="fsn">Dairy foods</designation>
+                    <desc language="en-US">Dairy foods</desc>
+                </concept>
+                <concept code="762766007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Edible substance"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Edible substance" type="fsn">Edible substance</designation>
+                    <desc language="en-US">Edible substance</desc>
+                </concept>
+                <concept code="396031000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Dimeticone"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dimeticone" type="fsn">Dimeticone</designation>
+                    <desc language="en-US">Dimeticone</desc>
+                </concept>
+                <concept code="260154005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Dog dander"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dog dander" type="fsn">Dog dander</designation>
+                    <desc language="en-US">Dog dander</desc>
+                </concept>
+                <concept code="33008008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Dust"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dust" type="fsn">Dust</designation>
+                    <desc language="en-US">Dust</desc>
+                </concept>
+                <concept code="61789006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Dye"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dye" type="fsn">Dye</designation>
+                    <desc language="en-US">Dye</desc>
+                </concept>
+                <concept code="303300008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Egg protein"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Egg protein" type="fsn">Egg protein</designation>
+                    <desc language="en-US">Egg protein</desc>
+                </concept>
+                <concept code="256443002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Egg white"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Egg white" type="fsn">Egg white</designation>
+                    <desc language="en-US">Egg white</desc>
+                </concept>
+                <concept code="102263004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Eggs (edible)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Eggs (edible)" type="fsn">Eggs (edible)</designation>
+                    <desc language="en-US">Eggs (edible)</desc>
+                </concept>
+                <concept code="115589000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Ethanolamine"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ethanolamine" type="fsn">Ethanolamine</designation>
+                    <desc language="en-US">Ethanolamine</desc>
+                </concept>
+                <concept code="12510000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Eucalyptus oil"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Eucalyptus oil" type="fsn">Eucalyptus oil</designation>
+                    <desc language="en-US">Eucalyptus oil</desc>
+                </concept>
+                <concept code="256435007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Feathers"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Feathers" type="fsn">Feathers</designation>
+                    <desc language="en-US">Feathers</desc>
+                </concept>
+                <concept code="227425007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Figs"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Figs" type="fsn">Figs</designation>
+                    <desc language="en-US">Figs</desc>
+                </concept>
+                <concept code="735971005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Fish"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Fish" type="fsn">Fish</designation>
+                    <desc language="en-US">Fish</desc>
+                </concept>
+                <concept code="406774009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Fish derived omega 3 fatty acid"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Fish derived omega 3 fatty acid"
+                         type="fsn">Fish derived omega 3 fatty acid</designation>
+                    <desc language="en-US">Fish derived omega 3 fatty acid</desc>
+                </concept>
+                <concept code="735341005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Fish oil"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Fish oil" type="fsn">Fish oil</designation>
+                    <desc language="en-US">Fish oil</desc>
+                </concept>
+                <concept code="256292005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Flower and weed pollen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Flower and weed pollen" type="fsn">Flower and weed pollen</designation>
+                    <desc language="en-US">Flower and weed pollen</desc>
+                </concept>
+                <concept code="59533004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Food additive"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Food additive" type="fsn">Food additive</designation>
+                    <desc language="en-US">Food additive</desc>
+                </concept>
+                <concept code="72511004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Fruit"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Fruit" type="fsn">Fruit</designation>
+                    <desc language="en-US">Fruit</desc>
+                </concept>
+                <concept code="116637007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Fungal antigen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Fungal antigen" type="fsn">Fungal antigen</designation>
+                    <desc language="en-US">Fungal antigen</desc>
+                </concept>
+                <concept code="735030001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Garlic"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Garlic" type="fsn">Garlic</designation>
+                    <desc language="en-US">Garlic</desc>
+                </concept>
+                <concept code="57126000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Glue"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Glue" type="fsn">Glue</designation>
+                    <desc language="en-US">Glue</desc>
+                </concept>
+                <concept code="430503006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Glutamate"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Glutamate" type="fsn">Glutamate</designation>
+                    <desc language="en-US">Glutamate</desc>
+                </concept>
+                <concept code="89811004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Gluten"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Gluten" type="fsn">Gluten</designation>
+                    <desc language="en-US">Gluten</desc>
+                </concept>
+                <concept code="2309006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Gold"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Gold" type="fsn">Gold</designation>
+                    <desc language="en-US">Gold</desc>
+                </concept>
+                <concept code="256277009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Grass pollen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Grass pollen" type="fsn">Grass pollen</designation>
+                    <desc language="en-US">Grass pollen</desc>
+                </concept>
+                <concept code="412145001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Hair dye"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hair dye" type="fsn">Hair dye</designation>
+                    <desc language="en-US">Hair dye</desc>
+                </concept>
+                <concept code="37017009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Helminth"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Helminth" type="fsn">Helminth</designation>
+                    <desc language="en-US">Helminth</desc>
+                </concept>
+                <concept code="227374009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Herbs and spices"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Herbs and spices" type="fsn">Herbs and spices</designation>
+                    <desc language="en-US">Herbs and spices</desc>
+                </concept>
+                <concept code="256417003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Horse dander"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Horse dander" type="fsn">Horse dander</designation>
+                    <desc language="en-US">Horse dander</desc>
+                </concept>
+                <concept code="128488006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="House dust"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="House dust" type="fsn">House dust</designation>
+                    <desc language="en-US">House dust</desc>
+                </concept>
+                <concept code="406466009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="House dust allergen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="House dust allergen" type="fsn">House dust allergen</designation>
+                    <desc language="en-US">House dust allergen</desc>
+                </concept>
+                <concept code="406470001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Insect allergen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Insect allergen" type="fsn">Insect allergen</designation>
+                    <desc language="en-US">Insect allergen</desc>
+                </concept>
+                <concept code="280939008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Insect venom"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Insect venom" type="fsn">Insect venom</designation>
+                    <desc language="en-US">Insect venom</desc>
+                </concept>
+                <concept code="3829006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Iron"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Iron" type="fsn">Iron</designation>
+                    <desc language="en-US">Iron</desc>
+                </concept>
+                <concept code="31006001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Kingdom Plantae"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Kingdom Plantae" type="fsn">Kingdom Plantae</designation>
+                    <desc language="en-US">Kingdom Plantae</desc>
+                </concept>
+                <concept code="260176001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Kiwi fruit"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Kiwi fruit" type="fsn">Kiwi fruit</designation>
+                    <desc language="en-US">Kiwi fruit</desc>
+                </concept>
+                <concept code="47703008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Lactose"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Lactose" type="fsn">Lactose</designation>
+                    <desc language="en-US">Lactose</desc>
+                </concept>
+                <concept code="42416001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Lanolin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Lanolin" type="fsn">Lanolin</designation>
+                    <desc language="en-US">Lanolin</desc>
+                </concept>
+                <concept code="111088007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Latex"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Latex" type="fsn">Latex</designation>
+                    <desc language="en-US">Latex</desc>
+                </concept>
+                <concept code="736162008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Lobster"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Lobster" type="fsn">Lobster</designation>
+                    <desc language="en-US">Lobster</desc>
+                </concept>
+                <concept code="28647000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Meat"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Meat" type="fsn">Meat</designation>
+                    <desc language="en-US">Meat</desc>
+                </concept>
+                <concept code="260177005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Melon"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Melon" type="fsn">Melon</designation>
+                    <desc language="en-US">Melon</desc>
+                </concept>
+                <concept code="2799001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Methylbenzethonium chloride"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Methylbenzethonium chloride"
+                         type="fsn">Methylbenzethonium chloride</designation>
+                    <desc language="en-US">Methylbenzethonium chloride</desc>
+                </concept>
+                <concept code="256419000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Mouse epithelium"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Mouse epithelium" type="fsn">Mouse epithelium</designation>
+                    <desc language="en-US">Mouse epithelium</desc>
+                </concept>
+                <concept code="260156007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Mouse urine proteins"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Mouse urine proteins" type="fsn">Mouse urine proteins</designation>
+                    <desc language="en-US">Mouse urine proteins</desc>
+                </concept>
+                <concept code="735045008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Mushroom"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Mushroom" type="fsn">Mushroom</designation>
+                    <desc language="en-US">Mushroom</desc>
+                </concept>
+                <concept code="51905005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Mustard"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Mustard" type="fsn">Mustard</designation>
+                    <desc language="en-US">Mustard</desc>
+                </concept>
+                <concept code="33396006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Nickel"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Nickel" type="fsn">Nickel</designation>
+                    <desc language="en-US">Nickel</desc>
+                </concept>
+                <concept code="13577000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Nut"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Nut" type="fsn">Nut</designation>
+                    <desc language="en-US">Nut</desc>
+                </concept>
+                <concept code="230034002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Nuts and seeds"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Nuts and seeds" type="fsn">Nuts and seeds</designation>
+                    <desc language="en-US">Nuts and seeds</desc>
+                </concept>
+                <concept code="418504009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Oats"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Oats" type="fsn">Oats</designation>
+                    <desc language="en-US">Oats</desc>
+                </concept>
+                <concept code="735979007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Octopus"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Octopus" type="fsn">Octopus</designation>
+                    <desc language="en-US">Octopus</desc>
+                </concept>
+                <concept code="260126003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Olive pollen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Olive pollen" type="fsn">Olive pollen</designation>
+                    <desc language="en-US">Olive pollen</desc>
+                </concept>
+                <concept code="735047000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Onion"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Onion" type="fsn">Onion</designation>
+                    <desc language="en-US">Onion</desc>
+                </concept>
+                <concept code="116549003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Organochlorine pesticide"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Organochlorine pesticide" type="fsn">Organochlorine pesticide</designation>
+                    <desc language="en-US">Organochlorine pesticide</desc>
+                </concept>
+                <concept code="119417004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Organophosphate insecticide"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Organophosphate insecticide"
+                         type="fsn">Organophosphate insecticide</designation>
+                    <desc language="en-US">Organophosphate insecticide</desc>
+                </concept>
+                <concept code="736031006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Oyster"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Oyster" type="fsn">Oyster</designation>
+                    <desc language="en-US">Oyster</desc>
+                </concept>
+                <concept code="255667006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Paraffin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Paraffin" type="fsn">Paraffin</designation>
+                    <desc language="en-US">Paraffin</desc>
+                </concept>
+                <concept code="735049002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Peach"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Peach" type="fsn">Peach</designation>
+                    <desc language="en-US">Peach</desc>
+                </concept>
+                <concept code="762952008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Peanut"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Peanut" type="fsn">Peanut</designation>
+                    <desc language="en-US">Peanut</desc>
+                </concept>
+                <concept code="410853002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Perfluorochemical"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Perfluorochemical" type="fsn">Perfluorochemical</designation>
+                    <desc language="en-US">Perfluorochemical</desc>
+                </concept>
+                <concept code="418785009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Perfume"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Perfume" type="fsn">Perfume</designation>
+                    <desc language="en-US">Perfume</desc>
+                </concept>
+                <concept code="59545008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Pesticide"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Pesticide" type="fsn">Pesticide</designation>
+                    <desc language="en-US">Pesticide</desc>
+                </concept>
+                <concept code="387398009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Podophyllum resin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Podophyllum resin" type="fsn">Podophyllum resin</designation>
+                    <desc language="en-US">Podophyllum resin</desc>
+                </concept>
+                <concept code="256259004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Pollen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Pollen" type="fsn">Pollen</designation>
+                    <desc language="en-US">Pollen</desc>
+                </concept>
+                <concept code="256504004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Polycarbonate dental material"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Polycarbonate dental material"
+                         type="fsn">Polycarbonate dental material</designation>
+                    <desc language="en-US">Polycarbonate dental material</desc>
+                </concept>
+                <concept code="83619009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Polyvinyl alcohol"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Polyvinyl alcohol" type="fsn">Polyvinyl alcohol</designation>
+                    <desc language="en-US">Polyvinyl alcohol</desc>
+                </concept>
+                <concept code="226934003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Pork"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Pork" type="fsn">Pork</designation>
+                    <desc language="en-US">Pork</desc>
+                </concept>
+                <concept code="735053000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Potato"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Potato" type="fsn">Potato</designation>
+                    <desc language="en-US">Potato</desc>
+                </concept>
+                <concept code="28230009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Poultry"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Poultry" type="fsn">Poultry</designation>
+                    <desc language="en-US">Poultry</desc>
+                </concept>
+                <concept code="227313005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Pulse vegetables"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Pulse vegetables" type="fsn">Pulse vegetables</designation>
+                    <desc language="en-US">Pulse vegetables</desc>
+                </concept>
+                <concept code="311846002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Pyrethroid insecticide"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Pyrethroid insecticide" type="fsn">Pyrethroid insecticide</designation>
+                    <desc language="en-US">Pyrethroid insecticide</desc>
+                </concept>
+                <concept code="412153009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Rabbit dander"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Rabbit dander" type="fsn">Rabbit dander</designation>
+                    <desc language="en-US">Rabbit dander</desc>
+                </concept>
+                <concept code="256303006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Ragweed pollen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ragweed pollen" type="fsn">Ragweed pollen</designation>
+                    <desc language="en-US">Ragweed pollen</desc>
+                </concept>
+                <concept code="227444000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Raspberries"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Raspberries" type="fsn">Raspberries</designation>
+                    <desc language="en-US">Raspberries</desc>
+                </concept>
+                <concept code="226915003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Red meat"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Red meat" type="fsn">Red meat</designation>
+                    <desc language="en-US">Red meat</desc>
+                </concept>
+                <concept code="67324005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Rice"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Rice" type="fsn">Rice</designation>
+                    <desc language="en-US">Rice</desc>
+                </concept>
+                <concept code="43230003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Rubber"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Rubber" type="fsn">Rubber</designation>
+                    <desc language="en-US">Rubber</desc>
+                </concept>
+                <concept code="412068007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Rye"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Rye" type="fsn">Rye</designation>
+                    <desc language="en-US">Rye</desc>
+                </concept>
+                <concept code="128489003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Sand"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Sand" type="fsn">Sand</designation>
+                    <desc language="en-US">Sand</desc>
+                </concept>
+                <concept code="303314008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Scorpion venom"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Scorpion venom" type="fsn">Scorpion venom</designation>
+                    <desc language="en-US">Scorpion venom</desc>
+                </concept>
+                <concept code="44027008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Seafood"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Seafood" type="fsn">Seafood</designation>
+                    <desc language="en-US">Seafood</desc>
+                </concept>
+                <concept code="264337003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Seed"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Seed" type="fsn">Seed</designation>
+                    <desc language="en-US">Seed</desc>
+                </concept>
+                <concept code="260167008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Sesame seed"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Sesame seed" type="fsn">Sesame seed</designation>
+                    <desc language="en-US">Sesame seed</desc>
+                </concept>
+                <concept code="735029006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Shellfish"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Shellfish" type="fsn">Shellfish</designation>
+                    <desc language="en-US">Shellfish</desc>
+                </concept>
+                <concept code="278840001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Shrimp product"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Shrimp product" type="fsn">Shrimp product</designation>
+                    <desc language="en-US">Shrimp product</desc>
+                </concept>
+                <concept code="13652007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Silicone"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Silicone" type="fsn">Silicone</designation>
+                    <desc language="en-US">Silicone</desc>
+                </concept>
+                <concept code="412156001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Silk"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Silk" type="fsn">Silk</designation>
+                    <desc language="en-US">Silk</desc>
+                </concept>
+                <concept code="41967008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Silver"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Silver" type="fsn">Silver</designation>
+                    <desc language="en-US">Silver</desc>
+                </concept>
+                <concept code="7791007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Soy protein"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Soy protein" type="fsn">Soy protein</designation>
+                    <desc language="en-US">Soy protein</desc>
+                </concept>
+                <concept code="256355007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Soya bean"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Soya bean" type="fsn">Soya bean</designation>
+                    <desc language="en-US">Soya bean</desc>
+                </concept>
+                <concept code="303315009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Spider venom"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Spider venom" type="fsn">Spider venom</designation>
+                    <desc language="en-US">Spider venom</desc>
+                </concept>
+                <concept code="735006003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Squid"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Squid" type="fsn">Squid</designation>
+                    <desc language="en-US">Squid</desc>
+                </concept>
+                <concept code="102261002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Strawberry"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Strawberry" type="fsn">Strawberry</designation>
+                    <desc language="en-US">Strawberry</desc>
+                </concept>
+                <concept code="412160003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Suture allergen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Suture allergen" type="fsn">Suture allergen</designation>
+                    <desc language="en-US">Suture allergen</desc>
+                </concept>
+                <concept code="415710007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Terpene"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Terpene" type="fsn">Terpene</designation>
+                    <desc language="en-US">Terpene</desc>
+                </concept>
+                <concept code="734881000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Tomato"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tomato" type="fsn">Tomato</designation>
+                    <desc language="en-US">Tomato</desc>
+                </concept>
+                <concept code="256260009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Tree and shrub pollen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tree and shrub pollen" type="fsn">Tree and shrub pollen</designation>
+                    <desc language="en-US">Tree and shrub pollen</desc>
+                </concept>
+                <concept code="256305004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Tree resin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tree resin" type="fsn">Tree resin</designation>
+                    <desc language="en-US">Tree resin</desc>
+                </concept>
+                <concept code="227144008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Tuna fish"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tuna fish" type="fsn">Tuna fish</designation>
+                    <desc language="en-US">Tuna fish</desc>
+                </concept>
+                <concept code="260118006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Wall pellitory pollen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Wall pellitory pollen" type="fsn">Wall pellitory pollen</designation>
+                    <desc language="en-US">Wall pellitory pollen</desc>
+                </concept>
+                <concept code="256352005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Walnut - nut"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Walnut - nut" type="fsn">Walnut - nut</designation>
+                    <desc language="en-US">Walnut - nut</desc>
+                </concept>
+                <concept code="256440004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Wasp venom"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Wasp venom" type="fsn">Wasp venom</designation>
+                    <desc language="en-US">Wasp venom</desc>
+                </concept>
+                <concept code="419420009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Watermelon"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Watermelon" type="fsn">Watermelon</designation>
+                    <desc language="en-US">Watermelon</desc>
+                </concept>
+                <concept code="419604006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Weed pollen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Weed pollen" type="fsn">Weed pollen</designation>
+                    <desc language="en-US">Weed pollen</desc>
+                </concept>
+                <concept code="412071004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Wheat"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Wheat" type="fsn">Wheat</designation>
+                    <desc language="en-US">Wheat</desc>
+                </concept>
+                <concept code="419633007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="White paraffin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="White paraffin" type="fsn">White paraffin</designation>
+                    <desc language="en-US">White paraffin</desc>
+                </concept>
+                <concept code="14402002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Wood"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Wood" type="fsn">Wood</designation>
+                    <desc language="en-US">Wood</desc>
+                </concept>
+                <concept code="412161004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Wool"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Wool" type="fsn">Wool</designation>
+                    <desc language="en-US">Wool</desc>
+                </concept>
+                <concept code="772245002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Wool alcohol"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Wool alcohol" type="fsn">Wool alcohol</designation>
+                    <desc language="en-US">Wool alcohol</desc>
+                </concept>
+                <concept code="418266005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Yellow paraffin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Yellow paraffin" type="fsn">Yellow paraffin</designation>
+                    <desc language="en-US">Yellow paraffin</desc>
+                </concept>
+                <concept code="12503006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Aluminium"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Aluminium" type="fsn">Aluminium</designation>
+                    <desc language="en-US">Aluminium</desc>
+                </concept>
+                <concept code="89889006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cotton fibre"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cotton fibre" type="fsn">Cotton fibre</designation>
+                    <desc language="en-US">Cotton fibre</desc>
+                </concept>
+                <concept code="387293003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Dithranol"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dithranol" type="fsn">Dithranol</designation>
+                    <desc language="en-US">Dithranol</desc>
+                </concept>
+                <concept code="63338004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Drug flavoring"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Drug flavoring" type="fsn">Drug flavoring</designation>
+                    <desc language="en-US">Drug flavoring</desc>
+                </concept>
+                <concept code="767406000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Sulphite and sulphite derivative"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Sulphite and sulphite derivative"
+                         type="fsn">Sulphite and sulphite derivative</designation>
+                    <desc language="en-US">Sulphite and sulphite derivative</desc>
+                </concept>
+                <concept code="43735007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Sulphur"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Sulphur" type="fsn">Sulphur</designation>
+                    <desc language="en-US">Sulphur</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

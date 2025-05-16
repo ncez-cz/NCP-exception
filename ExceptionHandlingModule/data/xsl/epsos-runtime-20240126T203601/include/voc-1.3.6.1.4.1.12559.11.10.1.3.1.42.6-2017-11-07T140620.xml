@@ -1,0 +1,3231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:pharm="urn:hl7-org:pharm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.6"
+             name="epSOSLanguage"
+             displayName="epSOSLanguage"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="deprecated"
+             versionLabel="201711">
+      <desc language="en-US">epSOSLanguage</desc>
+      <sourceCodeSystem id="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                        identifierName=""
+                        canonicalUri="urn:oid:1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                        canonicalUriDSTU2="urn:oid:1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                        canonicalUriSTU3="urn:oid:1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                        canonicalUriR4="urn:oid:1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="af-NA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Afrikaans-NAMIBIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Afrikaans-NAMIBIA" type="fsn">Afrikaans-NAMIBIA</designation>
+                    <desc language="en-US">Afrikaans-NAMIBIA</desc>
+                </concept>
+                <concept code="af-ZA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Afrikaans-SOUTH AFRICA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Afrikaans-SOUTH AFRICA" type="fsn">Afrikaans-SOUTH AFRICA</designation>
+                    <desc language="en-US">Afrikaans-SOUTH AFRICA</desc>
+                </concept>
+                <concept code="ak-GH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Akan-GHANA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Akan-GHANA" type="fsn">Akan-GHANA</designation>
+                    <desc language="en-US">Akan-GHANA</desc>
+                </concept>
+                <concept code="am-ET"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Amharic-ETHIOPIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Amharic-ETHIOPIA" type="fsn">Amharic-ETHIOPIA</designation>
+                    <desc language="en-US">Amharic-ETHIOPIA</desc>
+                </concept>
+                <concept code="ar-AE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-UNITED ARAB EMIRATES"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Arabic-UNITED ARAB EMIRATES"
+                         type="fsn">Arabic-UNITED ARAB EMIRATES</designation>
+                    <desc language="en-US">Arabic-UNITED ARAB EMIRATES</desc>
+                </concept>
+                <concept code="ar-BH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-BAHRAIN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-BAHRAIN" type="fsn">Arabic-BAHRAIN</designation>
+                    <desc language="en-US">Arabic-BAHRAIN</desc>
+                </concept>
+                <concept code="ar-DJ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-DJIBOUTI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-DJIBOUTI" type="fsn">Arabic-DJIBOUTI</designation>
+                    <desc language="en-US">Arabic-DJIBOUTI</desc>
+                </concept>
+                <concept code="ar-DZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-ALGERIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-ALGERIA" type="fsn">Arabic-ALGERIA</designation>
+                    <desc language="en-US">Arabic-ALGERIA</desc>
+                </concept>
+                <concept code="ar-EG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-EGYPT"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-EGYPT" type="fsn">Arabic-EGYPT</designation>
+                    <desc language="en-US">Arabic-EGYPT</desc>
+                </concept>
+                <concept code="ar-EH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-WESTERN SAHARA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-WESTERN SAHARA" type="fsn">Arabic-WESTERN SAHARA</designation>
+                    <desc language="en-US">Arabic-WESTERN SAHARA</desc>
+                </concept>
+                <concept code="ar-ER"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-ERITREA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-ERITREA" type="fsn">Arabic-ERITREA</designation>
+                    <desc language="en-US">Arabic-ERITREA</desc>
+                </concept>
+                <concept code="ar-IL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-ISRAEL"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-ISRAEL" type="fsn">Arabic-ISRAEL</designation>
+                    <desc language="en-US">Arabic-ISRAEL</desc>
+                </concept>
+                <concept code="ar-IQ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-IRAQ"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-IRAQ" type="fsn">Arabic-IRAQ</designation>
+                    <desc language="en-US">Arabic-IRAQ</desc>
+                </concept>
+                <concept code="ar-JO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-JORDAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-JORDAN" type="fsn">Arabic-JORDAN</designation>
+                    <desc language="en-US">Arabic-JORDAN</desc>
+                </concept>
+                <concept code="ar-KM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-COMOROS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-COMOROS" type="fsn">Arabic-COMOROS</designation>
+                    <desc language="en-US">Arabic-COMOROS</desc>
+                </concept>
+                <concept code="ar-KW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-KUWAIT"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-KUWAIT" type="fsn">Arabic-KUWAIT</designation>
+                    <desc language="en-US">Arabic-KUWAIT</desc>
+                </concept>
+                <concept code="ar-LB"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-LEBANON"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-LEBANON" type="fsn">Arabic-LEBANON</designation>
+                    <desc language="en-US">Arabic-LEBANON</desc>
+                </concept>
+                <concept code="ar-LY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-LIBYA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-LIBYA" type="fsn">Arabic-LIBYA</designation>
+                    <desc language="en-US">Arabic-LIBYA</desc>
+                </concept>
+                <concept code="ar-MA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-MOROCCO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-MOROCCO" type="fsn">Arabic-MOROCCO</designation>
+                    <desc language="en-US">Arabic-MOROCCO</desc>
+                </concept>
+                <concept code="ar-MR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-MAURITANIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-MAURITANIA" type="fsn">Arabic-MAURITANIA</designation>
+                    <desc language="en-US">Arabic-MAURITANIA</desc>
+                </concept>
+                <concept code="ar-OM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-OMAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-OMAN" type="fsn">Arabic-OMAN</designation>
+                    <desc language="en-US">Arabic-OMAN</desc>
+                </concept>
+                <concept code="ar-PS"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-PALESTINE, STATE OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Arabic-PALESTINE, STATE OF"
+                         type="fsn">Arabic-PALESTINE, STATE OF</designation>
+                    <desc language="en-US">Arabic-PALESTINE, STATE OF</desc>
+                </concept>
+                <concept code="ar-QA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-QATAR"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-QATAR" type="fsn">Arabic-QATAR</designation>
+                    <desc language="en-US">Arabic-QATAR</desc>
+                </concept>
+                <concept code="ar-SA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-SAUDI ARABIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-SAUDI ARABIA" type="fsn">Arabic-SAUDI ARABIA</designation>
+                    <desc language="en-US">Arabic-SAUDI ARABIA</desc>
+                </concept>
+                <concept code="ar-SD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-SUDAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-SUDAN" type="fsn">Arabic-SUDAN</designation>
+                    <desc language="en-US">Arabic-SUDAN</desc>
+                </concept>
+                <concept code="ar-SO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-SOMALIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-SOMALIA" type="fsn">Arabic-SOMALIA</designation>
+                    <desc language="en-US">Arabic-SOMALIA</desc>
+                </concept>
+                <concept code="ar-SS"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-SOUTH SUDAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-SOUTH SUDAN" type="fsn">Arabic-SOUTH SUDAN</designation>
+                    <desc language="en-US">Arabic-SOUTH SUDAN</desc>
+                </concept>
+                <concept code="ar-SY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-SYRIAN ARAB REPUBLIC"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Arabic-SYRIAN ARAB REPUBLIC"
+                         type="fsn">Arabic-SYRIAN ARAB REPUBLIC</designation>
+                    <desc language="en-US">Arabic-SYRIAN ARAB REPUBLIC</desc>
+                </concept>
+                <concept code="ar-TD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-CHAD"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-CHAD" type="fsn">Arabic-CHAD</designation>
+                    <desc language="en-US">Arabic-CHAD</desc>
+                </concept>
+                <concept code="ar-TN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-TUNISIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-TUNISIA" type="fsn">Arabic-TUNISIA</designation>
+                    <desc language="en-US">Arabic-TUNISIA</desc>
+                </concept>
+                <concept code="ar-YE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Arabic-YEMEN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arabic-YEMEN" type="fsn">Arabic-YEMEN</designation>
+                    <desc language="en-US">Arabic-YEMEN</desc>
+                </concept>
+                <concept code="as-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Assamese-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Assamese-INDIA" type="fsn">Assamese-INDIA</designation>
+                    <desc language="en-US">Assamese-INDIA</desc>
+                </concept>
+                <concept code="az-AZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Azerbaijani-AZERBAIJAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Azerbaijani-AZERBAIJAN" type="fsn">Azerbaijani-AZERBAIJAN</designation>
+                    <desc language="en-US">Azerbaijani-AZERBAIJAN</desc>
+                </concept>
+                <concept code="be-BY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Belarusian-BELARUS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Belarusian-BELARUS" type="fsn">Belarusian-BELARUS</designation>
+                    <desc language="en-US">Belarusian-BELARUS</desc>
+                </concept>
+                <concept code="bg-BG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Bulgarian-BULGARIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bulgarian-BULGARIA" type="fsn">Bulgarian-BULGARIA</designation>
+                    <desc language="en-US">Bulgarian-BULGARIA</desc>
+                </concept>
+                <concept code="bm-ML"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Bambara-MALI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bambara-MALI" type="fsn">Bambara-MALI</designation>
+                    <desc language="en-US">Bambara-MALI</desc>
+                </concept>
+                <concept code="bn-BD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Bengali-BANGLADESH"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bengali-BANGLADESH" type="fsn">Bengali-BANGLADESH</designation>
+                    <desc language="en-US">Bengali-BANGLADESH</desc>
+                </concept>
+                <concept code="bn-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Bengali-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bengali-INDIA" type="fsn">Bengali-INDIA</designation>
+                    <desc language="en-US">Bengali-INDIA</desc>
+                </concept>
+                <concept code="bo-CN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Tibetan-CHINA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tibetan-CHINA" type="fsn">Tibetan-CHINA</designation>
+                    <desc language="en-US">Tibetan-CHINA</desc>
+                </concept>
+                <concept code="bo-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Tibetan-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tibetan-INDIA" type="fsn">Tibetan-INDIA</designation>
+                    <desc language="en-US">Tibetan-INDIA</desc>
+                </concept>
+                <concept code="br-FR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Breton-FRANCE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Breton-FRANCE" type="fsn">Breton-FRANCE</designation>
+                    <desc language="en-US">Breton-FRANCE</desc>
+                </concept>
+                <concept code="bs-BA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Bosnian-BOSNIA AND HERZEGOVINA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Bosnian-BOSNIA AND HERZEGOVINA"
+                         type="fsn">Bosnian-BOSNIA AND HERZEGOVINA</designation>
+                    <desc language="en-US">Bosnian-BOSNIA AND HERZEGOVINA</desc>
+                </concept>
+                <concept code="ca-AD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Catalan; Valencian-ANDORRA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Catalan; Valencian-ANDORRA"
+                         type="fsn">Catalan; Valencian-ANDORRA</designation>
+                    <desc language="en-US">Catalan; Valencian-ANDORRA</desc>
+                </concept>
+                <concept code="ca-ES"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Catalan; Valencian-SPAIN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Catalan; Valencian-SPAIN" type="fsn">Catalan; Valencian-SPAIN</designation>
+                    <desc language="en-US">Catalan; Valencian-SPAIN</desc>
+                </concept>
+                <concept code="ca-FR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Catalan; Valencian-FRANCE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Catalan; Valencian-FRANCE" type="fsn">Catalan; Valencian-FRANCE</designation>
+                    <desc language="en-US">Catalan; Valencian-FRANCE</desc>
+                </concept>
+                <concept code="ca-IT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Catalan; Valencian-ITALY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Catalan; Valencian-ITALY" type="fsn">Catalan; Valencian-ITALY</designation>
+                    <desc language="en-US">Catalan; Valencian-ITALY</desc>
+                </concept>
+                <concept code="cs-CZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Czech-CZECH REPUBLIC"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Czech-CZECH REPUBLIC" type="fsn">Czech-CZECH REPUBLIC</designation>
+                    <desc language="en-US">Czech-CZECH REPUBLIC</desc>
+                </concept>
+                <concept code="cy-GB"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Welsh-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Welsh-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+                         type="fsn">Welsh-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</designation>
+                    <desc language="en-US">Welsh-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</desc>
+                </concept>
+                <concept code="da-DK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Danish-DENMARK"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Danish-DENMARK" type="fsn">Danish-DENMARK</designation>
+                    <desc language="en-US">Danish-DENMARK</desc>
+                </concept>
+                <concept code="da-GL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Danish-GREENLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Danish-GREENLAND" type="fsn">Danish-GREENLAND</designation>
+                    <desc language="en-US">Danish-GREENLAND</desc>
+                </concept>
+                <concept code="de-AT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="German-AUSTRIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="German-AUSTRIA" type="fsn">German-AUSTRIA</designation>
+                    <desc language="en-US">German-AUSTRIA</desc>
+                </concept>
+                <concept code="de-BE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="German-BELGIUM"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="German-BELGIUM" type="fsn">German-BELGIUM</designation>
+                    <desc language="en-US">German-BELGIUM</desc>
+                </concept>
+                <concept code="de-CH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="German-SWITZERLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="German-SWITZERLAND" type="fsn">German-SWITZERLAND</designation>
+                    <desc language="en-US">German-SWITZERLAND</desc>
+                </concept>
+                <concept code="de-DE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="German-GERMANY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="German-GERMANY" type="fsn">German-GERMANY</designation>
+                    <desc language="en-US">German-GERMANY</desc>
+                </concept>
+                <concept code="de-LI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="German-LIECHTENSTEIN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="German-LIECHTENSTEIN" type="fsn">German-LIECHTENSTEIN</designation>
+                    <desc language="en-US">German-LIECHTENSTEIN</desc>
+                </concept>
+                <concept code="de-LU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="German-LUXEMBOURG"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="German-LUXEMBOURG" type="fsn">German-LUXEMBOURG</designation>
+                    <desc language="en-US">German-LUXEMBOURG</desc>
+                </concept>
+                <concept code="dz-BT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Dzongkha-BHUTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dzongkha-BHUTAN" type="fsn">Dzongkha-BHUTAN</designation>
+                    <desc language="en-US">Dzongkha-BHUTAN</desc>
+                </concept>
+                <concept code="ee-GH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Ewe-GHANA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ewe-GHANA" type="fsn">Ewe-GHANA</designation>
+                    <desc language="en-US">Ewe-GHANA</desc>
+                </concept>
+                <concept code="ee-TG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Ewe-TOGO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ewe-TOGO" type="fsn">Ewe-TOGO</designation>
+                    <desc language="en-US">Ewe-TOGO</desc>
+                </concept>
+                <concept code="el-CY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Greek, Modern (1453-)-CYPRUS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Greek, Modern (1453-)-CYPRUS"
+                         type="fsn">Greek, Modern (1453-)-CYPRUS</designation>
+                    <desc language="en-US">Greek, Modern (1453-)-CYPRUS</desc>
+                </concept>
+                <concept code="el-GR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Greek, Modern (1453-)-GREECE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Greek, Modern (1453-)-GREECE"
+                         type="fsn">Greek, Modern (1453-)-GREECE</designation>
+                    <desc language="en-US">Greek, Modern (1453-)-GREECE</desc>
+                </concept>
+                <concept code="en-AG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-ANTIGUA AND BARBUDA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-ANTIGUA AND BARBUDA"
+                         type="fsn">English-ANTIGUA AND BARBUDA</designation>
+                    <desc language="en-US">English-ANTIGUA AND BARBUDA</desc>
+                </concept>
+                <concept code="en-AI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-ANGUILLA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-ANGUILLA" type="fsn">English-ANGUILLA</designation>
+                    <desc language="en-US">English-ANGUILLA</desc>
+                </concept>
+                <concept code="en-AS"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-AMERICAN SAMOA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-AMERICAN SAMOA" type="fsn">English-AMERICAN SAMOA</designation>
+                    <desc language="en-US">English-AMERICAN SAMOA</desc>
+                </concept>
+                <concept code="en-AU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-AUSTRALIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-AUSTRALIA" type="fsn">English-AUSTRALIA</designation>
+                    <desc language="en-US">English-AUSTRALIA</desc>
+                </concept>
+                <concept code="en-BB"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-BARBADOS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-BARBADOS" type="fsn">English-BARBADOS</designation>
+                    <desc language="en-US">English-BARBADOS</desc>
+                </concept>
+                <concept code="en-BE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-BELGIUM"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-BELGIUM" type="fsn">English-BELGIUM</designation>
+                    <desc language="en-US">English-BELGIUM</desc>
+                </concept>
+                <concept code="en-BM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-BERMUDA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-BERMUDA" type="fsn">English-BERMUDA</designation>
+                    <desc language="en-US">English-BERMUDA</desc>
+                </concept>
+                <concept code="en-BS"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-BAHAMAS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-BAHAMAS" type="fsn">English-BAHAMAS</designation>
+                    <desc language="en-US">English-BAHAMAS</desc>
+                </concept>
+                <concept code="en-BW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-BOTSWANA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-BOTSWANA" type="fsn">English-BOTSWANA</designation>
+                    <desc language="en-US">English-BOTSWANA</desc>
+                </concept>
+                <concept code="en-BZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-BELIZE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-BELIZE" type="fsn">English-BELIZE</designation>
+                    <desc language="en-US">English-BELIZE</desc>
+                </concept>
+                <concept code="en-CA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-CANADA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-CANADA" type="fsn">English-CANADA</designation>
+                    <desc language="en-US">English-CANADA</desc>
+                </concept>
+                <concept code="en-CC"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-COCOS (KEELING) ISLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-COCOS (KEELING) ISLANDS"
+                         type="fsn">English-COCOS (KEELING) ISLANDS</designation>
+                    <desc language="en-US">English-COCOS (KEELING) ISLANDS</desc>
+                </concept>
+                <concept code="en-CK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-COOK ISLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-COOK ISLANDS" type="fsn">English-COOK ISLANDS</designation>
+                    <desc language="en-US">English-COOK ISLANDS</desc>
+                </concept>
+                <concept code="en-CM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-CAMEROON"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-CAMEROON" type="fsn">English-CAMEROON</designation>
+                    <desc language="en-US">English-CAMEROON</desc>
+                </concept>
+                <concept code="en-CX"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-CHRISTMAS ISLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-CHRISTMAS ISLAND" type="fsn">English-CHRISTMAS ISLAND</designation>
+                    <desc language="en-US">English-CHRISTMAS ISLAND</desc>
+                </concept>
+                <concept code="en-DM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-DOMINICA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-DOMINICA" type="fsn">English-DOMINICA</designation>
+                    <desc language="en-US">English-DOMINICA</desc>
+                </concept>
+                <concept code="en-ER"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-ERITREA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-ERITREA" type="fsn">English-ERITREA</designation>
+                    <desc language="en-US">English-ERITREA</desc>
+                </concept>
+                <concept code="en-FJ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-FIJI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-FIJI" type="fsn">English-FIJI</designation>
+                    <desc language="en-US">English-FIJI</desc>
+                </concept>
+                <concept code="en-FK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-FALKLAND ISLANDS (MALVINAS)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-FALKLAND ISLANDS (MALVINAS)"
+                         type="fsn">English-FALKLAND ISLANDS (MALVINAS)</designation>
+                    <desc language="en-US">English-FALKLAND ISLANDS (MALVINAS)</desc>
+                </concept>
+                <concept code="en-FM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-MICRONESIA (FEDERATED STATES OF)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-MICRONESIA (FEDERATED STATES OF)"
+                         type="fsn">English-MICRONESIA (FEDERATED STATES OF)</designation>
+                    <desc language="en-US">English-MICRONESIA (FEDERATED STATES OF)</desc>
+                </concept>
+                <concept code="en-GB"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+                         type="fsn">English-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</designation>
+                    <desc language="en-US">English-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</desc>
+                </concept>
+                <concept code="en-GD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-GRENADA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-GRENADA" type="fsn">English-GRENADA</designation>
+                    <desc language="en-US">English-GRENADA</desc>
+                </concept>
+                <concept code="en-GG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-GUERNSEY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-GUERNSEY" type="fsn">English-GUERNSEY</designation>
+                    <desc language="en-US">English-GUERNSEY</desc>
+                </concept>
+                <concept code="en-GH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-GHANA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-GHANA" type="fsn">English-GHANA</designation>
+                    <desc language="en-US">English-GHANA</desc>
+                </concept>
+                <concept code="en-GI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-GIBRALTAR"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-GIBRALTAR" type="fsn">English-GIBRALTAR</designation>
+                    <desc language="en-US">English-GIBRALTAR</desc>
+                </concept>
+                <concept code="en-GM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-GAMBIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-GAMBIA" type="fsn">English-GAMBIA</designation>
+                    <desc language="en-US">English-GAMBIA</desc>
+                </concept>
+                <concept code="en-GU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-GUAM"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-GUAM" type="fsn">English-GUAM</designation>
+                    <desc language="en-US">English-GUAM</desc>
+                </concept>
+                <concept code="en-GY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-GUYANA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-GUYANA" type="fsn">English-GUYANA</designation>
+                    <desc language="en-US">English-GUYANA</desc>
+                </concept>
+                <concept code="en-HK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-HONG KONG"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-HONG KONG" type="fsn">English-HONG KONG</designation>
+                    <desc language="en-US">English-HONG KONG</desc>
+                </concept>
+                <concept code="en-IE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-IRELAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-IRELAND" type="fsn">English-IRELAND</designation>
+                    <desc language="en-US">English-IRELAND</desc>
+                </concept>
+                <concept code="en-IM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-ISLE OF MAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-ISLE OF MAN" type="fsn">English-ISLE OF MAN</designation>
+                    <desc language="en-US">English-ISLE OF MAN</desc>
+                </concept>
+                <concept code="en-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-INDIA" type="fsn">English-INDIA</designation>
+                    <desc language="en-US">English-INDIA</desc>
+                </concept>
+                <concept code="en-IO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-BRITISH INDIAN OCEAN TERRITORY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-BRITISH INDIAN OCEAN TERRITORY"
+                         type="fsn">English-BRITISH INDIAN OCEAN TERRITORY</designation>
+                    <desc language="en-US">English-BRITISH INDIAN OCEAN TERRITORY</desc>
+                </concept>
+                <concept code="en-JE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-JERSEY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-JERSEY" type="fsn">English-JERSEY</designation>
+                    <desc language="en-US">English-JERSEY</desc>
+                </concept>
+                <concept code="en-JM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-JAMAICA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-JAMAICA" type="fsn">English-JAMAICA</designation>
+                    <desc language="en-US">English-JAMAICA</desc>
+                </concept>
+                <concept code="en-KE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-KENYA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-KENYA" type="fsn">English-KENYA</designation>
+                    <desc language="en-US">English-KENYA</desc>
+                </concept>
+                <concept code="en-KI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-KIRIBATI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-KIRIBATI" type="fsn">English-KIRIBATI</designation>
+                    <desc language="en-US">English-KIRIBATI</desc>
+                </concept>
+                <concept code="en-KN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SAINT KITTS AND NEVIS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-SAINT KITTS AND NEVIS"
+                         type="fsn">English-SAINT KITTS AND NEVIS</designation>
+                    <desc language="en-US">English-SAINT KITTS AND NEVIS</desc>
+                </concept>
+                <concept code="en-KY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-CAYMAN ISLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-CAYMAN ISLANDS" type="fsn">English-CAYMAN ISLANDS</designation>
+                    <desc language="en-US">English-CAYMAN ISLANDS</desc>
+                </concept>
+                <concept code="en-LC"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SAINT LUCIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-SAINT LUCIA" type="fsn">English-SAINT LUCIA</designation>
+                    <desc language="en-US">English-SAINT LUCIA</desc>
+                </concept>
+                <concept code="en-LR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-LIBERIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-LIBERIA" type="fsn">English-LIBERIA</designation>
+                    <desc language="en-US">English-LIBERIA</desc>
+                </concept>
+                <concept code="en-LS"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-LESOTHO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-LESOTHO" type="fsn">English-LESOTHO</designation>
+                    <desc language="en-US">English-LESOTHO</desc>
+                </concept>
+                <concept code="en-MG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-MADAGASCAR"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-MADAGASCAR" type="fsn">English-MADAGASCAR</designation>
+                    <desc language="en-US">English-MADAGASCAR</desc>
+                </concept>
+                <concept code="en-MH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-MARSHALL ISLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-MARSHALL ISLANDS" type="fsn">English-MARSHALL ISLANDS</designation>
+                    <desc language="en-US">English-MARSHALL ISLANDS</desc>
+                </concept>
+                <concept code="en-MO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-MACAO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-MACAO" type="fsn">English-MACAO</designation>
+                    <desc language="en-US">English-MACAO</desc>
+                </concept>
+                <concept code="en-MP"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-NORTHERN MARIANA ISLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-NORTHERN MARIANA ISLANDS"
+                         type="fsn">English-NORTHERN MARIANA ISLANDS</designation>
+                    <desc language="en-US">English-NORTHERN MARIANA ISLANDS</desc>
+                </concept>
+                <concept code="en-MS"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-MONTSERRAT"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-MONTSERRAT" type="fsn">English-MONTSERRAT</designation>
+                    <desc language="en-US">English-MONTSERRAT</desc>
+                </concept>
+                <concept code="en-MT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-MALTA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-MALTA" type="fsn">English-MALTA</designation>
+                    <desc language="en-US">English-MALTA</desc>
+                </concept>
+                <concept code="en-MU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-MAURITIUS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-MAURITIUS" type="fsn">English-MAURITIUS</designation>
+                    <desc language="en-US">English-MAURITIUS</desc>
+                </concept>
+                <concept code="en-MW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-MALAWI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-MALAWI" type="fsn">English-MALAWI</designation>
+                    <desc language="en-US">English-MALAWI</desc>
+                </concept>
+                <concept code="en-MY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-MALAYSIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-MALAYSIA" type="fsn">English-MALAYSIA</designation>
+                    <desc language="en-US">English-MALAYSIA</desc>
+                </concept>
+                <concept code="en-NA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-NAMIBIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-NAMIBIA" type="fsn">English-NAMIBIA</designation>
+                    <desc language="en-US">English-NAMIBIA</desc>
+                </concept>
+                <concept code="en-NF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-NORFOLK ISLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-NORFOLK ISLAND" type="fsn">English-NORFOLK ISLAND</designation>
+                    <desc language="en-US">English-NORFOLK ISLAND</desc>
+                </concept>
+                <concept code="en-NG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-NIGERIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-NIGERIA" type="fsn">English-NIGERIA</designation>
+                    <desc language="en-US">English-NIGERIA</desc>
+                </concept>
+                <concept code="en-NR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-NAURU"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-NAURU" type="fsn">English-NAURU</designation>
+                    <desc language="en-US">English-NAURU</desc>
+                </concept>
+                <concept code="en-NU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-NIUE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-NIUE" type="fsn">English-NIUE</designation>
+                    <desc language="en-US">English-NIUE</desc>
+                </concept>
+                <concept code="en-NZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-NEW ZEALAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-NEW ZEALAND" type="fsn">English-NEW ZEALAND</designation>
+                    <desc language="en-US">English-NEW ZEALAND</desc>
+                </concept>
+                <concept code="en-PG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-PAPUA NEW GUINEA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-PAPUA NEW GUINEA" type="fsn">English-PAPUA NEW GUINEA</designation>
+                    <desc language="en-US">English-PAPUA NEW GUINEA</desc>
+                </concept>
+                <concept code="en-PH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-PHILIPPINES"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-PHILIPPINES" type="fsn">English-PHILIPPINES</designation>
+                    <desc language="en-US">English-PHILIPPINES</desc>
+                </concept>
+                <concept code="en-PK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-PAKISTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-PAKISTAN" type="fsn">English-PAKISTAN</designation>
+                    <desc language="en-US">English-PAKISTAN</desc>
+                </concept>
+                <concept code="en-PN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-PITCAIRN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-PITCAIRN" type="fsn">English-PITCAIRN</designation>
+                    <desc language="en-US">English-PITCAIRN</desc>
+                </concept>
+                <concept code="en-PR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-PUERTO RICO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-PUERTO RICO" type="fsn">English-PUERTO RICO</designation>
+                    <desc language="en-US">English-PUERTO RICO</desc>
+                </concept>
+                <concept code="en-PW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-PALAU"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-PALAU" type="fsn">English-PALAU</designation>
+                    <desc language="en-US">English-PALAU</desc>
+                </concept>
+                <concept code="en-RW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-RWANDA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-RWANDA" type="fsn">English-RWANDA</designation>
+                    <desc language="en-US">English-RWANDA</desc>
+                </concept>
+                <concept code="en-SB"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SOLOMON ISLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-SOLOMON ISLANDS" type="fsn">English-SOLOMON ISLANDS</designation>
+                    <desc language="en-US">English-SOLOMON ISLANDS</desc>
+                </concept>
+                <concept code="en-SC"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SEYCHELLES"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-SEYCHELLES" type="fsn">English-SEYCHELLES</designation>
+                    <desc language="en-US">English-SEYCHELLES</desc>
+                </concept>
+                <concept code="en-SD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SUDAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-SUDAN" type="fsn">English-SUDAN</designation>
+                    <desc language="en-US">English-SUDAN</desc>
+                </concept>
+                <concept code="en-SG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SINGAPORE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-SINGAPORE" type="fsn">English-SINGAPORE</designation>
+                    <desc language="en-US">English-SINGAPORE</desc>
+                </concept>
+                <concept code="en-SH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"
+                         type="fsn">English-SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA</designation>
+                    <desc language="en-US">English-SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA</desc>
+                </concept>
+                <concept code="en-SL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SIERRA LEONE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-SIERRA LEONE" type="fsn">English-SIERRA LEONE</designation>
+                    <desc language="en-US">English-SIERRA LEONE</desc>
+                </concept>
+                <concept code="en-SS"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SOUTH SUDAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-SOUTH SUDAN" type="fsn">English-SOUTH SUDAN</designation>
+                    <desc language="en-US">English-SOUTH SUDAN</desc>
+                </concept>
+                <concept code="en-SX"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SINT MAARTEN (DUTCH PART)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-SINT MAARTEN (DUTCH PART)"
+                         type="fsn">English-SINT MAARTEN (DUTCH PART)</designation>
+                    <desc language="en-US">English-SINT MAARTEN (DUTCH PART)</desc>
+                </concept>
+                <concept code="en-SZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SWAZILAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-SWAZILAND" type="fsn">English-SWAZILAND</designation>
+                    <desc language="en-US">English-SWAZILAND</desc>
+                </concept>
+                <concept code="en-TC"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-TURKS AND CAICOS ISLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-TURKS AND CAICOS ISLANDS"
+                         type="fsn">English-TURKS AND CAICOS ISLANDS</designation>
+                    <desc language="en-US">English-TURKS AND CAICOS ISLANDS</desc>
+                </concept>
+                <concept code="en-TK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-TOKELAU"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-TOKELAU" type="fsn">English-TOKELAU</designation>
+                    <desc language="en-US">English-TOKELAU</desc>
+                </concept>
+                <concept code="en-TO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-TONGA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-TONGA" type="fsn">English-TONGA</designation>
+                    <desc language="en-US">English-TONGA</desc>
+                </concept>
+                <concept code="en-TT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-TRINIDAD AND TOBAGO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-TRINIDAD AND TOBAGO"
+                         type="fsn">English-TRINIDAD AND TOBAGO</designation>
+                    <desc language="en-US">English-TRINIDAD AND TOBAGO</desc>
+                </concept>
+                <concept code="en-TV"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-TUVALU"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-TUVALU" type="fsn">English-TUVALU</designation>
+                    <desc language="en-US">English-TUVALU</desc>
+                </concept>
+                <concept code="en-TZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-TANZANIA, UNITED REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-TANZANIA, UNITED REPUBLIC OF"
+                         type="fsn">English-TANZANIA, UNITED REPUBLIC OF</designation>
+                    <desc language="en-US">English-TANZANIA, UNITED REPUBLIC OF</desc>
+                </concept>
+                <concept code="en-UG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-UGANDA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-UGANDA" type="fsn">English-UGANDA</designation>
+                    <desc language="en-US">English-UGANDA</desc>
+                </concept>
+                <concept code="en-UM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-UNITED STATES MINOR OUTLYING ISLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-UNITED STATES MINOR OUTLYING ISLANDS"
+                         type="fsn">English-UNITED STATES MINOR OUTLYING ISLANDS</designation>
+                    <desc language="en-US">English-UNITED STATES MINOR OUTLYING ISLANDS</desc>
+                </concept>
+                <concept code="en-US"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-UNITED STATES OF AMERICA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-UNITED STATES OF AMERICA"
+                         type="fsn">English-UNITED STATES OF AMERICA</designation>
+                    <desc language="en-US">English-UNITED STATES OF AMERICA</desc>
+                </concept>
+                <concept code="en-VC"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SAINT VINCENT AND THE GRENADINES"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-SAINT VINCENT AND THE GRENADINES"
+                         type="fsn">English-SAINT VINCENT AND THE GRENADINES</designation>
+                    <desc language="en-US">English-SAINT VINCENT AND THE GRENADINES</desc>
+                </concept>
+                <concept code="en-VG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-VIRGIN ISLANDS, BRITISH"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-VIRGIN ISLANDS, BRITISH"
+                         type="fsn">English-VIRGIN ISLANDS, BRITISH</designation>
+                    <desc language="en-US">English-VIRGIN ISLANDS, BRITISH</desc>
+                </concept>
+                <concept code="en-VI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-VIRGIN ISLANDS, U.S."
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="English-VIRGIN ISLANDS, U.S."
+                         type="fsn">English-VIRGIN ISLANDS, U.S.</designation>
+                    <desc language="en-US">English-VIRGIN ISLANDS, U.S.</desc>
+                </concept>
+                <concept code="en-VU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-VANUATU"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-VANUATU" type="fsn">English-VANUATU</designation>
+                    <desc language="en-US">English-VANUATU</desc>
+                </concept>
+                <concept code="en-WS"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SAMOA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-SAMOA" type="fsn">English-SAMOA</designation>
+                    <desc language="en-US">English-SAMOA</desc>
+                </concept>
+                <concept code="en-ZA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-SOUTH AFRICA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-SOUTH AFRICA" type="fsn">English-SOUTH AFRICA</designation>
+                    <desc language="en-US">English-SOUTH AFRICA</desc>
+                </concept>
+                <concept code="en-ZM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-ZAMBIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-ZAMBIA" type="fsn">English-ZAMBIA</designation>
+                    <desc language="en-US">English-ZAMBIA</desc>
+                </concept>
+                <concept code="en-ZW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="English-ZIMBABWE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="English-ZIMBABWE" type="fsn">English-ZIMBABWE</designation>
+                    <desc language="en-US">English-ZIMBABWE</desc>
+                </concept>
+                <concept code="es-AR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-ARGENTINA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-ARGENTINA"
+                         type="fsn">Spanish; Castilian-ARGENTINA</designation>
+                    <desc language="en-US">Spanish; Castilian-ARGENTINA</desc>
+                </concept>
+                <concept code="es-BO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-BOLIVIA (PLURINATIONAL STATE OF)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-BOLIVIA (PLURINATIONAL STATE OF)"
+                         type="fsn">Spanish; Castilian-BOLIVIA (PLURINATIONAL STATE OF)</designation>
+                    <desc language="en-US">Spanish; Castilian-BOLIVIA (PLURINATIONAL STATE OF)</desc>
+                </concept>
+                <concept code="es-CL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-CHILE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Spanish; Castilian-CHILE" type="fsn">Spanish; Castilian-CHILE</designation>
+                    <desc language="en-US">Spanish; Castilian-CHILE</desc>
+                </concept>
+                <concept code="es-CO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-COLOMBIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-COLOMBIA"
+                         type="fsn">Spanish; Castilian-COLOMBIA</designation>
+                    <desc language="en-US">Spanish; Castilian-COLOMBIA</desc>
+                </concept>
+                <concept code="es-CR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-COSTA RICA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-COSTA RICA"
+                         type="fsn">Spanish; Castilian-COSTA RICA</designation>
+                    <desc language="en-US">Spanish; Castilian-COSTA RICA</desc>
+                </concept>
+                <concept code="es-CU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-CUBA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Spanish; Castilian-CUBA" type="fsn">Spanish; Castilian-CUBA</designation>
+                    <desc language="en-US">Spanish; Castilian-CUBA</desc>
+                </concept>
+                <concept code="es-DO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-DOMINICAN REPUBLIC"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-DOMINICAN REPUBLIC"
+                         type="fsn">Spanish; Castilian-DOMINICAN REPUBLIC</designation>
+                    <desc language="en-US">Spanish; Castilian-DOMINICAN REPUBLIC</desc>
+                </concept>
+                <concept code="es-EC"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-ECUADOR"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-ECUADOR"
+                         type="fsn">Spanish; Castilian-ECUADOR</designation>
+                    <desc language="en-US">Spanish; Castilian-ECUADOR</desc>
+                </concept>
+                <concept code="es-ES"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-SPAIN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Spanish; Castilian-SPAIN" type="fsn">Spanish; Castilian-SPAIN</designation>
+                    <desc language="en-US">Spanish; Castilian-SPAIN</desc>
+                </concept>
+                <concept code="es-GQ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-EQUATORIAL GUINEA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-EQUATORIAL GUINEA"
+                         type="fsn">Spanish; Castilian-EQUATORIAL GUINEA</designation>
+                    <desc language="en-US">Spanish; Castilian-EQUATORIAL GUINEA</desc>
+                </concept>
+                <concept code="es-GT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-GUATEMALA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-GUATEMALA"
+                         type="fsn">Spanish; Castilian-GUATEMALA</designation>
+                    <desc language="en-US">Spanish; Castilian-GUATEMALA</desc>
+                </concept>
+                <concept code="es-HN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-HONDURAS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-HONDURAS"
+                         type="fsn">Spanish; Castilian-HONDURAS</designation>
+                    <desc language="en-US">Spanish; Castilian-HONDURAS</desc>
+                </concept>
+                <concept code="es-MX"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-MEXICO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Spanish; Castilian-MEXICO" type="fsn">Spanish; Castilian-MEXICO</designation>
+                    <desc language="en-US">Spanish; Castilian-MEXICO</desc>
+                </concept>
+                <concept code="es-NI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-NICARAGUA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-NICARAGUA"
+                         type="fsn">Spanish; Castilian-NICARAGUA</designation>
+                    <desc language="en-US">Spanish; Castilian-NICARAGUA</desc>
+                </concept>
+                <concept code="es-PA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-PANAMA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Spanish; Castilian-PANAMA" type="fsn">Spanish; Castilian-PANAMA</designation>
+                    <desc language="en-US">Spanish; Castilian-PANAMA</desc>
+                </concept>
+                <concept code="es-PE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-PERU"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Spanish; Castilian-PERU" type="fsn">Spanish; Castilian-PERU</designation>
+                    <desc language="en-US">Spanish; Castilian-PERU</desc>
+                </concept>
+                <concept code="es-PH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-PHILIPPINES"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-PHILIPPINES"
+                         type="fsn">Spanish; Castilian-PHILIPPINES</designation>
+                    <desc language="en-US">Spanish; Castilian-PHILIPPINES</desc>
+                </concept>
+                <concept code="es-PR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-PUERTO RICO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-PUERTO RICO"
+                         type="fsn">Spanish; Castilian-PUERTO RICO</designation>
+                    <desc language="en-US">Spanish; Castilian-PUERTO RICO</desc>
+                </concept>
+                <concept code="es-PY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-PARAGUAY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-PARAGUAY"
+                         type="fsn">Spanish; Castilian-PARAGUAY</designation>
+                    <desc language="en-US">Spanish; Castilian-PARAGUAY</desc>
+                </concept>
+                <concept code="es-SV"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-EL SALVADOR"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-EL SALVADOR"
+                         type="fsn">Spanish; Castilian-EL SALVADOR</designation>
+                    <desc language="en-US">Spanish; Castilian-EL SALVADOR</desc>
+                </concept>
+                <concept code="es-US"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-UNITED STATES OF AMERICA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-UNITED STATES OF AMERICA"
+                         type="fsn">Spanish; Castilian-UNITED STATES OF AMERICA</designation>
+                    <desc language="en-US">Spanish; Castilian-UNITED STATES OF AMERICA</desc>
+                </concept>
+                <concept code="es-UY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-URUGUAY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-URUGUAY"
+                         type="fsn">Spanish; Castilian-URUGUAY</designation>
+                    <desc language="en-US">Spanish; Castilian-URUGUAY</desc>
+                </concept>
+                <concept code="es-VE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Spanish; Castilian-VENEZUELA (BOLIVARIAN REPUBLIC OF)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Spanish; Castilian-VENEZUELA (BOLIVARIAN REPUBLIC OF)"
+                         type="fsn">Spanish; Castilian-VENEZUELA (BOLIVARIAN REPUBLIC OF)</designation>
+                    <desc language="en-US">Spanish; Castilian-VENEZUELA (BOLIVARIAN REPUBLIC OF)</desc>
+                </concept>
+                <concept code="et-EE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Estonian-ESTONIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Estonian-ESTONIA" type="fsn">Estonian-ESTONIA</designation>
+                    <desc language="en-US">Estonian-ESTONIA</desc>
+                </concept>
+                <concept code="eu-ES"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Basque; Basque County-SPAIN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Basque; Basque County-SPAIN"
+                         type="fsn">Basque; Basque County-SPAIN</designation>
+                    <desc language="en-US">Basque; Basque County-SPAIN</desc>
+                </concept>
+                <concept code="fa-AF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Persian-AFGHANISTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Persian-AFGHANISTAN" type="fsn">Persian-AFGHANISTAN</designation>
+                    <desc language="en-US">Persian-AFGHANISTAN</desc>
+                </concept>
+                <concept code="fa-IR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Persian-IRAN (ISLAMIC REPUBLIC OF)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Persian-IRAN (ISLAMIC REPUBLIC OF)"
+                         type="fsn">Persian-IRAN (ISLAMIC REPUBLIC OF)</designation>
+                    <desc language="en-US">Persian-IRAN (ISLAMIC REPUBLIC OF)</desc>
+                </concept>
+                <concept code="ff-CM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Fulah-CAMEROON"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Fulah-CAMEROON" type="fsn">Fulah-CAMEROON</designation>
+                    <desc language="en-US">Fulah-CAMEROON</desc>
+                </concept>
+                <concept code="ff-GN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Fulah-GUINEA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Fulah-GUINEA" type="fsn">Fulah-GUINEA</designation>
+                    <desc language="en-US">Fulah-GUINEA</desc>
+                </concept>
+                <concept code="ff-MR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Fulah-MAURITANIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Fulah-MAURITANIA" type="fsn">Fulah-MAURITANIA</designation>
+                    <desc language="en-US">Fulah-MAURITANIA</desc>
+                </concept>
+                <concept code="ff-SN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Fulah-SENEGAL"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Fulah-SENEGAL" type="fsn">Fulah-SENEGAL</designation>
+                    <desc language="en-US">Fulah-SENEGAL</desc>
+                </concept>
+                <concept code="fi-FI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Finnish-FINLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Finnish-FINLAND" type="fsn">Finnish-FINLAND</designation>
+                    <desc language="en-US">Finnish-FINLAND</desc>
+                </concept>
+                <concept code="fo-FO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Faroese-FAROE ISLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Faroese-FAROE ISLANDS" type="fsn">Faroese-FAROE ISLANDS</designation>
+                    <desc language="en-US">Faroese-FAROE ISLANDS</desc>
+                </concept>
+                <concept code="fr-BE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-BELGIUM"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-BELGIUM" type="fsn">French-BELGIUM</designation>
+                    <desc language="en-US">French-BELGIUM</desc>
+                </concept>
+                <concept code="fr-BF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-BURKINA FASO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-BURKINA FASO" type="fsn">French-BURKINA FASO</designation>
+                    <desc language="en-US">French-BURKINA FASO</desc>
+                </concept>
+                <concept code="fr-BI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-BURUNDI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-BURUNDI" type="fsn">French-BURUNDI</designation>
+                    <desc language="en-US">French-BURUNDI</desc>
+                </concept>
+                <concept code="fr-BJ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-BENIN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-BENIN" type="fsn">French-BENIN</designation>
+                    <desc language="en-US">French-BENIN</desc>
+                </concept>
+                <concept code="fr-BL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-SAINT BARTHÉLEMY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-SAINT BARTHÉLEMY" type="fsn">French-SAINT BARTHÉLEMY</designation>
+                    <desc language="en-US">French-SAINT BARTHÉLEMY</desc>
+                </concept>
+                <concept code="fr-CA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-CANADA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-CANADA" type="fsn">French-CANADA</designation>
+                    <desc language="en-US">French-CANADA</desc>
+                </concept>
+                <concept code="fr-CD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-CONGO, DEMOCRATIC REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="French-CONGO, DEMOCRATIC REPUBLIC OF"
+                         type="fsn">French-CONGO, DEMOCRATIC REPUBLIC OF</designation>
+                    <desc language="en-US">French-CONGO, DEMOCRATIC REPUBLIC OF</desc>
+                </concept>
+                <concept code="fr-CF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-CENTRAL AFRICAN REPUBLIC"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="French-CENTRAL AFRICAN REPUBLIC"
+                         type="fsn">French-CENTRAL AFRICAN REPUBLIC</designation>
+                    <desc language="en-US">French-CENTRAL AFRICAN REPUBLIC</desc>
+                </concept>
+                <concept code="fr-CG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-CONGO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-CONGO" type="fsn">French-CONGO</designation>
+                    <desc language="en-US">French-CONGO</desc>
+                </concept>
+                <concept code="fr-CH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-SWITZERLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-SWITZERLAND" type="fsn">French-SWITZERLAND</designation>
+                    <desc language="en-US">French-SWITZERLAND</desc>
+                </concept>
+                <concept code="fr-CI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-COTE D'IVOIRE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-COTE D'IVOIRE" type="fsn">French-COTE D'IVOIRE</designation>
+                    <desc language="en-US">French-COTE D'IVOIRE</desc>
+                </concept>
+                <concept code="fr-CM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-CAMEROON"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-CAMEROON" type="fsn">French-CAMEROON</designation>
+                    <desc language="en-US">French-CAMEROON</desc>
+                </concept>
+                <concept code="fr-DJ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-DJIBOUTI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-DJIBOUTI" type="fsn">French-DJIBOUTI</designation>
+                    <desc language="en-US">French-DJIBOUTI</desc>
+                </concept>
+                <concept code="fr-DZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-ALGERIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-ALGERIA" type="fsn">French-ALGERIA</designation>
+                    <desc language="en-US">French-ALGERIA</desc>
+                </concept>
+                <concept code="fr-FR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-FRANCE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-FRANCE" type="fsn">French-FRANCE</designation>
+                    <desc language="en-US">French-FRANCE</desc>
+                </concept>
+                <concept code="fr-GA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-GABON"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-GABON" type="fsn">French-GABON</designation>
+                    <desc language="en-US">French-GABON</desc>
+                </concept>
+                <concept code="fr-GF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-FRENCH GUIANA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-FRENCH GUIANA" type="fsn">French-FRENCH GUIANA</designation>
+                    <desc language="en-US">French-FRENCH GUIANA</desc>
+                </concept>
+                <concept code="fr-GN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-GUINEA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-GUINEA" type="fsn">French-GUINEA</designation>
+                    <desc language="en-US">French-GUINEA</desc>
+                </concept>
+                <concept code="fr-GP"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-GUADELOUPE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-GUADELOUPE" type="fsn">French-GUADELOUPE</designation>
+                    <desc language="en-US">French-GUADELOUPE</desc>
+                </concept>
+                <concept code="fr-GQ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-EQUATORIAL GUINEA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-EQUATORIAL GUINEA" type="fsn">French-EQUATORIAL GUINEA</designation>
+                    <desc language="en-US">French-EQUATORIAL GUINEA</desc>
+                </concept>
+                <concept code="fr-HT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-HAITI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-HAITI" type="fsn">French-HAITI</designation>
+                    <desc language="en-US">French-HAITI</desc>
+                </concept>
+                <concept code="fr-KM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-COMOROS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-COMOROS" type="fsn">French-COMOROS</designation>
+                    <desc language="en-US">French-COMOROS</desc>
+                </concept>
+                <concept code="fr-LU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-LUXEMBOURG"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-LUXEMBOURG" type="fsn">French-LUXEMBOURG</designation>
+                    <desc language="en-US">French-LUXEMBOURG</desc>
+                </concept>
+                <concept code="fr-MA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-MOROCCO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-MOROCCO" type="fsn">French-MOROCCO</designation>
+                    <desc language="en-US">French-MOROCCO</desc>
+                </concept>
+                <concept code="fr-MC"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-MONACO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-MONACO" type="fsn">French-MONACO</designation>
+                    <desc language="en-US">French-MONACO</desc>
+                </concept>
+                <concept code="fr-MF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-SAINT MARTIN (FRENCH PART)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="French-SAINT MARTIN (FRENCH PART)"
+                         type="fsn">French-SAINT MARTIN (FRENCH PART)</designation>
+                    <desc language="en-US">French-SAINT MARTIN (FRENCH PART)</desc>
+                </concept>
+                <concept code="fr-MG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-MADAGASCAR"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-MADAGASCAR" type="fsn">French-MADAGASCAR</designation>
+                    <desc language="en-US">French-MADAGASCAR</desc>
+                </concept>
+                <concept code="fr-ML"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-MALI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-MALI" type="fsn">French-MALI</designation>
+                    <desc language="en-US">French-MALI</desc>
+                </concept>
+                <concept code="fr-MQ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-MARTINIQUE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-MARTINIQUE" type="fsn">French-MARTINIQUE</designation>
+                    <desc language="en-US">French-MARTINIQUE</desc>
+                </concept>
+                <concept code="fr-MR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-MAURITANIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-MAURITANIA" type="fsn">French-MAURITANIA</designation>
+                    <desc language="en-US">French-MAURITANIA</desc>
+                </concept>
+                <concept code="fr-MU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-MAURITIUS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-MAURITIUS" type="fsn">French-MAURITIUS</designation>
+                    <desc language="en-US">French-MAURITIUS</desc>
+                </concept>
+                <concept code="fr-NC"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-NEW CALEDONIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-NEW CALEDONIA" type="fsn">French-NEW CALEDONIA</designation>
+                    <desc language="en-US">French-NEW CALEDONIA</desc>
+                </concept>
+                <concept code="fr-NE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-NIGER"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-NIGER" type="fsn">French-NIGER</designation>
+                    <desc language="en-US">French-NIGER</desc>
+                </concept>
+                <concept code="fr-PF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-FRENCH POLYNESIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-FRENCH POLYNESIA" type="fsn">French-FRENCH POLYNESIA</designation>
+                    <desc language="en-US">French-FRENCH POLYNESIA</desc>
+                </concept>
+                <concept code="fr-PM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-SAINT PIERRE AND MIQUELON"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="French-SAINT PIERRE AND MIQUELON"
+                         type="fsn">French-SAINT PIERRE AND MIQUELON</designation>
+                    <desc language="en-US">French-SAINT PIERRE AND MIQUELON</desc>
+                </concept>
+                <concept code="fr-RE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-REUNION"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-REUNION" type="fsn">French-REUNION</designation>
+                    <desc language="en-US">French-REUNION</desc>
+                </concept>
+                <concept code="fr-RW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-RWANDA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-RWANDA" type="fsn">French-RWANDA</designation>
+                    <desc language="en-US">French-RWANDA</desc>
+                </concept>
+                <concept code="fr-SC"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-SEYCHELLES"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-SEYCHELLES" type="fsn">French-SEYCHELLES</designation>
+                    <desc language="en-US">French-SEYCHELLES</desc>
+                </concept>
+                <concept code="fr-SN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-SENEGAL"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-SENEGAL" type="fsn">French-SENEGAL</designation>
+                    <desc language="en-US">French-SENEGAL</desc>
+                </concept>
+                <concept code="fr-SY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-SYRIAN ARAB REPUBLIC"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="French-SYRIAN ARAB REPUBLIC"
+                         type="fsn">French-SYRIAN ARAB REPUBLIC</designation>
+                    <desc language="en-US">French-SYRIAN ARAB REPUBLIC</desc>
+                </concept>
+                <concept code="fr-TD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-CHAD"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-CHAD" type="fsn">French-CHAD</designation>
+                    <desc language="en-US">French-CHAD</desc>
+                </concept>
+                <concept code="fr-TG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-TOGO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-TOGO" type="fsn">French-TOGO</designation>
+                    <desc language="en-US">French-TOGO</desc>
+                </concept>
+                <concept code="fr-TN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-TUNISIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-TUNISIA" type="fsn">French-TUNISIA</designation>
+                    <desc language="en-US">French-TUNISIA</desc>
+                </concept>
+                <concept code="fr-VU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-VANUATU"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-VANUATU" type="fsn">French-VANUATU</designation>
+                    <desc language="en-US">French-VANUATU</desc>
+                </concept>
+                <concept code="fr-WF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-WALLIS AND FUTUNA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-WALLIS AND FUTUNA" type="fsn">French-WALLIS AND FUTUNA</designation>
+                    <desc language="en-US">French-WALLIS AND FUTUNA</desc>
+                </concept>
+                <concept code="fr-YT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="French-MAYOTTE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="French-MAYOTTE" type="fsn">French-MAYOTTE</designation>
+                    <desc language="en-US">French-MAYOTTE</desc>
+                </concept>
+                <concept code="fy-NL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Western Frisian-NETHERLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Western Frisian-NETHERLANDS"
+                         type="fsn">Western Frisian-NETHERLANDS</designation>
+                    <desc language="en-US">Western Frisian-NETHERLANDS</desc>
+                </concept>
+                <concept code="ga-IE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Irish-IRELAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Irish-IRELAND" type="fsn">Irish-IRELAND</designation>
+                    <desc language="en-US">Irish-IRELAND</desc>
+                </concept>
+                <concept code="gd-GB"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Gaelic; Scottish Gaelic-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Gaelic; Scottish Gaelic-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+                         type="fsn">Gaelic; Scottish Gaelic-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</designation>
+                    <desc language="en-US">Gaelic; Scottish Gaelic-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</desc>
+                </concept>
+                <concept code="gl-ES"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Galician; Galicia-SPAIN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Galician; Galicia-SPAIN" type="fsn">Galician; Galicia-SPAIN</designation>
+                    <desc language="en-US">Galician; Galicia-SPAIN</desc>
+                </concept>
+                <concept code="gu-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Gujarati-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Gujarati-INDIA" type="fsn">Gujarati-INDIA</designation>
+                    <desc language="en-US">Gujarati-INDIA</desc>
+                </concept>
+                <concept code="gv-IM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Manx-ISLE OF MAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Manx-ISLE OF MAN" type="fsn">Manx-ISLE OF MAN</designation>
+                    <desc language="en-US">Manx-ISLE OF MAN</desc>
+                </concept>
+                <concept code="ha-GH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Hausa-GHANA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hausa-GHANA" type="fsn">Hausa-GHANA</designation>
+                    <desc language="en-US">Hausa-GHANA</desc>
+                </concept>
+                <concept code="ha-NE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Hausa-NIGER"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hausa-NIGER" type="fsn">Hausa-NIGER</designation>
+                    <desc language="en-US">Hausa-NIGER</desc>
+                </concept>
+                <concept code="ha-NG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Hausa-NIGERIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hausa-NIGERIA" type="fsn">Hausa-NIGERIA</designation>
+                    <desc language="en-US">Hausa-NIGERIA</desc>
+                </concept>
+                <concept code="he-IL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Hebrew-ISRAEL"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hebrew-ISRAEL" type="fsn">Hebrew-ISRAEL</designation>
+                    <desc language="en-US">Hebrew-ISRAEL</desc>
+                </concept>
+                <concept code="hi-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Hindi-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hindi-INDIA" type="fsn">Hindi-INDIA</designation>
+                    <desc language="en-US">Hindi-INDIA</desc>
+                </concept>
+                <concept code="hr-BA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Croatian-BOSNIA AND HERZEGOVINA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Croatian-BOSNIA AND HERZEGOVINA"
+                         type="fsn">Croatian-BOSNIA AND HERZEGOVINA</designation>
+                    <desc language="en-US">Croatian-BOSNIA AND HERZEGOVINA</desc>
+                </concept>
+                <concept code="hr-HR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Croatian-CROATIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Croatian-CROATIA" type="fsn">Croatian-CROATIA</designation>
+                    <desc language="en-US">Croatian-CROATIA</desc>
+                </concept>
+                <concept code="hu-HU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Hungarian-HUNGARY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hungarian-HUNGARY" type="fsn">Hungarian-HUNGARY</designation>
+                    <desc language="en-US">Hungarian-HUNGARY</desc>
+                </concept>
+                <concept code="hy-AM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Armenian-ARMENIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Armenian-ARMENIA" type="fsn">Armenian-ARMENIA</designation>
+                    <desc language="en-US">Armenian-ARMENIA</desc>
+                </concept>
+                <concept code="id-ID"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Indonesian-INDONESIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Indonesian-INDONESIA" type="fsn">Indonesian-INDONESIA</designation>
+                    <desc language="en-US">Indonesian-INDONESIA</desc>
+                </concept>
+                <concept code="ig-NG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Igbo-NIGERIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Igbo-NIGERIA" type="fsn">Igbo-NIGERIA</designation>
+                    <desc language="en-US">Igbo-NIGERIA</desc>
+                </concept>
+                <concept code="ii-CN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Sichuan Yi; Nuosu-CHINA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Sichuan Yi; Nuosu-CHINA" type="fsn">Sichuan Yi; Nuosu-CHINA</designation>
+                    <desc language="en-US">Sichuan Yi; Nuosu-CHINA</desc>
+                </concept>
+                <concept code="is-IS"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Icelandic-ICELAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Icelandic-ICELAND" type="fsn">Icelandic-ICELAND</designation>
+                    <desc language="en-US">Icelandic-ICELAND</desc>
+                </concept>
+                <concept code="it-CH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Italian-SWITZERLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Italian-SWITZERLAND" type="fsn">Italian-SWITZERLAND</designation>
+                    <desc language="en-US">Italian-SWITZERLAND</desc>
+                </concept>
+                <concept code="it-IT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Italian-ITALY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Italian-ITALY" type="fsn">Italian-ITALY</designation>
+                    <desc language="en-US">Italian-ITALY</desc>
+                </concept>
+                <concept code="it-SM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Italian-SAN MARINO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Italian-SAN MARINO" type="fsn">Italian-SAN MARINO</designation>
+                    <desc language="en-US">Italian-SAN MARINO</desc>
+                </concept>
+                <concept code="ja-JP"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Japanese-JAPAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Japanese-JAPAN" type="fsn">Japanese-JAPAN</designation>
+                    <desc language="en-US">Japanese-JAPAN</desc>
+                </concept>
+                <concept code="ka-GE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Georgian-GEORGIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Georgian-GEORGIA" type="fsn">Georgian-GEORGIA</designation>
+                    <desc language="en-US">Georgian-GEORGIA</desc>
+                </concept>
+                <concept code="ki-KE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Kikuyu; Gikuyu-KENYA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Kikuyu; Gikuyu-KENYA" type="fsn">Kikuyu; Gikuyu-KENYA</designation>
+                    <desc language="en-US">Kikuyu; Gikuyu-KENYA</desc>
+                </concept>
+                <concept code="kk-KZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Kazakh-KAZAKHSTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Kazakh-KAZAKHSTAN" type="fsn">Kazakh-KAZAKHSTAN</designation>
+                    <desc language="en-US">Kazakh-KAZAKHSTAN</desc>
+                </concept>
+                <concept code="kl-GL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Kalaallisut; Greenlandic-GREENLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Kalaallisut; Greenlandic-GREENLAND"
+                         type="fsn">Kalaallisut; Greenlandic-GREENLAND</designation>
+                    <desc language="en-US">Kalaallisut; Greenlandic-GREENLAND</desc>
+                </concept>
+                <concept code="km-KH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Central Khmer-CAMBODIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Central Khmer-CAMBODIA" type="fsn">Central Khmer-CAMBODIA</designation>
+                    <desc language="en-US">Central Khmer-CAMBODIA</desc>
+                </concept>
+                <concept code="kn-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Kannada-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Kannada-INDIA" type="fsn">Kannada-INDIA</designation>
+                    <desc language="en-US">Kannada-INDIA</desc>
+                </concept>
+                <concept code="ko-KP"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Korean-KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Korean-KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)"
+                         type="fsn">Korean-KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)</designation>
+                    <desc language="en-US">Korean-KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)</desc>
+                </concept>
+                <concept code="ko-KR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Korean-KOREA, REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Korean-KOREA, REPUBLIC OF" type="fsn">Korean-KOREA, REPUBLIC OF</designation>
+                    <desc language="en-US">Korean-KOREA, REPUBLIC OF</desc>
+                </concept>
+                <concept code="ks-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Kashmiri-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Kashmiri-INDIA" type="fsn">Kashmiri-INDIA</designation>
+                    <desc language="en-US">Kashmiri-INDIA</desc>
+                </concept>
+                <concept code="kw-GB"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Cornish-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Cornish-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+                         type="fsn">Cornish-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</designation>
+                    <desc language="en-US">Cornish-UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</desc>
+                </concept>
+                <concept code="ky-KG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Kirghiz; Kyrgyz-KYRGYZSTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Kirghiz; Kyrgyz-KYRGYZSTAN"
+                         type="fsn">Kirghiz; Kyrgyz-KYRGYZSTAN</designation>
+                    <desc language="en-US">Kirghiz; Kyrgyz-KYRGYZSTAN</desc>
+                </concept>
+                <concept code="lb-LU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Luxembourgish; Letzeburgesch-LUXEMBOURG"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Luxembourgish; Letzeburgesch-LUXEMBOURG"
+                         type="fsn">Luxembourgish; Letzeburgesch-LUXEMBOURG</designation>
+                    <desc language="en-US">Luxembourgish; Letzeburgesch-LUXEMBOURG</desc>
+                </concept>
+                <concept code="lg-UG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Ganda-UGANDA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ganda-UGANDA" type="fsn">Ganda-UGANDA</designation>
+                    <desc language="en-US">Ganda-UGANDA</desc>
+                </concept>
+                <concept code="ln-AO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Lingala-ANGOLA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Lingala-ANGOLA" type="fsn">Lingala-ANGOLA</designation>
+                    <desc language="en-US">Lingala-ANGOLA</desc>
+                </concept>
+                <concept code="ln-CD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Lingala-CONGO, DEMOCRATIC REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Lingala-CONGO, DEMOCRATIC REPUBLIC OF"
+                         type="fsn">Lingala-CONGO, DEMOCRATIC REPUBLIC OF</designation>
+                    <desc language="en-US">Lingala-CONGO, DEMOCRATIC REPUBLIC OF</desc>
+                </concept>
+                <concept code="ln-CF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Lingala-CENTRAL AFRICAN REPUBLIC"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Lingala-CENTRAL AFRICAN REPUBLIC"
+                         type="fsn">Lingala-CENTRAL AFRICAN REPUBLIC</designation>
+                    <desc language="en-US">Lingala-CENTRAL AFRICAN REPUBLIC</desc>
+                </concept>
+                <concept code="ln-CG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Lingala-CONGO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Lingala-CONGO" type="fsn">Lingala-CONGO</designation>
+                    <desc language="en-US">Lingala-CONGO</desc>
+                </concept>
+                <concept code="lo-LA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Lao-LAO PEOPLE'S DEMOCRATIC REPUBLIC"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Lao-LAO PEOPLE'S DEMOCRATIC REPUBLIC"
+                         type="fsn">Lao-LAO PEOPLE'S DEMOCRATIC REPUBLIC</designation>
+                    <desc language="en-US">Lao-LAO PEOPLE'S DEMOCRATIC REPUBLIC</desc>
+                </concept>
+                <concept code="lt-LT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Lithuanian-LITHUANIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Lithuanian-LITHUANIA" type="fsn">Lithuanian-LITHUANIA</designation>
+                    <desc language="en-US">Lithuanian-LITHUANIA</desc>
+                </concept>
+                <concept code="lu-CD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Luba-Katanga-CONGO, DEMOCRATIC REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Luba-Katanga-CONGO, DEMOCRATIC REPUBLIC OF"
+                         type="fsn">Luba-Katanga-CONGO, DEMOCRATIC REPUBLIC OF</designation>
+                    <desc language="en-US">Luba-Katanga-CONGO, DEMOCRATIC REPUBLIC OF</desc>
+                </concept>
+                <concept code="lv-LV"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Latvian-LATVIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Latvian-LATVIA" type="fsn">Latvian-LATVIA</designation>
+                    <desc language="en-US">Latvian-LATVIA</desc>
+                </concept>
+                <concept code="mg-MG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Malagasy-MADAGASCAR"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Malagasy-MADAGASCAR" type="fsn">Malagasy-MADAGASCAR</designation>
+                    <desc language="en-US">Malagasy-MADAGASCAR</desc>
+                </concept>
+                <concept code="mk-MK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Macedonian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Macedonian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"
+                         type="fsn">Macedonian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</designation>
+                    <desc language="en-US">Macedonian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</desc>
+                </concept>
+                <concept code="ml-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Malayalam-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Malayalam-INDIA" type="fsn">Malayalam-INDIA</designation>
+                    <desc language="en-US">Malayalam-INDIA</desc>
+                </concept>
+                <concept code="mn-MN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Mongolian-MONGOLIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Mongolian-MONGOLIA" type="fsn">Mongolian-MONGOLIA</designation>
+                    <desc language="en-US">Mongolian-MONGOLIA</desc>
+                </concept>
+                <concept code="mr-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Marathi-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Marathi-INDIA" type="fsn">Marathi-INDIA</designation>
+                    <desc language="en-US">Marathi-INDIA</desc>
+                </concept>
+                <concept code="ms-BN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Malay-BRUNEI DARUSSALAM"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Malay-BRUNEI DARUSSALAM" type="fsn">Malay-BRUNEI DARUSSALAM</designation>
+                    <desc language="en-US">Malay-BRUNEI DARUSSALAM</desc>
+                </concept>
+                <concept code="ms-MY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Malay-MALAYSIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Malay-MALAYSIA" type="fsn">Malay-MALAYSIA</designation>
+                    <desc language="en-US">Malay-MALAYSIA</desc>
+                </concept>
+                <concept code="ms-SG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Malay-SINGAPORE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Malay-SINGAPORE" type="fsn">Malay-SINGAPORE</designation>
+                    <desc language="en-US">Malay-SINGAPORE</desc>
+                </concept>
+                <concept code="mt-MT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Maltese-MALTA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Maltese-MALTA" type="fsn">Maltese-MALTA</designation>
+                    <desc language="en-US">Maltese-MALTA</desc>
+                </concept>
+                <concept code="my-MM"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Burmese-MYANMAR"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Burmese-MYANMAR" type="fsn">Burmese-MYANMAR</designation>
+                    <desc language="en-US">Burmese-MYANMAR</desc>
+                </concept>
+                <concept code="nb-NO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Bokmål, Norwegian; Norwegian Bokmål-NORWAY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Bokmål, Norwegian; Norwegian Bokmål-NORWAY"
+                         type="fsn">Bokmål, Norwegian; Norwegian Bokmål-NORWAY</designation>
+                    <desc language="en-US">Bokmål, Norwegian; Norwegian Bokmål-NORWAY</desc>
+                </concept>
+                <concept code="nb-SJ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Bokmål, Norwegian; Norwegian Bokmål-SVALBARD AND JAN MAYEN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Bokmål, Norwegian; Norwegian Bokmål-SVALBARD AND JAN MAYEN"
+                         type="fsn">Bokmål, Norwegian; Norwegian Bokmål-SVALBARD AND JAN MAYEN</designation>
+                    <desc language="en-US">Bokmål, Norwegian; Norwegian Bokmål-SVALBARD AND JAN MAYEN</desc>
+                </concept>
+                <concept code="nd-ZW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Ndebele, North; North Ndebele-ZIMBABWE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Ndebele, North; North Ndebele-ZIMBABWE"
+                         type="fsn">Ndebele, North; North Ndebele-ZIMBABWE</designation>
+                    <desc language="en-US">Ndebele, North; North Ndebele-ZIMBABWE</desc>
+                </concept>
+                <concept code="ne-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Nepali-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Nepali-INDIA" type="fsn">Nepali-INDIA</designation>
+                    <desc language="en-US">Nepali-INDIA</desc>
+                </concept>
+                <concept code="ne-NP"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Nepali-NEPAL"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Nepali-NEPAL" type="fsn">Nepali-NEPAL</designation>
+                    <desc language="en-US">Nepali-NEPAL</desc>
+                </concept>
+                <concept code="nl-AW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Dutch; Flemish-ARUBA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dutch; Flemish-ARUBA" type="fsn">Dutch; Flemish-ARUBA</designation>
+                    <desc language="en-US">Dutch; Flemish-ARUBA</desc>
+                </concept>
+                <concept code="nl-BE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Dutch; Flemish-BELGIUM"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dutch; Flemish-BELGIUM" type="fsn">Dutch; Flemish-BELGIUM</designation>
+                    <desc language="en-US">Dutch; Flemish-BELGIUM</desc>
+                </concept>
+                <concept code="nl-BQ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Dutch; Flemish-BONAIRE, SINT EUSTATIUS AND SABA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Dutch; Flemish-BONAIRE, SINT EUSTATIUS AND SABA"
+                         type="fsn">Dutch; Flemish-BONAIRE, SINT EUSTATIUS AND SABA</designation>
+                    <desc language="en-US">Dutch; Flemish-BONAIRE, SINT EUSTATIUS AND SABA</desc>
+                </concept>
+                <concept code="nl-CW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Dutch; Flemish-CURAÇAO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dutch; Flemish-CURAÇAO" type="fsn">Dutch; Flemish-CURAÇAO</designation>
+                    <desc language="en-US">Dutch; Flemish-CURAÇAO</desc>
+                </concept>
+                <concept code="nl-NL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Dutch; Flemish-NETHERLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Dutch; Flemish-NETHERLANDS"
+                         type="fsn">Dutch; Flemish-NETHERLANDS</designation>
+                    <desc language="en-US">Dutch; Flemish-NETHERLANDS</desc>
+                </concept>
+                <concept code="nl-SR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Dutch; Flemish-SURINAME"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dutch; Flemish-SURINAME" type="fsn">Dutch; Flemish-SURINAME</designation>
+                    <desc language="en-US">Dutch; Flemish-SURINAME</desc>
+                </concept>
+                <concept code="nl-SX"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Dutch; Flemish-SINT MAARTEN (DUTCH PART)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Dutch; Flemish-SINT MAARTEN (DUTCH PART)"
+                         type="fsn">Dutch; Flemish-SINT MAARTEN (DUTCH PART)</designation>
+                    <desc language="en-US">Dutch; Flemish-SINT MAARTEN (DUTCH PART)</desc>
+                </concept>
+                <concept code="nn-NO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Norwegian Nynorsk; Nynorsk, Norwegian-NORWAY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Norwegian Nynorsk; Nynorsk, Norwegian-NORWAY"
+                         type="fsn">Norwegian Nynorsk; Nynorsk, Norwegian-NORWAY</designation>
+                    <desc language="en-US">Norwegian Nynorsk; Nynorsk, Norwegian-NORWAY</desc>
+                </concept>
+                <concept code="om-ET"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Oromo-ETHIOPIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Oromo-ETHIOPIA" type="fsn">Oromo-ETHIOPIA</designation>
+                    <desc language="en-US">Oromo-ETHIOPIA</desc>
+                </concept>
+                <concept code="om-KE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Oromo-KENYA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Oromo-KENYA" type="fsn">Oromo-KENYA</designation>
+                    <desc language="en-US">Oromo-KENYA</desc>
+                </concept>
+                <concept code="or-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Oriya-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Oriya-INDIA" type="fsn">Oriya-INDIA</designation>
+                    <desc language="en-US">Oriya-INDIA</desc>
+                </concept>
+                <concept code="os-GE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Ossetian; Ossetic-GEORGIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ossetian; Ossetic-GEORGIA" type="fsn">Ossetian; Ossetic-GEORGIA</designation>
+                    <desc language="en-US">Ossetian; Ossetic-GEORGIA</desc>
+                </concept>
+                <concept code="os-RU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Ossetian; Ossetic-RUSSIAN FEDERATION"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Ossetian; Ossetic-RUSSIAN FEDERATION"
+                         type="fsn">Ossetian; Ossetic-RUSSIAN FEDERATION</designation>
+                    <desc language="en-US">Ossetian; Ossetic-RUSSIAN FEDERATION</desc>
+                </concept>
+                <concept code="pa-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Panjabi; Punjabi-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Panjabi; Punjabi-INDIA" type="fsn">Panjabi; Punjabi-INDIA</designation>
+                    <desc language="en-US">Panjabi; Punjabi-INDIA</desc>
+                </concept>
+                <concept code="pa-PK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Panjabi; Punjabi-PAKISTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Panjabi; Punjabi-PAKISTAN" type="fsn">Panjabi; Punjabi-PAKISTAN</designation>
+                    <desc language="en-US">Panjabi; Punjabi-PAKISTAN</desc>
+                </concept>
+                <concept code="pl-PL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Polish-POLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Polish-POLAND" type="fsn">Polish-POLAND</designation>
+                    <desc language="en-US">Polish-POLAND</desc>
+                </concept>
+                <concept code="ps-AF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Pushto; Pashto-AFGHANISTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Pushto; Pashto-AFGHANISTAN"
+                         type="fsn">Pushto; Pashto-AFGHANISTAN</designation>
+                    <desc language="en-US">Pushto; Pashto-AFGHANISTAN</desc>
+                </concept>
+                <concept code="pt-AO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Portuguese-ANGOLA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Portuguese-ANGOLA" type="fsn">Portuguese-ANGOLA</designation>
+                    <desc language="en-US">Portuguese-ANGOLA</desc>
+                </concept>
+                <concept code="pt-BR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Portuguese-BRAZIL"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Portuguese-BRAZIL" type="fsn">Portuguese-BRAZIL</designation>
+                    <desc language="en-US">Portuguese-BRAZIL</desc>
+                </concept>
+                <concept code="pt-CV"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Portuguese-CAPE VERDE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Portuguese-CAPE VERDE" type="fsn">Portuguese-CAPE VERDE</designation>
+                    <desc language="en-US">Portuguese-CAPE VERDE</desc>
+                </concept>
+                <concept code="pt-GW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Portuguese-GUINEA-BISSAU"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Portuguese-GUINEA-BISSAU" type="fsn">Portuguese-GUINEA-BISSAU</designation>
+                    <desc language="en-US">Portuguese-GUINEA-BISSAU</desc>
+                </concept>
+                <concept code="pt-MO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Portuguese-MACAO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Portuguese-MACAO" type="fsn">Portuguese-MACAO</designation>
+                    <desc language="en-US">Portuguese-MACAO</desc>
+                </concept>
+                <concept code="pt-MZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Portuguese-MOZAMBIQUE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Portuguese-MOZAMBIQUE" type="fsn">Portuguese-MOZAMBIQUE</designation>
+                    <desc language="en-US">Portuguese-MOZAMBIQUE</desc>
+                </concept>
+                <concept code="pt-PT"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Portuguese-PORTUGAL"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Portuguese-PORTUGAL" type="fsn">Portuguese-PORTUGAL</designation>
+                    <desc language="en-US">Portuguese-PORTUGAL</desc>
+                </concept>
+                <concept code="pt-ST"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Portuguese-SAO TOME AND PRINCIPE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Portuguese-SAO TOME AND PRINCIPE"
+                         type="fsn">Portuguese-SAO TOME AND PRINCIPE</designation>
+                    <desc language="en-US">Portuguese-SAO TOME AND PRINCIPE</desc>
+                </concept>
+                <concept code="pt-TL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Portuguese-TIMOR-LESTE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Portuguese-TIMOR-LESTE" type="fsn">Portuguese-TIMOR-LESTE</designation>
+                    <desc language="en-US">Portuguese-TIMOR-LESTE</desc>
+                </concept>
+                <concept code="qu-BO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Quechua-BOLIVIA (PLURINATIONAL STATE OF)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Quechua-BOLIVIA (PLURINATIONAL STATE OF)"
+                         type="fsn">Quechua-BOLIVIA (PLURINATIONAL STATE OF)</designation>
+                    <desc language="en-US">Quechua-BOLIVIA (PLURINATIONAL STATE OF)</desc>
+                </concept>
+                <concept code="qu-EC"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Quechua-ECUADOR"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Quechua-ECUADOR" type="fsn">Quechua-ECUADOR</designation>
+                    <desc language="en-US">Quechua-ECUADOR</desc>
+                </concept>
+                <concept code="qu-PE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Quechua-PERU"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Quechua-PERU" type="fsn">Quechua-PERU</designation>
+                    <desc language="en-US">Quechua-PERU</desc>
+                </concept>
+                <concept code="rm-CH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Romansh-SWITZERLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Romansh-SWITZERLAND" type="fsn">Romansh-SWITZERLAND</designation>
+                    <desc language="en-US">Romansh-SWITZERLAND</desc>
+                </concept>
+                <concept code="rn-BI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Rundi-BURUNDI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Rundi-BURUNDI" type="fsn">Rundi-BURUNDI</designation>
+                    <desc language="en-US">Rundi-BURUNDI</desc>
+                </concept>
+                <concept code="ro-MD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Romanian; Moldavian; Moldovan-MOLDOVA, REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Romanian; Moldavian; Moldovan-MOLDOVA, REPUBLIC OF"
+                         type="fsn">Romanian; Moldavian; Moldovan-MOLDOVA, REPUBLIC OF</designation>
+                    <desc language="en-US">Romanian; Moldavian; Moldovan-MOLDOVA, REPUBLIC OF</desc>
+                </concept>
+                <concept code="ro-RO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Romanian; Moldavian; Moldovan-ROMANIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Romanian; Moldavian; Moldovan-ROMANIA"
+                         type="fsn">Romanian; Moldavian; Moldovan-ROMANIA</designation>
+                    <desc language="en-US">Romanian; Moldavian; Moldovan-ROMANIA</desc>
+                </concept>
+                <concept code="ru-BY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Russian-BELARUS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Russian-BELARUS" type="fsn">Russian-BELARUS</designation>
+                    <desc language="en-US">Russian-BELARUS</desc>
+                </concept>
+                <concept code="ru-KG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Russian-KYRGYZSTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Russian-KYRGYZSTAN" type="fsn">Russian-KYRGYZSTAN</designation>
+                    <desc language="en-US">Russian-KYRGYZSTAN</desc>
+                </concept>
+                <concept code="ru-KZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Russian-KAZAKHSTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Russian-KAZAKHSTAN" type="fsn">Russian-KAZAKHSTAN</designation>
+                    <desc language="en-US">Russian-KAZAKHSTAN</desc>
+                </concept>
+                <concept code="ru-MD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Russian-MOLDOVA, REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Russian-MOLDOVA, REPUBLIC OF"
+                         type="fsn">Russian-MOLDOVA, REPUBLIC OF</designation>
+                    <desc language="en-US">Russian-MOLDOVA, REPUBLIC OF</desc>
+                </concept>
+                <concept code="ru-RU"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Russian-RUSSIAN FEDERATION"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Russian-RUSSIAN FEDERATION"
+                         type="fsn">Russian-RUSSIAN FEDERATION</designation>
+                    <desc language="en-US">Russian-RUSSIAN FEDERATION</desc>
+                </concept>
+                <concept code="ru-UA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Russian-UKRAINE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Russian-UKRAINE" type="fsn">Russian-UKRAINE</designation>
+                    <desc language="en-US">Russian-UKRAINE</desc>
+                </concept>
+                <concept code="rw-RW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Kinyarwanda-RWANDA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Kinyarwanda-RWANDA" type="fsn">Kinyarwanda-RWANDA</designation>
+                    <desc language="en-US">Kinyarwanda-RWANDA</desc>
+                </concept>
+                <concept code="se-FI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Northern Sami-FINLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Northern Sami-FINLAND" type="fsn">Northern Sami-FINLAND</designation>
+                    <desc language="en-US">Northern Sami-FINLAND</desc>
+                </concept>
+                <concept code="se-NO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Northern Sami-NORWAY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Northern Sami-NORWAY" type="fsn">Northern Sami-NORWAY</designation>
+                    <desc language="en-US">Northern Sami-NORWAY</desc>
+                </concept>
+                <concept code="se-SE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Northern Sami-SWEDEN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Northern Sami-SWEDEN" type="fsn">Northern Sami-SWEDEN</designation>
+                    <desc language="en-US">Northern Sami-SWEDEN</desc>
+                </concept>
+                <concept code="sg-CF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Sango-CENTRAL AFRICAN REPUBLIC"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Sango-CENTRAL AFRICAN REPUBLIC"
+                         type="fsn">Sango-CENTRAL AFRICAN REPUBLIC</designation>
+                    <desc language="en-US">Sango-CENTRAL AFRICAN REPUBLIC</desc>
+                </concept>
+                <concept code="si-LK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Sinhala; Sinhalese-SRI LANKA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Sinhala; Sinhalese-SRI LANKA"
+                         type="fsn">Sinhala; Sinhalese-SRI LANKA</designation>
+                    <desc language="en-US">Sinhala; Sinhalese-SRI LANKA</desc>
+                </concept>
+                <concept code="sk-SK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Slovak-SLOVAKIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Slovak-SLOVAKIA" type="fsn">Slovak-SLOVAKIA</designation>
+                    <desc language="en-US">Slovak-SLOVAKIA</desc>
+                </concept>
+                <concept code="sl-SI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Slovenian-SLOVENIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Slovenian-SLOVENIA" type="fsn">Slovenian-SLOVENIA</designation>
+                    <desc language="en-US">Slovenian-SLOVENIA</desc>
+                </concept>
+                <concept code="sn-ZW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Shona-ZIMBABWE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Shona-ZIMBABWE" type="fsn">Shona-ZIMBABWE</designation>
+                    <desc language="en-US">Shona-ZIMBABWE</desc>
+                </concept>
+                <concept code="so-DJ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Somali-DJIBOUTI"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Somali-DJIBOUTI" type="fsn">Somali-DJIBOUTI</designation>
+                    <desc language="en-US">Somali-DJIBOUTI</desc>
+                </concept>
+                <concept code="so-ET"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Somali-ETHIOPIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Somali-ETHIOPIA" type="fsn">Somali-ETHIOPIA</designation>
+                    <desc language="en-US">Somali-ETHIOPIA</desc>
+                </concept>
+                <concept code="so-KE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Somali-KENYA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Somali-KENYA" type="fsn">Somali-KENYA</designation>
+                    <desc language="en-US">Somali-KENYA</desc>
+                </concept>
+                <concept code="so-SO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Somali-SOMALIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Somali-SOMALIA" type="fsn">Somali-SOMALIA</designation>
+                    <desc language="en-US">Somali-SOMALIA</desc>
+                </concept>
+                <concept code="sq-AL"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Albanian-ALBANIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Albanian-ALBANIA" type="fsn">Albanian-ALBANIA</designation>
+                    <desc language="en-US">Albanian-ALBANIA</desc>
+                </concept>
+                <concept code="sq-MK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Albanian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Albanian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"
+                         type="fsn">Albanian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</designation>
+                    <desc language="en-US">Albanian-MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</desc>
+                </concept>
+                <concept code="sr-BA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Serbian-BOSNIA AND HERZEGOVINA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Serbian-BOSNIA AND HERZEGOVINA"
+                         type="fsn">Serbian-BOSNIA AND HERZEGOVINA</designation>
+                    <desc language="en-US">Serbian-BOSNIA AND HERZEGOVINA</desc>
+                </concept>
+                <concept code="sr-ME"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Serbian-MONTENEGRO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Serbian-MONTENEGRO" type="fsn">Serbian-MONTENEGRO</designation>
+                    <desc language="en-US">Serbian-MONTENEGRO</desc>
+                </concept>
+                <concept code="sr-RS"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Serbian-SERBIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Serbian-SERBIA" type="fsn">Serbian-SERBIA</designation>
+                    <desc language="en-US">Serbian-SERBIA</desc>
+                </concept>
+                <concept code="sv-AX"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Swedish-ÅLAND ISLANDS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Swedish-ÅLAND ISLANDS" type="fsn">Swedish-ÅLAND ISLANDS</designation>
+                    <desc language="en-US">Swedish-ÅLAND ISLANDS</desc>
+                </concept>
+                <concept code="sv-FI"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Swedish-FINLAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Swedish-FINLAND" type="fsn">Swedish-FINLAND</designation>
+                    <desc language="en-US">Swedish-FINLAND</desc>
+                </concept>
+                <concept code="sv-SE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Swedish-SWEDEN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Swedish-SWEDEN" type="fsn">Swedish-SWEDEN</designation>
+                    <desc language="en-US">Swedish-SWEDEN</desc>
+                </concept>
+                <concept code="sw-CD"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Swahili-CONGO, DEMOCRATIC REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Swahili-CONGO, DEMOCRATIC REPUBLIC OF"
+                         type="fsn">Swahili-CONGO, DEMOCRATIC REPUBLIC OF</designation>
+                    <desc language="en-US">Swahili-CONGO, DEMOCRATIC REPUBLIC OF</desc>
+                </concept>
+                <concept code="sw-KE"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Swahili-KENYA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Swahili-KENYA" type="fsn">Swahili-KENYA</designation>
+                    <desc language="en-US">Swahili-KENYA</desc>
+                </concept>
+                <concept code="sw-TZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Swahili-TANZANIA, UNITED REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Swahili-TANZANIA, UNITED REPUBLIC OF"
+                         type="fsn">Swahili-TANZANIA, UNITED REPUBLIC OF</designation>
+                    <desc language="en-US">Swahili-TANZANIA, UNITED REPUBLIC OF</desc>
+                </concept>
+                <concept code="sw-UG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Swahili-UGANDA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Swahili-UGANDA" type="fsn">Swahili-UGANDA</designation>
+                    <desc language="en-US">Swahili-UGANDA</desc>
+                </concept>
+                <concept code="ta-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Tamil-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tamil-INDIA" type="fsn">Tamil-INDIA</designation>
+                    <desc language="en-US">Tamil-INDIA</desc>
+                </concept>
+                <concept code="ta-LK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Tamil-SRI LANKA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tamil-SRI LANKA" type="fsn">Tamil-SRI LANKA</designation>
+                    <desc language="en-US">Tamil-SRI LANKA</desc>
+                </concept>
+                <concept code="ta-MY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Tamil-MALAYSIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tamil-MALAYSIA" type="fsn">Tamil-MALAYSIA</designation>
+                    <desc language="en-US">Tamil-MALAYSIA</desc>
+                </concept>
+                <concept code="ta-SG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Tamil-SINGAPORE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tamil-SINGAPORE" type="fsn">Tamil-SINGAPORE</designation>
+                    <desc language="en-US">Tamil-SINGAPORE</desc>
+                </concept>
+                <concept code="te-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Telugu-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Telugu-INDIA" type="fsn">Telugu-INDIA</designation>
+                    <desc language="en-US">Telugu-INDIA</desc>
+                </concept>
+                <concept code="th-TH"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Thai-THAILAND"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Thai-THAILAND" type="fsn">Thai-THAILAND</designation>
+                    <desc language="en-US">Thai-THAILAND</desc>
+                </concept>
+                <concept code="ti-ER"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Tigrinya-ERITREA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tigrinya-ERITREA" type="fsn">Tigrinya-ERITREA</designation>
+                    <desc language="en-US">Tigrinya-ERITREA</desc>
+                </concept>
+                <concept code="ti-ET"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Tigrinya-ETHIOPIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tigrinya-ETHIOPIA" type="fsn">Tigrinya-ETHIOPIA</designation>
+                    <desc language="en-US">Tigrinya-ETHIOPIA</desc>
+                </concept>
+                <concept code="to-TO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Tonga (Tonga Islands)-TONGA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Tonga (Tonga Islands)-TONGA"
+                         type="fsn">Tonga (Tonga Islands)-TONGA</designation>
+                    <desc language="en-US">Tonga (Tonga Islands)-TONGA</desc>
+                </concept>
+                <concept code="tr-CY"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Turkish-CYPRUS"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Turkish-CYPRUS" type="fsn">Turkish-CYPRUS</designation>
+                    <desc language="en-US">Turkish-CYPRUS</desc>
+                </concept>
+                <concept code="tr-TR"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Turkish-TURKEY"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Turkish-TURKEY" type="fsn">Turkish-TURKEY</designation>
+                    <desc language="en-US">Turkish-TURKEY</desc>
+                </concept>
+                <concept code="ug-CN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Uighur; Uyghur-CHINA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Uighur; Uyghur-CHINA" type="fsn">Uighur; Uyghur-CHINA</designation>
+                    <desc language="en-US">Uighur; Uyghur-CHINA</desc>
+                </concept>
+                <concept code="uk-UA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Ukrainian-UKRAINE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ukrainian-UKRAINE" type="fsn">Ukrainian-UKRAINE</designation>
+                    <desc language="en-US">Ukrainian-UKRAINE</desc>
+                </concept>
+                <concept code="ur-IN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Urdu-INDIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Urdu-INDIA" type="fsn">Urdu-INDIA</designation>
+                    <desc language="en-US">Urdu-INDIA</desc>
+                </concept>
+                <concept code="ur-PK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Urdu-PAKISTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Urdu-PAKISTAN" type="fsn">Urdu-PAKISTAN</designation>
+                    <desc language="en-US">Urdu-PAKISTAN</desc>
+                </concept>
+                <concept code="uz-AF"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Uzbek-AFGHANISTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Uzbek-AFGHANISTAN" type="fsn">Uzbek-AFGHANISTAN</designation>
+                    <desc language="en-US">Uzbek-AFGHANISTAN</desc>
+                </concept>
+                <concept code="uz-UZ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Uzbek-UZBEKISTAN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Uzbek-UZBEKISTAN" type="fsn">Uzbek-UZBEKISTAN</designation>
+                    <desc language="en-US">Uzbek-UZBEKISTAN</desc>
+                </concept>
+                <concept code="vi-VN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Vietnamese-VIET NAM"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Vietnamese-VIET NAM" type="fsn">Vietnamese-VIET NAM</designation>
+                    <desc language="en-US">Vietnamese-VIET NAM</desc>
+                </concept>
+                <concept code="yo-BJ"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Yoruba-BENIN"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Yoruba-BENIN" type="fsn">Yoruba-BENIN</designation>
+                    <desc language="en-US">Yoruba-BENIN</desc>
+                </concept>
+                <concept code="yo-NG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Yoruba-NIGERIA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Yoruba-NIGERIA" type="fsn">Yoruba-NIGERIA</designation>
+                    <desc language="en-US">Yoruba-NIGERIA</desc>
+                </concept>
+                <concept code="zh-CN"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Chinese-CHINA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Chinese-CHINA" type="fsn">Chinese-CHINA</designation>
+                    <desc language="en-US">Chinese-CHINA</desc>
+                </concept>
+                <concept code="zh-HK"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Chinese-HONG KONG"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Chinese-HONG KONG" type="fsn">Chinese-HONG KONG</designation>
+                    <desc language="en-US">Chinese-HONG KONG</desc>
+                </concept>
+                <concept code="zh-MO"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Chinese-MACAO"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Chinese-MACAO" type="fsn">Chinese-MACAO</designation>
+                    <desc language="en-US">Chinese-MACAO</desc>
+                </concept>
+                <concept code="zh-SG"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Chinese-SINGAPORE"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Chinese-SINGAPORE" type="fsn">Chinese-SINGAPORE</designation>
+                    <desc language="en-US">Chinese-SINGAPORE</desc>
+                </concept>
+                <concept code="zh-TW"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Chinese-TAIWAN, PROVINCE OF CHINA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Chinese-TAIWAN, PROVINCE OF CHINA"
+                         type="fsn">Chinese-TAIWAN, PROVINCE OF CHINA</designation>
+                    <desc language="en-US">Chinese-TAIWAN, PROVINCE OF CHINA</desc>
+                </concept>
+                <concept code="zu-ZA"
+                  codeSystem="1dd183a6-6d2b-4a9d-8f5d-be09d6bb5a6e"
+                  displayName="Zulu-SOUTH AFRICA"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Zulu-SOUTH AFRICA" type="fsn">Zulu-SOUTH AFRICA</designation>
+                    <desc language="en-US">Zulu-SOUTH AFRICA</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

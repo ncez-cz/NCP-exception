@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:pharm="urn:hl7-org:pharm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.31"
+             name="epSOSConfidentiality"
+             displayName="epSOSConfidentiality"
+             effectiveDate="2013-06-03T00:00:00"
+             statusCode="deprecated"
+             versionLabel="913-20091020">
+      <desc language="en-US">The Value Set is used for encoding the confidentiality level of the entire CDA. This Value Set encodes the level of access with regards to the content of the Value Set – for example N concerns all the medical team, R is restricted for specialist that take care of the patient in certain circumstances, and VIP would be for the persons that need the Privacy Officer present or other special consideration (for example a celebrity hospitalized who needs their records protected)</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.25"
+                        identifierName="Confidentiality"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.25"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.25"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.25"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.25"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="B"
+                  codeSystem="2.16.840.1.113883.5.25"
+                  displayName="business"
+                  level="0"
+                  type="L"/>
+                <concept code="D"
+                  codeSystem="2.16.840.1.113883.5.25"
+                  displayName="clinician"
+                  level="0"
+                  type="L"/>
+                <concept code="I"
+                  codeSystem="2.16.840.1.113883.5.25"
+                  displayName="individual"
+                  level="0"
+                  type="L"/>
+                <concept code="L"
+                  codeSystem="2.16.840.1.113883.5.25"
+                  displayName="low"
+                  level="0"
+                  type="L"/>
+                <concept code="N"
+                  codeSystem="2.16.840.1.113883.5.25"
+                  displayName="normal"
+                  level="0"
+                  type="L"/>
+                <concept code="R"
+                  codeSystem="2.16.840.1.113883.5.25"
+                  displayName="restricted"
+                  level="0"
+                  type="L"/>
+                <concept code="V"
+                  codeSystem="2.16.840.1.113883.5.25"
+                  displayName="very restricted"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>
