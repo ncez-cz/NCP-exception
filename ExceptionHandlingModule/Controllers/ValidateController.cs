@@ -21,11 +21,35 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
     {
         private readonly IConfiguration _config;
         private readonly ILogger<ValidateController> _logger;
+        private static Dictionary<string, Xslt30Transformer> _xsl = new Dictionary<string, Xslt30Transformer>();
 
         public ValidateController(IConfiguration configuration,ILogger<ValidateController> logger)
         {
             _config = configuration;
             _logger = logger;
+            if (_xsl.Count() == 0)
+            {
+                foreach (var item in _config.GetSection("validation").GetChildren())
+                    if (item.Value != null && (item.Value.EndsWith(".xsl") || item.Value.EndsWith(".xslt")))
+                    {
+                        if (!System.IO.File.Exists(item.Value))
+                        {
+                            Console.WriteLine("template " + Directory.GetCurrentDirectory() + "/" + item.Value + " does not exists!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("compilation of " + item.Key + ": " + item.Value);
+
+                            var processor = new Processor(false);
+
+                            var xsltCompiler = processor.newXsltCompiler();
+
+                            var validator = xsltCompiler.compile(new java.io.File(item.Value)).load30();
+
+                            _xsl.Add(item.Key, validator);
+                        }
+                    }
+            }
         }
 
         // <tr><td>ds4_laboratory</td><td>DASTA 4.27.04</td><td><a href="https://dastacr.cz/">https://dastacr.cz/</a></td></tr>
@@ -52,39 +76,23 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         /// </table>
         /// </remarks>
         /// <response code="200">Validace probìhla, návrátené data obsahují validaèní report obsahující informace, varování nebo chyby dat</response>
-        /// <response code="204">Požadavek neobsahuje data</response>
         /// <response code="404">Volba validace není dostupná</response>
         /// <response code="500">Vnitøní chyba serveru</response>
         [HttpPost("{validation}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [OpenApiRequestBodyType(typeof(string))]
         public async Task<ActionResult<string>> Validate(string validation= "cda_epsos_ps7")
 		{
-			if (validation == null || _config["validation:" + validation] == null)
+			if (validation == null || _xsl[validation] == null)
             {
                 return NotFound("Volba validace '" + validation + "' není dostupná!");
 			}
-            var validationTemplate = _config["validation:" + validation];
-
-            if (!System.IO.File.Exists(validationTemplate))
-            {
-                return NotFound("Šablona validace '" + validationTemplate + "' není dostupná!");
-            }
-
-            
-
-            if (validationTemplate.EndsWith(".xsl") || validationTemplate.EndsWith(".xslt"))
-                using (var reader = new StreamReader(Request.Body))
+            using (var reader = new StreamReader(Request.Body))
                 {
-                   
-                var processor = new Processor(false);
 
-                var xsltCompiler = processor.newXsltCompiler();
-
-                var validator = xsltCompiler.compile(new java.io.File(validationTemplate)).load30();
+                var validator = _xsl[validation];
 
                 var validationResult = new XdmDestination();
 
@@ -99,15 +107,15 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
 
                 validator.transform(new StreamSource(new DotNetInputStream(bodyStream)), validationResult);
 
-                var valid = processor.newXPathCompiler().evaluateSingle("not((/Q{http://purl.oclc.org/dsdl/svrl}schematron-output!(Q{http://purl.oclc.org/dsdl/svrl}failed-assert , Q{http://purl.oclc.org/dsdl/svrl}successful-report)))", 
+                /*var valid = processor.newXPathCompiler().evaluateSingle("not((/Q{http://purl.oclc.org/dsdl/svrl}schematron-output!(Q{http://purl.oclc.org/dsdl/svrl}failed-assert , Q{http://purl.oclc.org/dsdl/svrl}successful-report)))", 
                         validationResult.getXdmNode()).getUnderlyingValue().effectiveBooleanValue();
 
                 Console.WriteLine($"XML document is {(valid ? "" : "not ")} valid against Schematron schema {validationTemplate}.");
-
-               if (!valid)
+                */
+               /*if (!valid)
                 {
                     Console.WriteLine($"{Environment.NewLine}Validation report:{Environment.NewLine}{validationResult.getXdmNode()}");
-                }
+                }*/
                 return Ok($"{validationResult.getXdmNode()}");
             }
 
