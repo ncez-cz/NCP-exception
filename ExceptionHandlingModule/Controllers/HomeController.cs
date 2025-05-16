@@ -1,6 +1,6 @@
 ﻿	using System.Diagnostics;
 	using Microsoft.AspNetCore.Mvc;
-	using Provisio.Converters.ExceptionHandlingModule.Models;
+	
 
 	namespace Provisio.Converters.ExceptionHandlingModule.Controllers;
 
@@ -25,12 +25,7 @@
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
-			return StatusCode(StatusCodes.Status500InternalServerError, new GenericErrorContract
-			{
-				Title = "Internal server error.",
-				Status = StatusCodes.Status500InternalServerError,
-				TraceId = Activity.Current?.Id ?? HttpContext.TraceIdentifier,
-			});
+			return StatusCode(StatusCodes.Status500InternalServerError);
 		}
 	}
 

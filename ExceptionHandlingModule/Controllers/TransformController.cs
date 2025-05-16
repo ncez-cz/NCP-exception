@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Net.Mime;
 using Microsoft.AspNetCore.Mvc;
-using Provisio.Converters.ExceptionHandlingModule.DataContracts;
+
 
 namespace Provisio.Converters.ExceptionHandlingModule.Controllers
 {
