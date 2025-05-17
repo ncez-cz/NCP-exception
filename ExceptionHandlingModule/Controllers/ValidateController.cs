@@ -9,6 +9,7 @@ using net.liberty_development.SaxonHE12s9apiExtensions;
 using System.Reflection;
 using net.sf.saxon.lib;
 using javax.xml.transform.stream;
+using Provisio.Converters.ExceptionHandlingModule.Model;
 
 
 namespace Provisio.Converters.ExceptionHandlingModule.Controllers
@@ -16,7 +17,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
     [ApiController]
     /// Validace dat
     [Route("[controller]")]
-    [Produces("text/plain")]
+    [Produces("application/xml")]
     public class ValidateController : ControllerBase
     {
         private readonly IConfiguration _config;
@@ -67,12 +68,12 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         /// <summary>
         /// Validace dat.
         /// </summary>
-        /// <param name="inputData">XML nebo JSON data k validaci</param>
+        /// <param name="validation">Standard podle kterého se požaduje validace.</param>
         /// <returns>výsledek validace</returns>
         /// <remarks>
         /// <table>
         /// <tr><th>validation</th><th>standard</th><th>webové stránky standardu</th></tr>
-        /// <tr><td>cda_epsos_ps7</td><td>CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0</td><td><a href="https://art-decor.ehdsi.eu/publication/">https://art-decor.ehdsi.eu/publication/</a></td></tr>
+        /// <tr><td align='center'>cda_epsos_ps7</td><td align='center'>CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0</td><td align='center'><a href="https://art-decor.ehdsi.eu/publication/">https://art-decor.ehdsi.eu/publication/</a></td></tr>
         /// </table>
         /// </remarks>
         /// <response code="200">Validace probìhla, návrátené data obsahují validaèní report obsahující informace, varování nebo chyby dat</response>
@@ -82,66 +83,21 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [OpenApiRequestBodyType(typeof(string))]
-        public async Task<ActionResult<string>> Validate(string validation= "cda_epsos_ps7")
+        //[OpenApiRequestBodyType(typeof(string))]
+        public async Task<ActionResult<XdmNode>> Validate(string validation= "cda_epsos_ps7", [FromBody] ClinicalDocument inputData = null)
 		{
-			if (validation == null || _xsl[validation] == null)
+			if (validation == null || !_xsl.ContainsKey(validation))
             {
                 return NotFound("Volba validace '" + validation + "' není dostupná!");
 			}
-            using (var reader = new StreamReader(Request.Body))
-                {
+            var validator = _xsl[validation];
 
-                var validator = _xsl[validation];
+            var validationResult = new XdmDestination();
 
-                var validationResult = new XdmDestination();
+            validator.transform(new StreamSource(new DotNetInputStream(inputData.GetStream())), validationResult);
 
-                var bodyText = await reader.ReadToEndAsync();
-
-                // kùli wrap-u na java saxon je nutné mít synchronní stream (asynchnonní nefunguje)
-                var bodyStream = new MemoryStream();
-                var bodyWriter = new StreamWriter(bodyStream);
-                bodyWriter.Write(bodyText);
-                bodyWriter.Flush();
-                bodyStream.Position = 0;
-
-                validator.transform(new StreamSource(new DotNetInputStream(bodyStream)), validationResult);
-
-                /*var valid = processor.newXPathCompiler().evaluateSingle("not((/Q{http://purl.oclc.org/dsdl/svrl}schematron-output!(Q{http://purl.oclc.org/dsdl/svrl}failed-assert , Q{http://purl.oclc.org/dsdl/svrl}successful-report)))", 
-                        validationResult.getXdmNode()).getUnderlyingValue().effectiveBooleanValue();
-
-                Console.WriteLine($"XML document is {(valid ? "" : "not ")} valid against Schematron schema {validationTemplate}.");
-                */
-               /*if (!valid)
-                {
-                    Console.WriteLine($"{Environment.NewLine}Validation report:{Environment.NewLine}{validationResult.getXdmNode()}");
-                }*/
-                return Ok($"{validationResult.getXdmNode()}");
-            }
-
-           
-            Console.WriteLine("read body:");
-            using (var reader = new StreamReader(Request.Body))
-            {
-
-
-                var plainText = await reader.ReadToEndAsync();
-                //await plainText = reader.ReadLineAsync();
-                Console.WriteLine(plainText);
-                // Do something else
-
-                //return Ok(plainText);
-            }
-
-            Console.Write("'tx':'");
-            Console.WriteLine(_config["tx"]+"'");
-            Console.Write("'validation:"+validation+"':'");
-            Console.WriteLine(_config["validation:"+validation] + "'");
-            Console.WriteLine(Directory.GetCurrentDirectory());
-            
-            var response = "Sorry, not implemented yet! " + validation;
-
-			return Ok(response);
+            return Ok(validationResult.getXdmNode());           
+			
 		}
 
 	}
