@@ -69,6 +69,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         /// Validace dat.
         /// </summary>
         /// <param name="validation">Standard podle kterého se požaduje validace.</param>
+        /// <param name="clinicalDocument">Data k validaci.</param>
         /// <returns>výsledek validace</returns>
         /// <remarks>
         /// <table>
@@ -84,7 +85,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         //[OpenApiRequestBodyType(typeof(string))]
-        public async Task<ActionResult<XdmNode>> Validate(string validation= "cda_epsos_ps7", [FromBody] ClinicalDocument inputData = null)
+        public async Task<ActionResult<XdmNode>> Validate(string validation= "cda_epsos_ps7", [FromBody] ClinicalDocument clinicalDocument = null)
 		{
 			if (validation == null || !_xsl.ContainsKey(validation))
             {
@@ -94,7 +95,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
 
             var validationResult = new XdmDestination();
 
-            validator.transform(new StreamSource(new DotNetInputStream(inputData.GetStream())), validationResult);
+            validator.transform(new StreamSource(new DotNetInputStream(clinicalDocument.GetStream())), validationResult);
 
             return Ok(validationResult.getXdmNode());           
 			
