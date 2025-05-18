@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:epsos="urn:epSOS:ps:ps:2010"
+             id="2.16.840.1.113883.3.1937.777.10.11.1"
+             name="epSOSWHO-ATC"
+             displayName="epSOSWHO-ATC"
+             effectiveDate="2013-06-03T00:00:00"
+             statusCode="draft"
+             versionLabel="July 2009">
+      <sourceCodeSystem id="2.16.840.1.113883.6.73" identifierName="WHO ATC"/>
+      <completeCodeSystem codeSystem="2.16.840.1.113883.6.73" codeSystemName="WHO ATC"/>
+   </valueSet>
+</valueSets>

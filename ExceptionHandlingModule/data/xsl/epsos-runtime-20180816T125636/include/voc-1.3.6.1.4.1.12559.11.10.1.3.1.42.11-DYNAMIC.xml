@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.11"
+             name="epSOSReactionAllergy"
+             displayName="epSOSReactionAllergy"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="active"
+             versionLabel="201711">
+      <desc language="en-US">epSOSReactionAllergy</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED-CT"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="126485001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Urticaria"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Urticaria</desc>
+                    <designation language="en-GB" displayName="Urticaria" type="fsn">Urticaria</designation>
+                </concept>
+                <concept code="162290004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Dry eyes"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Dry eyes</desc>
+                    <designation language="en-GB" displayName="Dry eyes" type="fsn">Dry eyes</designation>
+                </concept>
+                <concept code="195967001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Asthma"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Asthma</desc>
+                    <designation language="en-GB" displayName="Asthma" type="fsn">Asthma</designation>
+                </concept>
+                <concept code="1985008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Vomitus"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Vomitus</desc>
+                    <designation language="en-GB" displayName="Vomitus" type="fsn">Vomitus</designation>
+                </concept>
+                <concept code="23924001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Tight chest"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Tight chest</desc>
+                    <designation language="en-GB" displayName="Tight chest" type="fsn">Tight chest</designation>
+                </concept>
+                <concept code="24079001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Atopic dermatitis"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Atopic dermatitis</desc>
+                    <designation language="en-GB" displayName="Atopic dermatitis" type="fsn">Atopic dermatitis</designation>
+                </concept>
+                <concept code="247472004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Weal"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Weal</desc>
+                    <designation language="en-GB" displayName="Weal" type="fsn">Weal</designation>
+                </concept>
+                <concept code="267036007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Dyspnoea"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Dyspnoea</desc>
+                    <designation language="en-GB" displayName="Dyspnoea" type="fsn">Dyspnoea</designation>
+                </concept>
+                <concept code="271757001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Papular eruption"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Papular eruption</desc>
+                    <designation language="en-GB" displayName="Papular eruption" type="fsn">Papular eruption</designation>
+                </concept>
+                <concept code="271759003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Bullous eruption"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Bullous eruption</desc>
+                    <designation language="en-GB" displayName="Bullous eruption" type="fsn">Bullous eruption</designation>
+                </concept>
+                <concept code="31996006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Vasculitis"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Vasculitis</desc>
+                    <designation language="en-GB" displayName="Vasculitis" type="fsn">Vasculitis</designation>
+                </concept>
+                <concept code="359610006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Ocular hyperaemia"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Ocular hyperaemia</desc>
+                    <designation language="en-GB" displayName="Ocular hyperaemia" type="fsn">Ocular hyperaemia</designation>
+                </concept>
+                <concept code="39579001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Anaphylaxis"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Anaphylaxis</desc>
+                    <designation language="en-GB" displayName="Anaphylaxis" type="fsn">Anaphylaxis</designation>
+                </concept>
+                <concept code="410430005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cardiorespiratory arrest"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Cardiorespiratory arrest</desc>
+                    <designation language="en-GB" displayName="Cardiorespiratory arrest" type="fsn">Cardiorespiratory arrest</designation>
+                </concept>
+                <concept code="41291007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Angio-oedema"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Angio-oedema</desc>
+                    <designation language="en-GB" displayName="Angio-oedema" type="fsn">Angio-oedema</designation>
+                </concept>
+                <concept code="418363000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Itching of skin"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Itching of skin</desc>
+                    <designation language="en-GB" displayName="Itching of skin" type="fsn">Itching of skin</designation>
+                </concept>
+                <concept code="422587007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Nausea"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Nausea</desc>
+                    <designation language="en-GB" displayName="Nausea" type="fsn">Nausea</designation>
+                </concept>
+                <concept code="43116000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Eczema"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Eczema</desc>
+                    <designation language="en-GB" displayName="Eczema" type="fsn">Eczema</designation>
+                </concept>
+                <concept code="4386001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Bronchospasm"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Bronchospasm</desc>
+                    <designation language="en-GB" displayName="Bronchospasm" type="fsn">Bronchospasm</designation>
+                </concept>
+                <concept code="49727002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cough"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Cough</desc>
+                    <designation language="en-GB" displayName="Cough" type="fsn">Cough</designation>
+                </concept>
+                <concept code="51599000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Oedema of larynx"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Oedema of larynx</desc>
+                    <designation language="en-GB" displayName="Oedema of larynx" type="fsn">Oedema of larynx</designation>
+                </concept>
+                <concept code="62315008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Diarrhoea"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Diarrhoea</desc>
+                    <designation language="en-GB" displayName="Diarrhoea" type="fsn">Diarrhoea</designation>
+                </concept>
+                <concept code="698247007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cardiac arrhythmia"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Cardiac arrhythmia</desc>
+                    <designation language="en-GB" displayName="Cardiac arrhythmia" type="fsn">Cardiac arrhythmia</designation>
+                </concept>
+                <concept code="70076002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Rhinitis"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Rhinitis</desc>
+                    <designation language="en-GB" displayName="Rhinitis" type="fsn">Rhinitis</designation>
+                </concept>
+                <concept code="702809001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Drug reaction with eosinophilia and systemic symptoms"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Drug reaction with eosinophilia and systemic symptoms</desc>
+                    <designation language="en-GB"
+                         displayName="Drug reaction with eosinophilia and systemic symptoms"
+                         type="fsn">Drug reaction with eosinophilia and systemic symptoms</designation>
+                </concept>
+                <concept code="73442001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Stevens-Johnson syndrome"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Stevens-Johnson syndrome</desc>
+                    <designation language="en-GB" displayName="Stevens-Johnson syndrome" type="fsn">Stevens-Johnson syndrome</designation>
+                </concept>
+                <concept code="76067001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Sneezing"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Sneezing</desc>
+                    <designation language="en-GB" displayName="Sneezing" type="fsn">Sneezing</designation>
+                </concept>
+                <concept code="91175000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Seizure"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Seizure</desc>
+                    <designation language="en-GB" displayName="Seizure" type="fsn">Seizure</designation>
+                </concept>
+                <concept code="9826008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Conjunctivitis"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Conjunctivitis</desc>
+                    <designation language="en-GB" displayName="Conjunctivitis" type="fsn">Conjunctivitis</designation>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

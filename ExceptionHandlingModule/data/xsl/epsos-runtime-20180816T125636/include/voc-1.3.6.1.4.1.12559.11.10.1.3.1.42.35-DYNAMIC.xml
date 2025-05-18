@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.35"
+             name="epSOSIHEActCode"
+             displayName="epSOSIHEActCode"
+             effectiveDate="2013-06-03T00:00:00"
+             statusCode="draft"
+             versionLabel="August 2009 (R5)">
+      <desc language="en-US">This is a technical value set which describes what kind of information (immunization, intolerance, instructions) are related to the entry. Describes what the entry is all about. For example describes the purpose of acts, e.g. a comment on another act, to distinguish the act of immunization from the act of treating a patient with a medication</desc>
+      <sourceCodeSystem id="1.3.6.1.4.1.19376.1.5.3.2" identifierName="IHEActCode Vocabulary"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="COMMENT"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.2"
+                  displayName="This is the act of commenting on another act."
+                  level="0"
+                  type="L"/>
+                <concept code="DRUG"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.2"
+                  displayName="The act of treating a patient with a particular substance or class of substances identified using a specified vocabulary. Use of this vocabulary term requires the use of either the SUBSTANCE or SUBSTCLASS qualifier described below, along with an identified substance or class of substances."
+                  level="0"
+                  type="L"/>
+                <concept code="FINSTRUCT"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.2"
+                  displayName="This is the act of providing instructions to the supplier regarding the fulfillment of the medication order."
+                  level="0"
+                  type="L"/>
+                <concept code="IMMUNIZ"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.2"
+                  displayName="The act of immunization of a patient using a particular substance or class of substances identified using a specified vocabulary. Use of this vocabulary term requires the use of either the SUBSTANCE or SUBSTCLASS qualifier described below, along with an identified substance or class of substances."
+                  level="0"
+                  type="L"/>
+                <concept code="INTOL"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.2"
+                  displayName="An observation that a patient is somehow intollerant of (e.g., allergic to) a particular substance or class of substances using a specified vocabulary. Use of this vocabulary term requires the use of either the SUBSTANCE or SUBSTCLASS qualifi"
+                  level="0"
+                  type="L"/>
+                <concept code="PINSTRUCT"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.2"
+                  displayName="This is the act of providing instructions to a patient regarding the use of medication."
+                  level="0"
+                  type="L"/>
+                <concept code="SUBSTANCE"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.2"
+                  displayName="A qualifier that identifies the substance used to treat a patient in an immunization or drug treatment act. The substance is expected to be identified using a vocabulary such as RxNORM, SNOMED CT or other similar vocabulary and should be specific enough to identify the ingredients of the substance used."
+                  level="0"
+                  type="L"/>
+                <concept code="SUBSTCLASS"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.2"
+                  displayName="A qualifier that identifies the class of substance used to treat a patient in an immunization or drug treatment act. The class of substances is expected to be identified using a vocabulary such as NDF-RT, SNOMED CT or other similar vocabulary, and should be broad enough to classify substances by mechanism of action (e.g., Beta Blocker), intended effect (Dieuretic, antibiotic) or ..."
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

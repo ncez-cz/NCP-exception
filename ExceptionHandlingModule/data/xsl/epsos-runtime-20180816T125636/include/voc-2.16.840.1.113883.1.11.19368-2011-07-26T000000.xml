@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="2.16.840.1.113883.1.11.19368"
+             name="x_DocumentSubject"
+             displayName="x_DocumentSubject"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="epsos-">
+      <sourceCodeSystem id="2.16.840.1.113883.5.110" identifierName=""/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="PAT"
+                  codeSystem="2.16.840.1.113883.5.110"
+                  displayName="patient"
+                  level="0"
+                  type="L"/>
+                <concept code="PRS"
+                  codeSystem="2.16.840.1.113883.5.110"
+                  displayName="personal relationship"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

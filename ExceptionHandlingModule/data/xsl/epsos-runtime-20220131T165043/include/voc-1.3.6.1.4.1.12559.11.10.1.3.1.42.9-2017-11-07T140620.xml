@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.9"
+             name="epSOSPregnancyInformation"
+             displayName="epSOSPregnancyInformation"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="final"
+             versionLabel="201711">
+      <desc language="en-US">epSOSPregnancyInformation</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.1"
+                        identifierName="Logical Observation Identifier Names and Codes"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.1"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.1"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.1"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.1"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="11778-8"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Delivery date Estimated"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Delivery date Estimated" type="fsn">Delivery date for patient selected by practitioner using all pertinent information.</designation>
+                    <desc language="en-US">Delivery date Estimated</desc>
+                </concept>
+                <concept code="11779-6"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Delivery date Estimated from last menstrual period"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Delivery date Estimated from last menstrual period"
+                         type="fsn">Delivery date estimate based on of first day of last menstrual period.</designation>
+                    <desc language="en-US">Delivery date Estimated from last menstrual period</desc>
+                </concept>
+                <concept code="11780-4"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Delivery date Estimated from ovulation date"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Delivery date Estimated from ovulation date"
+                         type="fsn">Based on putative date of ovulation determined by ovulation testing or induction of ovulation</designation>
+                    <desc language="en-US">Delivery date Estimated from ovulation date</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

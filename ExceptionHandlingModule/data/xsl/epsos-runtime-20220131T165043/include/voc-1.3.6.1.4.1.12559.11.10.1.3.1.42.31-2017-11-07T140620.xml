@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.31"
+             name="epSOSConfidentiality"
+             displayName="epSOSConfidentiality"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="final"
+             versionLabel="201711">
+      <desc language="en-US">epSOSConfidentiality</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.25"
+                        identifierName="Confidentiality"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.25"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.25"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.25"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.25"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="N"
+                  codeSystem="2.16.840.1.113883.5.25"
+                  displayName="normal"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="normal" type="fsn">Normal confidentiality rules (according to good health care practice) apply, that is, only authorized individuals with a legitimate medical or business need may access this item.</designation>
+                    <desc language="en-US">normal</desc>
+                </concept>
+                <concept code="R"
+                  codeSystem="2.16.840.1.113883.5.25"
+                  displayName="restricted"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="restricted" type="fsn">Restricted access, e.g. only to providers having a current care relationship to the patient.</designation>
+                    <desc language="en-US">restricted</desc>
+                </concept>
+                <concept code="V"
+                  codeSystem="2.16.840.1.113883.5.25"
+                  displayName="very restricted"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="very restricted" type="fsn">Very restricted access as declared by the Privacy Officer of the record holder.</designation>
+                    <desc language="en-US">very restricted</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

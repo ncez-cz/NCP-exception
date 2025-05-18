@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="2.16.840.1.113883.1.11.14866"
+             name="URLScheme"
+             displayName="URLScheme"
+             effectiveDate="2014-03-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1360-20160323"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="epsos-">
+      <desc language="en-US">
+                <p>
+                    <b>History description 2014-03-26: </b>Lock all vaue sets untouched since 2014-03-26 to trackingId 2014T1_2014_03_26</p>
+                <b>description: </b>
+                <p>A Universal Resource Locator (URL) is a type of telecommunications address specified as Internet standard RFC 1738 [http://www.ietf.org/rfc/rfc1738.txt]. The URL specifies the protocol and the contact point defined by that protocol for the resource.</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.143"
+                        identifierName="Universal Resource Locator Scheme"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.143"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.143"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.143"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.143"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="cid"
+                  codeSystem="2.16.840.1.113883.5.143"
+                  displayName="Content ID"
+                  level="0"
+                  type="L"/>
+                <concept code="file"
+                  codeSystem="2.16.840.1.113883.5.143"
+                  displayName="File"
+                  level="0"
+                  type="L"/>
+                <concept code="ftp"
+                  codeSystem="2.16.840.1.113883.5.143"
+                  displayName="FTP"
+                  level="0"
+                  type="L"/>
+                <concept code="hl7-att"
+                  codeSystem="2.16.840.1.113883.5.143"
+                  displayName="HL7 Attachment"
+                  level="0"
+                  type="L"/>
+                <concept code="http"
+                  codeSystem="2.16.840.1.113883.5.143"
+                  displayName="HTTP"
+                  level="0"
+                  type="L"/>
+                <concept code="mailto"
+                  codeSystem="2.16.840.1.113883.5.143"
+                  displayName="Mailto"
+                  level="0"
+                  type="L"/>
+                <concept code="mllp"
+                  codeSystem="2.16.840.1.113883.5.143"
+                  displayName="MLLP"
+                  level="0"
+                  type="L"/>
+                <concept code="nfs"
+                  codeSystem="2.16.840.1.113883.5.143"
+                  displayName="NFS"
+                  level="0"
+                  type="L"/>
+                <concept code="tel"
+                  codeSystem="2.16.840.1.113883.5.143"
+                  displayName="Telephone"
+                  level="0"
+                  type="L"/>
+                <concept code="telnet"
+                  codeSystem="2.16.840.1.113883.5.143"
+                  displayName="Telnet"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

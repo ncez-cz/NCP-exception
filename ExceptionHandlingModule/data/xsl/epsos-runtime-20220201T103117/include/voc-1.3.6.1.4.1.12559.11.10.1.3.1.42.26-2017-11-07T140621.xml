@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.26"
+             name="epSOSSections"
+             displayName="epSOSSections"
+             effectiveDate="2017-11-07T14:06:21"
+             officialReleaseDate="2017-11-07T14:06:21"
+             statusCode="final"
+             versionLabel="201711">
+      <desc language="en-US">epSOSSections</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.1"
+                        identifierName="Logical Observation Identifier Names and Codes"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.1"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.1"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.1"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.1"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="10160-0"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="History of Medication use Narrative"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="History of Medication use Narrative"
+                         type="fsn">History of medication use defines a patient's current medications and history of pertinent medications. This term may also include a patient's prescription and dispense history.</designation>
+                    <desc language="en-US">History of Medication use Narrative</desc>
+                </concept>
+                <concept code="10162-6"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="History of pregnancies Narrative"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="History of pregnancies Narrative"
+                         type="fsn"/>
+                    <desc language="en-US">History of pregnancies Narrative</desc>
+                </concept>
+                <concept code="10164-2"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="History of Present illness Narrative"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="History of Present illness Narrative"
+                         type="fsn">History of present illness describes the history related to the reason for a given procedure. It contains the historical details leading up to and pertaining to the patient's current complaint or reason for seeking medical care. Because history of present illness can include past surgical history and other procedures| the Procedure History section may be included under the History of Present Illness section or it may stand alone as its own section.</designation>
+                    <desc language="en-US">History of Present illness Narrative</desc>
+                </concept>
+                <concept code="11348-0"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="History of Past illness Narrative"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="History of Past illness Narrative"
+                         type="fsn">History of past illness describes the history related to their current complaints| problems| or diagnoses.</designation>
+                    <desc language="en-US">History of Past illness Narrative</desc>
+                </concept>
+                <concept code="11369-6"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="History of Immunization Narrative"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="History of Immunization Narrative"
+                         type="fsn">History of immunizations defines a patient's immunization status for the context and use case of the document type. Often included is current immunization status and possibly the entire immunization history.</designation>
+                    <desc language="en-US">History of Immunization Narrative</desc>
+                </concept>
+                <concept code="11450-4"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Problem list - Reported"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Problem list - Reported" type="fsn"/>
+                    <desc language="en-US">Problem list - Reported</desc>
+                </concept>
+                <concept code="18776-5"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Plan of care note"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Plan of care note" type="fsn">Plan of care notes (previously defined as "Plan of treatment") contains data that defines pending orders| interventions| encounters| services| and procedures for the patient. The plan includes prospective| unfulfilled| or incomplete orders and requests only. The plan may also contain information about ongoing care of the patient and information regarding goals and clinical reminders.</designation>
+                    <desc language="en-US">Plan of care note</desc>
+                </concept>
+                <concept code="29554-3"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Procedure Narrative"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Procedure Narrative" type="fsn">Procedure records the descriptions of the procedure with an extensive narrative and may include procedure site preparation| pertinent details related to measurements and markings| procedure times| instrumentation| and vital signs and other monitoring data.</designation>
+                    <desc language="en-US">Procedure Narrative</desc>
+                </concept>
+                <concept code="29762-2"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Social history Narrative"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Social history Narrative" type="fsn">The Social history section contains data defining the patient's occupational| personal (e.g. lifestyle)| social| and environmental history and health risk factors| as well as administrative data such as marital status| race| ethnicity and religious affiliation.</designation>
+                    <desc language="en-US">Social history Narrative</desc>
+                </concept>
+                <concept code="30954-2"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Relevant diagnostic tests/laboratory data Narrative"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Relevant diagnostic tests/laboratory data Narrative"
+                         type="fsn"/>
+                    <desc language="en-US">Relevant diagnostic tests/laboratory data Narrative</desc>
+                </concept>
+                <concept code="46264-8"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="History of medical device use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="History of medical device use"
+                         type="fsn">History of medical device (medical equipment) use defines a patient's implanted and external medical devices and equipment that their health status depends on| as well as any pertinent equipment or device history. This term is also used to itemize any pertinent current or historical durable medical equipment (DME) used to help maintain the patient's health status. All pertinent equipment relevant to the diagnosis| care| and treatment of a patient should be included.</designation>
+                    <desc language="en-US">History of medical device use</desc>
+                </concept>
+                <concept code="47420-5"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Functional status assessment note"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Functional status assessment note"
+                         type="fsn">Functional status assessment describes the patient's status of normal functioning at the time a care record was created. Functional statuses include information regarding the patient relative to ambulatory ability| mental status or competency| activities of daily living (ADLs) (i.e. bathing| dressing| feeding| grooming)| home/living situation having an effect on the health status of the patient| ability to care for self| social activity (i.e. issues with social cognition| participation
+                    &lt;desc language="en-US"&gt;Functional status assessment note&lt;/desc&gt;
+                        with friends and acquaintances other than family members)| occupation activity (i.e. activities partly or directly related to working)| housework or volunteering| family and home responsibilities or activities related to home and family| communication ability (i.e. issues with speech| writing or cognition required for communication)| and perception| including sight| hearing| taste| skin sensation| kinesthetic sense| proprioception| or balance.</designation>
+                </concept>
+                <concept code="47519-4"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="History of Procedures Document"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="History of Procedures Document"
+                         type="fsn">This section defines all interventional| surgical| diagnostic| or therapeutic procedures or treatments pertinent to the patient historically and at the time the document is generated.</designation>
+                    <desc language="en-US">History of Procedures Document</desc>
+                </concept>
+                <concept code="48765-2"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Allergies and adverse reactions Document"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Allergies and adverse reactions Document"
+                         type="fsn">Contains a list and description of any allergies or adverse reactions pertinent to current or past medical history. At a minimum this section should contain currently active and any relevant historical allergies and adverse reactions.</designation>
+                    <desc language="en-US">Allergies and adverse reactions Document</desc>
+                </concept>
+                <concept code="57828-6"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Prescription list"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Prescription list" type="fsn">A document (or section) including a list of all prescriptions made for a patient (medications| services| admissions| equipment| etc.).</designation>
+                    <desc language="en-US">Prescription list</desc>
+                </concept>
+                <concept code="60590-7"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Medication dispensed.brief Document"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Medication dispensed.brief Document"
+                         type="fsn">This medication dispensed information collection includes only information useful for describing the dispensed drugs and the supply act (who did what and when). The typical information reported in this collection are product code; brand name; number of supplied packages and or units| etc.</designation>
+                    <desc language="en-US">Medication dispensed.brief Document</desc>
+                </concept>
+                <concept code="8716-3"
+                  codeSystem="2.16.840.1.113883.6.1"
+                  displayName="Vital signs"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Vital signs" type="fsn">The Vital signs section includes blood pressure| body temperature| heart rate| and respiratory rate. It may also include other clinical findings| such as height| weight| body mass index| head circumference| and pulse oximetry. In particular| notable vital signs or physical findings such as the most recent| maximum and/or minimum| baseline| or relevant trends may be included.</designation>
+                    <desc language="en-US">Vital signs</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.36"
+             name="epSOSIHERoleCode"
+             displayName="epSOSIHERoleCode"
+             statusCode="draft"
+             versionLabel="August 2009 (R5)"
+             effectiveDate="2013-06-03T00:00:00">
+      <desc language="en-US">It is a set of technical codes defined by IHE to represent certain roles that entities play or are scoped by.</desc>
+      <sourceCodeSystem id="1.3.6.1.4.1.19376.1.5.3.3"
+                        identifierName="IHE PCC RoleCode"
+                        canonicalUri="urn:oid:1.3.6.1.4.1.19376.1.5.3.3"
+                        canonicalUriDSTU2="urn:oid:1.3.6.1.4.1.19376.1.5.3.3"
+                        canonicalUriSTU3="urn:oid:1.3.6.1.4.1.19376.1.5.3.3"
+                        canonicalUriR4="urn:oid:1.3.6.1.4.1.19376.1.5.3.3"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="AFFILIATED"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.3"
+                  displayName="An organization with which a person is affiliated (e.g., a volunteer organization)."
+                  level="0"
+                  type="L"/>
+                <concept code="EMPLOYER"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.3"
+                  displayName="The employer of a person."
+                  level="0"
+                  type="L"/>
+                <concept code="PHARMACY"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.3"
+                  displayName="The pharmacy a person uses."
+                  level="0"
+                  type="L"/>
+                <concept code="SCHOOL"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.3"
+                  displayName="The school in which a person is enrolled."
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

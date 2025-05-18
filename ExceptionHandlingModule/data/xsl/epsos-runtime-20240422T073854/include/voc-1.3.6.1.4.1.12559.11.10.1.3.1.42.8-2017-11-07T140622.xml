@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:pharm="urn:hl7-org:pharm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.8"
+             name="epSOSMedicalDevices"
+             displayName="epSOSMedicalDevices"
+             effectiveDate="2017-11-07T14:06:22"
+             officialReleaseDate="2017-11-07T14:06:22"
+             statusCode="deprecated"
+             versionLabel="201711">
+      <desc language="en-US">epSOSMedicalDevices</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.96"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="102303004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Vascular prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Vascular prosthesis" type="fsn">Vascular prosthesis</designation>
+                    <desc language="en-US">Vascular prosthesis</desc>
+                </concept>
+                <concept code="102314001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Embolisation coil"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Embolisation coil" type="fsn">Embolisation coil</designation>
+                    <desc language="en-US">Embolisation coil</desc>
+                </concept>
+                <concept code="118374007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Silicone implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Silicone implant" type="fsn">Silicone implant</designation>
+                    <desc language="en-US">Silicone implant</desc>
+                </concept>
+                <concept code="118382007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Neuropacemaker device"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Neuropacemaker device" type="fsn">Neuropacemaker device</designation>
+                    <desc language="en-US">Neuropacemaker device</desc>
+                </concept>
+                <concept code="118425005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Ventricular reservoir"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ventricular reservoir" type="fsn">Ventricular reservoir</designation>
+                    <desc language="en-US">Ventricular reservoir</desc>
+                </concept>
+                <concept code="17107009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Mitral valve prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Mitral valve prosthesis" type="fsn">Mitral valve prosthesis</designation>
+                    <desc language="en-US">Mitral valve prosthesis</desc>
+                </concept>
+                <concept code="2282003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Breast prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Breast prosthesis" type="fsn">Breast prosthesis</designation>
+                    <desc language="en-US">Breast prosthesis</desc>
+                </concept>
+                <concept code="24073000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Artificial cardiac valve prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Artificial cardiac valve prosthesis"
+                         type="fsn">Artificial cardiac valve prosthesis</designation>
+                    <desc language="en-US">Artificial cardiac valve prosthesis</desc>
+                </concept>
+                <concept code="257275005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Spinal cage"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Spinal cage" type="fsn">Spinal cage</designation>
+                    <desc language="en-US">Spinal cage</desc>
+                </concept>
+                <concept code="257282009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Non-valved conduit"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Non-valved conduit" type="fsn">Non-valved conduit</designation>
+                    <desc language="en-US">Non-valved conduit</desc>
+                </concept>
+                <concept code="257283004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Valved cardiac conduit"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Valved cardiac conduit" type="fsn">Valved cardiac conduit</designation>
+                    <desc language="en-US">Valved cardiac conduit</desc>
+                </concept>
+                <concept code="257343005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Xenograft cardiac valve"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Xenograft cardiac valve" type="fsn">Xenograft cardiac valve</designation>
+                    <desc language="en-US">Xenograft cardiac valve</desc>
+                </concept>
+                <concept code="257366006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="JJ-stent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="JJ-stent" type="fsn">JJ-stent</designation>
+                    <desc language="en-US">JJ-stent</desc>
+                </concept>
+                <concept code="258593008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Ventricular shunt"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ventricular shunt" type="fsn">Ventricular shunt</designation>
+                    <desc language="en-US">Ventricular shunt</desc>
+                </concept>
+                <concept code="264824009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cardiac conduit"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cardiac conduit" type="fsn">Cardiac conduit</designation>
+                    <desc language="en-US">Cardiac conduit</desc>
+                </concept>
+                <concept code="268460000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Intrauterine contraceptive device"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Intrauterine contraceptive device"
+                         type="fsn">Intrauterine contraceptive device</designation>
+                    <desc language="en-US">Intrauterine contraceptive device</desc>
+                </concept>
+                <concept code="271003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Bone plate"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bone plate" type="fsn">Bone plate</designation>
+                    <desc language="en-US">Bone plate</desc>
+                </concept>
+                <concept code="272245008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Maxillofacial prosthesis/appliance"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Maxillofacial prosthesis/appliance"
+                         type="fsn">Maxillofacial prosthesis/appliance</designation>
+                    <desc language="en-US">Maxillofacial prosthesis/appliance</desc>
+                </concept>
+                <concept code="286558002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Ureteric stent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ureteric stent" type="fsn">Ureteric stent</designation>
+                    <desc language="en-US">Ureteric stent</desc>
+                </concept>
+                <concept code="286576009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Urethral stent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Urethral stent" type="fsn">Urethral stent</designation>
+                    <desc language="en-US">Urethral stent</desc>
+                </concept>
+                <concept code="303277008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Fallopian tube prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Fallopian tube prosthesis" type="fsn">Fallopian tube prosthesis</designation>
+                    <desc language="en-US">Fallopian tube prosthesis</desc>
+                </concept>
+                <concept code="303490004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cardiovascular implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cardiovascular implant" type="fsn">Cardiovascular implant</designation>
+                    <desc language="en-US">Cardiovascular implant</desc>
+                </concept>
+                <concept code="303497001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Urogenital implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Urogenital implant" type="fsn">Urogenital implant</designation>
+                    <desc language="en-US">Urogenital implant</desc>
+                </concept>
+                <concept code="303499003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Gastrointestinal implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Gastrointestinal implant" type="fsn">Gastrointestinal implant</designation>
+                    <desc language="en-US">Gastrointestinal implant</desc>
+                </concept>
+                <concept code="303500007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Auditory implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Auditory implant" type="fsn">Auditory implant</designation>
+                    <desc language="en-US">Auditory implant</desc>
+                </concept>
+                <concept code="303503009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Musculoskeletal implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Musculoskeletal implant" type="fsn">Musculoskeletal implant</designation>
+                    <desc language="en-US">Musculoskeletal implant</desc>
+                </concept>
+                <concept code="303515008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Orbital implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Orbital implant" type="fsn">Orbital implant</designation>
+                    <desc language="en-US">Orbital implant</desc>
+                </concept>
+                <concept code="303533002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Hip joint implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hip joint implant" type="fsn">Hip joint implant</designation>
+                    <desc language="en-US">Hip joint implant</desc>
+                </concept>
+                <concept code="303608005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Ophthalmological implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ophthalmological implant" type="fsn">Ophthalmological implant</designation>
+                    <desc language="en-US">Ophthalmological implant</desc>
+                </concept>
+                <concept code="303617005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Vascular implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Vascular implant" type="fsn">Vascular implant</designation>
+                    <desc language="en-US">Vascular implant</desc>
+                </concept>
+                <concept code="303618000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Nervous system implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Nervous system implant" type="fsn">Nervous system implant</designation>
+                    <desc language="en-US">Nervous system implant</desc>
+                </concept>
+                <concept code="303619008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cardiac implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cardiac implant" type="fsn">Cardiac implant</designation>
+                    <desc language="en-US">Cardiac implant</desc>
+                </concept>
+                <concept code="303726000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Shoulder joint prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Shoulder joint prosthesis" type="fsn">Shoulder joint prosthesis</designation>
+                    <desc language="en-US">Shoulder joint prosthesis</desc>
+                </concept>
+                <concept code="303947005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Rod fixation system"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Rod fixation system" type="fsn">Rod fixation system</designation>
+                    <desc language="en-US">Rod fixation system</desc>
+                </concept>
+                <concept code="304070008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Body wall implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Body wall implant" type="fsn">Body wall implant</designation>
+                    <desc language="en-US">Body wall implant</desc>
+                </concept>
+                <concept code="304120007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Total hip replacement prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Total hip replacement prosthesis"
+                         type="fsn">Total hip replacement prosthesis</designation>
+                    <desc language="en-US">Total hip replacement prosthesis</desc>
+                </concept>
+                <concept code="304121006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Femoral head prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Femoral head prosthesis" type="fsn">Femoral head prosthesis</designation>
+                    <desc language="en-US">Femoral head prosthesis</desc>
+                </concept>
+                <concept code="304124003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Shoulder joint implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Shoulder joint implant" type="fsn">Shoulder joint implant</designation>
+                    <desc language="en-US">Shoulder joint implant</desc>
+                </concept>
+                <concept code="304184000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Ankle joint implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ankle joint implant" type="fsn">Ankle joint implant</designation>
+                    <desc language="en-US">Ankle joint implant</desc>
+                </concept>
+                <concept code="304185004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Foot joint implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Foot joint implant" type="fsn">Foot joint implant</designation>
+                    <desc language="en-US">Foot joint implant</desc>
+                </concept>
+                <concept code="304186003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Hand joint implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hand joint implant" type="fsn">Hand joint implant</designation>
+                    <desc language="en-US">Hand joint implant</desc>
+                </concept>
+                <concept code="31031000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Orthopaedic internal fixation system"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Orthopaedic internal fixation system"
+                         type="fsn">Orthopaedic internal fixation system</designation>
+                    <desc language="en-US">Orthopaedic internal fixation system</desc>
+                </concept>
+                <concept code="314523008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Joint implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Joint implant" type="fsn">Joint implant</designation>
+                    <desc language="en-US">Joint implant</desc>
+                </concept>
+                <concept code="360041000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Implanted drug delivery system"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Implanted drug delivery system"
+                         type="fsn">Implanted drug delivery system</designation>
+                    <desc language="en-US">Implanted drug delivery system</desc>
+                </concept>
+                <concept code="360046005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Arterial stent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arterial stent" type="fsn">Arterial stent</designation>
+                    <desc language="en-US">Arterial stent</desc>
+                </concept>
+                <concept code="360058005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Intraventricular pump"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraventricular pump" type="fsn">Intraventricular pump</designation>
+                    <desc language="en-US">Intraventricular pump</desc>
+                </concept>
+                <concept code="360070009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Laryngeal implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Laryngeal implant" type="fsn">Laryngeal implant</designation>
+                    <desc language="en-US">Laryngeal implant</desc>
+                </concept>
+                <concept code="360100007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Tracheal stent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tracheal stent" type="fsn">Tracheal stent</designation>
+                    <desc language="en-US">Tracheal stent</desc>
+                </concept>
+                <concept code="360117000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Gastric bubble"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Gastric bubble" type="fsn">Gastric bubble</designation>
+                    <desc language="en-US">Gastric bubble</desc>
+                </concept>
+                <concept code="360123005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Biliary stent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Biliary stent" type="fsn">Biliary stent</designation>
+                    <desc language="en-US">Biliary stent</desc>
+                </concept>
+                <concept code="360145006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Bone prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bone prosthesis" type="fsn">Bone prosthesis</designation>
+                    <desc language="en-US">Bone prosthesis</desc>
+                </concept>
+                <concept code="360329004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Dacron graft"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dacron graft" type="fsn">Dacron graft</designation>
+                    <desc language="en-US">Dacron graft</desc>
+                </concept>
+                <concept code="413766009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Carotid stent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Carotid stent" type="fsn">Carotid stent</designation>
+                    <desc language="en-US">Carotid stent</desc>
+                </concept>
+                <concept code="414580007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Laryngeal keel"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Laryngeal keel" type="fsn">Laryngeal keel</designation>
+                    <desc language="en-US">Laryngeal keel</desc>
+                </concept>
+                <concept code="421168009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Eye sphere implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Eye sphere implant" type="fsn">Eye sphere implant</designation>
+                    <desc language="en-US">Eye sphere implant</desc>
+                </concept>
+                <concept code="423449009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Pulmonary valve prosthesis, device"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Pulmonary valve prosthesis, device"
+                         type="fsn">Pulmonary valve prosthesis, device</designation>
+                    <desc language="en-US">Pulmonary valve prosthesis, device</desc>
+                </concept>
+                <concept code="424921004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Permanent cardiac pacemaker, device"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Permanent cardiac pacemaker, device"
+                         type="fsn">Permanent cardiac pacemaker, device</designation>
+                    <desc language="en-US">Permanent cardiac pacemaker, device</desc>
+                </concept>
+                <concept code="429798007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Artificial vertebral disc"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Artificial vertebral disc" type="fsn">Artificial vertebral disc</designation>
+                    <desc language="en-US">Artificial vertebral disc</desc>
+                </concept>
+                <concept code="43252007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cochlear prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cochlear prosthesis" type="fsn">Cochlear prosthesis</designation>
+                    <desc language="en-US">Cochlear prosthesis</desc>
+                </concept>
+                <concept code="45633005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Peritoneal dialyser"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Peritoneal dialyser" type="fsn">Peritoneal dialyser</designation>
+                    <desc language="en-US">Peritoneal dialyser</desc>
+                </concept>
+                <concept code="63112008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Bone wire"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bone wire" type="fsn">Bone wire</designation>
+                    <desc language="en-US">Bone wire</desc>
+                </concept>
+                <concept code="63289001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Surgical metal nail, device"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Surgical metal nail, device"
+                         type="fsn">Surgical metal nail, device</designation>
+                    <desc language="en-US">Surgical metal nail, device</desc>
+                </concept>
+                <concept code="67270000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Hip prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hip prosthesis" type="fsn">Hip prosthesis</designation>
+                    <desc language="en-US">Hip prosthesis</desc>
+                </concept>
+                <concept code="68183006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Bone screw"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bone screw" type="fsn">Bone screw</designation>
+                    <desc language="en-US">Bone screw</desc>
+                </concept>
+                <concept code="72506001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Implantable defibrillator"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Implantable defibrillator" type="fsn">Implantable defibrillator</designation>
+                    <desc language="en-US">Implantable defibrillator</desc>
+                </concept>
+                <concept code="74444006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Limb prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Limb prosthesis" type="fsn">Limb prosthesis</designation>
+                    <desc language="en-US">Limb prosthesis</desc>
+                </concept>
+                <concept code="77444004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Bone pin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bone pin" type="fsn">Bone pin</designation>
+                    <desc language="en-US">Bone pin</desc>
+                </concept>
+                <concept code="77777004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Bone staple"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bone staple" type="fsn">Bone staple</designation>
+                    <desc language="en-US">Bone staple</desc>
+                </concept>
+                <concept code="84683006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Aortic valve prosthesis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Aortic valve prosthesis" type="fsn">Aortic valve prosthesis</designation>
+                    <desc language="en-US">Aortic valve prosthesis</desc>
+                </concept>
+                <concept code="90134004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Metal periosteal implant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Metal periosteal implant" type="fsn">Metal periosteal implant</designation>
+                    <desc language="en-US">Metal periosteal implant</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

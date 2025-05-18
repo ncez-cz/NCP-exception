@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.15"
+             name="epSOSStatusCode"
+             displayName="epSOSStatusCode"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="active"
+             versionLabel="201711">
+      <desc language="en-US">epSOSStatusCode</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96" identifierName="SNOMED-CT"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="255227004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Recurrent"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Recurrent</desc>
+                    <designation language="en-GB" displayName="Recurrent" type="fsn">Recurrent</designation>
+                </concept>
+                <concept code="410516002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Known absent"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Known absent</desc>
+                    <designation language="en-GB" displayName="Known absent" type="fsn">Known absent</designation>
+                </concept>
+                <concept code="413322009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Problem resolved"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Problem resolved</desc>
+                    <designation language="en-GB" displayName="Problem resolved" type="fsn">Problem resolved</designation>
+                </concept>
+                <concept code="415684004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Suspected"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Suspected</desc>
+                    <designation language="en-GB" displayName="Suspected" type="fsn">Suspected</designation>
+                </concept>
+                <concept code="55561003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Active"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Active</desc>
+                    <designation language="en-GB" displayName="Active" type="fsn">Active</designation>
+                </concept>
+                <concept code="7087005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Intermittent"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Intermittent</desc>
+                    <designation language="en-GB" displayName="Intermittent" type="fsn">Intermittent</designation>
+                </concept>
+                <concept code="73425007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Inactive"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Inactive</desc>
+                    <designation language="en-GB" displayName="Inactive" type="fsn">Inactive</designation>
+                </concept>
+                <concept code="90734009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Chronic"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Chronic</desc>
+                    <designation language="en-GB" displayName="Chronic" type="fsn">Chronic</designation>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.28"
+             name="epSOSVaccine"
+             displayName="epSOSVaccine"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="final"
+             versionLabel="201711">
+      <desc language="en-US">epSOSVaccine</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.96"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="108729007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Varicella vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Varicella vaccine</desc>
+                    <designation language="en-GB" displayName="Varicella vaccine" type="fsn">Varicella vaccine</designation>
+                </concept>
+                <concept code="111164008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Poliovirus vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Poliovirus vaccine</desc>
+                    <designation language="en-GB" displayName="Poliovirus vaccine" type="fsn">Poliovirus vaccine</designation>
+                </concept>
+                <concept code="116077000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Rotavirus vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Rotavirus vaccine</desc>
+                    <designation language="en-GB" displayName="Rotavirus vaccine" type="fsn">Rotavirus vaccine</designation>
+                </concept>
+                <concept code="14745005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Hepatitis A virus vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Hepatitis A virus vaccine</desc>
+                    <designation language="en-GB" displayName="Hepatitis A virus vaccine" type="fsn">Hepatitis A virus vaccine</designation>
+                </concept>
+                <concept code="33234009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Smallpox vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Smallpox vaccine</desc>
+                    <designation language="en-GB" displayName="Smallpox vaccine" type="fsn">Smallpox vaccine</designation>
+                </concept>
+                <concept code="333598008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Pneumococcal vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Pneumococcal vaccine</desc>
+                    <designation language="en-GB" displayName="Pneumococcal vaccine" type="fsn">Pneumococcal vaccine</designation>
+                </concept>
+                <concept code="333606008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Rabies vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Rabies vaccine</desc>
+                    <designation language="en-GB" displayName="Rabies vaccine" type="fsn">Rabies vaccine</designation>
+                </concept>
+                <concept code="333621002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Tetanus vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Tetanus vaccine</desc>
+                    <designation language="en-GB" displayName="Tetanus vaccine" type="fsn">Tetanus vaccine</designation>
+                </concept>
+                <concept code="333680004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Haemophilus influenzae Type b vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Haemophilus influenzae Type b vaccine</desc>
+                    <designation language="en-GB"
+                         displayName="Haemophilus influenzae Type b vaccine"
+                         type="fsn">Haemophilus influenzae Type b vaccine</designation>
+                </concept>
+                <concept code="333697005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Japanese B encephalitis vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Japanese B encephalitis vaccine</desc>
+                    <designation language="en-GB"
+                         displayName="Japanese B encephalitis vaccine"
+                         type="fsn">Japanese B encephalitis vaccine</designation>
+                </concept>
+                <concept code="333699008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Tick-borne encephalitis vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Tick-borne encephalitis vaccine</desc>
+                    <designation language="en-GB"
+                         displayName="Tick-borne encephalitis vaccine"
+                         type="fsn">Tick-borne encephalitis vaccine</designation>
+                </concept>
+                <concept code="333702001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Hepatitis A+B vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Hepatitis A+B vaccine</desc>
+                    <designation language="en-GB" displayName="Hepatitis A+B vaccine" type="fsn">Hepatitis A+B vaccine</designation>
+                </concept>
+                <concept code="34689006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Hepatitis B virus vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Hepatitis B virus vaccine</desc>
+                    <designation language="en-GB" displayName="Hepatitis B virus vaccine" type="fsn">Hepatitis B virus vaccine</designation>
+                </concept>
+                <concept code="350327004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Diphtheria + tetanus vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Diphtheria + tetanus vaccine</desc>
+                    <designation language="en-GB"
+                         displayName="Diphtheria + tetanus vaccine"
+                         type="fsn">Diphtheria + tetanus vaccine</designation>
+                </concept>
+                <concept code="35736007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cholera vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Cholera vaccine</desc>
+                    <designation language="en-GB" displayName="Cholera vaccine" type="fsn">Cholera vaccine</designation>
+                </concept>
+                <concept code="386012008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Measles vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Measles vaccine</desc>
+                    <designation language="en-GB" displayName="Measles vaccine" type="fsn">Measles vaccine</designation>
+                </concept>
+                <concept code="386013003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Rubella vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Rubella vaccine</desc>
+                    <designation language="en-GB" displayName="Rubella vaccine" type="fsn">Rubella vaccine</designation>
+                </concept>
+                <concept code="414004005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Diphtheria + tetanus + pertussis + poliomyelitis + haemophilus influenzae b vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Diphtheria + tetanus + pertussis + poliomyelitis + haemophilus influenzae b vaccine</desc>
+                    <designation language="en-GB"
+                         displayName="Diphtheria + tetanus + pertussis + poliomyelitis + haemophilus influenzae b vaccine"
+                         type="fsn">Diphtheria + tetanus + pertussis + poliomyelitis + haemophilus influenzae b vaccine</designation>
+                </concept>
+                <concept code="414005006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Diphtheria + tetanus + pertussis + poliomyelitis vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Diphtheria + tetanus + pertussis + poliomyelitis vaccine</desc>
+                    <designation language="en-GB"
+                         displayName="Diphtheria + tetanus + pertussis + poliomyelitis vaccine"
+                         type="fsn">Diphtheria + tetanus + pertussis + poliomyelitis vaccine</designation>
+                </concept>
+                <concept code="420538001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Tuberculosis vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Tuberculosis vaccine</desc>
+                    <designation language="en-GB" displayName="Tuberculosis vaccine" type="fsn">Tuberculosis vaccine</designation>
+                </concept>
+                <concept code="421245007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Diphtheria + pertussis + tetanus vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Diphtheria + pertussis + tetanus vaccine</desc>
+                    <designation language="en-GB"
+                         displayName="Diphtheria + pertussis + tetanus vaccine"
+                         type="fsn">Diphtheria + pertussis + tetanus vaccine</designation>
+                </concept>
+                <concept code="423531006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Meningococcus vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Meningococcus vaccine</desc>
+                    <designation language="en-GB" displayName="Meningococcus vaccine" type="fsn">Meningococcus vaccine</designation>
+                </concept>
+                <concept code="424519000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Human papillomavirus vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Human papillomavirus vaccine</desc>
+                    <designation language="en-GB"
+                         displayName="Human papillomavirus vaccine"
+                         type="fsn">Human papillomavirus vaccine</designation>
+                </concept>
+                <concept code="427036009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Influenza virus H5N1 vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Influenza virus H5N1 vaccine</desc>
+                    <designation language="en-GB"
+                         displayName="Influenza virus H5N1 vaccine"
+                         type="fsn">Influenza virus H5N1 vaccine</designation>
+                </concept>
+                <concept code="428214002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Diphtheria vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Diphtheria vaccine</desc>
+                    <designation language="en-GB" displayName="Diphtheria vaccine" type="fsn">Diphtheria vaccine</designation>
+                </concept>
+                <concept code="46233009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Influenza virus vaccine (product)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Influenza virus vaccine (product)</desc>
+                    <designation language="en-GB"
+                         displayName="Influenza virus vaccine (product)"
+                         type="fsn">Influenza virus vaccine (product)</designation>
+                </concept>
+                <concept code="56844000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Yellow fever vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Yellow fever vaccine</desc>
+                    <designation language="en-GB" displayName="Yellow fever vaccine" type="fsn">Yellow fever vaccine</designation>
+                </concept>
+                <concept code="61153008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Measles + Mumps + Rubella vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Measles + Mumps + Rubella vaccine</desc>
+                    <designation language="en-GB"
+                         displayName="Measles + Mumps + Rubella vaccine"
+                         type="fsn">Measles + Mumps + Rubella vaccine</designation>
+                </concept>
+                <concept code="61602008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Pertussis vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Pertussis vaccine</desc>
+                    <designation language="en-GB" displayName="Pertussis vaccine" type="fsn">Pertussis vaccine</designation>
+                </concept>
+                <concept code="89428009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Typhoid vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Typhoid vaccine</desc>
+                    <designation language="en-GB" displayName="Typhoid vaccine" type="fsn">Typhoid vaccine</designation>
+                </concept>
+                <concept code="90043005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Mumps live virus vaccine"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Mumps live virus vaccine</desc>
+                    <designation language="en-GB" displayName="Mumps live virus vaccine" type="fsn">Mumps live virus vaccine</designation>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

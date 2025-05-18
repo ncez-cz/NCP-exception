@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:epsos="urn:epSOS:ps:ps:2010"
+             id="2.16.840.1.113883.1.11.19599"
+             name="x_ActClassDocumentEntryAct"
+             displayName="x_ActClassDocumentEntryAct"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="epsos-">
+      <sourceCodeSystem id="2.16.840.1.113883.5.6" identifierName="ActClass"/>
+      <conceptList>
+                <concept code="ACCM"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="accommodation"
+                  level="0"
+                  type="L"/>
+                <concept code="ACT"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="act"
+                  level="0"
+                  type="S"/>
+                <concept code="CONS"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="consent"
+                  level="0"
+                  type="L"/>
+                <concept code="CTTEVENT"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="clinical trial timepoint event"
+                  level="0"
+                  type="L"/>
+                <concept code="INC"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="incident"
+                  level="0"
+                  type="L"/>
+                <concept code="INFRM"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="inform"
+                  level="0"
+                  type="L"/>
+                <concept code="PCPR"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="care provision"
+                  level="0"
+                  type="S"/>
+                <concept code="REG"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="registration"
+                  level="0"
+                  type="L"/>
+                <concept code="SPCTRT"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="specimen treatment"
+                  level="0"
+                  type="L"/>
+                <concept code="TRNS"
+                  codeSystem="2.16.840.1.113883.5.6"
+                  displayName="transportation"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

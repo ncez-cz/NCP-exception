@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.33"
+             name="epSOSEntityNamePartQualifier"
+             displayName="epSOSEntityNamePartQualifier"
+             effectiveDate="2013-06-03T00:00:00"
+             statusCode="draft"
+             versionLabel="913-20091020">
+      <desc language="en-US">Not used in epSOS1, therefore translation is not needed.</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.43"
+                        identifierName="Entity Name Part Qualifier"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.43"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.43"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.43"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.43"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="AC"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="academic"
+                  level="0"
+                  type="L"/>
+                <concept code="AD"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="adopted"
+                  level="0"
+                  type="L"/>
+                <concept code="BR"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="birth"
+                  level="0"
+                  type="L"/>
+                <concept code="CL"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="callme"
+                  level="0"
+                  type="L"/>
+                <concept code="IN"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="initial"
+                  level="0"
+                  type="L"/>
+                <concept code="LS"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="legal status"
+                  level="0"
+                  type="L"/>
+                <concept code="NB"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="nobility"
+                  level="0"
+                  type="L"/>
+                <concept code="PR"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="professional"
+                  level="0"
+                  type="L"/>
+                <concept code="SP"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="spouse"
+                  level="0"
+                  type="L"/>
+                <concept code="TITLE"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="title"
+                  level="0"
+                  type="L"/>
+                <concept code="VV"
+                  codeSystem="2.16.840.1.113883.5.43"
+                  displayName="voorvoegsel"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

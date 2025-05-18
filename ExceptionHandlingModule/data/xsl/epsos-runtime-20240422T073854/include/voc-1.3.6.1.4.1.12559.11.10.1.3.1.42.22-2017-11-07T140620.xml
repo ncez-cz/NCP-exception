@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:pharm="urn:hl7-org:pharm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.22"
+             name="epSOSCodeNoMedication"
+             displayName="epSOSCodeNoMedication"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="draft"
+             versionLabel="201711"
+             effectiveDate="2017-11-07T14:06:20">
+      <desc language="en-US">epSOSCodeNoMedication</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.96"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="182849000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="No drug therapy prescribed"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="No drug therapy prescribed"
+                         type="fsn">No drug therapy prescribed</designation>
+                    <desc language="en-US">No drug therapy prescribed</desc>
+                </concept>
+                <concept code="182904002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Drug treatment unknown"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Drug treatment unknown" type="fsn">Drug treatment unknown</designation>
+                    <desc language="en-US">Drug treatment unknown</desc>
+                </concept>
+                <concept code="408350003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Patient not on self-medication"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Patient not on self-medication"
+                         type="fsn">Patient not on self-medication</designation>
+                    <desc language="en-US">Patient not on self-medication</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

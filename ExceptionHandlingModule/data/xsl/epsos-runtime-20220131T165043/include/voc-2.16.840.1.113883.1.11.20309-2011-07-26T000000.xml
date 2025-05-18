@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="2.16.840.1.113883.1.11.20309"
+             name="ActStatusAbortedCancelledCompleted"
+             displayName="ActStatusAbortedCancelledCompleted"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="epsos-">
+      <desc language="en-US">
+                <b>description: </b>
+                <p>
+                    <b>Description:</b> The status of an assessment for indications of an abnormal condition.</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.14"
+                        identifierName="ActStatus"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.14"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.14"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.14"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.14"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="aborted"
+                  codeSystem="2.16.840.1.113883.5.14"
+                  displayName="aborted"
+                  level="0"
+                  type="L"/>
+                <concept code="cancelled"
+                  codeSystem="2.16.840.1.113883.5.14"
+                  displayName="cancelled"
+                  level="0"
+                  type="L"/>
+                <concept code="completed"
+                  codeSystem="2.16.840.1.113883.5.14"
+                  displayName="completed"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

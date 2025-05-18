@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings>
+    <!-- Chapter 1: Release Info (if publication is a release) -->
+    <!-- ========= --><release project="2.16.840.1.113883.3.1937.777.11"
+            prefix="epsos-"
+            signature="20180816T125636"
+            date="2018-08-16T12:56:36"
+            versionLabel="v2.2.0">
+      <note xmlns:cpm="urn:hl7-eu:cpm"
+            xmlns:epsos="urn:epsos-org:ep:medication"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            language="en-US">
+                <div>There have been changes to the following 10 issues since the last intermediate version or release.</div>
+                <ul>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.240"
+                     target="_blank">240</a> "moodCode shall be INT" with status "Closed". Last event (2018-07-17T08:10:54): </div>
+                        <div style="padding: 10px;">I guess this issue can be closed since the moodCode is adapted in ART-DECOR.<br clear="none"/>I agree with the proposal.</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-feedback">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.275"
+                     target="_blank">275</a> "Change the Cardinality of the id and text elements according to the IHE PCC" with status "Feedback needed". Last event (2018-06-11T10:24:17): </div>
+                        <div style="padding: 10px;">Dear Giorgio, thank you for your feedback. This is highly appreciated.<br clear="none"/>
+                            <br clear="none"/>I always create tickets for the things I want to change where I don't feel 100% confident, and ask for feedback from the semantic experts. <br clear="none"/>This is one of these cases. I changed the issue status to "Feedback needed" and Label "(TBA) To be approved".<br clear="none"/>
+                            <br clear="none"/>If I understand it correctly, we make the following distinction:<br clear="none"/>
+                            <br clear="none"/>
+                            <ul>
+                                <li>
+                                    <b>specialization</b>: we modify an existing template (in this case the IHE PCC template) and add some self-defined elements or we add some additional restrictions to existing elements (as been decided in previous project phases)</li>
+                                <li>
+                                    <b>adaptation</b>: we use an existing template as a base but add/modify elements so that the template is not following the rules of the original template anymore.</li>
+                            </ul>
+                            <div>From the definition of the templateId: "Use of the templateId indicates that the CDA instance conforms to the constraints specified by each templateId referenced as well as to the standard CDA schema" (Principles of Health Interoperability)<br clear="none"/>
+                                <br clear="none"/>As you mentioned, I also noticed the fact that in a lot of cases the templateId is specified, even when the template is not conform to the constraints specified by the referenced template.<br clear="none"/>
+                                <br clear="none"/>I think there are 2 problems that have to be fixed:<br clear="none"/>
+                                <ol>
+                                    <li>Some eHDSI reuse the exisiting OID from the IHE PCC templates. This is just wrong. The templates should receive eHDSI specific template IDs.</li>
+                                    <li>In my opinion, no template IDs can be specified if the template is not a specialization of the template. The fact if a template is an adaptation/specialization is described in the description.</li>
+                                </ol>
+                                <div>I don't see a problem in just removing the template IDs in the case of an adaptation, since validation won't fail the CDA document if the template ID is still mentioned, but in that case, at least the templates are correctly described. Another option is to just make them conform to the referenced templates, but I don't think this is the way to go, since in this case we are reverting changes that have been made in previous project phases (like the choice you mentioned where the choice of epSOS was not to impose that entries would be linked to the section text)<br clear="none"/>
+                                    <br clear="none"/>What do you think?</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="node-issue-open">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.276"
+                     target="_blank">276</a> "make patient name mandatory (change conformance from R to M)" with status "Open". Last event (2018-06-21T12:59:25): </div>
+                        <div style="padding: 10px;">
+                            <b>Finding: </b>
+                            <p>- <span style="color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Oxygen, Ubuntu, &#34;Fira Sans&#34;, &#34;Droid Sans&#34;, &#34;Helvetica Neue&#34;, sans-serif; font-size: 14px;">From the functional requirements, the family/first name of a patient is mandatory. But if in ART-DECOR the parent element (name) allows a nullFlavor, there is the possibility to have a valid CDA document without providing the family/first name of a patient.</span>
+                            </p>
+                            <b>Suggestion: </b>
+                            <p>- Change the conformance from R to M</p>
+                            <b>Further explanation: </b>
+                            <p>-</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="node-issue-open">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.277"
+                     target="_blank">277</a> "Restrict the nullFlavor value for Telecom element in author to "NI"" with status "Open". Last event (2018-06-21T13:10:10): </div>
+                        <div style="padding: 10px;">
+                            <b>Finding: </b>
+                            <p>- <span style="color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Oxygen, Ubuntu, &#34;Fira Sans&#34;, &#34;Droid Sans&#34;, &#34;Helvetica Neue&#34;, sans-serif; font-size: 14px;">For reasons of consistency with other telecom elements, restrict the nullFlavor value of the assignedAuthor element to "NI". It is also specified like this in the Expand documentation.</span>
+                            </p>
+                            <b>Suggestion: </b>
+                            <p>- Restrict nullFlavor value of assignedAuthor to "NI"</p>
+                            <b>Further explanation: </b>
+                            <p>-</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="node-issue-open">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.278"
+                     target="_blank">278</a> "Restrict the nullFlavor value for Telecom element in author prescriber to "NI"" with status "Open". Last event (2018-06-21T13:16:02): </div>
+                        <div style="padding: 10px;">
+                            <b>Finding:</b>
+                            <p>- <span style="color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &#34;Segoe UI&#34;, Roboto, Oxygen, Ubuntu, &#34;Fira Sans&#34;, &#34;Droid Sans&#34;, &#34;Helvetica Neue&#34;, sans-serif; font-size: 14px;">For reasons of consistency with other telecom elements, restrict the nullFlavor value of the assignedAuthor element to "NI". It is also specified like this in the Expand documentation.</span>
+                            </p>
+                            <b>Suggestion:</b>
+                            <p>- Restrict nullFlavor value of assignedAuthor to "NI"</p>
+                            <b>Further explanation:</b>
+                            <p>-</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="node-issue-open">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.279"
+                     target="_blank">279</a> "Fix issue subscription for new ehdsi art décor environment" with status "Open". Last event (2018-06-26T13:33:32): </div>
+                        <div style="padding: 10px;">
+                            <div>
+                                <b>Finding:</b>
+                                <p>- Since the migration of the art décor server from the art-decor infrastructure towards the commission servers, the e-mail notification doesn't work anymore.</p>
+                                <b>Suggestion:</b>
+                                <p>-</p>
+                                <b>Further explanation:</b>
+                                <p>-</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="node-issue-open">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.280"
+                     target="_blank">280</a> "Add templateID to CDA Number of Packages" with status "Open". Last event (2018-07-03T12:50:48): </div>
+                        <div style="padding: 10px;">
+                            <b>Finding: </b>
+                            <p>- At this moment, the CDA NumberOfPackages template has an epSOS OID and was created for reuse. However, this template doesn't have a templateID</p>
+                            <b>Suggestion: </b>
+                            <p>- At the templateID for this template</p>
+                            <b>Further explanation: </b>
+                            <p>-</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="node-issue-open">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.281"
+                     target="_blank">281</a> "Change the cardinality of @classCode and @moodCode to 1 .. 1" with status "Open". Last event (2018-07-18T08:03:41): </div>
+                        <div style="padding: 10px;">
+                            <b>Finding: </b>
+                            <p>- We noticed that, although ART-DECOR states that the attributes are optional, the XSD states that it's mandatory. <br clear="none"/>
+                                <span style="font-family: Calibri, sans-serif; font-size: 11pt;">The schema error is
+correct, as the attribute is required as per W3C schema (and that makes sense
+for the classCode).<br clear="none"/>
+                                </span>
+                                <span lang="EN-US" style="font-size: 11pt; font-family: Calibri, sans-serif;">Therefore you MUST specify this in the template as
+1..1, either fixed or with a value set of valid class codes.<br clear="none"/>
+                                </span>
+                                <b>
+                                    <br clear="none"/>Suggestion:</b>
+                            </p>
+                            <p>- Change the cardinality from 0 .. 1 to 1 .. 1</p>
+                            <b>Further explanation: </b>
+                            <p>-</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="node-issue-open">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.282"
+                     target="_blank">282</a> "Make the formCode element of the manufacturedMaterial optional" with status "Open". Last event (2018-07-26T15:24:55): </div>
+                        <div style="padding: 10px;">
+                            <b>Finding: </b>
+                            <p>- From the discussion with dr. Christof Gessner: If we look into the expand documentation, we noticed that the formCode has to have cardinality 1 .. 1 and conformance R for ePrescription and eDispensation. However, for PatientSummary, the formCode has to have cardinality 0 .. 1 and be optional. Since this template is reused in all document templates (eP, eD, PS) we should make the element optional.<br clear="none"/>This won't have any impact on the document validation, since eP/eD messages will still be valid (there is just the relaxation of the constraint)</p>
+                            <b>Suggestion: </b>
+                            <p>- Make the element optional.</p>
+                            <b>Further explanation: </b>
+                            <p>-</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="node-issue-open">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.283"
+                     target="_blank">283</a> "Remove determinerCode from epsos:ingredient element" with status "Open". Last event (2018-08-07T07:48:31): </div>
+                        <div style="padding: 10px;">
+                            <b>Finding: </b>
+                            <p>- In ART-DECOR, we have two attribute values defined for the upper epsos:ingredient element: @classCode and @determinerCode with both fixed values. But when we add these attributes as defined in ART-DECOR, we have XSD schema validation errors. The @determinerCode should be removed from ART-DECOR (this is also in line with the EXPAND documentation)</p>
+                            <b>Suggestion: </b>
+                            <p>- Remove the @determinerCode attribute with it's fixed value from the epsos:ingredient element</p>
+                            <b>Further explanation: </b>
+                            <p>-</p>
+                        </div>
+                    </li>
+                </ul>
+            </note>
+   </release>
+    
+    <!-- Chapter 2: Mapping based on model list -->
+    <!-- ========= -->
+    <!-- Used to map an instance to a specific Schematron. How to read:
+- For every template-id that is used in instances there is an element map, e.g.
+  <map model="REPC_IN004110UV01" namespace="urn:hl7-org:v3" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  or
+  <map templateRoot="2.16.840.1.113883.2.4.6.10.90.59" templateExt="2017-03-27" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  <map templateRoot="2.16.840.1.113883.2.4.6.10.90.59" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  or 
+  <map rootelement="REPC_IN004110UV01" namespace="urn:hl7-org:v3" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  
+  - @model       - optional    - hint as to the XML Schema that could be used
+  - @namespace   - mandatory   - default namespace-uri() of the project and of the instance unless specified otherwise
+  or
+  - templateRoot - mandatory   - in HL7v3 this would be an OID. In other instance types it might be something else, but then this mapping file might need adjusted setup
+  - templateExt  - optional    - in HL7v3 this would be any string found in templateId/@extension
+  or
+  - @rootelement - required    - local-name() of the root element of the instance
+  - @namespace   - mandatory   - namespace-uri() of the root element
+  
+  One of the following is required, normally schsvrl makes sense:
+  - @schsvrl     - conditional - path+file name of the SVRL XSL. The path should be relative to this index/map file
+  - @schtext     - conditional - path+file name of the Text XSL. The path should be relative to this index/map file
+  - @sch         - conditional - path+file name of the original Schematron file. The path should be relative to this index/map file
+    
+  Note that the same template may be part of multiple transactions, hence multiple map element could be present for the same template. The attached Schematron
+  will have different names, but will have the exact same rules (same template, same rules) hence only the first match is needed for validation.
+  
+- As final fallback, when no template-id is found in the instance, code should rely on root element of the instance to determine the Schematron file name ... --><!-- template name: eHDSI-OriginalPS -->
+    <map rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.7"
+        sch="epsos-PatientSummary_L1.sch"
+        schsvrl="epsos-PatientSummary_L1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-PatientSummary_L1.sch"
+        schsvrl="epsos-PatientSummary_L1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: eHDSI-Original-eP -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.6"
+        sch="epsos-ePrescriptionL1.sch"
+        schsvrl="epsos-ePrescriptionL1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-ePrescriptionL1.sch"
+        schsvrl="epsos-ePrescriptionL1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-eP -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.1"
+        sch="epsos-ePrescription.sch"
+        schsvrl="epsos-ePrescription.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-ePrescription.sch"
+        schsvrl="epsos-ePrescription.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-eD -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.2"
+        sch="epsos-eDispensation.sch"
+        schsvrl="epsos-eDispensation.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-eDispensation.sch"
+        schsvrl="epsos-eDispensation.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-HCER -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.4"
+        sch="epsos-MedicationRelatedOverview.sch"
+        schsvrl="epsos-MedicationRelatedOverview.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-MedicationRelatedOverview.sch"
+        schsvrl="epsos-MedicationRelatedOverview.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-MRO -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.5"
+        sch="epsos-HealthCareEncounterReport.sch"
+        schsvrl="epsos-HealthCareEncounterReport.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-HealthCareEncounterReport.sch"
+        schsvrl="epsos-HealthCareEncounterReport.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-PS -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.3"
+        sch="epsos-PatientSummary.sch"
+        schsvrl="epsos-PatientSummary.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-PatientSummary.sch"
+        schsvrl="epsos-PatientSummary.xsl"
+        xsd="ClinicalDocument.xsd"/>
+    
+    <!-- Chapter 3: Mapping based on representing templates -->
+    <!-- ========= -->
+    <!-- Used to map a representing template to a specific Schematron. How to read:
+- For every representing template the schematron file and sch svrl xsl conversion file is mentioned
+- The corresponding root element plus its namespace is mentioned 
+- Every transaction represented by this template is named--><template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.6"
+             effectiveDate="2017-03-11T22:32:59"
+             sch="epsos-ePrescriptionL1.sch"
+             schsvrl="epsos-ePrescriptionL1.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.32"
+                   effectiveDate="2017-11-21T10:26:49"
+                   statusCode="draft"
+                   name="Return eP(PDF embedded) from country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.7"
+             effectiveDate="2017-03-11T18:41:31"
+             sch="epsos-PatientSummary_L1.sch"
+             schsvrl="epsos-PatientSummary_L1.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.29"
+                   effectiveDate="2017-11-20T18:28:16"
+                   statusCode="draft"
+                   name="Return PS (PDF embedded) of country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.1"
+             effectiveDate="2013-12-20T00:00:00"
+             sch="epsos-ePrescription.sch"
+             schsvrl="epsos-ePrescription.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.19"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Return eP from country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.2"
+             effectiveDate="2013-12-20T00:00:00"
+             sch="epsos-eDispensation.sch"
+             schsvrl="epsos-eDispensation.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.25"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Send eD to country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.4"
+             effectiveDate="2013-12-20T00:00:00"
+             sch="epsos-MedicationRelatedOverview.sch"
+             schsvrl="epsos-MedicationRelatedOverview.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.23"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Return MRO"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.5"
+             effectiveDate="2013-12-20T00:00:00"
+             sch="epsos-HealthCareEncounterReport.sch"
+             schsvrl="epsos-HealthCareEncounterReport.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.21"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Send HCER to country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.3"
+             effectiveDate="2013-12-20T00:00:00"
+             sch="epsos-PatientSummary.sch"
+             schsvrl="epsos-PatientSummary.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.12"
+                   effectiveDate="2012-05-02T00:00:00"
+                   statusCode="draft"
+                   name="Return PS of country A"/>
+   </template>
+</mappings>

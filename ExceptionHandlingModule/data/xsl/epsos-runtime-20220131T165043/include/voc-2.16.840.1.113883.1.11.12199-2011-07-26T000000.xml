@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="2.16.840.1.113883.1.11.12199"
+             name="LanguageAbilityProficiency"
+             displayName="LanguageAbilityProficiency"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="epsos-">
+      <desc language="en-US">
+                <b>description: </b>
+                <p>A value representing the level of proficiency in a language.</p>
+                <p>
+                    <i>Example:</i> Excellent, good, fair, poor.</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.61"
+                        identifierName="Language Ability Proficiency"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.61"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.61"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.61"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.61"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="E"
+                  codeSystem="2.16.840.1.113883.5.61"
+                  displayName="Excellent"
+                  level="0"
+                  type="L"/>
+                <concept code="F"
+                  codeSystem="2.16.840.1.113883.5.61"
+                  displayName="Fair"
+                  level="0"
+                  type="L"/>
+                <concept code="G"
+                  codeSystem="2.16.840.1.113883.5.61"
+                  displayName="Good"
+                  level="0"
+                  type="L"/>
+                <concept code="P"
+                  codeSystem="2.16.840.1.113883.5.61"
+                  displayName="Poor"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

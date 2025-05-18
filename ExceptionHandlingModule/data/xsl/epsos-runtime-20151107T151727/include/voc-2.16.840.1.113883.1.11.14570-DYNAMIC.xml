@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:epsos="urn:epSOS:ps:ps:2010"
+             id="2.16.840.1.113883.1.11.14570"
+             name="AdministrableDrugForm"
+             displayName="AdministrableDrugForm"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="epsos-">
+      <desc language="en-US">
+                <b>description: </b>
+                <p>Indicates the form in which the drug product should be administered.</p>
+                <p>This element only needs to be specified when (a) the form in which the drug is measured for dispensing differs from the form in which the drug is administered; and (b) the form in which the quantity of the administered drug being administered is not expressed as a discrete measured mass or volume. <i>Usage:</i>
+                </p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.85" identifierName="Orderable Drug Form"/>
+      <conceptList>
+                <concept code="APPFUL"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Applicatorful"
+                  level="0"
+                  type="L"/>
+                <concept code="PUFF"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Puff"
+                  level="0"
+                  type="L"/>
+                <concept code="SCOOP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Scoops"
+                  level="0"
+                  type="L"/>
+                <concept code="SPRY"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Sprays"
+                  level="0"
+                  type="L"/>
+                <concept code="DROP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Drops"
+                  level="0"
+                  type="S"/>
+                <concept code="NDROP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Nasal Drops"
+                  level="1"
+                  type="L"/>
+                <concept code="OPDROP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Ophthalmic Drops"
+                  level="1"
+                  type="L"/>
+                <concept code="ORDROP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Oral Drops"
+                  level="1"
+                  type="L"/>
+                <concept code="OTDROP"
+                  codeSystem="2.16.840.1.113883.5.85"
+                  displayName="Otic Drops"
+                  level="1"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.47"
+             name="eHDSI-AbsentOrUnknownAllergies"
+             displayName="eHDSI-AbsentOrUnknownAllergies"
+             effectiveDate="2019-04-17T12:48:07"
+             statusCode="draft"
+             versionLabel="201904">
+      <sourceCodeSystem id="2.16.840.1.113883.5.1150.1"
+                        identifierName="IPS CodeSystem - Absent and Unknown Data"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.1150.1"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.1150.1"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.1150.1"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.1150.1"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="no-allergy-info"
+                  codeSystem="2.16.840.1.113883.5.1150.1"
+                  displayName="No information about allergies"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="No information about allergies"
+                         type="fsn">No information about allergies</designation>
+                    <desc language="en-US">No information about allergies<br clear="none"/>
+                    </desc>
+                </concept>
+                <concept code="no-known-allergies"
+                  codeSystem="2.16.840.1.113883.5.1150.1"
+                  displayName="No known allergies"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="No known allergies" type="fsn">No known allergies</designation>
+                    <desc language="en-US">No known allergies<br clear="none"/>
+                    </desc>
+                </concept>
+                <concept code="no-known-medication-allergies"
+                  codeSystem="2.16.840.1.113883.5.1150.1"
+                  displayName="No known medication allergies"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="No known medication allergies"
+                         type="fsn">No known medication allergies</designation>
+                    <desc language="en-US">No known medication allergies<br clear="none"/>
+                    </desc>
+                </concept>
+                <concept code="no-known-environmental-allergies"
+                  codeSystem="2.16.840.1.113883.5.1150.1"
+                  displayName="No known environmental allergies"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="No known environmental allergies"
+                         type="fsn">No known environmental allergies</designation>
+                    <desc language="en-US">No known environmental allergies<br clear="none"/>
+                    </desc>
+                </concept>
+                <concept code="no-known-food-allergies"
+                  codeSystem="2.16.840.1.113883.5.1150.1"
+                  displayName="No known food allergies"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="No known food allergies" type="fsn">No known food allergies</designation>
+                    <desc language="en-US">No known food allergies<br clear="none"/>
+                    </desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.43"
+             name="epSOSObservationInterpretation"
+             displayName="epSOSObservationInterpretation"
+             statusCode="draft"
+             versionLabel="913-20091020"
+             effectiveDate="2013-06-03T00:00:00">
+      <desc language="en-US">The Value Set is used to classify the result of an observation or a measurement</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.83"
+                        identifierName="Observation Interpretation"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.83"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.83"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.83"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.83"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="H"
+                  codeSystem="2.16.840.1.113883.5.83"
+                  displayName="High"
+                  level="0"
+                  type="L"/>
+                <concept code="L"
+                  codeSystem="2.16.840.1.113883.5.83"
+                  displayName="Low"
+                  level="0"
+                  type="L"/>
+                <concept code="N"
+                  codeSystem="2.16.840.1.113883.5.83"
+                  displayName="Normal"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

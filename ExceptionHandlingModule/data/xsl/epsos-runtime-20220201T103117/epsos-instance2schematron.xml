@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings>
+    <!-- Chapter 1: Release Info (if publication is a release) -->
+    <!-- ========= --><release project="2.16.840.1.113883.3.1937.777.11"
+            prefix="epsos-"
+            signature="20220201T103117"
+            date="2022-02-01T10:31:17"
+            versionLabel="v5.0.2">
+      <note xmlns:cpm="urn:hl7-eu:cpm"
+            xmlns:epsos="urn:epsos-org:ep:medication"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            language="en-US">
+                <div>There have been changes to the following 4 issues since the last intermediate version or release.</div>
+                <ul>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.353"
+                     target="_blank">353</a> "Align hl7:id and hl7:text with eHDSI Simple Observation" with status "Closed".  Last event  (2021-07-29T13:45:58): </div>
+                        <div style="padding: 10px;">This issue can be closed since it is fixed by the implementation of CP-041 in CDA IG v5.0.0 release.</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.353"
+                     target="_blank">353</a> "Align hl7:id and hl7:text with eHDSI Simple Observation" with status "Closed".  Last event  (2021-07-29T13:45:58): </div>
+                        <div style="padding: 10px;">This issue can be closed since it is fixed by the implementation of CP-041 in CDA IG v5.0.0 release.</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.374"
+                     target="_blank">374</a> "Restrict cardinality of the hl7:value element to 1" with status "Closed".  Last event  (2021-06-21T11:01:08): </div>
+                        <div style="padding: 10px;">
+                            <li>
+                                <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.375"
+                           target="_blank">375</a> "Load MVC v5.2.0 value sets in ART-DECOR" with status "Closed".  Last event  (2022-02-01T10:29:26): </div>
+                                <div style="padding: 10px;">Changelog with all the concepts added/removed can be found here: https://webgate.ec.europa.eu/fpfis/wikis/x/ZwAvPw</div>
+                            </li>
+                        </div>
+                    </li>
+                </ul>
+            </note>
+   </release>
+    
+    <!-- Chapter 2: Mapping based on model list -->
+    <!-- ========= -->
+    <!-- Used to map an instance to a specific Schematron. How to read:
+- For every template-id that is used in instances there is an element map, e.g.
+  <map model="REPC_IN004110UV01" namespace="urn:hl7-org:v3" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  or
+  <map templateRoot="2.16.840.1.113883.2.4.6.10.90.59" templateExt="2017-03-27" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  <map templateRoot="2.16.840.1.113883.2.4.6.10.90.59" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  or 
+  <map rootelement="REPC_IN004110UV01" namespace="urn:hl7-org:v3" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  
+  - @model       - optional    - hint as to the XML Schema that could be used
+  - @namespace   - mandatory   - default namespace-uri() of the project and of the instance unless specified otherwise
+  or
+  - templateRoot - mandatory   - in HL7v3 this would be an OID. In other instance types it might be something else, but then this mapping file might need adjusted setup
+  - templateExt  - optional    - in HL7v3 this would be any string found in templateId/@extension
+  or
+  - @rootelement - required    - local-name() of the root element of the instance
+  - @namespace   - mandatory   - namespace-uri() of the root element
+  
+  One of the following is required, normally schsvrl makes sense:
+  - @schsvrl     - conditional - path+file name of the SVRL XSL. The path should be relative to this index/map file
+  - @schtext     - conditional - path+file name of the Text XSL. The path should be relative to this index/map file
+  - @sch         - conditional - path+file name of the original Schematron file. The path should be relative to this index/map file
+    
+  Note that the same template may be part of multiple transactions, hence multiple map element could be present for the same template. The attached Schematron
+  will have different names, but will have the exact same rules (same template, same rules) hence only the first match is needed for validation.
+  
+- As final fallback, when no template-id is found in the instance, code should rely on root element of the instance to determine the Schematron file name ... --><!-- template name: eHDSIOrCDMedicalImagingReport -->
+    <map rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.10"
+        sch="epsos-OrCD_Medical_Imaging_Report.sch"
+        schsvrl="epsos-OrCD_Medical_Imaging_Report.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-OrCD_Medical_Imaging_Report.sch"
+        schsvrl="epsos-OrCD_Medical_Imaging_Report.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: eHDSI-OriginalPS -->
+    <map rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.7"
+        sch="epsos-PatientSummary_L1.sch"
+        schsvrl="epsos-PatientSummary_L1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-PatientSummary_L1.sch"
+        schsvrl="epsos-PatientSummary_L1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: eHDSIOrCDMedicalImages -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.11"
+        sch="epsos-OrCD_Medical_Images.sch"
+        schsvrl="epsos-OrCD_Medical_Images.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-OrCD_Medical_Images.sch"
+        schsvrl="epsos-OrCD_Medical_Images.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: eHDSIOrCDLaboratoryResult -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.8"
+        sch="epsos-OrCD_Laboratory_Result.sch"
+        schsvrl="epsos-OrCD_Laboratory_Result.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-OrCD_Laboratory_Result.sch"
+        schsvrl="epsos-OrCD_Laboratory_Result.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: eHDSIOrCDHospitalDischargeReport -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.9"
+        sch="epsos-OrCD_Hospital_Discharge_Report.sch"
+        schsvrl="epsos-OrCD_Hospital_Discharge_Report.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-OrCD_Hospital_Discharge_Report.sch"
+        schsvrl="epsos-OrCD_Hospital_Discharge_Report.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: eHDSIePrescriptionPDFEmbedded -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.6"
+        sch="epsos-ePrescriptionL1.sch"
+        schsvrl="epsos-ePrescriptionL1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-ePrescriptionL1.sch"
+        schsvrl="epsos-ePrescriptionL1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: eHDSIePrescription -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.1"
+        sch="epsos-ePrescription.sch"
+        schsvrl="epsos-ePrescription.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-ePrescription.sch"
+        schsvrl="epsos-ePrescription.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: eHDSIeDispensation -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.2"
+        sch="epsos-eDispensation.sch"
+        schsvrl="epsos-eDispensation.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-eDispensation.sch"
+        schsvrl="epsos-eDispensation.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-HCER -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.4"
+        sch="epsos-MedicationRelatedOverview.sch"
+        schsvrl="epsos-MedicationRelatedOverview.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-MedicationRelatedOverview.sch"
+        schsvrl="epsos-MedicationRelatedOverview.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-MRO -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.5"
+        sch="epsos-HealthCareEncounterReport.sch"
+        schsvrl="epsos-HealthCareEncounterReport.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-HealthCareEncounterReport.sch"
+        schsvrl="epsos-HealthCareEncounterReport.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: eHDSIPatientSummary -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.3"
+        sch="epsos-PatientSummary.sch"
+        schsvrl="epsos-PatientSummary.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-PatientSummary.sch"
+        schsvrl="epsos-PatientSummary.xsl"
+        xsd="ClinicalDocument.xsd"/>
+    
+    <!-- Chapter 3: Mapping based on representing templates -->
+    <!-- ========= -->
+    <!-- Used to map a representing template to a specific Schematron. How to read:
+- For every representing template the schematron file and sch svrl xsl conversion file is mentioned
+- The corresponding root element plus its namespace is mentioned 
+- Every transaction represented by this template is named--><template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.10"
+             effectiveDate=""
+             sch="epsos-OrCD_Medical_Imaging_Report.sch"
+             schsvrl="epsos-OrCD_Medical_Imaging_Report.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.44"
+                   effectiveDate="2021-04-30T11:27:45"
+                   statusCode="draft"
+                   name="Return OrCD Medical Imaging Report of country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.11"
+             effectiveDate=""
+             sch="epsos-OrCD_Medical_Images.sch"
+             schsvrl="epsos-OrCD_Medical_Images.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.41"
+                   effectiveDate="2021-04-30T11:16:15"
+                   statusCode="draft"
+                   name="Return OrCD Medical Images of country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.8"
+             effectiveDate=""
+             sch="epsos-OrCD_Laboratory_Result.sch"
+             schsvrl="epsos-OrCD_Laboratory_Result.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.38"
+                   effectiveDate="2021-04-30T11:00:04"
+                   statusCode="draft"
+                   name="Return OrCD Laboratory Result of country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.9"
+             effectiveDate=""
+             sch="epsos-OrCD_Hospital_Discharge_Report.sch"
+             schsvrl="epsos-OrCD_Hospital_Discharge_Report.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.35"
+                   effectiveDate="2021-04-30T09:22:38"
+                   statusCode="draft"
+                   name="Return OrCD Hospital Discharge Report of country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.6"
+             effectiveDate=""
+             sch="epsos-ePrescriptionL1.sch"
+             schsvrl="epsos-ePrescriptionL1.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.32"
+                   effectiveDate="2017-11-21T10:26:49"
+                   statusCode="draft"
+                   name="Return eP (PDF embedded) from country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.7"
+             effectiveDate=""
+             sch="epsos-PatientSummary_L1.sch"
+             schsvrl="epsos-PatientSummary_L1.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.29"
+                   effectiveDate="2017-11-20T18:28:16"
+                   statusCode="draft"
+                   name="Return PS (PDF embedded) of country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.1"
+             effectiveDate=""
+             sch="epsos-ePrescription.sch"
+             schsvrl="epsos-ePrescription.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.19"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Return eP from country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.2"
+             effectiveDate=""
+             sch="epsos-eDispensation.sch"
+             schsvrl="epsos-eDispensation.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.25"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Send eD to country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.4"
+             effectiveDate=""
+             sch="epsos-MedicationRelatedOverview.sch"
+             schsvrl="epsos-MedicationRelatedOverview.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.23"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Return MRO"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.5"
+             effectiveDate=""
+             sch="epsos-HealthCareEncounterReport.sch"
+             schsvrl="epsos-HealthCareEncounterReport.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.21"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Send HCER to country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.3"
+             effectiveDate=""
+             sch="epsos-PatientSummary.sch"
+             schsvrl="epsos-PatientSummary.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.12"
+                   effectiveDate="2012-05-02T00:00:00"
+                   statusCode="draft"
+                   name="Return PS of country A"/>
+   </template>
+    
+    <!-- Chapter 4: Schematron parameters that were used for this compilation -->
+    <decor-parameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:noNamespaceSchemaLocation="../assets/../decor-parameters.xsd"><!-- create Schematron1 or not (Schematron0) -->
+      <switchCreateSchematron1/>
+      <!-- create WithWrapperIncludes1 or not (WithWrapperIncludes0) -->
+      <switchCreateSchematronWithWrapperIncludes0/>
+      <switchCreateSchematronWithWarningsOnOpen0/>
+      <switchCreateSchematronClosed0/>
+      <switchCreateSchematronWithExplicitIncludes1/>
+      <!-- create DocHTML1 or not (DocHTML0) -->
+      <switchCreateDocHTML1/>
+      <!-- create SVG1 or not (SVG0) -->
+      <switchCreateDocSVG1/>
+      <!-- create DocBook1 or not (DocBook0) -->
+      <switchCreateDocDocbook0/>
+      <!-- create PDF1 or not (PDF0) -->
+      <switchCreateDocPDF1 include="rtndsi"/>
+      <!-- use local assets dir ../assets instead of online version -->
+      <useLocalAssets1/>
+      <!-- use local logos dir ../pfx-logos instead of online version -->
+      <useLocalLogos1/>
+      <!-- useCustomLogo -->
+      <useCustomLogo0 src="" href=""/>
+      <useLatestDecorVersion1/>
+      <!-- create artefacts without timestamp directories as we are in development -->
+      <inDevelopment0/>
+      <!-- override /decor/project/@language default language, or set if not given there -->
+      <!-- <defaultLanguage>nl-NL<defaultLanguage> -->
+      <!-- need to keep those off for big projects due to memory constraints, but active otherwise -->
+      <switchCreateDatatypeChecks1/>
+      <!-- create instances that mimic the specification -->
+      <createDefaultInstancesForRepresentingTemplates0/>
+      <!-- log at level (ALL, DEBUG, INFO, WARN, ERROR, FATAL, OFF) -->
+      <logLevel>INFO</logLevel>
+      <!-- determine binding behavior -->
+      <bindingBehavior valueSets="freeze"/>
+      <!-- Relevant for HTML only. Implements treetable.js based table views if 'switchCreateTreeTableHtml1' or traditional tables otherwise -->
+      <switchCreateTreeTableHtml1/>
+   </decor-parameters>
+</mappings>

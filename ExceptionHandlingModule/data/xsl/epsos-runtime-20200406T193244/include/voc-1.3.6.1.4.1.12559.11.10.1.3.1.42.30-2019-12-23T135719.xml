@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.30"
+             name="epSOSResolutionOutcome"
+             displayName="epSOSResolutionOutcome"
+             statusCode="final"
+             versionLabel="201912"
+             officialReleaseDate="2017-11-07T14:06:20"
+             effectiveDate="2019-12-23T13:57:19">
+      <desc language="en-US">epSOSResolutionOutcome</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.96"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="161901003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Chronic sick"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Chronic sick</desc>
+                    <designation language="en-GB" displayName="Chronic sick" type="fsn">Chronic sick</designation>
+                </concept>
+                <concept code="419099009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Dead"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Dead</desc>
+                    <designation language="en-GB" displayName="Dead" type="fsn">Dead</designation>
+                </concept>
+                <concept code="21134002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Disability"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Disability</desc>
+                    <designation language="en-GB" displayName="Disability" type="fsn">Disability</designation>
+                </concept>
+                <concept code="161045001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Disability - severe"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Disability - severe</desc>
+                    <designation language="en-GB" displayName="Disability - severe" type="fsn">Disability - severe</designation>
+                </concept>
+                <concept code="162467007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Free of symptoms"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Free of symptoms</desc>
+                    <designation language="en-GB" displayName="Free of symptoms" type="fsn">Free of symptoms</designation>
+                </concept>
+                <concept code="271593001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Moribund"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Moribund</desc>
+                    <designation language="en-GB" displayName="Moribund" type="fsn">Moribund</designation>
+                </concept>
+                <concept code="81323004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Normal general body function"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Normal general body function</desc>
+                    <designation language="en-GB"
+                         displayName="Normal general body function"
+                         type="fsn">Normal general body function</designation>
+                </concept>
+                <concept code="765205004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Disorder in remission"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">Disorder in remission</desc>
+                    <designation language="en-GB" displayName="Disorder in remission" type="fsn">Disorder in remission</designation>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

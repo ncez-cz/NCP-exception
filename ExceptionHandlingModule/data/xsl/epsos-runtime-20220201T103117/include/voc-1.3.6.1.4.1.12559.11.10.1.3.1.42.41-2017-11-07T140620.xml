@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.41"
+             name="epSOSTimingEvent"
+             displayName="epSOSTimingEvent"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="final"
+             versionLabel="201711">
+      <desc language="en-US">epSOSTimingEvent</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.139"
+                        identifierName="TimingEvent"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.139"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.139"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.139"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.139"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="AC"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="before meal (from lat. ante cibus)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="before meal (from lat. ante cibus)"
+                         type="fsn">before meal (from lat. ante cibus)</designation>
+                    <desc language="en-US">AC</desc>
+                </concept>
+                <concept code="ACD"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="before lunch (from lat. ante cibus diurnus)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="before lunch (from lat. ante cibus diurnus)"
+                         type="fsn">before lunch (from lat. ante cibus diurnus)</designation>
+                    <desc language="en-US">ACD</desc>
+                </concept>
+                <concept code="ACM"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="before breakfast (from lat. ante cibus matutinus)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="before breakfast (from lat. ante cibus matutinus)"
+                         type="fsn">before breakfast (from lat. ante cibus matutinus)</designation>
+                    <desc language="en-US">ACM</desc>
+                </concept>
+                <concept code="ACV"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="before dinner (from lat. ante cibus vespertinus)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="before dinner (from lat. ante cibus vespertinus)"
+                         type="fsn">before dinner (from lat. ante cibus vespertinus)</designation>
+                    <desc language="en-US">ACV</desc>
+                </concept>
+                <concept code="HS"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="Prior to beginning a regular period of extended sleep (this would exclude naps).  Note that this might occur at different times of day depending on a person's regular sleep schedule."
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Prior to beginning a regular period of extended sleep (this would exclude naps).  Note that this might occur at different times of day depending on a person's regular sleep schedule."
+                         type="fsn">Prior to beginning a regular period of extended sleep (this would exclude naps). Note that this might occur at different times of day depending on a person's regular sleep schedule.</designation>
+                    <desc language="en-US">HS</desc>
+                </concept>
+                <concept code="IC"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="between meals (from lat. inter cibus)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="between meals (from lat. inter cibus)"
+                         type="fsn">between meals (from lat. inter cibus)</designation>
+                    <desc language="en-US">IC</desc>
+                </concept>
+                <concept code="ICD"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="between lunch and dinner"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="between lunch and dinner" type="fsn">between lunch and dinner</designation>
+                    <desc language="en-US">ICD</desc>
+                </concept>
+                <concept code="ICM"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="between breakfast and lunch"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="between breakfast and lunch"
+                         type="fsn">between breakfast and lunch</designation>
+                    <desc language="en-US">ICM</desc>
+                </concept>
+                <concept code="ICV"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="between dinner and the hour of sleep"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="between dinner and the hour of sleep"
+                         type="fsn">between dinner and the hour of sleep</designation>
+                    <desc language="en-US">ICV</desc>
+                </concept>
+                <concept code="PC"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="after meal (from lat. post cibus)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="after meal (from lat. post cibus)"
+                         type="fsn">after meal (from lat. post cibus)</designation>
+                    <desc language="en-US">PC</desc>
+                </concept>
+                <concept code="PCD"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="after lunch (from lat. post cibus diurnus)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="after lunch (from lat. post cibus diurnus)"
+                         type="fsn">after lunch (from lat. post cibus diurnus)</designation>
+                    <desc language="en-US">PCD</desc>
+                </concept>
+                <concept code="PCM"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="after breakfast (from lat. post cibus matutinus)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="after breakfast (from lat. post cibus matutinus)"
+                         type="fsn">after breakfast (from lat. post cibus matutinus)</designation>
+                    <desc language="en-US">PCM</desc>
+                </concept>
+                <concept code="PCV"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="after dinner (from lat. post cibus vespertinus)"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="after dinner (from lat. post cibus vespertinus)"
+                         type="fsn">after dinner (from lat. post cibus vespertinus)</designation>
+                    <desc language="en-US">PCV</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

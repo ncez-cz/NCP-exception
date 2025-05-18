@@ -39,7 +39,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
                         }
                         else
                         {
-                            Console.WriteLine("compilation of " + item.Key + ": " + item.Value);
+                            Console.WriteLine("Starting compilation of " + item.Key + ": " + item.Value);
 
                             var processor = new Processor(false);
 
@@ -48,6 +48,8 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
                             var validator = xsltCompiler.compile(new java.io.File(item.Value)).load30();
 
                             _xsl.Add(item.Key, validator);
+                            
+                            Console.WriteLine("Finished successful compilation of " + item.Key + ": " + item.Value);
                         }
                     }
             }

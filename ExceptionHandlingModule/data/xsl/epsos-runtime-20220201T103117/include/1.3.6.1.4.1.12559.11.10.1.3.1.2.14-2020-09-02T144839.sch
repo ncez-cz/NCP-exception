@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Template derived pattern
+===========================================
+ID: 1.3.6.1.4.1.12559.11.10.1.3.1.2.14
+Name: eHDSI Functional Status
+Description: The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living. 
+-->
+<pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+         id="template-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839">
+   <title>eHDSI Functional Status</title>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.12559.11.10.1.3.1.2.14
+Context: *[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]
+Item: (eHDSIFunctionalStatus)
+-->
+
+   <rule fpi="RULC-1"
+         context="*[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]"
+         id="d42e10899-false-d148271e0">
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]) &gt;= 1">(eHDSIFunctionalStatus): element hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']] is mandatory [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]) &lt;= 1">(eHDSIFunctionalStatus): element hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']] appears too often [max 1x].</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.12559.11.10.1.3.1.2.14
+Context: *[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]
+Item: (eHDSIFunctionalStatus)
+-->
+
+   <rule fpi="RULC-1"
+         context="*[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]"
+         id="d42e10910-false-d148288e0">
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="string(@classCode) = ('DOCSECT') or not(@classCode)">(eHDSIFunctionalStatus): The value for classCode SHALL be 'DOCSECT'. Found: "<value-of select="@classCode"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']) &gt;= 1">(eHDSIFunctionalStatus): element hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14'] is mandatory [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']) &lt;= 1">(eHDSIFunctionalStatus): element hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14'] appears too often [max 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.17']) &lt;= 1">(eHDSIFunctionalStatus): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.17'] appears too often [max 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:templateId[@root = '2.16.840.1.113883.10.20.1.5']) &lt;= 1">(eHDSIFunctionalStatus): element hl7:templateId[@root = '2.16.840.1.113883.10.20.1.5'] appears too often [max 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:id) &gt;= 1">(eHDSIFunctionalStatus): element hl7:id is required [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:id) &lt;= 1">(eHDSIFunctionalStatus): element hl7:id appears too often [max 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:code[(@code = '47420-5' and @codeSystem = '2.16.840.1.113883.6.1')]) &gt;= 1">(eHDSIFunctionalStatus): element hl7:code[(@code = '47420-5' and @codeSystem = '2.16.840.1.113883.6.1')] is mandatory [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:code[(@code = '47420-5' and @codeSystem = '2.16.840.1.113883.6.1')]) &lt;= 1">(eHDSIFunctionalStatus): element hl7:code[(@code = '47420-5' and @codeSystem = '2.16.840.1.113883.6.1')] appears too often [max 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:title[not(@nullFlavor)]) &gt;= 1">(eHDSIFunctionalStatus): element hl7:title[not(@nullFlavor)] is mandatory [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:title[not(@nullFlavor)]) &lt;= 1">(eHDSIFunctionalStatus): element hl7:title[not(@nullFlavor)] appears too often [max 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:text[not(@nullFlavor)]) &gt;= 1">(eHDSIFunctionalStatus): element hl7:text[not(@nullFlavor)] is mandatory [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="count(hl7:text[not(@nullFlavor)]) &lt;= 1">(eHDSIFunctionalStatus): element hl7:text[not(@nullFlavor)] appears too often [max 1x].</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.12559.11.10.1.3.1.2.14
+Context: *[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']
+Item: (eHDSIFunctionalStatus)
+-->
+
+   <rule fpi="RULC-1"
+         context="*[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']"
+         id="d42e10914-false-d148357e0">
+      <extends rule="II.EPSOS"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="empty(@xsi:type) or resolve-QName(@xsi:type, .) = QName('urn:hl7-org:v3', 'II')">(eHDSIFunctionalStatus): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="string(@root) = ('1.3.6.1.4.1.12559.11.10.1.3.1.2.14')">(eHDSIFunctionalStatus): The value for root SHALL be '1.3.6.1.4.1.12559.11.10.1.3.1.2.14'. Found: "<value-of select="@root"/>"</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.12559.11.10.1.3.1.2.14
+Context: *[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.17']
+Item: (eHDSIFunctionalStatus)
+-->
+
+   <rule fpi="RULC-1"
+         context="*[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.3.17']"
+         id="d42e10922-false-d148372e0">
+      <extends rule="II.EPSOS"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="empty(@xsi:type) or resolve-QName(@xsi:type, .) = QName('urn:hl7-org:v3', 'II')">(eHDSIFunctionalStatus): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="string(@root) = ('1.3.6.1.4.1.19376.1.5.3.1.3.17')">(eHDSIFunctionalStatus): The value for root SHALL be '1.3.6.1.4.1.19376.1.5.3.1.3.17'. Found: "<value-of select="@root"/>"</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.12559.11.10.1.3.1.2.14
+Context: *[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:templateId[@root = '2.16.840.1.113883.10.20.1.5']
+Item: (eHDSIFunctionalStatus)
+-->
+
+   <rule fpi="RULC-1"
+         context="*[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:templateId[@root = '2.16.840.1.113883.10.20.1.5']"
+         id="d42e10930-false-d148387e0">
+      <extends rule="II.EPSOS"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="empty(@xsi:type) or resolve-QName(@xsi:type, .) = QName('urn:hl7-org:v3', 'II')">(eHDSIFunctionalStatus): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="string(@root) = ('2.16.840.1.113883.10.20.1.5')">(eHDSIFunctionalStatus): The value for root SHALL be '2.16.840.1.113883.10.20.1.5'. Found: "<value-of select="@root"/>"</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.12559.11.10.1.3.1.2.14
+Context: *[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:id
+Item: (eHDSIFunctionalStatus)
+-->
+
+   <rule fpi="RULC-1"
+         context="*[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:id"
+         id="d42e10938-false-d148401e0">
+      <extends rule="II.EPSOS"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="empty(@xsi:type) or resolve-QName(@xsi:type, .) = QName('urn:hl7-org:v3', 'II')">(eHDSIFunctionalStatus): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.12559.11.10.1.3.1.2.14
+Context: *[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:code[(@code = '47420-5' and @codeSystem = '2.16.840.1.113883.6.1')]
+Item: (eHDSIFunctionalStatus)
+-->
+
+   <rule fpi="RULC-1"
+         context="*[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:code[(@code = '47420-5' and @codeSystem = '2.16.840.1.113883.6.1')]"
+         id="d42e10941-false-d148412e0">
+      <extends rule="CE.EPSOS"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="empty(@xsi:type) or resolve-QName(@xsi:type, .) = QName('urn:hl7-org:v3', 'CE')">(eHDSIFunctionalStatus): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CE". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="@nullFlavor or (@code='47420-5' and @codeSystem='2.16.840.1.113883.6.1')">(eHDSIFunctionalStatus): The element value SHALL be one of 'code '47420-5' codeSystem '2.16.840.1.113883.6.1''.</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.12559.11.10.1.3.1.2.14
+Context: *[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:title[not(@nullFlavor)]
+Item: (eHDSIFunctionalStatus)
+-->
+
+   <rule fpi="RULC-1"
+         context="*[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:title[not(@nullFlavor)]"
+         id="d42e10949-false-d148428e0">
+      <extends rule="ST"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="empty(@xsi:type) or resolve-QName(@xsi:type, .) = QName('urn:hl7-org:v3', 'ST')">(eHDSIFunctionalStatus): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ST". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.12559.11.10.1.3.1.2.14
+Context: *[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:text[not(@nullFlavor)]
+Item: (eHDSIFunctionalStatus)
+-->
+
+   <rule fpi="RULC-1"
+         context="*[hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]]/hl7:section[hl7:templateId[@root = '1.3.6.1.4.1.12559.11.10.1.3.1.2.14']]/hl7:text[not(@nullFlavor)]"
+         id="d42e10955-false-d148438e0">
+      <extends rule="SD.TEXT"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20220201T103117/tmp-1.3.6.1.4.1.12559.11.10.1.3.1.2.14-2020-09-02T144839.html"
+              test="empty(@xsi:type) or resolve-QName(@xsi:type, .) = QName('urn:hl7-org:v3', 'SD.TEXT')">(eHDSIFunctionalStatus): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:SD.TEXT". Found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+   </rule>
+</pattern>

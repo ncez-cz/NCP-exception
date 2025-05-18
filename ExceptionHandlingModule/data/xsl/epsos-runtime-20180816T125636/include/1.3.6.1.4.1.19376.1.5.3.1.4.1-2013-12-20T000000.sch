@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Template derived pattern
+===========================================
+ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Name: Severity
+Description: 
+                 The <templateId> elements identifies this <observation> as a severity observation, allowing for validation of the content. As a side effect, readers of the CDA can quickly locate and identify severity observations. The templateId elements shown above must be present.  
+            
+-->
+<pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+         id="template-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000">
+   <title>Severity</title>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Context: *[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]
+Item: (EntrySeverity)
+-->
+
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Context: *[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]
+Item: (EntrySeverity)
+-->
+
+   <rule context="*[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]"
+         id="d19e5439-false-d67976e0">
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="string(@classCode) = ('OBS')">(EntrySeverity): The value for classCode SHALL be 'OBS'. Found: "<value-of select="@classCode"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="string(@moodCode) = ('EVN')">(EntrySeverity): The value for moodCode SHALL be 'EVN'. Found: "<value-of select="@moodCode"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="not(@negationInd) or string(@negationInd)=('true','false')">(EntrySeverity): Attribute @negationInd SHALL be of data type 'bl'  - '<value-of select="@negationInd"/>'</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1']) &gt;= 1">(EntrySeverity): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] is required [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1']) &lt;= 1">(EntrySeverity): element hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] appears too often [max 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']) &gt;= 1">(EntrySeverity): element hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55'] is required [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']) &lt;= 1">(EntrySeverity): element hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55'] appears too often [max 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:code[(@code = 'SEV' and @codeSystem = '2.16.840.1.113883.5.4') or @nullFlavor]) &gt;= 1">(EntrySeverity): element hl7:code[(@code = 'SEV' and @codeSystem = '2.16.840.1.113883.5.4') or @nullFlavor] is required [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:code[(@code = 'SEV' and @codeSystem = '2.16.840.1.113883.5.4') or @nullFlavor]) &lt;= 1">(EntrySeverity): element hl7:code[(@code = 'SEV' and @codeSystem = '2.16.840.1.113883.5.4') or @nullFlavor] appears too often [max 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:text) &gt;= 1">(EntrySeverity): element hl7:text is required [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:text) &lt;= 1">(EntrySeverity): element hl7:text appears too often [max 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:statusCode[@code = 'completed']) &gt;= 1">(EntrySeverity): element hl7:statusCode[@code = 'completed'] is mandatory [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:statusCode[@code = 'completed']) &lt;= 1">(EntrySeverity): element hl7:statusCode[@code = 'completed'] appears too often [max 1x].</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Context: *[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1']
+Item: (EntrySeverity)
+-->
+
+   <rule context="*[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1']"
+         id="d19e5447-false-d68061e0">
+      <extends rule="II.EPSOS"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(EntrySeverity): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="string(@root) = ('1.3.6.1.4.1.19376.1.5.3.1.4.1')">(EntrySeverity): The value for root SHALL be '1.3.6.1.4.1.19376.1.5.3.1.4.1'. Found: "<value-of select="@root"/>"</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Context: *[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']
+Item: (EntrySeverity)
+-->
+
+   <rule context="*[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']"
+         id="d19e5452-false-d68077e0">
+      <extends rule="II.EPSOS"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(EntrySeverity): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="string(@root) = ('2.16.840.1.113883.10.20.1.55')">(EntrySeverity): The value for root SHALL be '2.16.840.1.113883.10.20.1.55'. Found: "<value-of select="@root"/>"</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Context: *[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:id
+Item: (EntrySeverity)
+-->
+
+   <rule context="*[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:id"
+         id="d19e5458-false-d68092e0">
+      <extends rule="II.EPSOS"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="(local-name-from-QName(resolve-QName(@xsi:type,.))='II' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(EntrySeverity): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:II", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Context: *[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:code[(@code = 'SEV' and @codeSystem = '2.16.840.1.113883.5.4') or @nullFlavor]
+Item: (EntrySeverity)
+-->
+
+   <rule context="*[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:code[(@code = 'SEV' and @codeSystem = '2.16.840.1.113883.5.4') or @nullFlavor]"
+         id="d19e5460-false-d68104e0">
+      <extends rule="CD"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(EntrySeverity): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="@nullFlavor or (@code='SEV' and @codeSystem='2.16.840.1.113883.5.4')">(EntrySeverity): The element value SHALL be one of 'code 'SEV' codeSystem '2.16.840.1.113883.5.4''.</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Context: *[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:text
+Item: (EntrySeverity)
+-->
+
+   <rule context="*[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:text"
+         id="d19e5471-false-d68121e0">
+      <extends rule="ED"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="(local-name-from-QName(resolve-QName(@xsi:type,.))='ED' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(EntrySeverity): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:ED", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:reference[not(@nullFlavor)]) &gt;= 1">(EntrySeverity): element hl7:reference[not(@nullFlavor)] is mandatory [min 1x].</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="count(hl7:reference[not(@nullFlavor)]) &lt;= 1">(EntrySeverity): element hl7:reference[not(@nullFlavor)] appears too often [max 1x].</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Context: *[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:text/hl7:reference[not(@nullFlavor)]
+Item: (EntrySeverity)
+-->
+
+   <rule context="*[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:text/hl7:reference[not(@nullFlavor)]"
+         id="d19e5476-false-d68142e0">
+      <extends rule="TEL"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="(local-name-from-QName(resolve-QName(@xsi:type,.))='TEL' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(EntrySeverity): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:TEL", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="@value">(EntrySeverity): attribute @value SHALL be present.</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Context: *[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:statusCode[@code = 'completed']
+Item: (EntrySeverity)
+-->
+
+   <rule context="*[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:statusCode[@code = 'completed']"
+         id="d19e5486-false-d68158e0">
+      <extends rule="CS"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CS' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(EntrySeverity): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CS", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="@nullFlavor or (@code='completed')">(EntrySeverity): The element value SHALL be one of 'code 'completed''.</assert>
+   </rule>
+   <!--
+Template derived rules for ID: 1.3.6.1.4.1.19376.1.5.3.1.4.1
+Context: *[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:value[concat(@code, @codeSystem) = doc('include/voc-1.3.6.1.4.1.12559.11.10.1.3.1.42.13-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]
+Item: (EntrySeverity)
+-->
+
+   <rule context="*[hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]]/hl7:observation[hl7:templateId[@root = '1.3.6.1.4.1.19376.1.5.3.1.4.1'] and hl7:templateId[@root = '2.16.840.1.113883.10.20.1.55']]/hl7:value[concat(@code, @codeSystem) = doc('include/voc-1.3.6.1.4.1.12559.11.10.1.3.1.42.13-DYNAMIC.xml')//valueSet[1]/conceptList/concept/concat(@code, @codeSystem) or @nullFlavor]"
+         id="d19e5497-false-d68178e0">
+      <extends rule="CD.EPSOS"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="(local-name-from-QName(resolve-QName(@xsi:type,.))='CD' and namespace-uri-from-QName(resolve-QName(@xsi:type,.))='urn:hl7-org:v3') or not(@xsi:type)">(EntrySeverity): If an @xsi:type instruction is present it SHALL be valued "{urn:hl7-org:v3}:CD", found "{<value-of select="namespace-uri-from-QName(resolve-QName(@xsi:type,.))"/>}:<value-of select="local-name-from-QName(resolve-QName(@xsi:type,.))"/>"</assert>
+      <let name="theCode" value="@code"/>
+      <let name="theCodeSystem" value="@codeSystem"/>
+      <assert role="error"
+              see="https://art-decor.ehdsi.eu/publication/epSOS/epsos-html-20180816T125636/tmp-1.3.6.1.4.1.19376.1.5.3.1.4.1-2013-12-20T000000.html"
+              test="@nullFlavor or exists(doc('include/voc-1.3.6.1.4.1.12559.11.10.1.3.1.42.13-DYNAMIC.xml')//valueSet[1][conceptList/concept[@code = $theCode][@codeSystem = $theCodeSystem]])">(EntrySeverity): The element value SHALL be one of '1.3.6.1.4.1.12559.11.10.1.3.1.42.13 epSOSSeverity (DYNAMIC)'.</assert>
+   </rule>
+</pattern>

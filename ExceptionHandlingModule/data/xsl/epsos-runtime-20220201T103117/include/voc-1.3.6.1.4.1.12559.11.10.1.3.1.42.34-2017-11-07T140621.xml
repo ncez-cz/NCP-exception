@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.34"
+             name="epSOSAdministrativeGender"
+             displayName="epSOSAdministrativeGender"
+             effectiveDate="2017-11-07T14:06:21"
+             officialReleaseDate="2017-11-07T14:06:21"
+             statusCode="final"
+             versionLabel="201711">
+      <desc language="en-US">epSOSAdministrativeGender</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.1"
+                        identifierName="Administrative Gender"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.1"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.1"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.1"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.1"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="F"
+                  codeSystem="2.16.840.1.113883.5.1"
+                  displayName="Female"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Female" type="fsn">Female</designation>
+                    <desc language="en-US">Female</desc>
+                </concept>
+                <concept code="M"
+                  codeSystem="2.16.840.1.113883.5.1"
+                  displayName="Male"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Male" type="fsn">Male</designation>
+                    <desc language="en-US">Male</desc>
+                </concept>
+                <concept code="UN"
+                  codeSystem="2.16.840.1.113883.5.1"
+                  displayName="Undifferentiated"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Undifferentiated" type="fsn">The gender of a person could not be uniquely defined as male or female, such as hermaphrodite.</designation>
+                    <desc language="en-US">Undifferentiated</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

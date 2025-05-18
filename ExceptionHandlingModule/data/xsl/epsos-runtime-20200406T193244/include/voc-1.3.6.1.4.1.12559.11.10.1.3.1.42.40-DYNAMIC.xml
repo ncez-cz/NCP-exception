@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.40"
+             name="epSOSTelecomAddress"
+             displayName="epSOSTelecomAddress"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="final"
+             versionLabel="201711">
+      <desc language="en-US">epSOSTelecomAddress</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.1119"
+                        identifierName="Address Use"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.1119"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.1119"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.1119"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.1119"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="AS"
+                  codeSystem="2.16.840.1.113883.5.1119"
+                  displayName="answering service"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">answering service</desc>
+                    <designation language="en-GB" displayName="answering service" type="fsn">An automated answering machine used for less urgent cases and if the main purpose of contact is to leave a message or access an automated announcement.</designation>
+                </concept>
+                <concept code="EC"
+                  codeSystem="2.16.840.1.113883.5.1119"
+                  displayName="emergency contact"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">emergency contact</desc>
+                    <designation language="en-GB" displayName="emergency contact" type="fsn">A contact specifically designated to be used for emergencies. This is the first choice in emergencies, independent of any other use codes.</designation>
+                </concept>
+                <concept code="H"
+                  codeSystem="2.16.840.1.113883.5.1119"
+                  displayName="home address"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">home address</desc>
+                    <designation language="en-GB" displayName="home address" type="fsn">A communication address at a home, attempted contacts for business purposes might intrude privacy and chances are one will contact family or other household members instead of the person one wishes to call. Typically used with urgent cases, or if no other contacts are available.</designation>
+                </concept>
+                <concept code="HP"
+                  codeSystem="2.16.840.1.113883.5.1119"
+                  displayName="primary home"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">primary home</desc>
+                    <designation language="en-GB" displayName="primary home" type="fsn">The primary home, to reach a person after business hours.</designation>
+                </concept>
+                <concept code="HV"
+                  codeSystem="2.16.840.1.113883.5.1119"
+                  displayName="vacation home"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">vacation home</desc>
+                    <designation language="en-GB" displayName="vacation home" type="fsn">A vacation home, to reach a person while on vacation.</designation>
+                </concept>
+                <concept code="MC"
+                  codeSystem="2.16.840.1.113883.5.1119"
+                  displayName="mobile contact"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">mobile contact</desc>
+                    <designation language="en-GB" displayName="mobile contact" type="fsn">A telecommunication device that moves and stays with its owner. May have characteristics of all other use codes, suitable for urgent matters, not the first choice for routine business.</designation>
+                </concept>
+                <concept code="PG"
+                  codeSystem="2.16.840.1.113883.5.1119"
+                  displayName="pager"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">pager</desc>
+                    <designation language="en-GB" displayName="pager" type="fsn">A paging device suitable to solicit a callback or to leave a very short message.</designation>
+                </concept>
+                <concept code="WP"
+                  codeSystem="2.16.840.1.113883.5.1119"
+                  displayName="work place"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">work place</desc>
+                    <designation language="en-GB" displayName="work place" type="fsn">An office address. First choice for business related contacts during business hours.</designation>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

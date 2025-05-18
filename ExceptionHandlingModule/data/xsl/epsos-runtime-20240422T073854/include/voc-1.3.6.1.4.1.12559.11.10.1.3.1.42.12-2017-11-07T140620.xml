@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:pharm="urn:hl7-org:pharm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.12"
+             name="epSOSRouteofAdministration"
+             displayName="epSOSRouteofAdministration"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="deprecated"
+             versionLabel="201711">
+      <desc language="en-US">epSOSRouteofAdministration</desc>
+      <sourceCodeSystem id="0.4.0.127.0.16.1.1.2.1"
+                        identifierName="EDQM"
+                        canonicalUri="urn:oid:0.4.0.127.0.16.1.1.2.1"
+                        canonicalUriDSTU2="urn:oid:0.4.0.127.0.16.1.1.2.1"
+                        canonicalUriSTU3="urn:oid:0.4.0.127.0.16.1.1.2.1"
+                        canonicalUriR4="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="20001000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Auricular use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Auricular use" type="fsn">Auricular use</designation>
+                    <desc language="en-US">Auricular use</desc>
+                </concept>
+                <concept code="20002500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Buccal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Buccal use" type="fsn">Buccal use</designation>
+                    <desc language="en-US">Buccal use</desc>
+                </concept>
+                <concept code="20003000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Cutaneous use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cutaneous use" type="fsn">Cutaneous use</designation>
+                    <desc language="en-US">Cutaneous use</desc>
+                </concept>
+                <concept code="20004000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Dental use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Dental use" type="fsn">Dental use</designation>
+                    <desc language="en-US">Dental use</desc>
+                </concept>
+                <concept code="20006000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Endocervical use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Endocervical use" type="fsn">Endocervical use</designation>
+                    <desc language="en-US">Endocervical use</desc>
+                </concept>
+                <concept code="20007000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Endosinusial use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Endosinusial use" type="fsn">Endosinusial use</designation>
+                    <desc language="en-US">Endosinusial use</desc>
+                </concept>
+                <concept code="20008000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Endotracheopulmonary use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Endotracheopulmonary use" type="fsn">Endotracheopulmonary use</designation>
+                    <desc language="en-US">Endotracheopulmonary use</desc>
+                </concept>
+                <concept code="20009000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Epidural use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Epidural use" type="fsn">Epidural use</designation>
+                    <desc language="en-US">Epidural use</desc>
+                </concept>
+                <concept code="20010000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Epilesional use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Epilesional use" type="fsn">Epilesional use</designation>
+                    <desc language="en-US">Epilesional use</desc>
+                </concept>
+                <concept code="20011000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Extraamniotic use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Extraamniotic use" type="fsn">Extraamniotic use</designation>
+                    <desc language="en-US">Extraamniotic use</desc>
+                </concept>
+                <concept code="20011500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Extracorporeal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Extracorporeal use" type="fsn">Extracorporeal use</designation>
+                    <desc language="en-US">Extracorporeal use</desc>
+                </concept>
+                <concept code="20013000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Gastroenteral use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Gastroenteral use" type="fsn">Gastroenteral use</designation>
+                    <desc language="en-US">Gastroenteral use</desc>
+                </concept>
+                <concept code="20013500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Gastric use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Gastric use" type="fsn">Gastric use</designation>
+                    <desc language="en-US">Gastric use</desc>
+                </concept>
+                <concept code="20014000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Gingival use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Gingival use" type="fsn">Gingival use</designation>
+                    <desc language="en-US">Gingival use</desc>
+                </concept>
+                <concept code="20015000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Haemodialysis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Haemodialysis" type="fsn">Haemodialysis</designation>
+                    <desc language="en-US">Haemodialysis</desc>
+                </concept>
+                <concept code="20015500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Implantation"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Implantation" type="fsn">Implantation</designation>
+                    <desc language="en-US">Implantation</desc>
+                </concept>
+                <concept code="20019500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Infiltration"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Infiltration" type="fsn">Infiltration</designation>
+                    <desc language="en-US">Infiltration</desc>
+                </concept>
+                <concept code="20020000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Inhalation use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Inhalation use" type="fsn">Inhalation use</designation>
+                    <desc language="en-US">Inhalation use</desc>
+                </concept>
+                <concept code="20021000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intestinal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intestinal use" type="fsn">Intestinal use</designation>
+                    <desc language="en-US">Intestinal use</desc>
+                </concept>
+                <concept code="20022000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intraamniotic use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraamniotic use" type="fsn">Intraamniotic use</designation>
+                    <desc language="en-US">Intraamniotic use</desc>
+                </concept>
+                <concept code="20023000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intraarterial use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraarterial use" type="fsn">Intraarterial use</designation>
+                    <desc language="en-US">Intraarterial use</desc>
+                </concept>
+                <concept code="20024000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intraarticular use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraarticular use" type="fsn">Intraarticular use</designation>
+                    <desc language="en-US">Intraarticular use</desc>
+                </concept>
+                <concept code="20025000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intrabursal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intrabursal use" type="fsn">Intrabursal use</designation>
+                    <desc language="en-US">Intrabursal use</desc>
+                </concept>
+                <concept code="20025500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intracameral use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intracameral use" type="fsn">Intracameral use</designation>
+                    <desc language="en-US">Intracameral use</desc>
+                </concept>
+                <concept code="20026000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intracardiac use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intracardiac use" type="fsn">Intracardiac use</designation>
+                    <desc language="en-US">Intracardiac use</desc>
+                </concept>
+                <concept code="20026500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intracartilaginous use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intracartilaginous use" type="fsn">Intracartilaginous use</designation>
+                    <desc language="en-US">Intracartilaginous use</desc>
+                </concept>
+                <concept code="20027000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intracavernous use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intracavernous use" type="fsn">Intracavernous use</designation>
+                    <desc language="en-US">Intracavernous use</desc>
+                </concept>
+                <concept code="20027010"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intracerebral use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intracerebral use" type="fsn">Intracerebral use</designation>
+                    <desc language="en-US">Intracerebral use</desc>
+                </concept>
+                <concept code="20028000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intracervical use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intracervical use" type="fsn">Intracervical use</designation>
+                    <desc language="en-US">Intracervical use</desc>
+                </concept>
+                <concept code="20028300"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intracholangiopancreatic use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Intracholangiopancreatic use"
+                         type="fsn">Intracholangiopancreatic use</designation>
+                    <desc language="en-US">Intracholangiopancreatic use</desc>
+                </concept>
+                <concept code="20028500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intracisternal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intracisternal use" type="fsn">Intracisternal use</designation>
+                    <desc language="en-US">Intracisternal use</desc>
+                </concept>
+                <concept code="20029000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intracoronary use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intracoronary use" type="fsn">Intracoronary use</designation>
+                    <desc language="en-US">Intracoronary use</desc>
+                </concept>
+                <concept code="20030000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intradermal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intradermal use" type="fsn">Intradermal use</designation>
+                    <desc language="en-US">Intradermal use</desc>
+                </concept>
+                <concept code="20031000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intradiscal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intradiscal use" type="fsn">Intradiscal use</designation>
+                    <desc language="en-US">Intradiscal use</desc>
+                </concept>
+                <concept code="20031500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intraepidermal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraepidermal use" type="fsn">Intraepidermal use</designation>
+                    <desc language="en-US">Intraepidermal use</desc>
+                </concept>
+                <concept code="20031700"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intraglandular use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraglandular use" type="fsn">Intraglandular use</designation>
+                    <desc language="en-US">Intraglandular use</desc>
+                </concept>
+                <concept code="20032000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intralesional use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intralesional use" type="fsn">Intralesional use</designation>
+                    <desc language="en-US">Intralesional use</desc>
+                </concept>
+                <concept code="20033000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intralymphatic use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intralymphatic use" type="fsn">Intralymphatic use</designation>
+                    <desc language="en-US">Intralymphatic use</desc>
+                </concept>
+                <concept code="20035000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intramuscular use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intramuscular use" type="fsn">Intramuscular use</designation>
+                    <desc language="en-US">Intramuscular use</desc>
+                </concept>
+                <concept code="20036000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intraocular use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraocular use" type="fsn">Intraocular use</designation>
+                    <desc language="en-US">Intraocular use</desc>
+                </concept>
+                <concept code="20036500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intraosseous use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraosseous use" type="fsn">Intraosseous use</designation>
+                    <desc language="en-US">Intraosseous use</desc>
+                </concept>
+                <concept code="20037000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intrapericardial use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intrapericardial use" type="fsn">Intrapericardial use</designation>
+                    <desc language="en-US">Intrapericardial use</desc>
+                </concept>
+                <concept code="20038000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intraperitoneal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraperitoneal use" type="fsn">Intraperitoneal use</designation>
+                    <desc language="en-US">Intraperitoneal use</desc>
+                </concept>
+                <concept code="20039000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intrapleural use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intrapleural use" type="fsn">Intrapleural use</designation>
+                    <desc language="en-US">Intrapleural use</desc>
+                </concept>
+                <concept code="20039200"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intraportal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraportal use" type="fsn">Intraportal use</designation>
+                    <desc language="en-US">Intraportal use</desc>
+                </concept>
+                <concept code="20039500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intraprostatic use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intraprostatic use" type="fsn">Intraprostatic use</designation>
+                    <desc language="en-US">Intraprostatic use</desc>
+                </concept>
+                <concept code="20041000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intrasternal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intrasternal use" type="fsn">Intrasternal use</designation>
+                    <desc language="en-US">Intrasternal use</desc>
+                </concept>
+                <concept code="20042000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intrathecal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intrathecal use" type="fsn">Intrathecal use</designation>
+                    <desc language="en-US">Intrathecal use</desc>
+                </concept>
+                <concept code="20043000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intratumoral use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intratumoral use" type="fsn">Intratumoral use</designation>
+                    <desc language="en-US">Intratumoral use</desc>
+                </concept>
+                <concept code="20044000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intrauterine use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intrauterine use" type="fsn">Intrauterine use</designation>
+                    <desc language="en-US">Intrauterine use</desc>
+                </concept>
+                <concept code="20045000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intravenous use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intravenous use" type="fsn">Intravenous use</designation>
+                    <desc language="en-US">Intravenous use</desc>
+                </concept>
+                <concept code="20046000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intravesical use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intravesical use" type="fsn">Intravesical use</designation>
+                    <desc language="en-US">Intravesical use</desc>
+                </concept>
+                <concept code="20047000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Intravitreal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Intravitreal use" type="fsn">Intravitreal use</designation>
+                    <desc language="en-US">Intravitreal use</desc>
+                </concept>
+                <concept code="20047500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Iontophoresis"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Iontophoresis" type="fsn">Iontophoresis</designation>
+                    <desc language="en-US">Iontophoresis</desc>
+                </concept>
+                <concept code="20048000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Laryngopharyngeal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Laryngopharyngeal use" type="fsn">Laryngopharyngeal use</designation>
+                    <desc language="en-US">Laryngopharyngeal use</desc>
+                </concept>
+                <concept code="20049000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Nasal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Nasal use" type="fsn">Nasal use</designation>
+                    <desc language="en-US">Nasal use</desc>
+                </concept>
+                <concept code="20051000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Ocular use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Ocular use" type="fsn">Ocular use</designation>
+                    <desc language="en-US">Ocular use</desc>
+                </concept>
+                <concept code="20053000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Oral use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Oral use" type="fsn">Oral use</designation>
+                    <desc language="en-US">Oral use</desc>
+                </concept>
+                <concept code="20054000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Oromucosal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Oromucosal use" type="fsn">Oromucosal use</designation>
+                    <desc language="en-US">Oromucosal use</desc>
+                </concept>
+                <concept code="20055000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Oropharyngeal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Oropharyngeal use" type="fsn">Oropharyngeal use</designation>
+                    <desc language="en-US">Oropharyngeal use</desc>
+                </concept>
+                <concept code="20057000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Periarticular use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Periarticular use" type="fsn">Periarticular use</designation>
+                    <desc language="en-US">Periarticular use</desc>
+                </concept>
+                <concept code="20058000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Perineural use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Perineural use" type="fsn">Perineural use</designation>
+                    <desc language="en-US">Perineural use</desc>
+                </concept>
+                <concept code="20059000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Periodontal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Periodontal use" type="fsn">Periodontal use</designation>
+                    <desc language="en-US">Periodontal use</desc>
+                </concept>
+                <concept code="20059300"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Periosseous use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Periosseous use" type="fsn">Periosseous use</designation>
+                    <desc language="en-US">Periosseous use</desc>
+                </concept>
+                <concept code="20059400"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Peritumoral use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Peritumoral use" type="fsn">Peritumoral use</designation>
+                    <desc language="en-US">Peritumoral use</desc>
+                </concept>
+                <concept code="20059500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Posterior juxtascleral use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Posterior juxtascleral use"
+                         type="fsn">Posterior juxtascleral use</designation>
+                    <desc language="en-US">Posterior juxtascleral use</desc>
+                </concept>
+                <concept code="20061000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Rectal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Rectal use" type="fsn">Rectal use</designation>
+                    <desc language="en-US">Rectal use</desc>
+                </concept>
+                <concept code="20061500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Retrobulbar use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Retrobulbar use" type="fsn">Retrobulbar use</designation>
+                    <desc language="en-US">Retrobulbar use</desc>
+                </concept>
+                <concept code="20062000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Route of administration not applicable"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Route of administration not applicable"
+                         type="fsn">Route of administration not applicable</designation>
+                    <desc language="en-US">Route of administration not applicable</desc>
+                </concept>
+                <concept code="20063000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Skin scarification"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Skin scarification" type="fsn">Skin scarification</designation>
+                    <desc language="en-US">Skin scarification</desc>
+                </concept>
+                <concept code="20065000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Subconjunctival use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Subconjunctival use" type="fsn">Subconjunctival use</designation>
+                    <desc language="en-US">Subconjunctival use</desc>
+                </concept>
+                <concept code="20066000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Subcutaneous use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Subcutaneous use" type="fsn">Subcutaneous use</designation>
+                    <desc language="en-US">Subcutaneous use</desc>
+                </concept>
+                <concept code="20067000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Sublingual use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Sublingual use" type="fsn">Sublingual use</designation>
+                    <desc language="en-US">Sublingual use</desc>
+                </concept>
+                <concept code="20067500"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Submucosal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Submucosal use" type="fsn">Submucosal use</designation>
+                    <desc language="en-US">Submucosal use</desc>
+                </concept>
+                <concept code="20070000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Transdermal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Transdermal use" type="fsn">Transdermal use</designation>
+                    <desc language="en-US">Transdermal use</desc>
+                </concept>
+                <concept code="20071000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Urethral use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Urethral use" type="fsn">Urethral use</designation>
+                    <desc language="en-US">Urethral use</desc>
+                </concept>
+                <concept code="20072000"
+                  codeSystem="0.4.0.127.0.16.1.1.2.1"
+                  displayName="Vaginal use"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Vaginal use" type="fsn">Vaginal use</designation>
+                    <desc language="en-US">Vaginal use</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.16"
+             name="epSOSUnits"
+             displayName="epSOSUnits"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="final"
+             versionLabel="201711">
+      <desc language="en-US">epSOSUnits</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.8"
+                        identifierName="Unified Code for Units of Measure"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.8"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.8"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.8"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.8"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="%"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="percent"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">percent</desc>
+                    <designation language="en-GB" displayName="percent" type="fsn">percent</designation>
+                </concept>
+                <concept code="/d"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="per day"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">per day</desc>
+                    <designation language="en-GB" displayName="per day" type="fsn">per day</designation>
+                </concept>
+                <concept code="/g"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="per gram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">per gram</desc>
+                    <designation language="en-GB" displayName="per gram" type="fsn">per gram</designation>
+                </concept>
+                <concept code="/h"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="per hour"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">per hour</desc>
+                    <designation language="en-GB" displayName="per hour" type="fsn">per hour</designation>
+                </concept>
+                <concept code="/kg"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="per kilogram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">per kilogram</desc>
+                    <designation language="en-GB" displayName="per kilogram" type="fsn">per kilogram</designation>
+                </concept>
+                <concept code="/kg{body'wt}"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="per kilogram body weight"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">per kilogram body weight</desc>
+                    <designation language="en-GB" displayName="per kilogram body weight" type="fsn">per kilogram body weight</designation>
+                </concept>
+                <concept code="/min"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="per minute"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">per minute</desc>
+                    <designation language="en-GB" displayName="per minute" type="fsn">per minute</designation>
+                </concept>
+                <concept code="/s"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="per second"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">per second</desc>
+                    <designation language="en-GB" displayName="per second" type="fsn">per second</designation>
+                </concept>
+                <concept code="1"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="unit"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">unit</desc>
+                    <designation language="en-GB" displayName="unit" type="fsn">unit</designation>
+                </concept>
+                <concept code="Cal"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="calorie"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">calorie</desc>
+                    <designation language="en-GB" displayName="calorie" type="fsn">calorie</designation>
+                </concept>
+                <concept code="Cel"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="degree Celsius"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">degree Celsius</desc>
+                    <designation language="en-GB" displayName="degree Celsius" type="fsn">degree Celsius</designation>
+                </concept>
+                <concept code="J"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="joule"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">joule</desc>
+                    <designation language="en-GB" displayName="joule" type="fsn">joule</designation>
+                </concept>
+                <concept code="L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">liter</desc>
+                    <designation language="en-GB" displayName="liter" type="fsn">liter</designation>
+                </concept>
+                <concept code="L/s"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="liter per second"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">liter per second</desc>
+                    <designation language="en-GB" displayName="liter per second" type="fsn">liter per second</designation>
+                </concept>
+                <concept code="[iU]"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="international unit"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">international unit</desc>
+                    <designation language="en-GB" displayName="international unit" type="fsn">international unit</designation>
+                </concept>
+                <concept code="[iU]/g"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="international unit per gram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">international unit per gram</desc>
+                    <designation language="en-GB"
+                         displayName="international unit per gram"
+                         type="fsn">international unit per gram</designation>
+                </concept>
+                <concept code="[iU]/mL"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="international unit per milliliter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">international unit per milliliter</desc>
+                    <designation language="en-GB"
+                         displayName="international unit per milliliter"
+                         type="fsn">international unit per milliliter</designation>
+                </concept>
+                <concept code="a"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="year"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">year</desc>
+                    <designation language="en-GB" displayName="year" type="fsn">year</designation>
+                </concept>
+                <concept code="bar"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="bar"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">bar</desc>
+                    <designation language="en-GB" displayName="bar" type="fsn">bar</designation>
+                </concept>
+                <concept code="cal/d"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="calorie per day"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">calorie per day</desc>
+                    <designation language="en-GB" displayName="calorie per day" type="fsn">calorie per day</designation>
+                </concept>
+                <concept code="cal/g"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="calorie per gram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">calorie per gram</desc>
+                    <designation language="en-GB" displayName="calorie per gram" type="fsn">calorie per gram</designation>
+                </concept>
+                <concept code="cal/h"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="calorie per hour"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">calorie per hour</desc>
+                    <designation language="en-GB" displayName="calorie per hour" type="fsn">calorie per hour</designation>
+                </concept>
+                <concept code="cal/mL"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="calorie per milliliter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">calorie per milliliter</desc>
+                    <designation language="en-GB" displayName="calorie per milliliter" type="fsn">calorie per milliliter</designation>
+                </concept>
+                <concept code="cm"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="centimeter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">centimeter</desc>
+                    <designation language="en-GB" displayName="centimeter" type="fsn">centimeter</designation>
+                </concept>
+                <concept code="cm2"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="square centimeter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">square centimeter</desc>
+                    <designation language="en-GB" displayName="square centimeter" type="fsn">square centimeter</designation>
+                </concept>
+                <concept code="cm3"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="cubic centimeter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">cubic centimeter</desc>
+                    <designation language="en-GB" displayName="cubic centimeter" type="fsn">cubic centimeter</designation>
+                </concept>
+                <concept code="d"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="day"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">day</desc>
+                    <designation language="en-GB" displayName="day" type="fsn">day</designation>
+                </concept>
+                <concept code="g"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="gram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">gram</desc>
+                    <designation language="en-GB" displayName="gram" type="fsn">gram</designation>
+                </concept>
+                <concept code="g/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="gram per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">gram per liter</desc>
+                    <designation language="en-GB" displayName="gram per liter" type="fsn">gram per liter</designation>
+                </concept>
+                <concept code="g/kg"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="gram per kilogram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">gram per kilogram</desc>
+                    <designation language="en-GB" displayName="gram per kilogram" type="fsn">gram per kilogram</designation>
+                </concept>
+                <concept code="g/mL"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="gram per milliliter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">gram per milliliter</desc>
+                    <designation language="en-GB" displayName="gram per milliliter" type="fsn">gram per milliliter</designation>
+                </concept>
+                <concept code="h"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="hour"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">hour</desc>
+                    <designation language="en-GB" displayName="hour" type="fsn">hour</designation>
+                </concept>
+                <concept code="kJ"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilojoule"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilojoule</desc>
+                    <designation language="en-GB" displayName="kilojoule" type="fsn">kilojoule</designation>
+                </concept>
+                <concept code="kPa"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilopascal"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilopascal</desc>
+                    <designation language="en-GB" displayName="kilopascal" type="fsn">kilopascal</designation>
+                </concept>
+                <concept code="k[iU]"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilointernational unit"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilointernational unit</desc>
+                    <designation language="en-GB" displayName="kilointernational unit" type="fsn">kilointernational unit</designation>
+                </concept>
+                <concept code="k[iU]/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilointernational unit per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilointernational unit per liter</desc>
+                    <designation language="en-GB"
+                         displayName="kilointernational unit per liter"
+                         type="fsn">kilointernational unit per liter</designation>
+                </concept>
+                <concept code="kat"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="katal"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">katal</desc>
+                    <designation language="en-GB" displayName="katal" type="fsn">katal</designation>
+                </concept>
+                <concept code="kcal"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilocalorie"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilocalorie</desc>
+                    <designation language="en-GB" displayName="kilocalorie" type="fsn">kilocalorie</designation>
+                </concept>
+                <concept code="kcal/d"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilocalorie per day"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilocalorie per day</desc>
+                    <designation language="en-GB" displayName="kilocalorie per day" type="fsn">kilocalorie per day</designation>
+                </concept>
+                <concept code="kcal/g"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilocalorie per gram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilocalorie per gram</desc>
+                    <designation language="en-GB" displayName="kilocalorie per gram" type="fsn">kilocalorie per gram</designation>
+                </concept>
+                <concept code="kcal/h"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilocalorie per hour"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilocalorie per hour</desc>
+                    <designation language="en-GB" displayName="kilocalorie per hour" type="fsn">kilocalorie per hour</designation>
+                </concept>
+                <concept code="kcal/mL"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilocalorie per milliliter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilocalorie per milliliter</desc>
+                    <designation language="en-GB"
+                         displayName="kilocalorie per milliliter"
+                         type="fsn">kilocalorie per milliliter</designation>
+                </concept>
+                <concept code="kg"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilogram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilogram</desc>
+                    <designation language="en-GB" displayName="kilogram" type="fsn">kilogram</designation>
+                </concept>
+                <concept code="kg/m2"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilogram per square meter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilogram per square meter</desc>
+                    <designation language="en-GB" displayName="kilogram per square meter" type="fsn">kilogram per square meter</designation>
+                </concept>
+                <concept code="kg/m3"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="kilogram per cubic meter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">kilogram per cubic meter</desc>
+                    <designation language="en-GB" displayName="kilogram per cubic meter" type="fsn">kilogram per cubic meter</designation>
+                </concept>
+                <concept code="m"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="meter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">meter</desc>
+                    <designation language="en-GB" displayName="meter" type="fsn">meter</designation>
+                </concept>
+                <concept code="m2"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="square meter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">square meter</desc>
+                    <designation language="en-GB" displayName="square meter" type="fsn">square meter</designation>
+                </concept>
+                <concept code="mL"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="milliliter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">milliliter</desc>
+                    <designation language="en-GB" displayName="milliliter" type="fsn">milliliter</designation>
+                </concept>
+                <concept code="mL/s"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="milliliter per second"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">milliliter per second</desc>
+                    <designation language="en-GB" displayName="milliliter per second" type="fsn">milliliter per second</designation>
+                </concept>
+                <concept code="m[iU]"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="milli-international unit"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">milli-international unit</desc>
+                    <designation language="en-GB" displayName="milli-international unit" type="fsn">milli-international unit</designation>
+                </concept>
+                <concept code="m[iU]/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="milli-international unit per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">milli-international unit per liter</desc>
+                    <designation language="en-GB"
+                         displayName="milli-international unit per liter"
+                         type="fsn">milli-international unit per liter</designation>
+                </concept>
+                <concept code="mbar"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="millibar"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">millibar</desc>
+                    <designation language="en-GB" displayName="millibar" type="fsn">millibar</designation>
+                </concept>
+                <concept code="mg"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="milligram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">milligram</desc>
+                    <designation language="en-GB" displayName="milligram" type="fsn">milligram</designation>
+                </concept>
+                <concept code="mg/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="milligram per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">milligram per liter</desc>
+                    <designation language="en-GB" displayName="milligram per liter" type="fsn">milligram per liter</designation>
+                </concept>
+                <concept code="min"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="minute"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">minute</desc>
+                    <designation language="en-GB" displayName="minute" type="fsn">minute</designation>
+                </concept>
+                <concept code="mm"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="millimeter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">millimeter</desc>
+                    <designation language="en-GB" displayName="millimeter" type="fsn">millimeter</designation>
+                </concept>
+                <concept code="mm2"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="square millimeter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">square millimeter</desc>
+                    <designation language="en-GB" displayName="square millimeter" type="fsn">square millimeter</designation>
+                </concept>
+                <concept code="mm[Hg]"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="millimeter of mercury"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">millimeter of mercury</desc>
+                    <designation language="en-GB" displayName="millimeter of mercury" type="fsn">millimeter of mercury</designation>
+                </concept>
+                <concept code="mmol"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="millimole"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">millimole</desc>
+                    <designation language="en-GB" displayName="millimole" type="fsn">millimole</designation>
+                </concept>
+                <concept code="mmol/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="millimole per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">millimole per liter</desc>
+                    <designation language="en-GB" displayName="millimole per liter" type="fsn">millimole per liter</designation>
+                </concept>
+                <concept code="mo"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="month"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">month</desc>
+                    <designation language="en-GB" displayName="month" type="fsn">month</designation>
+                </concept>
+                <concept code="mol/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="mole per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">mole per liter</desc>
+                    <designation language="en-GB" displayName="mole per liter" type="fsn">mole per liter</designation>
+                </concept>
+                <concept code="ng"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="nanogram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">nanogram</desc>
+                    <designation language="en-GB" displayName="nanogram" type="fsn">nanogram</designation>
+                </concept>
+                <concept code="ng/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="nanogram per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">nanogram per liter</desc>
+                    <designation language="en-GB" displayName="nanogram per liter" type="fsn">nanogram per liter</designation>
+                </concept>
+                <concept code="nmol/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="nanomole per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">nanomole per liter</desc>
+                    <designation language="en-GB" displayName="nanomole per liter" type="fsn">nanomole per liter</designation>
+                </concept>
+                <concept code="pH"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="pH"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">pH</desc>
+                    <designation language="en-GB" displayName="pH" type="fsn">pH</designation>
+                </concept>
+                <concept code="s"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="second"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">second</desc>
+                    <designation language="en-GB" displayName="second" type="fsn">second</designation>
+                </concept>
+                <concept code="wk"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="week"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">week</desc>
+                    <designation language="en-GB" displayName="week" type="fsn">week</designation>
+                </concept>
+                <concept code="µL"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="microliter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">microliter</desc>
+                    <designation language="en-GB" displayName="microliter" type="fsn">microliter</designation>
+                </concept>
+                <concept code="µg"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="microgram"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">microgram</desc>
+                    <designation language="en-GB" displayName="microgram" type="fsn">microgram</designation>
+                </concept>
+                <concept code="µg/(kg.min)"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="microgram per kilogram and minute"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">microgram per kilogram and minute</desc>
+                    <designation language="en-GB"
+                         displayName="microgram per kilogram and minute"
+                         type="fsn">microgram per kilogram and minute</designation>
+                </concept>
+                <concept code="µg/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="microgram per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">microgram per liter</desc>
+                    <designation language="en-GB" displayName="microgram per liter" type="fsn">microgram per liter</designation>
+                </concept>
+                <concept code="µkat"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="microkatal"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">microkatal</desc>
+                    <designation language="en-GB" displayName="microkatal" type="fsn">microkatal</designation>
+                </concept>
+                <concept code="µkat/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="microkatal per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">microkatal per liter</desc>
+                    <designation language="en-GB" displayName="microkatal per liter" type="fsn">microkatal per liter</designation>
+                </concept>
+                <concept code="µkat/mL"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="microkatal per milliliter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">microkatal per milliliter</desc>
+                    <designation language="en-GB" displayName="microkatal per milliliter" type="fsn">microkatal per milliliter</designation>
+                </concept>
+                <concept code="µmol"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="micromole"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">micromole</desc>
+                    <designation language="en-GB" displayName="micromole" type="fsn">micromole</designation>
+                </concept>
+                <concept code="µmol/L"
+                  codeSystem="2.16.840.1.113883.6.8"
+                  displayName="micromole per liter"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">micromole per liter</desc>
+                    <designation language="en-GB" displayName="micromole per liter" type="fsn">micromole per liter</designation>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

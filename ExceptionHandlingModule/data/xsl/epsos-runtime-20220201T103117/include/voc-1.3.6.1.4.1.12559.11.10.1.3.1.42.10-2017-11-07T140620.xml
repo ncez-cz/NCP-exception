@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.10"
+             name="epSOSProcedures"
+             displayName="epSOSProcedures"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="final"
+             versionLabel="201711">
+      <desc language="en-US">epSOSProcedures</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.6.96"
+                        identifierName="SNOMED Clinical Terms"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.96"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.96"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <copyright language="en-US">This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.</copyright>
+      <conceptList>
+                <concept code="10458001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Evacuation of intracerebral haematoma"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Evacuation of intracerebral haematoma"
+                         type="fsn">Evacuation of intracerebral haematoma</designation>
+                    <desc language="en-US">Evacuation of intracerebral haematoma</desc>
+                </concept>
+                <concept code="107907001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operative procedure on digestive system"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Operative procedure on digestive system"
+                         type="fsn">Operative procedure on digestive system</designation>
+                    <desc language="en-US">Operative procedure on digestive system</desc>
+                </concept>
+                <concept code="108021004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operative procedure on male genitourinary system"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Operative procedure on male genitourinary system"
+                         type="fsn">Operative procedure on male genitourinary system</designation>
+                    <desc language="en-US">Operative procedure on male genitourinary system</desc>
+                </concept>
+                <concept code="10847001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Bronchoscopy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Bronchoscopy" type="fsn">Bronchoscopy</designation>
+                    <desc language="en-US">Bronchoscopy</desc>
+                </concept>
+                <concept code="112698002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on joint"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on joint" type="fsn">Operation on joint</designation>
+                    <desc language="en-US">Operation on joint</desc>
+                </concept>
+                <concept code="112727005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Revision of hip replacement"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Revision of hip replacement"
+                         type="fsn">Revision of hip replacement</designation>
+                    <desc language="en-US">Revision of hip replacement</desc>
+                </concept>
+                <concept code="112802009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cardiovascular surgical procedure"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Cardiovascular surgical procedure"
+                         type="fsn">Cardiovascular surgical procedure</designation>
+                    <desc language="en-US">Cardiovascular surgical procedure</desc>
+                </concept>
+                <concept code="112828007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Femoral-popliteal artery bypass graft"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Femoral-popliteal artery bypass graft"
+                         type="fsn">Femoral-popliteal artery bypass graft</designation>
+                    <desc language="en-US">Femoral-popliteal artery bypass graft</desc>
+                </concept>
+                <concept code="11466000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Caesarean section"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Caesarean section" type="fsn">Caesarean section</designation>
+                    <desc language="en-US">Caesarean section</desc>
+                </concept>
+                <concept code="118675001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Procedure on female genital system"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Procedure on female genital system"
+                         type="fsn">Procedure on female genital system</designation>
+                    <desc language="en-US">Procedure on female genital system</desc>
+                </concept>
+                <concept code="118683007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Procedure on ear and related structures"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Procedure on ear and related structures"
+                         type="fsn">Procedure on ear and related structures</designation>
+                    <desc language="en-US">Procedure on ear and related structures</desc>
+                </concept>
+                <concept code="118716003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Procedure on foot"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Procedure on foot" type="fsn">Procedure on foot</designation>
+                    <desc language="en-US">Procedure on foot</desc>
+                </concept>
+                <concept code="118795000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Procedure on pleura"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Procedure on pleura" type="fsn">Procedure on pleura</designation>
+                    <desc language="en-US">Procedure on pleura</desc>
+                </concept>
+                <concept code="118804001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Procedure on blood vessel"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Procedure on blood vessel" type="fsn">Procedure on blood vessel</designation>
+                    <desc language="en-US">Procedure on blood vessel</desc>
+                </concept>
+                <concept code="118831003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Procedure on intestine"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Procedure on intestine" type="fsn">Procedure on intestine</designation>
+                    <desc language="en-US">Procedure on intestine</desc>
+                </concept>
+                <concept code="118949002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Procedure on extremity"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Procedure on extremity" type="fsn">Procedure on extremity</designation>
+                    <desc language="en-US">Procedure on extremity</desc>
+                </concept>
+                <concept code="118950002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Procedure on head AND/OR neck"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Procedure on head AND/OR neck"
+                         type="fsn">Procedure on head AND/OR neck</designation>
+                    <desc language="en-US">Procedure on head AND/OR neck</desc>
+                </concept>
+                <concept code="118955007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Implantation to cardiovascular system"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Implantation to cardiovascular system"
+                         type="fsn">Implantation to cardiovascular system</designation>
+                    <desc language="en-US">Implantation to cardiovascular system</desc>
+                </concept>
+                <concept code="119922005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Biliary tract endoscopy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Biliary tract endoscopy" type="fsn">Biliary tract endoscopy</designation>
+                    <desc language="en-US">Biliary tract endoscopy</desc>
+                </concept>
+                <concept code="122470005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Reduction of closed fracture"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Reduction of closed fracture"
+                         type="fsn">Reduction of closed fracture</designation>
+                    <desc language="en-US">Reduction of closed fracture</desc>
+                </concept>
+                <concept code="122471009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Reduction of open fracture"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Reduction of open fracture"
+                         type="fsn">Reduction of open fracture</designation>
+                    <desc language="en-US">Reduction of open fracture</desc>
+                </concept>
+                <concept code="12658000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on female genital organs"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Operation on female genital organs"
+                         type="fsn">Operation on female genital organs</designation>
+                    <desc language="en-US">Operation on female genital organs</desc>
+                </concept>
+                <concept code="133864008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Lithotripsy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Lithotripsy" type="fsn">Lithotripsy</designation>
+                    <desc language="en-US">Lithotripsy</desc>
+                </concept>
+                <concept code="13619001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Thyroidectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Thyroidectomy" type="fsn">Thyroidectomy</designation>
+                    <desc language="en-US">Thyroidectomy</desc>
+                </concept>
+                <concept code="15018006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Laparoscopic repair of inguinal hernia"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Laparoscopic repair of inguinal hernia"
+                         type="fsn">Laparoscopic repair of inguinal hernia</designation>
+                    <desc language="en-US">Laparoscopic repair of inguinal hernia</desc>
+                </concept>
+                <concept code="16545005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on nervous system"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Operation on nervous system"
+                         type="fsn">Operation on nervous system</designation>
+                    <desc language="en-US">Operation on nervous system</desc>
+                </concept>
+                <concept code="173171007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Lobectomy of lung"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Lobectomy of lung" type="fsn">Lobectomy of lung</designation>
+                    <desc language="en-US">Lobectomy of lung</desc>
+                </concept>
+                <concept code="173422009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Tonsillectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Tonsillectomy" type="fsn">Tonsillectomy</designation>
+                    <desc language="en-US">Tonsillectomy</desc>
+                </concept>
+                <concept code="19063003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Arthroplasty of knee"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Arthroplasty of knee" type="fsn">Arthroplasty of knee</designation>
+                    <desc language="en-US">Arthroplasty of knee</desc>
+                </concept>
+                <concept code="21371007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on abdominal region"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Operation on abdominal region"
+                         type="fsn">Operation on abdominal region</designation>
+                    <desc language="en-US">Operation on abdominal region</desc>
+                </concept>
+                <concept code="232632009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Wedge excision of lung"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Wedge excision of lung" type="fsn">Wedge excision of lung</designation>
+                    <desc language="en-US">Wedge excision of lung</desc>
+                </concept>
+                <concept code="232717009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Coronary artery bypass graft"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Coronary artery bypass graft"
+                         type="fsn">Coronary artery bypass graft</designation>
+                    <desc language="en-US">Coronary artery bypass graft</desc>
+                </concept>
+                <concept code="234336002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Haemopoietic stem cell transplant"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Haemopoietic stem cell transplant"
+                         type="fsn">Haemopoietic stem cell transplant</designation>
+                    <desc language="en-US">Haemopoietic stem cell transplant</desc>
+                </concept>
+                <concept code="236886002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Hysterectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Hysterectomy" type="fsn">Hysterectomy</designation>
+                    <desc language="en-US">Hysterectomy</desc>
+                </concept>
+                <concept code="236887006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Laparoscopic hysterectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Laparoscopic hysterectomy" type="fsn">Laparoscopic hysterectomy</designation>
+                    <desc language="en-US">Laparoscopic hysterectomy</desc>
+                </concept>
+                <concept code="23968004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Colectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Colectomy" type="fsn">Colectomy</designation>
+                    <desc language="en-US">Colectomy</desc>
+                </concept>
+                <concept code="250980009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cardioversion"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cardioversion" type="fsn">Cardioversion</designation>
+                    <desc language="en-US">Cardioversion</desc>
+                </concept>
+                <concept code="257822003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Extracapsular extraction"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Extracapsular extraction" type="fsn">Extracapsular extraction</designation>
+                    <desc language="en-US">Extracapsular extraction</desc>
+                </concept>
+                <concept code="26476002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on bronchus"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on bronchus" type="fsn">Operation on bronchus</designation>
+                    <desc language="en-US">Operation on bronchus</desc>
+                </concept>
+                <concept code="265703000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Jaw and temporomandibular joint operations"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Jaw and temporomandibular joint operations"
+                         type="fsn">Jaw and temporomandibular joint operations</designation>
+                    <desc language="en-US">Jaw and temporomandibular joint operations</desc>
+                </concept>
+                <concept code="287310004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Lung tumour excision"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Lung tumour excision" type="fsn">Lung tumour excision</designation>
+                    <desc language="en-US">Lung tumour excision</desc>
+                </concept>
+                <concept code="302343007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Insertion of prosthesis for breast"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Insertion of prosthesis for breast"
+                         type="fsn">Insertion of prosthesis for breast</designation>
+                    <desc language="en-US">Insertion of prosthesis for breast</desc>
+                </concept>
+                <concept code="30904006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Vascular surgery procedure"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Vascular surgery procedure"
+                         type="fsn">Vascular surgery procedure</designation>
+                    <desc language="en-US">Vascular surgery procedure</desc>
+                </concept>
+                <concept code="312775003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Debridement of ulcer"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Debridement of ulcer" type="fsn">Debridement of ulcer</designation>
+                    <desc language="en-US">Debridement of ulcer</desc>
+                </concept>
+                <concept code="3418002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Chondrectomy of spine"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Chondrectomy of spine" type="fsn">Chondrectomy of spine</designation>
+                    <desc language="en-US">Chondrectomy of spine</desc>
+                </concept>
+                <concept code="34969007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on retroperitoneum"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Operation on retroperitoneum"
+                         type="fsn">Operation on retroperitoneum</designation>
+                    <desc language="en-US">Operation on retroperitoneum</desc>
+                </concept>
+                <concept code="359612003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Implantation of cochlear prosthetic device"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Implantation of cochlear prosthetic device"
+                         type="fsn">Implantation of cochlear prosthetic device</designation>
+                    <desc language="en-US">Implantation of cochlear prosthetic device</desc>
+                </concept>
+                <concept code="359623004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Total lobectomy of lung"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Total lobectomy of lung" type="fsn">Total lobectomy of lung</designation>
+                    <desc language="en-US">Total lobectomy of lung</desc>
+                </concept>
+                <concept code="36228007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Ophthalmic examination and evaluation"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Ophthalmic examination and evaluation"
+                         type="fsn">Ophthalmic examination and evaluation</designation>
+                    <desc language="en-US">Ophthalmic examination and evaluation</desc>
+                </concept>
+                <concept code="363187007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Limb operation"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Limb operation" type="fsn">Limb operation</designation>
+                    <desc language="en-US">Limb operation</desc>
+                </concept>
+                <concept code="370611004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Excision of malignant neoplasm"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Excision of malignant neoplasm"
+                         type="fsn">Excision of malignant neoplasm</designation>
+                    <desc language="en-US">Excision of malignant neoplasm</desc>
+                </concept>
+                <concept code="373353005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Surgical procedure on eye proper"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Surgical procedure on eye proper"
+                         type="fsn">Surgical procedure on eye proper</designation>
+                    <desc language="en-US">Surgical procedure on eye proper</desc>
+                </concept>
+                <concept code="37508003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on neck"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on neck" type="fsn">Operation on neck</designation>
+                    <desc language="en-US">Operation on neck</desc>
+                </concept>
+                <concept code="38102005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Cholecystectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Cholecystectomy" type="fsn">Cholecystectomy</designation>
+                    <desc language="en-US">Cholecystectomy</desc>
+                </concept>
+                <concept code="384723003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Radical mastectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Radical mastectomy" type="fsn">Radical mastectomy</designation>
+                    <desc language="en-US">Radical mastectomy</desc>
+                </concept>
+                <concept code="385487005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Surgical procedure on thorax"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Surgical procedure on thorax"
+                         type="fsn">Surgical procedure on thorax</designation>
+                    <desc language="en-US">Surgical procedure on thorax</desc>
+                </concept>
+                <concept code="385488000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Surgical procedure on chest wall"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Surgical procedure on chest wall"
+                         type="fsn">Surgical procedure on chest wall</designation>
+                    <desc language="en-US">Surgical procedure on chest wall</desc>
+                </concept>
+                <concept code="386638009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Obstetric operation"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Obstetric operation" type="fsn">Obstetric operation</designation>
+                    <desc language="en-US">Obstetric operation</desc>
+                </concept>
+                <concept code="386765006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on mediastinum"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on mediastinum" type="fsn">Operation on mediastinum</designation>
+                    <desc language="en-US">Operation on mediastinum</desc>
+                </concept>
+                <concept code="387714009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on lung"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on lung" type="fsn">Operation on lung</designation>
+                    <desc language="en-US">Operation on lung</desc>
+                </concept>
+                <concept code="392011001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on skin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on skin" type="fsn">Operation on skin</designation>
+                    <desc language="en-US">Operation on skin</desc>
+                </concept>
+                <concept code="392048005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on urinary system"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Operation on urinary system"
+                         type="fsn">Operation on urinary system</designation>
+                    <desc language="en-US">Operation on urinary system</desc>
+                </concept>
+                <concept code="392090004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on breast"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on breast" type="fsn">Operation on breast</designation>
+                    <desc language="en-US">Operation on breast</desc>
+                </concept>
+                <concept code="392236004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operative procedure on spinal structure"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Operative procedure on spinal structure"
+                         type="fsn">Operative procedure on spinal structure</designation>
+                    <desc language="en-US">Operative procedure on spinal structure</desc>
+                </concept>
+                <concept code="397956004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Prosthetic arthroplasty of the hip"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Prosthetic arthroplasty of the hip"
+                         type="fsn">Prosthetic arthroplasty of the hip</designation>
+                    <desc language="en-US">Prosthetic arthroplasty of the hip</desc>
+                </concept>
+                <concept code="405525004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Repair of aneurysm of abdominal aorta"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Repair of aneurysm of abdominal aorta"
+                         type="fsn">Repair of aneurysm of abdominal aorta</designation>
+                    <desc language="en-US">Repair of aneurysm of abdominal aorta</desc>
+                </concept>
+                <concept code="423827005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Endoscopy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Endoscopy" type="fsn">Endoscopy</designation>
+                    <desc language="en-US">Endoscopy</desc>
+                </concept>
+                <concept code="426153007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Insertion of artificial airway"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Insertion of artificial airway"
+                         type="fsn">Insertion of artificial airway</designation>
+                    <desc language="en-US">Insertion of artificial airway</desc>
+                </concept>
+                <concept code="429639007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Percutaneous transluminal balloon angioplasty with insertion of stent into coronary artery"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Percutaneous transluminal balloon angioplasty with insertion of stent into coronary artery"
+                         type="fsn">Percutaneous transluminal balloon angioplasty with insertion of stent into coronary artery</designation>
+                    <desc language="en-US">Percutaneous transluminal balloon angioplasty with insertion of stent into coronary artery</desc>
+                </concept>
+                <concept code="441612006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Repair of infrarenal abdominal aortic aneurysm with insertion of endovascular stent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Repair of infrarenal abdominal aortic aneurysm with insertion of endovascular stent"
+                         type="fsn">Repair of infrarenal abdominal aortic aneurysm with insertion of endovascular stent</designation>
+                    <desc language="en-US">Repair of infrarenal abdominal aortic aneurysm with insertion of endovascular stent</desc>
+                </concept>
+                <concept code="44558001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Repair of inguinal hernia"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Repair of inguinal hernia" type="fsn">Repair of inguinal hernia</designation>
+                    <desc language="en-US">Repair of inguinal hernia</desc>
+                </concept>
+                <concept code="45595009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Laparoscopic cholecystectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Laparoscopic cholecystectomy"
+                         type="fsn">Laparoscopic cholecystectomy</designation>
+                    <desc language="en-US">Laparoscopic cholecystectomy</desc>
+                </concept>
+                <concept code="46116005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Excision of malignant tumour of breast"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Excision of malignant tumour of breast"
+                         type="fsn">Excision of malignant tumour of breast</designation>
+                    <desc language="en-US">Excision of malignant tumour of breast</desc>
+                </concept>
+                <concept code="47534009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Decompression of median nerve"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Decompression of median nerve"
+                         type="fsn">Decompression of median nerve</designation>
+                    <desc language="en-US">Decompression of median nerve</desc>
+                </concept>
+                <concept code="4770005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Colporrhaphy for repair of urethrocele"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Colporrhaphy for repair of urethrocele"
+                         type="fsn">Colporrhaphy for repair of urethrocele</designation>
+                    <desc language="en-US">Colporrhaphy for repair of urethrocele</desc>
+                </concept>
+                <concept code="49509003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on lymphatic structure"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Operation on lymphatic structure"
+                         type="fsn">Operation on lymphatic structure</designation>
+                    <desc language="en-US">Operation on lymphatic structure</desc>
+                </concept>
+                <concept code="53266006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on diaphragm"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on diaphragm" type="fsn">Operation on diaphragm</designation>
+                    <desc language="en-US">Operation on diaphragm</desc>
+                </concept>
+                <concept code="54885007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Extraction of cataract"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Extraction of cataract" type="fsn">Extraction of cataract</designation>
+                    <desc language="en-US">Extraction of cataract</desc>
+                </concept>
+                <concept code="56361007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Excision of soft tissue"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Excision of soft tissue" type="fsn">Excision of soft tissue</designation>
+                    <desc language="en-US">Excision of soft tissue</desc>
+                </concept>
+                <concept code="57168000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on bone"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on bone" type="fsn">Operation on bone</designation>
+                    <desc language="en-US">Operation on bone</desc>
+                </concept>
+                <concept code="59300005"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on spleen"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on spleen" type="fsn">Operation on spleen</designation>
+                    <desc language="en-US">Operation on spleen</desc>
+                </concept>
+                <concept code="59712006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Evacuation of subdural haematoma"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Evacuation of subdural haematoma"
+                         type="fsn">Evacuation of subdural haematoma</designation>
+                    <desc language="en-US">Evacuation of subdural haematoma</desc>
+                </concept>
+                <concept code="6025007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Laparoscopic appendicectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Laparoscopic appendicectomy"
+                         type="fsn">Laparoscopic appendicectomy</designation>
+                    <desc language="en-US">Laparoscopic appendicectomy</desc>
+                </concept>
+                <concept code="63016009"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Complete cystectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Complete cystectomy" type="fsn">Complete cystectomy</designation>
+                    <desc language="en-US">Complete cystectomy</desc>
+                </concept>
+                <concept code="64253000"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Implantation of heart assist system"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Implantation of heart assist system"
+                         type="fsn">Implantation of heart assist system</designation>
+                    <desc language="en-US">Implantation of heart assist system</desc>
+                </concept>
+                <concept code="64368001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Partial mastectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Partial mastectomy" type="fsn">Partial mastectomy</designation>
+                    <desc language="en-US">Partial mastectomy</desc>
+                </concept>
+                <concept code="66951008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Carotid endarterectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Carotid endarterectomy" type="fsn">Carotid endarterectomy</designation>
+                    <desc language="en-US">Carotid endarterectomy</desc>
+                </concept>
+                <concept code="70183006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Subcutaneous mastectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Subcutaneous mastectomy" type="fsn">Subcutaneous mastectomy</designation>
+                    <desc language="en-US">Subcutaneous mastectomy</desc>
+                </concept>
+                <concept code="70536003"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Transplant of kidney"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Transplant of kidney" type="fsn">Transplant of kidney</designation>
+                    <desc language="en-US">Transplant of kidney</desc>
+                </concept>
+                <concept code="73761001"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Colonoscopy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Colonoscopy" type="fsn">Colonoscopy</designation>
+                    <desc language="en-US">Colonoscopy</desc>
+                </concept>
+                <concept code="76810006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Diagnostic dilation and curettage of uterus"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Diagnostic dilation and curettage of uterus"
+                         type="fsn">Diagnostic dilation and curettage of uterus</designation>
+                    <desc language="en-US">Diagnostic dilation and curettage of uterus</desc>
+                </concept>
+                <concept code="78418002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on heart and pericardium"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Operation on heart and pericardium"
+                         type="fsn">Operation on heart and pericardium</designation>
+                    <desc language="en-US">Operation on heart and pericardium</desc>
+                </concept>
+                <concept code="80146002"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Appendicectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Appendicectomy" type="fsn">Appendicectomy</designation>
+                    <desc language="en-US">Appendicectomy</desc>
+                </concept>
+                <concept code="84877006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Arthroscopy of knee with meniscus repair"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Arthroscopy of knee with meniscus repair"
+                         type="fsn">Arthroscopy of knee with meniscus repair</designation>
+                    <desc language="en-US">Arthroscopy of knee with meniscus repair</desc>
+                </concept>
+                <concept code="85548006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Episiotomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Episiotomy" type="fsn">Episiotomy</designation>
+                    <desc language="en-US">Episiotomy</desc>
+                </concept>
+                <concept code="85921004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Puncture procedure"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Puncture procedure" type="fsn">Puncture procedure</designation>
+                    <desc language="en-US">Puncture procedure</desc>
+                </concept>
+                <concept code="86273004"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Biopsy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Biopsy" type="fsn">Biopsy</designation>
+                    <desc language="en-US">Biopsy</desc>
+                </concept>
+                <concept code="86749008"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Stripping and ligation"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Stripping and ligation" type="fsn">Stripping and ligation</designation>
+                    <desc language="en-US">Stripping and ligation</desc>
+                </concept>
+                <concept code="86800006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Operation on trachea"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Operation on trachea" type="fsn">Operation on trachea</designation>
+                    <desc language="en-US">Operation on trachea</desc>
+                </concept>
+                <concept code="90199006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Transurethral prostatectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Transurethral prostatectomy"
+                         type="fsn">Transurethral prostatectomy</designation>
+                    <desc language="en-US">Transurethral prostatectomy</desc>
+                </concept>
+                <concept code="90470006"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Prostatectomy"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Prostatectomy" type="fsn">Prostatectomy</designation>
+                    <desc language="en-US">Prostatectomy</desc>
+                </concept>
+                <concept code="9888007"
+                  codeSystem="2.16.840.1.113883.6.96"
+                  displayName="Excision of intracranial lesion"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB"
+                         displayName="Excision of intracranial lesion"
+                         type="fsn">Excision of intracranial lesion</designation>
+                    <desc language="en-US">Excision of intracranial lesion</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

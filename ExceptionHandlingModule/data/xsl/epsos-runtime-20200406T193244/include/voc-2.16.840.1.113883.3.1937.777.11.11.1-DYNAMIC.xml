@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="2.16.840.1.113883.3.1937.777.11.11.1"
+             name="epSOSWHO-ATC"
+             displayName="epSOSWHO-ATC"
+             effectiveDate="2013-06-03T00:00:00"
+             statusCode="draft"
+             versionLabel="July 2009">
+      <sourceCodeSystem id="2.16.840.1.113883.6.73"
+                        identifierName="WHO Anatomical Therapeutic Chemical classification"
+                        canonicalUri="urn:oid:2.16.840.1.113883.6.73"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.6.73"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.6.73"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.6.73"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <completeCodeSystem codeSystem="2.16.840.1.113883.6.73"
+                          codeSystemName="WHO Anatomical Therapeutic Chemical classification"/>
+   </valueSet>
+</valueSets>

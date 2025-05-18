@@ -1,0 +1,2058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.4"
+             name="epSOSCountry"
+             displayName="epSOSCountry"
+             effectiveDate="2017-11-07T14:06:21"
+             officialReleaseDate="2017-11-07T14:06:21"
+             statusCode="final"
+             versionLabel="201711">
+      <desc language="en-US">epSOSCountry</desc>
+      <sourceCodeSystem id="1.0.3166.1"
+                        identifierName="ISO 3166 Part 1 Country Codes"
+                        canonicalUri="urn:oid:1.0.3166.1"
+                        canonicalUriDSTU2="urn:oid:1.0.3166.1"
+                        canonicalUriSTU3="urn:oid:1.0.3166.1"
+                        canonicalUriR4="urn:oid:1.0.3166.1"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="AD"
+                  codeSystem="1.0.3166.1"
+                  displayName="ANDORRA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ANDORRA</desc>
+                    <designation language="en-GB" displayName="ANDORRA" type="fsn">ANDORRA</designation>
+                </concept>
+                <concept code="AE"
+                  codeSystem="1.0.3166.1"
+                  displayName="UNITED ARAB EMIRATES"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">UNITED ARAB EMIRATES</desc>
+                    <designation language="en-GB" displayName="UNITED ARAB EMIRATES" type="fsn">UNITED ARAB EMIRATES</designation>
+                </concept>
+                <concept code="AF"
+                  codeSystem="1.0.3166.1"
+                  displayName="AFGHANISTAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">AFGHANISTAN</desc>
+                    <designation language="en-GB" displayName="AFGHANISTAN" type="fsn">AFGHANISTAN</designation>
+                </concept>
+                <concept code="AG"
+                  codeSystem="1.0.3166.1"
+                  displayName="ANTIGUA AND BARBUDA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ANTIGUA AND BARBUDA</desc>
+                    <designation language="en-GB" displayName="ANTIGUA AND BARBUDA" type="fsn">ANTIGUA AND BARBUDA</designation>
+                </concept>
+                <concept code="AI"
+                  codeSystem="1.0.3166.1"
+                  displayName="ANGUILLA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ANGUILLA</desc>
+                    <designation language="en-GB" displayName="ANGUILLA" type="fsn">ANGUILLA</designation>
+                </concept>
+                <concept code="AL"
+                  codeSystem="1.0.3166.1"
+                  displayName="ALBANIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ALBANIA</desc>
+                    <designation language="en-GB" displayName="ALBANIA" type="fsn">ALBANIA</designation>
+                </concept>
+                <concept code="AM"
+                  codeSystem="1.0.3166.1"
+                  displayName="ARMENIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ARMENIA</desc>
+                    <designation language="en-GB" displayName="ARMENIA" type="fsn">ARMENIA</designation>
+                </concept>
+                <concept code="AO"
+                  codeSystem="1.0.3166.1"
+                  displayName="ANGOLA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ANGOLA</desc>
+                    <designation language="en-GB" displayName="ANGOLA" type="fsn">ANGOLA</designation>
+                </concept>
+                <concept code="AQ"
+                  codeSystem="1.0.3166.1"
+                  displayName="ANTARCTICA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ANTARCTICA</desc>
+                    <designation language="en-GB" displayName="ANTARCTICA" type="fsn">ANTARCTICA</designation>
+                </concept>
+                <concept code="AR"
+                  codeSystem="1.0.3166.1"
+                  displayName="ARGENTINA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ARGENTINA</desc>
+                    <designation language="en-GB" displayName="ARGENTINA" type="fsn">ARGENTINA</designation>
+                </concept>
+                <concept code="AS"
+                  codeSystem="1.0.3166.1"
+                  displayName="AMERICAN SAMOA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">AMERICAN SAMOA</desc>
+                    <designation language="en-GB" displayName="AMERICAN SAMOA" type="fsn">AMERICAN SAMOA</designation>
+                </concept>
+                <concept code="AT"
+                  codeSystem="1.0.3166.1"
+                  displayName="AUSTRIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">AUSTRIA</desc>
+                    <designation language="en-GB" displayName="AUSTRIA" type="fsn">AUSTRIA</designation>
+                </concept>
+                <concept code="AU"
+                  codeSystem="1.0.3166.1"
+                  displayName="AUSTRALIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">AUSTRALIA</desc>
+                    <designation language="en-GB" displayName="AUSTRALIA" type="fsn">AUSTRALIA</designation>
+                </concept>
+                <concept code="AW"
+                  codeSystem="1.0.3166.1"
+                  displayName="ARUBA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ARUBA</desc>
+                    <designation language="en-GB" displayName="ARUBA" type="fsn">ARUBA</designation>
+                </concept>
+                <concept code="AX"
+                  codeSystem="1.0.3166.1"
+                  displayName="ÅLAND ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ÅLAND ISLANDS</desc>
+                    <designation language="en-GB" displayName="ÅLAND ISLANDS" type="fsn">ÅLAND ISLANDS</designation>
+                </concept>
+                <concept code="AZ"
+                  codeSystem="1.0.3166.1"
+                  displayName="AZERBAIJAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">AZERBAIJAN</desc>
+                    <designation language="en-GB" displayName="AZERBAIJAN" type="fsn">AZERBAIJAN</designation>
+                </concept>
+                <concept code="BA"
+                  codeSystem="1.0.3166.1"
+                  displayName="BOSNIA AND HERZEGOVINA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BOSNIA AND HERZEGOVINA</desc>
+                    <designation language="en-GB" displayName="BOSNIA AND HERZEGOVINA" type="fsn">BOSNIA AND HERZEGOVINA</designation>
+                </concept>
+                <concept code="BB"
+                  codeSystem="1.0.3166.1"
+                  displayName="BARBADOS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BARBADOS</desc>
+                    <designation language="en-GB" displayName="BARBADOS" type="fsn">BARBADOS</designation>
+                </concept>
+                <concept code="BD"
+                  codeSystem="1.0.3166.1"
+                  displayName="BANGLADESH"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BANGLADESH</desc>
+                    <designation language="en-GB" displayName="BANGLADESH" type="fsn">BANGLADESH</designation>
+                </concept>
+                <concept code="BE"
+                  codeSystem="1.0.3166.1"
+                  displayName="BELGIUM"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BELGIUM</desc>
+                    <designation language="en-GB" displayName="BELGIUM" type="fsn">BELGIUM</designation>
+                </concept>
+                <concept code="BF"
+                  codeSystem="1.0.3166.1"
+                  displayName="BURKINA FASO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BURKINA FASO</desc>
+                    <designation language="en-GB" displayName="BURKINA FASO" type="fsn">BURKINA FASO</designation>
+                </concept>
+                <concept code="BG"
+                  codeSystem="1.0.3166.1"
+                  displayName="BULGARIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BULGARIA</desc>
+                    <designation language="en-GB" displayName="BULGARIA" type="fsn">BULGARIA</designation>
+                </concept>
+                <concept code="BH"
+                  codeSystem="1.0.3166.1"
+                  displayName="BAHRAIN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BAHRAIN</desc>
+                    <designation language="en-GB" displayName="BAHRAIN" type="fsn">BAHRAIN</designation>
+                </concept>
+                <concept code="BI"
+                  codeSystem="1.0.3166.1"
+                  displayName="BURUNDI"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BURUNDI</desc>
+                    <designation language="en-GB" displayName="BURUNDI" type="fsn">BURUNDI</designation>
+                </concept>
+                <concept code="BJ"
+                  codeSystem="1.0.3166.1"
+                  displayName="BENIN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BENIN</desc>
+                    <designation language="en-GB" displayName="BENIN" type="fsn">BENIN</designation>
+                </concept>
+                <concept code="BL"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAINT BARTHÉLEMY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAINT BARTHÉLEMY</desc>
+                    <designation language="en-GB" displayName="SAINT BARTHÉLEMY" type="fsn">SAINT BARTHÉLEMY</designation>
+                </concept>
+                <concept code="BM"
+                  codeSystem="1.0.3166.1"
+                  displayName="BERMUDA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BERMUDA</desc>
+                    <designation language="en-GB" displayName="BERMUDA" type="fsn">BERMUDA</designation>
+                </concept>
+                <concept code="BN"
+                  codeSystem="1.0.3166.1"
+                  displayName="BRUNEI DARUSSALAM"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BRUNEI DARUSSALAM</desc>
+                    <designation language="en-GB" displayName="BRUNEI DARUSSALAM" type="fsn">BRUNEI DARUSSALAM</designation>
+                </concept>
+                <concept code="BO"
+                  codeSystem="1.0.3166.1"
+                  displayName="BOLIVIA (PLURINATIONAL STATE OF)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BOLIVIA (PLURINATIONAL STATE OF)</desc>
+                    <designation language="en-GB"
+                         displayName="BOLIVIA (PLURINATIONAL STATE OF)"
+                         type="fsn">BOLIVIA (PLURINATIONAL STATE OF)</designation>
+                </concept>
+                <concept code="BQ"
+                  codeSystem="1.0.3166.1"
+                  displayName="BONAIRE, SINT EUSTATIUS AND SABA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BONAIRE, SINT EUSTATIUS AND SABA</desc>
+                    <designation language="en-GB"
+                         displayName="BONAIRE, SINT EUSTATIUS AND SABA"
+                         type="fsn">BONAIRE, SINT EUSTATIUS AND SABA</designation>
+                </concept>
+                <concept code="BR"
+                  codeSystem="1.0.3166.1"
+                  displayName="BRAZIL"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BRAZIL</desc>
+                    <designation language="en-GB" displayName="BRAZIL" type="fsn">BRAZIL</designation>
+                </concept>
+                <concept code="BS"
+                  codeSystem="1.0.3166.1"
+                  displayName="BAHAMAS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BAHAMAS</desc>
+                    <designation language="en-GB" displayName="BAHAMAS" type="fsn">BAHAMAS</designation>
+                </concept>
+                <concept code="BT"
+                  codeSystem="1.0.3166.1"
+                  displayName="BHUTAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BHUTAN</desc>
+                    <designation language="en-GB" displayName="BHUTAN" type="fsn">BHUTAN</designation>
+                </concept>
+                <concept code="BV"
+                  codeSystem="1.0.3166.1"
+                  displayName="BOUVET ISLAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BOUVET ISLAND</desc>
+                    <designation language="en-GB" displayName="BOUVET ISLAND" type="fsn">BOUVET ISLAND</designation>
+                </concept>
+                <concept code="BW"
+                  codeSystem="1.0.3166.1"
+                  displayName="BOTSWANA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BOTSWANA</desc>
+                    <designation language="en-GB" displayName="BOTSWANA" type="fsn">BOTSWANA</designation>
+                </concept>
+                <concept code="BY"
+                  codeSystem="1.0.3166.1"
+                  displayName="BELARUS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BELARUS</desc>
+                    <designation language="en-GB" displayName="BELARUS" type="fsn">BELARUS</designation>
+                </concept>
+                <concept code="BZ"
+                  codeSystem="1.0.3166.1"
+                  displayName="BELIZE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BELIZE</desc>
+                    <designation language="en-GB" displayName="BELIZE" type="fsn">BELIZE</designation>
+                </concept>
+                <concept code="CA"
+                  codeSystem="1.0.3166.1"
+                  displayName="CANADA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CANADA</desc>
+                    <designation language="en-GB" displayName="CANADA" type="fsn">CANADA</designation>
+                </concept>
+                <concept code="CC"
+                  codeSystem="1.0.3166.1"
+                  displayName="COCOS (KEELING) ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">COCOS (KEELING) ISLANDS</desc>
+                    <designation language="en-GB" displayName="COCOS (KEELING) ISLANDS" type="fsn">COCOS (KEELING) ISLANDS</designation>
+                </concept>
+                <concept code="CD"
+                  codeSystem="1.0.3166.1"
+                  displayName="CONGO, DEMOCRATIC REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CONGO, DEMOCRATIC REPUBLIC OF</desc>
+                    <designation language="en-GB"
+                         displayName="CONGO, DEMOCRATIC REPUBLIC OF"
+                         type="fsn">CONGO, DEMOCRATIC REPUBLIC OF</designation>
+                </concept>
+                <concept code="CF"
+                  codeSystem="1.0.3166.1"
+                  displayName="CENTRAL AFRICAN REPUBLIC"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CENTRAL AFRICAN REPUBLIC</desc>
+                    <designation language="en-GB" displayName="CENTRAL AFRICAN REPUBLIC" type="fsn">CENTRAL AFRICAN REPUBLIC</designation>
+                </concept>
+                <concept code="CG"
+                  codeSystem="1.0.3166.1"
+                  displayName="CONGO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CONGO</desc>
+                    <designation language="en-GB" displayName="CONGO" type="fsn">CONGO</designation>
+                </concept>
+                <concept code="CH"
+                  codeSystem="1.0.3166.1"
+                  displayName="SWITZERLAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SWITZERLAND</desc>
+                    <designation language="en-GB" displayName="SWITZERLAND" type="fsn">SWITZERLAND</designation>
+                </concept>
+                <concept code="CI"
+                  codeSystem="1.0.3166.1"
+                  displayName="COTE D'IVOIRE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">COTE D'IVOIRE</desc>
+                    <designation language="en-GB" displayName="COTE D'IVOIRE" type="fsn">COTE D'IVOIRE</designation>
+                </concept>
+                <concept code="CK"
+                  codeSystem="1.0.3166.1"
+                  displayName="COOK ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">COOK ISLANDS</desc>
+                    <designation language="en-GB" displayName="COOK ISLANDS" type="fsn">COOK ISLANDS</designation>
+                </concept>
+                <concept code="CL"
+                  codeSystem="1.0.3166.1"
+                  displayName="CHILE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CHILE</desc>
+                    <designation language="en-GB" displayName="CHILE" type="fsn">CHILE</designation>
+                </concept>
+                <concept code="CM"
+                  codeSystem="1.0.3166.1"
+                  displayName="CAMEROON"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CAMEROON</desc>
+                    <designation language="en-GB" displayName="CAMEROON" type="fsn">CAMEROON</designation>
+                </concept>
+                <concept code="CN"
+                  codeSystem="1.0.3166.1"
+                  displayName="CHINA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CHINA</desc>
+                    <designation language="en-GB" displayName="CHINA" type="fsn">CHINA</designation>
+                </concept>
+                <concept code="CO"
+                  codeSystem="1.0.3166.1"
+                  displayName="COLOMBIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">COLOMBIA</desc>
+                    <designation language="en-GB" displayName="COLOMBIA" type="fsn">COLOMBIA</designation>
+                </concept>
+                <concept code="CR"
+                  codeSystem="1.0.3166.1"
+                  displayName="COSTA RICA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">COSTA RICA</desc>
+                    <designation language="en-GB" displayName="COSTA RICA" type="fsn">COSTA RICA</designation>
+                </concept>
+                <concept code="CU"
+                  codeSystem="1.0.3166.1"
+                  displayName="CUBA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CUBA</desc>
+                    <designation language="en-GB" displayName="CUBA" type="fsn">CUBA</designation>
+                </concept>
+                <concept code="CV"
+                  codeSystem="1.0.3166.1"
+                  displayName="CAPE VERDE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CAPE VERDE</desc>
+                    <designation language="en-GB" displayName="CAPE VERDE" type="fsn">CAPE VERDE</designation>
+                </concept>
+                <concept code="CW"
+                  codeSystem="1.0.3166.1"
+                  displayName="CURACAO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CURACAO</desc>
+                    <designation language="en-GB" displayName="CURACAO" type="fsn">CURACAO</designation>
+                </concept>
+                <concept code="CX"
+                  codeSystem="1.0.3166.1"
+                  displayName="CHRISTMAS ISLAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CHRISTMAS ISLAND</desc>
+                    <designation language="en-GB" displayName="CHRISTMAS ISLAND" type="fsn">CHRISTMAS ISLAND</designation>
+                </concept>
+                <concept code="CY"
+                  codeSystem="1.0.3166.1"
+                  displayName="CYPRUS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CYPRUS</desc>
+                    <designation language="en-GB" displayName="CYPRUS" type="fsn">CYPRUS</designation>
+                </concept>
+                <concept code="CZ"
+                  codeSystem="1.0.3166.1"
+                  displayName="CZECH REPUBLIC"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CZECH REPUBLIC</desc>
+                    <designation language="en-GB" displayName="CZECH REPUBLIC" type="fsn">CZECH REPUBLIC</designation>
+                </concept>
+                <concept code="DE"
+                  codeSystem="1.0.3166.1"
+                  displayName="GERMANY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GERMANY</desc>
+                    <designation language="en-GB" displayName="GERMANY" type="fsn">GERMANY</designation>
+                </concept>
+                <concept code="DJ"
+                  codeSystem="1.0.3166.1"
+                  displayName="DJIBOUTI"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">DJIBOUTI</desc>
+                    <designation language="en-GB" displayName="DJIBOUTI" type="fsn">DJIBOUTI</designation>
+                </concept>
+                <concept code="DK"
+                  codeSystem="1.0.3166.1"
+                  displayName="DENMARK"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">DENMARK</desc>
+                    <designation language="en-GB" displayName="DENMARK" type="fsn">DENMARK</designation>
+                </concept>
+                <concept code="DM"
+                  codeSystem="1.0.3166.1"
+                  displayName="DOMINICA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">DOMINICA</desc>
+                    <designation language="en-GB" displayName="DOMINICA" type="fsn">DOMINICA</designation>
+                </concept>
+                <concept code="DO"
+                  codeSystem="1.0.3166.1"
+                  displayName="DOMINICAN REPUBLIC"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">DOMINICAN REPUBLIC</desc>
+                    <designation language="en-GB" displayName="DOMINICAN REPUBLIC" type="fsn">DOMINICAN REPUBLIC</designation>
+                </concept>
+                <concept code="DZ"
+                  codeSystem="1.0.3166.1"
+                  displayName="ALGERIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ALGERIA</desc>
+                    <designation language="en-GB" displayName="ALGERIA" type="fsn">ALGERIA</designation>
+                </concept>
+                <concept code="EC"
+                  codeSystem="1.0.3166.1"
+                  displayName="ECUADOR"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ECUADOR</desc>
+                    <designation language="en-GB" displayName="ECUADOR" type="fsn">ECUADOR</designation>
+                </concept>
+                <concept code="EE"
+                  codeSystem="1.0.3166.1"
+                  displayName="ESTONIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ESTONIA</desc>
+                    <designation language="en-GB" displayName="ESTONIA" type="fsn">ESTONIA</designation>
+                </concept>
+                <concept code="EG"
+                  codeSystem="1.0.3166.1"
+                  displayName="EGYPT"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">EGYPT</desc>
+                    <designation language="en-GB" displayName="EGYPT" type="fsn">EGYPT</designation>
+                </concept>
+                <concept code="EH"
+                  codeSystem="1.0.3166.1"
+                  displayName="WESTERN SAHARA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">WESTERN SAHARA</desc>
+                    <designation language="en-GB" displayName="WESTERN SAHARA" type="fsn">WESTERN SAHARA</designation>
+                </concept>
+                <concept code="ER"
+                  codeSystem="1.0.3166.1"
+                  displayName="ERITREA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ERITREA</desc>
+                    <designation language="en-GB" displayName="ERITREA" type="fsn">ERITREA</designation>
+                </concept>
+                <concept code="ES"
+                  codeSystem="1.0.3166.1"
+                  displayName="SPAIN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SPAIN</desc>
+                    <designation language="en-GB" displayName="SPAIN" type="fsn">SPAIN</designation>
+                </concept>
+                <concept code="ET"
+                  codeSystem="1.0.3166.1"
+                  displayName="ETHIOPIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ETHIOPIA</desc>
+                    <designation language="en-GB" displayName="ETHIOPIA" type="fsn">ETHIOPIA</designation>
+                </concept>
+                <concept code="FI"
+                  codeSystem="1.0.3166.1"
+                  displayName="FINLAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">FINLAND</desc>
+                    <designation language="en-GB" displayName="FINLAND" type="fsn">FINLAND</designation>
+                </concept>
+                <concept code="FJ"
+                  codeSystem="1.0.3166.1"
+                  displayName="FIJI"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">FIJI</desc>
+                    <designation language="en-GB" displayName="FIJI" type="fsn">FIJI</designation>
+                </concept>
+                <concept code="FK"
+                  codeSystem="1.0.3166.1"
+                  displayName="FALKLAND ISLANDS (MALVINAS)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">FALKLAND ISLANDS (MALVINAS)</desc>
+                    <designation language="en-GB"
+                         displayName="FALKLAND ISLANDS (MALVINAS)"
+                         type="fsn">FALKLAND ISLANDS (MALVINAS)</designation>
+                </concept>
+                <concept code="FM"
+                  codeSystem="1.0.3166.1"
+                  displayName="MICRONESIA (FEDERATED STATES OF)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MICRONESIA (FEDERATED STATES OF)</desc>
+                    <designation language="en-GB"
+                         displayName="MICRONESIA (FEDERATED STATES OF)"
+                         type="fsn">MICRONESIA (FEDERATED STATES OF)</designation>
+                </concept>
+                <concept code="FO"
+                  codeSystem="1.0.3166.1"
+                  displayName="FAROE ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">FAROE ISLANDS</desc>
+                    <designation language="en-GB" displayName="FAROE ISLANDS" type="fsn">FAROE ISLANDS</designation>
+                </concept>
+                <concept code="FR"
+                  codeSystem="1.0.3166.1"
+                  displayName="FRANCE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">FRANCE</desc>
+                    <designation language="en-GB" displayName="FRANCE" type="fsn">FRANCE</designation>
+                </concept>
+                <concept code="GA"
+                  codeSystem="1.0.3166.1"
+                  displayName="GABON"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GABON</desc>
+                    <designation language="en-GB" displayName="GABON" type="fsn">GABON</designation>
+                </concept>
+                <concept code="GB"
+                  codeSystem="1.0.3166.1"
+                  displayName="UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</desc>
+                    <designation language="en-GB"
+                         displayName="UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND"
+                         type="fsn">UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</designation>
+                </concept>
+                <concept code="GD"
+                  codeSystem="1.0.3166.1"
+                  displayName="GRENADA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GRENADA</desc>
+                    <designation language="en-GB" displayName="GRENADA" type="fsn">GRENADA</designation>
+                </concept>
+                <concept code="GE"
+                  codeSystem="1.0.3166.1"
+                  displayName="GEORGIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GEORGIA</desc>
+                    <designation language="en-GB" displayName="GEORGIA" type="fsn">GEORGIA</designation>
+                </concept>
+                <concept code="GF"
+                  codeSystem="1.0.3166.1"
+                  displayName="FRENCH GUIANA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">FRENCH GUIANA</desc>
+                    <designation language="en-GB" displayName="FRENCH GUIANA" type="fsn">FRENCH GUIANA</designation>
+                </concept>
+                <concept code="GG"
+                  codeSystem="1.0.3166.1"
+                  displayName="GUERNSEY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GUERNSEY</desc>
+                    <designation language="en-GB" displayName="GUERNSEY" type="fsn">GUERNSEY</designation>
+                </concept>
+                <concept code="GH"
+                  codeSystem="1.0.3166.1"
+                  displayName="GHANA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GHANA</desc>
+                    <designation language="en-GB" displayName="GHANA" type="fsn">GHANA</designation>
+                </concept>
+                <concept code="GI"
+                  codeSystem="1.0.3166.1"
+                  displayName="GIBRALTAR"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GIBRALTAR</desc>
+                    <designation language="en-GB" displayName="GIBRALTAR" type="fsn">GIBRALTAR</designation>
+                </concept>
+                <concept code="GL"
+                  codeSystem="1.0.3166.1"
+                  displayName="GREENLAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GREENLAND</desc>
+                    <designation language="en-GB" displayName="GREENLAND" type="fsn">GREENLAND</designation>
+                </concept>
+                <concept code="GM"
+                  codeSystem="1.0.3166.1"
+                  displayName="GAMBIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GAMBIA</desc>
+                    <designation language="en-GB" displayName="GAMBIA" type="fsn">GAMBIA</designation>
+                </concept>
+                <concept code="GN"
+                  codeSystem="1.0.3166.1"
+                  displayName="GUINEA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GUINEA</desc>
+                    <designation language="en-GB" displayName="GUINEA" type="fsn">GUINEA</designation>
+                </concept>
+                <concept code="GP"
+                  codeSystem="1.0.3166.1"
+                  displayName="GUADELOUPE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GUADELOUPE</desc>
+                    <designation language="en-GB" displayName="GUADELOUPE" type="fsn">GUADELOUPE</designation>
+                </concept>
+                <concept code="GQ"
+                  codeSystem="1.0.3166.1"
+                  displayName="EQUATORIAL GUINEA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">EQUATORIAL GUINEA</desc>
+                    <designation language="en-GB" displayName="EQUATORIAL GUINEA" type="fsn">EQUATORIAL GUINEA</designation>
+                </concept>
+                <concept code="GR"
+                  codeSystem="1.0.3166.1"
+                  displayName="GREECE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GREECE</desc>
+                    <designation language="en-GB" displayName="GREECE" type="fsn">GREECE</designation>
+                </concept>
+                <concept code="GS"
+                  codeSystem="1.0.3166.1"
+                  displayName="SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</desc>
+                    <designation language="en-GB"
+                         displayName="SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS"
+                         type="fsn">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</designation>
+                </concept>
+                <concept code="GT"
+                  codeSystem="1.0.3166.1"
+                  displayName="GUATEMALA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GUATEMALA</desc>
+                    <designation language="en-GB" displayName="GUATEMALA" type="fsn">GUATEMALA</designation>
+                </concept>
+                <concept code="GU"
+                  codeSystem="1.0.3166.1"
+                  displayName="GUAM"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GUAM</desc>
+                    <designation language="en-GB" displayName="GUAM" type="fsn">GUAM</designation>
+                </concept>
+                <concept code="GW"
+                  codeSystem="1.0.3166.1"
+                  displayName="GUINEA-BISSAU"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GUINEA-BISSAU</desc>
+                    <designation language="en-GB" displayName="GUINEA-BISSAU" type="fsn">GUINEA-BISSAU</designation>
+                </concept>
+                <concept code="GY"
+                  codeSystem="1.0.3166.1"
+                  displayName="GUYANA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">GUYANA</desc>
+                    <designation language="en-GB" displayName="GUYANA" type="fsn">GUYANA</designation>
+                </concept>
+                <concept code="HK"
+                  codeSystem="1.0.3166.1"
+                  displayName="HONG KONG"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">HONG KONG</desc>
+                    <designation language="en-GB" displayName="HONG KONG" type="fsn">HONG KONG</designation>
+                </concept>
+                <concept code="HM"
+                  codeSystem="1.0.3166.1"
+                  displayName="HEARD ISLAND AND MCDONALD ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">HEARD ISLAND AND MCDONALD ISLANDS</desc>
+                    <designation language="en-GB"
+                         displayName="HEARD ISLAND AND MCDONALD ISLANDS"
+                         type="fsn">HEARD ISLAND AND MCDONALD ISLANDS</designation>
+                </concept>
+                <concept code="HN"
+                  codeSystem="1.0.3166.1"
+                  displayName="HONDURAS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">HONDURAS</desc>
+                    <designation language="en-GB" displayName="HONDURAS" type="fsn">HONDURAS</designation>
+                </concept>
+                <concept code="HR"
+                  codeSystem="1.0.3166.1"
+                  displayName="CROATIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CROATIA</desc>
+                    <designation language="en-GB" displayName="CROATIA" type="fsn">CROATIA</designation>
+                </concept>
+                <concept code="HT"
+                  codeSystem="1.0.3166.1"
+                  displayName="HAITI"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">HAITI</desc>
+                    <designation language="en-GB" displayName="HAITI" type="fsn">HAITI</designation>
+                </concept>
+                <concept code="HU"
+                  codeSystem="1.0.3166.1"
+                  displayName="HUNGARY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">HUNGARY</desc>
+                    <designation language="en-GB" displayName="HUNGARY" type="fsn">HUNGARY</designation>
+                </concept>
+                <concept code="ID"
+                  codeSystem="1.0.3166.1"
+                  displayName="INDONESIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">INDONESIA</desc>
+                    <designation language="en-GB" displayName="INDONESIA" type="fsn">INDONESIA</designation>
+                </concept>
+                <concept code="IE"
+                  codeSystem="1.0.3166.1"
+                  displayName="IRELAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">IRELAND</desc>
+                    <designation language="en-GB" displayName="IRELAND" type="fsn">IRELAND</designation>
+                </concept>
+                <concept code="IL"
+                  codeSystem="1.0.3166.1"
+                  displayName="ISRAEL"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ISRAEL</desc>
+                    <designation language="en-GB" displayName="ISRAEL" type="fsn">ISRAEL</designation>
+                </concept>
+                <concept code="IM"
+                  codeSystem="1.0.3166.1"
+                  displayName="ISLE OF MAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ISLE OF MAN</desc>
+                    <designation language="en-GB" displayName="ISLE OF MAN" type="fsn">ISLE OF MAN</designation>
+                </concept>
+                <concept code="IN"
+                  codeSystem="1.0.3166.1"
+                  displayName="INDIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">INDIA</desc>
+                    <designation language="en-GB" displayName="INDIA" type="fsn">INDIA</designation>
+                </concept>
+                <concept code="IO"
+                  codeSystem="1.0.3166.1"
+                  displayName="BRITISH INDIAN OCEAN TERRITORY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">BRITISH INDIAN OCEAN TERRITORY</desc>
+                    <designation language="en-GB"
+                         displayName="BRITISH INDIAN OCEAN TERRITORY"
+                         type="fsn">BRITISH INDIAN OCEAN TERRITORY</designation>
+                </concept>
+                <concept code="IQ"
+                  codeSystem="1.0.3166.1"
+                  displayName="IRAQ"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">IRAQ</desc>
+                    <designation language="en-GB" displayName="IRAQ" type="fsn">IRAQ</designation>
+                </concept>
+                <concept code="IR"
+                  codeSystem="1.0.3166.1"
+                  displayName="IRAN (ISLAMIC REPUBLIC OF)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">IRAN (ISLAMIC REPUBLIC OF)</desc>
+                    <designation language="en-GB"
+                         displayName="IRAN (ISLAMIC REPUBLIC OF)"
+                         type="fsn">IRAN (ISLAMIC REPUBLIC OF)</designation>
+                </concept>
+                <concept code="IS"
+                  codeSystem="1.0.3166.1"
+                  displayName="ICELAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ICELAND</desc>
+                    <designation language="en-GB" displayName="ICELAND" type="fsn">ICELAND</designation>
+                </concept>
+                <concept code="IT"
+                  codeSystem="1.0.3166.1"
+                  displayName="ITALY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ITALY</desc>
+                    <designation language="en-GB" displayName="ITALY" type="fsn">ITALY</designation>
+                </concept>
+                <concept code="JE"
+                  codeSystem="1.0.3166.1"
+                  displayName="JERSEY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">JERSEY</desc>
+                    <designation language="en-GB" displayName="JERSEY" type="fsn">JERSEY</designation>
+                </concept>
+                <concept code="JM"
+                  codeSystem="1.0.3166.1"
+                  displayName="JAMAICA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">JAMAICA</desc>
+                    <designation language="en-GB" displayName="JAMAICA" type="fsn">JAMAICA</designation>
+                </concept>
+                <concept code="JO"
+                  codeSystem="1.0.3166.1"
+                  displayName="JORDAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">JORDAN</desc>
+                    <designation language="en-GB" displayName="JORDAN" type="fsn">JORDAN</designation>
+                </concept>
+                <concept code="JP"
+                  codeSystem="1.0.3166.1"
+                  displayName="JAPAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">JAPAN</desc>
+                    <designation language="en-GB" displayName="JAPAN" type="fsn">JAPAN</designation>
+                </concept>
+                <concept code="KE"
+                  codeSystem="1.0.3166.1"
+                  displayName="KENYA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">KENYA</desc>
+                    <designation language="en-GB" displayName="KENYA" type="fsn">KENYA</designation>
+                </concept>
+                <concept code="KG"
+                  codeSystem="1.0.3166.1"
+                  displayName="KYRGYZSTAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">KYRGYZSTAN</desc>
+                    <designation language="en-GB" displayName="KYRGYZSTAN" type="fsn">KYRGYZSTAN</designation>
+                </concept>
+                <concept code="KH"
+                  codeSystem="1.0.3166.1"
+                  displayName="CAMBODIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CAMBODIA</desc>
+                    <designation language="en-GB" displayName="CAMBODIA" type="fsn">CAMBODIA</designation>
+                </concept>
+                <concept code="KI"
+                  codeSystem="1.0.3166.1"
+                  displayName="KIRIBATI"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">KIRIBATI</desc>
+                    <designation language="en-GB" displayName="KIRIBATI" type="fsn">KIRIBATI</designation>
+                </concept>
+                <concept code="KM"
+                  codeSystem="1.0.3166.1"
+                  displayName="COMOROS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">COMOROS</desc>
+                    <designation language="en-GB" displayName="COMOROS" type="fsn">COMOROS</designation>
+                </concept>
+                <concept code="KN"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAINT KITTS AND NEVIS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAINT KITTS AND NEVIS</desc>
+                    <designation language="en-GB" displayName="SAINT KITTS AND NEVIS" type="fsn">SAINT KITTS AND NEVIS</designation>
+                </concept>
+                <concept code="KP"
+                  codeSystem="1.0.3166.1"
+                  displayName="KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)</desc>
+                    <designation language="en-GB"
+                         displayName="KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)"
+                         type="fsn">KOREA (DEMOCRATIC PEOPLE'S REPUBLIC OF)</designation>
+                </concept>
+                <concept code="KR"
+                  codeSystem="1.0.3166.1"
+                  displayName="KOREA, REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">KOREA, REPUBLIC OF</desc>
+                    <designation language="en-GB" displayName="KOREA, REPUBLIC OF" type="fsn">KOREA, REPUBLIC OF</designation>
+                </concept>
+                <concept code="KW"
+                  codeSystem="1.0.3166.1"
+                  displayName="KUWAIT"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">KUWAIT</desc>
+                    <designation language="en-GB" displayName="KUWAIT" type="fsn">KUWAIT</designation>
+                </concept>
+                <concept code="KY"
+                  codeSystem="1.0.3166.1"
+                  displayName="CAYMAN ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CAYMAN ISLANDS</desc>
+                    <designation language="en-GB" displayName="CAYMAN ISLANDS" type="fsn">CAYMAN ISLANDS</designation>
+                </concept>
+                <concept code="KZ"
+                  codeSystem="1.0.3166.1"
+                  displayName="KAZAKHSTAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">KAZAKHSTAN</desc>
+                    <designation language="en-GB" displayName="KAZAKHSTAN" type="fsn">KAZAKHSTAN</designation>
+                </concept>
+                <concept code="LA"
+                  codeSystem="1.0.3166.1"
+                  displayName="LAO PEOPLE'S DEMOCRATIC REPUBLIC"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">LAO PEOPLE'S DEMOCRATIC REPUBLIC</desc>
+                    <designation language="en-GB"
+                         displayName="LAO PEOPLE'S DEMOCRATIC REPUBLIC"
+                         type="fsn">LAO PEOPLE'S DEMOCRATIC REPUBLIC</designation>
+                </concept>
+                <concept code="LB"
+                  codeSystem="1.0.3166.1"
+                  displayName="LEBANON"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">LEBANON</desc>
+                    <designation language="en-GB" displayName="LEBANON" type="fsn">LEBANON</designation>
+                </concept>
+                <concept code="LC"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAINT LUCIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAINT LUCIA</desc>
+                    <designation language="en-GB" displayName="SAINT LUCIA" type="fsn">SAINT LUCIA</designation>
+                </concept>
+                <concept code="LI"
+                  codeSystem="1.0.3166.1"
+                  displayName="LIECHTENSTEIN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">LIECHTENSTEIN</desc>
+                    <designation language="en-GB" displayName="LIECHTENSTEIN" type="fsn">LIECHTENSTEIN</designation>
+                </concept>
+                <concept code="LK"
+                  codeSystem="1.0.3166.1"
+                  displayName="SRI LANKA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SRI LANKA</desc>
+                    <designation language="en-GB" displayName="SRI LANKA" type="fsn">SRI LANKA</designation>
+                </concept>
+                <concept code="LR"
+                  codeSystem="1.0.3166.1"
+                  displayName="LIBERIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">LIBERIA</desc>
+                    <designation language="en-GB" displayName="LIBERIA" type="fsn">LIBERIA</designation>
+                </concept>
+                <concept code="LS"
+                  codeSystem="1.0.3166.1"
+                  displayName="LESOTHO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">LESOTHO</desc>
+                    <designation language="en-GB" displayName="LESOTHO" type="fsn">LESOTHO</designation>
+                </concept>
+                <concept code="LT"
+                  codeSystem="1.0.3166.1"
+                  displayName="LITHUANIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">LITHUANIA</desc>
+                    <designation language="en-GB" displayName="LITHUANIA" type="fsn">LITHUANIA</designation>
+                </concept>
+                <concept code="LU"
+                  codeSystem="1.0.3166.1"
+                  displayName="LUXEMBOURG"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">LUXEMBOURG</desc>
+                    <designation language="en-GB" displayName="LUXEMBOURG" type="fsn">LUXEMBOURG</designation>
+                </concept>
+                <concept code="LV"
+                  codeSystem="1.0.3166.1"
+                  displayName="LATVIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">LATVIA</desc>
+                    <designation language="en-GB" displayName="LATVIA" type="fsn">LATVIA</designation>
+                </concept>
+                <concept code="LY"
+                  codeSystem="1.0.3166.1"
+                  displayName="LIBYA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">LIBYA</desc>
+                    <designation language="en-GB" displayName="LIBYA" type="fsn">LIBYA</designation>
+                </concept>
+                <concept code="MA"
+                  codeSystem="1.0.3166.1"
+                  displayName="MOROCCO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MOROCCO</desc>
+                    <designation language="en-GB" displayName="MOROCCO" type="fsn">MOROCCO</designation>
+                </concept>
+                <concept code="MC"
+                  codeSystem="1.0.3166.1"
+                  displayName="MONACO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MONACO</desc>
+                    <designation language="en-GB" displayName="MONACO" type="fsn">MONACO</designation>
+                </concept>
+                <concept code="MD"
+                  codeSystem="1.0.3166.1"
+                  displayName="MOLDOVA, REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MOLDOVA, REPUBLIC OF</desc>
+                    <designation language="en-GB" displayName="MOLDOVA, REPUBLIC OF" type="fsn">MOLDOVA, REPUBLIC OF</designation>
+                </concept>
+                <concept code="ME"
+                  codeSystem="1.0.3166.1"
+                  displayName="MONTENEGRO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MONTENEGRO</desc>
+                    <designation language="en-GB" displayName="MONTENEGRO" type="fsn">MONTENEGRO</designation>
+                </concept>
+                <concept code="MF"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAINT MARTIN (FRENCH PART)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAINT MARTIN (FRENCH PART)</desc>
+                    <designation language="en-GB"
+                         displayName="SAINT MARTIN (FRENCH PART)"
+                         type="fsn">SAINT MARTIN (FRENCH PART)</designation>
+                </concept>
+                <concept code="MG"
+                  codeSystem="1.0.3166.1"
+                  displayName="MADAGASCAR"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MADAGASCAR</desc>
+                    <designation language="en-GB" displayName="MADAGASCAR" type="fsn">MADAGASCAR</designation>
+                </concept>
+                <concept code="MH"
+                  codeSystem="1.0.3166.1"
+                  displayName="MARSHALL ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MARSHALL ISLANDS</desc>
+                    <designation language="en-GB" displayName="MARSHALL ISLANDS" type="fsn">MARSHALL ISLANDS</designation>
+                </concept>
+                <concept code="MK"
+                  codeSystem="1.0.3166.1"
+                  displayName="MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</desc>
+                    <designation language="en-GB"
+                         displayName="MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"
+                         type="fsn">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</designation>
+                </concept>
+                <concept code="ML"
+                  codeSystem="1.0.3166.1"
+                  displayName="MALI"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MALI</desc>
+                    <designation language="en-GB" displayName="MALI" type="fsn">MALI</designation>
+                </concept>
+                <concept code="MM"
+                  codeSystem="1.0.3166.1"
+                  displayName="MYANMAR"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MYANMAR</desc>
+                    <designation language="en-GB" displayName="MYANMAR" type="fsn">MYANMAR</designation>
+                </concept>
+                <concept code="MN"
+                  codeSystem="1.0.3166.1"
+                  displayName="MONGOLIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MONGOLIA</desc>
+                    <designation language="en-GB" displayName="MONGOLIA" type="fsn">MONGOLIA</designation>
+                </concept>
+                <concept code="MO"
+                  codeSystem="1.0.3166.1"
+                  displayName="MACAO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MACAO</desc>
+                    <designation language="en-GB" displayName="MACAO" type="fsn">MACAO</designation>
+                </concept>
+                <concept code="MP"
+                  codeSystem="1.0.3166.1"
+                  displayName="NORTHERN MARIANA ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NORTHERN MARIANA ISLANDS</desc>
+                    <designation language="en-GB" displayName="NORTHERN MARIANA ISLANDS" type="fsn">NORTHERN MARIANA ISLANDS</designation>
+                </concept>
+                <concept code="MQ"
+                  codeSystem="1.0.3166.1"
+                  displayName="MARTINIQUE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MARTINIQUE</desc>
+                    <designation language="en-GB" displayName="MARTINIQUE" type="fsn">MARTINIQUE</designation>
+                </concept>
+                <concept code="MR"
+                  codeSystem="1.0.3166.1"
+                  displayName="MAURITANIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MAURITANIA</desc>
+                    <designation language="en-GB" displayName="MAURITANIA" type="fsn">MAURITANIA</designation>
+                </concept>
+                <concept code="MS"
+                  codeSystem="1.0.3166.1"
+                  displayName="MONTSERRAT"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MONTSERRAT</desc>
+                    <designation language="en-GB" displayName="MONTSERRAT" type="fsn">MONTSERRAT</designation>
+                </concept>
+                <concept code="MT"
+                  codeSystem="1.0.3166.1"
+                  displayName="MALTA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MALTA</desc>
+                    <designation language="en-GB" displayName="MALTA" type="fsn">MALTA</designation>
+                </concept>
+                <concept code="MU"
+                  codeSystem="1.0.3166.1"
+                  displayName="MAURITIUS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MAURITIUS</desc>
+                    <designation language="en-GB" displayName="MAURITIUS" type="fsn">MAURITIUS</designation>
+                </concept>
+                <concept code="MV"
+                  codeSystem="1.0.3166.1"
+                  displayName="MALDIVES"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MALDIVES</desc>
+                    <designation language="en-GB" displayName="MALDIVES" type="fsn">MALDIVES</designation>
+                </concept>
+                <concept code="MW"
+                  codeSystem="1.0.3166.1"
+                  displayName="MALAWI"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MALAWI</desc>
+                    <designation language="en-GB" displayName="MALAWI" type="fsn">MALAWI</designation>
+                </concept>
+                <concept code="MX"
+                  codeSystem="1.0.3166.1"
+                  displayName="MEXICO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MEXICO</desc>
+                    <designation language="en-GB" displayName="MEXICO" type="fsn">MEXICO</designation>
+                </concept>
+                <concept code="MY"
+                  codeSystem="1.0.3166.1"
+                  displayName="MALAYSIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MALAYSIA</desc>
+                    <designation language="en-GB" displayName="MALAYSIA" type="fsn">MALAYSIA</designation>
+                </concept>
+                <concept code="MZ"
+                  codeSystem="1.0.3166.1"
+                  displayName="MOZAMBIQUE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MOZAMBIQUE</desc>
+                    <designation language="en-GB" displayName="MOZAMBIQUE" type="fsn">MOZAMBIQUE</designation>
+                </concept>
+                <concept code="NA"
+                  codeSystem="1.0.3166.1"
+                  displayName="NAMIBIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NAMIBIA</desc>
+                    <designation language="en-GB" displayName="NAMIBIA" type="fsn">NAMIBIA</designation>
+                </concept>
+                <concept code="NC"
+                  codeSystem="1.0.3166.1"
+                  displayName="NEW CALEDONIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NEW CALEDONIA</desc>
+                    <designation language="en-GB" displayName="NEW CALEDONIA" type="fsn">NEW CALEDONIA</designation>
+                </concept>
+                <concept code="NE"
+                  codeSystem="1.0.3166.1"
+                  displayName="NIGER"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NIGER</desc>
+                    <designation language="en-GB" displayName="NIGER" type="fsn">NIGER</designation>
+                </concept>
+                <concept code="NF"
+                  codeSystem="1.0.3166.1"
+                  displayName="NORFOLK ISLAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NORFOLK ISLAND</desc>
+                    <designation language="en-GB" displayName="NORFOLK ISLAND" type="fsn">NORFOLK ISLAND</designation>
+                </concept>
+                <concept code="NG"
+                  codeSystem="1.0.3166.1"
+                  displayName="NIGERIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NIGERIA</desc>
+                    <designation language="en-GB" displayName="NIGERIA" type="fsn">NIGERIA</designation>
+                </concept>
+                <concept code="NI"
+                  codeSystem="1.0.3166.1"
+                  displayName="NICARAGUA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NICARAGUA</desc>
+                    <designation language="en-GB" displayName="NICARAGUA" type="fsn">NICARAGUA</designation>
+                </concept>
+                <concept code="NL"
+                  codeSystem="1.0.3166.1"
+                  displayName="NETHERLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NETHERLANDS</desc>
+                    <designation language="en-GB" displayName="NETHERLANDS" type="fsn">NETHERLANDS</designation>
+                </concept>
+                <concept code="NO"
+                  codeSystem="1.0.3166.1"
+                  displayName="NORWAY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NORWAY</desc>
+                    <designation language="en-GB" displayName="NORWAY" type="fsn">NORWAY</designation>
+                </concept>
+                <concept code="NP"
+                  codeSystem="1.0.3166.1"
+                  displayName="NEPAL"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NEPAL</desc>
+                    <designation language="en-GB" displayName="NEPAL" type="fsn">NEPAL</designation>
+                </concept>
+                <concept code="NR"
+                  codeSystem="1.0.3166.1"
+                  displayName="NAURU"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NAURU</desc>
+                    <designation language="en-GB" displayName="NAURU" type="fsn">NAURU</designation>
+                </concept>
+                <concept code="NU"
+                  codeSystem="1.0.3166.1"
+                  displayName="NIUE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NIUE</desc>
+                    <designation language="en-GB" displayName="NIUE" type="fsn">NIUE</designation>
+                </concept>
+                <concept code="NZ"
+                  codeSystem="1.0.3166.1"
+                  displayName="NEW ZEALAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">NEW ZEALAND</desc>
+                    <designation language="en-GB" displayName="NEW ZEALAND" type="fsn">NEW ZEALAND</designation>
+                </concept>
+                <concept code="OM"
+                  codeSystem="1.0.3166.1"
+                  displayName="OMAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">OMAN</desc>
+                    <designation language="en-GB" displayName="OMAN" type="fsn">OMAN</designation>
+                </concept>
+                <concept code="PA"
+                  codeSystem="1.0.3166.1"
+                  displayName="PANAMA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PANAMA</desc>
+                    <designation language="en-GB" displayName="PANAMA" type="fsn">PANAMA</designation>
+                </concept>
+                <concept code="PE"
+                  codeSystem="1.0.3166.1"
+                  displayName="PERU"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PERU</desc>
+                    <designation language="en-GB" displayName="PERU" type="fsn">PERU</designation>
+                </concept>
+                <concept code="PF"
+                  codeSystem="1.0.3166.1"
+                  displayName="FRENCH POLYNESIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">FRENCH POLYNESIA</desc>
+                    <designation language="en-GB" displayName="FRENCH POLYNESIA" type="fsn">FRENCH POLYNESIA</designation>
+                </concept>
+                <concept code="PG"
+                  codeSystem="1.0.3166.1"
+                  displayName="PAPUA NEW GUINEA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PAPUA NEW GUINEA</desc>
+                    <designation language="en-GB" displayName="PAPUA NEW GUINEA" type="fsn">PAPUA NEW GUINEA</designation>
+                </concept>
+                <concept code="PH"
+                  codeSystem="1.0.3166.1"
+                  displayName="PHILIPPINES"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PHILIPPINES</desc>
+                    <designation language="en-GB" displayName="PHILIPPINES" type="fsn">PHILIPPINES</designation>
+                </concept>
+                <concept code="PK"
+                  codeSystem="1.0.3166.1"
+                  displayName="PAKISTAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PAKISTAN</desc>
+                    <designation language="en-GB" displayName="PAKISTAN" type="fsn">PAKISTAN</designation>
+                </concept>
+                <concept code="PL"
+                  codeSystem="1.0.3166.1"
+                  displayName="POLAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">POLAND</desc>
+                    <designation language="en-GB" displayName="POLAND" type="fsn">POLAND</designation>
+                </concept>
+                <concept code="PM"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAINT PIERRE AND MIQUELON"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAINT PIERRE AND MIQUELON</desc>
+                    <designation language="en-GB" displayName="SAINT PIERRE AND MIQUELON" type="fsn">SAINT PIERRE AND MIQUELON</designation>
+                </concept>
+                <concept code="PN"
+                  codeSystem="1.0.3166.1"
+                  displayName="PITCAIRN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PITCAIRN</desc>
+                    <designation language="en-GB" displayName="PITCAIRN" type="fsn">PITCAIRN</designation>
+                </concept>
+                <concept code="PR"
+                  codeSystem="1.0.3166.1"
+                  displayName="PUERTO RICO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PUERTO RICO</desc>
+                    <designation language="en-GB" displayName="PUERTO RICO" type="fsn">PUERTO RICO</designation>
+                </concept>
+                <concept code="PS"
+                  codeSystem="1.0.3166.1"
+                  displayName="PALESTINE, STATE OF"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PALESTINE, STATE OF</desc>
+                    <designation language="en-GB" displayName="PALESTINE, STATE OF" type="fsn">PALESTINE, STATE OF</designation>
+                </concept>
+                <concept code="PT"
+                  codeSystem="1.0.3166.1"
+                  displayName="PORTUGAL"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PORTUGAL</desc>
+                    <designation language="en-GB" displayName="PORTUGAL" type="fsn">PORTUGAL</designation>
+                </concept>
+                <concept code="PW"
+                  codeSystem="1.0.3166.1"
+                  displayName="PALAU"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PALAU</desc>
+                    <designation language="en-GB" displayName="PALAU" type="fsn">PALAU</designation>
+                </concept>
+                <concept code="PY"
+                  codeSystem="1.0.3166.1"
+                  displayName="PARAGUAY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">PARAGUAY</desc>
+                    <designation language="en-GB" displayName="PARAGUAY" type="fsn">PARAGUAY</designation>
+                </concept>
+                <concept code="QA"
+                  codeSystem="1.0.3166.1"
+                  displayName="QATAR"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">QATAR</desc>
+                    <designation language="en-GB" displayName="QATAR" type="fsn">QATAR</designation>
+                </concept>
+                <concept code="RE"
+                  codeSystem="1.0.3166.1"
+                  displayName="REUNION"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">REUNION</desc>
+                    <designation language="en-GB" displayName="REUNION" type="fsn">REUNION</designation>
+                </concept>
+                <concept code="RO"
+                  codeSystem="1.0.3166.1"
+                  displayName="ROMANIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ROMANIA</desc>
+                    <designation language="en-GB" displayName="ROMANIA" type="fsn">ROMANIA</designation>
+                </concept>
+                <concept code="RS"
+                  codeSystem="1.0.3166.1"
+                  displayName="SERBIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SERBIA</desc>
+                    <designation language="en-GB" displayName="SERBIA" type="fsn">SERBIA</designation>
+                </concept>
+                <concept code="RU"
+                  codeSystem="1.0.3166.1"
+                  displayName="RUSSIAN FEDERATION"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">RUSSIAN FEDERATION</desc>
+                    <designation language="en-GB" displayName="RUSSIAN FEDERATION" type="fsn">RUSSIAN FEDERATION</designation>
+                </concept>
+                <concept code="RW"
+                  codeSystem="1.0.3166.1"
+                  displayName="RWANDA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">RWANDA</desc>
+                    <designation language="en-GB" displayName="RWANDA" type="fsn">RWANDA</designation>
+                </concept>
+                <concept code="SA"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAUDI ARABIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAUDI ARABIA</desc>
+                    <designation language="en-GB" displayName="SAUDI ARABIA" type="fsn">SAUDI ARABIA</designation>
+                </concept>
+                <concept code="SB"
+                  codeSystem="1.0.3166.1"
+                  displayName="SOLOMON ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SOLOMON ISLANDS</desc>
+                    <designation language="en-GB" displayName="SOLOMON ISLANDS" type="fsn">SOLOMON ISLANDS</designation>
+                </concept>
+                <concept code="SC"
+                  codeSystem="1.0.3166.1"
+                  displayName="SEYCHELLES"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SEYCHELLES</desc>
+                    <designation language="en-GB" displayName="SEYCHELLES" type="fsn">SEYCHELLES</designation>
+                </concept>
+                <concept code="SD"
+                  codeSystem="1.0.3166.1"
+                  displayName="SUDAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SUDAN</desc>
+                    <designation language="en-GB" displayName="SUDAN" type="fsn">SUDAN</designation>
+                </concept>
+                <concept code="SE"
+                  codeSystem="1.0.3166.1"
+                  displayName="SWEDEN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SWEDEN</desc>
+                    <designation language="en-GB" displayName="SWEDEN" type="fsn">SWEDEN</designation>
+                </concept>
+                <concept code="SG"
+                  codeSystem="1.0.3166.1"
+                  displayName="SINGAPORE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SINGAPORE</desc>
+                    <designation language="en-GB" displayName="SINGAPORE" type="fsn">SINGAPORE</designation>
+                </concept>
+                <concept code="SH"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA</desc>
+                    <designation language="en-GB"
+                         displayName="SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"
+                         type="fsn">SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA</designation>
+                </concept>
+                <concept code="SI"
+                  codeSystem="1.0.3166.1"
+                  displayName="SLOVENIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SLOVENIA</desc>
+                    <designation language="en-GB" displayName="SLOVENIA" type="fsn">SLOVENIA</designation>
+                </concept>
+                <concept code="SJ"
+                  codeSystem="1.0.3166.1"
+                  displayName="SVALBARD AND JAN MAYEN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SVALBARD AND JAN MAYEN</desc>
+                    <designation language="en-GB" displayName="SVALBARD AND JAN MAYEN" type="fsn">SVALBARD AND JAN MAYEN</designation>
+                </concept>
+                <concept code="SK"
+                  codeSystem="1.0.3166.1"
+                  displayName="SLOVAKIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SLOVAKIA</desc>
+                    <designation language="en-GB" displayName="SLOVAKIA" type="fsn">SLOVAKIA</designation>
+                </concept>
+                <concept code="SL"
+                  codeSystem="1.0.3166.1"
+                  displayName="SIERRA LEONE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SIERRA LEONE</desc>
+                    <designation language="en-GB" displayName="SIERRA LEONE" type="fsn">SIERRA LEONE</designation>
+                </concept>
+                <concept code="SM"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAN MARINO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAN MARINO</desc>
+                    <designation language="en-GB" displayName="SAN MARINO" type="fsn">SAN MARINO</designation>
+                </concept>
+                <concept code="SN"
+                  codeSystem="1.0.3166.1"
+                  displayName="SENEGAL"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SENEGAL</desc>
+                    <designation language="en-GB" displayName="SENEGAL" type="fsn">SENEGAL</designation>
+                </concept>
+                <concept code="SO"
+                  codeSystem="1.0.3166.1"
+                  displayName="SOMALIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SOMALIA</desc>
+                    <designation language="en-GB" displayName="SOMALIA" type="fsn">SOMALIA</designation>
+                </concept>
+                <concept code="SR"
+                  codeSystem="1.0.3166.1"
+                  displayName="SURINAME"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SURINAME</desc>
+                    <designation language="en-GB" displayName="SURINAME" type="fsn">SURINAME</designation>
+                </concept>
+                <concept code="SS"
+                  codeSystem="1.0.3166.1"
+                  displayName="SOUTH SUDAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SOUTH SUDAN</desc>
+                    <designation language="en-GB" displayName="SOUTH SUDAN" type="fsn">SOUTH SUDAN</designation>
+                </concept>
+                <concept code="ST"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAO TOME AND PRINCIPE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAO TOME AND PRINCIPE</desc>
+                    <designation language="en-GB" displayName="SAO TOME AND PRINCIPE" type="fsn">SAO TOME AND PRINCIPE</designation>
+                </concept>
+                <concept code="SV"
+                  codeSystem="1.0.3166.1"
+                  displayName="EL SALVADOR"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">EL SALVADOR</desc>
+                    <designation language="en-GB" displayName="EL SALVADOR" type="fsn">EL SALVADOR</designation>
+                </concept>
+                <concept code="SX"
+                  codeSystem="1.0.3166.1"
+                  displayName="SINT MAARTEN (DUTCH PART)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SINT MAARTEN (DUTCH PART)</desc>
+                    <designation language="en-GB" displayName="SINT MAARTEN (DUTCH PART)" type="fsn">SINT MAARTEN (DUTCH PART)</designation>
+                </concept>
+                <concept code="SY"
+                  codeSystem="1.0.3166.1"
+                  displayName="SYRIAN ARAB REPUBLIC"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SYRIAN ARAB REPUBLIC</desc>
+                    <designation language="en-GB" displayName="SYRIAN ARAB REPUBLIC" type="fsn">SYRIAN ARAB REPUBLIC</designation>
+                </concept>
+                <concept code="SZ"
+                  codeSystem="1.0.3166.1"
+                  displayName="SWAZILAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SWAZILAND</desc>
+                    <designation language="en-GB" displayName="SWAZILAND" type="fsn">SWAZILAND</designation>
+                </concept>
+                <concept code="TC"
+                  codeSystem="1.0.3166.1"
+                  displayName="TURKS AND CAICOS ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TURKS AND CAICOS ISLANDS</desc>
+                    <designation language="en-GB" displayName="TURKS AND CAICOS ISLANDS" type="fsn">TURKS AND CAICOS ISLANDS</designation>
+                </concept>
+                <concept code="TD"
+                  codeSystem="1.0.3166.1"
+                  displayName="CHAD"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">CHAD</desc>
+                    <designation language="en-GB" displayName="CHAD" type="fsn">CHAD</designation>
+                </concept>
+                <concept code="TF"
+                  codeSystem="1.0.3166.1"
+                  displayName="FRENCH SOUTHERN TERRITORIES"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">FRENCH SOUTHERN TERRITORIES</desc>
+                    <designation language="en-GB"
+                         displayName="FRENCH SOUTHERN TERRITORIES"
+                         type="fsn">FRENCH SOUTHERN TERRITORIES</designation>
+                </concept>
+                <concept code="TG"
+                  codeSystem="1.0.3166.1"
+                  displayName="TOGO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TOGO</desc>
+                    <designation language="en-GB" displayName="TOGO" type="fsn">TOGO</designation>
+                </concept>
+                <concept code="TH"
+                  codeSystem="1.0.3166.1"
+                  displayName="THAILAND"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">THAILAND</desc>
+                    <designation language="en-GB" displayName="THAILAND" type="fsn">THAILAND</designation>
+                </concept>
+                <concept code="TJ"
+                  codeSystem="1.0.3166.1"
+                  displayName="TAJIKISTAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TAJIKISTAN</desc>
+                    <designation language="en-GB" displayName="TAJIKISTAN" type="fsn">TAJIKISTAN</designation>
+                </concept>
+                <concept code="TK"
+                  codeSystem="1.0.3166.1"
+                  displayName="TOKELAU"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TOKELAU</desc>
+                    <designation language="en-GB" displayName="TOKELAU" type="fsn">TOKELAU</designation>
+                </concept>
+                <concept code="TL"
+                  codeSystem="1.0.3166.1"
+                  displayName="TIMOR-LESTE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TIMOR-LESTE</desc>
+                    <designation language="en-GB" displayName="TIMOR-LESTE" type="fsn">TIMOR-LESTE</designation>
+                </concept>
+                <concept code="TM"
+                  codeSystem="1.0.3166.1"
+                  displayName="TURKMENISTAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TURKMENISTAN</desc>
+                    <designation language="en-GB" displayName="TURKMENISTAN" type="fsn">TURKMENISTAN</designation>
+                </concept>
+                <concept code="TN"
+                  codeSystem="1.0.3166.1"
+                  displayName="TUNISIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TUNISIA</desc>
+                    <designation language="en-GB" displayName="TUNISIA" type="fsn">TUNISIA</designation>
+                </concept>
+                <concept code="TO"
+                  codeSystem="1.0.3166.1"
+                  displayName="TONGA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TONGA</desc>
+                    <designation language="en-GB" displayName="TONGA" type="fsn">TONGA</designation>
+                </concept>
+                <concept code="TR"
+                  codeSystem="1.0.3166.1"
+                  displayName="TURKEY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TURKEY</desc>
+                    <designation language="en-GB" displayName="TURKEY" type="fsn">TURKEY</designation>
+                </concept>
+                <concept code="TT"
+                  codeSystem="1.0.3166.1"
+                  displayName="TRINIDAD AND TOBAGO"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TRINIDAD AND TOBAGO</desc>
+                    <designation language="en-GB" displayName="TRINIDAD AND TOBAGO" type="fsn">TRINIDAD AND TOBAGO</designation>
+                </concept>
+                <concept code="TV"
+                  codeSystem="1.0.3166.1"
+                  displayName="TUVALU"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TUVALU</desc>
+                    <designation language="en-GB" displayName="TUVALU" type="fsn">TUVALU</designation>
+                </concept>
+                <concept code="TW"
+                  codeSystem="1.0.3166.1"
+                  displayName="TAIWAN, PROVINCE OF CHINA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TAIWAN, PROVINCE OF CHINA</desc>
+                    <designation language="en-GB" displayName="TAIWAN, PROVINCE OF CHINA" type="fsn">TAIWAN, PROVINCE OF CHINA</designation>
+                </concept>
+                <concept code="TZ"
+                  codeSystem="1.0.3166.1"
+                  displayName="TANZANIA, UNITED REPUBLIC OF"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">TANZANIA, UNITED REPUBLIC OF</desc>
+                    <designation language="en-GB"
+                         displayName="TANZANIA, UNITED REPUBLIC OF"
+                         type="fsn">TANZANIA, UNITED REPUBLIC OF</designation>
+                </concept>
+                <concept code="UA"
+                  codeSystem="1.0.3166.1"
+                  displayName="UKRAINE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">UKRAINE</desc>
+                    <designation language="en-GB" displayName="UKRAINE" type="fsn">UKRAINE</designation>
+                </concept>
+                <concept code="UG"
+                  codeSystem="1.0.3166.1"
+                  displayName="UGANDA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">UGANDA</desc>
+                    <designation language="en-GB" displayName="UGANDA" type="fsn">UGANDA</designation>
+                </concept>
+                <concept code="UM"
+                  codeSystem="1.0.3166.1"
+                  displayName="UNITED STATES MINOR OUTLYING ISLANDS"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">UNITED STATES MINOR OUTLYING ISLANDS</desc>
+                    <designation language="en-GB"
+                         displayName="UNITED STATES MINOR OUTLYING ISLANDS"
+                         type="fsn">UNITED STATES MINOR OUTLYING ISLANDS</designation>
+                </concept>
+                <concept code="US"
+                  codeSystem="1.0.3166.1"
+                  displayName="UNITED STATES OF AMERICA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">UNITED STATES OF AMERICA</desc>
+                    <designation language="en-GB" displayName="UNITED STATES OF AMERICA" type="fsn">UNITED STATES OF AMERICA</designation>
+                </concept>
+                <concept code="UY"
+                  codeSystem="1.0.3166.1"
+                  displayName="URUGUAY"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">URUGUAY</desc>
+                    <designation language="en-GB" displayName="URUGUAY" type="fsn">URUGUAY</designation>
+                </concept>
+                <concept code="UZ"
+                  codeSystem="1.0.3166.1"
+                  displayName="UZBEKISTAN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">UZBEKISTAN</desc>
+                    <designation language="en-GB" displayName="UZBEKISTAN" type="fsn">UZBEKISTAN</designation>
+                </concept>
+                <concept code="VA"
+                  codeSystem="1.0.3166.1"
+                  displayName="HOLY SEE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">HOLY SEE</desc>
+                    <designation language="en-GB" displayName="HOLY SEE" type="fsn">HOLY SEE</designation>
+                </concept>
+                <concept code="VC"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAINT VINCENT AND THE GRENADINES"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAINT VINCENT AND THE GRENADINES</desc>
+                    <designation language="en-GB"
+                         displayName="SAINT VINCENT AND THE GRENADINES"
+                         type="fsn">SAINT VINCENT AND THE GRENADINES</designation>
+                </concept>
+                <concept code="VE"
+                  codeSystem="1.0.3166.1"
+                  displayName="VENEZUELA (BOLIVARIAN REPUBLIC OF)"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">VENEZUELA (BOLIVARIAN REPUBLIC OF)</desc>
+                    <designation language="en-GB"
+                         displayName="VENEZUELA (BOLIVARIAN REPUBLIC OF)"
+                         type="fsn">VENEZUELA (BOLIVARIAN REPUBLIC OF)</designation>
+                </concept>
+                <concept code="VG"
+                  codeSystem="1.0.3166.1"
+                  displayName="VIRGIN ISLANDS, BRITISH"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">VIRGIN ISLANDS, BRITISH</desc>
+                    <designation language="en-GB" displayName="VIRGIN ISLANDS, BRITISH" type="fsn">VIRGIN ISLANDS, BRITISH</designation>
+                </concept>
+                <concept code="VI"
+                  codeSystem="1.0.3166.1"
+                  displayName="VIRGIN ISLANDS, U.S."
+                  level="0"
+                  type="L">
+                    <desc language="en-US">VIRGIN ISLANDS, U.S.</desc>
+                    <designation language="en-GB" displayName="VIRGIN ISLANDS, U.S." type="fsn">VIRGIN ISLANDS, U.S.</designation>
+                </concept>
+                <concept code="VN"
+                  codeSystem="1.0.3166.1"
+                  displayName="VIET NAM"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">VIET NAM</desc>
+                    <designation language="en-GB" displayName="VIET NAM" type="fsn">VIET NAM</designation>
+                </concept>
+                <concept code="VU"
+                  codeSystem="1.0.3166.1"
+                  displayName="VANUATU"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">VANUATU</desc>
+                    <designation language="en-GB" displayName="VANUATU" type="fsn">VANUATU</designation>
+                </concept>
+                <concept code="WF"
+                  codeSystem="1.0.3166.1"
+                  displayName="WALLIS AND FUTUNA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">WALLIS AND FUTUNA</desc>
+                    <designation language="en-GB" displayName="WALLIS AND FUTUNA" type="fsn">WALLIS AND FUTUNA</designation>
+                </concept>
+                <concept code="WS"
+                  codeSystem="1.0.3166.1"
+                  displayName="SAMOA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SAMOA</desc>
+                    <designation language="en-GB" displayName="SAMOA" type="fsn">SAMOA</designation>
+                </concept>
+                <concept code="YE"
+                  codeSystem="1.0.3166.1"
+                  displayName="YEMEN"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">YEMEN</desc>
+                    <designation language="en-GB" displayName="YEMEN" type="fsn">YEMEN</designation>
+                </concept>
+                <concept code="YT"
+                  codeSystem="1.0.3166.1"
+                  displayName="MAYOTTE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">MAYOTTE</desc>
+                    <designation language="en-GB" displayName="MAYOTTE" type="fsn">MAYOTTE</designation>
+                </concept>
+                <concept code="ZA"
+                  codeSystem="1.0.3166.1"
+                  displayName="SOUTH AFRICA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">SOUTH AFRICA</desc>
+                    <designation language="en-GB" displayName="SOUTH AFRICA" type="fsn">SOUTH AFRICA</designation>
+                </concept>
+                <concept code="ZM"
+                  codeSystem="1.0.3166.1"
+                  displayName="ZAMBIA"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ZAMBIA</desc>
+                    <designation language="en-GB" displayName="ZAMBIA" type="fsn">ZAMBIA</designation>
+                </concept>
+                <concept code="ZW"
+                  codeSystem="1.0.3166.1"
+                  displayName="ZIMBABWE"
+                  level="0"
+                  type="L">
+                    <desc language="en-US">ZIMBABWE</desc>
+                    <designation language="en-GB" displayName="ZIMBABWE" type="fsn">ZIMBABWE</designation>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

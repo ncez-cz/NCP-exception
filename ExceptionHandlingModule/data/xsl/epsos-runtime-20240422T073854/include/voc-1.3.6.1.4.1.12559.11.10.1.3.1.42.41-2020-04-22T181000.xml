@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:pharm="urn:hl7-org:pharm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.41"
+             name="eHDSITimingEvent"
+             displayName="eHDSITimingEvent"
+             effectiveDate="2020-04-22T18:10:00"
+             statusCode="deprecated"
+             versionLabel="202004">
+      <sourceCodeSystem id="2.16.840.1.113883.5.139"
+                        identifierName="TimingEvent"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.139"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.139"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.139"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.139"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="AC"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="before meal (from lat. ante cibus)"
+                  level="0"
+                  type="L"/>
+                <concept code="ACD"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="before lunch (from lat. ante cibus diurnus)"
+                  level="0"
+                  type="L"/>
+                <concept code="ACM"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="before breakfast (from lat. ante cibus matutinus)"
+                  level="0"
+                  type="L"/>
+                <concept code="ACV"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="before dinner (from lat. ante cibus vespertinus)"
+                  level="0"
+                  type="L"/>
+                <concept code="HS"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="Prior to beginning a regular period of extended sleep (this would exclude naps). Note that this might occur at different times of day depending on a person's regular sleep schedule."
+                  level="0"
+                  type="L"/>
+                <concept code="IC"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="between meals (from lat. inter cibus)"
+                  level="0"
+                  type="L"/>
+                <concept code="ICD"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="between lunch and dinner"
+                  level="0"
+                  type="L"/>
+                <concept code="ICM"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="between breakfast and lunch"
+                  level="0"
+                  type="L"/>
+                <concept code="ICV"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="between dinner and the hour of sleep"
+                  level="0"
+                  type="L"/>
+                <concept code="PC"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="after meal (from lat. post cibus)"
+                  level="0"
+                  type="L"/>
+                <concept code="PCD"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="after lunch (from lat. post cibus diurnus)"
+                  level="0"
+                  type="L"/>
+                <concept code="PCM"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="after breakfast (from lat. post cibus matutinus)"
+                  level="0"
+                  type="L"/>
+                <concept code="PCV"
+                  codeSystem="2.16.840.1.113883.5.139"
+                  displayName="after dinner (from lat. post cibus vespertinus)"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="2.16.840.1.113883.1.11.16543"
+             name="ParticipationMode"
+             displayName="ParticipationMode"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="epsos-">
+      <desc language="en-US">
+                <b>description: </b>
+                <p>Identifies the primary means by which an Entity participates in an Act.</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.1064" identifierName=""/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="PHYSICAL"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="physical presence"
+                  level="0"
+                  type="L"/>
+                <concept code="REMOTE"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="remote presence"
+                  level="0"
+                  type="L"/>
+                <concept code="VERBAL"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="verbal"
+                  level="0"
+                  type="S"/>
+                <concept code="DICTATE"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="dictated"
+                  level="1"
+                  type="L"/>
+                <concept code="FACE"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="face-to-face"
+                  level="1"
+                  type="L"/>
+                <concept code="PHONE"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="telephone"
+                  level="1"
+                  type="L"/>
+                <concept code="VIDEOCONF"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="videoconferencing"
+                  level="1"
+                  type="L"/>
+                <concept code="WRITTEN"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="written"
+                  level="0"
+                  type="S"/>
+                <concept code="EMAILWRIT"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="email"
+                  level="1"
+                  type="L"/>
+                <concept code="FAXWRIT"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="telefax"
+                  level="1"
+                  type="L"/>
+                <concept code="HANDWRIT"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="handwritten"
+                  level="1"
+                  type="L"/>
+                <concept code="TYPEWRIT"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="typewritten"
+                  level="1"
+                  type="L"/>
+                <concept code="ELECTRONIC"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="electronic data"
+                  level="0"
+                  type="L"/>
+                <concept code="PHYSICAL"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="physical presence"
+                  level="0"
+                  type="L"/>
+                <concept code="VERBAL"
+                  codeSystem="2.16.840.1.113883.5.1064"
+                  displayName="verbal"
+                  level="0"
+                  type="S"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

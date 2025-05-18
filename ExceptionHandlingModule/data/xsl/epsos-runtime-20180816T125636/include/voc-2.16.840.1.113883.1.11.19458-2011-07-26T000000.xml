@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="2.16.840.1.113883.1.11.19458"
+             name="x_DocumentActMood"
+             displayName="x_DocumentActMood"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="epsos-">
+      <desc language="en-US">
+                <b>description: </b>
+                <p>Used to enumerate the moods that an act can take within the body of a clinical document.</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.1001" identifierName=""/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="APT"
+                  codeSystem="2.16.840.1.113883.5.1001"
+                  displayName="appointment"
+                  level="0"
+                  type="L"/>
+                <concept code="ARQ"
+                  codeSystem="2.16.840.1.113883.5.1001"
+                  displayName="appointment request"
+                  level="0"
+                  type="L"/>
+                <concept code="DEF"
+                  codeSystem="2.16.840.1.113883.5.1001"
+                  displayName="definition"
+                  level="0"
+                  type="L"/>
+                <concept code="EVN"
+                  codeSystem="2.16.840.1.113883.5.1001"
+                  displayName="event (occurrence)"
+                  level="0"
+                  type="L"/>
+                <concept code="INT"
+                  codeSystem="2.16.840.1.113883.5.1001"
+                  displayName="intent"
+                  level="0"
+                  type="S"/>
+                <concept code="PRMS"
+                  codeSystem="2.16.840.1.113883.5.1001"
+                  displayName="promise"
+                  level="0"
+                  type="S"/>
+                <concept code="PRP"
+                  codeSystem="2.16.840.1.113883.5.1001"
+                  displayName="proposal"
+                  level="0"
+                  type="S"/>
+                <concept code="RQO"
+                  codeSystem="2.16.840.1.113883.5.1001"
+                  displayName="request"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

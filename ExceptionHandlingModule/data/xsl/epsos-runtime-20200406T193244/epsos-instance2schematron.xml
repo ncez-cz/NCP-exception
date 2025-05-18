@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings>
+    <!-- Chapter 1: Release Info (if publication is a release) -->
+    <!-- ========= --><release project="2.16.840.1.113883.3.1937.777.11"
+            prefix="epsos-"
+            signature="20200406T193244"
+            date="2020-04-06T19:32:44"
+            versionLabel="v3.0.2">
+      <note xmlns:cpm="urn:hl7-eu:cpm"
+            xmlns:epsos="urn:epsos-org:ep:medication"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            language="en-US">
+                <div>There have been changes to the following 14 issues since the last intermediate version or release.</div>
+                <ul>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.219"
+                     target="_blank">219</a> "Constraints for custodian organization" with status "Closed".  Last event  (2020-04-06T13:12:44): </div>
+                        <div style="padding: 10px;">Fix implemented. We added the hl7:representedCustodianOrganization to the epSOS CDA Custodian template where we could restrict the cardinality of the hl7:telecom element.<br clear="none"/>This solution is following the approach taken by the CDA R2 specifications.</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.225"
+                     target="_blank">225</a> "custodian org, see epsos-issue-219" with status "Closed".  Last event  (2020-04-06T13:13:30): </div>
+                        <div style="padding: 10px;">Fix implemented</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.227"
+                     target="_blank">227</a> "custodian org, see epsos-issue-219" with status "Closed".  Last event  (2020-04-06T13:14:19): </div>
+                        <div style="padding: 10px;">Fix implemented.</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.228"
+                     target="_blank">228</a> "custodian org, see epsos-issue-219" with status "Closed".  Last event  (2020-04-06T13:14:43): </div>
+                        <div style="padding: 10px;">Fix implemented.</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.229"
+                     target="_blank">229</a> "custodian org, see epsos-issue-219" with status "Closed".  Last event  (2020-04-06T13:15:08): </div>
+                        <div style="padding: 10px;">Fix implemented.</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.230"
+                     target="_blank">230</a> "custodian org, see epsos-issue-219" with status "Closed".  Last event  (2020-04-06T13:15:40): </div>
+                        <div style="padding: 10px;">Fix implemented.</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.330"
+                     target="_blank">330</a> "Modify the entry cardinality for the Dispensation section template" with status "Closed".  Last event  (2020-01-09T11:42:51): </div>
+                        <div style="padding: 10px;">Fix implemented</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.331"
+                     target="_blank">331</a> "Change Code System OID for epSOSIllenssesandDisorders value set" with status "Closed".  Last event  (2020-04-06T12:12:01): </div>
+                        <div style="padding: 10px;">Code system OID modified in ART-DECOR</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.332"
+                     target="_blank">332</a> "IHE Gazelle EVS client is unable to distinguish between the two different effectiveTime elements (medication regimen and frequency of intakes)" with status "Closed".  Last event  (2020-04-06T12:08:56): </div>
+                        <div style="padding: 10px;">Fix implemented for CDA IG v3.0.2. release</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.333"
+                     target="_blank">333</a> "IHE Gazelle EVS Client is not able to distinguish between the different hl7:entryRelationship elements with @typeCode='SUBJ'" with status "Closed".  Last event  (2020-04-06T12:22:19): </div>
+                        <div style="padding: 10px;">Fix implemented</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-open">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.334"
+                     target="_blank">334</a> "Encoding issue when loading value set concepts containing special characters in ART-DECOR" with status "Open".  Last event  (2020-04-06T13:07:18): </div>
+                        <div style="padding: 10px;">
+                            <b>Finding: </b>
+                            <p>- Caused by the loading of the MVC value sets (provided in excel format) into ART-DECOR by the ART-DECOR team. Problem is that the text is encoded in Unicode (UTF-8) and decoded with Western European (ISO) producing special characters.</p>They are displayed correctly in the ART-DECOR authoring tool but are wrong in the TEMPLE editor and the BBR file. <br clear="none"/>
+                            <b>
+                                <br clear="none"/>Suggestion: </b>
+                            <p>- For our W3 hotfix release we manually modified all the displayNames of the concepts containing special characters. To find them we used the</p>following mapping table between UTF-8 and iso-8859-1 unicode: <a class="external-link"
+                     href="http://string-functions.com/encodingtable.aspx?encoding=65001&amp;decoding=28591"
+                     rel="nofollow"
+                     style="cursor: pointer;">http://string-functions.com/encodingtable.aspx?encoding=65001&amp;decoding=28591</a>
+                            <br clear="none"/>
+                            <b>
+                                <br clear="none"/>Further explanation: </b>
+                            <p>- Issue in JIRA: <a class=""
+                        href="https://ec.europa.eu/cefdigital/tracker/browse/EHSEMANTIC-643">https://ec.europa.eu/cefdigital/tracker/browse/EHSEMANTIC-643</a>
+                                <br clear="none"/>- Issue in IHE-JIRA: <a href="https://gazelle.ihe.net/jira/servicedesk/customer/portal/24/DGSANTE-71">https://gazelle.ihe.net/jira/servicedesk/customer/portal/24/DGSANTE-71</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="node-issue-open">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.335"
+                     target="_blank">335</a> "Replace schematron asserts for hl7:country to textual constraints" with status "Open".  Last event  (2020-04-06T13:33:54): </div>
+                        <div style="padding: 10px;">
+                            <b>Finding: </b>
+                            <p>- Issue reported by Wylem Bars (IHE): Some "assert" are made in BBR to perform a match on value-sets. This cannot be resolved by generated validators as data is not stored the same way in AD and in Gazelle.</p>
+                            <b>Suggestion: </b>
+                            <p>- replace the schematron assertions by textual constraints</p>
+                            <b>Further explanation: </b>
+                            <p>- Link to JIRA issue: <a href="https://ec.europa.eu/cefdigital/tracker/browse/EHSEMANTIC-629">https://ec.europa.eu/cefdigital/tracker/browse/EHSEMANTIC-629</a>
+                                <br clear="none"/>Link to IHE JIRA issue: <a class=""
+                        href="https://gazelle.ihe.net/jira/servicedesk/customer/portal/24/DGSANTE-72">https://gazelle.ihe.net/jira/servicedesk/customer/portal/24/DGSANTE-72</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.336"
+                     target="_blank">336</a> "Wrong namespace prefix used in schematron assert for marketingAuthrorizationHolder" with status "Closed".  Last event  (2020-04-06T13:51:29): </div>
+                        <div style="padding: 10px;">Prefixes adapted.</div>
+                    </li>
+                    <li>
+                        <div class="node-issue-closed">Issue <a href="https://art-decor.ehdsi.eu/art-decor/decor-issues--epsos-?id=2.16.840.1.113883.3.1937.777.11.6.337"
+                     target="_blank">337</a> "Improve description for inFullfillment of element" with status "Closed".  Last event  (2020-04-06T19:26:45): </div>
+                        <div style="padding: 10px;">Description improved.</div>
+                    </li>
+                </ul>
+            </note>
+   </release>
+    
+    <!-- Chapter 2: Mapping based on model list -->
+    <!-- ========= -->
+    <!-- Used to map an instance to a specific Schematron. How to read:
+- For every template-id that is used in instances there is an element map, e.g.
+  <map model="REPC_IN004110UV01" namespace="urn:hl7-org:v3" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  or
+  <map templateRoot="2.16.840.1.113883.2.4.6.10.90.59" templateExt="2017-03-27" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  <map templateRoot="2.16.840.1.113883.2.4.6.10.90.59" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  or 
+  <map rootelement="REPC_IN004110UV01" namespace="urn:hl7-org:v3" sch="peri20-counseling-fase-1c.sch" schsvrl="peri20-counseling-fase-1c.xsl"/>
+  
+  - @model       - optional    - hint as to the XML Schema that could be used
+  - @namespace   - mandatory   - default namespace-uri() of the project and of the instance unless specified otherwise
+  or
+  - templateRoot - mandatory   - in HL7v3 this would be an OID. In other instance types it might be something else, but then this mapping file might need adjusted setup
+  - templateExt  - optional    - in HL7v3 this would be any string found in templateId/@extension
+  or
+  - @rootelement - required    - local-name() of the root element of the instance
+  - @namespace   - mandatory   - namespace-uri() of the root element
+  
+  One of the following is required, normally schsvrl makes sense:
+  - @schsvrl     - conditional - path+file name of the SVRL XSL. The path should be relative to this index/map file
+  - @schtext     - conditional - path+file name of the Text XSL. The path should be relative to this index/map file
+  - @sch         - conditional - path+file name of the original Schematron file. The path should be relative to this index/map file
+    
+  Note that the same template may be part of multiple transactions, hence multiple map element could be present for the same template. The attached Schematron
+  will have different names, but will have the exact same rules (same template, same rules) hence only the first match is needed for validation.
+  
+- As final fallback, when no template-id is found in the instance, code should rely on root element of the instance to determine the Schematron file name ... --><!-- template name: eHDSI-OriginalPS -->
+    <map rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.7"
+        sch="epsos-PatientSummary_L1.sch"
+        schsvrl="epsos-PatientSummary_L1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-PatientSummary_L1.sch"
+        schsvrl="epsos-PatientSummary_L1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: eHDSI-Original-eP -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.6"
+        sch="epsos-ePrescriptionL1.sch"
+        schsvrl="epsos-ePrescriptionL1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-ePrescriptionL1.sch"
+        schsvrl="epsos-ePrescriptionL1.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-eP -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.1"
+        sch="epsos-ePrescription.sch"
+        schsvrl="epsos-ePrescription.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-ePrescription.sch"
+        schsvrl="epsos-ePrescription.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-eD -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.2"
+        sch="epsos-eDispensation.sch"
+        schsvrl="epsos-eDispensation.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-eDispensation.sch"
+        schsvrl="epsos-eDispensation.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-HCER -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.4"
+        sch="epsos-MedicationRelatedOverview.sch"
+        schsvrl="epsos-MedicationRelatedOverview.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-MedicationRelatedOverview.sch"
+        schsvrl="epsos-MedicationRelatedOverview.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-MRO -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.5"
+        sch="epsos-HealthCareEncounterReport.sch"
+        schsvrl="epsos-HealthCareEncounterReport.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-HealthCareEncounterReport.sch"
+        schsvrl="epsos-HealthCareEncounterReport.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <!-- template name: epSOS-PS -->
+    <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        templateRoot="1.3.6.1.4.1.12559.11.10.1.3.1.1.3"
+        sch="epsos-PatientSummary.sch"
+        schsvrl="epsos-PatientSummary.xsl"
+        xsd="ClinicalDocument.xsd"/>
+   <map model="ClinicalDocument"
+        rootelement="ClinicalDocument"
+        namespace="urn:hl7-org:v3"
+        sch="epsos-PatientSummary.sch"
+        schsvrl="epsos-PatientSummary.xsl"
+        xsd="ClinicalDocument.xsd"/>
+    
+    <!-- Chapter 3: Mapping based on representing templates -->
+    <!-- ========= -->
+    <!-- Used to map a representing template to a specific Schematron. How to read:
+- For every representing template the schematron file and sch svrl xsl conversion file is mentioned
+- The corresponding root element plus its namespace is mentioned 
+- Every transaction represented by this template is named--><template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.6"
+             effectiveDate=""
+             sch="epsos-ePrescriptionL1.sch"
+             schsvrl="epsos-ePrescriptionL1.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.32"
+                   effectiveDate="2017-11-21T10:26:49"
+                   statusCode="draft"
+                   name="Return eP (PDF embedded) from country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.7"
+             effectiveDate=""
+             sch="epsos-PatientSummary_L1.sch"
+             schsvrl="epsos-PatientSummary_L1.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.29"
+                   effectiveDate="2017-11-20T18:28:16"
+                   statusCode="draft"
+                   name="Return PS (PDF embedded) of country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.1"
+             effectiveDate=""
+             sch="epsos-ePrescription.sch"
+             schsvrl="epsos-ePrescription.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.19"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Return eP from country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.2"
+             effectiveDate=""
+             sch="epsos-eDispensation.sch"
+             schsvrl="epsos-eDispensation.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.25"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Send eD to country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.4"
+             effectiveDate=""
+             sch="epsos-MedicationRelatedOverview.sch"
+             schsvrl="epsos-MedicationRelatedOverview.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.23"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Return MRO"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.5"
+             effectiveDate=""
+             sch="epsos-HealthCareEncounterReport.sch"
+             schsvrl="epsos-HealthCareEncounterReport.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.21"
+                   effectiveDate="2013-11-02T00:00:00"
+                   statusCode="draft"
+                   name="Send HCER to country A"/>
+   </template>
+   <template id="1.3.6.1.4.1.12559.11.10.1.3.1.1.3"
+             effectiveDate=""
+             sch="epsos-PatientSummary.sch"
+             schsvrl="epsos-PatientSummary.xsl">
+      <root rootelement="ClinicalDocument" namespace="urn:hl7-org:v3"/>
+      <transaction id="2.16.840.1.113883.3.1937.777.11.4.12"
+                   effectiveDate="2012-05-02T00:00:00"
+                   statusCode="draft"
+                   name="Return PS of country A"/>
+   </template>
+</mappings>

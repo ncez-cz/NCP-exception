@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:epsos="urn:epSOS:ps:ps:2010"
+             id="2.16.840.1.113883.1.11.19000"
+             name="x_ActRelationshipExternalReference"
+             displayName="x_ActRelationshipExternalReference"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="epsos-">
+      <desc language="en-US">
+                <b>description: </b>
+                <p>Used to enumerate the relationships between a CDA entry and an externally referenced act.</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.1002" identifierName="Act Relationship Type"/>
+      <conceptList>
+                <concept code="ELNK"
+                  codeSystem="2.16.840.1.113883.5.1002"
+                  displayName="episodeLink"
+                  level="0"
+                  type="L"/>
+                <concept code="REFR"
+                  codeSystem="2.16.840.1.113883.5.1002"
+                  displayName="refers to"
+                  level="0"
+                  type="S"/>
+                <concept code="RPLC"
+                  codeSystem="2.16.840.1.113883.5.1002"
+                  displayName="replaces"
+                  level="0"
+                  type="L"/>
+                <concept code="SPRT"
+                  codeSystem="2.16.840.1.113883.5.1002"
+                  displayName="has support"
+                  level="0"
+                  type="S"/>
+                <concept code="SUBJ"
+                  codeSystem="2.16.840.1.113883.5.1002"
+                  displayName="has subject"
+                  level="0"
+                  type="L"/>
+                <concept code="XCRPT"
+                  codeSystem="2.16.840.1.113883.5.1002"
+                  displayName="Excerpts"
+                  level="0"
+                  type="S"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

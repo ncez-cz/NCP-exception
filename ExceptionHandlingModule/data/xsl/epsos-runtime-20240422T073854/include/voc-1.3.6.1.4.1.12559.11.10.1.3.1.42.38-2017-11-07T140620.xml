@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:cpm="urn:hl7-eu:cpm"
+             xmlns:pharm="urn:hl7-org:pharm"
+             xmlns:epsos="urn:epsos-org:ep:medication"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.38"
+             name="epSOSPersonalRelationship"
+             displayName="epSOSPersonalRelationship"
+             effectiveDate="2017-11-07T14:06:20"
+             officialReleaseDate="2017-11-07T14:06:20"
+             statusCode="deprecated"
+             versionLabel="201711">
+      <desc language="en-US">epSOSPersonalRelationship</desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.111"
+                        identifierName="Role Code"
+                        canonicalUri="urn:oid:2.16.840.1.113883.5.111"
+                        canonicalUriDSTU2="urn:oid:2.16.840.1.113883.5.111"
+                        canonicalUriSTU3="urn:oid:2.16.840.1.113883.5.111"
+                        canonicalUriR4="urn:oid:2.16.840.1.113883.5.111"/>
+      <publishingAuthority name="epSOS">
+                <addrLine>http://www.epSOS.eu</addrLine>
+            </publishingAuthority>
+      <conceptList>
+                <concept code="AUNT"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="aunt"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="aunt" type="fsn">The player of the role is a sister of the scoping person's mother or father.</designation>
+                    <desc language="en-US">aunt</desc>
+                </concept>
+                <concept code="CHILD"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="Child"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Child" type="fsn">The player of the role is a child of the scoping entity.</designation>
+                    <desc language="en-US">Child</desc>
+                </concept>
+                <concept code="CHLDADOPT"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="adopted child"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="adopted child" type="fsn">The player of the role is a child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.</designation>
+                    <desc language="en-US">adopted child</desc>
+                </concept>
+                <concept code="CHLDFOST"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="foster child"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="foster child" type="fsn">The player of the role is a child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.</designation>
+                    <desc language="en-US">foster child</desc>
+                </concept>
+                <concept code="CHLDINLAW"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="child in-law"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="child in-law" type="fsn">The player of the role is the spouse of scoping person's child.</designation>
+                    <desc language="en-US">child in-law</desc>
+                </concept>
+                <concept code="COUSN"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="cousin"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="cousin" type="fsn">The player of the role is a relative of the scoping person descended from a common ancestor, such as a grandparent, by two or more steps in a diverging line.</designation>
+                    <desc language="en-US">cousin</desc>
+                </concept>
+                <concept code="DAU"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="natural daughter"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="natural daughter" type="fsn">The player of the role is a female offspring of the scoping entity (parent).</designation>
+                    <desc language="en-US">natural daughter</desc>
+                </concept>
+                <concept code="DAUADOPT"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="adopted daughter"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="adopted daughter" type="fsn">The player of the role is a female child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.</designation>
+                    <desc language="en-US">adopted daughter</desc>
+                </concept>
+                <concept code="DAUC"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="Daughter"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Daughter" type="fsn">The player of the role is a female child (of any type) of scoping entity (parent)</designation>
+                    <desc language="en-US">Daughter</desc>
+                </concept>
+                <concept code="DAUFOST"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="foster daughter"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="foster daughter" type="fsn">The player of the role is a female child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.</designation>
+                    <desc language="en-US">foster daughter</desc>
+                </concept>
+                <concept code="DAUINLAW"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="daughter in-law"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="daughter in-law" type="fsn">The player of the role is the wife of scoping person's son.</designation>
+                    <desc language="en-US">daughter in-law</desc>
+                </concept>
+                <concept code="DOMPART"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="domestic partner"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="domestic partner" type="fsn">The player of the role cohabits with the scoping person but is not the scoping person's spouse.</designation>
+                    <desc language="en-US">domestic partner</desc>
+                </concept>
+                <concept code="FAMMEMB"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="Family Member"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Family Member" type="fsn">A relationship between two people characterizing their "familial" relationship</designation>
+                    <desc language="en-US">Family Member</desc>
+                </concept>
+                <concept code="FRND"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="unrelated friend"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="unrelated friend" type="fsn">The player of the role is a person who is known, liked, and trusted by the scoping person.</designation>
+                    <desc language="en-US">unrelated friend</desc>
+                </concept>
+                <concept code="FTH"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="Father"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Father" type="fsn">The player of the role is a male who begets or raises or nurtures the scoping entity (child).</designation>
+                    <desc language="en-US">Father</desc>
+                </concept>
+                <concept code="FTHINLAW"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="father-in-law"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="father-in-law" type="fsn">The player of the role is the father of the scoping person's husband or wife.</designation>
+                    <desc language="en-US">father-in-law</desc>
+                </concept>
+                <concept code="GGRPRN"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="great grandparent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="great grandparent" type="fsn">The player of the role is a parent of the scoping person's grandparent.</designation>
+                    <desc language="en-US">great grandparent</desc>
+                </concept>
+                <concept code="GRNDCHILD"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="grandchild"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="grandchild" type="fsn">The player of the role is a child of the scoping person's son or daughter.</designation>
+                    <desc language="en-US">grandchild</desc>
+                </concept>
+                <concept code="GRPRN"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="Grandparent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Grandparent" type="fsn">The player of the role is a parent of the scoping person's mother or father.</designation>
+                    <desc language="en-US">Grandparent</desc>
+                </concept>
+                <concept code="MTH"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="Mother"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Mother" type="fsn">The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).</designation>
+                    <desc language="en-US">Mother</desc>
+                </concept>
+                <concept code="MTHINLAW"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="mother-in-law"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="mother-in-law" type="fsn">The player of the role is the mother of the scoping person's husband or wife.</designation>
+                    <desc language="en-US">mother-in-law</desc>
+                </concept>
+                <concept code="NBOR"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="neighbor"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="neighbor" type="fsn">The player of the role lives near or next to the scoping person.</designation>
+                    <desc language="en-US">neighbor</desc>
+                </concept>
+                <concept code="NCHILD"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="natural child"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="natural child" type="fsn">The player of the role is an offspring of the scoping entity as determined by birth.</designation>
+                    <desc language="en-US">natural child</desc>
+                </concept>
+                <concept code="NIENEPH"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="niece/nephew"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="niece/nephew" type="fsn">The player of the role is a child of scoping person's brother or sister or of the brother or sister of the scoping person's spouse.</designation>
+                    <desc language="en-US">niece/nephew</desc>
+                </concept>
+                <concept code="PRN"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="Parent"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Parent" type="fsn">The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).</designation>
+                    <desc language="en-US">Parent</desc>
+                </concept>
+                <concept code="PRNINLAW"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="parent in-law"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="parent in-law" type="fsn">The player of the role is the parent of scoping person's husband or wife.</designation>
+                    <desc language="en-US">parent in-law</desc>
+                </concept>
+                <concept code="ROOM"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="Roommate"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Roommate" type="fsn">One who shares living quarters with the subject.</designation>
+                    <desc language="en-US">Roommate</desc>
+                </concept>
+                <concept code="SIB"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="Sibling"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="Sibling" type="fsn">The player of the role shares one or both parents in common with the scoping entity.</designation>
+                    <desc language="en-US">Sibling</desc>
+                </concept>
+                <concept code="SIGOTHR"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="significant other"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="significant other" type="fsn">A person who is important to one's well being; especially a spouse or one in a similar relationship. (The player is the one who is important)</designation>
+                    <desc language="en-US">significant other</desc>
+                </concept>
+                <concept code="SON"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="natural son"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="natural son" type="fsn">The player of the role is a male offspring of the scoping entity (parent).</designation>
+                    <desc language="en-US">natural son</desc>
+                </concept>
+                <concept code="SONADOPT"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="adopted son"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="adopted son" type="fsn">The player of the role is a male child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.</designation>
+                    <desc language="en-US">adopted son</desc>
+                </concept>
+                <concept code="SONC"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="son"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="son" type="fsn">The player of the role is a male child (of any type) of scoping entity (parent)</designation>
+                    <desc language="en-US">son</desc>
+                </concept>
+                <concept code="SONFOST"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="foster son"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="foster son" type="fsn">The player of the role is a male child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.</designation>
+                    <desc language="en-US">foster son</desc>
+                </concept>
+                <concept code="SONINLAW"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="son in-law"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="son in-law" type="fsn">The player of the role is the husband of scoping person's daughter.</designation>
+                    <desc language="en-US">son in-law</desc>
+                </concept>
+                <concept code="SPS"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="spouse"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="spouse" type="fsn">The player of the role is a marriage partner of the scoping person.</designation>
+                    <desc language="en-US">spouse</desc>
+                </concept>
+                <concept code="STPCHLD"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="step child"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="step child" type="fsn">The player of the role is a child of the scoping person's spouse by a previous union.</designation>
+                    <desc language="en-US">step child</desc>
+                </concept>
+                <concept code="STPDAU"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="stepdaughter"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="stepdaughter" type="fsn">The player of the role is a daughter of the scoping person's spouse by a previous union.</designation>
+                    <desc language="en-US">stepdaughter</desc>
+                </concept>
+                <concept code="STPSON"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="stepson"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="stepson" type="fsn">The player of the role is a son of the scoping person's spouse by a previous union.</designation>
+                    <desc language="en-US">stepson</desc>
+                </concept>
+                <concept code="UNCLE"
+                  codeSystem="2.16.840.1.113883.5.111"
+                  displayName="uncle"
+                  level="0"
+                  type="L">
+                    <designation language="en-GB" displayName="uncle" type="fsn">The player of the role is a brother of the scoping person's mother or father.</designation>
+                    <desc language="en-US">uncle</desc>
+                </concept>
+            </conceptList>
+   </valueSet>
+</valueSets>

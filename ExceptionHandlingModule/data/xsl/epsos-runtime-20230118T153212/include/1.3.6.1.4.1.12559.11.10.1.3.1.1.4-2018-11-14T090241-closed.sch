@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Template derived pattern
+===========================================
+ID: 1.3.6.1.4.1.12559.11.10.1.3.1.1.4
+Name: epSOS-Health Care Encounter Report
+Description: 
+                 
+                     epSOS Health Care Encounter Report Template 
+                 
+                 The implementers must be familiar with the context of the project, as it shall not be repeated in this document. The implementers must also be familiar with the content of the following documents: 
+                 
+                     CDA Release 2.0 Normative Web Edition, May, 2005 
+                     HL7 Implementation Guide: CDA Release 2 – Continuity of Care Document (CCD), HL7, April 1, 2007. 
+                     Integrating the Healthcare Enterprise, Patient Care Coordination Technical Framework, Volume 1 and Volume 2- Revision 5, IHE International, August 10, 2009. 
+                     Integrating the Healthcare Enterprise, Patient Care Coordination CDA Content Modules- Trial Implementation Supplement, August 10, 2009. 
+                     HL7 Implementation Guide for CDA Release 2: History and Physical (H&P) Notes, HL7, July 16, 2008. 
+                 
+-->
+<pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+         id="template-1.3.6.1.4.1.12559.11.10.1.3.1.1.4-2018-11-14T090241-closed">
+   <title>epSOS-Health Care Encounter Report</title>
+</pattern>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:epsos="urn:epSOS:ps:ps:2010"
+             id="1.3.6.1.4.1.12559.11.10.1.3.1.42.36"
+             name="epSOSIHERoleCode"
+             displayName="epSOSIHERoleCode"
+             effectiveDate="2013-06-03T00:00:00"
+             statusCode="draft"
+             versionLabel="August 2009 (R5)">
+      <desc language="en-US">It is a set of technical codes defined by IHE to represent certain roles that entities play or are scoped by.</desc>
+      <sourceCodeSystem id="1.3.6.1.4.1.19376.1.5.3.3" identifierName="IHE PCC RoleCode"/>
+      <conceptList>
+                <concept code="AFFILIATED"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.3"
+                  displayName="An organization with which a person is affiliated (e.g., a volunteer organization)."
+                  level="0"
+                  type="L"/>
+                <concept code="EMPLOYER"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.3"
+                  displayName="The employer of a person."
+                  level="0"
+                  type="L"/>
+                <concept code="PHARMACY"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.3"
+                  displayName="The pharmacy a person uses."
+                  level="0"
+                  type="L"/>
+                <concept code="SCHOOL"
+                  codeSystem="1.3.6.1.4.1.19376.1.5.3.3"
+                  displayName="The school in which a person is enrolled."
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valueSets>
+   <valueSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:epsos="urn:epSOS:ps:ps:2010"
+             id="2.16.840.1.113883.1.11.16772"
+             name="x_InformationRecipientRole"
+             displayName="x_InformationRecipientRole"
+             effectiveDate="2011-07-26T00:00:00"
+             statusCode="final"
+             versionLabel="DEFN=UV=VO=1099-20110726"
+             url="http://art-decor.org/decor/services/"
+             ident="ad2bbr-"
+             referencedFrom="epsos-">
+      <desc language="en-US">
+                <b>description: </b>
+                <p>Used to represent the role(s) of those who should receive a copy of a document.</p>
+            </desc>
+      <sourceCodeSystem id="2.16.840.1.113883.5.110" identifierName="Role Class"/>
+      <conceptList>
+                <concept code="ASSIGNED"
+                  codeSystem="2.16.840.1.113883.5.110"
+                  displayName="assigned entity"
+                  level="0"
+                  type="S"/>
+                <concept code="HLTHCHRT"
+                  codeSystem="2.16.840.1.113883.5.110"
+                  displayName="health chart"
+                  level="0"
+                  type="L"/>
+            </conceptList>
+   </valueSet>
+</valueSets>
