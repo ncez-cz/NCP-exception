@@ -1,0 +1,3 @@
+[submodule "Dasta2FHIR"]
+	path = Dasta2FHIR
+	url = git@github.com:kruzikh/Dasta2FHIR.git

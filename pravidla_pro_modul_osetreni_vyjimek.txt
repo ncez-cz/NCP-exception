@@ -1,0 +1,3 @@
+- pravidla pouziti OTH:
+1. pokud existuje pro kodovy system mapovani (LTRDB) a existuje i pro dany kod --> OK nedalame nic
+2. pokud hodnota kodu neni v MVC --> nullflavor="OTH" (prvni ocekavany system) + translation (puvodni system a kod)
