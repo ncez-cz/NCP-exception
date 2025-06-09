@@ -28,3 +28,9 @@
 [submodule "hl7-eu/imaging"]
 	path = hl7-eu/imaging
 	url = https://github.com/hl7-eu/imaging.git
+[submodule "hl7-eu/extensions"]
+	path = hl7-eu/extensions
+	url = https://github.com/hl7-eu/extensions-r5.git
+[submodule "hl7-eu/extensions-r5"]
+	path = hl7-eu/extensions-r5
+	url = https://github.com/hl7-eu/extensions-r5.git
