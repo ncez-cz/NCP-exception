@@ -1,3 +1,30 @@
 [submodule "Dasta2FHIR"]
 	path = Dasta2FHIR
 	url = git@github.com:kruzikh/Dasta2FHIR.git
+[submodule "eu/laboratory"]
+	path = eu/laboratory
+	url = https://github.com/hl7-eu/laboratory.git
+[submodule "hl7-cz/cz-lab"]
+	path = hl7-cz/cz-lab
+	url = https://github.com/HL7-cz/cz-lab.git
+[submodule "hl7-cz/cz-core"]
+	path = hl7-cz/cz-core
+	url = https://github.com/HL7-cz/cz-core.git
+[submodule "base"]
+	path = base
+	url = https://github.com/hl7-eu/base.git
+[submodule "hl7-eu/base"]
+	path = hl7-eu/base
+	url = https://github.com/hl7-eu/base.git
+[submodule "hl7-eu/laboratory"]
+	path = hl7-eu/laboratory
+	url = https://github.com/hl7-eu/laboratory.git
+[submodule "hl7-eu/hdr"]
+	path = hl7-eu/hdr
+	url = https://github.com/hl7-eu/hdr.git
+[submodule "hl7-eu/xpandh-ps"]
+	path = hl7-eu/xpandh-ps
+	url = https://github.com/hl7-eu/xpandh-ps.git
+[submodule "hl7-eu/imaging"]
+	path = hl7-eu/imaging
+	url = https://github.com/hl7-eu/imaging.git
