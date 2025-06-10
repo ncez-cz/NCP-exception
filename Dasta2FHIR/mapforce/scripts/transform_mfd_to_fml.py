@@ -16,23 +16,17 @@ class Node:
         self.isLeaf = isLeaf
         self.constantValue=constantValue
     def isInside(self,path):
-        return self.absolutePath!=path and self.absolutePath.startswith(path) and self.constantValue==""
+        return self.absolutePath!=path and self.absolutePath.startswith(path) and self.constantValue=="" 
+    def isInsideNode(self,path):
+        return self.absolutePath!=path and self.absolutePath.startswith(path) and self.constantValue=="" and (not self.isLeaf)
     def isOutside(self,path):
-        return self.absolutePath!=path and (not (self.absolutePath.startswith(path))) and self.constantValue==""
+        return self.absolutePath!=path and (not (self.absolutePath.startswith(path))) and self.constantValue=="" 
     def getNextPathElement(self,path):
         rel = self.absolutePath.removeprefix(path+".")
         return rel.split('.')[0]  
 
-class Level:
-    targetPath=""
-    sourcePath=""
-    sourceVar=[]
-    targetVar=[]
-    def __init__(self,sourcePath="",targetPath="",sourceVar=[],targetVar=[]):
-        self.sourcePath=sourcePath
-        self.targetPath=targetPath
-        self.sourceVar=sourceVar
-        self.targetVar=targetVar
+def name(original: str):
+    return original.replace("-","_")
 
 def generate_uses():
     return "\n".join([
@@ -186,7 +180,7 @@ def generate_fml_for_component(component_name,component):
     parent_map = {c: p for p in component.iter() for c in p}
     findGraph(component,graph,graphinv)
     # displayGraph(graph)
-    groupDef=f"group {component_name}("
+    groupDef=f"group {name(component_name)}("
     first=True
     for sourceComponent in component.findall("./structure/children/component/data/document[@inputinstance!='']/../.."):
         cname = f"c{sourceComponent.get("uid")}"
@@ -236,15 +230,22 @@ def generate_fml_for_component(component_name,component):
                 else: 
                     print(f"inputNodes does not contains {inpkey}")
     '''
-
-    targetPath=""
-    sourcePath=""
+    
     level = 0
-    levels = [Level()]
+    
     sourceVar=[]
+    sourceVarLevel=[]
+    sourcePath=""
+    sourcePathAtLevel=dict()
+
     targetVar=[]
+    targetVarLevel=[]
+    targetPath=""
+    targetPathAtLevel=dict()
+    
     indent="\t"
     ruleNum=0
+    
     for inpkey in inputNodes.keys():
         if inpkey in graphinv.keys():
             targetNode=getNode(inputNodes[inpkey],parent_map)
@@ -254,36 +255,30 @@ def generate_fml_for_component(component_name,component):
             for outkey in graphinv[inpkey]:
                 if outkey in outputNodes.keys():
                     sourceNode=getNode(outputNodes[outkey],parent_map)
+                    fml_lines.append(f"\t// {sourceNode.absolutePath} -> {targetNode.absolutePath}")
                     if len(sourceVar)==0:
                         sourcePath = sourceNode.absolutePath.split('.')[0]
-                    while ( sourceNode.isOutside(sourcePath) ):
-
-                    #or targetNode.isOutside(targetPath) ):
+                    while ( sourceNode.isOutside(sourcePath) or targetNode.isOutside(targetPath)):
+                            #or targetNode.isOutside(targetPath) ):
                         # vynoření
-                        if ( sourceNode.isOutside(sourcePath) ):
-                            #vynoření zdroje
-                            prevSourcePathElement = sourcePath.split('.')[-1]
-                            if len(sourceVar)>0:
-                                sourceVar.pop()
-                                sourcePath.removesuffix("."+prevSourcePathElement)
-                            else:
-                                sourcePath = sourceNode.absolutePath.split('.')[0]
-                        '''if ( targetNode.isOutside(targetPath) ):
-                            #vynoření cíle
-                            prevTargetPathElement = targetPath.split('.')[-1]
-                            if len(targetVar)>0:
-                                targetVar.pop()
-                                targetPath.removesuffix("."+prevTargetPathElement)
-                            else:
-                                targetPath = targetNode.absolutePath.split('.')[0]
-                        '''
+                        while len(sourceVar)>0 and sourceVarLevel[-1]==level:
+                            sourceVar.pop()
+                            sourceVarLevel.pop()
+                        
+                        while len(targetVar)>0 and targetVarLevel[-1]==level:
+                            targetVar.pop()
+                            targetVarLevel.pop()
                         
                         ruleNum += 1
                         fml_lines.append(indent+"} \"rule" + str(ruleNum) +"\";")
                         indent = indent[:len(indent)-1]
+                        level-=1
+                        sourcePath = sourcePathAtLevel[level]
+                        targetPath = targetPathAtLevel[level]
                     
-                    while ( sourceNode.isInside(sourcePath) or targetNode.isInside(targetPath) ):
+                    while ( sourceNode.isInside(sourcePath) or targetNode.isInsideNode(targetPath) ):
                         #vnoření
+                        level+=1
                         if ( sourceNode.isInside(sourcePath) ):
                             #vnoření zdroje
                             nextSourcePathElement = sourceNode.getNextPathElement(sourcePath) 
@@ -295,14 +290,15 @@ def generate_fml_for_component(component_name,component):
                                 variableName = "s"+str(len(sourceVar))
                                 sourceString = sourceVar[-1]+"."+nextSourcePathElement+" as " + variableName
                                 sourcePath+="."+nextSourcePathElement
-                            sourceVar.append(variableName)                            
+                            sourceVar.append(variableName)   
+                            sourceVarLevel.append(level)                         
                         else:
                             if len(sourceVar)==0:
                                 sourceString = sourceNode.absolutePath.split('.')[0]
                             else:
                                 sourceString = sourceVar[-1]
 
-                        if ( targetNode.isInside(targetPath)):
+                        if ( targetNode.isInsideNode(targetPath)):
                             #vnoření cíle
                             nextTargetPathElement = targetNode.getNextPathElement(targetPath)  
                             if len(targetVar)==0:
@@ -318,6 +314,7 @@ def generate_fml_for_component(component_name,component):
                                     targetString = targetVar[-1]+"."+nextTargetPathElement+" as " + variableName
                                 
                             targetVar.append(variableName)                            
+                            targetVarLevel.append(level)
                         else:
                             if len(targetVar)==0:
                                 targetString = targetNode.absolutePath.split('.')[0]
@@ -328,28 +325,47 @@ def generate_fml_for_component(component_name,component):
                                     targetVar.append(variableName)
                                 else:
                                     targetString = targetVar[-1]
-                            
+                        
                         indent+="\t"
-                        fml_lines.append(indent+f"{sourceString} -> {targetString} then " + "{")
+                        sourcePathAtLevel[level] = sourcePath
+                        targetPathAtLevel[level] = targetPath
+                        fml_lines.append(indent+f"{sourceString} -> {targetString} then " + "{")                        
                     
                     if (sourceNode.absolutePath!=sourcePath) and sourceNode.constantValue=="":    
                         print(f"ERROR: source path: {sourceNode.absolutePath}!={sourcePath}")
-                    if targetNode.absolutePath!=targetPath:    
-                        print(f"ERROR: target path: {targetNode.absolutePath}!={targetPath}")
                     
-                    if targetNode.absolutePath==targetPath and targetNode.isLeaf:
+                    if ((targetNode.absolutePath==f"{targetPath}.{targetNode.absolutePath.split('.')[-1]}") or (targetNode.absolutePath==targetPath)) and targetNode.isLeaf:
                         if sourceNode.constantValue!="":
                             ruleNum+=1
                             fml_lines.append(indent + f"\t{sourceVar[-1]} -> {targetVar[-1]}.{targetNode.absolutePath.split('.')[-1]} = \'{sourceNode.constantValue}\' \"rule{str(ruleNum)}\";")
                         else:
                             ruleNum+=1
-                            fml_lines.append(indent + f"\t{sourceVar[-1]} -> {targetVar[-1]}.{targetNode.absolutePath.split('.')[-1]} = {sourceVar[-1]} \"rule{str(ruleNum)}\";")
+                            if len(sourceVar)>0:
+                                fml_lines.append(indent + f"\t{sourceVar[-1]} -> {targetVar[-1]}.{targetNode.absolutePath.split('.')[-1]} = {sourceVar[-1]} \"rule{str(ruleNum)}\";")
+                    elif targetNode.isLeaf:
+                        print(f"ERROR: target path: leaf {targetNode.absolutePath} not in {targetPath}")
+                    elif (targetNode.absolutePath!=targetPath):
+                        print(f"ERROR: target path: node {targetNode.absolutePath} != {targetPath}")
                 else: 
                     print(f"ERROR: ouputNodes does not contains {outkey}")
         else:
             print(f"ERROR: inputNodes does not contains {inpkey}")
 
         
+    while ( level>0 ):
+        # vynoření
+        while len(sourceVar)>0 and sourceVarLevel[-1]==level:
+            sourceVar.pop()
+            sourceVarLevel.pop()
+        while len(sourceVar)>0 and sourceVarLevel[-1]==level:
+            sourceVar.pop()
+            sourceVarLevel.pop()
+                        
+        ruleNum += 1
+        fml_lines.append(indent+"} \"rule" + str(ruleNum) +"\";")
+        indent = indent[:len(indent)-1]
+        level-=1
+                    
 
     #for outkey in outkeys.keys():
     #    for inkey in graph[outkey]:
