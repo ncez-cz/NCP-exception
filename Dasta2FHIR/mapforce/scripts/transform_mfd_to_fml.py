@@ -9,14 +9,16 @@ class Node:
     isLeaf = False
     isRoot = False
     constantValue=""
-    def __init__(self, path, isRoot=False, isLeaf=False, constantValue=""):
+    isInalid = False
+    def __init__(self, path, isRoot=False, isLeaf=False, constantValue="", isInvalid=False):
         self.absolutePath=path
         self.variableNames=[]
         self.isRoot = isRoot
         self.isLeaf = isLeaf
         self.constantValue=constantValue
-    def isInside(self,path):
-        return self.absolutePath!=path and self.absolutePath.startswith(path) and self.constantValue=="" 
+        self.isInvalid = isInvalid
+    def isInside(self,path,checkLast):
+        return self.absolutePath!=path and self.absolutePath.startswith(path) and self.constantValue=="" and ((not checkLast) or (self.absolutePath.count(".")!=path.count(".")+1))
     def isInsideNode(self,path):
         return self.absolutePath!=path and self.absolutePath.startswith(path) and self.constantValue=="" and (not self.isLeaf)
     def isOutside(self,path):
@@ -78,13 +80,15 @@ def getNode(entry, parent_map, skipNames=[0], depth=0, stopAtName = "5document",
     isLeaf = False
     isRoot = False
     constantValue = ""
+    isInvalid = False
     if (entry!=None) and (entry in parent_map.keys()) and (entry.get('name')!=None) and (entry.get('name')!=stopAtName) and (entry.tag!=stopAtTag):
         path = getPath(parent_map[entry],parent_map,skipNames,depth+1)
         if skipNames[0]==0:
             if (entry.get('name')!='value' or entry.get('type')!='attribute'):
-                path += "."+entry.get('name')
+                path += "."+entry.get('name')              
                 #print(f"{depth}: {path}")
-            #else:
+            else:
+                isLeaf = True
                 #print(f"{depth}: {path} without value")           
         else:
             skipNames[0]-=1 
@@ -101,9 +105,12 @@ def getNode(entry, parent_map, skipNames=[0], depth=0, stopAtName = "5document",
             skipNames[0]=3
     if entry.get('ns')==None:
         isLeaf=True
+    if not isLeaf:
+        for v in entry.findall("./entry[@name='value'][@type='attribute']"):
+            isInvalid = True
     if path.startswith('\''):
         constantValue = path.split('\'')[1]
-    return Node(path,isRoot,isLeaf,constantValue)
+    return Node(path,isRoot,isLeaf,constantValue,isInvalid)
 
 
 def getPath(entry, parent_map, skipNames=[0], depth=0, stopAtName = "5document", stopAtTag = "component"):
@@ -250,12 +257,14 @@ def generate_fml_for_component(component_name,component):
         if inpkey in graphinv.keys():
             targetNode=getNode(inputNodes[inpkey],parent_map)
             #Node(getComplexPath(inputNodes[inpkey],parent_map,inputNodes,graph))
+            if targetNode.isInvalid:
+                continue
             if len(targetVar)==0:
                 targetPath = targetNode.absolutePath.split('.')[0]
             for outkey in graphinv[inpkey]:
                 if outkey in outputNodes.keys():
                     sourceNode=getNode(outputNodes[outkey],parent_map)
-                    fml_lines.append(f"\t// {sourceNode.absolutePath} -> {targetNode.absolutePath}")
+                    
                     if len(sourceVar)==0:
                         sourcePath = sourceNode.absolutePath.split('.')[0]
                     while ( sourceNode.isOutside(sourcePath) or targetNode.isOutside(targetPath)):
@@ -276,10 +285,14 @@ def generate_fml_for_component(component_name,component):
                         sourcePath = sourcePathAtLevel[level]
                         targetPath = targetPathAtLevel[level]
                     
-                    while ( sourceNode.isInside(sourcePath) or targetNode.isInsideNode(targetPath) ):
+                    if sourceNode.absolutePath=="c3119.is.a.adr":
+                        print(f"problem {sourceNode.absolutePath}")
+                    fml_lines.append(f"\t// {sourceNode.absolutePath} -> {targetNode.absolutePath}")
+
+                    while ( sourceNode.isInside(sourcePath, targetNode.isLeaf) or targetNode.isInsideNode(targetPath) ):
                         #vnoření
                         level+=1
-                        if ( sourceNode.isInside(sourcePath) ):
+                        if ( sourceNode.isInside(sourcePath, targetNode.isLeaf) ):
                             #vnoření zdroje
                             nextSourcePathElement = sourceNode.getNextPathElement(sourcePath) 
                             if len(sourceVar)==0:
@@ -321,27 +334,50 @@ def generate_fml_for_component(component_name,component):
                             else: 
                                 if sourceNode.absolutePath==sourcePath and targetNode.absolutePath==targetPath and not targetNode.isLeaf:
                                     variableName = "t"+str(len(targetVar))
-                                    targetString = targetVar[-1]+"=create() as " + variableName
+                                    varIdx = len(targetVar)-1
+                                    while (varIdx>0 and targetVarLevel[varIdx]>=level-1):
+                                        varIdx-=1
+                                    targetString =  f"{targetVar[varIdx]}.{targetNode.absolutePath.split('.')[-1]}"+" = create() as " + variableName
                                     targetVar.append(variableName)
+                                    targetVarLevel.append(level)
                                 else:
                                     targetString = targetVar[-1]
                         
                         indent+="\t"
                         sourcePathAtLevel[level] = sourcePath
                         targetPathAtLevel[level] = targetPath
-                        fml_lines.append(indent+f"{sourceString} -> {targetString} then " + "{")                        
+                        #if ({sourceNode.absolutePath}!={sourcePath}) and (not (((targetNode.absolutePath==f"{targetPath}.{targetNode.absolutePath.split('.')[-1]}") or (targetNode.absolutePath==targetPath)) and targetNode.isLeaf)):
+                        fml_lines.append(indent+f"{sourceString} -> {targetString} then " + "{")   
+                        #else:
+
+                    if len(targetVar)<=0:
+                        tName = targetPath
+                    elif (targetNode.absolutePath==targetPath):
+                        tName=targetVar[-1]
+                    elif (targetNode.absolutePath==f"{targetPath}.{targetNode.absolutePath.split('.')[-1]}"):
+                        tName=f"{targetVar[-1]}.{targetNode.absolutePath.split('.')[-1]}"
+                     
                     
                     if (sourceNode.absolutePath!=sourcePath) and sourceNode.constantValue=="":    
-                        print(f"ERROR: source path: {sourceNode.absolutePath}!={sourcePath}")
+                        if (not sourceNode.absolutePath.startswith(sourcePath)) or (sourceNode.absolutePath.count(".")!=sourcePath.count(".")+1):
+                            print(f"ERROR: source path: {sourceNode.absolutePath} not in {sourcePath}")
+                        else:
+                            if sourceNode.constantValue!="":
+                                ruleNum+=1
+                                fml_lines.append(indent + f"\t{sourceVar[-1]}.{sourceNode.absolutePath.split('.')[-1]} -> {tName} = \'{sourceNode.constantValue}\' \"rule{str(ruleNum)}\";")
+                            else:
+                                ruleNum+=1
+                                if len(sourceVar)>0:
+                                    fml_lines.append(indent + f"\t{sourceVar[-1]}.{sourceNode.absolutePath.split('.')[-1]} as x -> {tName} = x \"rule{str(ruleNum)}\";")    
                     
-                    if ((targetNode.absolutePath==f"{targetPath}.{targetNode.absolutePath.split('.')[-1]}") or (targetNode.absolutePath==targetPath)) and targetNode.isLeaf:
+                    elif ((targetNode.absolutePath==f"{targetPath}.{targetNode.absolutePath.split('.')[-1]}") or (targetNode.absolutePath==targetPath)) and targetNode.isLeaf:
                         if sourceNode.constantValue!="":
                             ruleNum+=1
-                            fml_lines.append(indent + f"\t{sourceVar[-1]} -> {targetVar[-1]}.{targetNode.absolutePath.split('.')[-1]} = \'{sourceNode.constantValue}\' \"rule{str(ruleNum)}\";")
+                            fml_lines.append(indent + f"\t{sourceVar[-1]} -> {tName} = \'{sourceNode.constantValue}\' \"rule{str(ruleNum)}\";")
                         else:
                             ruleNum+=1
                             if len(sourceVar)>0:
-                                fml_lines.append(indent + f"\t{sourceVar[-1]} -> {targetVar[-1]}.{targetNode.absolutePath.split('.')[-1]} = {sourceVar[-1]} \"rule{str(ruleNum)}\";")
+                                fml_lines.append(indent + f"\t{sourceVar[-1]} -> {tName} = {sourceVar[-1]} \"rule{str(ruleNum)}\";")
                     elif targetNode.isLeaf:
                         print(f"ERROR: target path: leaf {targetNode.absolutePath} not in {targetPath}")
                     elif (targetNode.absolutePath!=targetPath):
