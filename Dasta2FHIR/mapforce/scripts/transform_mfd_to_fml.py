@@ -267,7 +267,7 @@ def generate_fml_for_component(component_name,component):
                     
                     if len(sourceVar)==0:
                         sourcePath = sourceNode.absolutePath.split('.')[0]
-                    while ( sourceNode.isOutside(sourcePath) or targetNode.isOutside(targetPath)):
+                    while ( level>1 and (sourceNode.isOutside(sourcePath) or targetNode.isOutside(targetPath))):
                             #or targetNode.isOutside(targetPath) ):
                         # vynoření
                         while len(sourceVar)>0 and sourceVarLevel[-1]==level:
@@ -356,32 +356,33 @@ def generate_fml_for_component(component_name,component):
                         tName=targetVar[-1]
                     elif (targetNode.absolutePath==f"{targetPath}.{targetNode.absolutePath.split('.')[-1]}"):
                         tName=f"{targetVar[-1]}.{targetNode.absolutePath.split('.')[-1]}"
+                    else: 
+                        tName="?"
                      
+                    if len(sourceVar)<=0:
+                        sName = sourcePath
+                    elif (sourceNode.absolutePath==sourcePath) or sourceNode.constantValue!="":
+                        sName = sourceVar[-1]
+                    elif (sourceNode.absolutePath!=sourcePath):
+                        sName = f"\t{sourceVar[-1]}.{sourceNode.absolutePath.split('.')[-1]}"
+                    else:
+                        sName="?"
                     
-                    if (sourceNode.absolutePath!=sourcePath) and sourceNode.constantValue=="":    
-                        if (not sourceNode.absolutePath.startswith(sourcePath)) or (sourceNode.absolutePath.count(".")!=sourcePath.count(".")+1):
-                            print(f"ERROR: source path: {sourceNode.absolutePath} not in {sourcePath}")
-                        else:
-                            if sourceNode.constantValue!="":
-                                ruleNum+=1
-                                fml_lines.append(indent + f"\t{sourceVar[-1]}.{sourceNode.absolutePath.split('.')[-1]} -> {tName} = \'{sourceNode.constantValue}\' \"rule{str(ruleNum)}\";")
-                            else:
-                                ruleNum+=1
-                                if len(sourceVar)>0:
-                                    fml_lines.append(indent + f"\t{sourceVar[-1]}.{sourceNode.absolutePath.split('.')[-1]} as x -> {tName} = x \"rule{str(ruleNum)}\";")    
                     
-                    elif ((targetNode.absolutePath==f"{targetPath}.{targetNode.absolutePath.split('.')[-1]}") or (targetNode.absolutePath==targetPath)) and targetNode.isLeaf:
-                        if sourceNode.constantValue!="":
-                            ruleNum+=1
-                            fml_lines.append(indent + f"\t{sourceVar[-1]} -> {tName} = \'{sourceNode.constantValue}\' \"rule{str(ruleNum)}\";")
-                        else:
-                            ruleNum+=1
-                            if len(sourceVar)>0:
-                                fml_lines.append(indent + f"\t{sourceVar[-1]} -> {tName} = {sourceVar[-1]} \"rule{str(ruleNum)}\";")
-                    elif targetNode.isLeaf:
+                    if sourceNode.constantValue!="":
+                        ruleNum+=1
+                        fml_lines.append(indent + f"\t{sName} -> {tName} = \'{sourceNode.constantValue}\' \"rule{str(ruleNum)}\";")
+                    else:
+                        ruleNum+=1
+                        fml_lines.append(indent + f"\t{sName} as x -> {tName} = x \"rule{str(ruleNum)}\";")    
+                    
+                    
+                    if (not sourceNode.absolutePath.startswith(sourcePath)):
+                        print(f"ERROR: source path: {sourceNode.absolutePath} not in {sourcePath}")
+                    elif ((targetNode.absolutePath!=f"{targetPath}.{targetNode.absolutePath.split('.')[-1]}") and (targetNode.absolutePath!=targetPath)) and targetNode.isLeaf:
                         print(f"ERROR: target path: leaf {targetNode.absolutePath} not in {targetPath}")
-                    elif (targetNode.absolutePath!=targetPath):
-                        print(f"ERROR: target path: node {targetNode.absolutePath} != {targetPath}")
+                    elif ((targetNode.absolutePath!=f"{targetPath}.{targetNode.absolutePath.split('.')[-1]}") and (targetNode.absolutePath!=targetPath)): 
+                        print(f"ERROR: target path: node {targetNode.absolutePath} not in {targetPath}")
                 else: 
                     print(f"ERROR: ouputNodes does not contains {outkey}")
         else:
@@ -418,10 +419,10 @@ def main():
         # sys.exit(1)
         # mfd_file = '.\\mapforce\\final\\base.mfd'
         # output_file = '.\\mapforce\\output\\base.map'
-        # mfd_file = '.\\mapforce\\final\\ua - Allergyintolerance.mfd'
-        # output_file = '.\\mapforce\\output\\ua - Allergyintolerance.map'
-        mfd_file = '.\\mapforce\\final\\is - Organization.mfd'
-        output_file = '.\\mapforce\\output\\is - Organization.map'
+        mfd_file = '.\\mapforce\\final\\ua - Allergyintolerance.mfd'
+        output_file = '.\\mapforce\\output\\ua - Allergyintolerance.map'
+        #mfd_file = '.\\mapforce\\final\\is - Organization.mfd'
+        #output_file = '.\\mapforce\\output\\is - Organization.map'
     else:
         mfd_file = sys.argv[1]
         output_file = sys.argv[2]
