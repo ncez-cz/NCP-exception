@@ -10,19 +10,25 @@ class Node:
     isRoot = False
     constantValue=""
     isInalid = False
-    def __init__(self, path, isRoot=False, isLeaf=False, constantValue="", isInvalid=False):
+    valuemapUid = ""
+   # prevNodeKey = ""
+    inpkeys = []
+    def __init__(self, path, isRoot=False, isLeaf=False, constantValue="", isInvalid=False, valuemapUid="", inpkeys=[]): #prevNodeKey=""):
         self.absolutePath=path
         self.variableNames=[]
         self.isRoot = isRoot
         self.isLeaf = isLeaf
         self.constantValue=constantValue
         self.isInvalid = isInvalid
+        self.valuemapUid = valuemapUid
+        self.inpkeys = inpkeys
+        #self.prevNodeKey = prevNodeKey
     def isInside(self,path,checkLast):
-        return self.absolutePath!=path and self.absolutePath.startswith(path) and self.constantValue=="" and ((not checkLast) or (self.absolutePath.count(".")!=path.count(".")+1))
+        return self.absolutePath!=path and self.absolutePath.startswith(path) and self.constantValue=="" and ((not checkLast) or (self.absolutePath.count(".")!=path.count(".")+1)) and self.valuemapUid==""
     def isInsideNode(self,path):
-        return self.absolutePath!=path and self.absolutePath.startswith(path) and self.constantValue=="" and (not self.isLeaf)
+        return self.absolutePath!=path and self.absolutePath.startswith(path) and self.constantValue=="" and (not self.isLeaf) and self.valuemapUid==""
     def isOutside(self,path):
-        return self.absolutePath!=path and (not (self.absolutePath.startswith(path))) and self.constantValue=="" 
+        return self.absolutePath!=path and (not (self.absolutePath.startswith(path))) and self.constantValue=="" and self.valuemapUid==""
     def getNextPathElement(self,path):
         rel = self.absolutePath.removeprefix(path+".")
         return rel.split('.')[0]  
@@ -33,9 +39,23 @@ def name(original: str):
 def generate_uses():
     return "\n".join([
         "uses \"https://dasta.mzcr.cz/model/StructureDefinition/dasta\" alias dasta as source",
-        "uses \"http://hl7.eu/fhir/base/StructureDefinition/organization-eu\" alias Organization as target"
+        "uses \"http://hl7.eu/fhir/base/StructureDefinition/organization-eu\" alias Organization as target",
        # "uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target"
+        "uses \"https://dasta.mzcr.cz/model/StructureDefinition/ip\" alias ip as source",
+        "uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target"
+
     ])
+
+def generate_conceptmap(valuemap):
+    fml_lines = []
+    fml_lines.append(f"conceptmap \"cm{valuemap.get('uid')}\" "+"{")
+    fml_lines.append(f"  prefix s =\"https://provisio.cz/dasta/{valuemap.get('uid')}\"")
+    fml_lines.append(f"  prefix t =\"https://provisio.cz/fhir/{valuemap.get('uid')}\"")
+    fml_lines.append("")
+    for entry in valuemap.findall("./data/valuemap/valuemapTable/entry"):
+        fml_lines.append(f"  s:\"{entry.get('from')}\" == t:\"{entry.get('to')}\"")
+    fml_lines.append("}")
+    return "\n".join(fml_lines)
 
 def parse_mfd(mfd_file):
     tree = ET.parse(mfd_file)
@@ -81,6 +101,9 @@ def getNode(entry, parent_map, skipNames=[0], depth=0, stopAtName = "5document",
     isRoot = False
     constantValue = ""
     isInvalid = False
+    valuemapUid = ""
+    #prevNodeKey = ""
+    inpkeys = []
     if (entry!=None) and (entry in parent_map.keys()) and (entry.get('name')!=None) and (entry.get('name')!=stopAtName) and (entry.tag!=stopAtTag):
         path = getPath(parent_map[entry],parent_map,skipNames,depth+1)
         if skipNames[0]==0:
@@ -92,6 +115,10 @@ def getNode(entry, parent_map, skipNames=[0], depth=0, stopAtName = "5document",
                 #print(f"{depth}: {path} without value")           
         else:
             skipNames[0]-=1 
+    elif entry.tag=="datapoint" and parent_map[parent_map[entry]].get("name")=="value-map":
+        valuemapUid = parent_map[parent_map[entry]].get("uid")
+        path = f"#cm{valuemapUid}"
+        inpkeys.append(parent_map[parent_map[entry]].find("./sources/datapoint").get('key'))
     elif entry.get('name')==None:
         path = getPath(parent_map[entry],parent_map,skipNames,depth+1)
     elif entry.tag=="component":
@@ -102,7 +129,8 @@ def getNode(entry, parent_map, skipNames=[0], depth=0, stopAtName = "5document",
             #path = entry.get("library") +":"+ entry.get("name")+"["+entry.get("uid")+"]"
             isRoot = True
             path = "c"+entry.get("uid")
-            skipNames[0]=3
+            skipNames[0]=1
+    
     if entry.get('ns')==None:
         isLeaf=True
     if not isLeaf:
@@ -110,7 +138,7 @@ def getNode(entry, parent_map, skipNames=[0], depth=0, stopAtName = "5document",
             isInvalid = True
     if path.startswith('\''):
         constantValue = path.split('\'')[1]
-    return Node(path,isRoot,isLeaf,constantValue,isInvalid)
+    return Node(path,isRoot,isLeaf,constantValue,isInvalid,valuemapUid,inpkeys)
 
 
 def getPath(entry, parent_map, skipNames=[0], depth=0, stopAtName = "5document", stopAtTag = "component"):
@@ -134,7 +162,7 @@ def getPath(entry, parent_map, skipNames=[0], depth=0, stopAtName = "5document",
         else:
             #path = entry.get("library") +":"+ entry.get("name")+"["+entry.get("uid")+"]"
             path = "c"+entry.get("uid")
-            skipNames[0]=3
+            skipNames[0]=1
     return path
     
 def getComplexPath(node, parentMap, inputNodes, graph, depth=0, stopAtName = "5document", stopAtTag = "root"):
@@ -189,12 +217,15 @@ def generate_fml_for_component(component_name,component):
     # displayGraph(graph)
     groupDef=f"group {name(component_name)}("
     first=True
+    firstSource = ""
     for sourceComponent in component.findall("./structure/children/component/data/document[@inputinstance!='']/../.."):
         cname = f"c{sourceComponent.get("uid")}"
         sourceType = getType(sourceComponent.find("./data/document").get("instanceroot"))
         if not first:
             groupDef+=", "
         first=False
+        if firstSource == "":
+            firstSource = cname
         groupDef+=f"source {cname}: {sourceType}"
     for sourceComponent in component.findall("./structure/children/component/data/parameter[@usageKind='input']/../.."):
         cname = f"c{sourceComponent.get("uid")}"
@@ -205,6 +236,8 @@ def generate_fml_for_component(component_name,component):
         if not first:
             groupDef+=", "
         first=False
+        if firstSource == "":
+            firstSource = cname
         groupDef+=f"source {cname}: {sourceType}"
     
     for targetComponent in component.findall("./structure/children/component/data/document[@outputinstance!='']/../.."):
@@ -254,6 +287,8 @@ def generate_fml_for_component(component_name,component):
     ruleNum=0
     
     for inpkey in inputNodes.keys():
+        #if inpkey=="126":
+        #    print("126")
         if inpkey in graphinv.keys():
             targetNode=getNode(inputNodes[inpkey],parent_map)
             #Node(getComplexPath(inputNodes[inpkey],parent_map,inputNodes,graph))
@@ -262,9 +297,17 @@ def generate_fml_for_component(component_name,component):
             if len(targetVar)==0:
                 targetPath = targetNode.absolutePath.split('.')[0]
             for outkey in graphinv[inpkey]:
+                if outkey == "57":
+                    print("57")
                 if outkey in outputNodes.keys():
                     sourceNode=getNode(outputNodes[outkey],parent_map)
-                    
+                    beforeTarget=sourceNode
+                    for fromKey in sourceNode.inpkeys: 
+                        if fromKey in graphinv.keys():
+                            if graphinv[fromKey][0] in outputNodes.keys():
+                                #TODO: rekurze s násobnými sourceNodes
+                                sourceNode=getNode(outputNodes[graphinv[fromKey][0]],parent_map)
+                                continue                       
                     if len(sourceVar)==0:
                         sourcePath = sourceNode.absolutePath.split('.')[0]
                     while ( level>1 and (sourceNode.isOutside(sourcePath) or targetNode.isOutside(targetPath))):
@@ -287,9 +330,32 @@ def generate_fml_for_component(component_name,component):
                     
                     if sourceNode.absolutePath=="c3119.is.a.adr":
                         print(f"problem {sourceNode.absolutePath}")
-                    fml_lines.append(f"\t// {sourceNode.absolutePath} -> {targetNode.absolutePath}")
+                    
+                    if beforeTarget.valuemapUid=="":
+                        fml_lines.append(f"\t// {sourceNode.absolutePath} -> {targetNode.absolutePath}")
+                    else:
+                        x=beforeTarget
+                        comment = f"{x.absolutePath} -> {targetNode.absolutePath}"
+                        for fromKey in x.inpkeys: 
+                            if fromKey in graphinv.keys():
+                                if graphinv[fromKey][0] in outputNodes.keys():
+                                    #TODO: rekurze s násobnými sourceNodes
+                                    x=getNode(outputNodes[graphinv[fromKey][0]],parent_map)
+                                    comment = f"{x.absolutePath} -> " + comment
+                                    continue
+                        """
+                        while x.prevNodeKey!="":
+                            if x.prevNodeKey in graphinv.keys():
+                                if graphinv[x.prevNodeKey][0] in outputNodes.keys():
+                                    x=getNode(outputNodes[graphinv[x.prevNodeKey][0]],parent_map)
+                                    comment = f"{x.absolutePath} -> " + comment
+                                    continue
+                            break
+                        """
+                        fml_lines.append(f"\t// {comment}")
 
-                    while ( sourceNode.isInside(sourcePath, targetNode.isLeaf) or targetNode.isInsideNode(targetPath) ):
+
+                    while ( sourceNode.isInside(sourcePath, targetNode.isLeaf) or targetNode.isInside(targetPath,False) ):
                         #vnoření
                         level+=1
                         if ( sourceNode.isInside(sourcePath, targetNode.isLeaf) ):
@@ -307,11 +373,14 @@ def generate_fml_for_component(component_name,component):
                             sourceVarLevel.append(level)                         
                         else:
                             if len(sourceVar)==0:
-                                sourceString = sourceNode.absolutePath.split('.')[0]
+                                if sourceNode.constantValue!="":
+                                    sourceString = firstSource
+                                else:
+                                    sourceString = sourceNode.absolutePath.split('.')[0]
                             else:
                                 sourceString = sourceVar[-1]
 
-                        if ( targetNode.isInsideNode(targetPath)):
+                        if ( targetNode.isInside(targetPath,False)):
                             #vnoření cíle
                             nextTargetPathElement = targetNode.getNextPathElement(targetPath)  
                             if len(targetVar)==0:
@@ -359,8 +428,12 @@ def generate_fml_for_component(component_name,component):
                     else: 
                         tName="?"
                      
+                    
                     if len(sourceVar)<=0:
-                        sName = sourcePath
+                        if sourceNode.constantValue!="":
+                            sName = firstSource
+                        else:
+                            sName = sourcePath
                     elif (sourceNode.absolutePath==sourcePath) or sourceNode.constantValue!="":
                         sName = sourceVar[-1]
                     elif (sourceNode.absolutePath!=sourcePath):
@@ -369,7 +442,10 @@ def generate_fml_for_component(component_name,component):
                         sName="?"
                     
                     
-                    if sourceNode.constantValue!="":
+                    if beforeTarget.valuemapUid!="":
+                        ruleNum+=1
+                        fml_lines.append(indent + f"\t{sName} -> {tName} = translate({sName},\'#cm{beforeTarget.valuemapUid}\','code') \"rule{str(ruleNum)}\";")
+                    elif sourceNode.constantValue!="":
                         ruleNum+=1
                         fml_lines.append(indent + f"\t{sName} -> {tName} = \'{sourceNode.constantValue}\' \"rule{str(ruleNum)}\";")
                     else:
@@ -419,8 +495,10 @@ def main():
         # sys.exit(1)
         # mfd_file = '.\\mapforce\\final\\base.mfd'
         # output_file = '.\\mapforce\\output\\base.map'
-        mfd_file = '.\\mapforce\\final\\ua - Allergyintolerance.mfd'
-        output_file = '.\\mapforce\\output\\ua - Allergyintolerance.map'
+        # mfd_file = '.\\mapforce\\final\\ua - Allergyintolerance.mfd'
+        # output_file = '.\\mapforce\\output\\ua - Allergyintolerance.map'
+        mfd_file = '.\\mapforce\\final\\ip_ua.mfd'
+        output_file = '.\\mapforce\\output\\ip_ua.map'
         #mfd_file = '.\\mapforce\\final\\is - Organization.mfd'
         #output_file = '.\\mapforce\\output\\is - Organization.map'
     else:
@@ -430,13 +508,17 @@ def main():
     root = parse_mfd(mfd_file)
 
 
-    map_name = "is"
+    map_name = "ua"
     with open(output_file, 'w', encoding="utf-8") as f:
         f.write(f"/// url = 'https://ncez.mzcr.cz/model/StructureMap/{map_name}'\n")
         f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR R5'\n")
         f.write(f"/// title = 'Mapování {map_name}'\n")
         f.write("\n")
         f.write(generate_uses())
+        f.write("\n\n")
+        for valuemap in root.findall(".//component[@name='value-map']"):
+            f.write(generate_conceptmap(valuemap))
+            f.write("\n\n")        
         f.write("\n\n")
         for component in root.findall("./component"):
             name=component.get('name')
