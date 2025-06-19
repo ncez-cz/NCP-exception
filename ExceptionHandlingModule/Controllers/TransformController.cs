@@ -45,8 +45,9 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
                     }
             }
         }
-        
+
         // <tr><td>cda_epsos_ps7_conceptmap_CZ2EU</td><td>Pøemapování èíselníkù z CZ do EU pro CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0</td></tr>
+        // <tr><td>cda_epsos_ps7_displaynames_EU</td><td>Pøepis a doplnìní všech èíselníkových hodnot dle zadaného kódu a EU èíselníku pro CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0</td></tr>
 
         /// <summary>
         /// Transformace dat.
@@ -57,7 +58,10 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         /// <remarks>
         /// <table>
         /// <tr><th>transformation</th><th>popis</th></tr>
-        /// <tr><td>cda_epsos_ps7_displaynames_EU</td><td>Pøepis a doplnìní všech èíselníkových hodnot dle zadaného kódu a EU èíselníku pro CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0</td></tr>
+        /// <tr><td>dasta2fhir_hdr_EU</td><td>Pøevod propouštìcí zprávy z formátu DASTA 4.27.04 (s dopnìnými guids a ošetøenými datetime) do HL7 FHIR 4.0.1, EU HDR (0.1.0-ballot - draft 150) </td></tr>
+        /// <tr><td>dasta2fhir_laboratory_EU</td><td>Pøevod laboratorních výsledkù z formátu DASTA 4.27.04 (s dopnìnými guids a ošetøenými datetime) do HL7 FHIR 4.0.1, EU Laboratory Report (0.2.0-ci - ci-build 150) </td></tr>
+        /// <tr><td>dasta2fhir_laboratoryOrder_EU</td><td>Pøevod laboratorních žádanek z formátu DASTA 4.27.04 (s dopnìnými guids s ošetøenými datetime) do HL7 FHIR 4.0.1, Czech Laboratory Order (0.0.1 - ci-build Czechia) </td></tr>
+        /// <tr><td>dasta2fhir_patsum_EU</td><td>Pøevod sacientského souhrnu z formátu DASTA 4.27.04 (s dopnìnými guids s ošetøenými datetime) do HL7 FHIR 4.0.1, EU Patient Summary (0.0.1-ci - ci-build 150) </td></tr>
         /// <tr><td>cda_epsos_ps7_replace_unknown_codes_EU</td><td>Ošetøení neznámých kódù v EU èíselnících pro CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0</td></tr>
         /// </table>
         /// </remarks>

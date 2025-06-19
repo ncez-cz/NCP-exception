@@ -1,0 +1,18 @@
+{
+  "resourceType" : "TestScript",
+  "version" : "1.0",
+  "name" : "ExceptionHandlingModuleTestScript",
+  "title" : "Exception Handling Module Test Script",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-19",
+  "publisher" : "Provisio s.r.o.",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.provisio.cz"
+    }]
+  }],
+  "description" : "No testing yet!"
+}
+

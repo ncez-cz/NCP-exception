@@ -14,13 +14,13 @@
 		{
 			m_logger = logger;
 		}
-
+	/*
 		[HttpGet]
 		public IActionResult Index()
 		{
-			return Redirect("/swagger");
+			return Redirect("/");
 		}
-
+	*/
 		[Route("Error")]
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()

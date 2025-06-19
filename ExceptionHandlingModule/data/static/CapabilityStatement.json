@@ -1,0 +1,30 @@
+{
+  "resourceType" : "CapabilityStatement",
+  
+  "version" : "20250619",
+  "name" : "ExceptionHandlingModule",
+  "title" : "Exception Handling Module",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-06-19",
+  "publisher" : "Provisio s.r.o.",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.provisio.cz"
+    }]
+  }],
+  "description" : "Exception Handling Module interface",
+  "purpose" : "Published for contracting and operational support",
+  "kind" : "instance",
+  "fhirVersion" : "4.0.1",
+  "format" : ["xml", "json"],
+  "acceptLanguage" : ["en", "cs", "cs-CZ"],
+  "rest" : [{
+    "mode" : "server",
+    "documentation" : "Exception Handling Module services",
+    "interaction" : [{
+      "code" : "transaction"
+    }]
+  }]
+}

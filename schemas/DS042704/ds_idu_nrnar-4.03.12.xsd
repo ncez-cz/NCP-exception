@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Daniel Klimes (Ustav zdravotnickych informaci a statistiky CR) -->
+<!-- novy datovy typu nhlava (desetinne misto) -->
+<xs:schema xmlns:dsComm="urn:cz-mzcr:ns:dasta:ds4:ds_type" xmlns:nrnar="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrnar" xmlns:dsiduCis="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrnar" elementFormDefault="qualified" version="4.01.03">
+<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.22.xsd"/>
+	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" schemaLocation="ds_cisidu-4.03.05.xsd"/>
+	<xs:complexType name="nrnType">
+		<xs:sequence>
+			<xs:element name="nrnar" type="nrnar:nrnarType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Zpráva o novorozenci</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="nico" type="dsComm:icisType" use="required">
+			<xs:annotation>
+				<xs:documentation>IČO (identifikační číslo zdravotnického zařízení)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="npcz" type="dsComm:number3de" use="required">
+			<xs:annotation>
+				<xs:documentation>PČZ (pořadové číslo zdravotnického zařízení)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="npcpd" type="dsComm:number3de" use="required">
+			<xs:annotation>
+				<xs:documentation>PČDP (pořadové číslo detašovaného pracoviště)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nodd" type="dsComm:str5" use="required">
+			<xs:annotation>
+				<xs:documentation>Posledních 5 znaků kódu oddělení z číselníku <cl>ZdravotnickeOddeleni</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="nrn" type="nrnar:nrnType"/>
+	<xs:complexType name="nrnarType">
+		<xs:sequence>
+			<xs:element name="npecesal" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Péče na sále dle číselníku <cl>PeceNaSale</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nlecsal" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Léčba na sále dle číselníku <cl>LecbaNaSale</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="napgar" type="nrnar:nrn_apgarType" minOccurs="0" maxOccurs="3">
+				<xs:annotation>
+					<xs:documentation>Apgarové skóre dítětě za 1., 5. a 10. minutu</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nlecodd" type="nrnar:polozkaCiselnikaType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Léčba na oddělení dle číselníku <cl>LecbaNaOddeleni</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nnem" type="nrnar:polozkaCiselnikaType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Vybrané nemoci a komplikace dle číselníku <cl>VybraneNemociAKomplikace</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<!-- 
+			<xs:element name="nskrin" type="nrnar:polozkaCiselnikaType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>* Od 1.1.2025 bude zrušeno Provedený screening dle číselníku <cl>ProvedenyScreening</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			-->
+			<xs:element name="ndgvv" type="nrnar:polozkaCiselnikaDgType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Diagnóza vrozené vady dle číselníku <cl>MKN10_5</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndgvedlejsi" type="nrnar:polozkaCiselnikaDgType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Diagnóza při propuštění, překladu, úmrtí - vedlejší dle číselníku <cl>MKN10_5</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nintervencejaka" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>*Prenatální intervence - jaká dle číselníku <cl>PrenatalniIntervence</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nkortikobpd" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>*Kortikosteroidy pro BPD dle číselníku <cl>BPDKortikosteroidy</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhspdater" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>*hsPDA - terapie dle číselníku <cl>TerapiehsPDA</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhypotenzeter" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>*Hypotenze v prvních 72 hodinách - terapie dle číselníku <cl>Hypotenze</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nkomplgit" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>*Komplikace GIT dle číselníku <cl>KomplikaceGIT</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nropter" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>*ROP - terapie dle číselníku <cl>TerapieROP</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsepsepozdnityp" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>*Pozdní sepse - typ dle číselníku <cl>PozdniSepseTyp</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nkrevder" type="nrnar:polozkaCiselnikaType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>*Krevní deriváty dle číselníku <cl>KrevniDerivaty</cl>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="nzprava" type="dsComm:number1-9" use="required">
+			<xs:annotation>
+				<xs:documentation>Zpráva číslo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ncispor" type="dsComm:number0-9999" use="required">
+			<xs:annotation>
+				<xs:documentation>Číslo dítěte (chorobopisu)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ndvojcata" type="dsComm:number2d">
+			<xs:annotation>
+				<xs:documentation>* Dvojčata dle číselniku <cl>Dvojcata</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ncetteh" type="dsComm:number1-9" use="required">
+			<xs:annotation>
+				<xs:documentation>Četnost těhotenství</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="npord" type="dsComm:number1d" use="required">
+			<xs:annotation>
+				<xs:documentation>Pořadí</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nrcd" type="dsComm:rodcisType">
+			<xs:annotation>
+				<xs:documentation>Rodné číslo dítěte</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nrcm" type="dsComm:rodcisType" use="required">
+			<xs:annotation>
+				<xs:documentation>Rodné číslo matky</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nrnaro" type="xs:gYear">
+			<xs:annotation>
+				<xs:documentation>Rok narození otce</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<!-- 
+		<xs:attribute name="nbydlm" type="dsComm:str6">
+			<xs:annotation>
+				<xs:documentation>* Od 1.1.2025 bude zrušeno Číslo kraje a okresu bydliště matky (NUTS3 a NUTS4) dle číselníku <cl>KrajOkres</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		-->
+		<xs:attribute name="nobecm" type="dsComm:number6d" use="required">
+			<xs:annotation>
+				<xs:documentation>Obec bydliště dle číselníku <cl>Obec</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<!--
+		<xs:attribute name="norp" type="dsComm:number4de">
+			<xs:annotation>
+				<xs:documentation>* Od 1.1.2025 bude zrušeno Číslo obce s rozšířenou působností</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		-->
+		<xs:attribute name="nstaobc" type="dsComm:str2" use="required">
+			<xs:annotation>
+				<xs:documentation>Státní občanství dítěte dle číselníku <cl>Zeme</cl>, kód a2
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nstaobcmatka" type="dsComm:str2" use="optional">
+			<xs:annotation>
+				<xs:documentation>* Státní občanství matky dle číselníku <cl>Zeme</cl>, kód a2
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nporod" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>Porod (kde) dle číselníku <cl>PorodKde</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nzpusob" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>Způsob porodu dle číselníku <cl>ZpusobPorodu</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="npoloha" type="dsComm:number1-3">
+			<xs:annotation>
+				<xs:documentation>Poloha plodu dle číselníku <cl>PolohaPlodu</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nnar" type="dsComm:dateHourMin" use="required">
+			<xs:annotation>
+				<xs:documentation>Datum a čas narození</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nnarmatka" type="xs:date" use="optional">
+			<xs:annotation>
+				<xs:documentation>*Datum narození matky</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="njmenomatka" type="dsComm:str50">
+			<xs:annotation>
+				<xs:documentation>*Jméno matky</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nprijmenimatka" type="dsComm:str50">
+			<xs:annotation>
+				<xs:documentation>*Příjmení matky</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nzemepobytmatka" type="dsComm:str2">
+			<xs:annotation>
+				<xs:documentation>*Země pobytu matky dle číselníku <cl>Zeme</cl>, kód a2</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="npobytcrmatka" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>*Trvalý pobyt matky v ČR</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nvital" type="dsComm:number1-2" use="required">
+			<xs:annotation>
+				<xs:documentation>Vitalita dle číselníku <cl>Vitalita</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="npohl" type="dsComm:number1-3" use="required">
+			<xs:annotation>
+				<xs:documentation>Pohlaví dle číselníku <cl>Pohlavi</cl>, skupina platnosti 02
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nhmot" type="dsComm:number4d">
+			<xs:annotation>
+				<xs:documentation>Porodní údaje - Hmotnost (g)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nobvod" type="dsComm:number2.1">
+			<xs:annotation>
+				<xs:documentation>* Porodní údaje - obvod hlavy (cm)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ndelka" type="dsComm:number20-70">
+			<xs:annotation>
+				<xs:documentation>Porodní údaje - Délka (cm)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ngesta" type="dsComm:number22-45">
+			<xs:annotation>
+				<xs:documentation>Porodní údaje - Gestační stáří - týdny</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ngestadny" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>*Porodní údaje - Gestační stáří - dny</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="npri" type="dsComm:dateHourMin">
+			<xs:annotation>
+				<xs:documentation>Datum a čas přijetí dítěte na oddělení</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nteplotap" type="dsComm:number2.1">
+			<xs:annotation>
+				<xs:documentation>*Příjmová teplota ve °C</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ndnyupv" type="dsComm:number0-92">
+			<xs:annotation>
+				<xs:documentation>Počet dní na UPV (upřesnení léčba na oddělení - UPV)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ndnyniv" type="dsComm:number0-99">
+			<xs:annotation>
+				<xs:documentation>Počet dní na neinvazivní ventilaci</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<!--
+		<xs:attribute name="ndnyatb" type="dsComm:number0-99">
+			<xs:annotation>
+				<xs:documentation>* Od 1.1.2025 bude zrušeno Počet dní podávání antibiotik</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		-->
+		<xs:attribute name="ndnyo2" type="dsComm:number3d">
+			<xs:annotation>
+				<xs:documentation>* Počet dní na O2</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ndnyparnut" type="dsComm:number3d">
+			<xs:annotation>
+				<xs:documentation>*Počet dní na parenterální nutrici </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ndgop" type="dsComm:str5">
+			<xs:annotation>
+				<xs:documentation>Operační dg (upřesnení léčba na oddělení - operace) dle číselníku <cl>MKN10_5</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nvitak" type="dsComm:number2d">
+			<xs:annotation>
+				<xs:documentation>Vitamin K dle číselníku <cl>VitaminK</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsurfaktant" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>* Surfaktant - způsob aplikace první dávky dle číselníku <cl>SurfaktantAplikace</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsurfaktantcas" type="dsComm:dateHourMin">
+			<xs:annotation>
+				<xs:documentation>* Čas první dávky surfaktantu (datum + čas)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsurfaktantpocet" type="dsComm:number2d">
+			<xs:annotation>
+				<xs:documentation>* Počet dávek surfaktantu </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nairleaklecba" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>*Air-leak syndrome - léčba - číselník <cl>AirLeakLecba</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nvent36" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>* Ventilační podpora ve 36+0 (ano/ne)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nbpdstupen" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>* BPD - stupeň - číselník <cl>BPDStupen</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsluch" type="dsComm:str1">
+			<xs:annotation>
+				<xs:documentation>* Screeningové vyšetření sluchu dle číselníku <cl>ScreeningProvedeno</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsluchmet" type="dsComm:str1">
+			<xs:annotation>
+				<xs:documentation>Screeningvá metoda vyšetření sluchu dle číselníku <cl>ScreeningSluchuMetoda</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsluchvysl" type="dsComm:str1">
+			<xs:annotation>
+				<xs:documentation>Výsledek screeningu sluchu dle číselníku <cl>ScreeningSluchuVysledek</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsluchprava" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>Nevýbavná pravá strana (ano/ne)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsluchleva" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>Nevýbavná levá strana (ano/ne)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nskrinnls" type="dsComm:str1">
+			<xs:annotation>
+				<xs:documentation>*Vyšetření NLS z kapky krve dle číselníku <cl>ScreeningProvedeno</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nkatarakta" type="dsComm:str1">
+			<xs:annotation>
+				<xs:documentation>* Katarakta, hodnota dle číselníku <cl>ScreeningVysledek</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="noxymetrie" type="dsComm:str1">
+			<xs:annotation>
+				<xs:documentation>* Pulzní oxymetrie dle číselníku <cl>ScreeningVysledek</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nkycle" type="dsComm:str1">
+			<xs:annotation>
+				<xs:documentation>* Vyšetření kyčlí dle číselníku <cl>ScreeningVysledek</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nkoarktace" type="dsComm:str1">
+			<xs:annotation>
+				<xs:documentation>* Koarktace AO (puls AF) dle číselníku <cl>ScreeningVysledek</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nvv" type="dsComm:logical" use="required">
+			<xs:annotation>
+				<xs:documentation>Vrozená vada (ano/ne)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nuko" type="dsComm:dateHourMin" use="required">
+			<xs:annotation>
+				<xs:documentation>Datum a hodina ukončení ZN</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nhmotp" type="dsComm:number4d" use="optional">
+			<xs:annotation>
+				<xs:documentation>Hmotnost (g) při propuštění dítěte</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nhlava" type="dsComm:number2.1" use="optional">
+			<xs:annotation>
+				<xs:documentation>Hlava (cm) obvod při propuštění dítěte</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ndelkap" type="dsComm:number2d" use="optional">
+			<xs:annotation>
+				<xs:documentation>* Délka při propuštění  (cm)
+</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nventp" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>* Ventilační podpora při dimisi/překladu/úmrtí dle číselníku <cl>VentilacniPodpora</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nvyziv" type="dsComm:number2d" use="required">
+			<xs:annotation>
+				<xs:documentation>Výživa dle číselníku <cl>VyzivaNovorozence</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nduvuk" type="dsComm:number0-5" use="required">
+			<xs:annotation>
+				<xs:documentation>Důvod ukončení ZN dle číselníku <cl>DuvodUkonceniZpravyONovorozenci</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nicoprel" type="dsComm:icisType">
+			<xs:annotation>
+				<xs:documentation>Překlad - IČO zařízení</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="npczprel" type="dsComm:number3de">
+			<xs:annotation>
+				<xs:documentation>Překlad - PČZ zařízení</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nprekladduvod" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>* Primární důvod překladu (pouze 1) - číselník <cl>PrimarniDuvodPrekladu</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="numrti" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>Příčina úmrtí dle číselníku <cl>PricinaUmrtiNovorozence</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nprenatpece" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>* Prenatální péče</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nantenmagn" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>* Antenatální magnesium sulfát</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nantenster" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>* Antenatální steroidy - číselník <cl>Antenatalni steroidy</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nrustrest" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>* Růstová restrikce</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ndiabetes" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>*Maternální diabetes mellitus (ano/ne) </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nhypertenze" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>* Maternální hypertenze </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="npredcasduvod" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>* Důvod předčasného porodu - číselník <cl>DuvodPredcasnyPorod</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nzanet" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>*Intra-amniální zánět/infekce (ano/ne/neznámo) dle číselníku <cl>AnoNeNezadano</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nintervence" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>* Prenatální intervence (ano/ne)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nivf" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>*In vitro fertilizace (ano/ne)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nfio" type="dsComm:number1.2">
+			<xs:annotation>
+				<xs:documentation>* Max FiO2</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="npivhst" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>* PIVH - stupeň</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nkranmorb" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>* závažná kraniální morbidita číselník <cl>ZavaznaKranialniMorbidita</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nplusd" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>* Plus disease (ano/ne)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsepsecasnaet" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>* Časná sepse - etiologie <cl>CasnaSepseEtiologie</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsepsecasnaatb" type="dsComm:number2d">
+			<xs:annotation>
+				<xs:documentation>* Časná sepse - délka ATB terapie (počet dní)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsepsecasnatyp" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>*Časná sepse - typ číselník <cl>CasnaSepseTyp</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsepsepozdniet" type="dsComm:number1d">
+			<xs:annotation>
+				<xs:documentation>* Pozdní sepse - etiologie číselník <cl>PozdniSepseEtiologie</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nprodesbl" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>*Producent ESBL/karbapenemáza - ANO/NE</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nsepsepozdniatb" type="dsComm:number2d">
+			<xs:annotation>
+				<xs:documentation>*Pozdní sepse - délka ATB terapie (počet dní)
+</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nderivaty" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>Krevní deriváty ANO/NE</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nuac" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>* UAC (ano/ne)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nuacdny" type="dsComm:number2d">
+			<xs:annotation>
+				<xs:documentation>*UAC - počet dní</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nuvc" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>*UVC (ano/ne) </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nuvcdny" type="dsComm:number2d">
+			<xs:annotation>
+				<xs:documentation>* UVC - počet dní </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ncvk" type="dsComm:logical">
+			<xs:annotation>
+				<xs:documentation>* CVK (ano/ne)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ncvkdny" type="dsComm:number2d">
+			<xs:annotation>
+				<xs:documentation>* CVK - počet dní</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ndghlavni" type="dsComm:str5" use="required">
+			<xs:annotation>
+				<xs:documentation>Diagnóza při propuštění, překladu, úmrtí - hlavní dle číselníku <cl>MKN10_5</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="nrn_apgarType">
+		<xs:attribute name="minuta" type="dsComm:number0-10">
+			<xs:annotation>
+				<xs:documentation>Minuta výpočtu skóre (1., 5. nebo 10. minuta)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="akce" type="dsComm:number0-2">
+			<xs:annotation>
+				<xs:documentation>Akce</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="dech" type="dsComm:number0-2">
+			<xs:annotation>
+				<xs:documentation>Dech</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="tonus" type="dsComm:number0-2">
+			<xs:annotation>
+				<xs:documentation>Tonus</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="reflex" type="dsComm:number0-2">
+			<xs:annotation>
+				<xs:documentation>Reflex</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="barva" type="dsComm:number0-2">
+			<xs:annotation>
+				<xs:documentation>Barva</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="celkem" type="dsComm:number0-10">
+			<xs:annotation>
+				<xs:documentation>Součet skóre</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="polozkaCiselnikaType">
+		<xs:attribute name="kod" type="dsComm:number2d" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód číselníkové položky</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="polozkaCiselnikaDgType">
+		<xs:attribute name="kod" type="dsComm:str5" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód diagnózy</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>
