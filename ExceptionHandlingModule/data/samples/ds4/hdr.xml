@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ds:dasta xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip"
+          xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta https://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.30.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip https://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.15.06.xsd"
+          id_soubor="MEDICALC_KK11115_2005-12-12T14:46:25"
+          verze_ds="04.27.03"
+          verze_nclp="02.90.01"
+          bin_priloha="T"
+          ur="T"
+          typ_odesm="KK"
+          ozn_soub="11115"
+          dat_vb="2008-06-13T14:46:25+02:00"
+          potvrzeni="P">
+	<ds:zdroj_is kod_firmy="MEDICALC"
+	             kod_prog="WMEXP"
+	             verze_prog="2.2.3.8"/>
+	<ds:pm>
+		<ds:as typ="I"
+		       poradi="1">
+			<ds:vnitrni>999</ds:vnitrni>
+		</ds:as>
+	</ds:pm>
+	<ds:garant_dat guid="6669b3fb-afbc-4004-bda5-5fa938b327e6" vguid="6669b3fb-afbc-4004-bda5-5fa938b327e6" id_zp="9988776655" id_garant="450124145" odbornost="001" id_clk="1122334455" role_klic="2211" role_text="Praktičtí lékaři">MUDr. Dasta Garant</ds:garant_dat>
+	<ds:is guid ="bca4c794-7fbb-4dd5-b8a3-fa851192f1a9" vguid ="bca4c794-7fbb-4dd5-b8a3-fa851192f1a9" ico="12345678" icz="44101000" icp="44101882" icl="44101882" pcz="001" oddel="AB123" oavl="ABCDE123456">
+		<ds:as typ="I"
+		       poradi="1">
+			<ds:obsah>obsah adresy</ds:obsah>
+			<ds:vnitrni>vnitřní adresa</ds:vnitrni>
+			<ds:sdeleni>textová informace k adrese</ds:sdeleni>
+			<ds:heslo>heslo pro sdělení informací</ds:heslo>
+		</ds:as>
+		<ds:a typ="O">
+			<ds:jmeno>adresa - jméno nebo název</ds:jmeno>
+			<ds:adr>adresa - hlavní text</ds:adr>
+			<ds:dop1>adresa - upřesnění 1</ds:dop1>
+			<ds:dop2>adresa - upřesnění 2</ds:dop2>
+			<ds:psc>12345</ds:psc>
+			<ds:mesto>město</ds:mesto>
+			<ds:stat>CZE</ds:stat>
+			<ds:stat_text>Česká republika</ds:stat_text>
+			<ds:gps lat="25.8"
+			        lon="130.2"/>
+			<ds:pozn>poznámka k údajům</ds:pozn>
+			<ds:autor id_zp="123456789"
+			          id_autor="identifikace autora"
+			          odbornost="001"
+			          id_clk="1234567890"
+			          role_klic="221"
+			          role_text="Lékaři">MUDr. Jmeno Prijmeni</ds:autor>
+		</ds:a>
+		<dsip:ip id_pac="7601019998"
+		         xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"
+		         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		         xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+			<dsip:rodcis>7601019998</dsip:rodcis>
+			<dsip:jmeno>Jmeno</dsip:jmeno>
+			<dsip:prijmeni>Prijmeni</dsip:prijmeni>
+			<dsip:dat_dn format="D">1976-01-01</dsip:dat_dn>
+			<dsip:sex>M</dsip:sex>
+			<dsip:pv_pac typ_pv="ZP"
+			             dat_ab="2005-12-01T12:53:12">
+				<dsip:pv_zp>
+					<dsip:cispoj>7052024826</dsip:cispoj>
+					<dsip:kodpoj>111</dsip:kodpoj>
+				</dsip:pv_zp>
+			</dsip:pv_pac>
+			<dsip:ku>
+				<dsip:ku_z duverne="N"
+				           fazespec="ZF"
+				           idku="MEDICALC.FNPL.1234567890"
+				           typku="AMB.VYS">
+					<dsip:dat_prov>2006-12-03T11:00:00</dsip:dat_prov>
+					<dsip:dat_vydani>2006-12-05T11:00:00</dsip:dat_vydani>
+					<dsip:p_pracoviste icz="44101000"
+					                   icp="44101882"
+					                   odb="101">
+						<dsip:nazev>Interní ambulance</dsip:nazev>
+					</dsip:p_pracoviste>
+					<dsip:sdilejici>
+						<dsip:pracoviste icz="12345600"
+						                 icp="12345601"
+						                 odb="103">
+							<dsip:nazev>Diabetologie MUDr. Xxxx YYYYY</dsip:nazev>
+						</dsip:pracoviste>
+						<dsip:poznamka>Dispenzarizující diabetolog</dsip:poznamka>
+						<dsip:stav>odeslano</dsip:stav>
+					</dsip:sdilejici>
+					<dsip:text>
+						<dsip:ptext xml:space="preserve">Nález normální, za 3 týdny doporučena kontrola u praktického lékaře.</dsip:ptext>
+					</dsip:text>
+					<dsip:dg_vys typ_dg="P">
+						<dsip:diag poradi="1">I158</dsip:diag>
+					</dsip:dg_vys>
+					<dsip:ku_z_propz>
+						<!-- <dsip:ku_z_propz_admu> -->
+						<!-- p_prac ********************************************************************************** -->
+						<!-- 	<dsip:p_pracoviste guid="cf62d6c7-1a33-4a5c-9f4a-5428d68a2fe3"
+					                   kod_lok="nějaký kod_lok P"
+					                   ico="00233200"
+					                   icz="44101000"
+					                   icp="44101882"
+					                   odb="101"
+					                   nemluv_p="N"
+					                   ns="1300254"
+					                   oddel="IA1JJ"
+					                   pcz="006">
+						<dsip:nazev>Interní ambulance P</dsip:nazev>
+						<dsip:pozn>Nějaká poznámka k pracovišti P</dsip:pozn>
+					</dsip:p_pracoviste>
+					<dsip:p_pracovnik guid="f5d817d5-2ba3-4fff-8ad7-f74171b31999"
+					                  id_zp="666666"
+					                  icl="366"
+					                  odbornost="SOBD"
+					                  id_pracovnik="Primar_001"
+					                  id_clk="23547"
+					                  role_klic="3888"
+					                  role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P">
+						<dsip:titul_pred>MUDr.</dsip:titul_pred>
+						<dsip:jmeno>Jiří</dsip:jmeno>
+						<dsip:prijmeni>Hanousek</dsip:prijmeni>
+						<dsip:titul_za>Phd.</dsip:titul_za>
+					</dsip:p_pracovnik> -->
+						<!-- a_prac ********************************************************************************** -->
+						<!-- 				<dsip:a_pracoviste guid="53b41019-bd0a-4e91-8248-03d884983190"
+					                   kod_lok="nějaký kod_lok A"
+					                   ico="44336655"
+					                   icz="44336001"
+					                   icp="44336012"
+					                   odb="102"
+					                   nemluv_p="N"
+					                   ns="1300288"
+					                   oddel="IA1AS"
+					                   pcz="016">
+						<dsip:nazev>Interní ambulance A</dsip:nazev>
+						<dsip:pozn>Nějaká poznámka k pracovišti A</dsip:pozn>
+												<ds:a typ="A"
+						        ind_kont="K">
+							<dsip:adr>Sv.Vavřince 56</dsip:adr>
+							<dsip:dop1>Blok A</dsip:dop1>
+							<dsip:dop2>Vchod B, 1.Patro, dveře 118</dsip:dop2>
+							<dsip:psc>15500</dsip:psc>
+							<dsip:mesto>Praha 5</dsip:mesto>
+							<dsip:stat>CZ</dsip:stat>
+							<dsip:stat_text>Česká republika</dsip:stat_text>
+							<dsip:gps>50.0746188N, 14.4820218E</dsip:gps>
+							<dsip:pozn>Tady je nějaká poznámka k adrese pracoviště</dsip:pozn>
+						
+						</ds:a>
+					</dsip:a_pracoviste>
+					<dsip:a_pracovnik guid="dcecb109-5ac2-4804-ac4c-393299bf41d0"
+					                  id_zp="123655"
+					                  icl="300"
+					                  odbornost="SOBD"
+					                  id_pracovnik="Primar_002"
+					                  id_clk="23222"
+					                  role_klic="3122"
+					                  role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení A">
+						<dsip:titul_pred>Dr.</dsip:titul_pred>
+						<dsip:jmeno>Jan</dsip:jmeno>
+						<dsip:prijmeni>Bláhaxx</dsip:prijmeni>
+						<dsip:titul_za>Phd. Csc.</dsip:titul_za>
+						<ds:a typ="A"
+						        ind_kont="K">
+								<ds:dat_od>1.1.2026</ds:dat_od>
+								<ds:dat_do>31.12.2026</ds:dat_do>
+							<ds:jmeno>Nějaké jmeno osoby nebo organizace</ds:jmeno>
+							<ds:adr>Soukenická 32</ds:adr>
+							<ds:dop1>Blok E</ds:dop1>
+							<ds:dop2>Vchod A, 3.Patro, dveře 15</ds:dop2>
+							<ds:psc>15500</ds:psc>
+							<ds:mesto>Praha 5</ds:mesto>
+							<ds:stat>CZ</ds:stat>
+							<ds:stat_text>Česká republika</ds:stat_text>
+							<ds:gps>50.0746183N, 14.4820217E</ds:gps>
+							<ds:pozn>Tady je nějaká poznámka k adrese pracovníka</ds:pozn>
+						<ds:as typ="T" poradi="1">
+						<ds:obsah>+420 315 610 023</ds:obsah>
+						<ds:vnitrni>nějaká vnitřní adresa</ds:vnitrni>
+						<ds:sdeleni>textová informace k adrese</ds:sdeleni>
+						<ds:heslo>heslo pro sdělení informací</ds:heslo>
+						</ds:as>
+						
+						</ds:a>
+					</dsip:a_pracovnik>
+					<dsip:dat_a_mod>2025-05-01T11:00:00</dsip:dat_a_mod> -->
+						<!-- o_prac ********************************************************************************** -->
+						<!-- 			<dsip:o_pracoviste guid="851d8e0a-6958-4fad-9be1-f5584fdf7d21"
+					                   kod_lok="nějaký kod_lok O"
+					                   ico="00233200"
+					                   icz="44101000"
+					                   icp="44101882"
+					                   odb="101"
+					                   nemluv_p="N"
+					                   ns="1300254"
+					                   oddel="URG11"
+					                   pcz="006">
+						<dsip:nazev>Interní ambulance O</dsip:nazev>
+						<dsip:pozn>Nějaká poznámka k pracovišti O</dsip:pozn>
+					</dsip:o_pracoviste>
+					<dsip:o_pracovnik guid="53a01d28-b620-4a96-98e6-89147271abf2"
+					                  id_zp="333333"
+					                  icl="366"
+					                  odbornost="SOBD"
+					                  id_pracovnik="Primar_003"
+					                  id_clk="58744"
+					                  role_klic="3611"
+					                  role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení O">
+						<dsip:titul_pred>MUDr.</dsip:titul_pred>
+						<dsip:jmeno>Jaroslava</dsip:jmeno>
+						<dsip:prijmeni>Mokrá</dsip:prijmeni>
+						<dsip:titul_za>Phd.</dsip:titul_za>
+					</dsip:o_pracovnik>
+					<dsip:dat_overeni>2025-05-02T13:51:23</dsip:dat_overeni> -->
+<!-- z_prac ********************************************************************************** -->
+						<!-- 					<dsip:z_pracoviste guid="ba4e4b03-8541-4a0a-a71c-24c2c4389802" 
+					                   kod_lok="nějaký kod_lok Z"
+					                   ico="64887732"
+					                   icz="67770399"
+					                   icp="15966767"
+					                   odb="234"
+					                   nemluv_p="N"
+					                   ns="2560132"
+					                   oddel="NOS15"
+					                   pcz="016">
+						<dsip:nazev>Interní ambulance Z</dsip:nazev>
+						<dsip:pozn>Nějaká poznámka k pracovišti Z</dsip:pozn>
+					</dsip:z_pracoviste>
+					<dsip:z_pracovnik guid="8b435244-c9d3-4ab0-a732-198045485327"
+					                  id_zp="111111"
+					                  icl="401"
+					                  odbornost="SOBD"
+					                  id_pracovnik="Primar_004"
+					                  id_clk="58134"
+					                  role_klic="6231"
+					                  role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení Z">
+						<dsip:titul_pred>MUDr.</dsip:titul_pred>
+						<dsip:jmeno>Vjačeslav</dsip:jmeno>
+						<dsip:prijmeni>Padnakušnov</dsip:prijmeni>
+						<dsip:titul_za>Phd.</dsip:titul_za>
+					</dsip:z_pracovnik>
+					<dsip:dat_autorizace>2025-05-02T13:51:23</dsip:dat_autorizace> -->
+<!-- ostatní ********************************************************************************** -->
+						<!-- 					<dsip:kat_dokum>34105-7</dsip:kat_dokum>
+					<dsip:stav_dokum>Z</dsip:stav_dokum>
+					<dsip:dat_dokum>2025-05-02T15:00:11</dsip:dat_dokum>
+					<dsip:verze_dokum>Nějaká verze 1.6.12.3</dsip:verze_dokum>
+					<dsip:spr_dokum>Nějaký správce dokumentu Robert Plodek</dsip:spr_dokum> -->
+						<!-- </dsip:ku_z_propz_admu> -->
+<!-- dvp1 ********************************************************************************** -->
+<!-- 						<dsip:ku_z_propz_dvp guid="2bb72650-3d61-4b28-9182-4cd9d08b8048">
+							<dsip:guid>2bb72650-3d61-4b28-9182-4cd9d08b8048</dsip:guid>
+							<dsip:dat_dvp>2025-05-03T10:50:41</dsip:dat_dvp>
+							<dsip:dvp_typ>NERESUS</dsip:dvp_typ>
+							<dsip:dvp_koment>Při zástavě srdce neresuscitovat</dsip:dvp_koment>
+							<dsip:dvp_dotstav>
+								<dsip:kod_syst>MKN-10</dsip:kod_syst>
+								<dsip:kod>I46</dsip:kod>
+								<dsip:kod_text>Srdeční zástava</dsip:kod_text>
+							</dsip:dvp_dotstav>
+							<dsip:dvp_dokum>
+								<dsip:autor>Dr. Vodička</dsip:autor>
+								<dsip:ptext xml:space="preserve">Toto je vlastní text,
+
+Má více řádků.
+
+...</dsip:ptext>
+								<dsip:ktext/>
+								<dsip:priloha zdroj="vysledky.rtf"
+								              typ="text/rtf">Výsledek vyšetření</dsip:priloha>
+							</dsip:dvp_dokum>
+						</dsip:ku_z_propz_dvp> -->
+						<!-- dvp2 ********************************************************************************** -->
+						<!-- 						<dsip:ku_z_propz_dvp guid="2bb72650-3d61-4b28-9182-4cd9d08b8049">
+						<dsip:guid>2bb72650-3d61-4b28-9182-4cd9d08b8048</dsip:guid>
+							<dsip:dat_dvp>2025-05-03T10:50:41</dsip:dat_dvp>
+							<dsip:dvp_typ>NERESUS</dsip:dvp_typ>
+							<dsip:dvp_koment>Při zástavě srdce neresuscitovat</dsip:dvp_koment>
+							<dsip:dvp_dotstav>
+								<dsip:kod_syst>MKN-10</dsip:kod_syst>
+								<dsip:kod>I46</dsip:kod>
+								<dsip:kod_text>Srdeční zástava</dsip:kod_text>
+							</dsip:dvp_dotstav>
+							<dsip:dvp_dokum>
+								<dsip:autor>Dr. Vodička</dsip:autor>
+								<dsip:ptext xml:space="preserve">Toto je vlastní text,
+
+Má více řádků.
+
+...</dsip:ptext>
+								<dsip:ktext/>
+								<dsip:priloha zdroj="vysledky.rtf"
+								              typ="text/rtf">Výsledek vyšetření</dsip:priloha>
+							</dsip:dvp_dokum>
+						</dsip:ku_z_propz_dvp> -->
+						<dsip:ku_z_propz_urg guid="2bb72650-3d61-4b28-9182-4cd9d08b8050">
+							<dsip:alerg_int guid="a7ffa34f-5676-40d8-a75a-778ec6d76a6a" vguid="46dbe2b8-3c37-41ab-8dd6-91f4c20cf2fc" typ="AF" dat_ab="2024-12-01T12:53:12" ind_oprav_sd="N">
+								<dsip:uaf guid ="9c81d50e-9547-439d-9b0f-2cc4730bce16" vguid ="9c81d50e-9547-439d-9b0f-2cc4730bce16" typ_agens="L" typ_reakce="A" ar_klic="271807003" ar_text="Eruption of skin" szp_klic="255604002" szp_text="Mírný/á">
+									<dsip:alerg_lek_klic>764146007</dsip:alerg_lek_klic>
+									<dsip:alerg_text>Penicillin</dsip:alerg_text>
+								</dsip:uaf>
+								<dsip:stav>A</dsip:stav>
+								<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+								<dsip:dat_du format="D" typ="I">1999-09-11</dsip:dat_du>
+								<dsip:dat_up format="D" typ="I">2000-09-11</dsip:dat_up>
+							</dsip:alerg_int>
+							<dsip:alerg_int guid ="a057632f-199b-4cb3-9cc4-1f42557b9a7d" vguid ="a057632f-199b-4cb3-9cc4-1f42557b9a7d" typ="AF" dat_ab="2023-12-01T12:53:12" ind_oprav_sd="N">
+								<dsip:uaf guid ="a057632f-199b-4cb3-9cc4-1f42557b9a8d" vguid ="a057632f-199b-4cb3-9cc4-1f42557b9a8d" typ_agens="P" typ_reakce="A" ar_klic="418363000" ar_text="Itching of skin" szp_klic="255604002" szp_text="Mírný/á">
+									<dsip:alerg_nelek_klic>91938006</dsip:alerg_nelek_klic>
+									<dsip:alerg_text>Allergy to strawberry</dsip:alerg_text>
+								</dsip:uaf>
+								<dsip:stav>A</dsip:stav>
+								<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+								<dsip:dat_du format="D" typ="I">1999-09-11</dsip:dat_du>
+								<dsip:dat_up format="D" typ="I">2000-09-11</dsip:dat_up>
+							</dsip:alerg_int> 
+							<dsip:ku_z_propz_urg_v guid="a7ffa34f-5676-40d8-a75a-778ec6d76a6z" vguid="46dbe2b8-3c37-41ab-8dd6-91f4c20cf2fe">
+								<dsip:var_ozn>označení varování</dsip:var_ozn>
+								<dsip:var_stav>
+									<dsip:kod_syst>SNOMED CT</dsip:kod_syst>
+									<dsip:kod>SNOMEDCT</dsip:kod>
+									<dsip:kod_text>číselník SNOMED CT</dsip:kod_text>
+								</dsip:var_stav>
+								<dsip:sp_pracovnik guid="dcecb109-5ac2-4804-ac4c-393299bf41d0" vguid="dcecb109-5ac2-4804-ac4c-393299bf41d1" id_zp="123655" icl="300" odbornost="SOBD" id_pracovnik="Primar_002" id_clk="23222" role_klic="3122" role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení A">
+									<dsip:titul_pred>Dr.</dsip:titul_pred>
+									<dsip:jmeno>Jan</dsip:jmeno>
+									<dsip:prijmeni>Dlaha</dsip:prijmeni>
+									<dsip:titul_za>Phd. Csc.</dsip:titul_za>
+									<ds:a typ="A" ind_kont="K">
+										<ds:dat_od>1.1.2026</ds:dat_od>
+										<ds:dat_do>31.12.2026</ds:dat_do>
+										<ds:jmeno>Nějaké jmeno osoby nebo organizace</ds:jmeno>
+										<ds:adr>Soukenická 32</ds:adr>
+										<ds:dop1>Blok E</ds:dop1>
+										<ds:dop2>Vchod A, 3.Patro, dveře 15</ds:dop2>
+										<ds:psc>15500</ds:psc>
+										<ds:mesto>Praha 5</ds:mesto>
+										<ds:stat>CZ</ds:stat>
+										<ds:stat_text>Česká republika</ds:stat_text>
+										<ds:gps>50.0746183N, 14.4820217E</ds:gps>
+										<ds:pozn>Tady je nějaká poznámka k adrese pracovníka</ds:pozn>
+										<ds:as typ="T" poradi="1">
+											<ds:obsah>+420 315 610 023</ds:obsah>
+											<ds:vnitrni>nějaká vnitřní adresa</ds:vnitrni>
+											<ds:sdeleni>textová informace k adrese</ds:sdeleni>
+											<ds:heslo>heslo pro sdělení informací</ds:heslo>
+										</ds:as>
+									</ds:a>
+								</dsip:sp_pracovnik>
+								<dsip:var_text>komentář/popis varování</dsip:var_text>
+								<dsip:var_zav_kod>úroveň závažnosti varování</dsip:var_zav_kod>
+								<dsip:var_dat_od>2010-12-05T05:06:56</dsip:var_dat_od>
+								<dsip:var_dat_do>2012-12-05T05:06:56</dsip:var_dat_do>							
+							</dsip:ku_z_propz_urg_v>		
+						</dsip:ku_z_propz_urg>
+						
+						<!-- sprij ********************************************************************************** -->
+						<dsip:ku_z_propz_sprij guid="52fb53c2-4466-41d7-9967-2713ff6c2c77">
+							<dsip:dat_vys_prij>2025-05-05T10:36:12</dsip:dat_vys_prij>
+							<dsip:prij_pracovnik guid="a7ffa34f-5676-40d8-a75a-778ec6d76a5a" vguid="46dbe2b8-3c37-41ab-8dd6-91f4c20cf2fb"
+							                     id_zp="666632"
+							                     icl="321"
+							                     odbornost="SOBD"
+							                     id_pracovnik="Primar_004"
+							                     id_clk="28456"
+							                     role_klic="3888"
+							                     role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P">
+								<dsip:titul_pred>MUDr.</dsip:titul_pred>
+								<dsip:jmeno>Jiří</dsip:jmeno>
+								<dsip:prijmeni>Prdousek</dsip:prijmeni>
+								<dsip:titul_za>Phd.</dsip:titul_za>
+							</dsip:prij_pracovnik>
+							<dsip:vys_a_text guid="05af2d42-4520-4ce1-b6b4-cb21694392da">
+								<dsip:autor>Dr. Souček</dsip:autor>
+								<dsip:ptext xml:space="preserve">Toto je vlastní text 001,
+
+Má více řádků.
+
+...</dsip:ptext>
+								<dsip:ktext encode="base64" typ="text/rtf">bmVqYWt5IGJhc2U2NA==</dsip:ktext> -->
+								<!-- <dsip:priloha zdroj="vysledky001.rtf"
+								              typ="text/rtf">Výsledek vyšetření 001</dsip:priloha> -->
+							</dsip:vys_a_text>							
+							<dsip:h guid_vyska="74a89549-5602-429d-959b-ec5ab0c1e42f" vguid_vyska="74a89549-5602-429d-959b-ec5ab0c1e42f" vyska="185" guid_hmotnost="a5b50efb-3cb7-4fed-9b9f-b2e0b778fdd7" vguid_hmotnost="a5b50efb-3cb7-4fed-9b9f-b2e0b778fdd7" hmotnost="83.5" guid_bmi="3a38a911-9989-465f-826b-324cd09de11c" vguid_bmi="3a38a911-9989-465f-826b-324cd09de11c" bmi="25" guid_o_hlava="67f3715b-7fd1-4dec-ace1-fbdd965dcac8" vguid_o_hlava="67f3715b-7fd1-4dec-ace1-fbdd965dcac8"  o_hlava="50" guid_o_hrudnik="3080e198-c93c-4b87-bf6e-523946bad7be" vguid_o_hrudnik="3080e198-c93c-4b87-bf6e-523946bad7be"  o_hrudnik="90" guid_o_pas="9c70696f-a348-4d4e-be78-639426e6b177" vguid_o_pas="9c70696f-a348-4d4e-be78-639426e6b177"  o_pas="60" dat_ab="2005-12-30T10:46:25">
+							<dsip:pozn>měřeno v ordinaci</dsip:pozn>
+							<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+							<dsip:dat_vys format="DT" typ="I">2005-12-30T09:46:25</dsip:dat_vys>
+							</dsip:h>
+							<dsip:vys_a_param>
+							<dsip:vys_v_snomed guid="78c15b8e-ba0a-48f1-9466-0e45d39b9358" vguid="78c15b8e-ba0a-48f1-9466-0e45d39b9359">
+									<dsip:iid>02333</dsip:iid>
+									<dsip:stav>P</dsip:stav>
+									<dsip:kod>38556</dsip:kod>
+									<dsip:dat_vysetreni>2025-05-05T10:45:12</dsip:dat_vysetreni>
+									<dsip:dat_vydani>2025-05-06T11:00:00</dsip:dat_vydani>
+									<dsip:vysl_typ>N</dsip:vysl_typ>
+									<dsip:vysl_hodnota>Nějaká hodnota textově</dsip:vysl_hodnota>
+									<dsip:vysl_jednotka>jednotka v niz je vydavan vysledek</dsip:vysl_jednotka>
+									<dsip:vysl_pozn>Nejaka poznámka k vysledku</dsip:vysl_pozn>
+									<dsip:vysl_rm_d>10</dsip:vysl_rm_d>
+									<dsip:vysl_rm_h>20</dsip:vysl_rm_h>
+									<dsip:vysl_interpret>dobrej vysledek</dsip:vysl_interpret>
+									<dsip:vysl_pracovnik guid="d21673d5-9073-41de-a60a-f40bbb8b4b84" vguid="6331564d-8b00-48f6-abf5-ba248a1be33d" ><dsip:prijmeni>Zlatohlávek</dsip:prijmeni></dsip:vysl_pracovnik>
+									<dsip:vysl_pracoviste guid="b9fabdda-9329-4939-906d-870a9bbb41d3" vguid="2983b924-57b7-493f-9eba-158211b0ac1f" icp="23556662"
+									                      odb="001">
+										<dsip:nazev>FN-Motol</dsip:nazev>
+									</dsip:vysl_pracoviste>
+								</dsip:vys_v_snomed>
+							</dsip:vys_a_param>
+							
+							
+							<dsip:vys_a_pracovnik guid="d0da1615-2691-458c-95d3-b6c14bfee389" vguid="4b045adc-f9a3-4b3b-96c7-652cb76835fc"
+							                      id_zp="666112"
+							                      icl="235"
+							                      odbornost="SOBD"
+							                      id_pracovnik="Doktor_003"
+							                      id_clk="64231"
+							                      role_klic="3888"
+							                      role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P">
+								<dsip:titul_pred>MUDr.</dsip:titul_pred>
+								<dsip:jmeno>Jana</dsip:jmeno>
+								<dsip:prijmeni>Podrazilová</dsip:prijmeni>
+								<dsip:titul_za>Phd.</dsip:titul_za>
+							</dsip:vys_a_pracovnik>
+							<dsip:vys_f_typ>vital-signs</dsip:vys_f_typ>
+							<dsip:vys_f_text>
+								<dsip:autor>Dr. Mrkalová</dsip:autor>
+								<dsip:ptext xml:space="preserve">Toto je vlastní text 002,
+
+Má více řádků.
+
+...</dsip:ptext>
+								<dsip:ktext/>
+								<dsip:priloha zdroj="vysledky002.rtf"
+								              typ="text/rtf">Výsledek vyšetření 002</dsip:priloha>
+							</dsip:vys_f_text>
+							<dsip:fyznal guid_tk ="768ec02c-67e9-4eb6-85bf-bc344648f6b0" vguid_tk ="768ec02c-67e9-4eb6-85bf-bc344648f6b0" guid_pulz ="768ec02c-67e9-4eb6-85bf-bc344648f6b1" vguid_pulz ="768ec02c-67e9-4eb6-85bf-bc344648f6b1" guid_o2sat ="768ec02c-67e9-4eb6-85bf-bc344648f6b2" vguid_o2sat ="768ec02c-67e9-4eb6-85bf-bc344648f6b2" guid_dech ="768ec02c-67e9-4eb6-85bf-bc344648f6b3" vguid_dech ="768ec02c-67e9-4eb6-85bf-bc344648f6b3" guid_teplota ="768ec02c-67e9-4eb6-85bf-bc344648f6b4" vguid_teplota ="768ec02c-67e9-4eb6-85bf-bc344648f6b4" dat_ab="2015-11-30T09:46:25" ind_oprav_sd="N">
+							<dsip:tk_syst>120</dsip:tk_syst>
+							<dsip:tk_diast>80</dsip:tk_diast>
+							<dsip:pulz>85</dsip:pulz>
+							<dsip:o2sat>60</dsip:o2sat>
+							<dsip:dech>40</dsip:dech>
+							<dsip:teplota>38.4</dsip:teplota>
+							<dsip:pozn>měřeno dopoledne</dsip:pozn>
+							<dsip:autor>MUDr. Pavel Pudr</dsip:autor>
+							<dsip:dat_vys format="DT" typ="I">2005-12-30T09:46:25</dsip:dat_vys>
+							</dsip:fyznal>							
+							<dsip:vys_f_param/>
+							<dsip:vys_f_pracovnik guid="b3fa7d95-b42f-4607-9cf7-84051925f68b" vguid="0d2388da-a7d4-4aae-aa45-e1c333b186cc"
+							                      id_zp="1238456"
+							                      icl="345"
+							                      odbornost="SOBD"
+							                      id_pracovnik="Doktor_005"
+							                      id_clk="64231"
+							                      role_klic="3888"
+							                      role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P">
+								<dsip:titul_pred>Dr.</dsip:titul_pred>
+								<dsip:jmeno>Ivana</dsip:jmeno>
+								<dsip:prijmeni>Kvapilová</dsip:prijmeni>
+								<dsip:titul_za>Phd.</dsip:titul_za>
+							</dsip:vys_f_pracovnik>
+							<dsip:vys_s_text/>
+							<dsip:vys_s_pracovnik guid="2b337d60-85f4-479f-a722-74484f40af37"
+							                      id_zp="654855"
+							                      icl="361"
+							                      odbornost="SOBD"
+							                      id_pracovnik="Doktor_006"
+							                      id_clk="64231"
+							                      role_klic="3888"
+							                      role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P">
+								<dsip:titul_pred>Dr.</dsip:titul_pred>
+								<dsip:jmeno>Petr</dsip:jmeno>
+								<dsip:prijmeni>Pazderka</dsip:prijmeni>
+								<dsip:titul_za>Phd.</dsip:titul_za>
+							</dsip:vys_s_pracovnik>
+							<dsip:dat_hodn_fs>2025-05-05T11:12:06</dsip:dat_hodn_fs>
+							<dsip:vys_fs_text/>
+							<dsip:vys_fs_form/>
+							<dsip:vy_fs_pracovnik guid="117ed2fa-268b-4231-843f-1f415d8263e8" vguid="d9c92e9a-8e7b-4169-bfa1-ba353e5482d8"
+							                      id_zp="673312"
+							                      icl="545"
+							                      odbornost="SOBD"
+							                      id_pracovnik="Doktor_007"
+							                      id_clk="64231"
+							                      role_klic="3888"
+							                      role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P">
+								<dsip:titul_pred>MuDr.</dsip:titul_pred>
+								<dsip:jmeno>Michael</dsip:jmeno>
+								<dsip:prijmeni>Coural</dsip:prijmeni>
+								<dsip:titul_za>Phd.</dsip:titul_za>
+							</dsip:vy_fs_pracovnik>
+						</dsip:ku_z_propz_sprij> -->
+						
+						<!-- anam ********************************************************************************** -->
+						<dsip:ku_z_propz_anam guid="52fb53c2-4466-41d7-9967-2713ff6c2c88" vguid="52fb53c2-4466-41d7-9967-2713ff6c2c89">
+							<dsip:anam_prob guid ="f253cbcd-a149-417f-8dbd-03da84e23bc6" vguid ="f253cbcd-a149-417f-8dbd-03da84e23bc7">
+							<dsip:prob_popis>popis problému</dsip:prob_popis>
+							<dsip:prob_kod>
+								<dsip:kod_syst>SNOMED CT</dsip:kod_syst>
+								<dsip:kod>SNOMEDCT</dsip:kod>
+								<dsip:kod_text>číselník SNOMED CT</dsip:kod_text>
+							</dsip:prob_kod>
+							<dsip:prob_dat_od>2005-12-05T05:06:56</dsip:prob_dat_od>
+							<dsip:prob_dat_do>2006-12-05T05:06:56</dsip:prob_dat_do>
+							<dsip:prob_klin>A</dsip:prob_klin>
+							<dsip:prob_okol>okolnosti vyřešení - anf</dsip:prob_okol>
+							<dsip:prob_zav_text>závažnost - text</dsip:prob_zav_text>
+							<dsip:prob_stad_text>stádium onemocnění - text</dsip:prob_stad_text>
+							<dsip:prob_stad_kod>
+								<dsip:kod_syst>SNOMED CT</dsip:kod_syst>
+								<dsip:kod>SNOMEDCT</dsip:kod>
+								<dsip:kod_text>číselník SNOMED CT</dsip:kod_text>
+							</dsip:prob_stad_kod>
+							</dsip:anam_prob> 
+							<dsip:anam_zpi>
+								<dsip:uniz guid ="5d0bcb2b-8e5d-4577-962f-248aa05bcaab" vguid ="5d0bcb2b-8e5d-4577-962f-248aa05bcacd" typ="SF" dat_ab="2005-12-01T12:53:12" ind_oprav_sd="N">
+									<dsip:u_niz>náhrady, implantáty, zařízení volným textem</dsip:u_niz>
+									<dsip:unizf guid ="5d0bcb2b-8e5d-4577-962f-248aa05bcaef" vguid ="5d0bcb2b-8e5d-4577-962f-248aa05bcagh" niz_klic="14106009" niz_text="Kardiostimulátor" niz_ident="identifikátor prostředku" info_text="doplňující informace a poznámky"></dsip:unizf>
+									<dsip:duvod_text>důvod použití - text</dsip:duvod_text>
+									<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+									<dsip:dat_du format="D" typ="I">1999-09-11</dsip:dat_du>
+									<dsip:dat_up format="D" typ="I">2000-09-11</dsip:dat_up>
+								</dsip:uniz>
+							</dsip:anam_zpi>
+							<dsip:anam_vyk>
+								<dsip:chv guid ="bb6e77ba-cffa-4a73-b97d-2e9e90a6df51" vguid ="bb6e77ba-cffa-4a73-b97d-2e9e90a6df52" typ="A" chvps_klic="80146002" chvps_text="Apendektomie" info_text="doplňující informace a poznámky k výkonu" dat_ab="2005-12-01T12:53:12" ind_oprav_sd="N">
+									<dsip:alv_text>anatomická lokalizace výkonu - text</dsip:alv_text>
+									<dsip:alv_form>
+										<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+										<dsip:ptext xml:space="preserve">Struktura slepého střeva</dsip:ptext>
+									</dsip:alv_form>
+									<dsip:duvod_text>důvod provedení výkonu - text</dsip:duvod_text>
+									<dsip:duvod_kod>
+										<dsip:kod_syst>MKN-10</dsip:kod_syst>
+										<dsip:kod>K352</dsip:kod>
+										<dsip:kod_text>Akutní apendicitida</dsip:kod_text>
+									</dsip:duvod_kod>
+									<dsip:vysledek>C</dsip:vysledek>
+									<dsip:komplikace>
+										<dsip:kod_syst>MKN-10</dsip:kod_syst>
+										<dsip:kod>K650</dsip:kod>
+										<dsip:kod_text>Peritonitida</dsip:kod_text>
+									</dsip:komplikace>
+									<dsip:zdrav_prost>zdravotnický prostředek</dsip:zdrav_prost>
+									<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+									<dsip:dat_vyk format="D">2005-12-30T12:53:12</dsip:dat_vyk>
+								</dsip:chv>
+							</dsip:anam_vyk>
+							<dsip:anam_oc guid ="7c969856-3714-40b4-8705-8c3f30b1d745" vguid ="7c969856-3714-40b4-8705-8c3f30b1d746">
+								<dsip:ocz guid ="dbd79264-3e89-4f43-aa5b-d9c7e0d0aeee" vguid ="dbd79264-3e89-4f43-aa5b-d9c7e0d0afff" typ_oc_kod="TETP" typ_oc_text="Očkování proti tetanu">
+									<dsip:davka cis_davky="1" poc_davek="3" ind_oprav_sd="N" id_davka="ACE_DSGN_AB.25" id_davka_isin="ISIN" kod_ol="0250256" nazev_ol="COMIRNATY" nazev_vyrobce="název výrobce" gene_ol="generický název očkovací látky" cis_sarze="111" apl_cesta_klic="IVN" apl_cesta_text="Intravenózní podání" misto_apl_klic="LH" misto_apl_text="levá ruka" pozn="poznámky k očkovací dávce">
+										<dsip:dat_expirace format="D" typ="I">2001-12-02</dsip:dat_expirace>
+										<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+										<dsip:dat_du format="DT" typ="I">2001-12-02T09:30</dsip:dat_du>
+										<dsip:reakce typ="F">
+											<dsip:dat_or format="DT" typ="I">2001-12-02T09:30</dsip:dat_or>
+										</dsip:reakce>    
+									</dsip:davka>
+								</dsip:ocz>
+								<dsip:ocz guid ="0303f986-d01b-45ba-9f26-de09b825f197" vguid ="0303f986-d01b-45ba-9f26-de09b825f198" typ_oc_kod="CHRI" typ_oc_text="Očkování proti chřipce">
+									<dsip:davka cis_davky="1" ind_oprav_sd="N" kod_ol="0250256" nazev_ol="COMIRNATY" cis_sarze="111">
+									<dsip:dat_du format="DT" typ="I">2001-12-02T09:30</dsip:dat_du>
+									</dsip:davka>
+								</dsip:ocz>
+								<dsip:dat_ak>2006-12-11T12:00:00</dsip:dat_ak>
+							</dsip:anam_oc>
+							<dsip:anam_inf guid ="c70c6ce9-9cc3-4e9e-8a37-22111668b217" vguid ="c70c6ce9-9cc3-4e9e-8a37-22111668b218">
+								<dsip:inf_dat_od>2005-12-05T05:06:56</dsip:inf_dat_od>
+								<dsip:inf_dat_do>2006-12-05T05:06:56</dsip:inf_dat_do>
+								<dsip:inf_agens>
+									<dsip:kod_syst>SNOMED CT</dsip:kod_syst>
+									<dsip:kod>SNOMEDCT</dsip:kod>
+									<dsip:kod_text>číselník SNOMED CT</dsip:kod_text>
+								</dsip:inf_agens>
+								<dsip:inf_expoz_text>vzdálenost či typ expozice - text</dsip:inf_expoz_text>
+								<dsip:inf_expoz_kod>P</dsip:inf_expoz_kod>
+								<dsip:inf_stat_text>Afghánistán</dsip:inf_stat_text>
+								<dsip:inf_stat_kod>AFG</dsip:inf_stat_kod>
+								<dsip:inf_koment>komentář</dsip:inf_koment>
+							</dsip:anam_inf>
+							<dsip:anam_infc guid ="009ac4a7-6dcd-497d-8863-b83dae5e46c0" vguid ="009ac4a7-6dcd-497d-8863-b83dae5e46c1">
+								<dsip:infc_dat_od>2010-12-05T05:06:56</dsip:infc_dat_od>
+								<dsip:infc_dat_do>2012-12-05T05:06:56</dsip:infc_dat_do>
+								<dsip:infc_stat_text>Česko</dsip:infc_stat_text>
+								<dsip:infc_stat_kod>CZE</dsip:infc_stat_kod>
+								<dsip:infc_koment>komentář</dsip:infc_koment>
+							</dsip:anam_infc>
+							<dsip:anam_rao guid ="6f41534a-6735-424d-8fb9-14c2bce898b6" vguid ="6f41534a-6735-424d-8fb9-14c2bce898b7">
+								<dsip:rao_vztah_kod>GRMTH</dsip:rao_vztah_kod>
+								<dsip:rao_vztah_text>babička</dsip:rao_vztah_text>
+								<dsip:rao_dat_nar format="D" typ="I">1905-04-18</dsip:rao_dat_nar>
+								<dsip:rao_dat_um format="R" typ="I">1999</dsip:rao_dat_um>
+								<dsip:rao_vzdel>VŠ</dsip:rao_vzdel>
+								<dsip:rao_zdrprob_kod>
+									<dsip:kod_syst>SNOMED CT</dsip:kod_syst>
+									<dsip:kod>SNOMEDCT</dsip:kod>
+									<dsip:kod_text>zdravotní problémy osoby</dsip:kod_text>
+								</dsip:rao_zdrprob_kod>
+								<dsip:rao_duvum_kod>
+									<dsip:kod_syst>SNOMED CT</dsip:kod_syst>
+									<dsip:kod>SNOMEDCT</dsip:kod>
+									<dsip:kod_text>důvod úmrtí osoby</dsip:kod_text>
+								</dsip:rao_duvum_kod>
+							</dsip:anam_rao>
+							<dsip:anam_sa guid ="e0f72234-898d-4048-a476-566c142afdbf" vguid ="e0f72234-898d-4048-a476-566c142afdbg">
+								<dsip:sau_prac>Pracuje jako dobrovolník v komunitním centru</dsip:sau_prac>
+								<dsip:sau_zajmy>Turistika, čtení knih, zahradničení</dsip:sau_zajmy>
+								<dsip:sau_soc>Rodina, přátelé, dobré vztahy se sousedy</dsip:sau_soc>
+								<dsip:sav_vzdel>HS</dsip:sav_vzdel>
+								<dsip:sav_koment>stále studuje a studuje</dsip:sav_koment>
+								<dsip:sab_zpbydl_text>Druh bydlení, ve kterém pacient žije</dsip:sab_zpbydl_text>
+								<dsip:sab_zpbydl_kod>365508006</dsip:sab_zpbydl_kod>
+								<dsip:sab_prizp_text>Úpravy přítomné v domácnosti, které byly provedeny v souvislosti s nemocí nebo postižením, aby bylo fungování pacienta bezpečnější a pohodlnější a umožnilo nezávislý život</dsip:sab_prizp_text>
+								<dsip:sab_prizp_kod>BSCH</dsip:sab_prizp_kod>
+								<dsip:sab_bariery_text>Podmínky, které mají vliv na bezbariérovost domova nebo pobyt v domově</dsip:sab_bariery_text>
+								<dsip:sab_bariery_kod>STHO</dsip:sab_bariery_kod>
+								<dsip:sar_koment>komentář k rodinné situaci</dsip:sar_koment>
+								<dsip:sar_slozrod_text>složení rodiny</dsip:sar_slozrod_text>
+								<dsip:sar_rodstav_text>rodinný stav</dsip:sar_rodstav_text>
+								<dsip:sar_pocdet>5</dsip:sar_pocdet>
+								<dsip:sar_pocdetd>3</dsip:sar_pocdetd>
+								<dsip:sar_dite>podrobnosti o dítěti</dsip:sar_dite>
+								<dsip:sar_pecezc>Činnosti, které pacient vykonává při péči o závislého člena rodiny</dsip:sar_pecezc>
+							</dsip:anam_sa> 
+							<dsip:anam_aba guid ="30562d19-9daf-4e55-a033-575c2c656dd5" vguid ="30562d19-9daf-4e55-a033-575c2c656dd6">
+								<dsip:aba_stav_text>ETOH (Alcohol) Use</dsip:aba_stav_text>
+								<dsip:aba_stav_kod>160573003</dsip:aba_stav_kod>
+								<dsip:aba_dat_od>2019-12-05T05:06:56</dsip:aba_dat_od>
+								<dsip:aba_dat_do>2023-12-05T05:06:56</dsip:aba_dat_do>
+								<dsip:aba_mnoz_text>4 {glass}/d</dsip:aba_mnoz_text>
+								<dsip:aba_koment>komentář</dsip:aba_koment>
+							</dsip:anam_aba>
+							<dsip:anam_abk guid ="8682fcfd-fdd1-47ad-890b-a70dac102a8b" vguid ="8682fcfd-fdd1-47ad-890b-a70dac102a8e">
+								<dsip:abk_stav_text>Smoking</dsip:abk_stav_text>
+								<dsip:abk_stav_kod>229819007</dsip:abk_stav_kod>
+								<dsip:abk_dat_od>2019-12-05T05:06:56</dsip:abk_dat_od>
+								<dsip:abk_dat_do>2023-12-05T05:06:56</dsip:abk_dat_do>
+								<dsip:abk_mnoz_text>0.5 {pack}/d</dsip:abk_mnoz_text>
+								<dsip:abk_koment>komentář</dsip:abk_koment>
+							</dsip:anam_abk>
+							<dsip:anam_abd guid ="c1e7382e-4f15-45d5-9434-37155cb15f0d" vguid ="c1e7382e-4f15-45d5-9434-37155cb15f0e">
+								<dsip:abd_stav_text>Současný uživatel drog</dsip:abd_stav_text>
+								<dsip:abd_stav_kod>CDUS</dsip:abd_stav_kod>
+								<dsip:abd_dat_od>2024-12-05T05:06:56</dsip:abd_dat_od>
+								<dsip:abd_dat_do>2025-12-05T05:06:56</dsip:abd_dat_do>
+								<dsip:abd_mnoz_text>množství - text</dsip:abd_mnoz_text>
+								<dsip:abd_lattyp_text>Amfetamin</dsip:abd_lattyp_text>
+								<dsip:abd_lattyp_kod>AMFETAM</dsip:abd_lattyp_kod>
+								<dsip:abd_latzp_text>Inhalační podání</dsip:abd_latzp_text>
+								<dsip:abd_latzp_kod>20020000</dsip:abd_latzp_kod>
+								<dsip:abd_koment>komentář</dsip:abd_koment>
+							</dsip:anam_abd>
+							<dsip:anam_abj guid ="5b960413-8847-4c12-849e-e2406e4323ee" vguid ="5b960413-8847-4c12-849e-e2406e4323ef">
+								<dsip:abj_text>popis problému</dsip:abj_text>
+								<dsip:abj_kod>
+									<dsip:kod_syst>Orphacode</dsip:kod_syst>
+									<dsip:kod>ORPHACD</dsip:kod>
+									<dsip:kod_text>ORPHA code</dsip:kod_text>
+								</dsip:abj_kod>
+							</dsip:anam_abj> 
+						</dsip:ku_z_propz_anam>
+						<dsip:ku_z_propz_prubh>
+							<dsip:chv guid ="bb6e77ba-cffa-4a73-b97d-2e9e90a6df53" vguid ="bb6e77ba-cffa-4a73-b97d-2e9e90a6df54" typ="A" chvps_klic="80146002" chvps_text="Apendektomie" info_text="doplňující informace a poznámky k výkonu" dat_ab="2005-12-01T12:53:12" ind_oprav_sd="N">
+								<dsip:alv_text>anatomická lokalizace výkonu - text</dsip:alv_text>
+								<dsip:alv_form>
+									<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+									<dsip:ptext xml:space="preserve">Struktura slepého střeva</dsip:ptext>
+								</dsip:alv_form>
+								<dsip:duvod_text>důvod provedení výkonu - text</dsip:duvod_text>
+								<dsip:duvod_kod>
+									<dsip:kod_syst>MKN-10</dsip:kod_syst>
+									<dsip:kod>K352</dsip:kod>
+									<dsip:kod_text>Akutní apendicitida</dsip:kod_text>
+								</dsip:duvod_kod>
+								<dsip:vysledek>C</dsip:vysledek>
+								<dsip:komplikace>
+									<dsip:kod_syst>MKN-10</dsip:kod_syst>
+									<dsip:kod>K650</dsip:kod>
+									<dsip:kod_text>Peritonitida</dsip:kod_text>
+								</dsip:komplikace>
+								<dsip:zdrav_prost>zdravotnický prostředek</dsip:zdrav_prost>
+								<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+								<dsip:dat_vyk format="D">2005-12-30T12:53:12</dsip:dat_vyk>
+							</dsip:chv>
+							<dsip:uniz guid ="5d0bcb2b-8e5d-4577-962f-248aa05bca25" vguid ="5d0bcb2b-8e5d-4577-962f-248aa05bca26" typ="SF" dat_ab="2005-12-01T12:53:12" ind_oprav_sd="N">
+									<dsip:u_niz>náhrady, implantáty, zařízení volným textem</dsip:u_niz>
+									<dsip:unizf guid ="5d0bcb2b-8e5d-4577-962f-248aa05bca77" vguid ="5d0bcb2b-8e5d-4577-962f-248aa05bca78" niz_klic="14106009" niz_text="Kardiostimulátor" niz_ident="identifikátor prostředku" info_text="doplňující informace a poznámky"></dsip:unizf>
+									<dsip:duvod_text>důvod použití - text</dsip:duvod_text>
+									<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+									<dsip:dat_du format="D" typ="I">1999-09-11</dsip:dat_du>
+									<dsip:dat_up format="D" typ="I">2000-09-11</dsip:dat_up>
+								</dsip:uniz>
+							<dsip:le guid ="de4f166d-a24f-4cb7-85fc-865602807e7b" vguid ="de4f166d-a24f-4cb7-85fc-865602807e7c" typ="A" dat_ab="2005-12-30T19:46:25">
+								<dsip:lez guid ="de4f166d-a24f-4cb7-85fc-865602807e7d" vguid ="de4f166d-a24f-4cb7-85fc-865602807e7e" typ_med="T" ind_oprav_sd="N" nazev_lek="PENICILIN G 1.0 DRAS. SOL BIOT." kod_lek="01093">
+									<dsip:dat_od format="D">2005-12-30</dsip:dat_od>
+									<dsip:dat_do format="D">2006-01-30</dsip:dat_do>
+									<dsip:rozpis_v>3x denně</dsip:rozpis_v>
+									<dsip:pozn>před jídlem</dsip:pozn>
+									<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+								</dsip:lez>
+								<dsip:lez guid ="de4f166d-a24f-4cb7-85fc-865602807e98" vguid ="de4f166d-a24f-4cb7-85fc-865602807e99" typ_med="P" ind_oprav_sd="N" nazev_lek="ANTIREVMATICKÝ ČAJ spc 20x1.5gm" kod_lek="53341">
+									<dsip:dat_od format="D">2005-01-30</dsip:dat_od>
+									<dsip:dat_do format="D">2006-02-12</dsip:dat_do>
+									<dsip:rozpis_v>6x denně</dsip:rozpis_v>
+									<dsip:pozn>po jídle</dsip:pozn>
+									<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
+								</dsip:lez>
+							</dsip:le>
+							<dsip:ku_z_propz_prubh_d guid ="de4f166d-a24f-4cb7-85fc-865602807e47" vguid ="de4f166d-a24f-4cb7-85fc-865602807e48">
+								<dsip:vykd_popis>Popis výkonu volným textem.</dsip:vykd_popis>
+								<dsip:vykd_lokal>Řízená terminologie dle SNOMED CT</dsip:vykd_lokal>
+								<dsip:dat_prov_vykd>2019-12-05T05:06:56</dsip:dat_prov_vykd>
+								<dsip:vykd_duv_text>Důvod provedení výkonu textem.</dsip:vykd_duv_text>
+							</dsip:ku_z_propz_prubh_d>
+							<dsip:ku_z_propz_prubh_s>
+								<dsip:ks_popis guid ="de4f166d-a24f-4cb7-85fc-865602807e57" vguid ="de4f166d-a24f-4cb7-85fc-865602807e58">Popis problému volným textem.</dsip:ks_popis>
+								<dsip:ks_duv_prub_h guid ="de4f166d-a24f-4cb7-85fc-865602807e67" vguid ="de4f166d-a24f-4cb7-85fc-865602807e68">Podrobný popis důvodu a průběhu hospitalizace (za celou hospitalizaci).</dsip:ks_duv_prub_h>
+								<dsip:ks_klin_uvaha guid ="de4f166d-a24f-4cb7-85fc-865602807e77" vguid ="de4f166d-a24f-4cb7-85fc-865602807e78">Klinické shrnutí může být zakončeno klinickou úvahou (dif. diagnostika, vysvětlení souvislostí apod.) u klinicky složitých stavů.</dsip:ks_klin_uvaha>
+							</dsip:ku_z_propz_prubh_s>
+						</dsip:ku_z_propz_prubh>
+					</dsip:ku_z_propz>
+					<dsip:auzku indikace="I"
+					            typpol_vz="V"
+					            diag="I158">
+						<dsip:dat_du typ="A">2006-12-03T11:00:00</dsip:dat_du>
+						<dsip:vykon kod_vykonu="11023"
+						            pocet="1"
+						            uctujici="O"/>
+						<dsip:p_pracoviste icz="44101000"
+						                   icp="44101882"
+						                   odb="101">
+							<dsip:nazev>Interní ambulance</dsip:nazev>
+						</dsip:p_pracoviste>
+					</dsip:auzku>
+				</dsip:ku_z>
+			</dsip:ku>
+		</dsip:ip>
+	</ds:is>
+</ds:dasta>

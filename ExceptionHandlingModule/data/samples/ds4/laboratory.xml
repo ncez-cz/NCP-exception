@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ds:dasta xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip"
+          xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta https://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.30.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip https://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.15.06.xsd"
+          id_soubor="MEDICALC_KK11115_2005-12-12T14:46:25"
+          verze_ds="04.27.03"
+          verze_nclp="02.90.01"
+          bin_priloha="T"
+          ur="T"
+          typ_odesm="KK"
+          ozn_soub="11115"
+          dat_vb="2008-06-13T14:46:25+02:00"
+          potvrzeni="P">
+	<ds:zdroj_is kod_firmy="MEDICALC"
+	             kod_prog="WMEXP"
+	             verze_prog="2.2.3.8"/>
+	<ds:pm>
+		<ds:as typ="I"
+		       poradi="1">
+			<ds:vnitrni>999</ds:vnitrni>
+		</ds:as>
+	</ds:pm>
+	<ds:garant_dat guid="6669b3fb-afbc-4004-bda5-5fa938b327e6"
+	               id_zp="9988776655"
+	               id_garant="450124145"
+	               odbornost="001"
+	               id_clk="1122334455"
+	               role_klic="2211"
+	               role_text="Praktičtí lékaři">MUDr. Dasta Garant</ds:garant_dat>
+	<ds:is ico="12345678"
+	       icz="44101000"
+	       icp="44101882"
+	       icl="44101882"
+	       pcz="001"
+	       oddel="AB123"
+	       oavl="ABCDE123456">
+		<ds:as typ="I"
+		       poradi="1">
+			<ds:obsah>obsah adresy</ds:obsah>
+			<ds:vnitrni>vnitřní adresa</ds:vnitrni>
+			<ds:sdeleni>textová informace k adrese</ds:sdeleni>
+			<ds:heslo>heslo pro sdělení informací</ds:heslo>
+		</ds:as>
+		<ds:a typ="O">
+			<ds:jmeno>adresa - jméno nebo název</ds:jmeno>
+			<ds:adr>adresa - hlavní text</ds:adr>
+			<ds:dop1>adresa - upřesnění 1</ds:dop1>
+			<ds:dop2>adresa - upřesnění 2</ds:dop2>
+			<ds:psc>12345</ds:psc>
+			<ds:mesto>město</ds:mesto>
+			<ds:stat>CZE</ds:stat>
+			<ds:stat_text>Česká republika</ds:stat_text>
+			<ds:gps lat="25.8"
+			        lon="130.2"/>
+			<ds:pozn>poznámka k údajům</ds:pozn>
+			<ds:autor id_zp="123456789"
+			          id_autor="identifikace autora"
+			          odbornost="001"
+			          id_clk="1234567890"
+			          role_klic="221"
+			          role_text="Lékaři">MUDr. Jmeno Prijmeni</ds:autor>
+		</ds:a>
+		<dsip:ip id_pac="7601019998"
+		         xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"
+		         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		         xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+			<dsip:typ_id_pac>0</dsip:typ_id_pac>
+			<dsip:rodcis>7601019998</dsip:rodcis>
+			<dsip:rip>7601019998</dsip:rip>
+			<dsip:id_card>
+				<dsip:id_number>9988776655</dsip:id_number>
+				<dsip:dat_pl format="D">2026-02-19</dsip:dat_pl>
+			</dsip:id_card>
+			<dsip:passport>
+				<dsip:id_number>1122334455</dsip:id_number>
+				<dsip:stat>CZE</dsip:stat>
+				<dsip:dat_pl format="D">2020-11-29</dsip:dat_pl>
+			</dsip:passport>
+			<dsip:jmeno>Tomáš</dsip:jmeno>
+			<dsip:prijmeni>Laňka-Ukázka</dsip:prijmeni>
+			<dsip:titul_pred>Ing.</dsip:titul_pred>
+			<dsip:titul_za>MBA</dsip:titul_za>
+			<dsip:dat_dn format="D">1976-01-01</dsip:dat_dn>
+			<dsip:misto_nar>Praha</dsip:misto_nar>
+			<dsip:stat_pris>CZE</dsip:stat_pris>
+			<dsip:dat_de format="D">2021-10-15</dsip:dat_de>
+			<dsip:sex>M</dsip:sex>
+			<dsip:sex_klin>M</dsip:sex_klin>
+			<dsip:rod_prijm>Ukázka</dsip:rod_prijm>
+			<dsip:jine_idu>neznámá osoba</dsip:jine_idu>
+			<dsip:typ_sdel>KU</dsip:typ_sdel>
+			<dsip:duvernost>1</dsip:duvernost>
+			<ds:a typ="1">
+				<ds:jmeno>Jmeno Prijmeni</ds:jmeno>
+				<ds:adr>Plzeňská 145/8</ds:adr>
+				<ds:dop1>Smíchov</ds:dop1>
+				<ds:dop2>3. patro</ds:dop2>
+				<ds:psc>15000</ds:psc>
+				<ds:mesto>Praha 5</ds:mesto>
+				<ds:stat>CZE</ds:stat>
+				<ds:as poradi="1"
+				       typ="B">
+					<ds:obsah>+420603123456</ds:obsah>
+				</ds:as>
+				<ds:as poradi="0"
+				       typ="T">
+					<ds:obsah>+420247814589</ds:obsah>
+				</ds:as>
+				<ds:as poradi="0"
+				       typ="E">
+					<ds:obsah>email@email.zcz</ds:obsah>
+				</ds:as>
+			</ds:a>
+			<dsip:jazyk jazyk_klic="cs"
+			            jazyk_text="Čeština"
+			            pref="M"
+			            pozn="Nejaka dlouha poznamka 123456789 123456789 123456789 123456789 123456789 1234567890">
+	</dsip:jazyk>
+			<dsip:h vyska="185"
+			        hmotnost="83.5"
+			        bmi="24.40"
+			        dat_ab="2005-12-30T09:46:25">
+				<dsip:pozn>Nějaký dlouhý testovací text</dsip:pozn>
+				<dsip:autor>MUDr. Autor Záznam</dsip:autor>
+				<dsip:dat_vys>2005-12-29</dsip:dat_vys>
+			</dsip:h>
+			<dsip:pv_pac typ_pv="ZP"
+			             dat_ab="2005-12-01T12:53:12">
+				<dsip:pv_zp>
+					<dsip:cispoj>7052024826</dsip:cispoj>
+					<dsip:kodpoj>111</dsip:kodpoj>
+				</dsip:pv_zp>
+			</dsip:pv_pac>
+			<dsip:dg>
+				<dsip:dgz typ_dg="P">
+					<dsip:diag poradi="1">I151</dsip:diag>
+				</dsip:dgz>
+				<dsip:dgz typ_dg="P">
+					<dsip:diag poradi="2">A029</dsip:diag>
+				</dsip:dgz>
+				<dsip:dgz typ_dg="T">
+					<dsip:diag poradi="3">A260</dsip:diag>
+				</dsip:dgz>
+				<dsip:dgz typ_dg="T">
+					<dsip:diag poradi="4">A510</dsip:diag>
+				</dsip:dgz>
+			</dsip:dg>
+			<dsip:ku>
+				<dsip:ku_z duverne="N"
+				           fazespec="ZF"
+				           idku="MEDICALC.FNPL.1234567890"
+				           typku="AMB.VYS">
+					<dsip:dat_prov>2006-12-03T11:00:00</dsip:dat_prov>
+					<dsip:dat_vydani>2006-12-05T11:00:00</dsip:dat_vydani>
+					<dsip:p_pracoviste icz="44101000"
+					                   icp="44101882"
+					                   odb="501">
+						<dsip:nazev>Chirurgická ambulance</dsip:nazev>
+					</dsip:p_pracoviste>
+					<dsip:text>
+						<dsip:ptext xml:space="preserve">Nález normální, za 3 týdny doporučena kontrola u praktického lékaře.</dsip:ptext>
+					</dsip:text>
+					<dsip:dg_vys typ_dg="P">
+						<dsip:diag poradi="1">L031</dsip:diag>
+					</dsip:dg_vys>
+					<dsip:auzku indikace="I"
+					            typpol_vz="V"
+					            diag="L031">
+						<dsip:dat_du typ="A">2006-12-03T11:00:00</dsip:dat_du>
+						<dsip:vykon kod_vykonu="51012"
+						            pocet="1"
+						            uctujici="O"/>
+						<dsip:p_pracoviste icz="44101000"
+						                   icp="44101882"
+						                   odb="501">
+							<dsip:nazev>Chirurgická ambulance</dsip:nazev>
+						</dsip:p_pracoviste>
+					</dsip:auzku>
+				</dsip:ku_z>
+			</dsip:ku>
+			<dsip:ku>
+				<dsip:ku_z guid="324029d0-deec-40c9-83a8-049b3e2b9dd3">
+				<dsip:dat_prov>2006-12-04T12:12:12</dsip:dat_prov>
+					<!-- jen atributy a elementy pro ku_z_lab 1********************************************************************************** -->
+					<!-- 			 						
+			<dsip:ku_z_lab guid="6251b13b-c824-442b-81ec-923ba700f16b" klic_nclp="00123"
+						   nclp_verze="NCLP 02.91.01 / 01.01.2025"
+			               syst_klic="S"
+			               komp_klic="A2G"
+						   syst_sp_klic="PATKANAL"
+						   syst_sp_text="PTKNL"
+						   subsp_text="subspecifikace systému sdělované položky"
+						   ziskmat_klic="BIOPSIE"
+						   klic_nclp_o="Amoxicilin"
+			               typ_cispol="N"
+			               typpol_fh="2"
+						   nahrad_vys="A"
+			               stav_vys="A"
+						   urg_info="Z"
+						   urg_zprac="V"
+			               typ_sdel_vys="N"
+						   ind_vazb_fv="F"
+						   ind_test_nf="2"
+						   spec_proc="CHROMAF"
+						   kolize="CYTCERV"
+						   akreditace="A"
+						   akreditace_t="Nějaký text k akreditaci"
+						   id_jrc="2572"
+						   vyrobce_text="Access Bio Inc."
+						   set_text="CareStart(TM) COVID-19 Antigen"
+						   duverne="N"
+						   typ_obalu="B01A"
+						   >
+						   
+				<dsip:dat_du typ="A">2006-01-01T12:00:00</dsip:dat_du>
+				<dsip:nazev_lclp>AST</dsip:nazev_lclp>
+				<dsip:vrn priznak_kvant="R"
+				          formrm="1">
+					<dsip:hodnota>0.2</dsip:hodnota>
+					<dsip:jednotka>g/l</dsip:jednotka>
+				</dsip:vrn>
+			</dsip:ku_z_lab> -->
+					<!-- vrn 1********************************************************************************** -->
+					<!-- 						<dsip:ku_z_lab guid="f82742b9-5b90-4456-a48c-ff03b56f0b4d" klic_nclp="00123"
+			               syst_klic="S"
+			               komp_klic="A2G"
+			               typ_cispol="N"
+			               typpol_fh="2"
+			               stav_vys="A"
+			               typ_sdel_vys="N">
+				<dsip:dat_du typ="A">2006-01-01T12:00:00</dsip:dat_du>
+				<dsip:nazev_lclp>AST</dsip:nazev_lclp>
+				<dsip:vrn priznak_kvant="R"
+				          formrm="1">
+					<dsip:hodnota>0.2</dsip:hodnota>
+					<dsip:jednotka>g/l</dsip:jednotka>
+				</dsip:vrn>
+			</dsip:ku_z_lab> -->
+					<!-- vrn 2 ********************************************************************************** -->
+					<!-- <dsip:ku_z_lab guid="df5c58aa-0240-4b2a-b129-9797aba6a4a9" klic_nclp="00634"
+               syst_klic="S"
+               komp_klic="AMS"
+               typ_cispol="N"
+               typpol_fh="2"
+               stav_vys="A"
+               typ_sdel_vys="N">
+	<dsip:dat_du typ="A">2006-12-03T11:00:00</dsip:dat_du>
+	<dsip:nazev_lclp>Alfa-amylasa</dsip:nazev_lclp>
+	<dsip:vrn priznak_kvant="R"
+	          formrm="1">
+		<dsip:nazvy system="S"
+		            material="B"
+		            komponenta="AMS"
+		            druh_veliciny="Koncentrace katalytické aktivity"
+		            jednotka="µkat/l"
+		            procedura="*"/>
+		<dsip:hodnota>0.45</dsip:hodnota>
+		<dsip:jednotka>µkat/l</dsip:jednotka>
+		<dsip:nejistota>
+			<dsip:nejist_var1 t_nejist="1"
+			                  h_nejist="0.25"/>
+			<dsip:nejist_var2 t_nejist_n="2"
+			                  h_nejist_n="0.17"
+			                  k_anal_n="4.35"
+			                  t_nejist_v="2"
+			                  h_nejist_v="0.30"
+			                  k_anal_v="9.20"/>
+		</dsip:nejistota>
+		<dsip:skala>
+			<dsip:s1>1</dsip:s1>
+			<dsip:s2>2</dsip:s2>
+			<dsip:s3>3</dsip:s3>
+			<dsip:s4>4</dsip:s4>
+			<dsip:s5>5</dsip:s5>
+			<dsip:s6>6</dsip:s6>
+			<dsip:s7>7</dsip:s7>
+			<dsip:s8>8</dsip:s8>
+		</dsip:skala>
+	</dsip:vrn>
+</dsip:ku_z_lab> -->
+					<!-- vrf ********************************************************************************** -->
+					<!-- 		  			<dsip:ku_z_lab guid="540f16c2-f91f-47bc-91ad-b215a6874658" klic_nclp="03399"
+			               syst_klic="U"
+			               komp_klic="NITRITSQ"
+			               typ_cispol="N"
+			               typpol_fh="FR"
+			               stav_vys="N"
+			               typ_sdel_vys="N"
+			               id_lis="1/5/12/2005"
+			               id_lo_is="10002AS">
+				<dsip:dat_du typ="I">2005-12-05T09:41:36</dsip:dat_du>
+				<dsip:nazev_lclp>Nitrity</dsip:nazev_lclp>
+				<dsip:vrf>
+					<dsip:nazvy system="U"
+					            material="U"
+					            komponenta="Nitrity semikvant."
+					            druh_veliciny="Arbitrární koncentrace"
+					            jednotka="arb.j."
+					            procedura="Testační proužek"/>
+					<dsip:hodnota_kod>KVAL NEGAT</dsip:hodnota_kod>
+					<dsip:hodnota_text>negativní</dsip:hodnota_text>
+					<dsip:pozn>Nejaka poznámka TEST</dsip:pozn>
+				</dsip:vrf>
+			</dsip:ku_z_lab>  -->
+					<!-- vrs ********************************************************************************** -->
+					<!-- 
+						<dsip:ku_z_lab guid="b7aa4fee-ae6e-4f60-a854-926874e021a5" klic_nclp="01654"
+			               syst_klic="P"
+			               komp_klic="ELPHO"
+			               typ_cispol="N"
+			               typpol_fh="SR"
+			               stav_vys="N"
+			               typ_sdel_vys="N"
+			               id_lis="1/5/12/2005"
+			               id_lo_is="10002AS">
+				<dsip:dat_du typ="I">2005-12-05T09:41:36</dsip:dat_du>
+				<dsip:nazev_lclp>Alfa-2-globulin absolutně</dsip:nazev_lclp>
+				<dsip:vrs>
+					<dsip:nazvy system="S"
+					            jednotka="g/l"
+					            druh_veliciny="Hmotnostní koncetntrace"/>
+					<dsip:vrs_h hodnota1_klic="USED KRYLEU"
+					            hodnota1_text="krystaly leucinu"
+					            priznak2_kvant="M"
+					            hodnota2_cislo="10"/>
+				</dsip:vrs>
+			</dsip:ku_z_lab>  -->
+					<!-- vrx ********************************************************************************** -->
+					<!-- 
+			 			<dsip:ku_z_lab guid="4b846ba6-d1a0-41ea-a7ad-fa4831031ae9" klic_nclp="02385"
+			               syst_klic="CAL(U)"
+			               komp_klic="LOCATION"
+			               typ_cispol="N"
+			               typpol_fh="X"
+			               stav_vys="A"
+			               typ_sdel_vys="N">
+				<dsip:dat_du typ="A">2006-12-03T11:00:00</dsip:dat_du>
+				<dsip:nazev_lclp>Heptakarboxyporfyrin</dsip:nazev_lclp>
+				<dsip:vrx>
+					<dsip:nazvy system="PORFT(F)"
+					            jednotka="1"
+					            druh_veliciny="Porfyriny celkové(stolice)"/>
+					<dsip:hodnota_nt>mnohočetný výskyt bakterií</dsip:hodnota_nt>
+				</dsip:vrx>
+			</dsip:ku_z_lab> -->
+					<!-- vrb ******************************************************************************* -->
+					<!-- 
+			<dsip:ku_z_lab guid="f81ebb3a-b989-4a0e-a6b9-0556b57b57a2" klic_nclp="20045"
+			               syst_klic="REPI"
+			               komp_klic="LABPOZN"
+			               typ_cispol="N"
+			               typpol_fh="B"
+			               stav_vys="A"
+			               typ_sdel_vys="N"
+			               id_lis="169/2/12/2005"
+			               id_lo_is="1000278">
+				<dsip:dat_du typ="I">2005-12-03T11:00:00</dsip:dat_du>
+				<dsip:nazev_lclp>Interpretace lipidového metabolismu</dsip:nazev_lclp>
+				<dsip:vrb typ_vzniku="R"
+				          misto_vzniku="L"
+				          autorizace="A">
+					<dsip:nazvy system="REPI"
+					            druh_veliciny="Blok interpretační"/>
+					<dsip:text>
+						<dsip:ptext xml:space="preserve">Dyslipoproteinemie s rizikem pro pacienta ve skupině D/EAS. Bližší určení, diferenciace, určení rizika, genetická prevalence a navedení odpovídající léčby je možné domluvit v naší poradně.</dsip:ptext>
+					</dsip:text>
+				</dsip:vrb>
+			</dsip:ku_z_lab>		 -->
+					<!-- vrr ********************************************************************************** -->
+					<!-- 			<dsip:ku_z_lab guid="f88f5b57-8ae7-4276-8d40-288c5ca6c2ba" klic_nclp="20006"
+			               syst_klic="REP"
+			               komp_klic="BRUT"
+			               typ_cispol="N"
+			               typpol_fh="R"
+			               stav_vys="A"
+			               typ_sdel_vys="N"
+			               id_lis="46/2/12/2005"
+			               id_lo_is="1065">
+				<dsip:dat_du typ="I">2005-12-02T14:38:20</dsip:dat_du>
+				<dsip:nazev_lclp>Nález OKB rutinní</dsip:nazev_lclp>
+				<dsip:vrr  autorizace="A"
+				          rad_zahlavi="9"
+				          rad_paty="2">
+					<dsip:text>
+						<dsip:ptext xml:space="preserve"> Material cislo 46 ze dne 02/12/2005-14:51 OKB 02/12-15:00 Prijmeni Jmeno 2000 MUDR. Jmeno Prijmeni MUDr. Jmeno Prijmeni 10002145/107/107 Narozen(a) 01/01/1976 Diagnoza...E78.0 Rodne cislo..760101/9998 Vyska... 0 cm Komentar... Pojistka.....111 Hmotnost 0.0 kg Odber dne..02/12/2005-14:38 ******************************************************************************** Nazev vysetreni Vysledek Jednotky Referencni interval Hodnoceni ******************************************************************************** Cholesterol 5.14 mmol/l ( 3.50... 5.20) (..x) Triacylglyceroly 1.12 mmol/l ( 0.10... 1.80) (.x.) HDL-cholesterol 1.47 mmol/l ( 1.40... 2.80) (x..) LDL-cholesterol 3.16 mmol/l ( ) (.x.) ******************************************************************************** výsledky prošly kontrolou výsledky odeslal(a) PEST </dsip:ptext>
+					</dsip:text>
+				</dsip:vrr>
+			</dsip:ku_z_lab> -->
+					<!-- vrc********************************************************************************** -->
+					<!-- 			<dsip:ku_z_lab guid="d3b6eda5-9c6e-4cea-86c0-9cdd8f37dddb" klic_nclp="20006"
+			               syst_klic="REP"
+			               komp_klic="BRUT"
+			               typ_cispol="N"
+			               typpol_fh="R"
+			               stav_vys="A"
+			               typ_sdel_vys="N"
+			               id_lis="46/2/12/2005"
+			               id_lo_is="1065">
+				<dsip:dat_du typ="I">2005-12-02T14:38:20</dsip:dat_du>
+				<dsip:nazev_lclp>Nález OKB rutinní</dsip:nazev_lclp>
+				<dsip:vrc  hodnota="5"
+				          jednotka="H">
+				</dsip:vrc>
+			</dsip:ku_z_lab> -->
+					<!-- vrd********************************************************************************** -->
+<!-- 									<dsip:ku_z_lab guid="eeea9511-9825-45e5-9d5f-ce52e84d363b" klic_nclp="20006"
+			               syst_klic="REP"
+			               komp_klic="BRUT"
+			               typ_cispol="N"
+			               typpol_fh="R"
+			               stav_vys="A"
+			               typ_sdel_vys="N"
+			               id_lis="46/2/12/2005"
+			               id_lo_is="1065">
+				<dsip:dat_du typ="I">2005-12-02T14:38:20</dsip:dat_du>
+				<dsip:nazev_lclp>Nález OKB rutinní</dsip:nazev_lclp>
+				<dsip:vrd>
+					<dsip:dat_dv typ="I">2020-12-12</dsip:dat_dv>
+				</dsip:vrd>
+				</dsip:ku_z_lab> -->
+					<!-- vrk********************************************************************************** -->
+				 	<dsip:ku_z_lab guid="cd3e1986-ab81-4f5f-9239-4275cdba432e"
+					               klic_nclp="11963"
+					               syst_klic="U"
+					               komp_klic="AGENS"
+					               klic_nclp_o="11963"
+					               typ_cispol="N"
+					               typpol_fh="K"
+					               stav_vys="A"
+					               typ_sdel_vys="N"
+					               id_lis="1456/2005">
+						<dsip:dat_du typ="I">2005-12-13T06:20:00</dsip:dat_du>
+						<dsip:autor>Bohuslav Autor Nováček</dsip:autor>
+						<dsip:nazev_lclp>Kultivace bakter. - moč</dsip:nazev_lclp>
+						<dsip:vrk guid="706d1651-e059-45f6-a8ab-05a9d550dd99"
+						          systspec_kod="U MECHYR"
+						          spec_text="HEMOCULT"
+						          subspec_text="subspecifikace k systému - nějaký text"
+						          ziskmat_kod="PUNSUPRA"
+						          ziskmat_text="způsob získání materiálu (vzorku) - text"
+						          stav_zprac="A"
+						          lokal_mo="lokalizace místa odběru mikrobiologického materiálu(místo na těle pacienta, kde byl realizován odběr materiálu)"
+						          stav_mat="NEVHODBE"
+						          info_s="S"
+						          sez="1">
+							<dsip:nazvy guid="58e545e9-9cb0-40f8-ac48-818ac1f6351d"
+							            system="U"
+							            material="U"
+							            komponenta="Agens"
+							            druh_veliciny="Vyšetření mikroorganismů"
+							            procedura="Kultivace bakteriologická obecná"/>
+							<dsip:lopok guid="dc8b3305-f815-442e-ba48-0d3155ba3f6e"
+							            obj_mv_kod="ATBKVANT"
+							            obj_mv_text="Vyšetření citlivosti k ATB - kvantitativně (MIC)"/>
+							<dsip:vrmp>sdělení a významné poznámky</dsip:vrmp>
+							<dsip:ttd typ="I">2005-12-13T06:19:55</dsip:ttd>
+							<dsip:vrmmn>četné leukocyty, masivně g- tyčky, částečně fagocytované</dsip:vrmmn>
+							<dsip:vrkpa guid="f583e2d0-f1be-4dec-91a4-ae1868858397"
+							            agens_kod="KLEBPNPN"
+							            agens_text="Klebsiella pneumoniae"
+							            agens_snmd_k="56415008"
+							            dalsi_vys="D"
+							            pritomnost="M"
+							            v_mikro="N"
+							            v_kultiv="N"
+							            v_pcr="N"
+							            v_seq="N"
+							            v_antig="N"
+							            jednotka="jednotka (ke kvantitě) ve volném textu"
+							            sez="1">
+								<dsip:multiplex>Nějaký volný text multiplexu</dsip:multiplex>
+								<dsip:antigen>Nějaký volný text antigenu</dsip:antigen>
+								<dsip:kvantita priznak="R">1E7</dsip:kvantita>
+							 	<dsip:vrav guid="728fe415-b2a5-4391-83a6-1fb26898c5bb"
+								           vl_kod="BETALK1"
+								           vl_text="producent beta-laktamázy K1"
+								           dodatek="prokázána produkce širokospektré beta-laktamázy"
+								           pritomnost="P"/>
+								<dsip:vrav guid="46ed8baa-db98-4ee4-bd71-a6d66ba82751"
+								           vl_kod="BETALK2"
+								           vl_text="producent beta-laktamázy K2"
+								           dodatek="prokázána produkce širokospektré beta-laktamázy"
+								           pritomnost="X"/>
+								<dsip:vrac guid="35810625-57c6-484a-83cb-b59a57354540" latka_kod="AMP"
+								           latka_text="Ampicilin"
+								           latka_snmd_k="Kód_SNOMED_XXX"
+								           latka_kod_l="AMP_lokální"
+								           latka_text_l="Ampicilin_lokální"
+								           hod_citlivosti="R">
+									<dsip:kvantita priznak="R">15</dsip:kvantita>
+									<dsip:bpoint>18</dsip:bpoint>
+									<dsip:bpoint2>25</dsip:bpoint2>
+									<dsip:sdeleni_lab>nejake sdelení laboratore k vrac1</dsip:sdeleni_lab>
+								</dsip:vrac>
+								<dsip:vrac guid="569174aa-e628-48bb-850a-f9f8d4fd3ffe" latka_kod="AMC"
+								           latka_text="Amoxixicilin/klav. kys."
+								           latka_snmd_k="Kód_SNOMED_XXX"
+								           latka_kod_l="AMC_lokální"
+								           latka_text_l="AMCilin_lokální"
+								           hod_citlivosti="R">
+									<dsip:kvantita priznak="R">11</dsip:kvantita>
+									<dsip:bpoint>10</dsip:bpoint>
+									<dsip:bpoint2>12</dsip:bpoint2>
+									<dsip:sdeleni_lab>nejake sdelení laboratore k vrac2</dsip:sdeleni_lab>
+								</dsip:vrac>
+								<dsip:vrac guid="08496253-2d19-4690-9324-99e0855492ed" latka_kod="CRX"
+								           latka_text="Cefuroxim"
+								           hod_citlivosti="R">
+									<dsip:kvantita priznak="R">20</dsip:kvantita>
+									<dsip:bpoint>19</dsip:bpoint>
+									<dsip:bpoint2>26</dsip:bpoint2>
+									<dsip:sdeleni_lab>nejake sdelení laboratore k vrac3</dsip:sdeleni_lab>
+								</dsip:vrac> 
+								<dsip:doruceni>dourčení tohoto agens - nějaký text</dsip:doruceni>
+								<dsip:vrmahn> automatické hodnocení vyšetření tohoto agens </dsip:vrmahn>
+								<dsip:vrmlpn> laboratorní poznámka k vyšetření tohoto agens</dsip:vrmlpn>
+								<dsip:vrmzhl> kmen produkuje širokospektrou beta-laktamázu </dsip:vrmzhl>
+							</dsip:vrkpa>
+															<dsip:vrmahn> automatické hodnocení kompletního nálezu </dsip:vrmahn>
+								<dsip:vrmlpn>laboratorní poznámka k celému nálezu</dsip:vrmlpn>
+								<dsip:vrmzhl>závěrečné hodnocení kompletního nálezu lékařem </dsip:vrmzhl>
+							<dsip:vrmzhl>nález svědčí pro IMC</dsip:vrmzhl>
+						</dsip:vrk>
+					</dsip:ku_z_lab>
+					<!-- vro********************************************************************************** -->
+					<!-- 			<dsip:ku_z_lab guid="14b0b8ee-0ad5-4717-9d58-86edd91e0f4f" klic_nclp="11963"
+			               syst_klic="U"
+			               komp_klic="AGENS"
+			               klic_nclp_o="11963"
+			               typ_cispol="N"
+			               typpol_fh="K"
+			               stav_vys="A"
+			               typ_sdel_vys="N"
+			               id_lis="1456/2005">
+				<dsip:dat_du typ="I">2005-12-13T06:19:55</dsip:dat_du>
+				<dsip:nazev_lclp>koleno</dsip:nazev_lclp>
+				<dsip:vro>
+					<dsip:nazvy system="U"
+					            material="U"
+					            komponenta="Agens"
+					            druh_veliciny="Vyšetření mikroorganismů"
+					            procedura="Kultivace bakteriologická obecná"/>
+					<dsip:text>
+						<dsip:ptext xml:space="preserve">Při fotbale si podvrkl pravé koleno O koleno s náplní, čéška nebolestivá, bolestivá flexe kolena koleno špatně vyšetřitelné, zásuvka negativní RTG bez traumatu Dg.Distorsio geni l.dx Th provedena punkce kolenního kloubu.vypunktováno 60 ml krve bez tukových kapének, naložena ortesa Dop klidový režim kontrola zde za 2 dny dop</dsip:ptext>
+					</dsip:text>
+					<dsip:priloha zdroj="picture/obrazek.jpg"
+					              typ="image/jpg">Foto pacienta pred lecbou</dsip:priloha>
+					<dsip:priloha zdroj="picture/obrazek1.jpg"
+					              typ="image/jpg">Foto pacienta po lecbe</dsip:priloha>
+					<dsip:int_pril nazev="název přílohy"
+					               jm_soub="Nejaky soubor"
+					               encode="NONE"
+					               typ="text/rtf">Něco zakodovaného</dsip:int_pril>
+					<dsip:int_pril nazev="název přílohy2"
+					               jm_soub="Nejaky soubor"
+					               encode="Base64"
+					               typ="text/rtf">TsSbY28gemFrb2RvdmFuw6lobyB2IGJhc2U2NA==</dsip:int_pril>
+				</dsip:vro>
+			</dsip:ku_z_lab> -->
+					<!-- vrz********************************************************************************** -->
+					<!-- 			<dsip:ku_z_lab guid="103639611-0d55-42e7-9812-0f36d1ec5ac5" klic_nclp="20799"
+			               syst_klic="REPT"
+			               komp_klic="NTS"
+			               typ_cispol="N"
+			               typpol_fh="Z"
+			               stav_vys="A"
+			               typ_sdel_vys="N"
+			               id_lis="198/1/3/2005">
+				<dsip:dat_du typ="I">2005-03-01T08:09:43</dsip:dat_du>
+				<dsip:nazev_lclp>Výsledky stanovení bez přiděleného NČLP - neformalizovaně</dsip:nazev_lclp>
+				<dsip:vrz>
+					<dsip:text>
+						<dsip:ptext xml:space="preserve"> Haemochtomatosis - mutace H63D prokázána na jedné alele / heterozygot - mutace C282Y prokázána na obou alelách / homozygot </dsip:ptext>
+					</dsip:text>
+				</dsip:vrz>
+			</dsip:ku_z_lab> -->
+					<!-- ********************************************************************************** -->
+				</dsip:ku_z>
+			</dsip:ku>
+		</dsip:ip>
+	</ds:is>
+</ds:dasta>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ds:dasta xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip"
+          xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta https://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.30.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip https://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.15.06.xsd"
+          id_soubor="MEDICALC_KK11115_2005-12-12T14:46:25"
+          verze_ds="04.27.03"
+          verze_nclp="02.90.01"
+          bin_priloha="T"
+          ur="T"
+          typ_odesm="KK"
+          ozn_soub="11115"
+          dat_vb="2008-06-13T14:46:25+02:00"
+          potvrzeni="P">
+	<ds:zdroj_is kod_firmy="MEDICALC"
+	             kod_prog="WMEXP"
+	             verze_prog="2.2.3.8"/>
+	<ds:pm>
+		<ds:as typ="I"
+		       poradi="1">
+			<ds:vnitrni>999</ds:vnitrni>
+		</ds:as>
+	</ds:pm>
+	<ds:garant_dat guid="6669b3fb-afbc-4004-bda5-5fa938b327e6"
+	               id_zp="9988776655"
+	               id_garant="450124145"
+	               odbornost="001"
+	               id_clk="1122334455"
+	               role_klic="2211"
+	               role_text="Praktičtí lékaři">MUDr. Dasta Garant</ds:garant_dat>
+	<ds:is ico="12345678"
+	       icz="44101000"
+	       icp="44101882"
+	       icl="44101882"
+	       pcz="001"
+	       oddel="AB123"
+	       oavl="ABCDE123456">
+		<ds:as typ="I"
+		       poradi="1">
+			<ds:obsah>obsah adresy</ds:obsah>
+			<ds:vnitrni>vnitřní adresa</ds:vnitrni>
+			<ds:sdeleni>textová informace k adrese</ds:sdeleni>
+			<ds:heslo>heslo pro sdělení informací</ds:heslo>
+		</ds:as>
+		<ds:a typ="O">
+			<ds:jmeno>adresa - jméno nebo název</ds:jmeno>
+			<ds:adr>adresa - hlavní text</ds:adr>
+			<ds:dop1>adresa - upřesnění 1</ds:dop1>
+			<ds:dop2>adresa - upřesnění 2</ds:dop2>
+			<ds:psc>12345</ds:psc>
+			<ds:mesto>město</ds:mesto>
+			<ds:stat>CZE</ds:stat>
+			<ds:stat_text>Česká republika</ds:stat_text>
+			<ds:gps lat="25.8"
+			        lon="130.2"/>
+			<ds:pozn>poznámka k údajům</ds:pozn>
+			<ds:autor id_zp="123456789"
+			          id_autor="identifikace autora"
+			          odbornost="001"
+			          id_clk="1234567890"
+			          role_klic="221"
+			          role_text="Lékaři">MUDr. Jmeno Prijmeni</ds:autor>
+		</ds:a>
+		<dsip:ip id_pac="7601019998">
+			<dsip:typ_id_pac>0</dsip:typ_id_pac>
+			<dsip:rodcis>7601019998</dsip:rodcis>
+			<dsip:rip>7601019998</dsip:rip>
+			<dsip:id_card>
+				<dsip:id_number>9988776655</dsip:id_number>
+				<dsip:dat_pl format="D">2026-02-19</dsip:dat_pl>
+			</dsip:id_card>
+			<dsip:passport>
+				<dsip:id_number>1122334455</dsip:id_number>
+				<dsip:stat>CZE</dsip:stat>
+				<dsip:dat_pl format="D">2020-11-29</dsip:dat_pl>
+			</dsip:passport>
+			<dsip:jmeno>Tomáš</dsip:jmeno>
+			<dsip:prijmeni>Laňka-Ukázka</dsip:prijmeni>
+			<dsip:titul_pred>Ing.</dsip:titul_pred>
+			<dsip:titul_za>MBA</dsip:titul_za>
+			<dsip:dat_dn format="D">1976-01-01</dsip:dat_dn>
+			<dsip:misto_nar>Praha</dsip:misto_nar>
+			<dsip:stat_pris>CZE</dsip:stat_pris>
+			<dsip:dat_de format="D">2021-10-15</dsip:dat_de>
+			<dsip:sex>M</dsip:sex>
+			<dsip:sex_klin>M</dsip:sex_klin>
+			<dsip:rod_prijm>Ukázka</dsip:rod_prijm>
+			<dsip:jine_idu>neznámá osoba</dsip:jine_idu>
+			<dsip:typ_sdel>KU</dsip:typ_sdel>
+			<dsip:duvernost>1</dsip:duvernost>
+			<ds:a typ="1">
+				<ds:jmeno>Jmeno Prijmeni</ds:jmeno>
+				<ds:adr>Plzeňská 145/8</ds:adr>
+				<ds:dop1>Smíchov</ds:dop1>
+				<ds:dop2>3. patro</ds:dop2>
+				<ds:psc>15000</ds:psc>
+				<ds:mesto>Praha 5</ds:mesto>
+				<ds:stat>CZE</ds:stat>
+				<ds:as poradi="1"
+				       typ="B">
+					<ds:obsah>+420603123456</ds:obsah>
+				</ds:as>
+				<ds:as poradi="0"
+				       typ="T">
+					<ds:obsah>+420247814589</ds:obsah>
+				</ds:as>
+				<ds:as poradi="0"
+				       typ="E">
+					<ds:obsah>email@email.zcz</ds:obsah>
+				</ds:as>
+			</ds:a>
+			<dsip:jazyk jazyk_klic="cs"
+			            jazyk_text="Čeština"
+			            pref="M"
+			            pozn="Nejaka dlouha poznamka 123456789 123456789 123456789 123456789 123456789 1234567890">
+	</dsip:jazyk>
+			<dsip:h vyska="185"
+			        hmotnost="83.5"
+			        bmi="24.40"
+			        dat_ab="2005-12-30T09:46:25">
+				<dsip:pozn>Nějaký dlouhý testovací text</dsip:pozn>
+				<dsip:autor>MUDr. Autor Záznam</dsip:autor>
+				<dsip:dat_vys>2005-12-29</dsip:dat_vys>
+			</dsip:h>
+			<dsip:pv_pac typ_pv="ZP"
+			             dat_ab="2005-12-01T12:53:12">
+				<dsip:pv_zp>
+					<dsip:cispoj>7052024826</dsip:cispoj>
+					<dsip:kodpoj>111</dsip:kodpoj>
+				</dsip:pv_zp>
+			</dsip:pv_pac>
+			<dsip:dg>
+				<dsip:dgz typ_dg="P">
+					<dsip:diag poradi="1">I151</dsip:diag>
+				</dsip:dgz>
+				<dsip:dgz typ_dg="P">
+					<dsip:diag poradi="2">A029</dsip:diag>
+				</dsip:dgz>
+				<dsip:dgz typ_dg="T">
+					<dsip:diag poradi="3">A260</dsip:diag>
+				</dsip:dgz>
+				<dsip:dgz typ_dg="T">
+					<dsip:diag poradi="4">A510</dsip:diag>
+				</dsip:dgz>
+			</dsip:dg>
+			<dsip:ku>
+				<dsip:ku_o typku="LAB.ODBER.LAB"
+				           fazespec="OR"
+				           idku="MEDICALC.FNPL.1234567890">
+					<dsip:dat_poz>2006-01-03T14:03:59</dsip:dat_poz>
+					<dsip:dat_prov_od>2006-01-03T00:00:00</dsip:dat_prov_od>
+					<dsip:dat_prov_do>2006-01-05T00:00:00</dsip:dat_prov_do>
+					<dsip:z_pracoviste icz="44101000"
+					                   icp="44101333"
+					                   odb="107">
+						<dsip:nazev>Interní kardiologická ambulance</dsip:nazev>
+					</dsip:z_pracoviste>
+					<dsip:dg_poz typ_dg="T">
+						<dsip:diag poradi="1">I10</dsip:diag>
+					</dsip:dg_poz>
+					<dsip:ku_o_lab guid="80f789d6-2b6e-46e3-93f3-8da5588618d6" id_lo_is="označení bloku ku_o_lab v IS odesílatele - volný text"
+					               urg="P"
+					               dodani="R"
+					               duv_objed="B">
+						<dsip:dat_poc_hosp typ="A">2006-01-03</dsip:dat_poc_hosp>
+						<dsip:los guid="aecb60da-e522-4ace-b586-9774707e086c" prijeti="P"
+						          kolize="E"
+						          urg_vysled="E"
+						          rut_vysled="E"
+						          ext_vysled="A"
+						          dodsest="N"
+						          dodform="V"
+						          dodnadpis="B"
+						          dodskal="J"
+						          typskal="B"
+						          dodkoment="D"
+						          dodgraf="B"
+						          fsvku="B"/>
+						<dsip:dat_du typ="A">2006-01-03T14:03:59</dsip:dat_du>
+						<!-- lip 1********************************************************************************** -->
+						<dsip:lip guid="5259ebb1-46f4-4fbf-b1e5-26ff34e38370" priznak_kvant="M"
+						          klic_nclp="20411"
+						          hodnota="115"
+						          mtv_klic="FRAGFYZ"
+						          jednotka="M"/>
+						<!-- lip 2********************************************************************************** -->
+						<dsip:lip guid="949934140-04e7-4dbf-8fca-02965abd1017" priznak_kvant="R"
+						          klic_nclp="20042"
+						          hodnota="84.5"/>
+						<!-- loi 1********************************************************************************** -->
+						<dsip:loi guid="9a829e02-b2bd-4262-89db-6346459bfebe"
+						          typ_znac="B"
+						          id_loi_is="10000085"
+						          typ_obalu="A0"
+						          poc_obalu="2"
+						          material="B"
+						          indikace="N"
+						          urg="R"
+						          odber_mist="Nějaké odběrové místo"
+						          lokal_mo="lokalizace místa odběru mikrobiologického materiálu: místo na těle pacienta, kde byl realizován odběr materiálu (týká se pacienta, ne prostředí)"
+						          anal_vzorek="S"
+						          pozn_loi="Nějaká krátká poznámka">
+							<dsip:o_pracovnik guid="5dbdc012-dc07-4d50-bcb0-31a9dc38f1d9" id_zp="563241588"
+							                  icl="256"
+							                  odbornost="012"
+							                  id_pracovnik="NějakýID_pracovníka 56352224 - volný text"
+							                  id_clk="546632"
+							                  role_klic="2211"
+							                  role_text="Praktičtí lékaři">
+								<dsip:titul_pred>Mudr.</dsip:titul_pred>
+								<dsip:jmeno>Jaroslav</dsip:jmeno>
+								<dsip:prijmeni>Pšenička</dsip:prijmeni>
+								<dsip:titul_za>Ph.D</dsip:titul_za>
+							</dsip:o_pracovnik>
+							<dsip:text>
+								<dsip:ptext xml:space="preserve"> Při fotbale si podvrkl pravé koleno O koleno s náplní, čéška nebolestivá, bolestivá flexe kolena koleno špatně vyšetřitelné, zásuvka negativní RTG bez traumatu Dg.Distorsio geni l.dx Th provedena punkce kolenního kloubu.vypunktováno 60 ml krve bez tukových kapének, naložena ortesa Dop klidový režim kontrola zde za 2 dny dop </dsip:ptext>
+							</dsip:text>
+							<dsip:sci guid="51a293e0-75c6-4035-9d65-8ef52bf890c6"
+							          id_sci_is="FT022811001"
+							          klic_nclp="20796"
+							          krok="3"
+							          prubeh="K"/>
+							<dsip:sci guid="453e37ed-d8f4-44e5-a010-9a1146d0095a" id_sci_is="FT022811002"
+							          klic_nclp="12657"
+							          krok="2"
+							          prubeh="P"/>
+							<dsip:dat_zt format="DT">2006-01-02T14:03</dsip:dat_zt>
+							<dsip:lod guid="9b32e487-7e6c-4159-8460-d579f1db0e01"
+							          priznak_kvant="R"
+							          klic_nclp="20450"
+							          hodnota="119"
+							          mtv_klic="HEM3"
+							          text="Nějaký volný text k lod"/>
+							<dsip:lod guid="8bfb182f-2306-49fe-bc90-15f57e45f7d8" klic_nclp="03142"
+							          hodnota="1980"/>
+							<dsip:lop guid="002e67c8-e00a-4eaf-986f-c3d3802480e0"
+							          urg="V"
+							          klic_nclp="01896"
+							          systspec_klic="ARTERY"
+							          syst_sp_klic="ATHEROM"
+							          subsp_text="Nějaký podtext"
+							          ziskmat_klic="STRPROUD"
+							          spec_proc="CHEMANAL"
+							          pozn_lop="krátké sdělení primárního objednavatele laboratoři k tomuto bloku"
+							          pozn_lop_lab="krátké sdělení laboratoře směrem k externí laboratoři k tomuto bloku"/>
+							<dsip:lop guid="188bdeec-01bd-4b7a-b0d6-43542d6581aa"
+							          urg="S"
+							          klic_nclp="020365"
+							          systspec_klic="ALV"
+							          syst_sp_klic="CERVPOOL"
+							          subsp_text="Nějaký podtext 2"
+							          ziskmat_klic="VYTER"
+							          spec_proc="HPTLC"
+							          pozn_lop="krátké sdělení primárního objednavatele laboratoři k tomuto bloku 2"
+							          pozn_lop_lab="krátké sdělení laboratoře směrem k externí laboratoři k tomuto bloku 2"/>
+							<dsip:lopk guid="541d7284-94fb-409b-8a0e-5658d789b2b8"
+							           klic_nclp="11963"
+							           urg="S"
+							           systspec_kod="U MECHYR"
+							           spec_text="bronchiální laváž"
+							           subspec_text="Nějaký subtext"
+							           ziskmat_kod="SESKRAB"
+							           ziskmat_text="způsob získání materiálu - text">
+								<dsip:lopok guid="b2b8f5cc-260d-48e1-bb34-6704907b0e8f"
+								            obj_mv_kod="KONTSTER"
+								            obj_mv_text="Kontrola sterility"
+								            upresneni="sdělení upřesňující specifikaci objednávky"/>
+							</dsip:lopk>
+							<lopk guid="12139ef5-da84-4f34-b107-d97223604df1"
+							      klic_nclp="54096"
+							      systspec_kod="B(N) HEMOCULT"
+							      spec_text="hemokultura">
+								<dsip:lopok obj_mv_kod="ATBKVALI"
+								            obj_mv_text="Vyšetření citlivosti k ATB - kvalitativně"/>
+							</lopk>
+						</dsip:loi>
+						<!-- lop 1********************************************************************************** -->
+						<dsip:lop guid="e7527148-65be-4eb5-b76f-5a9772dbacf2"
+						          urg="S"
+						          klic_nclp="065244"
+						          systspec_klic="MRKVA"
+						          syst_sp_klic="SRADEL"
+						          subsp_text="Nějaký podtext 3"
+						          ziskmat_klic="KOMDREN"
+						          spec_proc="HPLCMS"
+						          pozn_lop="krátké sdělení primárního objednavatele laboratoři k tomuto bloku 3"
+						          pozn_lop_lab="krátké sdělení laboratoře směrem k externí laboratoři k tomuto bloku 3"/>
+						<!-- lop 2********************************************************************************** -->
+						<dsip:lop guid="ca98dc8b-e9e4-4387-a5ef-12300c934fbc"
+						          urg="S"
+						          klic_nclp="065888"
+						          systspec_klic="TURKSA"
+						          syst_sp_klic="HRIDEL"
+						          subsp_text="Nějaký podtext 4"
+						          ziskmat_klic="HUMJAK"
+						          spec_proc="HALOFT"
+						          pozn_lop="krátké sdělení primárního objednavatele laboratoři k tomuto bloku 4"
+						          pozn_lop_lab="krátké sdělení laboratoře směrem k externí laboratoři k tomuto bloku 4"/>
+						<!-- lopk 1********************************************************************************** -->
+						<dsip:lopk guid="0c3e6a54-b4d6-4e71-b4b5-2f4a5dfaad7d"
+						           klic_nclp="15321"
+						           urg="K"
+						           systspec_kod="ABSCJAT"
+						           spec_text="z abscesu jaterního"
+						           subspec_text="Nějaký subtext lopk"
+						           ziskmat_kod="ASPTRACH"
+						           ziskmat_text="způsob získání materiálu - text 2">
+							<dsip:lopok obj_mv_kod="AUTOVAKC"
+							            obj_mv_text="Zhotovení autovakcíny"
+							            upresneni="sdělení upřesňující specifikaci objednávky lopok 1"/>
+							<dsip:lopok obj_mv_kod="KMENDOUR"
+							            obj_mv_text="Dourčení bakteriálního kmene"
+							            upresneni="sdělení upřesňující specifikaci objednávky lopok 2"/>
+						</dsip:lopk>
+						<!-- lopz 1********************************************************************************** -->
+						<dsip:lopz guid="ac2a397f-35d9-4596-a2b3-27ea7ea20a48"
+						           urg="R"
+						           klic_nclp="011642">
+							<dsip:text>
+								<dsip:ptext xml:space="preserve">Sdělení upřesňující objednávku lopz</dsip:ptext>
+							</dsip:text>
+						</dsip:lopz>
+						<!-- lopr 1********************************************************************************** -->
+						<dsip:lopr guid="15a2ed9f-9664-45a8-af21-6d5050e31f88"
+						           urg="R"
+						           klic_nclp="018263">
+							<dsip:text>
+								<dsip:ptext xml:space="preserve">Sdělení upřesňující objednávku lopr</dsip:ptext>
+							</dsip:text>
+						</dsip:lopr>
+						<!-- ********************************************************************************** -->
+						<!-- ********************************************************************************** -->
+						<!-- ********************************************************************************** -->
+						<!-- ********************************************************************************** -->
+						<!-- ********************************************************************************** -->
+					</dsip:ku_o_lab>
+				</dsip:ku_o>
+			</dsip:ku>
+		</dsip:ip>
+	</ds:is>
+</ds:dasta>
