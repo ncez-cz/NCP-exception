@@ -62,11 +62,11 @@ class Node:
             self.name = firstSource        
      
     def isInside(self,path,checkLast):
-        return self.name!=path and self.name.startswith(path+".") and self.constantValue=="" and ((not checkLast) or (self.name.count(".")!=path.count(".")+1)) and self.valuemapUid==""
+        return self.name!=path and self.name.startswith(path+".") and self.constantValue=="" and ((not checkLast) or (self.name.count(".")!=path.count(".")+1)) 
     def isInsideNode(self,path):
-        return self.name!=path and self.name.startswith(path+".") and self.constantValue=="" and (not self.isLeaf) and self.valuemapUid==""
+        return self.name!=path and self.name.startswith(path+".") and self.constantValue=="" and (not self.isLeaf) 
     def isOutside(self,path):
-        return self.name!=path and (not (self.name.startswith(path+"."))) and self.constantValue=="" and self.valuemapUid==""
+        return self.name!=path and (not (self.name.startswith(path+"."))) and self.constantValue=="" 
     def getNextPathElement(self,path):
         rel = self.name.removeprefix(path+".")
         return rel.split('.')[0]  
@@ -520,7 +520,8 @@ class FmlNamespace:
 def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks):  
     fml_lines = []
     
-    if targetNode.name=="c2683.resource.AllergyIntolerance.clinicalStatus.coding":
+    if targetNode.name=="c2683.resource.AllergyIntolerance.type":
+    #"c2683.resource.AllergyIntolerance.clinicalStatus.coding":
     #"patientReference.identifier.use":
     #"c2683.resource.AllergyIntolerance.meta.tag.code":
         print("!")
