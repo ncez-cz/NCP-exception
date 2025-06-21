@@ -309,7 +309,8 @@ class FmlNamespace:
                     self.sourceVarLevel.append(self.level)    
                     self.sourceVarOfName[self.sourceName] = variableName                      
             else:
-                sourceString = self.firstSource 
+                sourceString = sourceBestKnowNamespace
+                #self.firstSource 
                 print(f"Warnning: Source {sourceNode.name} cannot enter namespace!")
                 #sourceNode.name
                          
@@ -381,9 +382,14 @@ class FmlNamespace:
 
     def exitNamespace(self, path, sourceNode=None, targetNode=None):
         fml_lines=[]
-        while ( self.level>self.pathLevel[path] and (   (sourceNode==None or sourceNode.isOutside(self.sourceName)) 
-                                  or (targetNode==None or targetNode.isOutside(self.targetName)))):
+        while ( self.level>self.pathLevel[path] and (targetNode==None or targetNode.isOutside(self.targetName))):
                             #or targetNode.isOutside(targetPath) ):
+            #if targetNode!=None and targetNode.name == "c2683.resource.AllergyIntolerance.clinicalStatus.coding":
+            #    print("?")
+            #    sourceIsOut=sourceNode.isOutside(self.sourceName)
+            #    targetIsOut=targetNode.isOutside(self.targetName)
+
+
            # vynoření
             while len(self.sourceVars)>0 and self.sourceVarLevel[-1]==self.level:
                 variableName = self.sourceVars.pop()
@@ -466,27 +472,18 @@ class FmlNamespace:
 
     def generateRule(self, sourceNode, targetNode, valuemapUid=""):
         fml_lines = []
-        if len(self.targetVars)<=0:
-            tName = self.targetName
-        elif (targetNode.name==self.targetName):
-            tName=self.targetVars[-1]
-        elif (targetNode.name==f"{self.targetName}.{targetNode.name.split('.')[-1]}"):
-            tName=f"{self.targetVar[-1]}.{targetNode.name.split('.')[-1]}"
+        if targetNode.name in self.targetVarOfName:
+            tName = self.targetVarOfName[targetNode.name]
         else: 
             tName="?"
-                     
-        if len(self.sourceVars)<=0:
-            if sourceNode.constantValue!="":
-                sName = self.firstSource
-            else:
-                sName = self.sourceName
-        elif (sourceNode.name==self.sourceName) or sourceNode.constantValue!="":
-            sName = self.sourceVars[-1]
-        elif (sourceNode.name!=self.sourceName):
-            sName = f"{self.sourceVars[-1]}.{sourceNode.name.split('.')[-1]}"
-        else:
+        
+        if sourceNode.name in self.sourceVarOfName:
+            sName = self.sourceVarOfName[sourceNode.name]
+        elif sourceNode.name.removesuffix("."+sourceNode.name.split('.')[-1]) in self.sourceVarOfName:
+            sName = self.sourceVarOfName[sourceNode.name.removesuffix("."+sourceNode.name.split('.')[-1])]+"."+sourceNode.name.split('.')[-1]
+        else: 
             sName="?"
-                    
+        
         if sourceNode.valuemapUid!="":
             self.ruleNum+=1
             fml_lines.append(self.indent + f"\t{sName} -> {tName} = translate({sName},\'#cm{sourceNode.valuemapUid}\','code') \"rule{str(self.ruleNum)}\";")
@@ -523,7 +520,8 @@ class FmlNamespace:
 def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks):  
     fml_lines = []
     
-    if targetNode.name=="patientReference.identifier.use":
+    if targetNode.name=="c2683.resource.AllergyIntolerance.clinicalStatus.coding":
+    #"patientReference.identifier.use":
     #"c2683.resource.AllergyIntolerance.meta.tag.code":
         print("!")
 
@@ -588,67 +586,56 @@ def generate_fml_for_component(component_name,component,blocks):
     findGraph(component,graph,graphinv)
     # displayGraph(graph)
     groupDef=f"group {name(component_name)}("
-    first=True
+    
     firstSource = ""
+    fml = FmlNamespace(firstSource)
+    
+    sourceComponents = dict()
     for sourceComponent in component.findall("./structure/children/component/data/document[@inputinstance!='']/../.."):
-        cname = f"c{sourceComponent.get('uid')}"
-        sourceType = getType(sourceComponent.find("./data/document").get("instanceroot"))
-        if not first:
-            groupDef+=", "
-        first=False
-        if firstSource == "":
-            firstSource = cname
-        groupDef+=f"source {cname}: {sourceType}"
+        sourceComponents[f"c{sourceComponent.get('uid')}"] = getType(sourceComponent.find("./data/document").get("instanceroot"))
     for sourceComponent in component.findall("./structure/children/component/data/parameter[@usageKind='input']/../.."):
-        cname = f"c{sourceComponent.get('uid')}"
         sourceEntry = sourceComponent.find("./data/parameter/root/entry")
         if sourceEntry==None:
             continue
-        sourceType=getTypeNS(sourceEntry.get("name"),sourceEntry.get("ns"))
+        sourceComponents[f"c{sourceComponent.get('uid')}"]=getTypeNS(sourceEntry.get("name"),sourceEntry.get("ns"))
+    first=True
+    for cname,cType in sourceComponents.items():
         if not first:
             groupDef+=", "
         first=False
         if firstSource == "":
             firstSource = cname
-        groupDef+=f"source {cname}: {sourceType}"
-    
+        groupDef+=f"source {cname}: {cType}"
+        #inicialize as namespace source variable
+        fml.sourceName = cname
+        fml.sourceVars.append(cname)
+        fml.sourceVarLevel.append(0)
+        fml.sourceNameAtLevel[0] = cname
+        fml.sourceVarOfName[cname] = cname
+
+    fml.firstSource = firstSource
+
+    targetComponents = dict()
     for targetComponent in component.findall("./structure/children/component/data/document[@outputinstance!='']/../.."):
-        cname = f"c{targetComponent.get('uid')}"
-        targetComponentNames.add(cname)
-        targetType = getType(targetComponent.find("./data/document").get("instanceroot"))
-        if not first:
-            groupDef+=", "
-        first=False
-        groupDef+=f"target {cname}: {targetType}"
+        targetComponents[f"c{targetComponent.get('uid')}"]= getType(targetComponent.find("./data/document").get("instanceroot"))
     for targetComponent in component.findall("./structure/children/component/data/parameter[@usageKind='output']/../.."):
-        cname = f"c{targetComponent.get('uid')}"
-        targetComponentNames.add(cname)
         targetEntry = targetComponent.find("./data/parameter/root/entry")
         if targetEntry==None:
             continue
-        targetType=getTypeNS(targetEntry.get("name"),targetEntry.get("ns"))
+        targetComponents[f"c{targetComponent.get('uid')}"]=getTypeNS(targetEntry.get("name"),targetEntry.get("ns"))
+    for cname,cType in targetComponents.items():
         if not first:
             groupDef+=", "
         first=False
-        groupDef+=f"target {cname}: {targetType}"
+        groupDef+=f"target {cname}: {cType}"
+        fml.targetName = cname
+        fml.targetVars.append(cname)                            
+        fml.targetVarLevel.append(0)
+        fml.targetNameAtLevel[0] = cname
+        fml.targetVarOfName[cname] = cname
     
-    fml_lines.append(groupDef+"){")
-
-    '''
-    #csv_lines.append("from targets (oposite direction):")
-    for inpkey in inputNodes.keys():
-        if inpkey in graphinv.keys():
-            for outkey in graphinv[inpkey]:
-                if outkey in outputNodes.keys():
-                    fml_lines.append(f"   {getPath(outputNodes[outkey],parent_map)} as x -> {getComplexPath(inputNodes[inpkey],parent_map,inputNodes,graph)}")
-                else: 
-                    print(f"inputNodes does not contains {inpkey}")
-    '''
+    fml_lines.append(groupDef+"){")    
     
-    
-    
-    
-    fml = FmlNamespace(firstSource)
 
     for inpkey in inputNodes.keys():
         #if inpkey=="126":
@@ -656,7 +643,7 @@ def generate_fml_for_component(component_name,component,blocks):
         if inpkey in graphinv.keys():
             targetNode=Node(inputNodes[inpkey],parent_map,blocks,False,False,fml.firstSource)
             #Node(getComplexPath(inputNodes[inpkey],parent_map,inputNodes,graph))
-            if targetNode.isInvalid or (not (targetNode.name.split('.')[0] in targetComponentNames)):
+            if targetNode.isInvalid or (not (targetNode.name.split('.')[0] in targetComponents)):
                 continue
             
             for outkey in graphinv[inpkey]:
@@ -677,10 +664,7 @@ def generate_fml_for_component(component_name,component,blocks):
     fml_lines.append(fml.exitNamespace(0))
                     
 
-    #for outkey in o
-    # outkeys.keys():
-    #    for inkey in graph[outkey]:
-    #        fml_lines.append(f"  {getPath(outkeys[outkey],parent_map)} -> {getPath(inkeys[inkey],parent_map)}")
+
     
     fml_lines.append("}")
     fml_lines.append("")
