@@ -34,3 +34,6 @@
 [submodule "hl7-eu/extensions-r5"]
 	path = hl7-eu/extensions-r5
 	url = https://github.com/hl7-eu/extensions-r5.git
+[submodule "hl7-eu/eps"]
+	path = hl7-eu/eps
+	url = https://github.com/hl7-eu/eps.git
