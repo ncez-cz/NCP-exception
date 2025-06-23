@@ -6,7 +6,7 @@ import re
 
 
 class Node:
-    def __init__(self, entry, parent_map, blocks, isSource, isParameter, firstSource):
+    def __init__(self, entry: ET.Element, parent_map, blocks, isSource, isParameter, firstSource):
         self.name=""
         self.isLeaf = False
         self.isRoot = False
@@ -26,10 +26,11 @@ class Node:
             sN=[0]
             self.name = self.parseName(parent_map[entry],parent_map,blocks,isSource,firstSource,sN,1)
             if (entry.get('name')!='value' or entry.get('type')!='attribute'):
-          #      if sN[0]==0:
                 if (entry.get('type')!=None and entry.get('type')=='attribute') or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!='2'):
-              
-                    self.name += "."+entry.get('name')   
+                    if isSource and entry.get('type')!='attribute' and len(list(entry))==0:
+                        self.name += "."+entry.get('name')+".txt"
+                    else:
+                        self.name += "."+entry.get('name')   
             else:
                 self.isLeaf = True
         elif entry.tag=="datapoint" and parent_map[parent_map[entry]].get("name")=="value-map":
@@ -241,21 +242,32 @@ class FmlNamespace:
     
     def __init__(self,firstSource):
         self.firstSource = firstSource
+        
+        # úroveň vnořeného kódu dle závorek {}
         self.level=0
         self.indent="\t"
+        
+        # počet vygenerovaných pravidel
         self.ruleNum=0
+
+        # vnořování zdrojů
         self.sourceVars=[]
         self.sourceVarLevel=[]
-        self.sourceVarOfName=dict()
+        self.sourceVarOfNamespace=dict()
         self.sourceNamespace=""
         self.sourceNamespaceAtLevel=dict()
+        # vnořování cílů
         self.targetVars=[]
         self.targetVarLevel=[]
-        self.targetVarOfName=dict()
+        self.targetVarOfNamespace=dict()
         self.targetNamespace=""
         self.targetNamespaceAtLevel=dict()
+
+        # pathlevel[délka cesty k cíly v mapování (počet mezifunkcí)] = úroveň vnoření
         self.pathLevel=dict()
         self.pathLevel[0]=0
+
+        
         self.functionParameters=dict()
     
     def enterNamespace(self, sourceNode, targetNode):
@@ -269,10 +281,10 @@ class FmlNamespace:
                 self.sourceVars.append(self.sourceNamespace)
                 self.sourceVarLevel.append(self.level)
                 self.sourceNamespaceAtLevel[self.level] = self.sourceNamespace
-                self.sourceVarOfName[self.sourceNamespace] = self.sourceNamespace
+                self.sourceVarOfNamespace[self.sourceNamespace] = self.sourceNamespace
 
             sourceBestKnowNamespace = sourceNamespace
-            while (not sourceBestKnowNamespace in self.sourceVarOfName):
+            while (not sourceBestKnowNamespace in self.sourceVarOfNamespace):
                 sourceBestKnowNamespace = sourceBestKnowNamespace.removesuffix("."+sourceBestKnowNamespace.split('.')[-1])
                 if sourceBestKnowNamespace == "" or ("." not in sourceBestKnowNamespace):
                     break
@@ -288,36 +300,36 @@ class FmlNamespace:
                 self.targetVars.append(self.targetNamespace)                            
                 self.targetVarLevel.append(self.level)
                 self.targetNamespaceAtLevel[self.level] = self.targetNamespace
-                self.targetVarOfName[self.targetNamespace] = self.targetNamespace
+                self.targetVarOfNamespace[self.targetNamespace] = self.targetNamespace
 
             targetBestKnowNamespace = targetNamespace
-            while (not targetBestKnowNamespace in self.targetVarOfName) :
+            while (not targetBestKnowNamespace in self.targetVarOfNamespace) :
                 targetBestKnowNamespace = targetBestKnowNamespace.removesuffix("."+targetBestKnowNamespace.split('.')[-1])
                 if targetBestKnowNamespace == "" or ("." not in targetBestKnowNamespace):
                     break
             self.targetNamespace = targetBestKnowNamespace
         
 
-        while ( ((sourceNamespace != "") and (sourceNamespace not in self.sourceVarOfName) and sourceNode.isInside(self.sourceNamespace, targetNode.isLeaf)) 
-              or ((targetNamespace != "") and (targetNamespace not in self.targetVarOfName) and (targetNode.isInside(self.targetNamespace,False))) ):
+        while ( ((sourceNamespace != "") and (sourceNamespace not in self.sourceVarOfNamespace) and sourceNode.isInside(self.sourceNamespace, targetNode.isLeaf)) 
+              or ((targetNamespace != "") and (targetNamespace not in self.targetVarOfNamespace) and (targetNode.isInside(self.targetNamespace,False))) ):
        
             #vnoření
             self.level+=1
 
             if sourceNamespace=="":
                 sourceString = sourceNode.name
-            elif sourceNamespace in self.sourceVarOfName:
-                sourceString = self.sourceVarOfName[sourceNamespace]
+            elif sourceNamespace in self.sourceVarOfNamespace:
+                sourceString = self.sourceVarOfNamespace[sourceNamespace]
             elif sourceNode.isInside(self.sourceNamespace, targetNode.isLeaf):
                     #vnoření zdroje
                     nextSourcePathElement = sourceNode.getNextPathElement(self.sourceNamespace) 
-                    sourceString = self.sourceVarOfName[self.sourceNamespace] + "." + nextSourcePathElement
+                    sourceString = self.sourceVarOfNamespace[self.sourceNamespace] + "." + nextSourcePathElement
                     variableName = "s"+str(len(self.sourceVars))
                     sourceString += " as " + variableName
                     self.sourceNamespace+="."+nextSourcePathElement
                     self.sourceVars.append(variableName)   
                     self.sourceVarLevel.append(self.level)    
-                    self.sourceVarOfName[self.sourceNamespace] = variableName                      
+                    self.sourceVarOfNamespace[self.sourceNamespace] = variableName                      
             else:
                 sourceString = sourceBestKnowNamespace
                 #self.firstSource 
@@ -327,14 +339,18 @@ class FmlNamespace:
 
             if targetNamespace=="":
                 targetString = targetNode.name
-            elif targetNamespace in self.targetVarOfName:
-                targetString = self.targetVarOfName[targetNamespace]
+            elif targetNamespace in self.targetVarOfNamespace:
+                targetString = self.targetVarOfNamespace[targetNamespace]
             elif targetNode.isInside(self.targetNamespace,False):
                     #vnoření cíle
                     nextTargetPathElement = targetNode.getNextPathElement(self.targetNamespace)  
-                    targetString = self.targetVarOfName[self.targetNamespace] + "." + nextTargetPathElement
+                    targetString = self.targetVarOfNamespace[self.targetNamespace] + "." + nextTargetPathElement 
                     variableName = "t"+str(len(self.targetVars))
-                    if sourceNamespace==self.sourceNamespace and targetNamespace==self.targetNamespace and not targetNode.isLeaf:
+                    if nextTargetPathElement == "resource":
+                        self.targetNamespace+="."+nextTargetPathElement
+                        nextTargetPathElement = targetNode.getNextPathElement(self.targetNamespace)  
+                        targetString += f"=create('{nextTargetPathElement}') as " + variableName
+                    elif sourceNamespace==self.sourceNamespace and targetNamespace==self.targetNamespace and not targetNode.isLeaf:
                         targetString += "=create() as " + variableName
                     else:    
                         targetString += " as " + variableName
@@ -342,7 +358,7 @@ class FmlNamespace:
                     self.targetNamespace+="."+nextTargetPathElement
                     self.targetVars.append(variableName)                            
                     self.targetVarLevel.append(self.level)
-                    self.targetVarOfName[self.targetNamespace] = variableName
+                    self.targetVarOfNamespace[self.targetNamespace] = variableName
             else:
                 targetString = targetNamespace
                 print(f"Warnning: Target {targetNode.name} cannot enter namespace!")
@@ -371,20 +387,20 @@ class FmlNamespace:
                 variableName = self.sourceVars.pop()
                 if variableName not in self.sourceVars:
                     newSourceVarOfNames = dict()
-                    for name, varName in self.sourceVarOfName.items():  
+                    for name, varName in self.sourceVarOfNamespace.items():  
                         if varName != variableName:
                             newSourceVarOfNames[name]=varName
-                    self.sourceVarOfName = newSourceVarOfNames
+                    self.sourceVarOfNamespace = newSourceVarOfNames
                 self.sourceVarLevel.pop()
                 
             while len(self.targetVars)>0 and self.targetVarLevel[-1]==self.level:
                 variableName = self.targetVars.pop()
                 if variableName not in self.targetVars:
                     newTargetVarOfNames = dict()
-                    for name, varName in self.targetVarOfName.items():  
+                    for name, varName in self.targetVarOfNamespace.items():  
                         if varName != variableName:
                             newTargetVarOfNames[name] = varName
-                    self.targetVarOfName = newTargetVarOfNames
+                    self.targetVarOfNamespace = newTargetVarOfNames
                 self.targetVarLevel.pop()
                         
             self.ruleNum += 1
@@ -414,7 +430,7 @@ class FmlNamespace:
         self.targetNamespace = variableName
         self.targetVars.append(variableName)                            
         self.targetVarLevel.append(self.level)
-        self.targetVarOfName[variableName]=variableName
+        self.targetVarOfNamespace[variableName]=variableName
         self.sourceNamespaceAtLevel[self.level] = self.sourceNamespace
         self.targetNamespaceAtLevel[self.level] = self.targetNamespace
         ret = self.indent+f"{sName} -> create(\'{VariableType}\') as {variableName} then " + "{"
@@ -454,13 +470,13 @@ class FmlNamespace:
         sourceNamespace = sourceNode.getNamespace()
         targetNamespace = targetNode.getNamespace()
 
-        if targetNamespace in self.targetVarOfName:
-            tName = self.targetVarOfName[targetNamespace] + "." + targetNode.getBaseName()
+        if targetNamespace in self.targetVarOfNamespace:
+            tName = self.targetVarOfNamespace[targetNamespace] + "." + targetNode.getBaseName()
         else: 
             tName = targetNode.name
         
-        if sourceNamespace in self.sourceVarOfName:
-            sName = self.sourceVarOfName[sourceNamespace] + "." + sourceNode.getBaseName()
+        if sourceNamespace in self.sourceVarOfNamespace:
+            sName = self.sourceVarOfNamespace[sourceNamespace] + "." + sourceNode.getBaseName()
         else: 
             sName = sourceNode.name
 
@@ -503,7 +519,9 @@ class FmlNamespace:
 def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks):  
     fml_lines = []
     
-    if targetNode.name=="c2683.resource.AllergyIntolerance.type":
+    if targetNode.name=="c2683.resource.AllergyIntolerance.clinicalStatus.coding.code":
+    #"c2683.resource.AllergyIntolerance.meta":
+    #"c2683.resource.AllergyIntolerance.type":
     #"c2683.resource.AllergyIntolerance.clinicalStatus.coding":
     #"patientReference.identifier.use":
     #"c2683.resource.AllergyIntolerance.meta.tag.code":
@@ -530,7 +548,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
             firstNode=Node(outputNodes[graphinv[fromKey][0]],parent_map,blocks,True,False,fml.firstSource)
         fml_lines.append(fml.enterNamespace(firstNode,targetNode))
         #if targetNode.getNamespace() in fml.targetVarOfName:
-        functionResultName = fml.targetVarOfName[targetNode.getNamespace()] + "." + targetNode.getBaseName()
+        functionResultName = fml.targetVarOfNamespace[targetNode.getNamespace()] + "." + targetNode.getBaseName()
     else:
         fml_lines.append(fml.exitNamespace(path,sourceNode,targetNode))
         fml_lines.append(fml.enterNamespace(sourceNode,targetNode))
@@ -596,7 +614,7 @@ def generate_fml_for_component(component_name,component,blocks):
         fml.sourceVars.append(cname)
         fml.sourceVarLevel.append(0)
         fml.sourceNamespaceAtLevel[0] = cname
-        fml.sourceVarOfName[cname] = cname
+        fml.sourceVarOfNamespace[cname] = cname
 
     fml.firstSource = firstSource
 
@@ -617,7 +635,7 @@ def generate_fml_for_component(component_name,component,blocks):
         fml.targetVars.append(cname)                            
         fml.targetVarLevel.append(0)
         fml.targetNamespaceAtLevel[0] = cname
-        fml.targetVarOfName[cname] = cname
+        fml.targetVarOfNamespace[cname] = cname
     
     fml_lines.append(groupDef+"){")    
     
