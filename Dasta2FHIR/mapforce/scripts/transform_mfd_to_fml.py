@@ -6,7 +6,7 @@ import re
 
 
 class Node:
-    def __init__(self, entry: ET.Element, parent_map, blocks, isSource, isParameter, firstSource):
+    def __init__(self, entry: ET.Element, parent_map, blocks, isSource, isParameter, firstSource, isFunctionParameter):
         self.name=""
         self.isLeaf = False
         self.isRoot = False
@@ -14,8 +14,8 @@ class Node:
         self.isInvalid = False
         self.valuemapUid = ""
         self.inpkeys = [] # if node is output of a functions then inpkeys are keys of all inputs to this function
-        self.inpNodes = []
         self.isParameter = isParameter
+        self.isFunctionParameter = isFunctionParameter
         self.componentType = ""
         self.componentVariableName = ""
         self.functionName = ""
@@ -39,7 +39,6 @@ class Node:
             if isSource:
                 inpEntry = parent_map[parent_map[entry]].find("./sources/datapoint")
                 self.inpkeys.append(parent_map[parent_map[entry]].find("./sources/datapoint").get('key'))
-                self.inpNodes.append(Node(inpEntry,parent_map,blocks,False,True,firstSource))
             if len(self.inpkeys)>0:
                 self.functionName = entry.get("name")
         elif entry.get('name')==None:
@@ -60,7 +59,8 @@ class Node:
                 self.isInvalid = True
         if self.name.startswith('\''):
             self.constantValue = self.name.split('\'')[1]
-            self.name = firstSource        
+            self.name = firstSource              
+            
      
     def getNamespace(self):
         if self.name.count(".")==0: 
@@ -83,19 +83,16 @@ class Node:
     def parseName(self,entry, parent_map, blocks, isSource, firstSource, skipNames=[0], depth=0, stopAtName = "5document", stopAtTag = "component"):
         path = ""
         cid = entry.get('componentid')
-        if cid != None:
+        if cid != None and blocks[cid].find("./data/parameter").get('name') != 'entry':
             self.componentVariableName=blocks[cid].find("./data/parameter").get('name')
             self.componentType = blocks[cid].find("./data/parameter/root/entry").get('name')
-        if (entry!=None) and (entry in parent_map.keys()) and (entry.get('name')!=None) and (entry.get('name')!=stopAtName) and (entry.tag!=stopAtTag):
+            path = self.componentVariableName
+        elif (entry!=None) and (entry in parent_map.keys()) and (entry.get('name')!=None) and (entry.get('name')!=stopAtName) and (entry.tag!=stopAtTag):
             path = self.parseName(parent_map[entry],parent_map,blocks,isSource,firstSource,skipNames,depth+1)
             if (entry.get('type')!=None and entry.get('type')=='attribute') or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!='2'):
-            #if skipNames[0]==0:
                 if (entry.get('name')!='value' or entry.get('type')!='attribute'):
                     path += "."+entry.get('name')
-                #    print(f"{depth}: {path}")
-                #else:                
-                #    print(f"{depth}: {path} without value")                       
-            
+                
             if skipNames[0]!=0:
                 skipNames[0]-=1 
                 if self.isParameter and skipNames[0]==1:
@@ -113,7 +110,6 @@ class Node:
                 if isSource:
                     for inpkeyEntry in entry.findall(".//entry[@inpkey!='']"):
                         self.inpkeys.append(inpkeyEntry.get('inpkey'))
-                        self.inpNodes.append(Node(inpkeyEntry,parent_map,blocks,False,True,firstSource)) 
                 if len(self.inpkeys)>0:
                     self.functionName = entry.get("name")
                 if self.isParameter:
@@ -123,40 +119,6 @@ class Node:
                     skipNames[0]=3
         return path
     
-    def parseComplexName(self, node, parentMap, blocks, isSource,firstSource, inputNodes, graph, depth=0, stopAtName = "5document", stopAtTag = "root"):
-        path = ""
-        if (node==None) or (not (node in parentMap.keys())):
-            return path
-        if (node.tag=="datapoint"):
-            print(f"datapoint - from {node.get('key')}")
-            basecomponent = parentMap[parentMap[node]]
-            for nextDataPoint in basecomponent.findall("./targets/datapoint"):
-                print(f"datapoint - to {nextDataPoint.get('key')} -> {graph[nextDataPoint.get('key')]}")
-                for nextKey in graph[nextDataPoint.get("key")]:
-                    if nextKey in inputNodes.keys():
-                        nextNode = inputNodes[nextKey]
-                        path = self.parseName(parentMap[node],parentMap, blocks, isSource, firstSource, [0],depth+1)+"."+ basecomponent.get('name')+" > "+self.parseComplexName(nextNode,parentMap,blocks,isSource, firstSource, inputNodes,graph,depth+1)           
-                    else:
-                        print(f"unknown key {nextKey}")
-        if (node.get('name')!=None) and (node.get('name')!=stopAtName) and (node.tag!=stopAtTag):
-            path = self.parseName(parentMap[node],parentMap, blocks, isSource,firstSource,[0],depth+1)
-            if (node.get('name')=='value' and node.get('type')=='attribute'):
-                print(f"{depth} cx: {path} without value")
-                path += " = x ;"
-            else:
-                path += "."+node.get('name')
-                print(f"{depth} cx: {path}")
-        elif node.get('name')==None:
-            path = self.parseName(parentMap[node],parentMap,blocks,isSource,firstSource,[0],depth+1)
-        elif node.tag=="component":
-            if node.get("name")=="constant":
-                path= "\'" + node.find("./data/constant").get("value") + "\'"
-            else:
-                #path = node.get("library") +":"+ node.get("name")+"["+node.get("uid")+"]"
-                path = "c"+node.get("uid")
-            
-        return path
-
     def getDescription(self):
         if self.constantValue=="":
             return self.name
@@ -169,7 +131,7 @@ def name(original: str):
 def generate_uses():
     return "\n".join([
         "uses \"https://dasta.mzcr.cz/model/StructureDefinition/dasta\" alias dasta as source",
-        "uses \"http://hl7.eu/fhir/base/StructureDefinition/organization-eu\" alias Organization as target",
+       # "uses \"http://hl7.eu/fhir/base/StructureDefinition/organization-eu\" alias Organization as target",
        # "uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target"
         "uses \"https://dasta.mzcr.cz/model/StructureDefinition/ip\" alias ip as source",
         "uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target",
@@ -267,7 +229,7 @@ class FmlNamespace:
         self.pathLevel=dict()
         self.pathLevel[0]=0
 
-        
+        self.isFunctionParameter=False
         self.functionParameters=dict()
     
     def enterNamespace(self, sourceNode, targetNode):
@@ -371,10 +333,10 @@ class FmlNamespace:
             
         return "\n".join(fml_lines)
 
-    def exitNamespace(self, path, sourceNode=None, targetNode=None):
+    def exitNamespace(self, path, sourceNode=None, targetNode=None, force = False):
         fml_lines=[]
 
-        while ( self.level>self.pathLevel[path] and (targetNode==None or targetNode.isOutside(self.targetNamespace))):
+        while ( self.level>self.pathLevel[path] and (force or (targetNode==None or targetNode.isOutside(self.targetNamespace)))):
                             #or targetNode.isOutside(targetPath) ):
             #if targetNode!=None and targetNode.name == "c2683.resource.AllergyIntolerance.clinicalStatus.coding":
             #    print("?")
@@ -439,28 +401,32 @@ class FmlNamespace:
         
     def generateFunctionCall(self, path, sourceNode, targetNode, functionResultName):
         fml_lines = []
-        tName=self.targetVars[-1]
-                     
-        if sourceNode.constantValue!="":
-            sName = self.firstSource
-        else:
-            sName = self.sourceVars[-1]
+
+        
+
+        sNames=""
+        sVars=""
+        sNameIdx = 1
+        for param in self.functionParameters[path]:
+            if sNames=="":
+                sNames = param + " as x" + str(sNameIdx)
+                sVars = "x" + str(sNameIdx)
+            else:
+                sNames += ", " + param + " as x" + str(sNameIdx)
+                sVars += ", x" + str(sNameIdx)
+            sNameIdx+=1
+        
+        tName=functionResultName 
         
         self.ruleNum+=1
         if sourceNode.valuemapUid!="":
-            fml_lines.append(self.indent + f"\t{sName} -> {tName} = translate({sName},\'#cm{sourceNode.valuemapUid}\','code') \"rule{str(self.ruleNum)}\";")
+            fml_lines.append(self.indent + f"\t{sNames} -> {tName} = translate({sVars},\'#cm{sourceNode.valuemapUid}\','code') \"rule{str(self.ruleNum)}\";")
         else:
-            params=""
-            for param in self.functionParameters[path]:
-                if params=="":
-                    params = param
-                else:
-                    params += "," + param
-            if params=="":
-                params = functionResultName
+            if sVars=="":
+                sVars = functionResultName
             else:
-                params += "," + functionResultName
-            fml_lines.append(self.indent + f"\t{sName} -> {tName} then {sourceNode.functionName}({params}) \"rule{str(self.ruleNum)}\";")
+                sVars += "," + functionResultName
+            fml_lines.append(self.indent + f"\t{sNames} -> {tName} then {sourceNode.functionName}({sVars}) \"rule{str(self.ruleNum)}\";")
 
         return "\n".join(fml_lines)            
 
@@ -492,9 +458,11 @@ class FmlNamespace:
         elif sourceNode.constantValue!="":
             self.ruleNum+=1
             fml_lines.append(self.indent + f"\t{sName} -> {tName} = \'{sourceNode.constantValue}\' \"rule{str(self.ruleNum)}\";")
-        elif not (sourceNode.isLeaf and not targetNode.isLeaf):
+        elif not sourceNode.isFunctionParameter and not (sourceNode.isLeaf and not targetNode.isLeaf):
             self.ruleNum+=1
             fml_lines.append(self.indent + f"\t{sName} as x -> {tName} = x \"rule{str(self.ruleNum)}\";")    
+        elif sourceNode.isFunctionParameter:
+            print(f"{sourceNode.name} is function parameter")
         else:
             print(f"{sourceNode.name} is LEAF and {targetNode.name} is NODE")
                     
@@ -516,10 +484,11 @@ class FmlNamespace:
 # sourceNode .. zdojový uzol (element nebo atribut)
 # targetNode .. cílový uzol (element nebo atribut)
 
-def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks):  
+def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks, isFunctionParameter):  
     fml_lines = []
     
-    if targetNode.name=="c2683.resource.AllergyIntolerance.clinicalStatus.coding.code":
+    if targetNode.name=="uaType":
+    #"c2683.resource.AllergyIntolerance.clinicalStatus.coding.code":
     #"c2683.resource.AllergyIntolerance.meta":
     #"c2683.resource.AllergyIntolerance.type":
     #"c2683.resource.AllergyIntolerance.clinicalStatus.coding":
@@ -531,10 +500,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
       #preskoč speciální funkci
       source = sourceNode
       fromKey=sourceNode.inpkeys[0]
-      #ind='\t'*(path+2)
-      sourceNode=Node(outputNodes[graphinv[fromKey][0]],parent_map,blocks,True,False,fml.firstSource)
-      #fml_lines.append(f"{ind}// {sourceNode.name} {path+1}-> {source.name}")
-      #target=Node(inputNodes[fromKey],parent_map,blocks,False,True)
+      sourceNode=Node(outputNodes[graphinv[fromKey][0]],parent_map,blocks,True,False,fml.firstSource,False)
       sourceNode.valuemapUid = source.valuemapUid
     
     ind='\t'*(path+1)
@@ -545,35 +511,59 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
         firstNode=sourceNode
         while len(firstNode.inpkeys)>0:
             fromKey = firstNode.inpkeys[0]
-            firstNode=Node(outputNodes[graphinv[fromKey][0]],parent_map,blocks,True,False,fml.firstSource)
+            firstNode=Node(outputNodes[graphinv[fromKey][0]],parent_map,blocks,True,False,fml.firstSource,True)
         fml_lines.append(fml.enterNamespace(firstNode,targetNode))
         #if targetNode.getNamespace() in fml.targetVarOfName:
-        functionResultName = fml.targetVarOfNamespace[targetNode.getNamespace()] + "." + targetNode.getBaseName()
+        if targetNode.getBaseName() == "entry":
+            functionResultName = fml.targetVarOfNamespace[targetNode.getNamespace()]
+        else:
+            functionResultName = fml.targetVarOfNamespace[targetNode.getNamespace()] + "." + targetNode.getBaseName()
     else:
         fml_lines.append(fml.exitNamespace(path,sourceNode,targetNode))
         fml_lines.append(fml.enterNamespace(sourceNode,targetNode))
     fml.functionParameters[path]=[]
     
-    
+    functionStartPath = path
     for fromKey in sourceNode.inpkeys: 
         if fromKey in graphinv.keys():
             if graphinv[fromKey][0] in outputNodes.keys():   
-                #if fromKey=="137":
-                #    print("137")
-                target=Node(inputNodes[fromKey],parent_map,blocks,False,True,fml.firstSource)
-                variableName = target.componentVariableName #target.name.split('.')[0]
-                variableType = target.componentType
-                if not variableName in fml.targetVars:
-                    fml_lines.append(fml.generateVariable(sourceNode,variableName,variableType))    
-                    fml.functionParameters[path].append(variableName)               
+                target=Node(inputNodes[fromKey],parent_map,blocks,False,True,fml.firstSource,False)
+                
+                if target.name == target.componentVariableName:
+                    # není potřeba vytvářet novou proměnnou pomocí create(), stačí ji poslatjako parameter funkce odkazem
+                    target = targetNode
                     fml.pathLevel[path+1] = fml.level
-                fml_lines.append(generate_fml_for_internal_component(fml,path+1,Node(outputNodes[graphinv[fromKey][0]],parent_map,blocks,True,False,fml.firstSource),target,outputNodes,inputNodes,graphinv,parent_map,blocks))
+                    source = Node(outputNodes[graphinv[fromKey][0]],parent_map,blocks,True,False,fml.firstSource,True)
+                    fml_lines.append(generate_fml_for_internal_component(fml,path+1,source,target,outputNodes,inputNodes,graphinv,parent_map,blocks, True))
+                else:
+                    variableName = target.componentVariableName #target.name.split('.')[0]
+                    variableType = target.componentType
+                    if not variableName in fml.targetVars:
+                        fml_lines.append(fml.generateVariable(sourceNode,variableName,variableType))    
+  
+                        fml.functionParameters[path].append(variableName)               
+                        fml.pathLevel[path+1] = fml.level
+                    source = Node(outputNodes[graphinv[fromKey][0]],parent_map,blocks,True,False,fml.firstSource,False)
+                    #(target.name == target.componentVariableName) and ((path+1) in fml.pathLevel) and fml.pathLevel[path+1] == fml.level)        
+                    fml_lines.append(generate_fml_for_internal_component(fml,path+1,source,target,outputNodes,inputNodes,graphinv,parent_map,blocks, False))
     if len(sourceNode.inpkeys)>0:
         ind="\t"*(path+1)
         fml_lines.append(f"{ind}// {sourceNode.name} {path}-> {targetNode.name}")                
         fml_lines.append(fml.generateFunctionCall(path,sourceNode,targetNode,functionResultName))
-    else:
+        fml_lines.append(fml.exitNamespace(functionStartPath,sourceNode,targetNode,True))
+    else: 
         fml_lines.append(fml.generateRule(sourceNode,targetNode))
+        if sourceNode.isFunctionParameter:
+            sourceNamespace = sourceNode.getNamespace()
+            if sourceNamespace in fml.sourceVarOfNamespace:
+                sName = fml.sourceVarOfNamespace[sourceNamespace] + "." + sourceNode.getBaseName()
+            else: 
+                sName = sourceNode.name
+
+            fml.functionParameters[path-1].append(sName)            
+            
+        #else:
+        #    print("kde som?")
     return "\n".join(fml_lines)
 
 def generate_fml_for_component(component_name,component,blocks):
@@ -644,7 +634,7 @@ def generate_fml_for_component(component_name,component,blocks):
         #if inpkey=="126":
         #    print("126")
         if inpkey in graphinv.keys():
-            targetNode=Node(inputNodes[inpkey],parent_map,blocks,False,False,fml.firstSource)
+            targetNode=Node(inputNodes[inpkey],parent_map,blocks,False,False,fml.firstSource,False)
             #Node(getComplexPath(inputNodes[inpkey],parent_map,inputNodes,graph))
             if targetNode.isInvalid or (not (targetNode.name.split('.')[0] in targetComponents)):
                 continue
@@ -653,9 +643,9 @@ def generate_fml_for_component(component_name,component,blocks):
                 if outkey == "57":
                     print("57")
                 if outkey in outputNodes.keys():
-                    sourceNode=Node(outputNodes[outkey],parent_map,blocks,True,False,fml.firstSource)
+                    sourceNode=Node(outputNodes[outkey],parent_map,blocks,True,False,fml.firstSource,False)
 
-                    fml_lines.append(generate_fml_for_internal_component(fml,0,sourceNode,targetNode, outputNodes, inputNodes, graphinv, parent_map, blocks))
+                    fml_lines.append(generate_fml_for_internal_component(fml,0,sourceNode,targetNode, outputNodes, inputNodes, graphinv, parent_map, blocks, False))
 
                     
                 else: 
@@ -680,10 +670,10 @@ def main():
         # sys.exit(1)
         # mfd_file = '.\\mapforce\\final\\base.mfd'
         # output_file = '.\\mapforce\\output\\base.map'
-        # mfd_file = '.\\mapforce\\final\\ua - Allergyintolerance.mfd'
-        # output_file = '.\\mapforce\\output\\ua - Allergyintolerance.map'
-        mfd_file = '.\\mapforce\\final\\ip_ua.mfd'
-        output_file = '.\\mapforce\\output\\ip_ua.map'
+        mfd_file = '.\\mapforce\\final\\ua - Allergyintolerance.mfd'
+        output_file = '.\\mapforce\\output\\ua - Allergyintolerance.map'
+        #mfd_file = '.\\mapforce\\final\\ip_ua.mfd'
+        #output_file = '.\\mapforce\\output\\ip_ua.map'
         #mfd_file = '.\\mapforce\\final\\is - Organization.mfd'
         #output_file = '.\\mapforce\\output\\is - Organization.map'
     else:
@@ -700,7 +690,8 @@ def main():
         f.write(f"/// url = 'https://ncez.mzcr.cz/model/StructureMap/{map_name}'\n")
         f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR HL7-EU https://build.fhir.org/ig/hl7-eu/ (June 2025)'\n")
         f.write(f"/// title = 'Mapování {map_name}'\n")
-        f.write(f"/// descrition = 'This file is generated from MapForge file {mfd_file}'\n")
+        tr = str.maketrans("\\","/")
+        f.write(f"/// descrition = 'This file is generated from MapForge file {mfd_file.translate(tr)}'\n")
         f.write("\n")
         f.write(generate_uses())
         f.write("\n\n")
