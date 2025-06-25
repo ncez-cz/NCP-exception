@@ -37,3 +37,6 @@
 [submodule "hl7-eu/eps"]
 	path = hl7-eu/eps
 	url = https://github.com/hl7-eu/eps.git
+[submodule "hl7-cz/lab-order"]
+	path = hl7-cz/lab-order
+	url = https://github.com/HL7-cz/lab-order.git
