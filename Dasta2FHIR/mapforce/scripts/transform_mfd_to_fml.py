@@ -156,15 +156,19 @@ class Node:
             path = self.componentVariableName
         elif (entry!=None) and (entry in parent_map.keys()) and (entry.get('name')!=None) and (entry.get('name')!=stopAtName) and (entry.tag!=stopAtTag):
             path = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource,skipNames,depth+1)
-            if (entry.get('type')!=None and entry.get('type')=='attribute') or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!='2'):
-                if (entry.get('name')!='value' or entry.get('type')!='attribute'):
-                    path += "."+entry.get('name')
-                
+                            
+            if (entry.get('name')=='FileInstance'):
+                skipNames[0] = 3
             if skipNames[0]!=0:
                 skipNames[0]-=1 
                 if self.isParameter and skipNames[0]==1:
                     if (entry.get('name')!='value' or entry.get('type')!='attribute'):
                         path = entry.get('name')                    
+            elif (entry.get('type')!='xml-type') and ((entry.get('name')!='value') or (entry.get('type')!='attribute')):
+               #(entry.get('type')!=None and entry.get('type')=='attribute'):
+                #or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!='2'):
+                #if (entry.get('name')!='value') or (entry.get('type')!='attribute'):
+                    path += "."+entry.get('name')
                     
         elif entry.get('name')==None:
             path = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource,skipNames,depth+1)
@@ -704,7 +708,8 @@ class Function:
 def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks, functions):  
     fml_lines = []
     
-    if targetNode.name=="entry.resource.AllergyIntolerance.meta.lastUpdated":
+    if targetNode.name=="patientReference.identifier.value":
+    #"entry.resource.AllergyIntolerance.meta.lastUpdated":
     #'c3101.resource.ServiceRequest.identifier.value':
     #"c3188.resource.Observation":
     #"c2683.resource.AllergyIntolerance.clinicalStatus.coding":
@@ -769,6 +774,8 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
                             print("tu")
                         fml.functionParameters[path][fromKeyArg]=variableName
                         fml.pathLevel[path+1] = fml.level
+                    if fromKey=="15":
+                        print("hopla")
                     source = Node(outputNodes[graphinv[fromKey][0]],fml.function,parent_map,blocks,True,False,fml.firstSource,False)
                     #(target.name == target.componentVariableName) and ((path+1) in fml.pathLevel) and fml.pathLevel[path+1] == fml.level)        
                     fml_lines.append(generate_fml_for_internal_component(fml,path+1,source,target,outputNodes,inputNodes,graphinv,parent_map,blocks,functions))
@@ -869,10 +876,10 @@ def main():
         #output_file = '.\\mapforce\\output\\is - Organization.map'
         #mfd_file = '.\\mapforce\\final\\ip_ua.mfd'
         #output_file = '.\\mapforce\\output\\ip_ua.map'
-        mfd_file = '.\\mapforce\\final\\ua - Allergyintolerance.mfd'
-        output_file = '.\\mapforce\\output\\ua - Allergyintolerance.map'
-        #mfd_file = '.\\mapforce\\final\\laboratoryOrder.mfd'
-        #output_file = '.\\mapforce\\output\\laboratoryOrder.map'
+        #mfd_file = '.\\mapforce\\final\\ua - Allergyintolerance.mfd'
+        #output_file = '.\\mapforce\\output\\ua - Allergyintolerance.map'
+        mfd_file = '.\\mapforce\\final\\laboratoryOrder.mfd'
+        output_file = '.\\mapforce\\output\\laboratoryOrder.map'
         
     else:
         mfd_file = sys.argv[1]
