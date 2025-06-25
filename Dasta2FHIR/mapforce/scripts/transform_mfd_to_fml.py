@@ -27,8 +27,9 @@ class Node:
             self.name = self.parseName(parent_map[entry],parent_map,blocks,isSource,firstSource,sN,1)
             if (entry.get('name')!='value' or entry.get('type')!='attribute'):
                 if (entry.get('type')!=None and entry.get('type')=='attribute') or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!='2'):
-                    if isSource and entry.get('type')!='attribute' and len(list(entry))==0:
+                    if isSource and entry.get('type')!='attribute' and len(list(entry))==0 and not isFunctionParameter:
                         self.name += "."+entry.get('name')+".txt"
+                        self.isLeaf  = True
                     else:
                         self.name += "."+entry.get('name')   
             else:
@@ -37,7 +38,6 @@ class Node:
             self.valuemapUid = parent_map[parent_map[entry]].get("uid")
             self.name = f"#cm{self.valuemapUid}"
             if isSource:
-                inpEntry = parent_map[parent_map[entry]].find("./sources/datapoint")
                 self.inpkeys.append(parent_map[parent_map[entry]].find("./sources/datapoint").get('key'))
             if len(self.inpkeys)>0:
                 self.functionName = entry.get("name")
@@ -202,8 +202,7 @@ def displayGraph(graph):
 # targetVar .. definované lokální fml proměnné 
 class FmlNamespace:
     
-    def __init__(self,firstSource):
-        self.firstSource = firstSource
+    def __init__(self, function):
         
         # úroveň vnořeného kódu dle závorek {}
         self.level=0
@@ -231,6 +230,24 @@ class FmlNamespace:
 
         self.isFunctionParameter=False
         self.functionParameters=dict()
+
+        self.firstSource = ""
+        #inicialize namespace with function arguments as source/target variables
+        for arg in function.arguments:
+            if function.argumentPrefix[arg]=="source":
+                if self.firstSource == "":
+                    self.firstSource = arg
+                self.sourceNamespace = arg
+                self.sourceVars.append(arg)
+                self.sourceVarLevel.append(0)
+                self.sourceNamespaceAtLevel[0] = arg
+                self.sourceVarOfNamespace[arg] = arg
+            if function.argumentPrefix[arg]=="target":    
+                self.targetNamespace = arg
+                self.targetVars.append(arg)
+                self.targetVarLevel.append(0)
+                self.targetNamespaceAtLevel[0] = arg
+                self.targetVarOfNamespace[arg] = arg
     
     def enterNamespace(self, sourceNode, targetNode):
         fml_lines=[]
@@ -403,18 +420,23 @@ class FmlNamespace:
         fml_lines = []
 
         
-
         sNames=""
         sVars=""
         sNameIdx = 1
         for param in self.functionParameters[path]:
-            if sNames=="":
-                sNames = param + " as x" + str(sNameIdx)
-                sVars = "x" + str(sNameIdx)
+            if sNames!="":
+                sNames += ", "
+            if sVars!="":
+                sVars += ", "    
+            if param.count(".")>0:
+                sNames += param + " as x" + str(sNameIdx)
+                sVars += "x" + str(sNameIdx)
+                sNameIdx+=1
             else:
-                sNames += ", " + param + " as x" + str(sNameIdx)
-                sVars += ", x" + str(sNameIdx)
-            sNameIdx+=1
+                sVars += param
+            
+        if sNames=="":
+            sNames=self.functionParameters[path][-1]
         
         tName=functionResultName 
         
@@ -479,6 +501,50 @@ class FmlNamespace:
         return "\n".join(fml_lines)
     
 
+class Function:
+    def __init__(self,component):
+        # ordered function argument names
+        self.arguments = []
+        # argumentType[<argument name>] = string|...
+        self.argumentType = dict()
+        # argumentPrefix[<argument name>] = source|target
+        self.argumentPrefix = dict()
+        for sourceComponent in component.findall("./structure/children/component/data/document[@inputinstance!='']/../.."):
+            self.arguments.append(f"c{sourceComponent.get('uid')}")
+            self.argumentType[f"c{sourceComponent.get('uid')}"] = getType(sourceComponent.find("./data/document").get("instanceroot"))
+            self.argumentPrefix[f"c{sourceComponent.get('uid')}"] = "source"
+        for sourceComponent in component.findall("./structure/children/component/data/parameter[@usageKind='input']/../.."):
+            sourceEntry = sourceComponent.find("./data/parameter/root/entry")
+            if sourceEntry==None:
+                continue
+            self.arguments.append(f"c{sourceComponent.get('uid')}")
+            self.argumentType[f"c{sourceComponent.get('uid')}"]=getTypeNS(sourceEntry.get("name"),sourceEntry.get("ns"))
+            self.argumentPrefix[f"c{sourceComponent.get('uid')}"] = "source"
+
+        for targetComponent in component.findall("./structure/children/component/data/document[@outputinstance!='']/../.."):
+            self.arguments.append(f"c{targetComponent.get('uid')}")
+            self.argumentType[f"c{targetComponent.get('uid')}"]= getType(targetComponent.find("./data/document").get("instanceroot"))
+            self.argumentPrefix[f"c{targetComponent.get('uid')}"] = "target"
+        for targetComponent in component.findall("./structure/children/component/data/parameter[@usageKind='output']/../.."):
+            targetEntry = targetComponent.find("./data/parameter/root/entry")
+            if targetEntry==None:
+                continue
+            self.arguments.append(f"c{targetComponent.get('uid')}")
+            self.argumentType[f"c{targetComponent.get('uid')}"]=getTypeNS(targetEntry.get("name"),targetEntry.get("ns"))
+            self.argumentPrefix[f"c{targetComponent.get('uid')}"] = "target"
+    def getArgumentsDefinition(self):
+        ret = ""
+        for arg in self.arguments:
+            if ret!="":
+                ret+=", "
+            ret+=f"{self.argumentPrefix[arg]} {arg}: {self.argumentType[arg]}"
+        return ret
+
+    def isTarget(self,argName):
+        return (argName in self.argumentPrefix) and (self.argumentPrefix[argName]=="target")
+        
+    
+
 # fml .. úroveň vnoření ve fml
 # pathlevel .. délka cesty k cíli (0 ak sourceNode == targetNode)
 # sourceNode .. zdojový uzol (element nebo atribut)
@@ -487,7 +553,7 @@ class FmlNamespace:
 def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks, isFunctionParameter):  
     fml_lines = []
     
-    if targetNode.name=="uaType":
+    if targetNode.name=="c2683.resource.AllergyIntolerance.clinicalStatus.coding":
     #"c2683.resource.AllergyIntolerance.clinicalStatus.coding.code":
     #"c2683.resource.AllergyIntolerance.meta":
     #"c2683.resource.AllergyIntolerance.type":
@@ -574,59 +640,21 @@ def generate_fml_for_component(component_name,component,blocks):
     outputNodes=dict() # all sources vertexes
     findInputNodes(component, inputNodes)
     findOutputNodes(component, outputNodes)
-    targetComponentNames=set()
+    
     parent_map = {c: p for p in component.iter() for c in p}
     findGraph(component,graph,graphinv)
     # displayGraph(graph)
     groupDef=f"group {name(component_name)}("
     
-    firstSource = ""
-    fml = FmlNamespace(firstSource)
     
-    sourceComponents = dict()
-    for sourceComponent in component.findall("./structure/children/component/data/document[@inputinstance!='']/../.."):
-        sourceComponents[f"c{sourceComponent.get('uid')}"] = getType(sourceComponent.find("./data/document").get("instanceroot"))
-    for sourceComponent in component.findall("./structure/children/component/data/parameter[@usageKind='input']/../.."):
-        sourceEntry = sourceComponent.find("./data/parameter/root/entry")
-        if sourceEntry==None:
-            continue
-        sourceComponents[f"c{sourceComponent.get('uid')}"]=getTypeNS(sourceEntry.get("name"),sourceEntry.get("ns"))
-    first=True
-    for cname,cType in sourceComponents.items():
-        if not first:
-            groupDef+=", "
-        first=False
-        if firstSource == "":
-            firstSource = cname
-        groupDef+=f"source {cname}: {cType}"
-        #inicialize as namespace source variable
-        fml.sourceNamespace = cname
-        fml.sourceVars.append(cname)
-        fml.sourceVarLevel.append(0)
-        fml.sourceNamespaceAtLevel[0] = cname
-        fml.sourceVarOfNamespace[cname] = cname
 
-    fml.firstSource = firstSource
-
-    targetComponents = dict()
-    for targetComponent in component.findall("./structure/children/component/data/document[@outputinstance!='']/../.."):
-        targetComponents[f"c{targetComponent.get('uid')}"]= getType(targetComponent.find("./data/document").get("instanceroot"))
-    for targetComponent in component.findall("./structure/children/component/data/parameter[@usageKind='output']/../.."):
-        targetEntry = targetComponent.find("./data/parameter/root/entry")
-        if targetEntry==None:
-            continue
-        targetComponents[f"c{targetComponent.get('uid')}"]=getTypeNS(targetEntry.get("name"),targetEntry.get("ns"))
-    for cname,cType in targetComponents.items():
-        if not first:
-            groupDef+=", "
-        first=False
-        groupDef+=f"target {cname}: {cType}"
-        fml.targetNamespace = cname
-        fml.targetVars.append(cname)                            
-        fml.targetVarLevel.append(0)
-        fml.targetNamespaceAtLevel[0] = cname
-        fml.targetVarOfNamespace[cname] = cname
+    function = Function(component)
+    fml = FmlNamespace(function)
     
+
+    groupDef += function.getArgumentsDefinition()
+    
+
     fml_lines.append(groupDef+"){")    
     
 
@@ -636,7 +664,7 @@ def generate_fml_for_component(component_name,component,blocks):
         if inpkey in graphinv.keys():
             targetNode=Node(inputNodes[inpkey],parent_map,blocks,False,False,fml.firstSource,False)
             #Node(getComplexPath(inputNodes[inpkey],parent_map,inputNodes,graph))
-            if targetNode.isInvalid or (not (targetNode.name.split('.')[0] in targetComponents)):
+            if targetNode.isInvalid or (not function.isTarget(targetNode.name.split('.')[0])):
                 continue
             
             for outkey in graphinv[inpkey]:
