@@ -4,6 +4,13 @@ import os
 import re
 
 
+def getAltovaNameNS(component):
+        ns=0
+        for namespace in component.findall("./data/root/header/namespaces/namespace[@uid!='']"):
+            ns+=1
+            if namespace.get('uid')=="http://www.altova.com/mapforce":
+                return str(ns)
+        return str(0)
 
 class Node:
     def __init__(self, entry: ET.Element, function, parent_map, blocks, isSource, isParameter, firstSource, isFunctionParameter, functionArg = ""):
@@ -45,6 +52,11 @@ class Node:
         self.isVariable = False
         
                 
+        component = entry
+        while component.tag!='component':
+            component = parent_map[component]
+        altovaNS = getAltovaNameNS(component)
+
         componentid = entry.get('componentid')
         if componentid != None:
             base_component = parent_map[parent_map[parent_map[entry]]]
@@ -73,9 +85,9 @@ class Node:
             skipNames=[]
             skipNames.append(0)
             sN=[0]
-            self.name = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource,sN,1)
+            self.name = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource,altovaNS, sN,1)
             if (entry.get('name')!='value' or entry.get('type')!='attribute'):
-                if (entry.get('type')!=None and entry.get('type')=='attribute') or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!='2'):
+                if (entry.get('type')!=None and entry.get('type')=='attribute') or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!=altovaNS):
                     if isSource and entry.get('type')!='attribute' and len(list(entry))==0 and not isFunctionParameter:
                         self.name += "."+entry.get('name')+".txt"
                         self.isLeaf  = True
@@ -103,7 +115,7 @@ class Node:
                     self.functionName = self.coreFunction.get("name")
                     self.functionLibrary = self.coreFunction.get("library")
         elif entry.get('name')==None:
-            self.name = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource,[0],1)
+            self.name = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource,altovaNS, [0],1)
         elif entry.tag=="component":
             if entry.get("name")=="constant":
                 self.name= "\'" + entry.find("./data/constant").get("value") + "\'"
@@ -144,7 +156,9 @@ class Node:
         rel = self.name.removeprefix(path+".")
         return rel.split('.')[0]  
     
-    def parseName(self,entry, function, parent_map, blocks, isSource, firstSource, skipNames=[0], depth=0, stopAtName = "5document", stopAtTag = "component"):
+    
+     
+    def parseName(self,entry, function, parent_map, blocks, isSource, firstSource, altovaNS, skipNames=[0], depth=0,  stopAtName = "5document", stopAtTag = "component"):
         path = ""
         componentid = entry.get('componentid')
         if componentid != None:
@@ -155,7 +169,7 @@ class Node:
             self.componentType = blocks[cid].find("./data/parameter/root/entry").get('name')
             path = self.componentVariableName
         elif (entry!=None) and (entry in parent_map.keys()) and (entry.get('name')!=None) and (entry.get('name')!=stopAtName) and (entry.tag!=stopAtTag):
-            path = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource,skipNames,depth+1)
+            path = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource,altovaNS, skipNames,depth+1)
                             
             if (entry.get('name')=='FileInstance'):
                 skipNames[0] = 3
@@ -164,14 +178,14 @@ class Node:
                 if self.isParameter and skipNames[0]==1:
                     if (entry.get('name')!='value' or entry.get('type')!='attribute'):
                         path = entry.get('name')                    
-            elif (entry.get('type')!='xml-type') and ((entry.get('name')!='value') or (entry.get('type')!='attribute')):
+            elif (entry.get('type')!='xml-type') and ((entry.get('name')!='value') or (entry.get('type')!='attribute')) and parent_map[entry].get('ns')!=altovaNS:
                #(entry.get('type')!=None and entry.get('type')=='attribute'):
                 #or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!='2'):
                 #if (entry.get('name')!='value') or (entry.get('type')!='attribute'):
                     path += "."+entry.get('name')
                     
         elif entry.get('name')==None:
-            path = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource,skipNames,depth+1)
+            path = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource,altovaNS, skipNames,depth+1)
         elif entry.tag=="component":
             if entry.get("name")=="constant":
                 path= "\'" + entry.find("./data/constant").get("value") + "\'"
@@ -209,8 +223,9 @@ def generate_uses():
        # "uses \"http://hl7.eu/fhir/base/StructureDefinition/organization-eu\" alias Organization as target",
        # "uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target"
         "uses \"https://dasta.mzcr.cz/model/StructureDefinition/ip\" alias ip as source",
-        "uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target",
-        "uses \"http://hl7.eu/fhir/eps/StructureDefinition/allergyIntolerance-eu-eps\" alias AllergyIntolerance as target"
+        "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/BundleLabOrderCz\" alias Bundle as target"
+        #"uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target",
+        #"uses \"http://hl7.eu/fhir/eps/StructureDefinition/allergyIntolerance-eu-eps\" alias AllergyIntolerance as target"
 
     ])
 
@@ -708,7 +723,7 @@ class Function:
 def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks, functions):  
     fml_lines = []
     
-    if targetNode.name=="patientReference.identifier.value":
+    if targetNode.name=="authorReference.reference":
     #"entry.resource.AllergyIntolerance.meta.lastUpdated":
     #'c3101.resource.ServiceRequest.identifier.value':
     #"c3188.resource.Observation":
@@ -755,8 +770,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
         if fromKey in graphinv.keys():
             if graphinv[fromKey][0] in outputNodes.keys():  
                 
-                if (fromKey=='44'):
-                    print("do pice")
+                
                 target=Node(inputNodes[fromKey],fml.function,parent_map,blocks,False,True,fml.firstSource,False)
                 
                 if target.name == target.componentVariableName:
@@ -891,7 +905,7 @@ def main():
     functions = dict()
     findComponents(root, blocks, functions)
     
-    map_name = "ua"
+    map_name = "laboratoryOrder"
     with open(output_file, 'w', encoding="utf-8") as f:
         f.write(f"/// url = 'https://ncez.mzcr.cz/model/StructureMap/{map_name}'\n")
         f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR HL7-EU https://build.fhir.org/ig/hl7-eu/ (June 2025)'\n")

@@ -1,0 +1,3 @@
+Internetová služba formou RESTApi, která slouží na transformaci, validaci i na mapování číselníkových hodnot a na úpravu finálních dat tak, aby odpovídaly specifikaci CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0. Služba neukládá ani neposkytuje jiná zdravotní data pacientů než ty, které dostává na vstupu při konkrétním dotazu.
+
+Příklady volání pomocí curl jsou v adresáři ExceptionHandlingModule\data\samples.

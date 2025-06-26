@@ -1,0 +1,149 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Modul na ošetření výjimek",
+    "description": "Internetová služba formou RESTApi, která slouží na validaci, na mapování číselníkových hodnot a na úpravu finálních dat tak, aby odpovídaly specifikaci CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0. Služba také loguje v anonymní podobě problematické případy za účelem upozornění na problémy a chyby na terminologickém serveru nebo ve vstupních datech.\r\n.Služba neukládá ani neposkytuje jiná zdravotní data pacientů než ty, které dostává na vstupu při konkrétním dotazu.\r\n",
+    "contact": {
+      "name": "Provisio s.r.o.",
+      "url": "https://www.provisio.cz/kontakt"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/Transform/{transformation}": {
+      "post": {
+        "tags": [
+          "Transform"
+        ],
+        "summary": "Transformace dat.",
+        "description": "<table>\r\n  <tr>\r\n    <th>transformation</th>\r\n    <th>popis</th>\r\n  </tr>\r\n  <tr>\r\n    <td>dasta2fhir_hdr_EU</td>\r\n    <td>Převod propouštěcí zprávy z formátu DASTA 4.27.04 (s doplněnými guids a ošetřenými datetime) do HL7 FHIR 4.0.1, EU HDR(0.1.0-ballot - draft 150)</td>\r\n  </tr>\r\n  <tr>\r\n    <td>dasta2fhir_laboratory_EU</td>\r\n    <td>Převod laboratorních výsledků z formátu DASTA 4.27.04 (s doplněnými guids a ošetřenými datetime) do HL7 FHIR 4.0.1, EU Laboratory Report(0.2.0-ci - ci-build 150)</td>\r\n  </tr>\r\n  <tr>\r\n    <td>dasta2fhir_laboratoryOrder_EU</td>\r\n    <td>Převod laboratorních žádanek z formátu DASTA 4.27.04 (s doplněnými guids s ošetřenými datetime) do HL7 FHIR 4.0.1, Czech Laboratory Order(0.0.1 - ci-build Czechia)</td>\r\n  </tr>\r\n  <tr>\r\n    <td>dasta2fhir_patsum_EU</td>\r\n    <td>Převod pacientského souhrnu z formátu DASTA 4.27.04 (s dopněnými guids s ošetřenými datetime) do HL7 FHIR 4.0.1, EU Patient Summary(0.0.1-ci - ci-build 150)</td>\r\n  </tr>\r\n  <tr>\r\n    <td>cda_epsos_ps7_replace_unknown_codes_EU</td>\r\n    <td>Ošetření neznámých kódů v EU číselnících pro CDA HL7 eHDSI(epsos-) Patient Summary 7.2.0</td>\r\n  </tr>\r\n</table>",
+        "consumes": [
+          "application/xml",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "transformation",
+            "description": "Typ požadované transformace.",
+            "required": true,
+            "type": "string",
+            "default": "cda_epsos_ps7_replace_unknown_codes_EU"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Vstupní data k transformaci.",
+            "schema": {
+              "$ref": "#/definitions/ClinicalDocument"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Transformované data",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "404": {
+            "description": "Volba transformace není dostupná",
+            "schema": {
+              "$ref": "#/definitions/ProblemDetails"
+            }
+          },
+          "500": {
+            "description": "Vnitřní chyba serveru"
+          }
+        }
+      }
+    },
+    "/Validate/{validation}": {
+      "post": {
+        "tags": [
+          "Validate"
+        ],
+        "summary": "Validace dat.",
+        "description": "<table>\r\n  <tr>\r\n    <th>validation</th>\r\n    <th>standard</th>\r\n    <th>webové stránky standardu</th>\r\n  </tr>\r\n  <tr>\r\n    <td align=\"center\">cda_epsos_ps7</td>\r\n    <td align=\"center\">CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0</td>\r\n    <td align=\"center\">\r\n      <a href=\"https://art-decor.ehdsi.eu/publication/\">https://art-decor.ehdsi.eu/publication/</a>\r\n    </td>\r\n  </tr>\r\n</table>",
+        "consumes": [
+          "application/xml",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "validation",
+            "description": "Standard podle kterého se požaduje validace.",
+            "required": true,
+            "type": "string",
+            "default": "cda_epsos_ps7"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Data k validaci.",
+            "schema": {
+              "$ref": "#/definitions/ClinicalDocument"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Validace proběhla, návrátené data obsahují validační report obsahující informace, varování nebo chyby dat",
+            "schema": {
+              "type": "array",
+              "items": { }
+            }
+          },
+          "404": {
+            "description": "Volba validace není dostupná",
+            "schema": {
+              "$ref": "#/definitions/ProblemDetails"
+            }
+          },
+          "500": {
+            "description": "Vnitřní chyba serveru"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ClinicalDocument": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "ProblemDetails": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "instance": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": { }
+    }
+  }
+}
