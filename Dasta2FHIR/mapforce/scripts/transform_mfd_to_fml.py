@@ -29,9 +29,6 @@ class Node:
                 return f"y{self.entry.get('pos')}"
         cur = self.entry
         name = ""
-      #  if self.isSource and cur.get('type')!='attribute' and len(list(cur))==0 and not self.isFunctionParameter:
-      #      name += ".txt"
-      #      self.isLeaf  = True
         while  self.parent_map[cur].tag=='entry' and (self.parent_map[cur].get('ns')==None or self.parent_map[cur].get('ns')!=self.altovaNS):
             if not((cur.get('name') == 'value') and cur.get('type')=='attribute') and not(cur.get('type')=='xml-type'):
                 # vynechávej atributy 'value' (FML syntax)
@@ -45,6 +42,10 @@ class Node:
             name = self.function.getVarName(self.component.get("uid")) + name
         else:
             name = cur.get('name') + name
+        cur = self.entry
+        if name.count(".")>0 and self.isSource and cur.get('type')!='attribute' and len(list(cur))==0 and not self.isFunctionParameter:
+            name += ".txt"
+            self.isLeaf  = True
         return name
       
     def __init__(self, entry: ET.Element, function, parent_map, blocks, isSource, isParameter, firstSource, isFunctionParameter, functionArg = ""):
@@ -71,8 +72,6 @@ class Node:
         # Calculated from: inpkeys[inpkey] = <function arg>
         #   one <function arg> can have many inpkeys as innner xml nodes
         self.inpkeys = dict() # if node is output of a functions then inpkeys.keys() are keys of all inputs to this function
-
-        self.new_inpkeys = dict()
         
         # constrained as input element to Mapforce function
         self.isParameter = isParameter
@@ -92,47 +91,42 @@ class Node:
         self.functionLibrary = ""
         self.coreFunction = None
 
-        self.new_functionName = ""
-        self.new_functionLibrary = ""
-
         # Mapforce variable
         self.isVariable = False
         
                 
         self.component = entry
+        topEntry = entry
         while self.component.tag!='component':
             self.component = parent_map[self.component]
+            if self.component.tag=='entry':
+                topEntry = self.component
         self.altovaNS = getAltovaNameNS(self.component)
         
-        new_name=self.findName(firstSource)
+        self.name=self.findName(firstSource)
 
         if isSource:
                 for inpkeyEntry in self.component.findall(".//entry[@inpkey!='']"):
                         parent = inpkeyEntry
                         while (parent_map[parent].tag == 'entry'):
                             parent = parent_map[parent]
-                        self.new_inpkeys[inpkeyEntry.get('inpkey')] = parent.get("name")
-                if len(self.new_inpkeys)>0:
-                    self.new_functionName = self.component.get("name")
-                    self.new_functionLibrary = self.component.get("library")
+                        self.inpkeys[inpkeyEntry.get('inpkey')] = parent.get("name")
+                if len(self.inpkeys)>0:
+                    self.functionName = self.component.get("name")
+                    self.functionLibrary = self.component.get("library")
 
-        componentid = entry.get('componentid')
+        componentid = topEntry.get('componentid')
         if componentid != None:
-            base_component = parent_map[parent_map[parent_map[entry]]]
-            cid = f"{base_component.get('library')}:{base_component.get('name')}:{componentid}"
+            cid = f"{self.component.get('library')}:{self.component.get('name')}:{componentid}"
             if cid not in blocks:
                 print(f"ERROR: block {cid} is missing")
-                for inpkeyEntry in parent_map[parent_map[entry]].findall(".//entry[@inpkey!='']"):
+                for inpkeyEntry in self.component.findall(".//entry[@inpkey!='']"):
                     self.inpkeys[inpkeyEntry.get('inpkey')] = inpkeyEntry.get('name')
-                    self.new_inpkeys[inpkeyEntry.get('inpkey')] = inpkeyEntry.get('name')
-                for s in parent_map[parent_map[entry]].findall("./sources/datapoint"):
+                for s in self.component.findall("./sources/datapoint"):
                     self.inpkeys[s.get('key')]="x"+s.get('pos')
-                    self.new_inpkeys[s.get('key')]="x"+s.get('pos')
                 if len(self.inpkeys)>0:
-                    self.functionName = base_component.get("name")
-                    self.functionLibrary = base_component.get("library")
-                    self.new_functionName = base_component.get("name")
-                    self.new_functionLibrary = base_component.get("library")
+                    self.functionName = self.component.get("name")
+                    self.functionLibrary = self.component.get("library")
                 return
             self.componentVariableName=blocks[cid].find("./data/parameter").get('name')
             if blocks[cid].find("./data/parameter/root/entry")==None:
@@ -143,56 +137,49 @@ class Node:
             else:    
                 self.componentType = blocks[cid].find("./data/parameter/root/entry").get('name')
         #if componentid != None and blocks[cid].find("./data/parameter").get('name') != 'entry':
-            self.name = self.componentVariableName
+            #self.name = self.componentVariableName
         elif (entry!=None) and (entry in parent_map.keys()) and (entry.get('name')!=None):
-            skipNames=[]
-            skipNames.append(0)
-            sN=[0]
-            self.name = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource, sN,1)
+            #skipNames=[]
+            #skipNames.append(0)
+            #sN=[0]
+            # self.name = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource, sN,1)
             if (entry.get('name')!='value' or entry.get('type')!='attribute'):
                 if (entry.get('type')!=None and entry.get('type')=='attribute') or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!=self.altovaNS):
                     if isSource and entry.get('type')!='attribute' and len(list(entry))==0 and not isFunctionParameter:
-                        self.name += "."+entry.get('name')+".txt"
+                        #self.name += "."+entry.get('name')+".txt"
                         self.isLeaf  = True
-                    else:
-                        self.name += "."+entry.get('name')   
+                    #else:
+                        #self.name += "."+entry.get('name')   
             else:
                 self.isLeaf = True
-        elif entry.tag=="datapoint" and (parent_map[parent_map[entry]].get("name") in ["value-map", "concat"]):
-            if parent_map[parent_map[entry]].get("name")=="value-map":
-                self.valuemapUid = parent_map[parent_map[entry]].get("uid")
+        elif entry.tag=="datapoint" and (self.component.get("name") in ["value-map", "concat"]):
+            if self.component.get("name")=="value-map":
+                self.valuemapUid = self.component.get("uid")
                 self.name = f"#cm{self.valuemapUid}"
                 if isSource:
-                    for s in parent_map[parent_map[entry]].findall("./sources/datapoint"):
+                    for s in self.component.findall("./sources/datapoint"):
                         self.inpkeys[s.get('key')]="x"+s.get('pos')
-                        self.new_inpkeys[s.get('key')]="x"+s.get('pos')
                 if len(self.inpkeys)>0:
-                    self.functionName = parent_map[parent_map[entry]].get("name")
-                    self.functionLibrary = parent_map[parent_map[entry]].get("library")
-                    self.new_functionName = parent_map[parent_map[entry]].get("name")
-                    self.new_functionLibrary = parent_map[parent_map[entry]].get("library")
+                    self.functionName = self.component.get("name")
+                    self.functionLibrary = self.component.get("library")
             else:
-                self.coreFunction=parent_map[parent_map[entry]]
+                self.coreFunction=self.component
                 if isSource:
-                    for s in parent_map[parent_map[entry]].findall("./sources/datapoint"):
+                    for s in self.component.findall("./sources/datapoint"):
                         self.inpkeys[s.get('key')]="x"+s.get('pos')
-                        self.new_inpkeys[s.get('key')]="x"+s.get('pos')
                 if len(self.inpkeys)>0:
                     self.functionArg = "x"+entry.get('pos')
                     self.functionName = self.coreFunction.get("name")
                     self.functionLibrary = self.coreFunction.get("library")
-                    self.new_functionName = self.coreFunction.get("name")
-                    self.new_functionLibrary = self.coreFunction.get("library")
-        elif entry.get('name')==None:
-            self.name = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource, [0],1)
-        elif entry.tag=="component":
-            if entry.get("name")=="constant":
-                self.name= "\'" + entry.find("./data/constant").get("value") + "\'"
-                self.constantValue=entry.find("./data/constant").get("value")
-            else:
-                #path = entry.get("library") +":"+ entry.get("name")+"["+entry.get("uid")+"]"
-                self.isRoot = True
-                function.getVarName(entry.get("uid"))
+        #elif entry.get('name')==None:
+           # self.name = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource, [0],1)
+        if self.component.get("name")=="constant":
+            self.name= "\'" + self.component.find("./data/constant").get("value") + "\'"
+            self.constantValue=self.component.find("./data/constant").get("value")
+        #else:
+            #path = entry.get("library") +":"+ entry.get("name")+"["+entry.get("uid")+"]"
+        #    self.isRoot = True
+        #    function.getVarName(entry.get("uid"))
                 
     
         if self.name.count(".")>0 and  entry.get('ns')==None:
@@ -203,14 +190,6 @@ class Node:
         if self.name.startswith('\''):
             self.constantValue = self.name.split('\'')[1]
             self.name = firstSource    
-
-        if self.name!=new_name and not(self.isInvalid) and (function.isTarget(self.name.split('.')[0]) or (isSource and self.name.split('.')[-1]!='txt')):
-            print (f"Node name problem: {self.name}!={new_name}")    
-            self.name = new_name      
-        if  len(self.new_inpkeys)!=len(self.inpkeys) or self.functionName!=self.new_functionName or self.new_functionLibrary != self.functionLibrary:
-            print ("!!!!!!!!!!!!!!!!!!!!!!!")
-
-        
             
      
     def getNamespace(self):
@@ -228,7 +207,7 @@ class Node:
                 idx+=10
                 nidx = ns.find(".",idx)
                 if nidx<0:
-                    ns=ns[:idx]
+                    ns=ns[:(idx-1)]
                 else:
                     nidx+=1
                     ns=ns[:idx]+ns[nidx:]
@@ -261,64 +240,10 @@ class Node:
         rel = self.name.removeprefix(path+".")
         return rel.split('.')[0]  
     def getNextNamespaceElement(self,path):
-        rel = self.name.removeprefix(path+".")
-        if path.endswith("resource"):
-            # preskakuj název resource, protože ten negeneruje fml namespace
-            # (napr. path="entry.resource" name="entry.resource.Observation.status" => "status")
-            return rel.split('.')[1]
+        rel = self.getNamespace().removeprefix(path+".")
         return rel.split('.')[0]  
     
     
-     
-    def parseName(self,entry, function, parent_map, blocks, isSource, firstSource,  skipNames=[0], depth=0,  stopAtName = "5document", stopAtTag = "component"):
-        path = ""
-        componentid = entry.get('componentid')
-        if componentid != None:
-            base_component = parent_map[parent_map[parent_map[entry]]]
-            cid = f"{base_component.get('library')}:{base_component.get('name')}:{componentid}"
-        if componentid != None and blocks[cid].find("./data/parameter").get('name') != 'entry':
-            self.componentVariableName=blocks[cid].find("./data/parameter").get('name')
-            self.componentType = blocks[cid].find("./data/parameter/root/entry").get('name')
-            path = self.componentVariableName
-        elif (entry!=None) and (entry in parent_map.keys()) and (entry.get('name')!=None) and (entry.get('name')!=stopAtName) and (entry.tag!=stopAtTag):
-            path = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource, skipNames,depth+1)
-                            
-            if (entry.get('name')=='FileInstance'):
-                skipNames[0] = 3
-            if skipNames[0]!=0:
-                skipNames[0]-=1 
-                if self.isParameter and skipNames[0]==1:
-                    if (entry.get('name')!='value' or entry.get('type')!='attribute'):
-                        path = entry.get('name')                    
-            elif (entry.get('type')!='xml-type') and ((entry.get('name')!='value') or (entry.get('type')!='attribute')) and parent_map[entry].get('ns')!=self.altovaNS:
-               #(entry.get('type')!=None and entry.get('type')=='attribute'):
-                #or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!='2'):
-                #if (entry.get('name')!='value') or (entry.get('type')!='attribute'):
-                    path += "."+entry.get('name')
-                    
-        elif entry.get('name')==None:
-            path = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource, skipNames,depth+1)
-        elif entry.tag=="component":
-            if entry.get("name")=="constant":
-                path= "\'" + entry.find("./data/constant").get("value") + "\'"
-            else:
-                #path = entry.get("library") +":"+ entry.get("name")+"["+entry.get("uid")+"]"
-                path = function.getVarName(entry.get("uid"))
-                if isSource:
-                    for inpkeyEntry in entry.findall(".//entry[@inpkey!='']"):
-                        parent = inpkeyEntry
-                        while (parent_map[parent].tag == 'entry'):
-                            parent = parent_map[parent]
-                        self.inpkeys[inpkeyEntry.get('inpkey')] = parent.get("name")
-                if len(self.inpkeys)>0:
-                    self.functionName = entry.get("name")
-                    self.functionLibrary = entry.get("library")
-                if self.isParameter:
-                    path = ""
-                    skipNames[0]=2
-                else:
-                    skipNames[0]=3
-        return path
     
     def getDescription(self):
         if self.constantValue=="":
@@ -867,7 +792,7 @@ class Function:
 def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks, functions):  
     fml_lines = []
     
-    if targetNode.name=="entry.resource.Composition.section.entry.reference":
+    if targetNode.name=="entry.resource.Composition.section.code.coding.system":
     #"entry.resource.Composition.section.code.coding.system": #entry.resource.Composition.subject":
     #"entry.resource.AllergyIntolerance.meta.lastUpdated":
     #'c3101.resource.ServiceRequest.identifier.value':
