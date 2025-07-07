@@ -52,6 +52,7 @@ class Node:
                 self.ns2entry[f"y{self.entry.get('pos')}"] = self.entry
                 return f"y{self.entry.get('pos')}"
         cur = self.entry
+        prevcur = cur 
         name = ""
         namesufixes2entry = dict()
         while  self.parent_map[cur].tag=='entry' and (self.parent_map[cur].get('ns')==None or self.parent_map[cur].get('ns')!=self.altovaNS):
@@ -64,9 +65,13 @@ class Node:
                 new_n2entry = dict()
                 for k,v in namesufixes2entry.items():
                     new_n2entry[cur.get('name')+"."+k]=v
-                new_n2entry[cur.get('name')]=cur
+                if cur.get('name') == 'resource':
+                    # název resource se ve FML namespace vynechává, ale entry by mělo ukazovat na daný vnořený mfd element, např. Observation
+                    new_n2entry[cur.get('name')]=prevcur
+                else:
+                    new_n2entry[cur.get('name')]=cur
                 namesufixes2entry = new_n2entry
-
+            prevcur = cur
             cur = self.parent_map[cur]
         if name!="":
             name="."+name
@@ -233,12 +238,14 @@ class Node:
             self.name = firstSource    
             
         
-    def getNamespace(self):
+    def getNamespace(self, removeLast = True):
         ns=name_mdf2fml(self.name)
         if ns.count(".")==0: 
             return ""
-        else:
+        elif removeLast:
             return ns.removesuffix("."+ns.split('.')[-1])
+        else:
+            return ns
         
     
     def getNamespaceEntry(self):
@@ -591,7 +598,7 @@ class FmlNamespace:
                     self.targetVarOfNamespace = newTargetVarOfNames
                 self.targetVarLevel.pop()
                         
-            if self.ruleNum==11:
+            if self.ruleNum==24:
                 print("debuguj!")
             self.ruleNum += 1
             fml_lines.append(self.indent+"} \"rule" + str(self.ruleNum) +"\";")
@@ -603,10 +610,13 @@ class FmlNamespace:
                 if self.sourceNamespaceEntry==None and self.sourceNamespace.count(".")>0:
                     print(f"ERROR: Missing source entry for {self.sourceNamespace}!!!!!!!!!")
                 while (self.sourceNamespaceEntry!=None and self.sourceNamespaceEntry.tag=='entry') and (self.sourceNamespace.split(".")[-1]!=self.sourceNamespaceEntry.get('name')) and self.sourceNamespaceEntry in sourceNode.parent_map:
+                    if self.sourceNamespace.split(".")[-1] == 'resource':
+                        # pro namespace končící na 'resource' drž entry vnořenou entry (např. 'Observation')
+                        break
                     self.sourceNamespaceEntry=sourceNode.parent_map[self.sourceNamespaceEntry]
                 if (self.sourceNamespaceEntry!=None and self.sourceNamespaceEntry.tag=='entry'):    
                     sn = Node(self.sourceNamespaceEntry,self.function,sourceNode.parent_map,sourceNode.blocks,True,sourceNode.isParameter,self.firstSource,sourceNode.isFunctionParameter,sourceNode.functionArg)
-                    if (sn.getNamespace()!=self.sourceNamespace):
+                    if (sn.getNamespace()!=self.sourceNamespace) and (name_mdf2fml(sn.name)!=self.sourceNamespace) and self.sourceNamespace.count(".")>0 and sn.componentVariableName=="":
                         print(f"?????????? exit source namespace failed {sn.getNamespace()}!={self.sourceNamespace}")
             else:
                 self.sourceNamespaceEntry = None
@@ -617,10 +627,13 @@ class FmlNamespace:
                 if self.targetNamespaceEntry==None and self.targetNamespace.count(".")>0:
                     print(f"ERROR: Missing targetentry for {self.targetNamespace}!!!!!!!!!")
                 while (self.targetNamespaceEntry!=None and self.targetNamespaceEntry.tag=='entry') and (self.targetNamespace.split(".")[-1]!=self.targetNamespaceEntry.get('name')) and self.targetNamespaceEntry in targetNode.parent_map:
+                    if self.targetNamespace.split(".")[-1] == 'resource':
+                        # pro namespace končící na 'resource' drž entry vnořenou entry (např. 'Observation')
+                        break
                     self.targetNamespaceEntry=targetNode.parent_map[self.targetNamespaceEntry]
                 if (self.targetNamespaceEntry!=None and self.targetNamespaceEntry.tag=='entry'):
                     tn = Node(self.targetNamespaceEntry,self.function,targetNode.parent_map,targetNode.blocks,True,targetNode.isParameter,self.firstSource,targetNode.isFunctionParameter,targetNode.functionArg)
-                    if (tn.getNamespace()!=self.targetNamespace):
+                    if (tn.getNamespace()!=self.targetNamespace) and (name_mdf2fml(tn.name)!=self.targetNamespace) and self.targetNamespace.count(".")>0 and tn.componentVariableName=="":
                         print(f"?????????? exit target namespace failed {tn.getNamespace()}!={self.targetNamespace}")
             else:
                 self.targetNamespaceEntry = None
@@ -710,6 +723,7 @@ class FmlNamespace:
         return "\n".join(fml_lines)            
 
     def generateRule(self, sourceNode, targetNode, valuemapUid=""):
+
         fml_lines = []
         
         sourceNamespace = sourceNode.getNamespace()
@@ -866,7 +880,7 @@ class Function:
 # sourceNode .. zdojový uzol (element nebo atribut)
 # targetNode .. cílový uzol (element nebo atribut)
 
-def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks, functions):  
+def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks, functions, generateRule = True):  
     fml_lines = []
     
     if targetNode.name=="entry.resource.Composition.section.code.coding.system":
@@ -927,7 +941,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
                     target = targetNode
                     fml.pathLevel[path+1] = fml.level
                     source = Node(outputNodes[graphinv[fromKey][0]],fml.function,parent_map,blocks,True,False,fml.firstSource,True,fromKeyArg)
-                    fml_lines.append(generate_fml_for_internal_component(fml,path+1,source,target,outputNodes,inputNodes,graphinv,parent_map,blocks,functions))
+                    fml_lines.append(generate_fml_for_internal_component(fml,path+1,source,target,outputNodes,inputNodes,graphinv,parent_map,blocks,functions,False))
                 else:
                     variableName = target.componentVariableName #target.name.split('.')[0]
                     variableType = target.componentType
@@ -942,9 +956,10 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
         ind="\t"*(path+1)
         fml_lines.append(f"{ind}// {sourceNode.name} {path}-> {targetNode.name}")                
         fml_lines.append(fml.generateFunctionCall(path,sourceNode,targetNode,functionResultName,functions))
-        fml_lines.append(fml.exitNamespace(functionStartPath,sourceNode,targetNode,True))
+        fml_lines.append(fml.exitNamespace(functionStartPath,sourceNode,targetNode,sourceNode.functionName!="concat"))
     else: 
-        fml_lines.append(fml.generateRule(sourceNode,targetNode))
+        if generateRule:
+            fml_lines.append(fml.generateRule(sourceNode,targetNode))   
         if sourceNode.isFunctionParameter:
             sourceNamespace = sourceNode.getNamespace()
             if sourceNamespace in fml.sourceVarOfNamespace:
