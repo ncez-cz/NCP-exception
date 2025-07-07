@@ -40,3 +40,6 @@
 [submodule "hl7-cz/lab-order"]
 	path = hl7-cz/lab-order
 	url = https://github.com/HL7-cz/lab-order.git
+[submodule "Dasta2FHIR/malac-hd"]
+	path = Dasta2FHIR/malac-hd
+	url = https://gitlab.com/cdehealth/malac-hd.git
