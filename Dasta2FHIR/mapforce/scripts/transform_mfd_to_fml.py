@@ -413,12 +413,14 @@ class FmlNamespace:
         self.isFunctionParameter=False
         self.functionParameters=dict()
 
-        self.firstSource = ""
+        self.firstSourceAtLevel = dict()
+        self.firstSourceAtLevel[0] = ""
+
         #inicialize namespace with function arguments as source/target variables
         for arg in function.arguments:
             if function.argumentPrefix[arg]=="source":
-                if self.firstSource == "":
-                    self.firstSource = arg
+                if self.firstSourceAtLevel[self.level] == "":
+                    self.firstSourceAtLevel[self.level] = arg
                 self.sourceNamespace = arg
                 self.sourceVars.append(arg)
                 self.sourceVarLevel.append(0)
@@ -483,9 +485,10 @@ class FmlNamespace:
        
             #vnoření
             self.level+=1
+            self.firstSourceAtLevel[self.level]=self.firstSourceAtLevel[self.level-1]
 
-            if sourceNamespace=="":
-                sourceString = sourceNode.name
+            if sourceNamespace=="" or sourceNode.constantValue != "":
+                sourceString = self.firstSourceAtLevel[self.level-1]
             elif sourceNamespace in self.sourceVarOfNamespace:
                 sourceString = self.sourceVarOfNamespace[sourceNamespace]
             elif sourceNode.isInside(self.sourceNamespace, targetNode.isLeaf):
@@ -615,7 +618,7 @@ class FmlNamespace:
                         break
                     self.sourceNamespaceEntry=sourceNode.parent_map[self.sourceNamespaceEntry]
                 if (self.sourceNamespaceEntry!=None and self.sourceNamespaceEntry.tag=='entry'):    
-                    sn = Node(self.sourceNamespaceEntry,self.function,sourceNode.parent_map,sourceNode.blocks,True,sourceNode.isParameter,self.firstSource,sourceNode.isFunctionParameter,sourceNode.functionArg)
+                    sn = Node(self.sourceNamespaceEntry,self.function,sourceNode.parent_map,sourceNode.blocks,True,sourceNode.isParameter,self.firstSourceAtLevel[self.level],sourceNode.isFunctionParameter,sourceNode.functionArg)
                     if (sn.getNamespace()!=self.sourceNamespace) and (name_mdf2fml(sn.name)!=self.sourceNamespace) and self.sourceNamespace.count(".")>0 and sn.componentVariableName=="":
                         print(f"?????????? exit source namespace failed {sn.getNamespace()}!={self.sourceNamespace}")
             else:
@@ -632,7 +635,7 @@ class FmlNamespace:
                         break
                     self.targetNamespaceEntry=targetNode.parent_map[self.targetNamespaceEntry]
                 if (self.targetNamespaceEntry!=None and self.targetNamespaceEntry.tag=='entry'):
-                    tn = Node(self.targetNamespaceEntry,self.function,targetNode.parent_map,targetNode.blocks,True,targetNode.isParameter,self.firstSource,targetNode.isFunctionParameter,targetNode.functionArg)
+                    tn = Node(self.targetNamespaceEntry,self.function,targetNode.parent_map,targetNode.blocks,True,targetNode.isParameter,self.firstSourceAtLevel[self.level],targetNode.isFunctionParameter,targetNode.functionArg)
                     if (tn.getNamespace()!=self.targetNamespace) and (name_mdf2fml(tn.name)!=self.targetNamespace) and self.targetNamespace.count(".")>0 and tn.componentVariableName=="":
                         print(f"?????????? exit target namespace failed {tn.getNamespace()}!={self.targetNamespace}")
             else:
@@ -644,7 +647,7 @@ class FmlNamespace:
     def generateVariable(self, sourceNode, variableName, VariableType):
         #if len(self.sourceVars)<=0:
         #    if sourceNode.constantValue!="":
-        sName = self.firstSource
+        sName = self.firstSourceAtLevel[self.level]
         #    else:
         #        sName = self.sourceName
         #elif (sourceNode.name==self.sourceName) or sourceNode.constantValue!="":
@@ -655,6 +658,7 @@ class FmlNamespace:
         #    sName="?"
         
         self.level+=1
+        self.firstSourceAtLevel[self.level]=self.firstSourceAtLevel[self.level-1]
         self.indent+="\t"
         self.targetNamespace = variableName
         self.targetVars.append(variableName)                            
@@ -691,7 +695,7 @@ class FmlNamespace:
                 sVarsByArg[arg] = param                          
             
         if sNames=="":
-            sNames = self.firstSource
+            sNames = self.firstSourceAtLevel[self.level]
         
         tName=functionResultName 
         
@@ -736,6 +740,8 @@ class FmlNamespace:
         
         if sourceNamespace in self.sourceVarOfNamespace:
             sName = self.sourceVarOfNamespace[sourceNamespace] + "." + sourceNode.getBaseName()
+        elif sourceNode.constantValue != "":
+            sName = self.firstSourceAtLevel[self.level]
         else: 
             sName = sourceNode.name
 
@@ -757,7 +763,8 @@ class FmlNamespace:
         elif sourceNode.isFunctionParameter:
             print(f"{sourceNode.name} is function parameter")
         else:
-            print(f"{sourceNode.name} is LEAF and {targetNode.name} is NODE")
+            self.firstSourceAtLevel[self.level] = sName
+            print(f"{sourceNode.name} is LEAF and {targetNode.name} is NODE => firstSource = {sName}")
                     
                 
         if (sourceNode.constantValue=="" and not sourceNode.getNamespace().startswith(self.sourceNamespace) and len(sourceNode.inpkeys)==0) and (sourceNode.getNamespace()!=""): 
@@ -883,6 +890,7 @@ class Function:
 def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Node,targetNode: Node, outputNodes, inputNodes, graphinv, parent_map, blocks, functions, generateRule = True):  
     fml_lines = []
     
+    #if sourceNode.name=="ku_o_labType.dodani":
     if targetNode.name=="entry.resource.Composition.section.code.coding.system":
     #"entry.resource.Composition.section.code.coding.system": #entry.resource.Composition.subject":
     #"entry.resource.AllergyIntolerance.meta.lastUpdated":
@@ -901,7 +909,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
       #preskoč speciální funkci
       source = sourceNode
       fromKey=next(iter(sourceNode.inpkeys.keys()))
-      sourceNode=Node(outputNodes[graphinv[fromKey][0]],fml.function,parent_map,blocks,True,False,fml.firstSource,False)
+      sourceNode=Node(outputNodes[graphinv[fromKey][0]],fml.function,parent_map,blocks,True,False,fml.firstSourceAtLevel[fml.level],False)
       sourceNode.valuemapUid = source.valuemapUid
     
     ind='\t'*(path+1)
@@ -912,7 +920,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
         firstNode=sourceNode
         while len(firstNode.inpkeys)>0:
             fromKey = next(iter(firstNode.inpkeys.keys()))
-            firstNode=Node(outputNodes[graphinv[fromKey][0]],fml.function,parent_map,blocks,True,False,fml.firstSource,True,firstNode.inpkeys[fromKey])
+            firstNode=Node(outputNodes[graphinv[fromKey][0]],fml.function,parent_map,blocks,True,False,fml.firstSourceAtLevel[fml.level],True,firstNode.inpkeys[fromKey])
         fml_lines.append(fml.enterNamespace(firstNode,targetNode))
         #if targetNode.getNamespace() in fml.targetVarOfName:
         if targetNode.getNamespace() == "":
@@ -932,7 +940,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
             if graphinv[fromKey][0] in outputNodes.keys():  
                 
                 
-                target=Node(inputNodes[fromKey],fml.function,parent_map,blocks,False,True,fml.firstSource,False)
+                target=Node(inputNodes[fromKey],fml.function,parent_map,blocks,False,True,fml.firstSourceAtLevel[fml.level],False)
                 
 
 
@@ -940,7 +948,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
                     # není potřeba vytvářet novou proměnnou pomocí create(), stačí ji poslat jako parameter funkce odkazem
                     target = targetNode
                     fml.pathLevel[path+1] = fml.level
-                    source = Node(outputNodes[graphinv[fromKey][0]],fml.function,parent_map,blocks,True,False,fml.firstSource,True,fromKeyArg)
+                    source = Node(outputNodes[graphinv[fromKey][0]],fml.function,parent_map,blocks,True,False,fml.firstSourceAtLevel[fml.level],True,fromKeyArg)
                     fml_lines.append(generate_fml_for_internal_component(fml,path+1,source,target,outputNodes,inputNodes,graphinv,parent_map,blocks,functions,False))
                 else:
                     variableName = target.componentVariableName #target.name.split('.')[0]
@@ -949,7 +957,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
                         fml_lines.append(fml.generateVariable(sourceNode,variableName,variableType))    
                         fml.functionParameters[path][fromKeyArg]=variableName
                         fml.pathLevel[path+1] = fml.level
-                    source = Node(outputNodes[graphinv[fromKey][0]],fml.function,parent_map,blocks,True,False,fml.firstSource,False)
+                    source = Node(outputNodes[graphinv[fromKey][0]],fml.function,parent_map,blocks,True,False,fml.firstSourceAtLevel[fml.level],False)
                     #(target.name == target.componentVariableName) and ((path+1) in fml.pathLevel) and fml.pathLevel[path+1] == fml.level)        
                     fml_lines.append(generate_fml_for_internal_component(fml,path+1,source,target,outputNodes,inputNodes,graphinv,parent_map,blocks,functions))
     if len(sourceNode.inpkeys)>0:
@@ -1006,7 +1014,7 @@ def generate_fml_for_component(component_library,component_name,component,blocks
     for inpkey in inputNodes.keys():
        
         if inpkey in graphinv.keys():
-            targetNode=Node(inputNodes[inpkey],fml.function,parent_map,blocks,False,False,fml.firstSource,False)
+            targetNode=Node(inputNodes[inpkey],fml.function,parent_map,blocks,False,False,fml.firstSourceAtLevel[fml.level],False)
             #Node(getComplexPath(inputNodes[inpkey],parent_map,inputNodes,graph))
             if targetNode.isInvalid or (not function.isTarget(targetNode.name.split('.')[0])):
                 #and targetNode.componentVariableName==""):
@@ -1014,7 +1022,7 @@ def generate_fml_for_component(component_library,component_name,component,blocks
             
             for outkey in graphinv[inpkey]:
                 if outkey in outputNodes.keys():
-                    sourceNode=Node(outputNodes[outkey],fml.function,parent_map,blocks,True,False,fml.firstSource,False)
+                    sourceNode=Node(outputNodes[outkey],fml.function,parent_map,blocks,True,False,fml.firstSourceAtLevel[fml.level],False)
                     if sourceNode.name in function.variables:
                         sourceNode.isVariable = True
                     fml_lines.append(generate_fml_for_internal_component(fml,0,sourceNode,targetNode, outputNodes, inputNodes, graphinv, parent_map, blocks, functions))
