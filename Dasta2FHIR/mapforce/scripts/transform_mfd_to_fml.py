@@ -165,7 +165,8 @@ class Node:
         if componentid != None:
             cid = f"{self.component.get('library')}:{self.component.get('name')}:{componentid}"
             if cid not in blocks:
-                print(f"ERROR: block {cid} is missing")
+                if self.component.get('name')!='fixDate':
+                    print(f"ERROR: block {cid} is missing")
                 for inpkeyEntry in self.component.findall(".//entry[@inpkey!='']"):
                     self.inpkeys[inpkeyEntry.get('inpkey')] = inpkeyEntry.get('name')
                 for s in self.component.findall("./sources/datapoint"):
@@ -480,37 +481,13 @@ class FmlNamespace:
             self.targetNamespace = targetBestKnowNamespace
             
 
-        while ( ((sourceNamespace != "") and (sourceNamespace not in self.sourceVarOfNamespace) and sourceNode.isInside(self.sourceNamespace, targetNode.isLeaf)) 
-              or ((targetNamespace != "") and (targetNamespace not in self.targetVarOfNamespace) and (targetNode.isInside(self.targetNamespace,False))) ):
+        while (targetNamespace != "") and (targetNamespace not in self.targetVarOfNamespace) and (targetNode.isInside(self.targetNamespace,False)) :
        
             #vnoření
             self.level+=1
             self.firstSourceAtLevel[self.level]=self.firstSourceAtLevel[self.level-1]
 
-            if sourceNamespace=="" or sourceNode.constantValue != "":
-                sourceString = self.firstSourceAtLevel[self.level-1]
-            elif sourceNamespace in self.sourceVarOfNamespace:
-                sourceString = self.sourceVarOfNamespace[sourceNamespace]
-            elif sourceNode.isInside(self.sourceNamespace, targetNode.isLeaf):
-                    #vnoření zdroje
-                    nextSourcePathElement = sourceNode.getNextNamespaceElement(self.sourceNamespace) 
-                    self.sourceNamespaceEntry = sourceNode.getNextNamespaceEntry(self.sourceNamespace)
-                    if self.sourceNamespace not in self.sourceVarOfNamespace:
-                        sourceString = self.sourceNamespace + "." + nextSourcePathElement
-                    else:
-                        sourceString = self.sourceVarOfNamespace[self.sourceNamespace] + "." + nextSourcePathElement
-                    variableName = "s"+str(len(self.sourceVars))
-                    sourceString += " as " + variableName
-                    self.sourceNamespace+="."+nextSourcePathElement
-                    self.sourceVars.append(variableName)   
-                    self.sourceVarLevel.append(self.level)    
-                    self.sourceVarOfNamespace[self.sourceNamespace] = variableName                      
-            else:
-                sourceString = sourceBestKnowNamespace
-                #self.firstSource 
-                print(f"Warnning: Source {sourceNode.name} cannot enter namespace!")
-                #sourceNode.name
-                         
+            sourceString = self.firstSourceAtLevel[self.level-1]
 
             if targetNamespace=="":
                 targetString = targetNode.name
@@ -550,6 +527,50 @@ class FmlNamespace:
             self.targetNamespaceEntryAtLevel[self.level] = self.targetNamespaceEntry
             fml_lines.append(self.indent+f"{sourceString} -> {targetString} then " + "{")   
         
+        if targetNamespace=="":
+                targetString = targetNode.name
+        elif targetNamespace in self.targetVarOfNamespace:
+                targetString = self.targetVarOfNamespace[targetNamespace]
+        else:
+                targetString = targetNamespace
+        
+        while (sourceNamespace != "") and (sourceNamespace not in self.sourceVarOfNamespace) and sourceNode.isInside(self.sourceNamespace, targetNode.isLeaf):
+       
+            #vnoření
+            self.level+=1
+            self.firstSourceAtLevel[self.level]=self.firstSourceAtLevel[self.level-1]
+
+            if sourceNamespace=="" or sourceNode.constantValue != "":
+                sourceString = self.firstSourceAtLevel[self.level-1]
+            elif sourceNamespace in self.sourceVarOfNamespace:
+                sourceString = self.sourceVarOfNamespace[sourceNamespace]
+            elif sourceNode.isInside(self.sourceNamespace, targetNode.isLeaf):
+                    #vnoření zdroje
+                    nextSourcePathElement = sourceNode.getNextNamespaceElement(self.sourceNamespace) 
+                    self.sourceNamespaceEntry = sourceNode.getNextNamespaceEntry(self.sourceNamespace)
+                    if self.sourceNamespace not in self.sourceVarOfNamespace:
+                        sourceString = self.sourceNamespace + "." + nextSourcePathElement
+                    else:
+                        sourceString = self.sourceVarOfNamespace[self.sourceNamespace] + "." + nextSourcePathElement
+                    variableName = "s"+str(len(self.sourceVars))
+                    sourceString += " as " + variableName
+                    self.sourceNamespace+="."+nextSourcePathElement
+                    self.sourceVars.append(variableName)   
+                    self.sourceVarLevel.append(self.level)    
+                    self.sourceVarOfNamespace[self.sourceNamespace] = variableName                      
+            else:
+                sourceString = sourceBestKnowNamespace
+                #self.firstSource 
+                print(f"Warnning: Source {sourceNode.name} cannot enter namespace!")
+                #sourceNode.name
+                                   
+            self.indent+="\t"
+            self.sourceNamespaceAtLevel[self.level] = self.sourceNamespace
+            self.sourceNamespaceEntryAtLevel[self.level] = self.sourceNamespaceEntry
+            self.targetNamespaceAtLevel[self.level] = self.targetNamespace
+            self.targetNamespaceEntryAtLevel[self.level] = self.targetNamespaceEntry
+            fml_lines.append(self.indent+f"{sourceString} -> {targetString} then " + "{")   
+        
         if sourceNode.getNamespace()==self.sourceNamespace or sourceNamespace=="":
             self.sourceNamespaceEntry = sourceNamespaceEntry
         elif sourceNode.getNamespace().startswith(self.sourceNamespace+".") and sourceNode.getNamespace().count(".")==self.sourceNamespace.count(".")+1:
@@ -572,7 +593,9 @@ class FmlNamespace:
     def exitNamespace(self, path, sourceNode=None, targetNode=None, force = False):
         fml_lines=[]
 
-        while ( self.level>self.pathLevel[path] and (force or (targetNode==None or targetNode.isOutsideByEntry(self.targetNamespace,self.targetNamespaceEntry)))):
+        if (sourceNode!=None and sourceNode.constantValue=="" and self.sourceNamespace!="" and sourceNode.isOutside(self.sourceNamespace) and (self.sourceNamespace.count('.')>0)):
+            print("co to je?")
+        while ( self.level>self.pathLevel[path] and (force or (targetNode==None or targetNode.isOutsideByEntry(self.targetNamespace,self.targetNamespaceEntry)) or (sourceNode.constantValue=="" and self.sourceNamespace!="" and sourceNode.isOutside(self.sourceNamespace) and (self.sourceNamespace.count('.')>0)))):
                             #or targetNode.isOutside(targetPath) ):
             #if targetNode!=None and targetNode.name == "c2683.resource.AllergyIntolerance.clinicalStatus.coding":
             #    print("?")
@@ -601,8 +624,7 @@ class FmlNamespace:
                     self.targetVarOfNamespace = newTargetVarOfNames
                 self.targetVarLevel.pop()
                         
-            if self.ruleNum==24:
-                print("debuguj!")
+            
             self.ruleNum += 1
             fml_lines.append(self.indent+"} \"rule" + str(self.ruleNum) +"\";")
             self.indent = self.indent[:len(self.indent)-1]
@@ -764,7 +786,7 @@ class FmlNamespace:
             print(f"{sourceNode.name} is function parameter")
         else:
             self.firstSourceAtLevel[self.level] = sName
-            print(f"{sourceNode.name} is LEAF and {targetNode.name} is NODE => firstSource = {sName}")
+            # print(f"{sourceNode.name} is LEAF and {targetNode.name} is NODE => firstSource = {sName}")
                     
                 
         if (sourceNode.constantValue=="" and not sourceNode.getNamespace().startswith(self.sourceNamespace) and len(sourceNode.inpkeys)==0) and (sourceNode.getNamespace()!=""): 
@@ -891,7 +913,8 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
     fml_lines = []
     
     #if sourceNode.name=="ku_o_labType.dodani":
-    if targetNode.name=="entry.resource.Composition.section.code.coding.system":
+    if sourceNode.name=="ku_o_labType.lopk.guid":
+    #if targetNode.name=="entry.resource.Composition.section.code.coding.system":
     #"entry.resource.Composition.section.code.coding.system": #entry.resource.Composition.subject":
     #"entry.resource.AllergyIntolerance.meta.lastUpdated":
     #'c3101.resource.ServiceRequest.identifier.value':
