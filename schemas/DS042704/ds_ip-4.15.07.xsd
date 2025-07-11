@@ -2054,6 +2054,7 @@
         <xs:attribute name="typ_znac" type="dsCis:LOTOZ" use="required" />
         <xs:attribute name="id_loi_is" type="dsComm:str15" use="required" />
         <xs:attribute name="odber_mist" type="dsComm:str55" />
+	<xs:attribute name="lokal_mo" type="dsComm:str55" />
         <xs:attribute name="typ_obalu" type="dsComm:str8" use="required" />
         <xs:attribute name="poc_obalu" type="dsComm:number1d" default="1" />
         <xs:attribute name="material" type="dsComm:str8" use="required" />

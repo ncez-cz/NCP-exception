@@ -301,12 +301,19 @@ def generate_uses():
        # "uses \"http://hl7.eu/fhir/base/StructureDefinition/organization-eu\" alias Organization as target",
        # "uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target"
         "uses \"https://dasta.mzcr.cz/model/StructureDefinition/ip\" alias ip as source",
-        "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/BundleLabOrderCz\" alias Bundle as target",
-        "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/serviceRequestCz\" alias ServiceRequest as target",
-        "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/specimenCz\" alias Specimen as target"
-
+       # "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/BundleLabOrderCz\" alias Bundle as target",
+       # "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/serviceRequestCz\" alias ServiceRequest as target",
+       # "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/specimenCz\" alias Specimen as target"
         #"uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target",
         #"uses \"http://hl7.eu/fhir/eps/StructureDefinition/allergyIntolerance-eu-eps\" alias AllergyIntolerance as target"
+        "uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab\" alias Bundle as target",
+        "uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab\" alias Composition as target",
+        "uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab\" alias Observation as target",
+        "uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab\" alias Specimen as target",
+        "uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab\" alias DiagnosticReport as target",
+        "uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/BodyStructure-eu-lab\" alias BobyStructure as target",
+        "uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab\" alias ServiceRequest as target",
+        "uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Substance-additive-eu-lab\" alias Substance as target"
 
     ])
 
@@ -913,8 +920,8 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
     fml_lines = []
     
     #if sourceNode.name=="ku_o_labType.dodani":
-    if sourceNode.name=="ku_o_labType.lopk.guid":
-    #if targetNode.name=="entry.resource.Composition.section.code.coding.system":
+    #if sourceNode.name=="ku_o_labType.lopk.guid":
+    if targetNode.name=="entry.resource.Composition.section.entry":
     #"entry.resource.Composition.section.code.coding.system": #entry.resource.Composition.subject":
     #"entry.resource.AllergyIntolerance.meta.lastUpdated":
     #'c3101.resource.ServiceRequest.identifier.value':
@@ -1045,6 +1052,8 @@ def generate_fml_for_component(component_library,component_name,component,blocks
             
             for outkey in graphinv[inpkey]:
                 if outkey in outputNodes.keys():
+                    if outkey=="161":
+                        print("161")
                     sourceNode=Node(outputNodes[outkey],fml.function,parent_map,blocks,True,False,fml.firstSourceAtLevel[fml.level],False)
                     if sourceNode.name in function.variables:
                         sourceNode.isVariable = True
@@ -1079,10 +1088,12 @@ def main():
         #output_file = '.\\mapforce\\output\\ip_ua.map'
         #mfd_file = '.\\mapforce\\final\\ua - Allergyintolerance.mfd'
         #output_file = '.\\mapforce\\output\\ua - Allergyintolerance.map'
-        mfd_file = '.\\mapforce\\final\\laboratoryOrder.mfd'
-        output_file = '.\\mapforce\\output\\laboratoryOrder.map'
+        #mfd_file = '.\\mapforce\\final\\laboratoryOrder.mfd'
+        #output_file = '.\\mapforce\\output\\laboratoryOrder.map'
         #mfd_file = '.\\mapforce\\final\\patsum.mfd'
         #output_file = '.\\mapforce\\output\\patsum.map'
+        mfd_file = '.\\mapforce\\final\\laboratory.mfd'
+        output_file = '.\\mapforce\\output\\laboratory.map'
         
     else:
         mfd_file = sys.argv[1]
@@ -1094,11 +1105,11 @@ def main():
     functions = dict()
     findComponents(root, blocks, functions)
     
-    map_name = "laboratoryOrder"
+    map_name = "laboratory"
     with open(output_file, 'w', encoding="utf-8") as f:
         f.write(f"/// url = 'https://ncez.mzcr.cz/model/StructureMap/{map_name}'\n")
-        f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR HL7-CZ https://build.fhir.org/ig/hl7-cz/ (June 2025)'\n")
-        #f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR HL7-EU https://build.fhir.org/ig/hl7-eu/ (June 2025)'\n")
+        #f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR HL7-CZ https://build.fhir.org/ig/hl7-cz/ (June 2025)'\n")
+        f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR HL7-EU https://build.fhir.org/ig/hl7-eu/ (June 2025)'\n")
         f.write(f"/// title = 'Mapování {map_name}'\n")
         tr = str.maketrans("\\","/")
         f.write(f"/// descrition = 'This file is generated from MapForge file {mfd_file.translate(tr)}'\n")

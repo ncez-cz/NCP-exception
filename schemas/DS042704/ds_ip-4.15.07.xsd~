@@ -3576,14 +3576,36 @@
     <!-- ku_z_propz_prubh_s  -->
     <xs:complexType name="ku_z_propz_prubh_sType">
         <xs:sequence>
-	    <xs:element name="ks_popis" type="xs:string">
+	    <xs:element name="ks_popis">
 		<xs:complexType>
-                    <xs:attribute name="guid" type="dsComm:guidType"/>
-                    <xs:attribute name="vguid" type="dsComm:guidType"/>
+                    <xs:simpleContent>
+		        <xs:extension base="xs:string">
+			    <xs:attribute name="guid" type="dsComm:guidType"/>
+                            <xs:attribute name="vguid" type="dsComm:guidType"/>
+			</xs:extension>
+		    </xs:simpleContent>	
   	        </xs:complexType>
 	    </xs:element>
-            <xs:element name="ks_duv_prub_h" type="xs:string" />
-            <xs:element name="ks_klin_uvaha" type="xs:string" minOccurs="0" />
+            <xs:element name="ks_duv_prub_h">
+		<xs:complexType>
+                    <xs:simpleContent>
+		        <xs:extension base="xs:string">
+			    <xs:attribute name="guid" type="dsComm:guidType"/>
+                            <xs:attribute name="vguid" type="dsComm:guidType"/>
+			</xs:extension>
+		    </xs:simpleContent>	
+  	        </xs:complexType>
+	    </xs:element>
+            <xs:element name="ks_klin_uvaha" minOccurs="0">
+		<xs:complexType>
+                    <xs:simpleContent>
+		        <xs:extension base="xs:string">
+			    <xs:attribute name="guid" type="dsComm:guidType"/>
+                            <xs:attribute name="vguid" type="dsComm:guidType"/>
+			</xs:extension>
+		    </xs:simpleContent>	
+  	        </xs:complexType>
+	    </xs:element>
     	</xs:sequence>
 	<xs:attribute name="guid" type="dsComm:guidType"/>
 	<xs:attribute name="vguid" type="dsComm:guidType"/>
