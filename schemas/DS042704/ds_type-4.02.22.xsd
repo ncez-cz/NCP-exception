@@ -1199,7 +1199,9 @@
     </xs:simpleType>
     <xs:complexType name="prilohaType">
         <xs:simpleContent>
-            <xs:extension base="dsComm:str255">
+  	    <xs:extension base="dsComm:str255">
+		<xs:attribute name="guid" type="dsComm:guidType"/>
+	        <xs:attribute name="vguid" type="dsComm:guidType"/>
                 <xs:attribute name="zdroj" type="dsComm:str255" use="required" />
                 <xs:attribute name="typ" type="dsComm:str64" />
             </xs:extension>
