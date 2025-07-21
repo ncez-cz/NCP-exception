@@ -1,0 +1,3320 @@
+/// url = 'https://ncez.mzcr.cz/model/StructureMap/laboratory'
+/// name = 'Mapování laboratory z DASTA 4 do FHIR HL7-EU https://build.fhir.org/ig/hl7-eu/ (June 2025)'
+/// title = 'Mapování laboratory'
+/// descrition = 'This file is generated from MapForge file ./mapforce/final/laboratory.mfd by marek@matfyz.cz'
+
+uses "https://dasta.mzcr.cz/model/StructureDefinition/dasta" alias dasta as source
+uses "https://dasta.mzcr.cz/model/StructureDefinition/ip" alias ip as source
+uses "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab" alias Bundle as target
+uses "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab" alias Composition as target
+uses "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" alias Observation as target
+uses "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab" alias Specimen as target
+uses "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab" alias DiagnosticReport as target
+uses "http://hl7.eu/fhir/laboratory/StructureDefinition/BodyStructure-eu-lab" alias BobyStructure as target
+uses "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab" alias ServiceRequest as target
+uses "http://hl7.eu/fhir/laboratory/StructureDefinition/Substance-additive-eu-lab" alias Substance as target
+
+conceptmap "cm3232" {
+  prefix s ="https://provisio.cz/dasta/3232"
+  prefix t ="https://provisio.cz/fhir/3232"
+
+  s:"R" == t:"ad"
+  s:"M" == t:"<"
+  s:"V" == t:">"
+}
+
+conceptmap "cm3189" {
+  prefix s ="https://provisio.cz/dasta/3189"
+  prefix t ="https://provisio.cz/fhir/3189"
+
+  s:"R" == t:"ad"
+  s:"M" == t:"<"
+  s:"V" == t:">"
+}
+
+conceptmap "cm3373" {
+  prefix s ="https://provisio.cz/dasta/3373"
+  prefix t ="https://provisio.cz/fhir/3373"
+
+  s:"A" == t:"Náhradní výsledek je zasílán"
+  s:"N" == t:"Náhradní výsledek se nezasílá (je posílán plnohodnotný výsledek)"
+}
+
+conceptmap "cm3375" {
+  prefix s ="https://provisio.cz/dasta/3375"
+  prefix t ="https://provisio.cz/fhir/3375"
+
+  s:"E" == t:"hlášení extrémní hodnoty (vysoké nebo nízké)"
+  s:"R" == t:"hlášení extrémní změny (nárůst nebo pokles)"
+  s:"Z" == t:"hlášení extrémní hodnoty a změny"
+  s:"P" == t:"hlášení jiné pozoruhodné (podezřelé) hodnoty"
+  s:"N" == t:"není hlášena extrémní ani pozoruhodná hodnota (neobjevena nebo netestováno)"
+}
+
+conceptmap "cm3377" {
+  prefix s ="https://provisio.cz/dasta/3377"
+  prefix t ="https://provisio.cz/fhir/3377"
+
+  s:"V" == t:"informace zpracovaná v režimu „vitální indikace“"
+  s:"S" == t:"informace zpracovaná v režimu „statim“"
+  s:"R" == t:"běžná rutinní informace"
+  s:"K" == t:"rutina i statim"
+  s:"P" == t:"přednostní zpracování"
+}
+
+conceptmap "cm3379" {
+  prefix s ="https://provisio.cz/dasta/3379"
+  prefix t ="https://provisio.cz/fhir/3379"
+
+  s:"F" == t:"Položka vázána na funkční test, běžně nezobrazovat"
+  s:"Z" == t:"Položka vázána na funkční test, běžně zobrazovat "
+  s:"N" == t:"Položka není vázána na funkční test"
+}
+
+conceptmap "cm3380" {
+  prefix s ="https://provisio.cz/dasta/3380"
+  prefix t ="https://provisio.cz/fhir/3380"
+
+  s:"0" == t:"netestováno"
+  s:"1" == t:"testováno, je v povolených mezích (respektuje povolený výčet)"
+  s:"2" == t:"testováno, ale některé položky jsou mimo meze (nejsou ve výčtu)"
+}
+
+conceptmap "cm3383" {
+  prefix s ="https://provisio.cz/dasta/3383"
+  prefix t ="https://provisio.cz/fhir/3383"
+
+  s:"A" == t:"Důvěrné"
+  s:"N" == t:"Není důvěrné"
+}
+
+conceptmap "cm3225" {
+  prefix s ="https://provisio.cz/dasta/3225"
+  prefix t ="https://provisio.cz/fhir/3225"
+
+  s:"N" == t:"true"
+  s:"L" == t:"false"
+}
+
+conceptmap "cm3261" {
+  prefix s ="https://provisio.cz/dasta/3261"
+  prefix t ="https://provisio.cz/fhir/3261"
+
+  s:"N" == t:"Neuveden"
+  s:"A" == t:"Automaticky"
+  s:"R" == t:"Ručně"
+  s:"O" == t:"Automaticky a Ručně"
+}
+
+conceptmap "cm3260" {
+  prefix s ="https://provisio.cz/dasta/3260"
+  prefix t ="https://provisio.cz/fhir/3260"
+
+  s:"L" == t:"v rámci LIS laboratoře"
+  s:"A" == t:"mimo LIS laboratoře a mimo IS příjemce"
+  s:"P" == t:"v rámci IS příjemce"
+}
+
+conceptmap "cm3262" {
+  prefix s ="https://provisio.cz/dasta/3262"
+  prefix t ="https://provisio.cz/fhir/3262"
+
+  s:"N" == t:"Autorizováno"
+  s:"A" == t:"Neautorizováno"
+}
+
+conceptmap "cm3274" {
+  prefix s ="https://provisio.cz/dasta/3274"
+  prefix t ="https://provisio.cz/fhir/3274"
+
+  s:"N" == t:"Autorizováno"
+  s:"A" == t:"Neautorizováno"
+}
+
+conceptmap "cm3588" {
+  prefix s ="https://provisio.cz/dasta/3588"
+  prefix t ="https://provisio.cz/fhir/3588"
+
+  s:"KONTAMIN" == t:"Kontaminováno"
+  s:"NEVHODBE" == t:"Nevhodný způsob odběru"
+  s:"NEVHTRME" == t:"Nevhodné transportní médium"
+}
+
+conceptmap "cm3334" {
+  prefix s ="https://provisio.cz/dasta/3334"
+  prefix t ="https://provisio.cz/fhir/3334"
+
+  s:"N" == t:"negativní"
+  s:"S" == t:"sterilní"
+  s:"B" == t:"běžná flora"
+  s:"A" == t:"sdělení agens"
+}
+
+conceptmap "cm3597" {
+  prefix s ="https://provisio.cz/dasta/3597"
+  prefix t ="https://provisio.cz/fhir/3597"
+
+  s:"0" == t:"nevýznamný"
+  s:"1" == t:"suspektní"
+  s:"2" == t:"významný"
+}
+
+conceptmap "cm3356" {
+  prefix s ="https://provisio.cz/dasta/3356"
+  prefix t ="https://provisio.cz/fhir/3356"
+
+  s:"Base64" == t:"true"
+  s:"NONE" == t:"false"
+}
+
+conceptmap "cm3570" {
+  prefix s ="https://provisio.cz/dasta/3570"
+  prefix t ="https://provisio.cz/fhir/3570"
+
+  s:"A" == t:"Ano"
+  s:"N" == t:"Ne"
+}
+
+conceptmap "cm3573" {
+  prefix s ="https://provisio.cz/dasta/3573"
+  prefix t ="https://provisio.cz/fhir/3573"
+
+  s:"A" == t:"Ano"
+  s:"N" == t:"Ne"
+}
+
+conceptmap "cm3578" {
+  prefix s ="https://provisio.cz/dasta/3578"
+  prefix t ="https://provisio.cz/fhir/3578"
+
+  s:"A" == t:"Ano"
+  s:"N" == t:"Ne"
+}
+
+conceptmap "cm3532" {
+  prefix s ="https://provisio.cz/dasta/3532"
+  prefix t ="https://provisio.cz/fhir/3532"
+
+  s:"N" == t:"agens nebude dále vyšetřováno"
+  s:"A" == t:"agens bude dále vyšetřováno"
+  s:"R" == t:"agens bude dále vyšetřováno"
+  s:"D" == t:"vyšetření agens dokončeno"
+}
+
+conceptmap "cm3541" {
+  prefix s ="https://provisio.cz/dasta/3541"
+  prefix t ="https://provisio.cz/fhir/3541"
+
+  s:"R" == t:"equal"
+  s:"M" == t:"less-than"
+  s:"V" == t:"greater-than"
+}
+
+conceptmap "cm3534" {
+  prefix s ="https://provisio.cz/dasta/3534"
+  prefix t ="https://provisio.cz/fhir/3534"
+
+  s:"S" == t:"sterilní"
+  s:"N" == t:"negativní"
+  s:"O" == t:"přítomno ojediněle"
+  s:"1" == t:"x"
+  s:"2" == t:"xx"
+  s:"3" == t:"xxx"
+  s:"P" == t:"přítomno"
+  s:"M" == t:"přítomno masivně"
+}
+
+conceptmap "cm3586" {
+  prefix s ="https://provisio.cz/dasta/3586"
+  prefix t ="https://provisio.cz/fhir/3586"
+
+  s:"0" == t:"nevýznamný"
+  s:"1" == t:"suspektní"
+  s:"2" == t:"významný"
+}
+
+conceptmap "cm3575" {
+  prefix s ="https://provisio.cz/dasta/3575"
+  prefix t ="https://provisio.cz/fhir/3575"
+
+  s:"A" == t:"Ano"
+  s:"N" == t:"Ne"
+}
+
+conceptmap "cm3576" {
+  prefix s ="https://provisio.cz/dasta/3576"
+  prefix t ="https://provisio.cz/fhir/3576"
+
+  s:"A" == t:"Ano"
+  s:"N" == t:"Ne"
+}
+
+conceptmap "cm3555" {
+  prefix s ="https://provisio.cz/dasta/3555"
+  prefix t ="https://provisio.cz/fhir/3555"
+
+  s:"C" == t:"citlivý"
+  s:"I" == t:"citlivý při zvýšené expozici"
+  s:"R" == t:"rezistentní"
+  s:"N" == t:"netestováno"
+  s:"X" == t:"druhově specifický breakpoint nedefinován  "
+  s:"L" == t:"výsledek testu k dispozici pouze v laboratoři"
+  s:"K" == t:"kontaminováno"
+}
+
+conceptmap "cm3556" {
+  prefix s ="https://provisio.cz/dasta/3556"
+  prefix t ="https://provisio.cz/fhir/3556"
+
+  s:"R" == t:"equal"
+  s:"M" == t:"less-than"
+  s:"V" == t:"greater-than"
+}
+
+conceptmap "cm3548" {
+  prefix s ="https://provisio.cz/dasta/3548"
+  prefix t ="https://provisio.cz/fhir/3548"
+
+  s:"P" == t:"přítomna"
+  s:"N" == t:"nepřítomna"
+  s:"X" == t:"nelze hodnotit"
+}
+
+conceptmap "cm3632" {
+  prefix s ="https://provisio.cz/dasta/3632"
+  prefix t ="https://provisio.cz/fhir/3632"
+
+  s:"KONTAMIN" == t:"Kontaminováno"
+  s:"NEVHODBE" == t:"Nevhodný způsob odběru"
+  s:"NEVHTRME" == t:"Nevhodné transportní médium"
+}
+
+conceptmap "cm3634" {
+  prefix s ="https://provisio.cz/dasta/3634"
+  prefix t ="https://provisio.cz/fhir/3634"
+
+  s:"R" == t:"R = rozpracováno, výsledek dosud není"
+  s:"D" == t:"D = rozpracováno, sděluje se pouze dílčí výsledek"
+  s:"P" == t:"P = rozpracováno, sdělují se předběžné výsledky"
+  s:"N" == t:"N = dokončeno, ale dosud neautorizováno"
+  s:"A" == t:"A = dokončeno a autorizováno"
+}
+
+conceptmap "cm3735" {
+  prefix s ="https://provisio.cz/dasta/3735"
+  prefix t ="https://provisio.cz/fhir/3735"
+
+}
+
+
+
+group defaultmap(source ds: dasta, target bundle: Bundle){
+	// 'message' 0-> bundle.type
+
+
+		ds -> bundle.type = 'message' "rule1";
+	// c3729.entry.txt 0-> bundle.entry
+
+
+		ds -> create('Reference') as patientReference then {
+		// 'official' 1-> patientReference.identifier.use
+
+			ds -> patientReference.identifier as t2 then {
+				ds -> t2.use = 'official' "rule2";
+		// 'https://ncez.mzcr.cz/fhir/sid/cpoj' 1-> patientReference.identifier.system
+
+
+				ds -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/cpoj' "rule3";
+		// ds.is.ip.id_pac 1-> patientReference.identifier.value
+
+				ds.is as s1 -> t2 then {
+					s1.ip as ip -> t2 then {
+						ip.id_pac as x -> t2.value = x "rule4";
+						ip.ku as ku -> bundle then {
+		// ds.is.ip.ku 1-> ku_Type.ku
+
+
+							ds -> bundle.entry as entry then {
+		// c3146.entry 1-> entry.entry
+
+
+			// 'official' 2-> patientReference.identifier.use
+
+
+								ds -> t2.use = 'official' "rule6";
+			// 'https://ncez.mzcr.cz/fhir/sid/cpoj' 2-> patientReference.identifier.system
+
+
+								ds -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/cpoj' "rule7";
+			// ds.is.ip.id_pac 2-> patientReference.identifier.value
+
+
+								ip.id_pac as x -> t2.value = x "rule8";
+			// ds.is.ip.ku.ku_z.ku_z_lab 2-> entry.entry
+
+								
+								ds -> create('Reference') as authorReference then {
+		// ds.is.ip.ku.ku_z.ku_z_lab.autor.txt 1-> authorReference.identifier.value
+
+									ds -> authorReference.identifier as t6 then {
+										
+											ku.ku_z as s4 -> t6 then {
+												s4.ku_z_lab as ku_z_lab -> entry.resource = create('Composition') as composition then {
+												  
+												  ku_z_lab -> composition.section as compositionObservationSection then {
+													ku_z_lab.autor as s6 -> t6 then {
+														s6.txt as x -> t6.value = x "rule12";
+	// c3729.entry.txt 0-> bundle.entry														
+													} "rule14";
+													ds -> bundle then Composition_Lab(patientReference,authorReference,ip,composition,compositionObservationSection,bundle) "rule13";
+													ku_z_lab -> bundle then ku_z_lab(patientReference,ku_z_lab,compositionObservationSection,bundle) "rule9";
+												  } "opraseni aby to chodilo";
+												  
+												} "rule15";
+											} "rule16";
+										
+									} "rule18";
+								} "rule19";
+							} "rule20";
+						} "rule21";
+					} "rule22";
+				} "rule23";
+			} "rule24";
+		} "rule25";
+	// c3146.entry 0-> bundle.entry
+
+
+		ds -> create('Reference') as patientReference then {
+		// 'official' 1-> patientReference.identifier.use
+
+			ds -> patientReference.identifier as t2 then {
+				ds -> t2.use = 'official' "rule26";
+		// 'https://ncez.mzcr.cz/fhir/sid/cpoj' 1-> patientReference.identifier.system
+
+
+				ds -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/cpoj' "rule27";
+		// ds.is.ip.id_pac 1-> patientReference.identifier.value
+
+				ds.is as s1 -> t2 then {
+					s1.ip as s2 -> t2 then {
+						s2.id_pac as x -> t2.value = x "rule28";
+		// ds.is.ip.ku.ku_z.ku_z_lab 1-> bundle.entry
+
+						s2.ku as s3 -> bundle then {
+							s3.ku_z as s4 -> bundle then {
+	// c3146.entry 0-> bundle.entry
+								//s4.ku_z_lab as x1 -> bundle then ku_z_lab(patientReference,x1,bundle) "rule29";
+							} "rule30";
+						} "rule31";
+					} "rule32";
+				} "rule33";
+			} "rule34";
+		} "rule35";
+
+}
+
+group addObservationReferenceToSection(source observationGuid, target section){
+	observationGuid -> section.entry as entry then {
+		observationGuid -> entry.reference = append('Observation/',observationGuid) "referenceString";
+	} "section.entry";
+}
+
+//ku_z_lab(patientReference,ku_z_lab,compositionObservationSection,bundle) "rule9";
+group ku_z_lab(source patientReference: Reference, source ku_z_labType: ku_z_labType, target compositionObservationSection, target bundle){
+	
+	// c3659.entry.txt 0-> entry
+
+
+		// patientReference 1-> entry
+
+
+		// ku_z_labType.vrk 1-> entry
+
+
+		// ku_z_labType 1-> entry
+
+
+	// c3659.entry.txt 0-> entry
+		ku_z_labType.vrk as x1 -> bundle.entry as entry then Specimen(patientReference,x1,ku_z_labType,bundle) "rule1";
+
+	// c3174.entry 0-> entry
+
+
+		// patientReference 1-> entry
+
+
+		ku_z_labType.dat_du as s2 -> bundle then {
+		// ku_z_labType.dat_du.txt 1-> effectiveDateTime.effectiveDateTime
+
+			s2.txt as effectiveDateTime -> bundle then {
+
+				ku_z_labType.vrn as x1 -> bundle then vrn(effectiveDateTime,patientReference,x1,ku_z_labType,compositionObservationSection,bundle) "rule2";
+				ku_z_labType.vrf as x1 -> bundle then vrf(effectiveDateTime,patientReference,x1,ku_z_labType,compositionObservationSection,bundle) "rule5";
+				ku_z_labType.vrs as x1 -> bundle then vrs(patientReference,effectiveDateTime,x1,ku_z_labType,compositionObservationSection,bundle) "rule8";
+				ku_z_labType.vrx as x1 -> bundle then vrx(effectiveDateTime,patientReference,x1,ku_z_labType,compositionObservationSection,bundle) "rule11";
+				ku_z_labType.vrb as x1 -> bundle then vrb(effectiveDateTime,patientReference,x1,ku_z_labType,compositionObservationSection,bundle) "rule14";
+				ku_z_labType.vrr as x1 -> bundle then vrr(effectiveDateTime,patientReference,x1,ku_z_labType,bundle) "rule17";
+				ku_z_labType.vrp as x1 -> bundle then vrp(patientReference,effectiveDateTime,x1,ku_z_labType,compositionObservationSection,bundle) "rule20";
+				ku_z_labType.vrc as x1 -> bundle then vrc(patientReference,effectiveDateTime,x1,ku_z_labType,compositionObservationSection,bundle) "rule23";
+				ku_z_labType.vrd as x1 -> bundle then vrd(effectiveDateTime,x1,ku_z_labType,patientReference,bundle) "rule26";
+				ku_z_labType.vrz as x1 -> bundle then vrz(patientReference,effectiveDateTime,x1,ku_z_labType,bundle) "rule33";
+				ku_z_labType.vro as x1 -> bundle then vro(effectiveDateTime,patientReference,x1,ku_z_labType,bundle) "rule30"; 
+			} "rule27";
+		} "rule28";
+		ku_z_labType.vrk as x1 -> bundle then vrk(patientReference,x1,ku_z_labType,compositionObservationSection,bundle) "rule29";
+
+}
+group vrf(source effectiveDateTime: Observation, source patientReference: Reference, source vrfType: vrfType, source ku_z_labType: ku_z_labType, target compositionObservationSection, target bundle){
+	vrfType -> bundle.entry as entry then {
+	// c3716 0-> entry.fullUrl
+
+
+		// vrfType.guid 1-> entry.fullUrl
+
+
+	// c3716 0-> entry.fullUrl
+		vrfType.guid as x1 -> entry.fullUrl = append('Observation/',x1) then addObservationReferenceToSection(x1, compositionObservationSection) "rule1";
+	// 'final' 0-> entry.resource.Observation.status
+
+		effectiveDateTime -> entry.resource=create('Observation') as t1 then {
+			effectiveDateTime -> t1.status = 'final' "rule2";
+	// c3228.code.txt 0-> entry.resource.Observation.code
+
+
+		// ku_z_labType 1-> entry.resource.Observation.code
+
+
+		// vrfType.nazvy 1-> entry.resource.Observation.code
+
+
+	// c3228.code.txt 0-> entry.resource.Observation.code
+			vrfType.nazvy as x1 -> t1.code as y then ku_z_lab_code(x1,ku_z_labType,y) "rule3";
+		
+	// patientReference 0-> entry.resource.Observation.subject
+			patientReference as x -> t1.subject = x "rule5";
+	// effectiveDateTime 0-> entry.resource.Observation.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule6";
+	// vrfType 0-> entry.resource.Observation.valueCodeableConcept
+
+
+			
+	// vrfType.hodnota_kod.txt 0-> entry.resource.Observation.valueCodeableConcept.coding.code
+
+			effectiveDateTime -> t1.value=create('CodeableConcept') as t2 then {
+				effectiveDateTime -> t2.coding as t3 then {
+					vrfType.hodnota_kod as s4 -> t3 then {
+						s4.txt as x -> t3.code = x "rule8";
+	// vrfType.s_hodn_ko 0-> entry.resource.Observation.valueCodeableConcept.coding
+					} "rule9";
+				} "rule10";
+
+
+	// vrfType.s_hodn_ko 0-> entry.resource.Observation.valueCodeableConcept.coding.code
+
+				vrfType.s_hodn_ko -> t2.coding as t3 then {
+					vrfType.s_hodn_ko as x -> t3.code = x "rule11";
+	// vrfType.hodnota_text.txt 0-> entry.resource.Observation.valueCodeableConcept.text
+				} "rule12";
+				vrfType.hodnota_text as s4 -> t2 then {
+					s4.txt as x -> t2.text = x "rule13";
+	// vrfType.pozn.txt 0-> entry.resource.Observation.note
+				} "rule14";
+			} "rule15";
+			vrfType.pozn as s4 -> t1 then {
+
+	// vrfType.pozn.txt 0-> entry.resource.Observation.note.text
+
+				s4.txt -> t1.note as t2 then {
+					s4.txt as x -> t2.text = x "rule16";
+	// c3694 0-> entry.resource.Observation.specimen.reference
+
+					s4.txt -> t1.specimen as t3 then {
+		// ku_z_labType.guid 1-> entry.resource.Observation.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.Observation.specimen.reference
+
+
+	// c3694 0-> entry.resource.Observation.specimen.reference
+						ku_z_labType.guid as x1 -> t3 then {
+							ku_z_labType.vguid as x2 -> t3.reference = append('Specimen/',x1,'/_history/',x2) "rule17";
+						} "kokoti";
+					} "rule18";
+				} "rule19";
+			} "rule20";
+		} "rule";
+	} "bundle.entry";
+
+}
+group vrs(source patientReference: Reference, source effectiveDateTime: Observation, source vrsType: vrsType, source ku_z_labType: ku_z_labType, target compositionObservationSection, target bundle){
+	// c3706 0-> entry.fullUrl
+	vrsType -> bundle.entry as entry then {
+
+		// vrsType.guid 1-> entry.fullUrl
+
+
+	// c3706 0-> entry.fullUrl
+		vrsType.guid as x1 -> entry.fullUrl = append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+
+	// 'final' 0-> entry.resource.Observation.status
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			patientReference -> t1.status = 'final' "rule2";
+	// c3226.code.txt 0-> entry.resource.Observation.code
+
+
+		// ku_z_labType 1-> entry.resource.Observation.code
+
+
+		// vrsType.nazvy 1-> entry.resource.Observation.code
+
+
+	// c3226.code.txt 0-> entry.resource.Observation.code
+			vrsType.nazvy as x1 -> t1.code as y then ku_z_lab_code(x1,ku_z_labType,y) "rule3";
+		
+	// patientReference 0-> entry.resource.Observation.subject
+	
+			patientReference as x -> t1.subject = x "rule5";
+	// effectiveDateTime 0-> entry.resource.Observation.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule6";
+	// c3698 0-> entry.resource.Observation.specimen.reference
+
+			patientReference -> t1.specimen as t2 then {
+		// ku_z_labType.guid 1-> entry.resource.Observation.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.Observation.specimen.reference
+
+
+	// c3698 0-> entry.resource.Observation.specimen.reference
+				ku_z_labType.guid as x1 -> t2 then {
+					 ku_z_labType.vguid as x2 -> t2.reference = append('Specimen/',x1,'/_history/',x2) "rule7";
+				} "ochliveno";
+			} "rule8";
+		
+	// 'https://dasta.mzcr.cz/DSAJT.htm' 0-> entry.resource.Observation.component.code.coding.system
+	
+			patientReference -> t1.component as t2 then {
+				patientReference -> t2.code as t3 then {
+					patientReference -> t3.coding as t4 then {
+						patientReference -> t4.system = 'https://dasta.mzcr.cz/DSAJT.htm' "rule10";
+	// vrsType.vrs_h.hodnota1_klic 0-> entry.resource.Observation.component.code.coding.code
+
+						vrsType.vrs_h as s4 -> t4 then {
+							s4.hodnota1_klic as x -> t4.code = x "rule11";
+	// vrsType.vrs_h.hodnota1_text 0-> entry.resource.Observation.component.code.text
+						} "rule12";
+					} "rule13";
+					vrsType.vrs_h as s4 -> t3 then {
+						s4.hodnota1_text as x -> t3.text = x "rule14";
+	// vrsType.vrs_h.priznak2_kvant 0-> entry.resource.Observation.component.valueQuantity.comparator
+					} "rule15";
+				} "rule16";
+				patientReference -> t2.value=create('Quantity') as t3 then {
+					vrsType.vrs_h as s4 -> t3 then {
+						s4.priznak2_kvant as x -> t3.comparator = translate(x,'#cm3232','code') "rule17";
+	// 'https://dasta.mzcr.cz/DSAJT.htm' 0-> entry.resource.Observation.component.code.coding.system
+					} "rule18";
+				} "rule19";
+			} "rule20";
+			patientReference -> t1.component as t2 then {
+				patientReference -> t2.code as t3 then {
+					patientReference -> t3.coding as t4 then {
+						patientReference -> t4.system = 'https://dasta.mzcr.cz/DSAJT.htm' "rule21";
+	// vrsType.vrs_h.hodnota2_klic 0-> entry.resource.Observation.component.code.coding.code
+
+						vrsType.vrs_h as s4 -> t4 then {
+							s4.hodnota2_klic as x -> t4.code = x "rule22";
+	// vrsType.vrs_h.hodnota2_text 0-> entry.resource.Observation.component.code.text
+						} "rule23";
+					} "rule24";
+					vrsType.vrs_h as s4 -> t3 then {
+						s4.hodnota2_text as x -> t3.text = x "rule25";
+	// vrsType.vrs_h.hodnota2_cislo 0-> entry.resource.Observation.component.valueQuantity.value
+					} "rule26";
+				} "rule27";
+				patientReference -> t2.value=create('Quantity') as t3 then {
+					vrsType.vrs_h as s4 -> t3 then {
+						s4.hodnota2_cislo as x -> t3.value = x "rule28";
+					} "rule29";
+				} "rule30";
+			} "rule31";
+		} "rule";
+	} "Bundle.entry";
+}
+group vrn(source effectiveDateTime: Observation, source patientReference: Reference, source vrnType: vrnType, source ku_z_labType: ku_z_labType, target compositionObservationSection, target bundle: Bundle){
+	vrnType -> bundle.entry as entry then {
+	// c3714 0-> entry.fullUrl
+
+
+		// vrnType.guid 1-> entry.fullUrl
+		
+
+	// c3714 0-> entry.fullUrl
+		//vrnType.guid as x1 -> entry.fullUrl = append('Observation/',x1) as x then addEntryToSection(x, compositionObservationSection) "rule1";
+		vrnType.guid as x1 -> entry.fullUrl = append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+
+	// 'final' 0-> entry.resource.Observation.status
+
+		effectiveDateTime -> entry.resource=create('Observation') as t1 then {
+			effectiveDateTime -> t1.status = 'final' "rule2";
+	// c3213.code.txt 0-> entry.resource.Observation.code
+
+
+		// ku_z_labType 1-> entry.resource.Observation.code
+
+
+		// vrnType.nazvy 1-> entry.resource.Observation.code
+
+
+	// c3213.code.txt 0-> entry.resource.Observation.code
+			vrnType.nazvy as x1 -> t1.code as y then ku_z_lab_code(x1,ku_z_labType,y) "rule3";
+
+			patientReference as x -> t1.subject = x "rule5";
+	// effectiveDateTime 0-> entry.resource.Observation.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule6";
+	// vrnType 0-> entry.resource.Observation.valueQuantity
+
+
+			
+	// vrnType.hodnota.txt 0-> entry.resource.Observation.valueQuantity.value
+
+			effectiveDateTime -> t1.value=create('Quantity') as t2 then {
+				vrnType.hodnota as s4 -> t2 then {
+					s4.txt as x -> t2.value = x "rule8";
+	// vrnType.priznak_kvant 0-> entry.resource.Observation.valueQuantity.comparator
+				} "rule9";
+
+				vrnType.priznak_kvant as x -> t2.comparator = translate(x,'#cm3189','code') "rule10";
+	// vrnType.jednotka.txt 0-> entry.resource.Observation.valueQuantity.unit
+
+				vrnType.jednotka as s4 -> t2 then {
+					s4.txt as x -> t2.unit = x "rule11";
+	// vrnType.hodnoceni 0-> entry.resource.Observation.interpretation
+				} "rule12";
+			} "rule13";
+
+			vrnType.hodnoceni as x -> t1.interpretation = x "rule14";
+	// 'https://dasta.mzcr.cz/MZAYE.htm' 0-> entry.resource.Observation.interpretation.coding.system
+
+			effectiveDateTime -> t1.interpretation as t2 then {
+				effectiveDateTime -> t2.coding as t3 then {
+					effectiveDateTime -> t3.system = 'https://dasta.mzcr.cz/MZAYE.htm' "rule15";
+	// vrnType.hodnoceni.hodn_vysl 0-> entry.resource.Observation.interpretation.coding.code
+
+					vrnType.hodnoceni as s4 -> t3 then {
+						s4.hodn_vysl as x -> t3.code = x "rule16";
+	// vrnType.hodnoceni.hodn_vysl_lok.txt 0-> entry.resource.Observation.interpretation.text
+					} "rule17";
+				} "rule18";
+				vrnType.hodnoceni as s4 -> t2 then {
+					s4.hodn_vysl_lok as s5 -> t2 then {
+						s5.txt as x -> t2.text = x "rule19";
+	// vrnType.nejistota.nejist_var1.t_nejist 0-> entry.resource.Observation.note
+					} "rule20";
+				} "rule21";
+			} "rule22";
+			vrnType.nejistota as s4 -> t1 then {
+				s4.nejist_var1 as s5 -> t1 then {
+
+	// vrnType.nejistota.nejist_var1.t_nejist 0-> entry.resource.Observation.note.text
+
+					s5.t_nejist -> t1.note as t2 then {
+						s5.t_nejist as x -> t2.text = x "rule23";
+	// vrnType.nejistota.nejist_var1.h_nejist 0-> entry.resource.Observation.note.text
+
+
+						s5.h_nejist as x -> t2.text = x "rule24";
+	// vrnType.nejistota.nejist_var2.t_nejist_n 0-> entry.resource.Observation.note
+					} "rule25";
+				} "rule26";
+				s4.nejist_var2 as s5 -> t1 then {
+
+	// vrnType.nejistota.nejist_var2.t_nejist_n 0-> entry.resource.Observation.note.text
+
+					s5.t_nejist_n -> t1.note as t2 then {
+						s5.t_nejist_n as x -> t2.text = x "rule27";
+	// vrnType.nejistota.nejist_var2.h_nejist_n 0-> entry.resource.Observation.note
+					} "rule28";
+
+
+	// vrnType.nejistota.nejist_var2.h_nejist_n 0-> entry.resource.Observation.note.text
+
+					s5.h_nejist_n -> t1.note as t2 then {
+						s5.h_nejist_n as x -> t2.text = x "rule29";
+	// vrnType.nejistota.nejist_var2.k_anal_n 0-> entry.resource.Observation.note
+					} "rule30";
+
+
+	// vrnType.nejistota.nejist_var2.k_anal_n 0-> entry.resource.Observation.note.text
+
+					s5.k_anal_n -> t1.note as t2 then {
+						s5.k_anal_n as x -> t2.text = x "rule31";
+	// vrnType.nejistota.nejist_var2.t_nejist_v 0-> entry.resource.Observation.note
+					} "rule32";
+
+
+	// vrnType.nejistota.nejist_var2.t_nejist_v 0-> entry.resource.Observation.note.text
+
+					s5.t_nejist_v -> t1.note as t2 then {
+						s5.t_nejist_v as x -> t2.text = x "rule33";
+	// vrnType.nejistota.nejist_var2.h_nejist_v 0-> entry.resource.Observation.note
+					} "rule34";
+
+
+	// vrnType.nejistota.nejist_var2.h_nejist_v 0-> entry.resource.Observation.note.text
+
+					s5.h_nejist_v -> t1.note as t2 then {
+						s5.h_nejist_v as x -> t2.text = x "rule35";
+	// vrnType.nejistota.nejist_var2.k_anal_v 0-> entry.resource.Observation.note
+					} "rule36";
+
+
+	// vrnType.nejistota.nejist_var2.k_anal_v 0-> entry.resource.Observation.note.text
+
+					s5.k_anal_v -> t1.note as t2 then {
+						s5.k_anal_v as x -> t2.text = x "rule37";
+	// vrnType.pozn.txt 0-> entry.resource.Observation.note
+					} "rule38";
+				} "rule39";
+			} "rule40";
+			vrnType.pozn as s4 -> t1 then {
+
+	// vrnType.pozn.txt 0-> entry.resource.Observation.note.text
+
+				s4.txt -> t1.note as t2 then {
+					s4.txt as x -> t2.text = x "rule41";
+	// c3690 0-> entry.resource.Observation.specimen.reference
+
+					s4.txt -> t1.specimen as t3 then {
+		// ku_z_labType.guid 1-> entry.resource.Observation.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.Observation.specimen.reference
+
+
+	// c3690 0-> entry.resource.Observation.specimen.reference
+						ku_z_labType.guid as x1 -> t3 then {
+							ku_z_labType.vguid as x2 -> t3.reference=append('Specimen/',x1,'/_history/',x2) "rule42";
+						} "ochliveno"; 
+					} "rule43";
+				} "rule44";
+			} "rule45";
+
+			vrnType.skala as x -> t1.referenceRange = x "rule47";
+	// vrnType.skala.s1.txt 0-> entry.resource.Observation.referenceRange.low
+
+			effectiveDateTime -> t1.referenceRange as t2 then {
+				vrnType.skala as s4 -> t2 then {
+					s4.s1 as s5 -> t2 then {
+
+	// vrnType.skala.s1.txt 0-> entry.resource.Observation.referenceRange.low.value
+
+						s5.txt -> t2.low as t3 then {
+							s5.txt as x -> t3.value = x "rule48";
+	// vrnType.skala.s2.txt 0-> entry.resource.Observation.referenceRange.high
+						} "rule49";
+					} "rule50";
+					s4.s2 as s5 -> t2 then {
+
+	// vrnType.skala.s2.txt 0-> entry.resource.Observation.referenceRange.high.value
+
+						s5.txt -> t2.high as t3 then {
+							s5.txt as x -> t3.value = x "rule51";
+	// 'http://hl7.org/fhir/ValueSet/referencerange-meaning' 0-> entry.resource.Observation.referenceRange.type.coding.system
+						} "rule52";
+						s5.txt -> t2.type as t3 then {
+							s5.txt -> t3.coding as t4 then {
+								s5.txt -> t4.system = 'http://hl7.org/fhir/ValueSet/referencerange-meaning' "rule53";
+	// 'Toxický' 0-> entry.resource.Observation.referenceRange.type.coding.code
+
+
+								s5.txt -> t4.code = 'Toxický' "rule54";
+	// vrnType.skala 0-> entry.resource.Observation.referenceRange
+							} "rule55";
+						} "rule56";
+					} "rule57";
+				} "rule58";
+			} "rule59";
+
+			vrnType.skala as x -> t1.referenceRange = x "rule60";
+	// vrnType.skala.s2.txt 0-> entry.resource.Observation.referenceRange.low
+
+			effectiveDateTime -> t1.referenceRange as t2 then {
+				vrnType.skala as s4 -> t2 then {
+					s4.s2 as s5 -> t2 then {
+
+	// vrnType.skala.s2.txt 0-> entry.resource.Observation.referenceRange.low.value
+
+						s5.txt -> t2.low as t3 then {
+							s5.txt as x -> t3.value = x "rule61";
+	// vrnType.skala.s3.txt 0-> entry.resource.Observation.referenceRange.high
+						} "rule62";
+					} "rule63";
+					s4.s3 as s5 -> t2 then {
+
+	// vrnType.skala.s3.txt 0-> entry.resource.Observation.referenceRange.high.value
+
+						s5.txt -> t2.high as t3 then {
+							s5.txt as x -> t3.value = x "rule64";
+	// 'http://hl7.org/fhir/ValueSet/referencerange-meaning' 0-> entry.resource.Observation.referenceRange.type.coding.system
+						} "rule65";
+						s5.txt -> t2.type as t3 then {
+							s5.txt -> t3.coding as t4 then {
+								s5.txt -> t4.system = 'http://hl7.org/fhir/ValueSet/referencerange-meaning' "rule66";
+	// 'Horší' 0-> entry.resource.Observation.referenceRange.type.coding.code
+
+
+								s5.txt -> t4.code = 'Horší' "rule67";
+	// vrnType.skala 0-> entry.resource.Observation.referenceRange
+							} "rule68";
+						} "rule69";
+					} "rule70";
+				} "rule71";
+			} "rule72";
+
+			vrnType.skala as x -> t1.referenceRange = x "rule73";
+	// vrnType.skala.s3.txt 0-> entry.resource.Observation.referenceRange.low
+
+			effectiveDateTime -> t1.referenceRange as t2 then {
+				vrnType.skala as s4 -> t2 then {
+					s4.s3 as s5 -> t2 then {
+
+	// vrnType.skala.s3.txt 0-> entry.resource.Observation.referenceRange.low.value
+
+						s5.txt -> t2.low as t3 then {
+							s5.txt as x -> t3.value = x "rule74";
+	// vrnType.skala.s4.txt 0-> entry.resource.Observation.referenceRange.high.value
+						} "rule75";
+					} "rule76";
+					effectiveDateTime -> t2.high as t3 then {
+						s4.s4 as s5 -> t3 then {
+							s5.txt as x -> t3.value = x "rule77";
+	// 'http://hl7.org/fhir/ValueSet/referencerange-meaning' 0-> entry.resource.Observation.referenceRange.type.coding.system
+						} "rule78";
+					} "rule79";
+					effectiveDateTime -> t2.type as t3 then {
+						effectiveDateTime -> t3.coding as t4 then {
+							effectiveDateTime -> t4.system = 'http://hl7.org/fhir/ValueSet/referencerange-meaning' "rule80";
+	// 'Ještě normální' 0-> entry.resource.Observation.referenceRange.type.coding.code
+
+
+							effectiveDateTime -> t4.code = 'Ještě normální' "rule81";
+	// vrnType.skala 0-> entry.resource.Observation.referenceRange
+						} "rule82";
+					} "rule83";
+				} "rule84";
+			} "rule85";
+
+			vrnType.skala as x -> t1.referenceRange = x "rule86";
+	// vrnType.skala.s4.txt 0-> entry.resource.Observation.referenceRange.low.value
+
+			effectiveDateTime -> t1.referenceRange as t2 then {
+				effectiveDateTime -> t2.low as t3 then {
+					vrnType.skala as s4 -> t3 then {
+						s4.s4 as s5 -> t3 then {
+							s5.txt as x -> t3.value = x "rule87";
+	// vrnType.skala.s5.txt 0-> entry.resource.Observation.referenceRange.high.value
+						} "rule88";
+					} "rule89";
+				} "rule90";
+				effectiveDateTime -> t2.high as t3 then {
+					vrnType.skala as s4 -> t3 then {
+						s4.s5 as s5 -> t3 then {
+							s5.txt as x -> t3.value = x "rule91";
+	// 'http://hl7.org/fhir/ValueSet/referencerange-meaning' 0-> entry.resource.Observation.referenceRange.type.coding.system
+						} "rule92";
+					} "rule93";
+				} "rule94";
+				effectiveDateTime -> t2.type as t3 then {
+					effectiveDateTime -> t3.coding as t4 then {
+						effectiveDateTime -> t4.system = 'http://hl7.org/fhir/ValueSet/referencerange-meaning' "rule95";
+	// 'Normální' 0-> entry.resource.Observation.referenceRange.type.coding.code
+
+
+						effectiveDateTime -> t4.code = 'Normální' "rule96";
+	// vrnType.skala 0-> entry.resource.Observation.referenceRange
+					} "rule97";
+				} "rule98";
+			} "rule99";
+
+			vrnType.skala as x -> t1.referenceRange = x "rule100";
+	// vrnType.skala.s5.txt 0-> entry.resource.Observation.referenceRange.low.value
+
+			effectiveDateTime -> t1.referenceRange as t2 then {
+				effectiveDateTime -> t2.low as t3 then {
+					vrnType.skala as s4 -> t3 then {
+						s4.s5 as s5 -> t3 then {
+							s5.txt as x -> t3.value = x "rule101";
+	// vrnType.skala.s6.txt 0-> entry.resource.Observation.referenceRange.high
+						} "rule102";
+					} "rule103";
+				} "rule104";
+				vrnType.skala as s4 -> t2 then {
+					s4.s6 as s5 -> t2 then {
+
+	// vrnType.skala.s6.txt 0-> entry.resource.Observation.referenceRange.high.value
+
+						s5.txt -> t2.high as t3 then {
+							s5.txt as x -> t3.value = x "rule105";
+	// 'http://hl7.org/fhir/ValueSet/referencerange-meaning' 0-> entry.resource.Observation.referenceRange.type.coding.system
+						} "rule106";
+						s5.txt -> t2.type as t3 then {
+							s5.txt -> t3.coding as t4 then {
+								s5.txt -> t4.system = 'http://hl7.org/fhir/ValueSet/referencerange-meaning' "rule107";
+	// 'Ještě normální' 0-> entry.resource.Observation.referenceRange.type.coding.code
+
+
+								s5.txt -> t4.code = 'Ještě normální' "rule108";
+	// vrnType.skala 0-> entry.resource.Observation.referenceRange
+							} "rule109";
+						} "rule110";
+					} "rule111";
+				} "rule112";
+			} "rule113";
+
+			vrnType.skala as x -> t1.referenceRange = x "rule114";
+	// vrnType.skala.s6.txt 0-> entry.resource.Observation.referenceRange.low
+
+			effectiveDateTime -> t1.referenceRange as t2 then {
+				vrnType.skala as s4 -> t2 then {
+					s4.s6 as s5 -> t2 then {
+
+	// vrnType.skala.s6.txt 0-> entry.resource.Observation.referenceRange.low.value
+
+						s5.txt -> t2.low as t3 then {
+							s5.txt as x -> t3.value = x "rule115";
+	// vrnType.skala.s7.txt 0-> entry.resource.Observation.referenceRange.high
+						} "rule116";
+					} "rule117";
+					s4.s7 as s5 -> t2 then {
+
+	// vrnType.skala.s7.txt 0-> entry.resource.Observation.referenceRange.high.value
+
+						s5.txt -> t2.high as t3 then {
+							s5.txt as x -> t3.value = x "rule118";
+	// 'http://hl7.org/fhir/ValueSet/referencerange-meaning' 0-> entry.resource.Observation.referenceRange.type.coding.system
+						} "rule119";
+						s5.txt -> t2.type as t3 then {
+							s5.txt -> t3.coding as t4 then {
+								s5.txt -> t4.system = 'http://hl7.org/fhir/ValueSet/referencerange-meaning' "rule120";
+	// 'Horší' 0-> entry.resource.Observation.referenceRange.type.coding.code
+
+
+								s5.txt -> t4.code = 'Horší' "rule121";
+	// vrnType.skala 0-> entry.resource.Observation.referenceRange
+							} "rule122";
+						} "rule123";
+					} "rule124";
+				} "rule125";
+			} "rule126";
+
+			vrnType.skala as x -> t1.referenceRange = x "rule127";
+	// vrnType.skala.s7.txt 0-> entry.resource.Observation.referenceRange.low
+
+			effectiveDateTime -> t1.referenceRange as t2 then {
+				vrnType.skala as s4 -> t2 then {
+					s4.s7 as s5 -> t2 then {
+
+	// vrnType.skala.s7.txt 0-> entry.resource.Observation.referenceRange.low.value
+
+						s5.txt -> t2.low as t3 then {
+							s5.txt as x -> t3.value = x "rule128";
+	// vrnType.skala.s8.txt 0-> entry.resource.Observation.referenceRange.high
+						} "rule129";
+					} "rule130";
+					s4.s8 as s5 -> t2 then {
+
+	// vrnType.skala.s8.txt 0-> entry.resource.Observation.referenceRange.high.value
+
+						s5.txt -> t2.high as t3 then {
+							s5.txt as x -> t3.value = x "rule131";
+	// 'http://hl7.org/fhir/ValueSet/referencerange-meaning' 0-> entry.resource.Observation.referenceRange.type.coding.system
+						} "rule132";
+						s5.txt -> t2.type as t3 then {
+							s5.txt -> t3.coding as t4 then {
+								s5.txt -> t4.system = 'http://hl7.org/fhir/ValueSet/referencerange-meaning' "rule133";
+	// 'Toxický' 0-> entry.resource.Observation.referenceRange.type.coding.code
+
+
+								s5.txt -> t4.code = 'Toxický' "rule134";
+							} "rule135";
+						} "rule136";
+					} "rule137";
+				} "rule138";
+			} "rule139";
+		} "rule140";
+	} "Bundle.entry";
+}
+group ku_z_lab_code_without_nazvyType( source ku_z_labType: ku_z_labType, target code: Observation){
+	// y0 0-> code.coding.system
+
+		
+
+
+	// 'https://dasta.mzcr.cz/DSALE.htm' 0-> code.coding.system
+
+		ku_z_labType.nclp_verze -> code.coding as t1 then {
+			ku_z_labType.nclp_verze -> t1.system = 'https://dasta.mzcr.cz/DSALE.htm' "rule5";
+	// ku_z_labType.nclp_verze 0-> code.coding.code
+
+
+			ku_z_labType.nclp_verze as x -> t1.code = x "rule6";
+	// 'https://dasta.mzcr.cz/DSAKB.htm' 0-> code.coding.system
+
+
+			ku_z_labType.nclp_verze -> t1.system = 'https://dasta.mzcr.cz/DSAKB.htm' "rule7";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule8";
+	// ku_z_labType.syst_klic 0-> code.coding.code
+
+
+			ku_z_labType.syst_klic as x -> t1.code = x "rule9";
+	// 'https://dasta.mzcr.cz/DSAJQ.htm' 0-> code.coding.system
+
+
+			ku_z_labType.nclp_verze -> t1.system = 'https://dasta.mzcr.cz/DSAJQ.htm' "rule11";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule12";
+	// ku_z_labType.komp_klic 0-> code.coding.code
+
+
+			ku_z_labType.komp_klic as x -> t1.code = x "rule13";
+	// ku_z_labType.syst_sp_klic 0-> code.coding
+		} "rule15";
+
+
+	// 'https://dasta.mzcr.cz/DSAKQ.htm' 0-> code.coding.system
+
+		ku_z_labType.syst_sp_klic -> code.coding as t1 then {
+			ku_z_labType.syst_sp_klic -> t1.system = 'https://dasta.mzcr.cz/DSAKQ.htm' "rule16";
+	// ku_z_labType.syst_sp_klic 0-> code.coding.code
+
+
+			ku_z_labType.syst_sp_klic as x -> t1.code = x "rule17";
+	// ku_z_labType.subsp_text 0-> code.coding.display
+
+
+			ku_z_labType.subsp_text as x -> t1.display = x "rule18";
+	// ku_z_labType.typ_cispol 0-> code.coding.code
+
+
+			ku_z_labType.typ_cispol as x -> t1.code = x "rule19";
+	
+	// 'https://dasta.mzcr.cz/DSAJN.htm' 0-> code.coding.system
+
+
+			ku_z_labType.syst_sp_klic -> t1.system = 'https://dasta.mzcr.cz/DSAJN.htm' "rule21";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule22";
+	// ku_z_labType.typpol_fh 0-> code.coding.code
+
+
+			ku_z_labType.typpol_fh as x -> t1.code = x "rule23";
+	// ku_z_labType.ziskmat_klic 0-> code.coding
+		} "rule24";
+
+
+	// 'https://dasta.mzcr.cz/DSAKT.htm' 0-> code.coding.system
+
+		ku_z_labType.ziskmat_klic -> code.coding as t1 then {
+			ku_z_labType.ziskmat_klic -> t1.system = 'https://dasta.mzcr.cz/DSAKT.htm' "rule25";
+	// ku_z_labType.ziskmat_klic 0-> code.coding.code
+
+
+			ku_z_labType.ziskmat_klic as x -> t1.code = x "rule26";
+	// ku_z_labType.ziskmat_text 0-> code.coding.display
+
+
+			ku_z_labType.ziskmat_text as x -> t1.display = x "rule27";
+	// 'https://dasta.mzcr.cz/DSAIV.htm' 0-> code.coding.system
+
+
+			ku_z_labType.ziskmat_klic -> t1.system = 'https://dasta.mzcr.cz/DSAIV.htm' "rule28";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule29";
+	// ku_z_labType.stav_vys 0-> code.coding.code
+
+
+			ku_z_labType.stav_vys as x -> t1.code = x "rule30";
+	// 'https://dasta.mzcr.cz/DSAIW.htm' 0-> code.coding.system
+
+
+			ku_z_labType.ziskmat_klic -> t1.system = 'https://dasta.mzcr.cz/DSAIW.htm' "rule31";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule32";
+	// ku_z_labType.typ_sdel_vys 0-> code.coding.code
+
+
+			ku_z_labType.typ_sdel_vys as x -> t1.code = x "rule33";
+	// ku_z_labType.spec_proc 0-> code.coding
+		} "rule34";
+
+
+	// 'https://dasta.mzcr.cz/DSAJW.htm' 0-> code.coding.system
+
+		ku_z_labType.spec_proc -> code.coding as t1 then {
+			ku_z_labType.spec_proc -> t1.system = 'https://dasta.mzcr.cz/DSAJW.htm' "rule35";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule36";
+	// ku_z_labType.spec_proc 0-> code.coding.code
+
+
+			ku_z_labType.spec_proc as x -> t1.code = x "rule37";
+
+	// ku_z_labType.id_lis 0-> code.coding
+		} "rule39";
+
+
+	// ku_z_labType.id_lis 0-> code.coding.display
+
+		ku_z_labType.id_lis -> code.coding as t1 then {
+			ku_z_labType.id_lis as x -> t1.display = x "rule40";
+	// ku_z_labType.klic_nclp_o 0-> code.coding
+		} "rule41";
+
+
+	// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 0-> code.coding.system
+
+		ku_z_labType.klic_nclp_o -> code.coding as t1 then {
+			ku_z_labType.klic_nclp_o -> t1.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule42";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule43";
+	// ku_z_labType.klic_nclp_o 0-> code.coding.code
+
+
+			ku_z_labType.klic_nclp_o as x -> t1.code = x "rule44";
+	// ku_z_labType.id_lo_is 0-> code.coding
+		} "rule45";
+
+
+	// ku_z_labType.id_lo_is 0-> code.coding.display
+
+		ku_z_labType.id_lo_is -> code.coding as t1 then {
+			ku_z_labType.id_lo_is as x -> t1.display = x "rule46";
+	// ku_z_labType.nahrad_vys 0-> code.coding
+		} "rule47";
+
+
+	// ku_z_labType.nahrad_vys 0-> code.coding.code
+
+		ku_z_labType.nahrad_vys -> code.coding as t1 then {
+			ku_z_labType.nahrad_vys as x -> t1.code = x "rule48";
+	// ku_z_labType.nahrad_vys 0-> code.coding.display
+
+
+			ku_z_labType.nahrad_vys as x -> t1.display = translate(x,'#cm3373','code') "rule49";
+	// ku_z_labType.urg_info 0-> code.coding
+		} "rule50";
+
+
+	// 'https://dasta.mzcr.cz/DSAIY.htm' 0-> code.coding.system
+
+		ku_z_labType.urg_info -> code.coding as t1 then {
+			ku_z_labType.urg_info -> t1.system = 'https://dasta.mzcr.cz/DSAIY.htm' "rule51";
+	// ku_z_labType.urg_info 0-> code.coding.code
+
+
+			ku_z_labType.urg_info as x -> t1.code = x "rule52";
+	// ku_z_labType.urg_info 0-> code.coding.display
+
+
+			ku_z_labType.urg_info as x -> t1.display = translate(x,'#cm3375','code') "rule53";
+	// ku_z_labType.urg_zprac 0-> code.coding
+		} "rule54";
+
+
+	// 'https://dasta.mzcr.cz/DSAIZ.htm' 0-> code.coding.system
+
+		ku_z_labType.urg_zprac -> code.coding as t1 then {
+			ku_z_labType.urg_zprac -> t1.system = 'https://dasta.mzcr.cz/DSAIZ.htm' "rule55";
+	// ku_z_labType.urg_zprac 0-> code.coding.code
+
+
+			ku_z_labType.urg_zprac as x -> t1.code = x "rule56";
+	// ku_z_labType.urg_zprac 0-> code.coding.display
+
+
+			ku_z_labType.urg_zprac as x -> t1.display = translate(x,'#cm3377','code') "rule57";
+	// ku_z_labType.ind_vazb_fv 0-> code.coding
+		} "rule58";
+
+
+	// 'https://dasta.mzcr.cz/DSAIT.htm' 0-> code.coding.system
+
+		ku_z_labType.ind_vazb_fv -> code.coding as t1 then {
+			ku_z_labType.ind_vazb_fv -> t1.system = 'https://dasta.mzcr.cz/DSAIT.htm' "rule59";
+	// ku_z_labType.ind_vazb_fv 0-> code.coding.code
+
+
+			ku_z_labType.ind_vazb_fv as x -> t1.code = x "rule60";
+	// ku_z_labType.ind_vazb_fv 0-> code.coding.display
+
+
+			ku_z_labType.ind_vazb_fv as x -> t1.display = translate(x,'#cm3379','code') "rule61";
+	// ku_z_labType.ind_test_nf 0-> code.coding
+		} "rule62";
+
+
+	// ku_z_labType.ind_test_nf 0-> code.coding.code
+
+		ku_z_labType.ind_test_nf -> code.coding as t1 then {
+			ku_z_labType.ind_test_nf as x -> t1.code = x "rule63";
+	// ku_z_labType.ind_test_nf 0-> code.coding.display
+
+
+			ku_z_labType.ind_test_nf as x -> t1.display = translate(x,'#cm3380','code') "rule64";
+	// ku_z_labType.kolize 0-> code.coding
+		} "rule65";
+
+
+	// 'https://dasta.mzcr.cz/DSAJT.htm' 0-> code.coding.system
+
+		ku_z_labType.kolize -> code.coding as t1 then {
+			ku_z_labType.kolize -> t1.system = 'https://dasta.mzcr.cz/DSAJT.htm' "rule66";
+	// ku_z_labType.kolize 0-> code.coding.code
+
+
+			ku_z_labType.kolize as x -> t1.code = x "rule67";
+	// ku_z_labType.akreditace 0-> code.coding
+		} "rule68";
+
+
+	// ku_z_labType.akreditace 0-> code.coding.code
+
+		ku_z_labType.akreditace -> code.coding as t1 then {
+			ku_z_labType.akreditace as x -> t1.code = x "rule69";
+	// ku_z_labType.akreditace_t 0-> code.coding.display
+
+
+			ku_z_labType.akreditace_t as x -> t1.display = x "rule70";
+	// ku_z_labType.id_jrc 0-> code.coding
+		} "rule71";
+
+
+	// 'https://covid-19-diagnostics.jrc.ec.europa.eu/devices?target_type=6' 0-> code.coding.system
+
+		ku_z_labType.id_jrc -> code.coding as t1 then {
+			ku_z_labType.id_jrc -> t1.system = 'https://covid-19-diagnostics.jrc.ec.europa.eu/devices?target_type=6' "rule72";
+	// ku_z_labType.id_jrc 0-> code.coding.code.id
+
+			ku_z_labType.id_jrc -> t1.code as t2 then {
+				ku_z_labType.id_jrc as x -> t2.id = x "rule73";
+	// ku_z_labType.set_text 0-> code.coding.code
+
+
+				ku_z_labType.set_text as x -> t1.code = x "rule74";
+	// ku_z_labType.vyrobce_text 0-> code.coding.display
+
+
+				ku_z_labType.vyrobce_text as x -> t1.display = x "rule75";
+	// ku_z_labType.duverne 0-> code.coding
+			} "rule76";
+		} "rule77";
+
+
+	// ku_z_labType.duverne 0-> code.coding.code
+
+		ku_z_labType.duverne -> code.coding as t1 then {
+			ku_z_labType.duverne as x -> t1.code = x "rule78";
+	// ku_z_labType.duverne 0-> code.coding.display
+
+
+			ku_z_labType.duverne as x -> t1.display = translate(x,'#cm3383','code') "rule79";
+	// ku_z_labType.typ_obalu 0-> code.coding
+		} "rule80";
+
+
+	// 'https://dasta.mzcr.cz/DSAJU.htm' 0-> code.coding.system
+
+		ku_z_labType.typ_obalu -> code.coding as t1 then {
+			ku_z_labType.typ_obalu -> t1.system = 'https://dasta.mzcr.cz/DSAJU.htm' "rule81";
+	// ku_z_labType.typ_obalu 0-> code.coding.code
+
+
+			ku_z_labType.typ_obalu as x -> t1.code = x "rule82";
+	// ku_z_labType.nazev_lclp.txt 0-> code.text
+		} "rule83";
+		ku_z_labType.nazev_lclp as s2 -> code then {
+			s2.txt as x -> code.text = x "rule84";
+		} "rule85";
+}
+group ku_z_lab_code(source nazvyType: nazvyType, source ku_z_labType: ku_z_labType, target code){
+	// y0 0-> code.coding.system
+
+		nazvyType -> code.coding as t1 then {
+			ku_z_labType -> t1.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule1";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule2";
+	// ku_z_labType.klic_nclp 0-> code.coding.code
+
+
+			ku_z_labType.klic_nclp as x -> t1.code = x "rule3";
+	// ku_z_labType.nclp_verze 0-> code.coding
+		} "rule4";
+
+
+	// 'https://dasta.mzcr.cz/DSALE.htm' 0-> code.coding.system
+
+		ku_z_labType.nclp_verze -> code.coding as t1 then {
+			ku_z_labType.nclp_verze -> t1.system = 'https://dasta.mzcr.cz/DSALE.htm' "rule5";
+	// ku_z_labType.nclp_verze 0-> code.coding.code
+
+
+			ku_z_labType.nclp_verze as x -> t1.code = x "rule6";
+	// 'https://dasta.mzcr.cz/DSAKB.htm' 0-> code.coding.system
+
+
+			ku_z_labType.nclp_verze -> t1.system = 'https://dasta.mzcr.cz/DSAKB.htm' "rule7";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule8";
+	// ku_z_labType.syst_klic 0-> code.coding.code
+
+
+			ku_z_labType.syst_klic as x -> t1.code = x "rule9";
+	// nazvyType.system 0-> code.coding.display
+
+
+			nazvyType.system as x -> t1.display = x "rule10";
+	// 'https://dasta.mzcr.cz/DSAJQ.htm' 0-> code.coding.system
+
+
+			ku_z_labType.nclp_verze -> t1.system = 'https://dasta.mzcr.cz/DSAJQ.htm' "rule11";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule12";
+	// ku_z_labType.komp_klic 0-> code.coding.code
+
+
+			ku_z_labType.komp_klic as x -> t1.code = x "rule13";
+	// nazvyType.komponenta 0-> code.coding.display
+
+
+			nazvyType.komponenta as x -> t1.display = x "rule14";
+	// ku_z_labType.syst_sp_klic 0-> code.coding
+		} "rule15";
+
+
+	// 'https://dasta.mzcr.cz/DSAKQ.htm' 0-> code.coding.system
+
+		ku_z_labType.syst_sp_klic -> code.coding as t1 then {
+			ku_z_labType.syst_sp_klic -> t1.system = 'https://dasta.mzcr.cz/DSAKQ.htm' "rule16";
+	// ku_z_labType.syst_sp_klic 0-> code.coding.code
+
+
+			ku_z_labType.syst_sp_klic as x -> t1.code = x "rule17";
+	// ku_z_labType.subsp_text 0-> code.coding.display
+
+
+			ku_z_labType.subsp_text as x -> t1.display = x "rule18";
+	// ku_z_labType.typ_cispol 0-> code.coding.code
+
+
+			ku_z_labType.typ_cispol as x -> t1.code = x "rule19";
+	// nazvyType.typ_cispol 0-> code.coding.display
+
+
+			nazvyType.typ_cispol as x -> t1.display = x "rule20";
+	// 'https://dasta.mzcr.cz/DSAJN.htm' 0-> code.coding.system
+
+
+			ku_z_labType.syst_sp_klic -> t1.system = 'https://dasta.mzcr.cz/DSAJN.htm' "rule21";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule22";
+	// ku_z_labType.typpol_fh 0-> code.coding.code
+
+
+			ku_z_labType.typpol_fh as x -> t1.code = x "rule23";
+	// ku_z_labType.ziskmat_klic 0-> code.coding
+		} "rule24";
+
+
+	// 'https://dasta.mzcr.cz/DSAKT.htm' 0-> code.coding.system
+
+		ku_z_labType.ziskmat_klic -> code.coding as t1 then {
+			ku_z_labType.ziskmat_klic -> t1.system = 'https://dasta.mzcr.cz/DSAKT.htm' "rule25";
+	// ku_z_labType.ziskmat_klic 0-> code.coding.code
+
+
+			ku_z_labType.ziskmat_klic as x -> t1.code = x "rule26";
+	// ku_z_labType.ziskmat_text 0-> code.coding.display
+
+
+			ku_z_labType.ziskmat_text as x -> t1.display = x "rule27";
+	// 'https://dasta.mzcr.cz/DSAIV.htm' 0-> code.coding.system
+
+
+			ku_z_labType.ziskmat_klic -> t1.system = 'https://dasta.mzcr.cz/DSAIV.htm' "rule28";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule29";
+	// ku_z_labType.stav_vys 0-> code.coding.code
+
+
+			ku_z_labType.stav_vys as x -> t1.code = x "rule30";
+	// 'https://dasta.mzcr.cz/DSAIW.htm' 0-> code.coding.system
+
+
+			ku_z_labType.ziskmat_klic -> t1.system = 'https://dasta.mzcr.cz/DSAIW.htm' "rule31";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule32";
+	// ku_z_labType.typ_sdel_vys 0-> code.coding.code
+
+
+			ku_z_labType.typ_sdel_vys as x -> t1.code = x "rule33";
+	// ku_z_labType.spec_proc 0-> code.coding
+		} "rule34";
+
+
+	// 'https://dasta.mzcr.cz/DSAJW.htm' 0-> code.coding.system
+
+		ku_z_labType.spec_proc -> code.coding as t1 then {
+			ku_z_labType.spec_proc -> t1.system = 'https://dasta.mzcr.cz/DSAJW.htm' "rule35";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule36";
+	// ku_z_labType.spec_proc 0-> code.coding.code
+
+
+			ku_z_labType.spec_proc as x -> t1.code = x "rule37";
+	// nazvyType.procedura 0-> code.coding.display
+
+
+			nazvyType.procedura as x -> t1.display = x "rule38";
+	// ku_z_labType.id_lis 0-> code.coding
+		} "rule39";
+
+
+	// ku_z_labType.id_lis 0-> code.coding.display
+
+		ku_z_labType.id_lis -> code.coding as t1 then {
+			ku_z_labType.id_lis as x -> t1.display = x "rule40";
+	// ku_z_labType.klic_nclp_o 0-> code.coding
+		} "rule41";
+
+
+	// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 0-> code.coding.system
+
+		ku_z_labType.klic_nclp_o -> code.coding as t1 then {
+			ku_z_labType.klic_nclp_o -> t1.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule42";
+	// ku_z_labType.nclp_verze 0-> code.coding.version
+
+
+			ku_z_labType.nclp_verze as x -> t1.version = x "rule43";
+	// ku_z_labType.klic_nclp_o 0-> code.coding.code
+
+
+			ku_z_labType.klic_nclp_o as x -> t1.code = x "rule44";
+	// ku_z_labType.id_lo_is 0-> code.coding
+		} "rule45";
+
+
+	// ku_z_labType.id_lo_is 0-> code.coding.display
+
+		ku_z_labType.id_lo_is -> code.coding as t1 then {
+			ku_z_labType.id_lo_is as x -> t1.display = x "rule46";
+	// ku_z_labType.nahrad_vys 0-> code.coding
+		} "rule47";
+
+
+	// ku_z_labType.nahrad_vys 0-> code.coding.code
+
+		ku_z_labType.nahrad_vys -> code.coding as t1 then {
+			ku_z_labType.nahrad_vys as x -> t1.code = x "rule48";
+	// ku_z_labType.nahrad_vys 0-> code.coding.display
+
+
+			ku_z_labType.nahrad_vys as x -> t1.display = translate(x,'#cm3373','code') "rule49";
+	// ku_z_labType.urg_info 0-> code.coding
+		} "rule50";
+
+
+	// 'https://dasta.mzcr.cz/DSAIY.htm' 0-> code.coding.system
+
+		ku_z_labType.urg_info -> code.coding as t1 then {
+			ku_z_labType.urg_info -> t1.system = 'https://dasta.mzcr.cz/DSAIY.htm' "rule51";
+	// ku_z_labType.urg_info 0-> code.coding.code
+
+
+			ku_z_labType.urg_info as x -> t1.code = x "rule52";
+	// ku_z_labType.urg_info 0-> code.coding.display
+
+
+			ku_z_labType.urg_info as x -> t1.display = translate(x,'#cm3375','code') "rule53";
+	// ku_z_labType.urg_zprac 0-> code.coding
+		} "rule54";
+
+
+	// 'https://dasta.mzcr.cz/DSAIZ.htm' 0-> code.coding.system
+
+		ku_z_labType.urg_zprac -> code.coding as t1 then {
+			ku_z_labType.urg_zprac -> t1.system = 'https://dasta.mzcr.cz/DSAIZ.htm' "rule55";
+	// ku_z_labType.urg_zprac 0-> code.coding.code
+
+
+			ku_z_labType.urg_zprac as x -> t1.code = x "rule56";
+	// ku_z_labType.urg_zprac 0-> code.coding.display
+
+
+			ku_z_labType.urg_zprac as x -> t1.display = translate(x,'#cm3377','code') "rule57";
+	// ku_z_labType.ind_vazb_fv 0-> code.coding
+		} "rule58";
+
+
+	// 'https://dasta.mzcr.cz/DSAIT.htm' 0-> code.coding.system
+
+		ku_z_labType.ind_vazb_fv -> code.coding as t1 then {
+			ku_z_labType.ind_vazb_fv -> t1.system = 'https://dasta.mzcr.cz/DSAIT.htm' "rule59";
+	// ku_z_labType.ind_vazb_fv 0-> code.coding.code
+
+
+			ku_z_labType.ind_vazb_fv as x -> t1.code = x "rule60";
+	// ku_z_labType.ind_vazb_fv 0-> code.coding.display
+
+
+			ku_z_labType.ind_vazb_fv as x -> t1.display = translate(x,'#cm3379','code') "rule61";
+	// ku_z_labType.ind_test_nf 0-> code.coding
+		} "rule62";
+
+
+	// ku_z_labType.ind_test_nf 0-> code.coding.code
+
+		ku_z_labType.ind_test_nf -> code.coding as t1 then {
+			ku_z_labType.ind_test_nf as x -> t1.code = x "rule63";
+	// ku_z_labType.ind_test_nf 0-> code.coding.display
+
+
+			ku_z_labType.ind_test_nf as x -> t1.display = translate(x,'#cm3380','code') "rule64";
+	// ku_z_labType.kolize 0-> code.coding
+		} "rule65";
+
+
+	// 'https://dasta.mzcr.cz/DSAJT.htm' 0-> code.coding.system
+
+		ku_z_labType.kolize -> code.coding as t1 then {
+			ku_z_labType.kolize -> t1.system = 'https://dasta.mzcr.cz/DSAJT.htm' "rule66";
+	// ku_z_labType.kolize 0-> code.coding.code
+
+
+			ku_z_labType.kolize as x -> t1.code = x "rule67";
+	// ku_z_labType.akreditace 0-> code.coding
+		} "rule68";
+
+
+	// ku_z_labType.akreditace 0-> code.coding.code
+
+		ku_z_labType.akreditace -> code.coding as t1 then {
+			ku_z_labType.akreditace as x -> t1.code = x "rule69";
+	// ku_z_labType.akreditace_t 0-> code.coding.display
+
+
+			ku_z_labType.akreditace_t as x -> t1.display = x "rule70";
+	// ku_z_labType.id_jrc 0-> code.coding
+		} "rule71";
+
+
+	// 'https://covid-19-diagnostics.jrc.ec.europa.eu/devices?target_type=6' 0-> code.coding.system
+
+		ku_z_labType.id_jrc -> code.coding as t1 then {
+			ku_z_labType.id_jrc -> t1.system = 'https://covid-19-diagnostics.jrc.ec.europa.eu/devices?target_type=6' "rule72";
+	// ku_z_labType.id_jrc 0-> code.coding.code.id
+
+			ku_z_labType.id_jrc -> t1.code as t2 then {
+				ku_z_labType.id_jrc as x -> t2.id = x "rule73";
+	// ku_z_labType.set_text 0-> code.coding.code
+
+
+				ku_z_labType.set_text as x -> t1.code = x "rule74";
+	// ku_z_labType.vyrobce_text 0-> code.coding.display
+
+
+				ku_z_labType.vyrobce_text as x -> t1.display = x "rule75";
+	// ku_z_labType.duverne 0-> code.coding
+			} "rule76";
+		} "rule77";
+
+
+	// ku_z_labType.duverne 0-> code.coding.code
+
+		ku_z_labType.duverne -> code.coding as t1 then {
+			ku_z_labType.duverne as x -> t1.code = x "rule78";
+	// ku_z_labType.duverne 0-> code.coding.display
+
+
+			ku_z_labType.duverne as x -> t1.display = translate(x,'#cm3383','code') "rule79";
+	// ku_z_labType.typ_obalu 0-> code.coding
+		} "rule80";
+
+
+	// 'https://dasta.mzcr.cz/DSAJU.htm' 0-> code.coding.system
+
+		ku_z_labType.typ_obalu -> code.coding as t1 then {
+			ku_z_labType.typ_obalu -> t1.system = 'https://dasta.mzcr.cz/DSAJU.htm' "rule81";
+	// ku_z_labType.typ_obalu 0-> code.coding.code
+
+
+			ku_z_labType.typ_obalu as x -> t1.code = x "rule82";
+	// ku_z_labType.nazev_lclp.txt 0-> code.text
+		} "rule83";
+		ku_z_labType.nazev_lclp as s2 -> code then {
+			s2.txt as x -> code.text = x "rule84";
+		} "rule85";
+}
+group vrx(source effectiveDateTime: Observation, source patientReference: Reference, source vrxType: vrxType, source ku_z_labType: ku_z_labType,target compositionObservationSection, target bundle: Bundle){
+	vrxType -> bundle.entry as entry then {
+	// c3704 0-> entry.fullUrl
+
+
+		// vrxType.guid 1-> entry.fullUrl
+
+
+	// c3704 0-> entry.fullUrl
+		vrxType.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+
+	// 'final' 0-> entry.resource.Observation.status
+
+		effectiveDateTime -> entry.resource=create('Observation') as t1 then {
+			effectiveDateTime -> t1.status = 'final' "rule2";
+	// c3242.code.txt 0-> entry.resource.Observation.code
+
+
+		// ku_z_labType 1-> entry.resource.Observation.code
+
+
+		// vrxType.nazvy 1-> entry.resource.Observation.code
+
+
+	// c3242.code.txt 0-> entry.resource.Observation.code
+			vrxType.nazvy as x1 -> t1.code as y then ku_z_lab_code(x1,ku_z_labType,y) "rule3";
+		} "rule4";
+	// patientReference 0-> entry.resource.Observation.subject
+
+		effectiveDateTime -> entry.resource=create('Observation') as t1 then {
+			patientReference as x -> t1.subject = x "rule5";
+	// effectiveDateTime 0-> entry.resource.Observation.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule6";
+	// vrxType.hodnota_nt.txt 0-> entry.resource.Observation.valueString
+
+			vrxType.hodnota_nt as s4 -> t1 then {
+				s4.txt as x -> t1.valueString = x "rule7";
+	// vrxType.pozn.txt 0-> entry.resource.Observation.note
+			} "rule8";
+			vrxType.pozn as s4 -> t1 then {
+
+	// vrxType.pozn.txt 0-> entry.resource.Observation.note.text
+
+				s4.txt -> t1.note as t2 then {
+					s4.txt as x -> t2.text = x "rule9";
+	// c3699 0-> entry.resource.Observation.specimen.reference
+
+					s4.txt -> t1.specimen as t3 then {
+		// ku_z_labType.guid 1-> entry.resource.Observation.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.Observation.specimen.reference
+
+
+	// c3699 0-> entry.resource.Observation.specimen.reference
+						ku_z_labType.guid as x1 -> t3 then {
+							ku_z_labType.vguid as x2 -> t3.reference =append('Specimen/',x1,'/_history/',x2) "rule10";
+						} "ochliveno";
+					} "rule11";
+				} "rule12";
+			} "rule13";
+		} "rule14";
+	} "Bundle.entry";
+}
+group vrb(source effectiveDateTime: Observation, source patientReference: Reference, source vrbType: vrbType, source ku_z_labType: ku_z_labType,target compositionObservationSection, target bundle: Bundle){
+	vrbType -> bundle.entry as entry then {
+	// c3722 0-> entry.fullUrl
+
+
+		// vrbType.guid 1-> entry.fullUrl
+
+
+	// c3722 0-> entry.fullUrl
+		vrbType.guid as x1 -> entry.fullUrl=append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+
+	// 'final' 0-> entry.resource.Observation.status
+
+		effectiveDateTime -> entry.resource=create('Observation') as t1 then {
+			effectiveDateTime -> t1.status = 'final' "rule2";
+	// c3253.code.txt 0-> entry.resource.Observation.code
+
+
+		// ku_z_labType 1-> entry.resource.Observation.code
+
+
+		// vrbType.nazvy 1-> entry.resource.Observation.code
+
+
+	// c3253.code.txt 0-> entry.resource.Observation.code
+			vrbType.nazvy as x1 -> t1.code as y then ku_z_lab_code(x1,ku_z_labType,y) "rule3";
+		} "rule4";
+	// patientReference 0-> entry.resource.Observation.subject
+
+		effectiveDateTime -> entry.resource=create('Observation') as t1 then {
+			patientReference as x -> t1.subject = x "rule5";
+	// effectiveDateTime 0-> entry.resource.Observation.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule6";
+	// vrbType.typ_vzniku 0-> entry.resource.Observation.performer.reference
+
+			effectiveDateTime -> t1.performer as t2 then {
+				vrbType.typ_vzniku as x -> t2.reference = x "rule7";
+	// vrbType.typ_vzniku 0-> entry.resource.Observation.performer.display
+
+
+				vrbType.typ_vzniku as x -> t2.display = translate(x,'#cm3261','code') "rule8";
+	// vrbType.misto_vzniku 0-> entry.resource.Observation.performer.reference
+
+
+				vrbType.misto_vzniku as x -> t2.reference = x "rule9";
+	// vrbType.misto_vzniku 0-> entry.resource.Observation.performer.display
+
+
+				vrbType.misto_vzniku as x -> t2.display = translate(x,'#cm3260','code') "rule10";
+	// vrbType.autorizace 0-> entry.resource.Observation.performer.reference
+
+
+				vrbType.autorizace as x -> t2.reference = x "rule11";
+	// vrbType.autorizace 0-> entry.resource.Observation.performer.display
+
+
+				vrbType.autorizace as x -> t2.display = translate(x,'#cm3262','code') "rule12";
+	// vrbType.text.ptext.txt 0-> entry.resource.Observation.note.text
+			} "rule13";
+			effectiveDateTime -> t1.note as t2 then {
+				vrbType.text as s4 -> t2 then {
+					s4.ptext as s5 -> t2 then {
+						s5.txt as x -> t2.text = x "rule14";
+	// c3691 0-> entry.resource.Observation.specimen.reference
+
+						effectiveDateTime -> t1.specimen as t3 then {
+		// ku_z_labType.guid 1-> entry.resource.Observation.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.Observation.specimen.reference
+
+
+	// c3691 0-> entry.resource.Observation.specimen.reference
+							ku_z_labType.guid as x1 -> t3 then {
+								ku_z_labType.vguid as x2 -> t3.reference=append('Specimen/',x1,'/_history/',x2) "rule15";
+							} "ochliveno";
+						} "rule16";
+					} "rule17";
+				} "rule18";
+			} "rule19";
+		} "rule20";
+	} "Bundle.entry";
+}
+group vrr(source effectiveDateTime: Observation, source patientReference: Reference, source vrrType: vrrType, source ku_z_labType: ku_z_labType, target bundle: Bundle){
+	vrrType -> bundle.entry as entry then {
+	// c3708 0-> entry.fullUrl
+
+
+		// vrrType.guid 1-> entry.fullUrl
+
+
+	// c3708 0-> entry.fullUrl
+		vrrType.guid as x1 -> entry.fullUrl =append('DiagnosticReport/',x1)  "rule1";
+
+	// 'Generated' 0-> entry.resource.DiagnosticReport.text.status
+
+		effectiveDateTime -> entry.resource=create('DiagnosticReport') as t1 then {
+			effectiveDateTime -> t1.text as t2 then {
+				effectiveDateTime -> t2.status = 'Generated' "rule2";
+	// vrrType.text.ptext.space 0-> entry.resource.DiagnosticReport.text.div.lang
+
+				effectiveDateTime -> t2 then {
+					vrrType.text as s4 -> t2 then {
+						s4.ptext as s5 -> t2 then {
+							//s5.space as x -> t3.lang = x "rule3";
+	// vrrType.text.ptext 0-> entry.resource.DiagnosticReport.text.div.#text
+							s5.txt as x -> t2.div = append('<div>',x,'</div>') "rule5";
+						} "rule4";
+
+						
+	// 'final' 0-> entry.resource.DiagnosticReport.status
+					} "rule6";
+				} "rule7";
+			} "rule8";
+
+			effectiveDateTime -> t1.status = 'final' "rule9";
+	// vrrType.rad_zahlavi 0-> entry.resource.DiagnosticReport.category.coding
+
+			effectiveDateTime -> t1.category as t2 then {
+
+	// vrrType.rad_zahlavi 0-> entry.resource.DiagnosticReport.category.coding.code
+
+				vrrType.rad_zahlavi -> t2.coding as t3 then {
+					vrrType.rad_zahlavi as x -> t3.code = x "rule10";
+	// vrrType.rad_paty 0-> entry.resource.DiagnosticReport.category.coding
+				} "rule11";
+
+
+	// vrrType.rad_paty 0-> entry.resource.DiagnosticReport.category.coding.code
+
+				vrrType.rad_paty -> t2.coding as t3 then {
+					vrrType.rad_paty as x -> t3.code = x "rule12";
+	// vrrType.poc_stran 0-> entry.resource.DiagnosticReport.category.coding
+				} "rule13";
+
+
+	// vrrType.poc_stran 0-> entry.resource.DiagnosticReport.category.coding.code
+
+				vrrType.poc_stran -> t2.coding as t3 then {
+					vrrType.poc_stran as x -> t3.code = x "rule14";
+	// c3267.code.txt 0-> entry.resource.DiagnosticReport.code
+
+
+		// ku_z_labType 1-> entry.resource.DiagnosticReport.code
+
+
+	// c3267.code.txt 0-> entry.resource.DiagnosticReport.code
+					vrrType.poc_stran -> t1.code as y then ku_z_lab_code_without_nazvyType(ku_z_labType,y) "rule15";
+				} "rule16";
+			} "rule17";
+		
+			patientReference as x -> t1.subject = x "rule19";
+	// effectiveDateTime 0-> entry.resource.DiagnosticReport.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule20";
+	// vrrType.autorizace 0-> entry.resource.DiagnosticReport.performer.reference
+
+			effectiveDateTime -> t1.performer as t2 then {
+				vrrType.autorizace as x -> t2.reference = x "rule21";
+	// vrrType.autorizace 0-> entry.resource.DiagnosticReport.performer.display
+
+
+				vrrType.autorizace as x -> t2.display = translate(x,'#cm3274','code') "rule22";
+	// c3697 0-> entry.resource.DiagnosticReport.specimen.reference
+
+				effectiveDateTime -> t1.specimen as t3 then {
+		// ku_z_labType.guid 1-> entry.resource.DiagnosticReport.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.DiagnosticReport.specimen.reference
+
+
+	// c3697 0-> entry.resource.DiagnosticReport.specimen.reference
+					ku_z_labType.guid as x1 -> t3 then{
+						ku_z_labType.vguid as x2 -> t3.reference=append('Specimen/',x1,'/_history/',x2) "rule23";
+					} "ochliveno";
+				} "rule24";
+			} "rule25";
+		} "rule26";
+	} "Bundle.entry";
+}
+group vrp(source patientReference: Reference, source effectiveDateTime: Observation, source vrpType: vrpType, source ku_z_labType: ku_z_labType,target compositionObservationSection, target bundle: Bundle){
+	vrpType -> bundle.entry as entry then {
+	// c3710 0-> entry.fullUrl
+
+
+		// vrpType.guid 1-> entry.fullUrl
+
+
+	// c3710 0-> entry.fullUrl
+		vrpType.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+
+	// 'final' 0-> entry.resource.Observation.status
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			patientReference -> t1.status = 'final' "rule2";
+	// c3289.code.txt 0-> entry.resource.Observation.code
+
+
+		// ku_z_labType 1-> entry.resource.Observation.code
+
+
+		// vrpType.nazvy 1-> entry.resource.Observation.code
+
+
+	// c3289.code.txt 0-> entry.resource.Observation.code
+			vrpType.nazvy as x1 -> t1.code as y then ku_z_lab_code(x1,ku_z_labType,y) "rule3";
+		} "rule4";
+	// patientReference 0-> entry.resource.Observation.subject
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			patientReference as x -> t1.subject = x "rule5";
+	// effectiveDateTime 0-> entry.resource.Observation.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule6";
+	// c3696 0-> entry.resource.Observation.specimen.reference
+
+			patientReference -> t1.specimen as t2 then {
+		// ku_z_labType.guid 1-> entry.resource.Observation.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.Observation.specimen.reference
+
+
+	// c3696 0-> entry.resource.Observation.specimen.reference
+				ku_z_labType.guid as x1 -> t2 then {
+					ku_z_labType.vguid as x2 -> t2.reference =append('Specimen/',x1,'/_history/',x2) "rule7";
+				} "ochliveno";
+			} "rule8";
+		} "rule9";
+	} "Bundle.entry";
+}
+group vrc(source patientReference: Reference, source effectiveDateTime: Observation, source vrcType: vrcType, source ku_z_labType: ku_z_labType, target compositionObservationSection, target bundle: Bundle){
+	vrcType -> bundle.entry as entry then {
+	// c3720 0-> entry.fullUrl
+
+
+		// vrcType.guid 1-> entry.fullUrl
+
+
+	// c3720 0-> entry.fullUrl
+		vrcType.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+
+	// vrcType.jednotka 0-> entry.resource.Observation.extension
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+
+	// 'https://dasta.mzcr.cz/MZBEH.htm' 0-> entry.resource.Observation.extension.url
+
+			vrcType.jednotka -> t1.extension as t2 then {
+				vrcType.jednotka -> t2.url = 'https://dasta.mzcr.cz/MZBEH.htm' "rule2";
+	// vrcType.hodnota 0-> entry.resource.Observation.extension.valueQuantity.value
+
+				vrcType.jednotka -> t2.valueQuantity as t3 then {
+					vrcType.hodnota as x -> t3.value = x "rule3";
+	// vrcType.jednotka 0-> entry.resource.Observation.extension.valueQuantity.unit
+
+
+					vrcType.jednotka as x -> t3.unit = x "rule4";
+	// 'final' 0-> entry.resource.Observation.status
+				} "rule5";
+			} "rule6";
+
+			vrcType.jednotka -> t1.status = 'final' "rule7";
+	// c3300.code.txt 0-> entry.resource.Observation.code
+
+
+		// ku_z_labType 1-> entry.resource.Observation.code
+
+
+		// vrcType.nazvy 1-> entry.resource.Observation.code
+
+
+	// c3300.code.txt 0-> entry.resource.Observation.code
+			vrcType.nazvy as x1 -> t1.code as y then ku_z_lab_code(x1,ku_z_labType,y) "rule8";
+		} "rule9";
+	// patientReference 0-> entry.resource.Observation.subject
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			patientReference as x -> t1.subject = x "rule10";
+	// effectiveDateTime 0-> entry.resource.Observation.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule11";
+	// c3692 0-> entry.resource.Observation.specimen.reference
+
+			patientReference -> t1.specimen as t2 then {
+		// ku_z_labType.guid 1-> entry.resource.Observation.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.Observation.specimen.reference
+
+
+	// c3692 0-> entry.resource.Observation.specimen.reference
+				ku_z_labType.guid as x1 -> "t2" then {
+					ku_z_labType.vguid as x2 -> t2.reference =append('Specimen/',x1,'/_history/',x2) "rule12";
+				} "ochliveno";
+			} "rule13";
+		} "rule14";
+	} "Bundle.entry";
+}
+group vrd(source effectiveDateTime: Observation, source vrdType: vrdType, source ku_z_labType: ku_z_labType, source patientReference: Reference, target bundle: Bundle){
+	vrdType -> bundle.entry as entry then {
+	// c3718 0-> entry.fullUrl
+
+
+		// vrdType.guid 1-> entry.fullUrl
+
+
+	// c3718 0-> entry.fullUrl
+		vrdType.guid as x1 -> entry.fullUrl =append('DiagnosticReport/',x1) "rule1";
+
+	// 'https://dasta.mzcr.cz/DSACW.htm' 0-> entry.resource.DiagnosticReport.extension.url
+
+		effectiveDateTime -> entry.resource=create('DiagnosticReport') as t1 then {
+			effectiveDateTime -> t1.extension as t2 then {
+				effectiveDateTime -> t2.url = 'https://dasta.mzcr.cz/DSACW.htm' "rule2";
+	// vrdType.dat_dv.txt 0-> entry.resource.DiagnosticReport.extension.valueDate
+
+				vrdType.dat_dv as s4 -> t2 then {
+					s4.txt as x -> t2.valueDate = x "rule3";
+	// 'Partial' 0-> entry.resource.DiagnosticReport.status
+				} "rule4";
+			} "rule5";
+
+			effectiveDateTime -> t1.status = 'Partial' "rule6";
+	// c3310.code.txt 0-> entry.resource.DiagnosticReport.code
+
+
+		// ku_z_labType 1-> entry.resource.DiagnosticReport.code
+
+
+		// vrdType.nazvy 1-> entry.resource.DiagnosticReport.code
+
+
+	// c3310.code.txt 0-> entry.resource.DiagnosticReport.code
+			vrdType.nazvy as x1 -> t1.code as y then ku_z_lab_code(x1,ku_z_labType,y) "rule7";
+		} "rule8";
+	// patientReference 0-> entry.resource.DiagnosticReport.subject
+
+		effectiveDateTime -> entry.resource=create('DiagnosticReport') as t1 then {
+			patientReference as x -> t1.subject = x "rule9";
+	// effectiveDateTime 0-> entry.resource.DiagnosticReport.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule10";
+	// c3693 0-> entry.resource.DiagnosticReport.specimen.reference
+
+			effectiveDateTime -> t1.specimen as t2 then {
+		// ku_z_labType.guid 1-> entry.resource.DiagnosticReport.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.DiagnosticReport.specimen.reference
+
+
+	// c3693 0-> entry.resource.DiagnosticReport.specimen.reference
+				ku_z_labType.guid as x1 -> t2 then {
+					ku_z_labType.vguid as x2 -> t2.reference =append('Specimen/',x1,'/_history/',x2) "rule11";
+				} "jebnuty";
+			} "rule12";
+		} "rule13";
+	} "Bundle.entry";
+}
+group vrk(source patientReference: Reference, source vrkType: vrkType, source ku_z_labType: ku_z_labType, target compositionObservationSection, target bundle: Bundle){
+	vrkType -> bundle.entry as entry then {
+	// c3688 0-> entry.fullUrl
+
+
+		// vrkType.guid 1-> entry.fullUrl
+
+		//vrkType.guid as x1 -> compositionObservationSection then addEntryToSection(x1, compositionObservationSection) "rule1";
+	// c3688 0-> entry.fullUrl
+		vrkType.guid as x1 -> entry.fullUrl =append('DiagnosticReport/',x1) "rule1";
+		
+	// vrkType.guid 0-> entry.resource.DiagnosticReport.id
+
+		patientReference -> entry.resource=create('DiagnosticReport') as t1 then {
+			vrkType.guid as x -> t1.id = x "rule2";
+	// 'final' 0-> entry.resource.DiagnosticReport.status
+
+
+			patientReference -> t1.status = 'final' "rule3";
+	// '18725-2' 0-> entry.resource.DiagnosticReport.code.coding.code
+
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.code = '18725-2' "rule4";
+	// 'Mikrobiologické laboratorní vyšetření' 0-> entry.resource.DiagnosticReport.code.coding.display
+
+
+					patientReference -> t3.display = 'Mikrobiologické laboratorní vyšetření' "rule5";
+	// vrkType.systspec_kod 0-> entry.resource.DiagnosticReport.code.coding
+				} "rule6";
+
+
+	// 'https://dasta.mzcr.cz/DSAKQ.htm' 0-> entry.resource.DiagnosticReport.code.coding.system
+
+				vrkType.systspec_kod -> t2.coding as t3 then {
+					vrkType.systspec_kod -> t3.system = 'https://dasta.mzcr.cz/DSAKQ.htm' "rule7";
+	// vrkType.systspec_kod 0-> entry.resource.DiagnosticReport.code.coding.code
+
+
+					vrkType.systspec_kod as x -> t3.code = x "rule8";
+	// vrkType.spec_text 0-> entry.resource.DiagnosticReport.code.coding
+				} "rule9";
+
+
+	// 'Subspec' 0-> entry.resource.DiagnosticReport.code.coding.system
+
+				vrkType.spec_text -> t2.coding as t3 then {
+					vrkType.spec_text -> t3.system = 'Subspec' "rule10";
+	// vrkType.spec_text 0-> entry.resource.DiagnosticReport.code.coding.code
+
+
+					vrkType.spec_text as x -> t3.code = x "rule11";
+	// vrkType.subspec_text 0-> entry.resource.DiagnosticReport.code.coding.display
+
+
+					vrkType.subspec_text as x -> t3.display = x "rule12";
+	// vrkType.info_s 0-> entry.resource.DiagnosticReport.code.coding
+				} "rule13";
+
+
+	// vrkType.info_s 0-> entry.resource.DiagnosticReport.code.coding.code
+
+				vrkType.info_s -> t2.coding as t3 then {
+					vrkType.info_s as x -> t3.code = x "rule14";
+	// vrkType.info_s 0-> entry.resource.DiagnosticReport.code.coding.display
+
+
+					vrkType.info_s as x -> t3.display = translate(x,'#cm3334','code') "rule15";
+	// vrkType.sez 0-> entry.resource.DiagnosticReport.code.coding.code
+
+
+					vrkType.sez as x -> t3.code = x "rule16";
+	// vrkType.sez 0-> entry.resource.DiagnosticReport.code.coding.display
+
+
+					vrkType.sez as x -> t3.display = translate(x,'#cm3597','code') "rule17";
+	// c3324.code.coding.txt 0-> entry.resource.DiagnosticReport.code.coding
+
+
+		// ku_z_labType 1-> entry.resource.DiagnosticReport.code.coding
+
+
+		// vrkType.nazvy 1-> entry.resource.DiagnosticReport.code.coding
+
+
+	// c3324.code.coding.txt 0-> entry.resource.DiagnosticReport.code.coding
+					vrkType.nazvy as x1 -> t2 then ku_z_lab_code(x1,ku_z_labType,t2) "rule18";
+				} "rule19";
+			} "rule20";
+		
+			patientReference as x -> t1.subject = x "rule22";
+	// ku_z_labType.dat_vv.txt 0-> entry.resource.DiagnosticReport.effectiveDateTime
+
+			ku_z_labType.dat_vv as s3 -> t1 then {
+				s3.txt as x -> t1.effectiveDateTime = x "rule23";
+	// c3595 0-> entry.resource.DiagnosticReport.specimen.reference
+
+				patientReference -> t1.specimen as t2 then {
+		// ku_z_labType.guid 1-> entry.resource.DiagnosticReport.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.DiagnosticReport.specimen.reference
+
+
+	// c3595 0-> entry.resource.DiagnosticReport.specimen.reference
+					ku_z_labType.guid as x1 -> t2 then {
+						ku_z_labType.vguid as x2 -> t2.reference =append('Specimen/',x1,'/_history/',x2) "rule24";
+					} "ktery";
+				} "rule25";
+			} "rule26";
+		
+			vrkType.vrmp as s3 -> t1 then {
+				s3.txt as x -> t1.conclusion = x "rule28";
+	// c3561.entry.txt 0-> entry
+
+
+		// patientReference 1-> entry
+
+
+		// c3595 1-> entry
+
+
+			// ku_z_labType.guid 2-> entry
+
+
+			// ku_z_labType.vguid 2-> entry
+
+
+		// c3595 1-> entry
+				ku_z_labType.guid as x1 -> entry then {
+				  ku_z_labType.vguid as x2 -> append('Specimen/',x1,'/_history/',x2) as specimenRef then {
+
+						vrkType.vrkpa as vrkpa -> entry then vrk_vrkpa(specimenRef,patientReference,vrkpa,compositionObservationSection,bundle) "rule31";
+					
+				  } "ochliveno";
+				}"rule29";
+			} "rule33";
+		} "rule34";
+	// 'final' 0-> entry.resource.Observation.status
+	} "Bundle.entry";
+	vrkType -> bundle.entry as entry then {
+		vrkType.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "guid";
+		
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			vrkType.guid as x1 -> t1.id = x1 "id";
+			patientReference -> t1.status = 'final' "rule35";
+	// 'Kompletní mikrobiologický nález' 0-> entry.resource.Observation.code.text
+
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.text = 'Kompletní mikrobiologický nález' "rule36";
+	// c3595 0-> entry.resource.Observation.specimen.reference
+
+				ku_z_labType.guid as x1 -> t1.specimen as t3 then {
+		// ku_z_labType.guid 1-> entry.resource.Observation.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.Observation.specimen.reference
+
+
+	// c3595 0-> entry.resource.Observation.specimen.reference
+					ku_z_labType.vguid as x2 -> t3.reference =append('Specimen/',x1,'/_history/',x2) "rule37";
+				} "rule38";
+			} "rule39";
+	
+			patientReference -> t1.component as t2 then {
+				patientReference -> t2.code as t3 then {
+					patientReference -> t3.text = 'Mikroskopický nález' "rule41";
+	// vrkType.vrmmn.txt 0-> entry.resource.Observation.component.valueString
+				} "rule42";
+				vrkType.vrmmn as s3 -> t2 then {
+					s3.txt as x -> t2.valueString = x "rule43";
+	// 'automatické hodnocení kompletního nálezu' 0-> entry.resource.Observation.component.code.text
+				} "rule44";
+			} "rule45";
+			patientReference -> t1.component as t2 then {
+				patientReference -> t2.code as t3 then {
+					patientReference -> t3.text = 'automatické hodnocení kompletního nálezu' "rule46";
+	// vrkType.vrmahn.txt 0-> entry.resource.Observation.component.valueString
+				} "rule47";
+				vrkType.vrmahn as s3 -> t2 then {
+					s3.txt as x -> t2.valueString = x "rule48";
+	// 'laboratorní poznámka k celému nálezu' 0-> entry.resource.Observation.component.code.text
+				} "rule49";
+			} "rule50";
+			patientReference -> t1.component as t2 then {
+				patientReference -> t2.code as t3 then {
+					patientReference -> t3.text = 'laboratorní poznámka k celému nálezu' "rule51";
+	// vrkType.vrmlpn.txt 0-> entry.resource.Observation.component.valueString
+				} "rule52";
+				vrkType.vrmlpn as s3 -> t2 then {
+					s3.txt as x -> t2.valueString = x "rule53";
+	// 'závěrečné hodnocení kompletního nálezu lékařem' 0-> entry.resource.Observation.component.code.text
+				} "rule54";
+			} "rule55";
+			patientReference -> t1.component as t2 then {
+				patientReference -> t2.code as t3 then {
+					patientReference -> t3.text = 'závěrečné hodnocení kompletního nálezu lékařem' "rule56";
+	// vrkType.vrmzhl.txt 0-> entry.resource.Observation.component.valueString
+				} "rule57";
+				vrkType.vrmzhl as s3 -> t2 then {
+					s3.txt as x -> t2.valueString = x "rule58";
+				} "rule59";
+			} "rule60";
+		} "rule61";
+	} "Bundle.entry";
+}
+group vro(source effectiveDateTime: Observation, source patientReference: Reference, source vroType: vroType, source ku_z_labType: ku_z_labType, target bundle: Bundle){
+	vroType -> bundle.entry as entry then {
+	// c3712 0-> entry.fullUrl
+
+
+		// vroType.guid 1-> entry.fullUrl
+
+
+	// c3712 0-> entry.fullUrl
+		vroType.guid as x1 -> entry.fullUrl =append('DiagnosticReport/',x1) "rule1";
+
+	// 'final' 0-> entry.resource.DiagnosticReport.status
+
+		effectiveDateTime -> entry.resource=create('DiagnosticReport') as t1 then {
+			effectiveDateTime -> t1.status = 'final' "rule2";
+	// c3351.code.txt 0-> entry.resource.DiagnosticReport.code
+
+
+		// ku_z_labType 1-> entry.resource.DiagnosticReport.code
+
+
+		// vroType.nazvy 1-> entry.resource.DiagnosticReport.code
+
+
+	// c3351.code.txt 0-> entry.resource.DiagnosticReport.code
+			vroType.nazvy as x1 -> t1.code as y then ku_z_lab_code(x1,ku_z_labType,y) "rule3";
+		} "rule4";
+	// patientReference 0-> entry.resource.DiagnosticReport.subject
+
+		effectiveDateTime -> entry.resource=create('DiagnosticReport') as t1 then {
+			patientReference as x -> t1.subject = x "rule5";
+	// effectiveDateTime 0-> entry.resource.DiagnosticReport.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule6";
+	// c3695 0-> entry.resource.DiagnosticReport.specimen.reference
+
+			effectiveDateTime -> t1.specimen as t2 then {
+		// ku_z_labType.guid 1-> entry.resource.DiagnosticReport.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.DiagnosticReport.specimen.reference
+
+
+	// c3695 0-> entry.resource.DiagnosticReport.specimen.reference
+				ku_z_labType.guid as x1 -> t2 then {
+					ku_z_labType.vguid as x2 -> t2.reference=append('Specimen/',x1,'/_history/',x2) "rule7";
+				} "vymysleli";
+			} "rule8";
+		} "rule9";
+	// vroType.text.ptext.txt 0-> entry.resource.DiagnosticReport.conclusion
+
+		effectiveDateTime -> entry.resource=create('DiagnosticReport') as t1 then {
+			vroType.text as s4 -> t1 then {
+				s4.ptext as s5 -> t1 then {
+					s5.txt as x -> t1.conclusion = x "rule10";
+	// vroType.priloha 0-> entry.resource.DiagnosticReport.presentedForm
+				} "rule11";
+			} "rule12";
+
+			vroType.priloha as x -> t1.presentedForm = x "rule13";
+	// vroType.priloha.typ 0-> entry.resource.DiagnosticReport.presentedForm.contentType
+
+			effectiveDateTime -> t1.presentedForm as t2 then {
+				vroType.priloha as s4 -> t2 then {
+					s4.typ as x -> t2.contentType = x "rule14";
+	// vroType.priloha.zdroj 0-> entry.resource.DiagnosticReport.presentedForm.url
+
+
+					s4.zdroj as x -> t2.url = x "rule15";
+	// vroType.priloha 0-> entry.resource.DiagnosticReport.presentedForm.title
+				} "rule16";
+
+				vroType.priloha as x -> t2.title = x "rule17";
+	// vroType.int_pril 0-> entry.resource.DiagnosticReport.presentedForm
+			} "rule18";
+
+			vroType.int_pril as x -> t1.presentedForm = x "rule19";
+	// vroType.int_pril.typ 0-> entry.resource.DiagnosticReport.presentedForm.contentType
+
+			effectiveDateTime -> t1.presentedForm as t2 then {
+				vroType.int_pril as s4 -> t2 then {
+					s4.typ as x -> t2.contentType = x "rule20";
+	// y0 0-> entry.resource.DiagnosticReport.presentedForm.data
+				} "rule21";
+
+				y0 as x -> t2.data = x "rule22";
+	// y0 0-> entry.resource.DiagnosticReport.presentedForm.url
+
+
+				y0 as x -> t2.url = x "rule23";
+	// vroType.int_pril.nazev 0-> entry.resource.DiagnosticReport.presentedForm.title
+
+				vroType.int_pril as s4 -> t2 then {
+					s4.nazev as x -> t2.title = x "rule24";
+				} "rule25";
+			} "rule26";
+		} "rule27";
+	} "Bundle.entry";
+}
+group vrz(source patientReference: Reference, source effectiveDateTime: Observation, source vrzType: vrzType, source ku_z_labType: ku_z_labType, target bundle: Bundle){
+	vrzType -> bundle.entry as entry then {
+	// c3702 0-> entry.fullUrl
+
+
+		// vrzType.guid 1-> entry.fullUrl
+
+
+	// c3702 0-> entry.fullUrl
+		vrzType.guid as x1 -> entry.fullUrl =append('DiagnosticReport/',x1) "rule1";
+
+	// 'final' 0-> entry.resource.DiagnosticReport.status
+
+		patientReference -> entry.resource=create('DiagnosticReport') as t1 then {
+			patientReference -> t1.status = 'final' "rule2";
+	// c3361.code.txt 0-> entry.resource.DiagnosticReport.code
+
+
+		// ku_z_labType 1-> entry.resource.DiagnosticReport.code
+
+
+	// c3361.code.txt 0-> entry.resource.DiagnosticReport.code
+			patientReference -> t1.code as y then ku_z_lab_code_without_nazvyType(ku_z_labType,y) "rule3";
+		} "rule4";
+	// patientReference 0-> entry.resource.DiagnosticReport.subject
+
+		patientReference -> entry.resource=create('DiagnosticReport') as t1 then {
+			patientReference as x -> t1.subject = x "rule5";
+	// effectiveDateTime 0-> entry.resource.DiagnosticReport.effectiveDateTime
+
+
+			effectiveDateTime as x -> t1.effectiveDateTime = x "rule6";
+	// c3700 0-> entry.resource.DiagnosticReport.specimen.reference
+
+			patientReference -> t1.specimen as t2 then {
+		// ku_z_labType.guid 1-> entry.resource.DiagnosticReport.specimen.reference
+
+
+		// ku_z_labType.vguid 1-> entry.resource.DiagnosticReport.specimen.reference
+
+
+	// c3700 0-> entry.resource.DiagnosticReport.specimen.reference
+				ku_z_labType.guid as x1 -> t2 then {
+					 ku_z_labType.vguid as x2 -> t2.reference =append('Specimen/',x1,'/_history/',x2) "rule7";
+				} "tuhle";
+			} "rule8";
+		} "rule9";
+	// vrzType.text.ptext.txt 0-> entry.resource.DiagnosticReport.conclusion
+
+		patientReference -> entry.resource=create('DiagnosticReport') as t1 then {
+			vrzType.text as s4 -> t1 then {
+				s4.ptext as s5 -> t1 then {
+					s5.txt as x -> t1.conclusion = x "rule10";
+				} "rule11";
+			} "rule12";
+		} "rule13";
+	} "Bundle.entry";
+}
+group vrk_vrkpa(source SpecimenReference: string, source patientReference: Reference, source vrkpa: ku_z_labType, target compositionObservationSection, target bundle: Bundle){
+	vrkpa -> bundle.entry as entry then {
+	// vrkpa 0-> entry
+	// c3686 0-> entry.fullUrl
+
+
+		// vrkpa.guid 1-> entry.fullUrl
+
+
+	// c3686 0-> entry.fullUrl
+		vrkpa.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule2";
+
+	// vrkpa.guid 0-> entry.resource.Observation.id
+
+		SpecimenReference -> entry.resource=create('Observation') as t1 then {
+			vrkpa.guid as x -> t1.id = x "rule3";
+	// 'final' 0-> entry.resource.Observation.status
+
+
+			SpecimenReference -> t1.status = 'final' "rule4";
+	// 'https://dasta.mzcr.cz/DSAKM.htm' 0-> entry.resource.Observation.code.coding.system
+
+			SpecimenReference -> t1.code as t2 then {
+				SpecimenReference -> t2.coding as t3 then {
+					SpecimenReference -> t3.system = 'https://dasta.mzcr.cz/DSAKM.htm' "rule5";
+	// vrkpa.agens_kod 0-> entry.resource.Observation.code.coding.code
+
+
+					vrkpa.agens_kod as x -> t3.code = x "rule6";
+	// vrkpa.agens_text 0-> entry.resource.Observation.code.coding.display
+
+
+					vrkpa.agens_text as x -> t3.display = x "rule7";
+	// 'https://dasta.mzcr.cz/DSAKM.htm' 0-> entry.resource.Observation.code.coding.system
+
+
+					SpecimenReference -> t3.system = 'https://dasta.mzcr.cz/DSAKM.htm' "rule8";
+	// vrkpa.agens_snmd_k 0-> entry.resource.Observation.code.coding.code
+
+
+					vrkpa.agens_snmd_k as x -> t3.code = x "rule9";
+	// patientReference 0-> entry.resource.Observation.subject
+				} "rule10";
+			} "rule11";
+
+			patientReference as x -> t1.subject = x "rule12";
+	// 'https://dasta.mzcr.cz/DSAHS.htm' 0-> entry.resource.Observation.valueCodeableConcept.coding.system
+
+			SpecimenReference -> t1.value=create('CodeableConcept') as t2 then {
+				SpecimenReference -> t2.coding as t3 then {
+					SpecimenReference -> t3.system = 'https://dasta.mzcr.cz/DSAHS.htm' "rule13";
+	// vrkpa.pritomnost 0-> entry.resource.Observation.valueCodeableConcept.coding.code
+
+
+					vrkpa.pritomnost as x -> t3.code = x "rule14";
+	// vrkpa.pritomnost 0-> entry.resource.Observation.valueCodeableConcept.coding.display
+
+
+					vrkpa.pritomnost as x -> t3.display = translate(x,'#cm3534','code') "rule15";
+	// SpecimenReference 0-> entry.resource.Observation.specimen.reference
+				} "rule16";
+			} "rule17";
+			SpecimenReference -> t1.specimen as t2 then {
+				SpecimenReference as x -> t2.reference = x "rule18";
+	// vrkpa.vrav.guid 0-> entry.resource.Observation.hasMember
+			} "rule19";
+			vrkpa.vrav as s3 -> t1 then {
+
+	// c3563 0-> entry.resource.Observation.hasMember.reference
+
+				s3.guid as x1 -> t1.hasMember as t2 then {
+		// vrkpa.vrav.guid 1-> entry.resource.Observation.hasMember.reference
+
+
+		// vrkpa.vrav.vguid 1-> entry.resource.Observation.hasMember.reference
+
+
+	// c3563 0-> entry.resource.Observation.hasMember.reference
+					s3.vguid as x2 -> t2.reference = append('Observation/',x1,'/_history/',x2) "rule20";
+				} "rule21";
+			} "rule22";
+		
+			vrkpa.vrac as x -> t1.hasMember = x "rule24";
+	// c3565 0-> entry.resource.Observation.hasMember.reference
+
+			SpecimenReference -> t1.hasMember as t2 then {
+				vrkpa.vrac as s3 -> t2 then {
+		// vrkpa.vrac.guid 1-> entry.resource.Observation.hasMember.reference
+
+
+		// vrkpa.vrac.vguid 1-> entry.resource.Observation.hasMember.reference
+
+
+	// c3565 0-> entry.resource.Observation.hasMember.reference
+					s3.guid as x1 -> t2 then {
+						s3.vguid as x2 -> t2.reference = append('Observation/',x1,'/_history/',x2) "rule25";
+					} "ochliveno";
+				} "rule26";
+			} "rule27";
+		
+			SpecimenReference -> t1.component as t2 then {
+				SpecimenReference -> t2.code as t3 then {
+					SpecimenReference -> t3.text = 'Informace o vyšetřování agens' "rule29";
+	// 'https://dasta.mzcr.cz/DSAHR.htm' 0-> entry.resource.Observation.component.valueCodeableConcept.coding.system
+				} "rule30";
+				SpecimenReference -> t2.value=create('CodeableConcept') as t3 then {
+					SpecimenReference -> t3.coding as t4 then {
+						SpecimenReference -> t4.system = 'https://dasta.mzcr.cz/DSAHR.htm' "rule31";
+	// vrkpa.dalsi_vys 0-> entry.resource.Observation.component.valueCodeableConcept.coding.code
+
+
+						vrkpa.dalsi_vys as x -> t4.code = x "rule32";
+	// vrkpa.dalsi_vys 0-> entry.resource.Observation.component.valueCodeableConcept.coding.display
+
+
+						vrkpa.dalsi_vys as x -> t4.display = translate(x,'#cm3532','code') "rule33";
+	// vrkpa.v_mikro 0-> entry.resource.Observation.component
+					} "rule34";
+				} "rule35";
+			} "rule36";
+
+
+	// 'Vyšetření provedeno mikroskopicky' 0-> entry.resource.Observation.component.code.text
+
+			vrkpa.v_mikro -> t1.component as t2 then {
+				vrkpa.v_mikro -> t2.code as t3 then {
+					vrkpa.v_mikro -> t3.text = 'Vyšetření provedeno mikroskopicky' "rule37";
+	// vrkpa.v_mikro 0-> entry.resource.Observation.component.valueCodeableConcept.coding.code
+				} "rule38";
+				vrkpa.v_mikro -> t2.value=create('CodeableConcept') as t3 then {
+					vrkpa.v_mikro -> t3.coding as t4 then {
+						vrkpa.v_mikro as x -> t4.code = x "rule39";
+	// vrkpa.v_mikro 0-> entry.resource.Observation.component.valueCodeableConcept.coding.display
+
+
+						vrkpa.v_mikro as x -> t4.display = translate(x,'#cm3570','code') "rule40";
+	// vrkpa.v_kultiv 0-> entry.resource.Observation.component
+					} "rule41";
+				} "rule42";
+			} "rule43";
+
+
+	// 'Vyšetření provedeno kultivačně' 0-> entry.resource.Observation.component.code.text
+
+			vrkpa.v_kultiv -> t1.component as t2 then {
+				vrkpa.v_kultiv -> t2.code as t3 then {
+					vrkpa.v_kultiv -> t3.text = 'Vyšetření provedeno kultivačně' "rule44";
+	// vrkpa.v_kultiv 0-> entry.resource.Observation.component.valueCodeableConcept.coding.code
+				} "rule45";
+				vrkpa.v_kultiv -> t2.value=create('CodeableConcept') as t3 then {
+					vrkpa.v_kultiv -> t3.coding as t4 then {
+						vrkpa.v_kultiv as x -> t4.code = x "rule46";
+	// vrkpa.v_kultiv 0-> entry.resource.Observation.component.valueCodeableConcept.coding.display
+
+
+						vrkpa.v_kultiv as x -> t4.display = translate(x,'#cm3573','code') "rule47";
+	// vrkpa.v_pcr 0-> entry.resource.Observation.component
+					} "rule48";
+				} "rule49";
+			} "rule50";
+
+
+	// 'Vyšetření provedeno PCR stanovením' 0-> entry.resource.Observation.component.code.text
+
+			vrkpa.v_pcr -> t1.component as t2 then {
+				vrkpa.v_pcr -> t2.code as t3 then {
+					vrkpa.v_pcr -> t3.text = 'Vyšetření provedeno PCR stanovením' "rule51";
+	// vrkpa.v_pcr 0-> entry.resource.Observation.component.valueCodeableConcept.coding.code
+				} "rule52";
+				vrkpa.v_pcr -> t2.value=create('CodeableConcept') as t3 then {
+					vrkpa.v_pcr -> t3.coding as t4 then {
+						vrkpa.v_pcr as x -> t4.code = x "rule53";
+	// vrkpa.v_pcr 0-> entry.resource.Observation.component.valueCodeableConcept.coding.display
+
+
+						vrkpa.v_pcr as x -> t4.display = translate(x,'#cm3575','code') "rule54";
+	// vrkpa.multiplex.txt 0-> entry.resource.Observation.component.valueCodeableConcept.text
+					} "rule55";
+					vrkpa.multiplex as s3 -> t3 then {
+						s3.txt as x -> t3.text = x "rule56";
+	// vrkpa.v_seq 0-> entry.resource.Observation.component
+					} "rule57";
+				} "rule58";
+			} "rule59";
+
+
+	// 'Vyšetření provedeno sekvenačně' 0-> entry.resource.Observation.component.code.text
+
+			vrkpa.v_seq -> t1.component as t2 then {
+				vrkpa.v_seq -> t2.code as t3 then {
+					vrkpa.v_seq -> t3.text = 'Vyšetření provedeno sekvenačně' "rule60";
+	// vrkpa.v_seq 0-> entry.resource.Observation.component.valueCodeableConcept.coding.code
+				} "rule61";
+				vrkpa.v_seq -> t2.value=create('CodeableConcept') as t3 then {
+					vrkpa.v_seq -> t3.coding as t4 then {
+						vrkpa.v_seq as x -> t4.code = x "rule62";
+	// vrkpa.v_seq 0-> entry.resource.Observation.component.valueCodeableConcept.coding.display
+
+
+						vrkpa.v_seq as x -> t4.display = translate(x,'#cm3576','code') "rule63";
+	// vrkpa.v_antig 0-> entry.resource.Observation.component
+					} "rule64";
+				} "rule65";
+			} "rule66";
+
+
+	// 'Vyšetření provedeno stanovením antigenu' 0-> entry.resource.Observation.component.code.text
+
+			vrkpa.v_antig -> t1.component as t2 then {
+				vrkpa.v_antig -> t2.code as t3 then {
+					vrkpa.v_antig -> t3.text = 'Vyšetření provedeno stanovením antigenu' "rule67";
+	// vrkpa.v_antig 0-> entry.resource.Observation.component.valueCodeableConcept.coding.code
+				} "rule68";
+				vrkpa.v_antig -> t2.value=create('CodeableConcept') as t3 then {
+					vrkpa.v_antig -> t3.coding as t4 then {
+						vrkpa.v_antig as x -> t4.code = x "rule69";
+	// vrkpa.v_antig 0-> entry.resource.Observation.component.valueCodeableConcept.coding.display
+
+
+						vrkpa.v_antig as x -> t4.display = translate(x,'#cm3578','code') "rule70";
+	// vrkpa.antigen.txt 0-> entry.resource.Observation.component.valueCodeableConcept.text
+					} "rule71";
+					vrkpa.antigen as s3 -> t3 then {
+						s3.txt as x -> t3.text = x "rule72";
+	// vrkpa.kvantita 0-> entry.resource.Observation.component
+					} "rule73";
+				} "rule74";
+			} "rule75";
+
+			vrkpa.kvantita as x -> t1.component = x "rule76";
+	// 'Kvantita' 0-> entry.resource.Observation.component.code.text
+
+			vrkpa.v_antig -> t1.component as t2 then {
+				vrkpa.v_antig -> t2.code as t3 then {
+					vrkpa.v_antig -> t3.text = 'Kvantita' "rule77";
+	// vrkpa.kvantita 0-> entry.resource.Observation.component.valueQuantity.value
+				} "rule78";
+				vrkpa.v_antig -> t2.value=create('Quantity') as t3 then {
+					vrkpa.kvantita as x -> t3.value = x "rule79";
+	// vrkpa.kvantita.priznak 0-> entry.resource.Observation.component.valueQuantity.comparator
+
+					vrkpa.kvantita as s3 -> t3 then {
+						s3.priznak as x -> t3.comparator = translate(x,'#cm3541','code') "rule80";
+	// vrkpa.jednotka 0-> entry.resource.Observation.component.valueQuantity.unit
+					} "rule81";
+
+					vrkpa.jednotka as x -> t3.unit = x "rule82";
+	// vrkpa.dourceni.txt 0-> entry.resource.Observation.component
+				} "rule83";
+			} "rule84";
+			vrkpa.dourceni as s3 -> t1 then {
+
+	// 'Dourčení tohoto agens' 0-> entry.resource.Observation.component.code.text
+
+				s3.txt -> t1.component as t2 then {
+					s3.txt -> t2.code as t3 then {
+						s3.txt -> t3.text = 'Dourčení tohoto agens' "rule85";
+	// vrkpa.dourceni.txt 0-> entry.resource.Observation.component.valueString
+					} "rule86";
+
+					s3.txt as x -> t2.valueString = x "rule87";
+	// vrkpa.vrmahn.txt 0-> entry.resource.Observation.component
+				} "rule88";
+			} "rule89";
+			vrkpa.vrmahn as s3 -> t1 then {
+
+	// 'Automatické hodnocení vyšetření tohoto agens' 0-> entry.resource.Observation.component.code.text
+
+				s3.txt -> t1.component as t2 then {
+					s3.txt -> t2.code as t3 then {
+						s3.txt -> t3.text = 'Automatické hodnocení vyšetření tohoto agens' "rule90";
+	// vrkpa.vrmahn.txt 0-> entry.resource.Observation.component.valueString
+					} "rule91";
+
+					s3.txt as x -> t2.valueString = x "rule92";
+	// vrkpa.vrmlpn.txt 0-> entry.resource.Observation.component
+				} "rule93";
+			} "rule94";
+			vrkpa.vrmlpn as s3 -> t1 then {
+
+	// 'laboratorní poznámka k vyšetření tohoto agens' 0-> entry.resource.Observation.component.code.text
+
+				s3.txt -> t1.component as t2 then {
+					s3.txt -> t2.code as t3 then {
+						s3.txt -> t3.text = 'laboratorní poznámka k vyšetření tohoto agens' "rule95";
+	// vrkpa.vrmlpn.txt 0-> entry.resource.Observation.component.valueString
+					} "rule96";
+
+					s3.txt as x -> t2.valueString = x "rule97";
+	// vrkpa.vrmzhl.txt 0-> entry.resource.Observation.component
+				} "rule98";
+			} "rule99";
+			vrkpa.vrmzhl as s3 -> t1 then {
+
+	// 'závěrečné hodnocení vyšetření tohoto agens lékařem' 0-> entry.resource.Observation.component.code.text
+
+				s3.txt -> t1.component as t2 then {
+					s3.txt -> t2.code as t3 then {
+						s3.txt -> t3.text = 'závěrečné hodnocení vyšetření tohoto agens lékařem' "rule100";
+	// vrkpa.vrmzhl.txt 0-> entry.resource.Observation.component.valueString
+					} "rule101";
+
+					s3.txt as x -> t2.valueString = x "rule102";
+	// vrkpa.sez 0-> entry.resource.Observation.component
+				} "rule103";
+			} "rule104";
+
+
+	// 'Stupeň epidemiologické závažnosti' 0-> entry.resource.Observation.component.code.text
+
+			vrkpa.sez -> t1.component as t2 then {
+				vrkpa.sez -> t2.code as t3 then {
+					vrkpa.sez -> t3.text = 'Stupeň epidemiologické závažnosti' "rule105";
+	// vrkpa.sez 0-> entry.resource.Observation.component.valueCodeableConcept.coding.code
+				} "rule106";
+				vrkpa.sez -> t2.value=create('CodeableConcept') as t3 then {
+					vrkpa.sez -> t3.coding as t4 then {
+						vrkpa.sez as x -> t4.code = x "rule107";
+	// vrkpa.sez 0-> entry.resource.Observation.component.valueCodeableConcept.coding.display
+
+
+						vrkpa.sez as x -> t4.display = translate(x,'#cm3586','code') "rule108";
+	// c3550.entry.txt 0-> entry
+
+
+						vrkpa.vrav as vrav -> entry then vrk_vrkpa_vrav(SpecimenReference,patientReference,vrav,compositionObservationSection,bundle) "rule110";
+						
+					} "rule112";
+				} "rule113";
+			} "rule114";
+		} "rule115";
+	// c3559.entry.txt 0-> entry
+
+	} "Bundle.entry";
+	vrkpa.vrac as vrac -> bundle then vrk_vrkpa_vrac(SpecimenReference,patientReference,vrac,compositionObservationSection,bundle) "rule117";
+		
+
+}
+group vrk_vrkpa_vrac(source SpecimenReference: string, source patientReference: Reference, source vrac: vrkType, target compositionObservationSection, target bundle: Bundle){
+	vrac -> bundle.entry as entry then {
+	// vrac 0-> entry
+
+	// c3684 0-> entry.fullUrl
+
+
+		// vrac.guid 1-> entry.fullUrl
+
+
+	// c3684 0-> entry.fullUrl
+		vrac.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule2";
+
+	// vrac.guid 0-> entry.resource.Observation.id
+
+		SpecimenReference -> entry.resource=create('Observation') as t1 then {
+			vrac.guid as x -> t1.id = x "rule3";
+	// 'final' 0-> entry.resource.Observation.status
+
+
+			SpecimenReference -> t1.status = 'final' "rule4";
+	// 'https://dasta.mzcr.cz/DSAKN.htm' 0-> entry.resource.Observation.code.coding.system
+
+			SpecimenReference -> t1.code as t2 then {
+				SpecimenReference -> t2.coding as t3 then {
+					SpecimenReference -> t3.system = 'https://dasta.mzcr.cz/DSAKN.htm' "rule5";
+	// vrac.latka_kod 0-> entry.resource.Observation.code.coding.code
+
+
+					vrac.latka_kod as x -> t3.code = x "rule6";
+	// vrac.latka_text 0-> entry.resource.Observation.code.coding.display
+
+
+					vrac.latka_text as x -> t3.display = x "rule7";
+	// vrac.latka_snmd_k 0-> entry.resource.Observation.code.coding
+				} "rule8";
+
+
+	// vrac.latka_snmd_k 0-> entry.resource.Observation.code.coding.code
+
+				vrac.latka_snmd_k -> t2.coding as t3 then {
+					vrac.latka_snmd_k as x -> t3.code = x "rule9";
+	// vrac.latka_kod_l 0-> entry.resource.Observation.code.coding
+				} "rule10";
+
+
+	// vrac.latka_kod_l 0-> entry.resource.Observation.code.coding.code
+
+				vrac.latka_kod_l -> t2.coding as t3 then {
+					vrac.latka_kod_l as x -> t3.code = x "rule11";
+	// vrac.latka_text_l 0-> entry.resource.Observation.code.coding.display
+
+
+					vrac.latka_text_l as x -> t3.display = x "rule12";
+	// patientReference 0-> entry.resource.Observation.subject
+				} "rule13";
+			} "rule14";
+
+			patientReference as x -> t1.subject = x "rule15";
+	// vrac.kvantita 0-> entry.resource.Observation.valueQuantity
+
+
+			vrac.kvantita as k -> t1.value = create('Quantity') as t2 then {
+	// vrac.kvantita 0-> entry.resource.Observation.valueQuantity.value
+
+				k.txt as x -> t2.value = x "rule17";
+	// vrac.kvantita.priznak 0-> entry.resource.Observation.valueQuantity.comparator
+
+				k.priznak as x -> t2.comparator = translate(x,'#cm3556','code') "rule18";
+	// 'https://dasta.mzcr.cz/DSALM.htm' 0-> entry.resource.Observation.interpretation.coding.system
+			} "vrac.kvantita";
+			SpecimenReference -> t1.interpretation as t2 then {
+				SpecimenReference -> t2.coding as t3 then {
+					SpecimenReference -> t3.system = 'https://dasta.mzcr.cz/DSALM.htm' "rule21";
+	// vrac.hod_citlivosti 0-> entry.resource.Observation.interpretation.coding.code
+
+
+					vrac.hod_citlivosti as x -> t3.code = x "rule22";
+	// vrac.hod_citlivosti 0-> entry.resource.Observation.interpretation.coding.display
+
+
+					vrac.hod_citlivosti as x -> t3.display = translate(x,'#cm3555','code') "rule23";
+	// vrac.sdeleni_lab.txt 0-> entry.resource.Observation.note.text
+				} "rule24";
+			} "rule25";
+			SpecimenReference -> t1.note as t2 then {
+				vrac.sdeleni_lab as s3 -> t2 then {
+					s3.txt as x -> t2.text = x "rule26";
+	// SpecimenReference 0-> entry.resource.Observation.specimen.reference
+				} "rule27";
+			} "rule28";
+			SpecimenReference -> t1.specimen as t2 then {
+				SpecimenReference as x -> t2.reference = x "rule29";
+	// vrac.bpoint.txt 0-> entry.resource.Observation.component
+			} "rule30";
+			vrac.bpoint as s3 -> t1 then {
+
+	// 'bpoint - nižší' 0-> entry.resource.Observation.component.code.text
+
+				s3.txt -> t1.component as t2 then {
+					s3.txt -> t2.code as t3 then {
+						s3.txt -> t3.text = 'bpoint - nižší' "rule31";
+	// vrac.bpoint.txt 0-> entry.resource.Observation.component.valueQuantity.value
+					} "rule32";
+					s3.txt -> t2.value = create('Quantity') as t3 then {
+						s3.txt as x -> t3.value = x "rule33";
+	// vrac.bpoint2.txt 0-> entry.resource.Observation.component
+					} "rule34";
+				} "rule35";
+			} "rule36";
+			vrac.bpoint2 as s3 -> t1 then {
+
+	// 'bpoint_2 - vyšší' 0-> entry.resource.Observation.component.code.text
+
+				s3.txt -> t1.component as t2 then {
+					s3.txt -> t2.code as t3 then {
+						s3.txt -> t3.text = 'bpoint_2 - vyšší' "rule37";
+	// vrac.bpoint2.txt 0-> entry.resource.Observation.component.valueQuantity.value
+					} "rule38";
+					s3.txt -> t2.value=create('Quantity') as t3 then {
+						s3.txt as x -> t3.value = x "rule39";
+					} "rule40";
+				} "rule41";
+			} "rule42";
+		} "rule43";
+	} "Bundle.entry";
+}
+group vrk_vrkpa_vrav(source SpecimenReference: string, source patientReference: Reference, source vrav: vrkpaType, target compositionObservationSection, target bundle: Bundle){
+	vrav -> bundle.entry as entry then {
+	// vrav 0-> entry
+
+
+	
+	// c3682 0-> entry.fullUrl
+
+
+		// vrav.guid 1-> entry.fullUrl
+
+
+	// c3682 0-> entry.fullUrl
+		vrav.guid as x1 -> entry.fullUrl =append('Observation/',x1)  then addObservationReferenceToSection(x1,compositionObservationSection) "rule2";
+
+	// vrav.guid 0-> entry.resource.Observation.id
+
+		SpecimenReference -> entry.resource=create('Observation') as t1 then {
+			vrav.guid as x -> t1.id = x "rule3";
+	// 'final' 0-> entry.resource.Observation.status
+
+
+			SpecimenReference -> t1.status = 'final' "rule4";
+	// vrav.vl_kod 0-> entry.resource.Observation.code.coding.code
+
+			SpecimenReference -> t1.code as t2 then {
+				SpecimenReference -> t2.coding as t3 then {
+					vrav.vl_kod as x -> t3.code = x "rule5";
+	// vrav.vl_text 0-> entry.resource.Observation.code.coding.display
+
+
+					vrav.vl_text as x -> t3.display = x "rule6";
+	// patientReference 0-> entry.resource.Observation.subject
+				} "rule7";
+			} "rule8";
+
+			patientReference as x -> t1.subject = x "rule9";
+	// vrav.pritomnost 0-> entry.resource.Observation.valueCodeableConcept.coding.code
+
+			SpecimenReference -> t1.value=create('CodeableConcept') as t2 then {
+				SpecimenReference -> t2.coding as t3 then {
+					vrav.pritomnost as x -> t3.code = x "rule10";
+	// vrav.pritomnost 0-> entry.resource.Observation.valueCodeableConcept.coding.display
+
+
+					vrav.pritomnost as x -> t3.display = translate(x,'#cm3548','code') "rule11";
+	// 'https://dasta.mzcr.cz/DSALN.htm' 0-> entry.resource.Observation.interpretation.coding.system
+				} "rule12";
+			} "rule13";
+			SpecimenReference -> t1.interpretation as t2 then {
+				SpecimenReference -> t2.coding as t3 then {
+					SpecimenReference -> t3.system = 'https://dasta.mzcr.cz/DSALN.htm' "rule14";
+	// vrav.dodatek 0-> entry.resource.Observation.note.text
+				} "rule15";
+			} "rule16";
+			SpecimenReference -> t1.note as t2 then {
+				vrav.dodatek as x -> t2.text = x "rule17";
+	// SpecimenReference 0-> entry.resource.Observation.specimen.reference
+			} "rule18";
+			SpecimenReference -> t1.specimen as t2 then {
+				SpecimenReference as x -> t2.reference = x "rule19";
+			} "rule20";
+		} "rule21";
+	} "Bundle.entry";
+}
+group Specimen(source patientReference: Reference, source vrkType: vrkType, source ku_z_labType: ku_z_labType, target bundle: Bundle){
+	// ku_z_labType 0-> entry
+	ku_z_labType -> bundle.entry as entry then {
+
+
+	// ku_z_labType.guid 0-> entry.resource.Specimen.id
+
+		patientReference -> entry.resource=create('Specimen') as t1 then {
+			ku_z_labType.guid as x -> t1.id = x "rule2";
+	// ku_z_labType.id_lis 0-> entry.resource.Specimen.identifier
+
+
+
+	// ku_z_labType.id_lis 0-> entry.resource.Specimen.identifier.value
+
+			ku_z_labType.id_lis -> t1.identifier as t2 then {
+				ku_z_labType.id_lis as x -> t2.value = x "rule3";
+	// ku_z_labType.id_lo_is 0-> entry.resource.Specimen.identifier
+			} "rule4";
+
+
+	// ku_z_labType.id_lo_is 0-> entry.resource.Specimen.identifier.value
+
+			ku_z_labType.id_lo_is -> t1.identifier as t2 then {
+				ku_z_labType.id_lo_is as x -> t2.value = x "rule5";
+	// patientReference 0-> entry.resource.Specimen.subject
+			} "rule6";
+
+			patientReference as x -> t1.subject = x "rule7";
+	// ku_z_labType.dat_pl.txt 0-> entry.resource.Specimen.receivedTime
+
+			ku_z_labType.dat_pl as s3 -> t1 then {
+				s3.txt as x -> t1.receivedTime = x "rule8";
+	// ku_z_labType.dat_du.txt 0-> entry.resource.Specimen.collection.collectedDateTime
+			} "rule9";
+			ku_z_labType.id_lo_is -> t1.collection as t2 then {
+				ku_z_labType.dat_du as s3 -> t2 then {
+					s3.txt as x -> t2.collectedDateTime = x "rule10";
+	// vrkType.ziskmat_kod 0-> entry.resource.Specimen.collection.method
+				} "rule11";
+
+
+	// 'https://dasta.mzcr.cz/DSAKT.htm' 0-> entry.resource.Specimen.collection.method.coding.system
+
+				vrkType.ziskmat_kod -> t2.method as t3 then {
+					vrkType.ziskmat_kod -> t3.coding as t4 then {
+						vrkType.ziskmat_kod -> t4.system = 'https://dasta.mzcr.cz/DSAKT.htm' "rule12";
+	// vrkType.ziskmat_kod 0-> entry.resource.Specimen.collection.method.coding.code
+
+
+						vrkType.ziskmat_kod as x -> t4.code = x "rule13";
+	// vrkType.ziskmat_text 0-> entry.resource.Specimen.collection.method.coding.display
+
+
+						vrkType.ziskmat_text as x -> t4.display = x "rule14";
+	// vrkType.lokal_mo 0-> entry.resource.Specimen.collection.bodySite
+					} "rule15";
+				} "rule16";
+
+
+	// vrkType.lokal_mo 0-> entry.resource.Specimen.collection.bodySite.text
+
+				vrkType.lokal_mo -> t2.bodySite as t3 then {
+					vrkType.lokal_mo as x -> t3.text = x "rule17";
+	// vrkType.stav_mat 0-> entry.resource.Specimen.condition
+				} "rule18";
+			} "rule19";
+
+
+	// 'https://dasta.mzcr.cz/DSAKR.htm' 0-> entry.resource.Specimen.condition.coding.system
+
+			vrkType.stav_mat -> t1.condition as t2 then {
+				vrkType.stav_mat -> t2.coding as t3 then {
+					vrkType.stav_mat -> t3.system = 'https://dasta.mzcr.cz/DSAKR.htm' "rule20";
+	// vrkType.stav_mat 0-> entry.resource.Specimen.condition.coding.code
+
+
+					vrkType.stav_mat as x -> t3.code = x "rule21";
+	// vrkType.stav_mat 0-> entry.resource.Specimen.condition.coding.display
+
+
+					vrkType.stav_mat as x -> t3.display = translate(x,'#cm3632','code') "rule22";
+	// vrkType.stav_zprac 0-> entry.resource.Specimen.note
+				} "rule23";
+			} "rule24";
+
+
+	// y0 0-> entry.resource.Specimen.note.text
+
+			vrkType.stav_zprac -> t1.note as t2 then {
+		// 'Stav zpracování: ' 1-> entry.resource.Specimen.note.text
+
+
+		// vrkType.stav_zprac 1-> entry.resource.Specimen.note.text
+
+
+	// y0 0-> entry.resource.Specimen.note.text
+				vrkType.stav_zprac as x1 -> t2.text = append(x1) "rule25";
+
+			} "rule26";
+		} "rule27";
+	} "Bundle.entry";
+}
+
+
+group Composition_Lab(source patientReference: Reference, source authorReference: Reference, source ip: ip, target t2, target compositionObservationSection,target bundle){
+	ip.ku as ku -> t2 then {
+	
+		ku.ku_z as s3 -> t2 then {
+
+	// 'http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition' 0-> entry.resource.Composition.extension.url
+
+				s3.guid -> t2.extension as t3 then {
+					s3.guid -> t3.url = 'http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition' "rule1";
+	// ku_Type.ku_z.ku_z_lab.id_lo_is 0-> entry.resource.Composition.extension.valueIdentifier.value
+
+					s3.guid -> t3.valueIdentifier as t4 then {
+						s3.ku_z_lab as s4 -> t4 then {
+							s4.id_lo_is as x -> t4.value = x "rule2";
+	// 'Final' 0-> entry.resource.Composition.status
+						} "rule3";
+					} "rule4";
+				} "rule5";
+
+				s3.guid -> t2.status = 'Final' "rule6";
+	// '11502-2' 0-> entry.resource.Composition.type.coding.code
+
+				s3.guid -> t2.type as t3 then {
+					s3.guid -> t3.coding as t4 then {
+						s3.guid -> t4.code = '11502-2' "rule7";
+	// 'Laboratorní nález' 0-> entry.resource.Composition.type.coding.display
+
+
+						s3.guid -> t4.display = 'Laboratorní nález' "rule8";
+	// patientReference 0-> entry.resource.Composition.subject
+					} "rule9";
+				} "rule10";
+
+				patientReference as x -> t2.subject = x "rule11";
+	// ku_Type.ku_z.dat_prov.txt 0-> entry.resource.Composition.date
+
+				s3.dat_prov as s4 -> t2 then {
+					s4.txt as x -> t2.date = x "rule12";
+	// authorReference 0-> entry.resource.Composition.author
+				} "rule13";
+
+				authorReference as x -> t2.author = x "rule14";
+	// 'Laboratorní nález' 0-> entry.resource.Composition.title
+
+
+				s3.guid -> t2.title = 'Laboratorní nález' "rule15";
+	// 'section:lab-no-subsections' 0-> entry.resource.Composition.section.title
+
+				s3.guid -> compositionObservationSection as t3 then {
+					s3.guid -> t3.title = 'section:lab-no-subsections' "rule16";
+	// '26436-6' 0-> entry.resource.Composition.section.code.coding.code
+
+					s3.guid -> t3.code as t4 then {
+						s3.guid -> t4.coding as t5 then {
+							s3.guid -> t5.code = '26436-6' "rule17";
+	// 'Laboratory studies (set)' 0-> entry.resource.Composition.section.code.coding.display
+
+
+							s3.guid -> t5.display = 'Laboratory studies (set)' "rule18";
+	// y0 0-> entry.resource.Composition.section.entry
+						} "rule19";
+					} "rule20";
+
+//					y0 as x -> t3.entry = x "rule21";
+//	// y0 0-> entry.resource.Composition.section.entry.reference
+//
+//					s3.guid -> t3.entry as t4 then {
+//						y0 as x -> t4.reference = x "rule22";
+//	// 'section:annotations' 0-> entry.resource.Composition.section.title
+//					} "rule23";
+
+				} "rule23";
+				s3.guid -> t2.section as t3 then {
+					s3.guid -> t3.title = 'section:annotations' "rule24";
+	// ku_Type.ku_z.ku_z_lab.vrk.vrmmn.txt 0-> entry.resource.Composition.section.section
+
+					s3.ku_z_lab as s4 -> t3 then {
+						s4.vrk as s5 -> t3 then {
+							s5.vrmmn as s6 -> t3 then {
+
+	// 'vrmmn - mikroskopický nález' 0-> entry.resource.Composition.section.section.title
+
+								s6.txt -> t3.section as t4 then {
+									s6.txt -> t4.title = 'vrmmn - mikroskopický nález' "rule25";
+	// 'http://loinc.org' 0-> entry.resource.Composition.section.section.code.coding.system
+
+									s6.txt -> t4.code as t5 then {
+										s6.txt -> t5.coding as t6 then {
+											s6.txt -> t6.system = 'http://loinc.org' "rule26";
+	// '48767-8' 0-> entry.resource.Composition.section.section.code.coding.code
+
+
+											s6.txt -> t6.code = '48767-8' "rule27";
+	// 'Final' 0-> entry.resource.Composition.section.section.text.status
+										} "rule28";
+									} "rule29";
+									s6.txt -> t4.text as t5 then {
+										s6.txt -> t5.status = 'Final' "rule30";
+	// ku_Type.ku_z.ku_z_lab.vrk.vrmmn.txt 0-> entry.resource.Composition.section.section.text.div.#text
+
+										s6.txt as x -> t5.div = append('<div>',x,'</div>') "rule31";
+	// ku_Type.ku_z.ku_z_lab.vrk.vrmahn.txt 0-> entry.resource.Composition.section.section
+										
+									} "rule33";
+								} "rule34";
+							} "rule35";
+							s5.vrmahn as s6 -> t3 then {
+
+	// 'vrmahn - automatické hodnocení kompletního nálezu' 0-> entry.resource.Composition.section.section.title
+
+								s6.txt -> t3.section as t4 then {
+									s6.txt -> t4.title = 'vrmahn - automatické hodnocení kompletního nálezu' "rule36";
+	// 'http://loinc.org' 0-> entry.resource.Composition.section.section.code.coding.system
+
+									s6.txt -> t4.code as t5 then {
+										s6.txt -> t5.coding as t6 then {
+											s6.txt -> t6.system = 'http://loinc.org' "rule37";
+	// '48767-8' 0-> entry.resource.Composition.section.section.code.coding.code
+
+
+											s6.txt -> t6.code = '48767-8' "rule38";
+	// 'Final' 0-> entry.resource.Composition.section.section.text.status
+										} "rule39";
+									} "rule40";
+									s6.txt -> t4.text as t5 then {
+										s6.txt -> t5.status = 'Final' "rule41";
+	// ku_Type.ku_z.ku_z_lab.vrk.vrmahn.txt 0-> entry.resource.Composition.section.section.text.div.#text
+
+										s6.txt as x -> t5.div = append('<div>',x,'</div>') "rule42";
+	// ku_Type.ku_z.ku_z_lab.vrk.vrmlpn.txt 0-> entry.resource.Composition.section.section
+										
+									} "rule44";
+								} "rule45";
+							} "rule46";
+							s5.vrmlpn as s6 -> t3 then {
+
+	// 'vrmlpn - laboratorní poznámka k celému nálezu' 0-> entry.resource.Composition.section.section.title
+
+								s6.txt -> t3.section as t4 then {
+									s6.txt -> t4.title = 'vrmlpn - laboratorní poznámka k celému nálezu' "rule47";
+	// 'http://loinc.org' 0-> entry.resource.Composition.section.section.code.coding.system
+
+									s6.txt -> t4.code as t5 then {
+										s6.txt -> t5.coding as t6 then {
+											s6.txt -> t6.system = 'http://loinc.org' "rule48";
+	// '48767-8' 0-> entry.resource.Composition.section.section.code.coding.code
+
+
+											s6.txt -> t6.code = '48767-8' "rule49";
+	// 'Final' 0-> entry.resource.Composition.section.section.text.status
+										} "rule50";
+									} "rule51";
+									s6.txt -> t4.text as t5 then {
+										s6.txt -> t5.status = 'Final' "rule52";
+	// ku_Type.ku_z.ku_z_lab.vrk.vrmlpn.txt 0-> entry.resource.Composition.section.section.text.div.#text
+
+										s6.txt as x -> t5.div  = append('<div>',x,'</div>') "rule53";
+	// ku_Type.ku_z.ku_z_lab.vrk.vrmzhl.txt 0-> entry.resource.Composition.section.section
+										
+									} "rule55";
+								} "rule56";
+							} "rule57";
+							s5.vrmzhl as s6 -> t3 then {
+
+	// 'vrmzhl - závěrečné hodnocení kompletního nálezu lékařem' 0-> entry.resource.Composition.section.section.title
+
+								s6.txt -> t3.section as t4 then {
+									s6.txt -> t4.title = 'vrmzhl - závěrečné hodnocení kompletního nálezu lékařem' "rule58";
+	// 'http://loinc.org' 0-> entry.resource.Composition.section.section.code.coding.system
+
+									s6.txt -> t4.code as t5 then {
+										s6.txt -> t5.coding as t6 then {
+											s6.txt -> t6.system = 'http://loinc.org' "rule59";
+	// '48767-8' 0-> entry.resource.Composition.section.section.code.coding.code
+
+
+											s6.txt -> t6.code = '48767-8' "rule60";
+	// 'Final' 0-> entry.resource.Composition.section.section.text.status
+										} "rule61";
+									} "rule62";
+									s6.txt -> t4.text as t5 then {
+										s6.txt -> t5.status = 'Final' "rule63";
+	// ku_Type.ku_z.ku_z_lab.vrk.vrmzhl.txt 0-> entry.resource.Composition.section.section.text.div.#text
+
+										s6.txt as x -> t5.div = append('<div>',x,'</div>') "rule64";
+										
+									} "rule66";
+								} "rule67";
+							} "rule68";
+						} "rule69";
+					} "rule70";
+				} "rule71";
+			} "rule72";
+	} "ip.ku";	
+}

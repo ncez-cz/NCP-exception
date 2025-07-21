@@ -1,0 +1,4580 @@
+/// url = 'https://ncez.mzcr.cz/model/StructureMap/patsum'
+/// name = 'Mapování patsum z DASTA 4 do FHIR HL7-EU https://build.fhir.org/ig/hl7-eu/ (June 2025)'
+/// title = 'Mapování patsum'
+/// descrition = 'This file is generated from MapForge file ./mapforce/final/patsum.mfd'
+
+uses "https://dasta.mzcr.cz/model/StructureDefinition/dasta" alias dasta as source
+uses "https://dasta.mzcr.cz/model/StructureDefinition/ip" alias ip as source
+uses "https://dasta.mzcr.cz/model/StructureDefinition/dat-dutype" alias dat_duType as source
+uses "http://hl7.eu/fhir/eps/StructureDefinition/bundle-eu-eps" alias Bundle as target
+uses "http://hl7.eu/fhir/eps/StructureDefinition/composition-eu-eps" alias Composition as target
+uses "http://hl7.eu/fhir/base/StructureDefinition/organization-eu" alias Organization as target
+uses "http://hl7.eu/fhir/eps/StructureDefinition/condition-eu-eps" alias Condition as target
+uses "http://hl7.eu/fhir/eps/StructureDefinition/allergyIntolerance-eu-eps" alias AllergyIntolerance as target
+uses "http://hl7.eu/fhir/hdr/StructureDefinition/carePlan-eu-hdr" alias CarePlan as target
+uses "http://hl7.eu/fhir/eps/StructureDefinition/procedure-eu-eps" alias Procedure as target
+uses "http://hl7.eu/fhir/eps/StructureDefinition/immunization-eu-eps" alias Immunization as target
+uses "http://hl7.eu/fhir/eps/StructureDefinition/deviceUseStatement-eu-eps" alias DeviceUseStatement as target
+
+
+conceptmap "cm3090" {
+  prefix s ="https://provisio.cz/dasta/3090"
+  prefix t ="https://provisio.cz/fhir/3090"
+
+  s:"M" == t:"male"
+  s:"F" == t:"female"
+  s:"X" == t:"unknown"
+}
+
+conceptmap "cm3414" {
+  prefix s ="https://provisio.cz/dasta/3414"
+  prefix t ="https://provisio.cz/fhir/3414"
+
+  s:"U" == t:"152231000119106"
+  s:"N" == t:"60001007"
+  s:"T" == t:"146799005"
+  s:"A" == t:"77386006"
+  s:"G" == t:"77386006"
+}
+
+conceptmap "cm4466" {
+  prefix s ="https://provisio.cz/dasta/4466"
+  prefix t ="https://provisio.cz/fhir/4466"
+
+  s:"11778-8" == t:"Delivery date Estimated"
+  s:"11780-4" == t:"Delivery date Estimated from ovulation date"
+  s:"11779-6" == t:"Delivery date Estimated from last menstrual period"
+}
+
+conceptmap "cm4469" {
+  prefix s ="https://provisio.cz/dasta/4469"
+  prefix t ="https://provisio.cz/fhir/4469"
+
+  s:"77386006" == t:"Pregnant"
+  s:"60001007" == t:"Not pregnant"
+  s:"146799005" == t:"Possible pregnancy"
+  s:"152231000119106" == t:"Pregnancy not yet confirmed"
+}
+
+conceptmap "cm3492" {
+  prefix s ="https://provisio.cz/dasta/3492"
+  prefix t ="https://provisio.cz/fhir/3492"
+
+  s:"L" == t:"medication"
+  s:"P" == t:"food"
+  s:"S" == t:"environment"
+}
+
+conceptmap "cm3490" {
+  prefix s ="https://provisio.cz/dasta/3490"
+  prefix t ="https://provisio.cz/fhir/3490"
+
+  s:"A" == t:"active"
+  s:"SP" == t:"resolved"
+  s:"U" == t:"inactive"
+  s:"Z" == t:"suspended"
+}
+
+conceptmap "cm3485" {
+  prefix s ="https://provisio.cz/dasta/3485"
+  prefix t ="https://provisio.cz/fhir/3485"
+
+  s:"U" == t:"unconfirmed"
+  s:"N" == t:"refuted"
+  s:"AF" == t:"confirmed"
+  s:"AN" == t:"confirmed"
+}
+
+conceptmap "cm3491" {
+  prefix s ="https://provisio.cz/dasta/3491"
+  prefix t ="https://provisio.cz/fhir/3491"
+
+  s:"A" == t:"allergy"
+  s:"I" == t:"intolerance"
+}
+
+conceptmap "cm4474" {
+  prefix s ="https://provisio.cz/dasta/4474"
+  prefix t ="https://provisio.cz/fhir/4474"
+
+  s:"255604002" == t:"low"
+  s:"371923003" == t:"low"
+  s:"6736007" == t:"high"
+  s:"371924009" == t:"high"
+  s:"24484000" == t:"high"
+  s:"442452003" == t:"high"
+}
+
+conceptmap "cm3571" {
+  prefix s ="https://provisio.cz/dasta/3571"
+  prefix t ="https://provisio.cz/fhir/3571"
+
+  s:"N" == t:"inactive"
+  s:"RF" == t:"active"
+  s:"RN" == t:"active"
+  s:"RS" == t:"active"
+}
+
+conceptmap "cm3590" {
+  prefix s ="https://provisio.cz/dasta/3590"
+  prefix t ="https://provisio.cz/fhir/3590"
+
+  s:"N" == t:"completed"
+  s:"SF" == t:"active"
+  s:"SN" == t:"active"
+}
+
+conceptmap "cm3670" {
+  prefix s ="https://provisio.cz/dasta/3670"
+  prefix t ="https://provisio.cz/fhir/3670"
+
+  s:"A+" == t:"A RhD pozitivní"
+  s:"A1+" == t:"A1 RhD pozitivní"
+  s:"A2+" == t:"A2 RhD pozitivní"
+  s:"A-" == t:"A RhD negativní"
+  s:"A1-" == t:"A1 RhD negativní"
+  s:"A2-" == t:"A2 RhD negativní"
+  s:"B+" == t:"B RhD pozitivní"
+  s:"B-" == t:"B RhD negativní"
+  s:"AB+" == t:"AB RhD pozitivní"
+  s:"A1B+" == t:"A1B RhD pozitivní"
+  s:"A2B+" == t:"A2B RhD pozitivní"
+  s:"AB-" == t:"AB RhD negativní"
+  s:"A1B-" == t:"A1B RhD negativní"
+  s:"A2B-" == t:"A2B RhD negativní"
+  s:"0+" == t:"0 RhD pozitivní"
+  s:"0-" == t:"0 RhD negativní"
+  s:"ARHDWV" == t:"A RhD weak/variant"
+  s:"A1RHDWV" == t:"A1 RhD weak/variant"
+  s:"A2RHDWV" == t:"A2 RhD weak/variant"
+  s:"BRHDWV" == t:"B RhD weak/variant"
+  s:"ABRHDWV" == t:"AB RhD weak/variant"
+  s:"A1BRHWV" == t:"A1B RhD weak/variant"
+  s:"A2BRHWV" == t:"A2B RhD weak/variant"
+  s:"0RHDWV" == t:"0 RhD weak/variant"
+  s:"MF" == t:"Neuzavřené vyšetření KS"
+  s:"A" == t:"A RhD nespecifikováno"
+  s:"A1" == t:"A1 RhD nespecifikováno"
+  s:"A2" == t:"A2 RhD nespecifikováno"
+  s:"B" == t:"B RhD nespecifikováno"
+  s:"AB" == t:"AB RhD nespecifikováno"
+  s:"A1B" == t:"A1B RhD nespecifikováno"
+  s:"A2B" == t:"A2B RhD nespecifikováno"
+  s:"00" == t:"0 RhD nespecifikováno"
+  s:"A1-,DU+" == t:"A1 Rh(D)neg se slabou variantou D antigenu"
+  s:"A2-,DU+" == t:"A2 Rh(D)neg se slabou variantou D antigenu"
+  s:"A-,DU+" == t:"A Rh(D)neg se slabou variantou D antigenu"
+  s:"B-,DU+" == t:"B Rh(D)neg se slabou variantou D antigenu"
+  s:"AB-,DU+" == t:"AB Rh(D)neg se slabou variantou D antigenu"
+  s:"A1B-,DU+" == t:"A1B Rh(D)neg se slabou variantou D antigenu"
+  s:"A2B-,DU+" == t:"A2B Rh(D)neg se slabou variantou D antigenu"
+  s:"0-,DU+" == t:"0 Rh(D)neg se slabou variantou D antigenu"
+}
+
+conceptmap "cm3483" {
+  prefix s ="https://provisio.cz/dasta/3483"
+  prefix t ="https://provisio.cz/fhir/3483"
+
+  s:"A" == t:"active"
+  s:"N" == t:"inactive"
+}
+
+conceptmap "cm3691" {
+  prefix s ="https://provisio.cz/dasta/3691"
+  prefix t ="https://provisio.cz/fhir/3691"
+
+  s:"ASSOC" == t:"Associate's or technical degree complete"
+  s:"BD" == t:"College or baccalaureate degree complete"
+  s:"ELEN" == t:"Elementary School"
+  s:"GD" == t:"Graduate or professional Degree complete"
+  s:"HS" == t:"High School or secondary school degree complete"
+  s:"PB" == t:"Some post-baccalaureate education"
+  s:"POSTG" == t:"Doctoral or post graduate education"
+  s:"SCOL" == t:"Some College education"
+  s:"SEC" == t:"Some secondary or high school education"
+}
+
+conceptmap "cm3696" {
+  prefix s ="https://provisio.cz/dasta/3696"
+  prefix t ="https://provisio.cz/fhir/3696"
+
+  s:"365508006" == t:"Residence and accommodation circumstances"
+}
+
+conceptmap "cm3699" {
+  prefix s ="https://provisio.cz/dasta/3699"
+  prefix t ="https://provisio.cz/fhir/3699"
+
+  s:"BSCH" == t:"Vana / sprchové křeslo"
+  s:"SLCH" == t:"Schodišťový výtah, židle"
+  s:"ASTO" == t:"Pomocná toaleta"
+  s:"ASBE" == t:"Pomocné lůžko"
+  s:"HPAF" == t:"Pomocné vybavení / adaptace domu a prostor"
+  s:"HARA" == t:"Zábradlí, držadla"
+}
+
+conceptmap "cm3702" {
+  prefix s ="https://provisio.cz/dasta/3702"
+  prefix t ="https://provisio.cz/fhir/3702"
+
+  s:"STHO" == t:"Schody v domě"
+  s:"LAWE" == t:"Bydlí v bytě s výtahem"
+  s:"ARBS" == t:"Přístup do domu po schodech"
+  s:"OMRE" == t:"Blokovaný vstup do bytu"
+  s:"HCSB" == t:"Bydlení obsahuje strukturální překážky pohybu"
+  s:"CLSP" == t:"Zaneřáděný životní prostor"
+  s:"DLCO" == t:"Špinavé životní prostředí"
+  s:"KEPE" == t:"Chová domácí mazlíčky"
+  s:"UFCO" == t:"Nebezpečná podlahová krytina"
+}
+
+conceptmap "cm3570" {
+  prefix s ="https://provisio.cz/dasta/3570"
+  prefix t ="https://provisio.cz/fhir/3570"
+
+  s:"HNMD" == t:"228368007"
+  s:"DNMD" == t:"228367002"
+  s:"MDIP" == t:"44870007"
+  s:"CDUS" == t:"417284009"
+}
+
+conceptmap "cm3572" {
+  prefix s ="https://provisio.cz/dasta/3572"
+  prefix t ="https://provisio.cz/fhir/3572"
+
+  s:"AMFETAM" == t:"703842006"
+  s:"ANABST" == t:"111151007"
+  s:"BARBIT" == t:"372798009"
+  s:"BENZOD" == t:"372664007"
+  s:"BUP" == t:"387173000"
+  s:"PHENC" == t:"9721008"
+  s:"FENTAN" == t:"373492002"
+  s:"HALLMUSH" == t:"229006007"
+  s:"HEROIN" == t:"387341002"
+  s:"3OHBUTYR" == t:"62821004"
+  s:"KETAM" == t:"373464007"
+  s:"COCAINE" == t:"387085005"
+  s:"COCFB" == t:"229003004"
+  s:"CANAB" == t:"398705004"
+  s:"LAXAT" == t:"372800002"
+  s:"LSD" == t:"15698006"
+  s:"MDMA" == t:"288459003"
+  s:"METHAD" == t:"387286002"
+  s:"METAMF" == t:"387499002"
+}
+
+conceptmap "cm2661" {
+  prefix s ="https://provisio.cz/dasta/2661"
+  prefix t ="https://provisio.cz/fhir/2661"
+
+  s:"F" == t:"fyziologická reakce"
+  s:"H" == t:"hyperreakce"
+  s:"N" == t:"neurologická reakce"
+  s:"J" == t:"jiná reakce"
+}
+
+conceptmap "cm2655" {
+  prefix s ="https://provisio.cz/dasta/2655"
+  prefix t ="https://provisio.cz/fhir/2655"
+
+  s:"255604002" == t:"Mild"
+  s:"6736007" == t:"Moderate"
+  s:"24484000" == t:"Severe"
+}
+
+conceptmap "cm2682" {
+  prefix s ="https://provisio.cz/dasta/2682"
+  prefix t ="https://provisio.cz/fhir/2682"
+
+  s:"N" == t:"completed"
+  s:"E" == t:"correction"
+  s:"S" == t:"entered-in-error"
+  s:"U" == t:"stopped"
+  s:"P" == t:"on-hold"
+  s:"B" == t:"stopped"
+}
+
+conceptmap "cm2699" {
+  prefix s ="https://provisio.cz/dasta/2699"
+  prefix t ="https://provisio.cz/fhir/2699"
+
+  s:"ND" == t:"nevhodné dávkování"
+  s:"PD" == t:"nedostatečné dávkování"
+  s:"IL" == t:"interakce léku"
+  s:"J" == t:"jiné"
+}
+
+conceptmap "cm2684" {
+  prefix s ="https://provisio.cz/dasta/2684"
+  prefix t ="https://provisio.cz/fhir/2684"
+
+  s:"T" == t:"chronic"
+  s:"P" == t:"acute"
+}
+
+conceptmap "cm2679" {
+  prefix s ="https://provisio.cz/dasta/2679"
+  prefix t ="https://provisio.cz/fhir/2679"
+
+  s:"T" == t:"Chronická (trvalá) medikace"
+  s:"P" == t:"Akutní (přechodná) medikace"
+}
+
+conceptmap "cm21" {
+  prefix s ="https://provisio.cz/dasta/21"
+  prefix t ="https://provisio.cz/fhir/21"
+
+  s:"U" == t:"Úspěšný"
+  s:"N" == t:"Neúspěšný"
+  s:"C" == t:"Částečně úspěšný"
+}
+
+conceptmap "cm20" {
+  prefix s ="https://provisio.cz/dasta/20"
+  prefix t ="https://provisio.cz/fhir/20"
+
+  s:"U" == t:"385669000"
+  s:"N" == t:"385671000"
+  s:"C" == t:"385670004"
+}
+
+conceptmap "cm2656" {
+  prefix s ="https://provisio.cz/dasta/2656"
+  prefix t ="https://provisio.cz/fhir/2656"
+
+  s:"U" == t:"neznámá informace"
+  s:"N" == t:"nebyla dosud žádná zaznamenaná informace o funkčním stavu pacienta"
+  s:"A" == t:"sdělovaný funkční stav pacienta"
+}
+
+conceptmap "cm3178" {
+  prefix s ="https://provisio.cz/dasta/3178"
+  prefix t ="https://provisio.cz/fhir/3178"
+
+  s:"010" == t:"Sdružení zdravotnických zařízení"
+  s:"101" == t:"Fakultní nemocnice"
+  s:"102" == t:"Nemocnice"
+  s:"103" == t:"Specializovaná nemocnice"
+  s:"104" == t:"Psychiatrická nemocnice"
+  s:"105" == t:"Nemocnice následné péče"
+  s:"109" == t:"Porodnice"
+  s:"110" == t:"Léčebna pro dlouhodobě nemocné (LDN)"
+  s:"111" == t:"Léčebna tuberkul.a respir.nemocí (TRN)"
+  s:"112" == t:"Psychiatrická léčebna"
+  s:"113" == t:"Rehabilitační ústav"
+  s:"119" == t:"Ostatní odborné léčebné ústavy"
+  s:"122" == t:"Dětská psychiatrická léčebna"
+  s:"129" == t:"Ostatní dětské odborné léčebné ústavy"
+  s:"130" == t:"Lázeňská léčebna"
+  s:"141" == t:"Dětská ozdravovna"
+  s:"180" == t:"Hospic"
+  s:"190" == t:"Další lůžkové zařízení"
+  s:"300" == t:"Sdružení ambulantních zařízení"
+  s:"301" == t:"Poskytovatel amb. služeb (nad 5 oborů)"
+  s:"302" == t:"Poskytovatel amb. služeb (do 5 oborů)"
+  s:"310" == t:"Zdravotnické středisko"
+  s:"312" == t:"Zařízení závodní preventivní péče"
+  s:"320" == t:"Samost. ordinace všeob. prakt. lékaře"
+  s:"321" == t:"Sam.ord.prakt.lékaře pro děti a dorost"
+  s:"322" == t:"Samostatná ordinace PL - stomatologa"
+  s:"323" == t:"Samostatná ordinace PL - gynekologa"
+  s:"324" == t:"Samostatná ordinace lékaře specialisty"
+  s:"340" == t:"Samostatné zařízení psychologa"
+  s:"341" == t:"Samostatné zařízení logopeda"
+  s:"350" == t:"Domácí zdravotní péče"
+  s:"351" == t:"Samostatné zařízení fyzioterapeuta"
+  s:"354" == t:"Zdravotní péče v ústavech sociální p."
+  s:"359" == t:"Samostatné zařízení nelékaře - jiné"
+  s:"360" == t:"Samostatná stomatologická laboratoř"
+  s:"361" == t:"Samostatná odborná laboratoř"
+  s:"362" == t:"Odběrová místnost"
+  s:"370" == t:"Samostatná transfuzní stanice"
+  s:"380" == t:"Zařízení LPS"
+  s:"389" == t:"Koroner"
+  s:"390" == t:"Hemodialyzační středisko"
+  s:"398" == t:"Zařízení pro léčbu závislostí"
+  s:"399" == t:"Ostatní ambulantní zařízení"
+  s:"400" == t:"Sdružení dětských zařízení"
+  s:"420" == t:"Dětský domov pro děti do 3 let"
+  s:"430" == t:"Dětské centrum"
+  s:"431" == t:"Dětský stacionář"
+  s:"460" == t:"Stacionář"
+  s:"461" == t:"Psychoterapeutický stacionář"
+  s:"465" == t:"Krizové centrum"
+  s:"466" == t:"Centrum duševního zdraví"
+  s:"476" == t:"Záchytná stanice"
+  s:"480" == t:"Zdravotnická dopravní služba"
+  s:"481" == t:"Zdravotnická zachranná služba"
+  s:"483" == t:"Výjezdová skupina záchranné služby"
+  s:"484" == t:"Další zařízení záchranné služby"
+  s:"485" == t:"Přeprava pacientů neodkladné péče"
+  s:"499" == t:"Ostatní zvláštní zdravotnická zařízení"
+  s:"501" == t:"Sdružení lékáren"
+  s:"510" == t:"Lékárna"
+  s:"521" == t:"Výdejna zdravotnických prostředků"
+  s:"523" == t:"Oční optika"
+  s:"530" == t:"Státní ústav pro kontrolu léčiv"
+  s:"600" == t:"Státní zdravotní ústav"
+  s:"601" == t:"Krajská hygienická stanice"
+  s:"605" == t:"Zdravotní ústav"
+  s:"609" == t:"Další zařízení hygienické služby"
+  s:"831" == t:"IPVZ"
+  s:"832" == t:"NCONZO"
+  s:"900" == t:"Ostatní organizace MZ"
+  s:"950" == t:"Ostatní zdravotnická zařízení"
+  s:"952" == t:"Lázeňský dům (jen ubyt. hotel. typu)"
+  s:"961" == t:"Zdravotnické zařízení v likvidaci"
+  s:"962" == t:"Hospodářská org. neposkyt. zdrav. péči"
+  s:"963" == t:"Servisní organizace"
+  s:"964" == t:"COVID zařízení"
+  s:"368" == t:"Centrum očkování COVID"
+  s:"363" == t:"Odběr krevní plasmy"
+}
+
+conceptmap "cm5662" {
+  prefix s ="https://provisio.cz/dasta/5662"
+  prefix t ="https://provisio.cz/fhir/5662"
+
+  s:"CZE" == t:"Czech Republic (CZE)"
+}
+
+conceptmap "cm5675" {
+  prefix s ="https://provisio.cz/dasta/5675"
+  prefix t ="https://provisio.cz/fhir/5675"
+
+  s:"M" == t:"male"
+  s:"F" == t:"female"
+  s:"X" == t:"unknown"
+}
+
+conceptmap "cm5684" {
+  prefix s ="https://provisio.cz/dasta/5684"
+  prefix t ="https://provisio.cz/fhir/5684"
+
+  s:"1" == t:"standardní"
+  s:"2" == t:"důvěrné"
+  s:"3" == t:"velmi důvěrné"
+}
+
+conceptmap "cm5678" {
+  prefix s ="https://provisio.cz/dasta/5678"
+  prefix t ="https://provisio.cz/fhir/5678"
+
+  s:"P" == t:"true"
+  s:"M" == t:"false"
+}
+
+conceptmap "cm5676" {
+  prefix s ="https://provisio.cz/dasta/5676"
+  prefix t ="https://provisio.cz/fhir/5676"
+
+  s:"1" == t:"home"
+  s:"2" == t:"temp"
+  s:"5" == t:"work"
+}
+
+conceptmap "cm5673" {
+  prefix s ="https://provisio.cz/dasta/5673"
+  prefix t ="https://provisio.cz/fhir/5673"
+
+  s:"B" == t:"phone"
+  s:"E" == t:"email"
+  s:"T" == t:"phone"
+}
+
+conceptmap "cm5674" {
+  prefix s ="https://provisio.cz/dasta/5674"
+  prefix t ="https://provisio.cz/fhir/5674"
+
+  s:"B" == t:"mobile"
+  s:"E" == t:"home"
+  s:"T" == t:"home"
+}
+
+conceptmap "cm5656" {
+  prefix s ="https://provisio.cz/dasta/5656"
+  prefix t ="https://provisio.cz/fhir/5656"
+
+  s:"111" == t:"Všeobecná zdravotní pojišťovna České republiky"
+  s:"201" == t:"Vojenská zdravotní pojišťovna České republiky"
+  s:"205" == t:"Česká průmyslová zdravotní pojišťovna"
+  s:"207" == t:"Oborová zdravotní pojišťovna zaměstnanců bank, pojišťoven a stavebnictví"
+  s:"209" == t:"Zaměstnanecká pojišťovna Škoda"
+  s:"211" == t:"Zdravotní pojišťovna ministerstva vnitra České republiky"
+  s:"213" == t:"RBP, zdravotní pojišťovna"
+}
+
+conceptmap "cm5685" {
+  prefix s ="https://provisio.cz/dasta/5685"
+  prefix t ="https://provisio.cz/fhir/5685"
+
+  s:"ALL" == t:"sdělována všechna dostupná data z IS odesílatele pro tohoto pacienta"
+  s:"PS" == t:"sdělována data v rozsahu množiny Patient Summary"
+  s:"KU" == t:"obsahuje pouze data v rozsahu potřebném pro řešení příslušné klinické události"
+}
+
+group defaultmap(source ds: dasta, target bundle: Bundle){
+
+		ds -> bundle.type = 'document' "rule1";
+
+		ds.garant_dat as garant -> create('Reference') as garantReference  then {
+		 garant.guid as garant_guid -> garantReference then {
+				garant.vguid as garant_vguid -> garantReference.reference = append('Practitioner/',garant_guid,'/_history/',garant_vguid) "garant reference";
+		 } "garant_guid";
+		 ds.is as is -> bundle then {
+
+		  is -> create('Reference') as organizatinReference then {
+
+			is.guid as is_guid -> organizatinReference then {
+				is.vguid as is_vguid -> organizatinReference.reference = append('Organization/',is_guid,'/_history/',is_vguid) "organization reference";
+			} "is_guid";
+
+			is.ip -> create('Reference') as patientReference then {
+
+				is.ip -> patientReference.identifier as t2 then {
+					is.ip -> t2.use = 'official' "rule2";
+
+					is.ip -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/cpoj' "rule3";
+
+					is.ip as ip -> t2 then {
+						ip.id_pac as x -> t2.value = x "rule4";
+					
+						ds -> bundle then ip(organizatinReference,garantReference,patientReference,ip,bundle) "rule22";
+						
+						ds -> bundle then is(is,bundle) "rule7";
+
+						ds -> bundle then garant_dat(garant,bundle) "rule14";
+
+					} "rule24";
+				} "rule25";
+			} "rule26";
+		  } "organizationReference";
+		 } "rule27";		
+		} "garant_dat";
+
+}
+group format_number(source format: string, source input: decimal, source decimalformat: string, target result: string){
+
+		input as x -> result = x "rule1";
+
+}
+group part(source ds_dasta40331: ip, source input: string, target value: string, target value2: string){
+
+		input as x -> value = translate(x,'#cm3090','code') "rule1";
+
+		ds_dasta40331 as x -> value2 = x "rule2";
+
+}
+group ip(source organizatinReference: Reference, source practitionerReference: Reference, source patientReference: Reference, source ip: ip, target bundle: Bundle){
+
+	ip -> bundle.entry as entry then {
+		ip.ku as s4 -> entry then {
+			s4.ku_z as s5 -> entry then {	
+
+				ip -> entry.resource = create('Composition') as composition then {
+					ip -> composition.status = 'final' "rule1";
+
+					ip -> composition.type as t2 then {
+						ip -> t2.coding as t3 then {
+						   	ip -> t3.system = 'http://loinc.org' "rule3";
+							ip -> t3.code = '60591-5' "rule4";
+						} "rule5";
+					} "rule6";
+
+					patientReference as x -> composition.subject = x "rule7";
+
+					s5.dat_prov as prov -> composition.date then {
+						prov.txt as x ->	composition.date = x "rule8";
+					} "dat_prov";
+
+					practitionerReference as x -> composition.author = x "rule9";
+
+					ip -> composition.title = 'Patient Summary' "rule12";
+
+					ip -> composition.section as sectionProblems then {			
+						ip -> sectionProblems.title = 'Problems section' "rule13";
+
+						ip -> sectionProblems.code as t3 then {
+							ip -> t3.coding as t4 then {
+								ip -> t4.system = 'http://loinc.org' "rule15";
+								ip -> t4.code = '11450-4' "rule16";
+							} "rule17";
+						} "rule18";
+
+						ip.dg as dg -> sectionProblems then {
+							
+							dg.dgz as x1 -> bundle then dg(patientReference,practitionerReference,organizatinReference,x1,sectionProblems,bundle) "rule1";
+						} "ip.dg";
+
+						s5.ku_z_patsumdat as patsumdat -> sectionProblems then {
+							patsumdat.dg as dg -> sectionProblems then {
+								
+								dg.dgz as x1 -> bundle then dg(patientReference,practitionerReference,organizatinReference,x1,sectionProblems,bundle) "rule4";	
+							} "dg";
+						} "rule230";
+
+						ip -> composition.section as sectionSocialHistory then {
+							ip -> sectionSocialHistory.title = 'SocialHistory section' "rule111";
+
+							ip -> sectionSocialHistory.code as t3 then {
+								ip -> t3.coding as t4 then {
+									ip -> t4.system = 'http://loinc.org' "rule113";
+									ip -> t4.code = '29762-2' "rule114";
+								} "rule115";
+								ip -> t3.text = 'SocialHistory section' "rule116";
+							} "sectionSocialHistory.code";
+
+							ip.anf as anf -> sectionSocialHistory then anf_all(patientReference,organizatinReference,practitionerReference,anf,sectionProblems,sectionSocialHistory,bundle) "rule216";
+
+							s5.ku_z_patsumdat as s6 -> sectionSocialHistory then {
+								s6.anf as anf -> sectionSocialHistory then anf_all(patientReference,organizatinReference,practitionerReference,anf,sectionProblems,sectionSocialHistory,bundle) "rule217";								
+							} "rule218";
+							
+						} "sectionSocialHistory";
+						
+						
+					} "sectionProblems";
+
+
+					ip -> composition.section as sectionMedications_le then {		
+						ip -> sectionMedications_le.title = 'Medication section' "rule28";
+
+						ip -> sectionMedications_le.code as t3 then {
+							ip -> t3.coding as t4 then {
+								ip -> t4.system = 'http://loinc.org' "rule30";
+								ip -> t4.code = '10160-0' "rule31";
+							} "rule32";
+						} "rule33";
+
+				
+						ip.le as le -> sectionMedications_le then {
+							le.lez as lez -> sectionMedication_le then le(patientReference, practitionerReference, organizatinReference, le, lez, sectionMedications_le, bundle) "ip.le.lez";
+						} "ip.le";
+						s5.ku_z_patsumdat as s6 -> sectionMedications_le then {
+							s6.le as le -> sectionMedications_le then {
+								le.lez as lez -> sectionMedications_le then le(patientReference, practitionerReference, organizatinReference, le, lez, sectionMedications_le, bundle) "ku_z_patsumdat.le.lez";								
+							} "ku_z_patsumdat.le";
+						}"";
+						
+					} "composition medication section";
+					ip -> composition.section as sectionAllergies_ua then {
+						ip -> sectionAllergies_ua.title = 'Allergies section' "rule21";
+
+						ip -> sectionAllergies_ua.code as t3 then {
+							ip -> t3.coding as t4 then {
+								ip -> t4.system = 'http://loinc.org' "rule23";
+								ip -> t4.code = '48765-2' "rule24";
+							} "rule25";
+						} "rule26";
+
+						ip.u as u -> sectionAllergies_ua then {
+							u.ua as ua -> sectionAllergies_ua then ua(patientReference,practitionerReference,organizatinReference,ua,sectionAllergies_ua,bundle) "rule16";
+						} "ip.u";
+						s5.ku_z_patsumdat as patsum -> sectionAllergies_ua then {
+							patsum.u as u -> sectionAllergies_ua then {
+								u.ua as ua -> sectionAllergies_ua then ua(patientReference,practitionerReference,organizatinReference,ua,sectionAllergies_ua,bundle) "rule16";
+							} "patsum.u";
+						} "";						
+					} "composition allergies section";
+					ip -> composition.section as sectionFunctionalStatus_fs then {
+						ip -> sectionFunctionalStatus_fs.title = 'FunctionalStatus section' "rule78";
+
+						ip -> sectionFunctionalStatus_fs.code as t3 then {
+							ip -> t3.coding as t4 then {
+								ip -> t4.system = 'http://loinc.org' "rule80";
+								ip -> t4.code = '47420-5' "rule81";
+							} "rule82";
+						} "rule83";
+
+						ip.fs as fs -> sectionFunctionalStatus_fs then fs(organizatinReference,practitionerReference,patientReference,fs,sectionFunctionalStatus_fs,bundle) "ip.fs";
+						s5.ku_z_patsumdat as s6 -> sectionFunctionalStatus_fs then {
+							s6.fs as fs -> sectionFunctionalStatus_fs then fs(organizatinReference,practitionerReference,patientReference,fs,sectionFunctionalStatus_fs,bundle) "rule22";
+						} "rule24";
+					} "rule25";
+					organizatinReference -> composition.section as sectionPlanOfCare_ld then {
+						ip -> sectionPlanOfCare_ld.title = 'PlanOfCare section' "rule104";
+		
+						ip -> sectionPlanOfCare_ld.code as t3 then {
+		
+							ip -> t3.coding as t4 then {
+								ip -> t4.system = 'http://loinc.org' "rule106";
+
+								ip -> t4.code = '18776-5' "rule107";
+							} "rule108";
+						} "rule109";
+
+						ip.ld as ld -> sectionPlanOfCare_ld then ld(patientReference,practitionerReference,organizatinReference,ld,sectionPlanOfCare_ld,bundle) "";
+						s5.ku_z_patsumdat as s6 -> sectionPlanOfCare_ld then {
+							s6.ld as ld -> sectionPlanOfCare_ld then ld(patientReference,practitionerReference,organizatinReference,ld,sectionPlanOfCare_ld,bundle) "";
+						} "rule37";
+					} "rule38";
+					organizatinReference -> composition.section as sectionProceduresHx_chv then {
+						ip -> sectionProceduresHx_chv.title = 'ProceduresHx section' "rule50";
+
+						ip -> sectionProceduresHx_chv.code as t3 then {				
+							ip -> t3.coding as t4 then {
+								ip -> t4.system = 'http://loinc.org' "rule52";
+								ip -> t4.code = '47519-4' "rule53";
+							} "rule54";
+							ip -> t3.text = 'ProceduresHx section' "rule55";
+						} "rule56";
+
+						ip.chv as chv -> bundle then chv(patientReference,practitionerReference,organizatinReference,chv,sectionProceduresHx_chv,bundle) "";
+						ip.anf as s6 -> sectionProceduresHx_chv then {
+							s6.anam_vyk as s7 -> sectionProceduresHx_chv then {
+								s7.chv as chv -> bundle then chv(patientReference,practitionerReference,organizatinReference,chv,sectionProceduresHx_chv,bundle) "rule3";
+							}"";
+						}"";
+						s5.ku_z_patsumdat as s8 -> sectionProceduresHx_chv then {
+							s8.chv as chv -> bundle then chv(patientReference,practitionerReference,organizatinReference,chv,sectionProceduresHx_chv,bundle) "";
+							s8.anf as s9 -> sectionProceduresHx_chv then {
+								s9.anam_vyk as s10 -> sectionProceduresHx_chv then {
+									s10.chv as chv -> bundle then chv(patientReference,practitionerReference,organizatinReference,chv,sectionProceduresHx_chv,bundle) "";
+								}"";
+							}"";
+						}"";
+						
+					} "rule";
+					organizatinReference -> composition.section as sectionImmunizations_oc then {
+						ip -> sectionImmunizations_oc.title = 'Immunizations section' "rule35";
+
+						ip -> sectionImmunizations_oc.code as t3 then {
+
+							ip -> t3.coding as t4 then {
+								ip -> t4.system = 'http://loinc.org' "rule37";
+								ip -> t4.code = '11369-6' "rule38";
+							} "rule39";
+						} "rule40";
+
+						ip.oc as oc -> bundle then {
+							oc.ocz as ocz -> bundle then ocz(patientReference,practitionerReference,organizatinReference,ocz,sectionImmunizations_oc,bundle) "";
+						}"";
+						ip.anf as s7 -> sectionImmunizations_oc then {
+							s7.anam_oc as s8 -> sectionImmunizations_oc then {
+								s8.ocz as ocz -> bundle then ocz(patientReference,practitionerReference,organizatinReference,ocz,sectionImmunizations_oc,bundle) "";
+							}"";
+						}"";
+						s5.ku_z_patsumdat as s10 -> sectionImmunizations_oc then {
+							s10.oc as oc -> bundle then {
+								oc.ocz as ocz -> bundle then ocz(patientReference,practitionerReference,organizatinReference,ocz,sectionImmunizations_oc,bundle) "";
+							}"";
+							s10.anf as s11 -> sectionImmunizations_oc then {
+								s11.anam_oc as oc -> sectionImmunizations_oc then {
+									oc.ocz as ocz -> bundle then ocz(patientReference,practitionerReference,organizatinReference,ocz,sectionImmunizations_oc,bundle) "";
+								}"";
+							}"";
+						}"";
+					} "rule119";
+
+					organizatinReference -> composition.section as sectionVitalSigns then {
+						ip -> sectionVitalSigns.title = 'VitalSigns section' "rule120";
+
+						ip -> sectionVitalSigns.code as t3 then {
+							ip -> t3.coding as t4 then {
+								ip -> t4.system = 'http://loinc.org' "rule122";
+								ip -> t4.code = '8716-3' "rule123";
+							} "rule124";
+						} "rule125";
+
+						ip.h as h -> bundle then h(organizatinReference,practitionerReference,patientReference,h,sectionVitalSigns,bundle) "";
+						ip.fyznal as fyznal -> bundle then fyznal(patientReference,organizatinReference,practitionerReference,fyznal,sectionVitalSigns,bundle) "";
+						s5.ku_z_patsumdat as s7 -> sectionVitalSigns then {
+							s7.h as h -> bundle then h(organizatinReference,practitionerReference,patientReference,h,sectionVitalSigns,bundle) "";
+							s7.fyznal as fyznal -> bundle then fyznal(patientReference,organizatinReference,practitionerReference,fyznal,sectionVitalSigns,bundle) "";
+						}"";
+					
+					} "rule129";
+
+					organizatinReference -> composition.section as sectionResults then {
+						ip -> sectionResults.title = 'Results section' "rule42";
+
+						ip -> sectionResults.code as t3 then {				
+							ip -> t3.coding as t4 then {
+								ip -> t4.system = 'http://loinc.org' "rule44";
+								ip -> t4.code = '30954-2' "rule45";
+							} "rule46";
+						} "rule47";
+						
+						ip.an as an -> bundle then an(patientReference,practitionerReference,organizatinReference,an,sectionResults,bundle) "";
+
+						s5.ku_z_patsumdat as s7 -> sectionResults then {
+							s7.an as an -> bundle then an(patientReference,practitionerReference,organizatinReference,an,sectionResults,bundle) "";
+						} "rule168";
+
+						organizatinReference -> composition.section as sectionMedicalDevices_uniz then {
+							ip -> sectionMedicalDevices_uniz.title = 'MedicalDevices section' "rule58";
+
+							ip -> sectionMedicalDevices_uniz.code as t3 then {
+								ip -> t3.coding as t4 then {
+									ip -> t4.system = 'http://loinc.org' "rule60";
+									ip -> t4.code = '46264-8' "rule61";
+								} "rule62";
+							} "rule63";
+
+							organizatinReference -> composition.section as sectionAlert_urf_utm_uot then {
+								ip -> sectionAlert_urf_utm_uot.title = 'Alerts section' "rule71";
+								ip -> sectionAlert_urf_utm_uot.code as t3 then {
+									ip -> t3.coding as t4 then {
+										ip -> t4.system = 'http://loinc.org' "rule73";
+										ip -> t4.code = '104605-1' "rule74";
+									} "rule75";
+								} "rule76";
+
+								ip.u as u -> bundle then u(patientReference,organizatinReference,practitionerReference,u,sectionResults,sectionMedicalDevices_uniz,sectionAlert_urf_utm_uot,bundle) "ip.u";
+								s5.ku_z_patsumdat as s7 -> bundle then {
+									s7.u as u -> bundle then u(patientReference,organizatinReference,practitionerReference,u,sectionResults,sectionMedicalDevices_uniz,sectionAlert_urf_utm_uot,bundle) "patsum.u";
+								} "rule197";
+							} "sectionAlert_urf_utm_uot";
+						} "rule198";						
+					} "rule162";
+					
+					organizatinReference -> composition.section as sectionPregnancyHx_grav then {
+						ip -> sectionPregnancyHx_grav.title = 'PregnancyHx section' "rule97";
+
+						ip -> sectionPregnancyHx_grav.code as t3 then {
+							ip -> t3.coding as t4 then {
+								ip -> t4.system = 'http://loinc.org' "rule99";
+								ip -> t4.code = '10162-6' "rule100";
+							} "rule101";
+						} "rule102";
+
+						ip.grav as grav -> bundle then grav(patientReference,organizatinReference,practitionerReference,grav,sectionPregnancyHx_grav,bundle) "";
+
+						s5.ku_z_patsumdat as s6 -> sectionPregnancyHx_grav then {
+							s6.grav as grav -> bundle then grav(patientReference,organizatinReference,practitionerReference,grav,sectionPregnancyHx_grav,bundle) "";
+						} "rule182";
+					} "rule183";
+					
+					
+				
+										
+				} "rule260";
+			} "rule261";
+		} "rule262";
+	} "bundle.entry";
+	
+	organizatinReference -> bundle then ip_ip(ip,bundle) "rule352";
+
+}
+
+
+group h(source organizatinReference: Reference, source practitionerReference: Reference, source patientReference: Reference, source hType: hType, target section, target bundle: Bundle){
+
+	hType.vyska -> bundle.entry as entry then {
+		hType.guid_vyska as x1 -> entry.fullUrl = append('Observation/',x1) "rule1";
+
+		hType.guid_vyska as guid -> section.entry as sentry then {
+			hType.vguid_vyska as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		hType.vyska -> entry.resource=create('Observation') as t1 then {
+			hType.guid_vyska as x -> t1.id = x "rule2";
+
+			hType.vyska -> t1.meta as t2 then {
+				hType.vguid_vyska as x -> t2.versionId = x "rule3";
+
+				hType.vyska -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-height-hdr' "rule4";
+			} "rule5";
+
+			hType.vyska -> t1.status = 'final' "rule6";
+
+			hType.vyska -> t1.category as t2 then {
+				hType.vyska -> t2.coding as t3 then {
+					hType.vyska -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule7";
+
+					hType.vyska -> t3.code = 'vital-signs' "rule8";
+
+					hType.vyska -> t3.display = 'Vital Signs' "rule9";
+				} "rule10";
+			} "rule11";
+			hType.vyska -> t1.code as t2 then {
+				hType.vyska -> t2.coding = 'complex' "rule12";
+
+				hType.vyska -> t2.coding as t3 then {
+					hType.vyska -> t3.system = 'http://loinc.org' "rule13";
+
+					hType.vyska -> t3.code = '8302-2' "rule14";
+
+					hType.vyska -> t3.display = 'Body height' "rule15";
+				} "rule16";
+			} "rule17";
+
+			patientReference as x -> t1.subject = x "rule18";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule19";
+
+			hType.autor as s5 -> t1 then {
+
+				s5.txt -> t1.performer as t2 then {
+					s5.txt as x -> t2.display = x "rule20";
+				} "rule21";
+			} "rule22";
+			hType.vyska -> t1.valueQuantity as t2 then {
+				hType.vyska as x -> t2.value = x "rule23";
+
+				hType.vyska -> t2.unit = 'cm' "rule24";
+
+				hType.vyska -> t2.system = 'http://unitsofmeasure.org' "rule25";
+
+				hType.vyska -> t2.code = 'cm' "rule26";
+			} "rule27";
+			hType.pozn as s5 -> t1 then {
+
+				s5.txt -> t1.note as t2 then {
+					s5.txt as x -> t2.text = x "rule28";
+				} "rule29";
+			} "rule30";
+		} "rule31";
+	}"";
+
+	hType.hmotnost -> bundle.entry as entry then {
+		hType.guid_hmotnost as x1 -> entry.fullUrl = append('Observation/',x1) "rule32";
+
+		hType.guid_hmotnost as guid -> section.entry as sentry then {
+			hType.vguid_hmotnost as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		hType.hmotnost -> entry.resource=create('Observation') as t1 then {
+			hType.guid_hmotnost as x -> t1.id = x "rule33";
+
+			hType.hmotnost -> t1.meta as t2 then {
+				hType.vguid_hmotnost as x -> t2.versionId = x "rule34";
+
+				hType.hmotnost -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-weight-hdr' "rule35";
+			} "rule36";
+
+			hType.hmotnost -> t1.status = 'final' "rule37";
+
+			hType.hmotnost -> t1.category as t2 then {
+				hType.hmotnost -> t2.coding as t3 then {
+					hType.hmotnost -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule38";
+
+					hType.hmotnost -> t3.code = 'vital-signs' "rule39";
+
+					hType.hmotnost -> t3.display = 'Vital Signs' "rule40";
+				} "rule41";
+			} "rule42";
+			hType.hmotnost -> t1.code as t2 then {
+				hType.hmotnost -> t2.coding as t3 then {
+					hType.hmotnost -> t3.system = 'http://loinc.org' "rule44";
+
+					hType.hmotnost -> t3.code = '29463-7' "rule45";
+
+					hType.hmotnost -> t3.display = 'Body weight' "rule46";
+				} "rule47";
+			} "rule48";
+
+			patientReference as x -> t1.subject = x "rule49";
+
+			hType.dat_ab as dat -> t1.effectiveDateTime then {
+			 	dat.txt as x -> t1.effectiveDateTime = x "rule50";
+			} "dat_ab";
+
+			hType.autor as s5 -> t1 then {
+
+				s5.txt -> t1.performer as t2 then {
+					s5.txt as x -> t2.display = x "rule51";
+				} "rule52";
+			} "rule53";
+			hType.hmotnost -> t1.valueQuantity as t2 then {
+				hType.hmotnost as x -> t2.value = x "rule54";
+
+				hType.hmotnost -> t2.unit = 'kg' "rule55";
+
+				hType.hmotnost -> t2.system = 'http://unitsofmeasure.org' "rule56";
+
+				hType.hmotnost -> t2.code = 'kg' "rule57";
+			} "rule58";
+		} "rule59";
+	}"";
+	hType.bmi -> bundle.entry as entry then { 
+
+		hType.guid_bmi as x1 -> entry.fullUrl = append('Observation/',x1) "rule60";
+
+		hType.guid_bmi as guid -> section.entry as sentry then {
+			hType.vguid_bmi as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+
+		hType.bmi -> entry.resource=create('Observation') as t1 then {
+			hType.guid_bmi as x -> t1.id = x "rule61";
+
+			hType.bmi -> t1.meta as t2 then {
+				hType.vguid_bmi as x -> t2.versionId = x "rule62";
+
+				hType.bmi -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-BMI-hdr' "rule63";
+			} "rule64";
+
+			hType.bmi -> t1.status = 'final' "rule65";
+
+			hType.bmi -> t1.category as t2 then {
+				hType.bmi -> t2.coding as t3 then {
+					hType.bmi -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule66";
+
+					hType.bmi -> t3.code = 'vital-signs' "rule67";
+
+					hType.bmi -> t3.display = 'Vital Signs' "rule68";
+				} "rule69";
+			} "rule70";
+			hType.bmi -> t1.code as t2 then {
+				hType.bmi -> t2.coding = 'complex' "rule71";
+
+				hType.bmi -> t2.coding as t3 then {
+					hType.bmi -> t3.system = 'http://loinc.org' "rule72";
+
+					hType.bmi -> t3.code = '39156-5' "rule73";
+
+					hType.bmi -> t3.display = 'Body mass index (BMI) [Ratio]' "rule74";
+				} "rule75";
+			} "rule76";
+
+			patientReference as x -> t1.subject = x "rule77";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule78";
+
+			hType.autor as s5 -> t1 then {
+
+				s5.txt -> t1.performer as t2 then {
+					s5.txt as x -> t2.display = x "rule79";
+				} "rule80";
+			} "rule81";
+			hType.bmi -> t1.valueQuantity as t2 then {
+				hType.bmi as x -> t2.value = x "rule82";
+
+				hType.bmi -> t2.unit = 'kg/m2' "rule83";
+
+				hType.bmi -> t2.system = 'http://unitsofmeasure.org' "rule84";
+
+				hType.bmi -> t2.code = 'kg/m2' "rule85";
+			} "rule86";
+		} "rule87";
+	}"";
+	hType.o_hlava -> bundle.entry as entry then {
+
+		hType.guid_o_hlava as x1 -> entry.fullUrl = append('Observation/',x1) "rule88";
+
+		hType.guid_o_hlava as guid -> section.entry as sentry then {
+			hType.vguid_o_hlava as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+
+		hType.o_hlava -> entry.resource=create('Observation') as t1 then {
+			hType.guid_o_hlava as x -> t1.id = x "rule89";
+
+			hType.o_hlava -> t1.meta as t2 then {
+				hType.vguid_o_hlava as x -> t2.versionId = x "rule90";
+
+				hType.o_hlava -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-headCircumference-hdr' "rule91";
+			} "rule92";
+
+			hType.o_hlava -> t1.status = 'final' "rule93";
+
+			hType.o_hlava -> t1.category as t2 then {
+				hType.o_hlava -> t2.coding as t3 then {
+					hType.o_hlava -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule94";
+
+					hType.o_hlava -> t3.code = 'vital-signs' "rule95";
+
+					hType.o_hlava -> t3.display = 'Vital Signs' "rule96";
+				} "rule97";
+			} "rule98";
+			hType.o_hlava -> t1.code as t2 then {
+				hType.o_hlava -> t2.coding = 'complex' "rule99";
+
+				hType.o_hlava -> t2.coding as t3 then {
+					hType.o_hlava -> t3.system = 'http://loinc.org' "rule100";
+
+					hType.o_hlava -> t3.code = '8287-5' "rule101";
+
+					hType.o_hlava -> t3.display = 'Head Occipital-frontal circumference by Tape measure' "rule102";
+				} "rule103";
+			} "rule104";
+
+			patientReference as x -> t1.subject = x "rule105";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule106";
+
+			hType.autor as s5 -> t1 then {
+
+				s5.txt -> t1.performer as t2 then {
+					s5.txt as x -> t2.display = x "rule107";
+				} "rule108";
+			} "rule109";
+			hType.o_hlava -> t1.valueQuantity as t2 then {
+				hType.o_hlava as x -> t2.value = x "rule110";
+
+				hType.o_hlava -> t2.unit = 'cm' "rule111";
+
+				hType.o_hlava -> t2.system = 'http://unitsofmeasure.org' "rule112";
+
+				hType.o_hlava -> t2.code = 'cm' "rule113";
+			} "rule114";
+		} "rule115";
+	}"";
+	hType.o_hrudnik -> bundle.entry as entry then {
+
+		hType.guid_o_hrudnik as x1 -> entry.fullUrl = append('Observation/',x1) "rule116";
+
+		hType.guid_o_hrudnik as guid -> section.entry as sentry then {
+			hType.vguid_o_hrudnik as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+
+		hType.o_hrudnik -> entry.resource=create('Observation') as t1 then {
+			hType.guid_o_hrudnik as x -> t1.id = x "rule117";
+
+			hType.o_hrudnik -> t1.meta as t2 then {
+				hType.vguid_o_hrudnik as x -> t2.versionId = x "rule118";
+
+				hType.o_hrudnik -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-chestCircumference-hdr' "rule119";
+			} "rule120";
+
+			hType.o_hrudnik -> t1.status = 'final' "rule121";
+
+			hType.o_hrudnik -> t1.category as t2 then {
+				hType.o_hrudnik -> t2.coding as t3 then {
+					hType.o_hrudnik -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule122";
+
+					hType.o_hrudnik -> t3.code = 'vital-signs' "rule123";
+
+					hType.o_hrudnik -> t3.display = 'Vital Signs' "rule124";
+				} "rule125";
+			} "rule126";
+			hType.o_hrudnik -> t1.code as t2 then {
+				hType.o_hrudnik -> t2.coding = 'complex' "rule127";
+
+				hType.o_hrudnik -> t2.coding as t3 then {
+					hType.o_hrudnik -> t3.system = 'http://loinc.org' "rule128";
+
+					hType.o_hrudnik -> t3.code = '8280-0' "rule129";
+
+					hType.o_hrudnik -> t3.display = 'Waist Circumference at umbilicus by Tape measure' "rule130";
+				} "rule131";
+			} "rule132";
+
+			patientReference as x -> t1.subject = x "rule133";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule134";
+
+			hType.autor as s5 -> t1 then {
+				s5.txt -> t1.performer as t2 then {
+					s5.txt as x -> t2.display = x "rule135";
+				} "rule136";
+			} "rule137";
+			hType.o_hrudnik -> t1.valueQuantity as t2 then {
+				hType.o_hrudnik as x -> t2.value = x "rule138";
+
+				hType.o_hrudnik -> t2.unit = 'cm' "rule139";
+
+				hType.o_hrudnik -> t2.system = 'http://unitsofmeasure.org' "rule140";
+
+				hType.o_hrudnik -> t2.code = 'cm' "rule141";
+			} "rule142";
+		} "rule143";
+	}"";
+
+	hType.o_pas  -> bundle.entry as entry then {
+
+		hType.guid_o_pas as x1 -> entry.fullUrl = append('Observation/',x1) "rule144";
+
+		hType.guid_o_pas as guid -> section.entry as sentry then {
+			hType.vguid_o_pas as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+
+		hType.o_pas -> entry.resource=create('Observation') as t1 then {
+			hType.guid_o_pas as x -> t1.id = x "rule145";
+
+			hType.o_pas -> t1.meta as t2 then {
+				hType.vguid_o_pas as x -> t2.versionId = x "rule146";
+
+				hType.o_pas -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-abdominalCircumference-hdr' "rule147";
+			} "rule148";
+
+			hType.o_pas -> t1.status = 'final' "rule149";
+
+			hType.o_pas -> t1.category as t2 then {
+				hType.o_pas -> t2.coding as t3 then {
+					hType.o_pas -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule150";
+
+					hType.o_pas -> t3.code = 'vital-signs' "rule151";
+
+					hType.o_pas -> t3.display = 'Vital Signs' "rule152";
+				} "rule153";
+			} "rule154";
+			hType.o_pas -> t1.code as t2 then {
+				hType.o_pas -> t2.coding = 'complex' "rule155";
+
+				hType.o_pas -> t2.coding as t3 then {
+					hType.o_pas -> t3.system = 'http://loinc.org' "rule156";
+
+					hType.o_pas -> t3.code = '56086-2' "rule157";
+
+					hType.o_pas -> t3.display = 'Adult Waist Circumference Protocol' "rule158";
+				} "rule159";
+			} "rule160";
+
+			patientReference as x -> t1.subject = x "rule161";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule162";
+
+			practitionerReference as x -> t1.performer = x "rule163";
+
+			hType.o_pas -> t1.valueQuantity as t2 then {
+				hType.o_pas as x -> t2.value = x "rule166";
+
+				hType.o_pas -> t2.unit = 'cm' "rule167";
+
+				hType.o_pas -> t2.system = 'http://unitsofmeasure.org' "rule168";
+
+				hType.o_pas -> t2.code = 'cm' "rule169";
+			} "rule170";
+		} "rule171";
+	}"";
+}
+group fyznal(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source fyznalType: fyznalType, target section, target bundle: Bundle){
+
+	fyznalType.tk_syst -> bundle.entry as entry then {
+
+		fyznalType.guid_tk as x1 -> entry.fullUrl = append('Observation/',x1) "rule1";
+
+		fyznalType.guid_tk as guid -> section.entry as sentry then {
+			fyznalType.vguid_tk as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			fyznalType.guid_tk as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				fyznalType.vguid_tk as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'http://hl7.org/fhir/StructureDefinition/bp' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'final' "rule7";
+
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule8";
+
+					patientReference -> t3.code = 'vital-signs' "rule9";
+
+					patientReference -> t3.display = 'Vital Signs' "rule10";
+				} "rule11";
+			} "rule12";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://loinc.org' "rule13";
+
+					patientReference -> t3.code = '85354-9' "rule14";
+
+					patientReference -> t3.display = 'Blood pressure panel with all children optional' "rule15";
+				} "rule16";
+			} "rule17";
+
+			patientReference as x -> t1.subject = x "rule18";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule19";
+
+			practitionerReference as x -> t1.performer = x "rule20";
+
+			fyznalType.pozn as s5 -> t1 then {
+
+				s5.txt -> t1.note as t2 then {
+					s5.txt as x -> t2.text = x "rule23";
+				} "rule24";
+			} "rule25";
+			fyznalType.tk_syst as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.coding as t4 then {
+							s5.txt -> t4.system = 'http://loinc.org' "rule26";
+
+							s5.txt -> t4.code = '8480-6' "rule27";
+
+							s5.txt -> t4.display = 'Systolic blood pressure' "rule28";
+						} "rule29";
+					} "rule30";
+					s5.txt -> t2.valueQuantity as t3 then {
+						s5.txt as x -> t3.value = x "rule31";
+
+						s5.txt -> t3.unit = 'mmHg' "rule32";
+
+						s5.txt -> t3.system = 'http://unitsofmeasure.org' "rule33";
+
+						s5.txt -> t3.code = 'mm[Hg]' "rule34";
+					} "rule35";
+				} "rule36";
+			} "rule37";
+			fyznalType.tk_diast as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.coding as t4 then {
+							s5.txt -> t4.system = 'http://loinc.org' "rule38";
+
+							s5.txt -> t4.code = '8462-4' "rule39";
+
+							s5.txt -> t4.display = 'Diastolic blood pressure' "rule40";
+						} "rule41";
+					} "rule42";
+					s5.txt -> t2.valueQuantity as t3 then {
+						s5.txt as x -> t3.value = x "rule43";
+
+						s5.txt -> t3.unit = 'mmHg' "rule44";
+
+						s5.txt -> t3.system = 'http://unitsofmeasure.org' "rule45";
+
+						s5.txt -> t3.code = 'mm[Hg]' "rule46";
+					} "rule47";
+				} "rule48";
+			} "rule49";
+		} "rule50";
+	}"";
+	fyznalType.pulz -> bundle.entry as entry then {
+
+		fyznalType.guid_pulz as x1 -> entry.fullUrl = append('Observation/',x1) "rule51";
+
+		
+		fyznalType.guid_pulz as guid -> section.entry as sentry then {
+			fyznalType.vguid_pulz as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+		
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			fyznalType.guid_pulz as x -> t1.id = x "rule53";
+
+			patientReference -> t1.meta as t2 then {
+				fyznalType.vguid_pulz as x -> t2.versionId = x "rule54";
+
+				patientReference -> t2.profile = 'http://hl7.org/fhir/StructureDefinition/heartrate' "rule55";
+			} "rule56";
+
+			patientReference -> t1.status = 'final' "rule57";
+
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule58";
+
+					patientReference -> t3.code = 'vital-signs' "rule59";
+
+					patientReference -> t3.display = 'Vital Signs' "rule60";
+				} "rule61";
+			} "rule62";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://loinc.org' "rule63";
+
+					patientReference -> t3.code = '8867-4' "rule64";
+
+					patientReference -> t3.display = 'Heart rate' "rule65";
+				} "rule66";
+			} "rule67";
+
+			patientReference as x -> t1.subject = x "rule68";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule69";
+
+			practitionerReference as x -> t1.performer = x "rule70";
+
+			fyznalType.pulz as s5 -> t1 then {
+
+				s5.txt -> t1.valueQuantity as t2 then {
+					s5.txt as x -> t2.value = x "rule73";
+
+					s5.txt -> t2.unit = '/min' "rule74";
+
+					s5.txt -> t2.system = 'http://unitsofmeasure.org' "rule75";
+
+					s5.txt -> t2.code = '/min' "rule76";
+				} "rule77";
+			} "rule78";
+		} "rule79";
+	}"";
+	fyznalType.o2sat -> bundle.entry as entry then {
+
+		fyznalType.guid_o2sat as x1 -> entry.fullUrl = append('Observation/',x1) "rule80";
+
+		fyznalType.guid_o2sat as guid -> section.entry as sentry then {
+			fyznalType.vguid_o2sat as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			fyznalType.guid_o2sat as x -> t1.id = x "rule82";
+
+			patientReference -> t1.meta as t2 then {
+				fyznalType.vguid_o2sat as x -> t2.versionId = x "rule83";
+
+				patientReference -> t2.profile = 'http://hl7.org/fhir/StructureDefinition/oxygensat' "rule84";
+			} "rule85";
+
+			patientReference -> t1.status = 'final' "rule86";
+
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule87";
+
+					patientReference -> t3.code = 'vital-signs' "rule88";
+
+					patientReference -> t3.display = 'Vital Signs' "rule89";
+				} "rule90";
+			} "rule91";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://loinc.org' "rule92";
+
+					patientReference -> t3.code = '2708-6' "rule93";
+
+					patientReference -> t3.display = 'Oxygen saturation in Arterial blood' "rule94";
+				} "rule95";
+			} "rule96";
+
+			patientReference as x -> t1.subject = x "rule97";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule98";
+
+			practitionerReference as x -> t1.performer = x "rule99";
+
+			fyznalType.o2sat as s5 -> t1 then {
+
+				s5.txt -> t1.valueQuantity as t2 then {
+					s5.txt as x -> t2.value = x "rule102";
+
+					s5.txt -> t2.unit = '%' "rule103";
+
+					s5.txt -> t2.system = 'http://unitsofmeasure.org' "rule104";
+
+					s5.txt -> t2.code = '%' "rule105";
+				} "rule106";
+			} "rule107";
+		} "rule108";
+	}"";
+	fyznalType.dech -> bundle.entry as entry then {
+
+		fyznalType.guid_dech as x1 -> entry.fullUrl = append('Observation/',x1) "rule109";
+		
+		fyznalType.guid_dech as guid -> section.entry as sentry then {
+			fyznalType.vguid_dech as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			fyznalType.guid_dech as x -> t1.id = x "rule111";
+
+			patientReference -> t1.meta as t2 then {
+				fyznalType.vguid_dech as x -> t2.versionId = x "rule112";
+
+				patientReference -> t2.profile = 'http://hl7.org/fhir/StructureDefinition/resprate' "rule113";
+			} "rule114";
+
+			patientReference -> t1.status = 'final' "rule115";
+
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule116";
+
+					patientReference -> t3.code = 'vital-signs' "rule117";
+
+					patientReference -> t3.display = 'Vital Signs' "rule118";
+				} "rule119";
+			} "rule120";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://loinc.org' "rule121";
+
+					patientReference -> t3.code = '9279-1' "rule122";
+
+					patientReference -> t3.display = 'Respiratory rate' "rule123";
+				} "rule124";
+			} "rule125";
+
+			patientReference as x -> t1.subject = x "rule126";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule127";
+
+			practitionerReference as x -> t1.performer = x "rule128";
+
+			fyznalType.dech as s5 -> t1 then {
+
+				s5.txt -> t1.valueQuantity as t2 then {
+					s5.txt as x -> t2.value = x "rule131";
+
+					s5.txt -> t2.unit = '/min' "rule132";
+
+					s5.txt -> t2.system = 'http://unitsofmeasure.org' "rule133";
+
+					s5.txt -> t2.code = '/min' "rule134";
+				} "rule135";
+			} "rule136";
+		} "rule137";
+	}"";
+	fyznalType.teplota -> bundle.entry as entry then {
+
+		fyznalType.guid_teplota as x1 -> entry.fullUrl = append('Observation/',x1) "rule138";
+		
+		fyznalType.guid_teplota as guid -> section.entry as sentry then {
+			fyznalType.vguid_teplota as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			fyznalType.guid_teplota as x -> t1.id = x "rule140";
+
+			patientReference -> t1.meta as t2 then {
+				fyznalType.vguid_teplota as x -> t2.versionId = x "rule141";
+
+				patientReference -> t2.profile = 'http://hl7.org/fhir/StructureDefinition/bodytemp' "rule142";
+			} "rule143";
+
+			patientReference -> t1.status = 'final' "rule144";
+
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule145";
+
+					patientReference -> t3.code = 'vital-signs' "rule146";
+
+					patientReference -> t3.display = 'Vital Signs' "rule147";
+				} "rule148";
+			} "rule149";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://loinc.org' "rule150";
+
+					patientReference -> t3.code = '8310-5' "rule151";
+
+					patientReference -> t3.display = 'Body temperature' "rule152";
+				} "rule153";
+			} "rule154";
+
+			patientReference as x -> t1.subject = x "rule155";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule156";
+
+			practitionerReference as x -> t1.performer = x "rule157";
+
+			fyznalType.teplota as s5 -> t1 then {
+
+				s5.txt -> t1.valueQuantity as t2 then {
+					s5.txt as x -> t2.value = x "rule160";
+
+					s5.txt -> t2.unit = '°C' "rule161";
+
+					s5.txt -> t2.system = 'http://unitsofmeasure.org' "rule162";
+
+					s5.txt -> t2.code = 'Cel' "rule163";
+				} "rule164";
+			} "rule165";
+		} "rule166";
+	}"";
+}
+group grav(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source gravType: gravType, target section, target bundle: Bundle){
+
+	gravType -> bundle.entry as entry then {
+
+		gravType.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+
+		gravType.guid as guid -> section.entry as sentry then {
+			gravType.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			gravType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				gravType.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'final' "rule7";
+
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://loinc.org' "rule8";
+
+					patientReference -> t3.code = '82810-3' "rule9";
+
+					patientReference -> t3.display = 'Pregnancy status' "rule10";
+				} "rule11";
+			} "rule12";
+
+			patientReference as x -> t1.subject = x "rule13";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule14";
+
+			practitionerReference as x -> t1.performer = x "rule15";
+
+			patientReference -> t1.performer as t2 then {
+				practitionerReference as x -> t2.reference = x "rule16";
+			} "rule17";
+			patientReference -> t1.valueCodeableConcept as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://snomed.info/sct' "rule18";
+
+					gravType.typ as x -> t3.code = translate(x,'#cm3414','code') "rule19";
+					gravType.typ as x -> t3.display = translate(x,'#cm4469','code') "rule20";
+					
+				} "rule22";
+			} "rule23";
+		
+
+		  gravType.grav_tp as grav_tp -> bundle.entry as entry then {
+
+			grav_tp.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+
+			grav_tp.guid as guid -> section.entry as sentry then {
+				grav_tp.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+			}"";
+
+			grav_tp -> t1.hasMember as t2 then {
+				grav_tp as s5 -> t2 then {
+					s5.guid as x1 -> t2.reference = append('Observation/', x1) "rule26";
+				} "rule27";
+			} "rule28";
+
+			grav_tp -> entry.resource=create('Observation') as tp then {
+								
+
+				grav_tp.guid as x -> tp.id = x "rule33";
+
+				grav_tp -> tp.meta as t2 then {
+					grav_tp.vguid as x -> t2.versionId = x "rule34";
+					patientReference -> t2.profile = 'http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips' "rule35";
+				} "rule36";
+
+				patientReference -> tp.status = 'final' "rule37";
+
+				patientReference -> tp.code as t2 then {
+					patientReference -> t2.coding as t3 then {
+						patientReference -> t3.system = 'http://loinc.org' "rule38";
+
+						grav_tp.zutp_klic as x -> t3.code = x "rule39";
+
+						grav_tp.zutp_klic as x -> t3.display = translate(x,'#cm4466','code') "rule40";
+					} "rule41";
+				} "rule42";
+			
+				patientReference as x -> tp.subject = x "rule44";
+
+				//y0 as x -> tp.effectiveDateTime = x "rule45";
+
+				practitionerReference as x -> tp.performer = x "rule46";
+
+				grav_tp as s5 -> tp then {
+					s5.dat_por as s6 -> tp then {
+						s6.txt as x -> tp.valueDateTime = x "rule49";
+					} "rule50";
+				} "rule51";
+			} "rule52";
+		  }"";
+		}"";
+	}"";
+}
+group ua(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source uaType: uaType, target section, target bundle: Bundle){
+
+	uaType -> bundle.entry as entry then {
+
+		uaType.guid as x1 -> entry.fullUrl = append('AllergyIntolerance/',x1) "rule2";
+		
+		uaType.guid -> section.entry as sentry then {
+			uaType.guid as x1 -> sentry.reference = append('AllergyIntolerance/',x1) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('AllergyIntolerance') as t1 then {
+			uaType as s5 -> t1 then {
+				s5.guid as x -> t1.id = x "rule4";
+
+				patientReference -> t1.meta as t2 then {
+					s5.vguid as x -> t2.versionId = x "rule5";
+
+					patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-allergyIntolerance-hdr' "rule6";
+				} "rule7";
+			} "rule8";
+			patientReference -> t1.clinicalStatus as t2 then {
+				uaType.stav as s5 -> t2 then {
+
+					s5.txt -> t2.coding as t3 then {
+						s5.txt -> t3.system = 'http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical' "rule9";
+
+						s5.txt as x -> t3.code = translate(x,'#cm3490','code') "rule10";
+					} "rule11";
+				} "rule12";
+			} "rule13";
+			patientReference -> t1.verificationStatus as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/allergyintolerance-verification' "rule14";
+
+					uaType.typ as x -> t3.code = translate(x,'#cm3485','code') "rule15";
+				} "rule16";
+			} "rule17";
+			uaType.uaf as s5 -> t1 then {
+				s5.typ_reakce as x -> t1.type = translate(x,'#cm3491','code') "rule18";
+
+				s5.typ_agens as x -> t1.category = translate(x,'#cm3492','code') "rule19";
+
+				s5.szp_klic as x -> t1.criticality = translate(x,'#cm4474','code') "rule20";
+
+				patientReference -> t1.code as t2 then {
+					s5.alerg_lek_klic as s6 -> t2 then {
+
+						s6.txt -> t2.coding as t3 then {
+							s6.txt -> t3.system = 'http://snomed.info/sct' "rule21";
+
+							s6.txt as x -> t3.code = x "rule22";
+						} "rule23";
+					} "rule24";
+					patientReference -> t2.coding as t3 then {
+						s5.alerg_text as s6 -> t3 then {
+							s6.txt as x -> t3.display = x "rule25";
+						} "rule26";
+					} "rule27";
+					s5.alerg_nelek_klic as s6 -> t2 then {
+
+						s6.txt -> t2.coding as t3 then {
+							s6.txt -> t3.system = 'http://snomed.info/sct' "rule28";
+
+							s6.txt as x -> t3.code = x "rule29";
+						} "rule30";
+					} "rule31";
+					patientReference -> t2.coding as t3 then {
+						s5.alerg_text as s6 -> t3 then {
+							s6.txt as x -> t3.display = x "rule32";
+						} "rule33";
+					} "rule34";
+				} "rule35";
+			} "rule36";
+			patientReference -> t1.code as t2 then {
+				uaType.u_al as s5 -> t2 then {
+					s5.txt as x -> t2.text = x "rule37";
+				} "rule38";
+			} "rule39";
+
+			patientReference as x -> t1.patient = x "rule40";
+			/* nefunguje :(
+			patientReference -> t1.onset=create('Period') as t2 then {
+				uaType.dat_du as s5 -> t1 then {
+					s5.txt as x -> t2.start = x "rule41";
+				} "rule42";
+				uaType.dat_up as s5 -> t2 then {
+					s5.txt as x -> t2.end = x "rule44";
+				} "rule45";
+			} "rule46";
+			 */
+
+			//y0 as x -> t1.recordedDate = x "rule47";
+
+			practitionerReference as x -> t1.recorder = x "rule48";
+
+			
+			uaType.uaf as s5 -> t1 then {
+
+				s5.ar_klic -> t1.reaction as t2 then {
+
+					s5.ar_klic -> t2.manifestation as t3 then {
+						s5.ar_klic -> t3.coding as t4 then {
+							s5.ar_klic -> t4.system = 'http://snomed.info/sct' "rule51";
+
+							s5.ar_klic as x -> t4.code = x "rule52";
+
+							s5.ar_text as x -> t4.display = x "rule53";
+						} "rule54";
+					} "rule55";
+				} "rule56";
+			} "rule57";
+		} "rule58";
+	}"";
+}
+group urf(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source urfType: urfType, target section, target bundle: Bundle){
+
+	urfType.urff as urff -> bundle.entry as entry then {
+
+		urff.guid as x1 -> entry.fullUrl = append('Flag/',x1) "rule2";
+
+		urff.guid as guid -> section.entry as sentry then {
+			urff.vguid as vguid -> sentry.reference = append('Flag/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+
+		urff -> entry.resource=create('Flag') as t1 then {
+			urff as s5 -> t1 then {
+				s5.guid as x -> t1.id = x "rule4";
+
+				patientReference -> t1.meta as t2 then {
+					s5.vguid as x -> t2.versionId = x "rule5";
+				} "rule6";
+			} "rule7";
+			patientReference -> t1.meta as t2 then {
+				//y0 as x -> t2.lastUpdated = x "rule8";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-flag-hdr' "rule9";
+			} "rule10";
+
+			urfType.typ as x -> t1.status = translate(x,'#cm3571','code') "rule11";
+
+			patientReference -> t1.code as t2 then {
+				urff as s5 -> t2 then {
+
+					s5.rf_klic -> t2.coding as t3 then {
+						s5.rf_klic -> t3.system = 'http://hl7.org/fhir/sid/icd-10' "rule12";
+
+						s5.rf_klic as x -> t3.code = x "rule13";
+
+						s5.rf_text as x -> t3.display = x "rule14";
+					} "rule15";
+
+					s5.info_text as x -> t2.text = x "rule16";
+				} "rule17";
+			} "rule18";
+
+			patientReference as x -> t1.subject = x "rule19";
+
+			urfType.dat_du as s5 -> t1 then {
+
+				s5.txt -> t1.period as t2 then {
+					s5.txt as x -> t2.start = x "rule20";
+				} "rule21";
+			} "rule22";
+			patientReference -> t1.period as t2 then {
+				urfType.dat_up as s5 -> t2 then {
+					s5.txt as x -> t2.end = x "rule23";
+				} "rule24";
+			} "rule25";
+
+			practitionerReference as x -> t1.author = x "rule26";
+			
+		} "rule29";
+	} "";
+}
+group uniz(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source unizType: unizType, target section, target bundle: Bundle){
+
+	unizType -> bundle.entry as entry then {
+
+		unizType.guid as x1 -> entry.fullUrl = append('DeviceUseStatement/',x1) "rule2";
+
+		unizType.guid as guid -> section.entry as sentry then {
+			unizType.vguid as vguid -> sentry.reference = append('DeviceUseStatement/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('DeviceUseStatement') as t1 then {
+			unizType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				unizType.vguid as x -> t2.versionId = x "rule4";
+
+				//y0 as x -> t2.lastUpdated = x "rule5";
+
+				patientReference -> t2.profile = 'http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips' "rule6";
+			} "rule7";
+
+			unizType.typ as x -> t1.status = translate(x,'#cm3590','code') "rule8";
+
+			patientReference as x -> t1.subject = x "rule9";
+
+			/* nefunguje :(
+			unizType.dat_du as s5 -> t1 then {
+
+				s5.txt -> t1.timingPeriod as t2 then {
+					s5.txt as x -> t2.start = x "rule10";
+				} "rule11";
+			} "rule12";
+			patientReference -> t1.timingPeriod as t2 then {
+				unizType.dat_up as s5 -> t2 then {
+					s5.txt as x -> t2.end = x "rule13";
+				} "rule14";
+			} "rule15";
+			*/
+
+			practitionerReference as x -> t1.source = x "rule16";
+
+			patientReference -> t1.device as t3 then {
+					unizType.unizf as s5 -> t3 then {
+						s5.guid as x1 -> t3.reference = append('Device/', x1) "rule18";
+					} "rule19";
+			} "rule20";
+			
+		} "rule22";
+	}"";
+
+	unizType.unizf as unizf -> bundle.entry as entry then {
+
+		unizf.guid as x1 -> entry.fullUrl = append('Device/',x1) "rule24";
+		
+		unizf.guid as guid -> section.entry as sentry then {
+			unizf.vguid as vguid -> sentry.reference = append('Device/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Device') as t1 then {
+			unizf as s5 -> t1 then {
+				s5.guid as x -> t1.id = x "rule26";
+
+				patientReference -> t1.meta as t2 then {
+					s5.vguid as x -> t2.versionId = x "rule27";
+				} "rule28";
+			} "rule29";
+			patientReference -> t1.meta as t2 then {
+				//y0 as x -> t2.lastUpdated = x "rule30";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device' "rule31";
+			} "rule32";
+
+			unizType.typ as x -> t1.status = translate(x,'#cm3590','code') "rule33";
+
+			unizf as s5 -> t1 then {
+				s5.niz_ident as x -> t1.modelNumber = x "rule34";
+			} "rule35";
+			patientReference -> t1.type as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://snomed.info/sct' "rule37";
+
+					unizf as s5 -> t3 then {
+						s5.niz_klic as x -> t3.code = x "rule38";
+
+						s5.niz_text as x -> t3.display = x "rule39";
+					} "rule40";
+				} "rule41";
+			} "rule42";
+		} "rule43";
+	}"";
+}
+group utm(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source utmType: utmType, target section, target bundle: Bundle){
+
+	utmType -> bundle.entry as entry then {
+
+		utmType.guid as x1 -> entry.fullUrl = append('Flag/',x1) "rule2";
+
+		utmType.guid as guid -> section.entry as sentry then {
+			utmType.vguid as vguid -> sentry.reference = append('Flag/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Flag') as t1 then {
+			utmType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				utmType.vguid as x -> t2.versionId = x "rule4";
+
+				//y0 as x -> t2.lastUpdated = x "rule5";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-flag-hdr' "rule6";
+			} "rule7";
+
+			patientReference -> t1.status = 'active' "rule8";
+
+			patientReference -> t1.code as t2 then {
+				utmType.u_tm as s5 -> t2 then {
+					s5.txt as x -> t2.text = x "rule9";
+				} "rule10";
+			} "rule11";
+
+			patientReference as x -> t1.subject = x "rule12";
+
+			utmType.dat_du as s5 -> t1 then {
+
+				s5.txt -> t1.period as t2 then {
+					s5.txt as x -> t2.start = x "rule13";
+				} "rule14";
+			} "rule15";
+
+			practitionerReference as x -> t1.author = x "rule16";
+			
+		} "rule19";
+	}"";
+}
+group uks(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source uksType: uksType, target section, target bundle: Bundle){
+
+	uksType -> bundle.entry as entry then {
+
+		uksType.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+
+		uksType.guid as guid -> section.entry as sentry then {
+			uksType.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			uksType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				uksType.vguid as x -> t2.versionId = x "rule4";
+			} "rule5";
+
+			patientReference -> t1.status = 'final' "rule6";
+
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'https://www.dastacr.cz/dasta/hypertext/DSAJQ.htm' "rule7";
+
+					patientReference -> t3.code = 'PKS' "rule8";
+
+					patientReference -> t3.display = 'Krevní skupina - popis' "rule9";
+				} "rule10";
+			} "rule11";
+
+			patientReference as x -> t1.subject = x "rule12";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule13";
+
+			practitionerReference as x -> t1.performer = x "rule14";
+
+			//y0 as x -> t1.valueCodeableConcept = x "rule17";
+
+			patientReference -> t1.valueCodeableConcept as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'https://dastacr.cz/dasta/hypertext/DSAIR.htm' "rule18";
+
+					uksType.krevskup as krevskup -> bundle then {
+						krevskup.txt as ks -> bundle then {
+							uksType.rh as rhelem -> bundle then {
+								rhelem.txt as rh -> t3.code = append(ks,rh) as x then {
+									rhelem.txt as rh -> t3.display = translate(x,'#cm3670','code') "ks rh";
+								}"rh";
+							}"";
+						}"";
+					}"";
+					//y0 as x -> t3.code = x "rule19";
+
+					//y0 as x -> t3.display = translate(x,'#cm3670','code') "rule20";
+				} "rule21";
+			} "rule22";
+		} "rule23";
+	}"";
+}
+group uot(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source uotType: uotType, target section, target bundle: Bundle){
+
+	uotType -> bundle.entry as entry then {
+
+		uotType.guid as x1 -> entry.fullUrl = append('Flag/',x1) "rule2";
+
+		uotType.guid as guid -> section.entry as sentry then {
+			uotType.vguid as vguid -> sentry.reference = append('Flag/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Flag') as t1 then {
+			uotType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				uotType.vguid as x -> t2.versionId = x "rule4";
+
+				//y0 as x -> t2.lastUpdated = x "rule5";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-flag-hdr' "rule6";
+			} "rule7";
+
+			patientReference -> t1.status = 'active' "rule8";
+
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.text = 'Očkování proti tetanu' "rule9";
+			} "rule10";
+
+			patientReference as x -> t1.subject = x "rule11";
+
+			uotType.dat_du as s5 -> t1 then {
+
+				s5.txt -> t1.period as t2 then {
+					s5.txt as x -> t2.start = x "rule12";
+				} "rule13";
+			} "rule14";
+
+			practitionerReference as x -> t1.author = x "rule15";
+
+		} "rule18";
+	}"";
+}
+group an(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anType: anType, target section, target bundle: Bundle){
+	anType -> bundle.entry as entry then {
+
+		anType.guid as x1 -> entry.fullUrl = append('DiagnosticReport/',x1) "rule2";
+
+		anType.guid as guid -> section.entry as sentry then {
+			anType.vguid as vguid -> sentry.reference = append('DiagnosticReport/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+
+		patientReference -> entry.resource=create('DiagnosticReport') as t1 then {
+			anType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				anType.vguid as x -> t2.versionId = x "rule4";
+			} "rule5";
+
+			patientReference -> t1.status = 'final' "rule6";
+
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'https://loinc.org/' "rule7";
+
+					patientReference -> t3.code = '34117-2' "rule8";
+
+					patientReference -> t3.display = 'History and physical note' "rule9";
+				} "rule10";
+			} "rule11";
+
+			patientReference as x -> t1.subject = x "rule12";
+
+			//y0 as x -> t1.effectiveDateTime = x "rule13";
+
+			practitionerReference as x -> t1.performer = x "rule14";
+
+			
+			anType.text as text -> t1 then{
+			  text.ptext as ptext -> t1 then {
+				ptext.txt as x -> t1.conclusion = x "rule17";
+			  }"";
+			}"";
+		} "rule18";
+	}"";
+}
+group anf_anam_prob(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anam_probType: anam_probType, target sectionProblems, target sectionSocialHistory, target bundle: Bundle){
+
+	anam_probType -> bundle.entry as entry then {
+
+		anam_probType.guid as x1 -> entry.fullUrl = append('Condition/',x1) "rule1";
+
+
+		anam_probType.guid -> sectionProblems.entry as sentry then {
+			anam_probType.guid as x1 -> sentry.reference = append('Condition/',x1) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Condition') as t1 then {
+			anam_probType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				anam_probType.vguid as x -> t2.versionId = x "rule4";
+
+				//dat_ab as x -> t2.lastUpdated = x "rule5";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr' "rule6";
+			} "rule7";
+			patientReference -> t1.clinicalStatus as t2 then {
+				anam_probType.prob_klin as s5 -> t2 then {
+
+					s5.txt -> t2.coding as t3 then {
+						s5.txt -> t3.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' "rule8";
+
+						s5.txt as x -> t3.code = translate(x,'#cm3483','code') "rule9";
+					} "rule10";
+				} "rule11";
+			} "rule12";
+			patientReference -> t1.verificationStatus as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' "rule13";
+
+					patientReference -> t3.code = 'confirmed' "rule14";
+				} "rule15";
+			} "rule16";
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/condition-category' "rule17";
+
+					patientReference -> t3.code = 'encounter-diagnosis' "rule18";
+
+					patientReference -> t3.display = 'Encounter Diagnosis' "rule19";
+				} "rule20";
+			} "rule21";
+			anam_probType.prob_zav_text as s5 -> t1 then {
+
+				s5.txt -> t1.severity as t2 then {
+					s5.txt as x -> t2.text = x "rule22";
+				} "rule23";
+			} "rule24";
+			patientReference -> t1.code as t2 then {
+				anam_probType.prob_kod as x -> t2.coding = x "rule25";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'https://dastacr.cz/dasta/hypertext/WWBWI.htm' "rule26";
+
+					anam_probType.prob_kod as s5 -> t3 then {
+						s5.kod_syst as s6 -> t3 then {
+							s6.txt as x -> t3.code = x "rule27";
+						} "rule28";
+						s5.kod as s6 -> t3 then {
+							s6.txt as x -> t3.display = x "rule29";
+						} "rule30";
+					} "rule31";
+				} "rule32";
+				anam_probType.prob_kod as s5 -> t2 then {
+					s5.kod_text as s6 -> t2 then {
+						s6.txt as x -> t2.text = x "rule33";
+					} "rule34";
+				} "rule35";
+			} "rule36";
+
+			patientReference as x -> t1.subject = x "rule37";
+
+			/* nefunguje :(
+			patientReference -> t1.onset=create('Period') as t2 then {
+				anam_probType.prob_dat_od as s5 -> t1 then {
+					s5.txt as x -> t2.start = x "rule38";
+				} "rule39";
+				anam_probType.prob_dat_do as s5 -> t2 then {
+					s5.txt as x -> t2.end = x "rule41";
+				} "rule42";
+			} "rule43";
+			*/
+
+			//practitionerReference as x -> t1.recorder = x "rule44";
+
+			practitionerReference -> t1.recorder as t2 then {
+				practitionerReference as x -> t2.reference = x "rule45";
+			} "rule46";
+
+			anam_probType.prob_stad_kod as x -> t1.stage = x "rule47";
+
+			patientReference -> t1.stage as t2 then {
+				patientReference -> t2.summary as t3 then {
+					anam_probType.prob_stad_kod as x -> t3.coding = x "rule48";
+
+					patientReference -> t3.coding as t4 then {
+						patientReference -> t4.system = 'https://dastacr.cz/dasta/hypertext/WWBWI.htm' "rule49";
+
+						anam_probType.prob_stad_kod as s5 -> t4 then {
+							s5.kod_syst as s6 -> t4 then {
+								s6.txt as x -> t4.code = x "rule50";
+							} "rule51";
+							s5.kod as s6 -> t4 then {
+								s6.txt as x -> t4.display = x "rule52";
+							} "rule53";
+						} "rule54";
+					} "rule55";
+					anam_probType.prob_stad_kod as s5 -> t3 then {
+						s5.kod_text as s6 -> t3 then {
+							s6.txt as x -> t3.text = x "rule56";
+						} "rule57";
+					} "rule58";
+				} "rule59";
+			} "rule60";
+			anam_probType.prob_stad_text as s5 -> t1 then {
+
+				s5.txt -> t1.stage as t2 then {
+					s5.txt -> t2.type as t3 then {
+						s5.txt as x -> t3.text = x "rule61";
+					} "rule62";
+				} "rule63";
+			} "rule64";
+			anam_probType.prob_popis as s5 -> t1 then {
+
+				s5.txt -> t1.note as t2 then {
+					s5.txt as x -> t2.text = x "rule65";
+				} "rule66";
+			} "rule67";
+			anam_probType.prob_okol as s5 -> t1 then {
+
+				s5.txt -> t1.note as t2 then {
+					s5.txt as x -> t2.text = x "rule68";
+				} "rule69";
+			} "rule70";
+		} "rule71";
+	} "bundle.entry";
+}
+group anf_anam_inf(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anam_infType: anam_infType,  target sectionProblems, target sectionSocialHistory, target bundle: Bundle){
+	anam_infType -> bundle.entry as entry then {
+		anam_infType.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+
+		anam_infType.guid -> sectionSocialHistory.entry as sentry then {
+			anam_infType.guid as x1 -> sentry.reference = append('Observation/',x1) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			anam_infType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				anam_infType.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-infectious-contact-hdr' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'final' "rule7";
+
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding = 'complex' "rule8";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/v3-ParticipationType' "rule9";
+
+					patientReference -> t3.code = 'EXPAGNT' "rule10";
+				} "rule11";
+			} "rule12";
+
+			patientReference as x -> t1.subject = x "rule13";
+
+			//dat_ab as x -> t1.effectiveDateTime = x "rule14";
+
+			anam_infType.inf_dat_od as s5 -> t1 then {
+
+				s5.txt -> t1.effectivePeriod as t2 then {
+					s5.txt as x -> t2.start = x "rule15";
+				} "rule16";
+			} "rule17";
+			patientReference -> t1.effectivePeriod as t2 then {
+				anam_infType.inf_dat_do as s5 -> t2 then {
+					s5.txt as x -> t2.end = x "rule18";
+				} "rule19";
+			} "rule20";
+
+			//practitionerReference as x -> t1.performer = x "rule21";
+
+			practitionerReference -> t1.performer as t2 then {
+				practitionerReference as x -> t2.reference = x "rule22";
+			} "rule23";
+			anam_infType.inf_stat_kod as s5 -> t1 then {
+
+				s5.txt -> t1.valueCodeableConcept as t2 then {
+
+					s5.txt -> t2.coding as t3 then {
+						s5.txt -> t3.system = 'https://hl7.org/fhir/valueset-iso3166-1-2.html' "rule24";
+
+						s5.txt as x -> t3.code = x "rule25";
+					} "rule26";
+				} "rule27";
+			} "rule28";
+			patientReference -> t1.valueCodeableConcept as t2 then {
+				patientReference -> t2.coding as t3 then {
+					anam_infType.inf_stat_text as s5 -> t3 then {
+						s5.txt as x -> t3.display = x "rule29";
+					} "rule30";
+				} "rule31";
+			} "rule32";
+			anam_infType.inf_koment as s5 -> t1 then {
+				s5.txt as x -> t1.valueString = x "rule33";
+			} "rule34";
+		} "rule35";
+	} "bundle.entry";
+}
+group anf_anam_infc(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anam_infcType: anam_infcType,  target sectionProblems, target sectionSocialHistory, target bundle: Bundle){
+	anam_infcType -> bundle.entry as entry then {
+		
+		anam_infcType.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+
+		anam_infcType.guid -> sectionSocialHistory.entry as sentry then {
+			anam_infcType.guid as x1 -> sentry.reference = append('Observation/',x1) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			anam_infcType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				anam_infcType.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-travel-hdr' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'final' "rule7";
+
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding = 'complex' "rule8";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://loinc.org' "rule9";
+
+					patientReference -> t3.code = '82753-5' "rule10";
+				} "rule11";
+			} "rule12";
+
+			patientReference as x -> t1.subject = x "rule13";
+
+			//dat_ab as x -> t1.effectiveDateTime = x "rule14";
+
+			anam_infcType.infc_dat_od as s5 -> t1 then {
+
+				s5.txt -> t1.effectivePeriod as t2 then {
+					s5.txt as x -> t2.start = x "rule15";
+				} "rule16";
+			} "rule17";
+			patientReference -> t1.effectivePeriod as t2 then {
+				anam_infcType.infc_dat_do as s5 -> t2 then {
+					s5.txt as x -> t2.end = x "rule18";
+				} "rule19";
+			} "rule20";
+
+			//practitionerReference as x -> t1.performer = x "rule21";
+
+			practitionerReference -> t1.performer as t2 then {
+				practitionerReference as x -> t2.reference = x "rule22";
+			} "rule23";
+			anam_infcType.infc_stat_kod as s5 -> t1 then {
+
+				s5.txt -> t1.valueCodeableConcept as t2 then {
+
+					s5.txt -> t2.coding as t3 then {
+						s5.txt -> t3.system = 'https://hl7.org/fhir/valueset-iso3166-1-2.html' "rule24";
+
+						s5.txt as x -> t3.code = x "rule25";
+					} "rule26";
+				} "rule27";
+			} "rule28";
+			patientReference -> t1.valueCodeableConcept as t2 then {
+				patientReference -> t2.coding as t3 then {
+					anam_infcType.infc_stat_text as s5 -> t3 then {
+						s5.txt as x -> t3.display = x "rule29";
+					} "rule30";
+				} "rule31";
+				anam_infcType.infc_koment as s5 -> t2 then {
+					s5.txt as x -> t2.text = x "rule32";
+				} "rule33";
+			} "rule34";
+		} "rule35";
+	}"";
+}
+group anf_anam_rao(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anam_rao: anam_raoType, target sectionProblems, target sectionSocialHistory, target bundle: Bundle){
+	anam_rao -> bundle.entry as entry then {
+		
+		anam_rao.guid as x1 -> entry.fullUrl = append('FamilyMemberHistory/',x1) "rule2";
+
+		anam_rao.guid -> sectionSocialHistory.entry as sentry then {
+			anam_rao.guid as x1 -> sentry.reference = append('FamilyMemberHistory/',x1) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('FamilyMemberHistory') as t1 then {
+			anam_rao.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				anam_rao.vguid as x -> t2.versionId = x "rule4";
+
+				//dat_ab as x -> t2.lastUpdated = x "rule5";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/czh-familyMemberHistory-hdr' "rule6";
+			} "rule7";
+
+			patientReference -> t1.status = 'completed' "rule8";
+
+			patientReference as x -> t1.patient = x "rule9";
+
+			anam_rao.rao_vztah_kod as s5 -> t1 then {
+
+				s5.txt -> t1.relationship as t2 then {
+
+					s5.txt -> t2.coding as t3 then {
+						s5.txt -> t3.system = 'http://terminology.hl7.org/ValueSet/v3-FamilyMember' "rule10";
+
+						s5.txt as x -> t3.code = x "rule11";
+					} "rule12";
+				} "rule13";
+			} "rule14";
+			patientReference -> t1.relationship as t2 then {
+				patientReference -> t2.coding as t3 then {
+					anam_rao.rao_vztah_text as s5 -> t3 then {
+						s5.txt as x -> t3.display = x "rule15";
+					} "rule16";
+				} "rule17";
+			} "rule18";
+			anam_rao.rao_dat_nar as s5 -> t1 then {
+				s5.txt as x -> t1.bornDate = x "rule19";
+			} "rule20";
+			anam_rao.rao_dat_um as s5 -> t1 then {
+				s5.txt as x -> t1.deceasedDate = x "rule21";
+			} "rule22";
+			anam_rao.rao_vzdel as s5 -> t1 then {
+
+			} "rule23";
+			patientReference -> t1.note as t2 then {
+				//practitionerReference as x -> t2.authorReference = x "rule24";
+
+				practitionerReference -> t2.authorReference as t3 then {
+					practitionerReference as x -> t3.reference = x "rule25";
+				} "rule26";
+				anam_rao.rao_vzdel as s5 -> t2 then {
+					s5.txt as x -> t2.text = x "rule27";
+				} "rule28";
+			} "rule29";
+
+			anam_rao.rao_zdrprob_kod as x -> t1.condition = x "rule30";
+
+			patientReference -> t1.condition as t2 then {
+				patientReference -> t2.code as t3 then {
+					anam_rao.rao_zdrprob_kod as x -> t3.coding = x "rule31";
+
+					patientReference -> t3.coding as t4 then {
+						patientReference -> t4.system = 'https://dastacr.cz/dasta/hypertext/WWBWI.htm' "rule32";
+
+						anam_rao.rao_zdrprob_kod as s5 -> t4 then {
+							s5.kod_syst as s6 -> t4 then {
+								s6.txt as x -> t4.version = x "rule33";
+							} "rule34";
+							s5.kod as s6 -> t4 then {
+								s6.txt as x -> t4.code = x "rule35";
+							} "rule36";
+							s5.kod_text as s6 -> t4 then {
+								s6.txt as x -> t4.display = x "rule37";
+							} "rule38";
+						} "rule39";
+					} "rule40";
+				} "rule41";
+
+				anam_rao.rao_duvum_kod as x -> t2.outcome = x "rule42";
+
+				patientReference -> t2.outcome as t3 then {
+					anam_rao.rao_duvum_kod as x -> t3.coding = x "rule43";
+
+					patientReference -> t3.coding as t4 then {
+						patientReference -> t4.system = 'https://dastacr.cz/dasta/hypertext/WWBWI.htm' "rule44";
+
+						anam_rao.rao_duvum_kod as s5 -> t4 then {
+							s5.kod_syst as s6 -> t4 then {
+								s6.txt as x -> t4.version = x "rule45";
+							} "rule46";
+							s5.kod as s6 -> t4 then {
+								s6.txt as x -> t4.code = x "rule47";
+							} "rule48";
+							s5.kod_text as s6 -> t4 then {
+								s6.txt as x -> t4.display = x "rule49";
+							} "rule50";
+						} "rule51";
+					} "rule52";
+				} "rule53";
+			} "rule54";
+		} "rule55";
+	} "";
+}
+group anf_anam_sa(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anam_sa: anam_saType,  target sectionProblems, target sectionSocialHistory, target bundle: Bundle){
+	anam_sa -> bundle.entry as entry then {
+		
+		anam_sa.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+
+		anam_sa.guid -> sectionSocialHistory.entry as sentry then {
+			anam_sa.guid as x1 -> sentry.reference = append('Observation/',x1) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			anam_sa.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				anam_sa.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-sdoh-hdr' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'final' "rule7";
+
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule8";
+
+					patientReference -> t3.code = 'social-history' "rule9";
+				} "rule10";
+			} "rule11";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.text = 'Sociální anamnéza' "rule12";
+			} "rule13";
+
+			patientReference as x -> t1.subject = x "rule14";
+
+			//dat_ab as x -> t1.effectiveDateTime = x "rule15";
+
+			//practitionerReference as x -> t1.performer = x "rule16";
+
+			practitionerReference -> t1.performer as t2 then {
+				practitionerReference as x -> t2.reference = x "rule17";
+			} "rule18";
+			anam_sa.sau_prac as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.text = 'Pracovní zapojení' "rule19";
+					} "rule20";
+
+					s5.txt as x -> t2.valueString = x "rule21";
+				} "rule22";
+			} "rule23";
+			anam_sa.sau_zajmy as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.text = 'Koníčky' "rule24";
+					} "rule25";
+
+					s5.txt as x -> t2.valueString = x "rule26";
+				} "rule27";
+			} "rule28";
+			anam_sa.sau_soc as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.text = 'Sociální síť' "rule29";
+					} "rule30";
+
+					s5.txt as x -> t2.valueString = x "rule31";
+				} "rule32";
+			} "rule33";
+			anam_sa.sav_vzdel as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.coding as t4 then {
+							s5.txt -> t4.system = 'http://terminology.hl7.org/CodeSystem/v3-EducationLevel' "rule34";
+
+							s5.txt as x -> t4.code = x "rule35";
+
+							s5.txt as x -> t4.display = translate(x,'#cm3691','code') "rule36";
+						} "rule37";
+					} "rule38";
+					anam_sa.sav_koment as s6 -> t2 then {
+						s6.txt as x -> t2.valueString = x "rule39";
+					} "rule40";
+				} "rule41";
+			} "rule42";
+			anam_sa.sab_zpbydl_text as s5 -> t1 then {
+
+			} "rule43";
+			patientReference -> t1.component as t2 then {
+				patientReference -> t2.code as t3 then {
+					anam_sa.sab_zpbydl_kod as s5 -> t3 then {
+
+						s5.txt -> t3.coding as t4 then {
+							s5.txt -> t4.system = 'https://dastacr.cz/dasta/hypertext/WWBWB.htm' "rule44";
+
+							s5.txt as x -> t4.code = x "rule45";
+
+							s5.txt as x -> t4.display = translate(x,'#cm3696','code') "rule46";
+						} "rule47";
+
+						s5.txt -> t3.text = 'Způsob bydlení' "rule48";
+					} "rule49";
+				} "rule50";
+				anam_sa.sab_zpbydl_text as s5 -> t2 then {
+					s5.txt as x -> t2.valueString = x "rule51";
+				} "rule52";
+			} "rule53";
+			anam_sa.sab_prizp_text as s5 -> t1 then {
+
+			} "rule54";
+			patientReference -> t1.component as t2 then {
+				patientReference -> t2.code as t3 then {
+					anam_sa.sab_prizp_kod as s5 -> t3 then {
+
+						s5.txt -> t3.coding as t4 then {
+							s5.txt -> t4.system = 'https://dastacr.cz/dasta/hypertext/WWBWC.htm' "rule55";
+
+							s5.txt as x -> t4.code = x "rule56";
+
+							s5.txt as x -> t4.display = translate(x,'#cm3699','code') "rule57";
+						} "rule58";
+
+						s5.txt -> t3.text = 'Přizpůsobení domácnosti' "rule59";
+					} "rule60";
+				} "rule61";
+				anam_sa.sab_prizp_text as s5 -> t2 then {
+					s5.txt as x -> t2.valueString = x "rule62";
+				} "rule63";
+			} "rule64";
+			anam_sa.sab_bariery_text as s5 -> t1 then {
+
+			} "rule65";
+			patientReference -> t1.component as t2 then {
+				patientReference -> t2.code as t3 then {
+					anam_sa.sab_bariery_kod as s5 -> t3 then {
+
+						s5.txt -> t3.coding as t4 then {
+							s5.txt -> t4.system = 'https://dastacr.cz/dasta/hypertext/WWBWD.htm' "rule66";
+
+							s5.txt as x -> t4.code = x "rule67";
+
+							s5.txt as x -> t4.display = translate(x,'#cm3702','code') "rule68";
+						} "rule69";
+
+						s5.txt -> t3.text = 'Bariéry' "rule70";
+					} "rule71";
+				} "rule72";
+				anam_sa.sab_bariery_text as s5 -> t2 then {
+					s5.txt as x -> t2.valueString = x "rule73";
+				} "rule74";
+			} "rule75";
+			anam_sa.sar_koment as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.text = 'Rodinná situace' "rule76";
+					} "rule77";
+
+					s5.txt as x -> t2.valueString = x "rule78";
+				} "rule79";
+			} "rule80";
+			anam_sa.sar_slozrod_text as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.text = 'Složení rodiny' "rule81";
+					} "rule82";
+
+					s5.txt as x -> t2.valueString = x "rule83";
+				} "rule84";
+			} "rule85";
+			anam_sa.sar_rodstav_text as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.text = 'Rodinný stav' "rule86";
+					} "rule87";
+
+					s5.txt as x -> t2.valueString = x "rule88";
+				} "rule89";
+			} "rule90";
+			anam_sa.sar_pocdet as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.text = 'Počet dětí' "rule91";
+					} "rule92";
+
+					s5.txt as x -> t2.valueString = x "rule93";
+				} "rule94";
+			} "rule95";
+			anam_sa.sar_pocdetd as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.text = 'Počet dětí ve společné domácnosti' "rule96";
+					} "rule97";
+
+					s5.txt as x -> t2.valueString = x "rule98";
+				} "rule99";
+			} "rule100";
+			anam_sa.sar_dite as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.text = 'Podrobnosti o dítěti' "rule101";
+					} "rule102";
+
+					s5.txt as x -> t2.valueString = x "rule103";
+				} "rule104";
+			} "rule105";
+			anam_sa.sar_pecezc as s5 -> t1 then {
+
+				s5.txt -> t1.component as t2 then {
+					s5.txt -> t2.code as t3 then {
+						s5.txt -> t3.text = 'Pečuje o závislého člena' "rule106";
+					} "rule107";
+
+					s5.txt as x -> t2.valueString = x "rule108";
+				} "rule109";
+			} "rule110";
+		} "rule111";
+	}"";
+}
+group anf_anam_aba(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anam_aba: anam_abaType,  target sectionProblems, target sectionSocialHistory, target bundle: Bundle){
+	anam_aba -> bundle.entry as entry then {
+		
+		anam_aba.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+
+		anam_aba.guid -> sectionSocialHistory.entry as sentry then {
+			anam_aba.guid as x1 -> sentry.reference = append('Observation/',x1) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			anam_aba.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				anam_aba.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-sdoh-hdr' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'final' "rule7";
+
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule8";
+
+					patientReference -> t3.code = 'social-history' "rule9";
+				} "rule10";
+			} "rule11";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding = 'complex' "rule12";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://snomed.info/sct' "rule13";
+
+					anam_aba.aba_stav_kod as s5 -> t3 then {
+						s5.txt as x -> t3.code = x "rule14";
+					} "rule15";
+					anam_aba.aba_stav_text as s5 -> t3 then {
+						s5.txt as x -> t3.display = x "rule16";
+					} "rule17";
+				} "rule18";
+			} "rule19";
+
+			patientReference as x -> t1.subject = x "rule20";
+
+			//dat_ab as x -> t1.effectiveDateTime = x "rule21";
+
+			anam_aba.aba_dat_od as s5 -> t1 then {
+
+				s5.txt -> t1.effectivePeriod as t2 then {
+					s5.txt as x -> t2.start = x "rule22";
+				} "rule23";
+			} "rule24";
+			patientReference -> t1.effectivePeriod as t2 then {
+				anam_aba.aba_dat_do as s5 -> t2 then {
+					s5.txt as x -> t2.end = x "rule25";
+				} "rule26";
+			} "rule27";
+
+			//practitionerReference as x -> t1.performer = x "rule28";
+
+			practitionerReference -> t1.performer as t2 then {
+				practitionerReference as x -> t2.reference = x "rule29";
+			} "rule30";
+			anam_aba.aba_mnoz_text as s5 -> t1 then {
+
+				s5.txt -> t1.valueCodeableConcept as t2 then {
+					s5.txt as x -> t2.text = x "rule31";
+				} "rule32";
+			} "rule33";
+			anam_aba.aba_koment as s5 -> t1 then {
+
+				s5.txt -> t1.note as t2 then {
+					s5.txt as x -> t2.text = x "rule34";
+				} "rule35";
+			} "rule36";
+		} "rule37";
+	}"";
+}
+group anf_anam_abk(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anam_abk: anam_abkType,  target sectionProblems, target sectionSocialHistory, target bundle: Bundle){
+	anam_abk -> bundle.entry as entry then {
+		
+		anam_abk.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+
+		anam_abk.guid -> sectionSocialHistory.entry as sentry then {
+			anam_abk.guid as x1 -> sentry.reference = append('Observation/',x1) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			anam_abk.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				anam_abk.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-sdoh-hdr' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'final' "rule7";
+
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule8";
+
+					patientReference -> t3.code = 'social-history' "rule9";
+				} "rule10";
+			} "rule11";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding = 'complex' "rule12";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://snomed.info/sct' "rule13";
+
+					anam_abk.abk_stav_kod as s5 -> t3 then {
+						s5.txt as x -> t3.code = x "rule14";
+					} "rule15";
+					anam_abk.abk_stav_text as s5 -> t3 then {
+						s5.txt as x -> t3.display = x "rule16";
+					} "rule17";
+				} "rule18";
+			} "rule19";
+
+			patientReference as x -> t1.subject = x "rule20";
+
+			//dat_ab as x -> t1.effectiveDateTime = x "rule21";
+
+			anam_abk.abk_dat_od as s5 -> t1 then {
+
+				s5.txt -> t1.effectivePeriod as t2 then {
+					s5.txt as x -> t2.start = x "rule22";
+				} "rule23";
+			} "rule24";
+			patientReference -> t1.effectivePeriod as t2 then {
+				anam_abk.abk_dat_do as s5 -> t2 then {
+					s5.txt as x -> t2.end = x "rule25";
+				} "rule26";
+			} "rule27";
+
+			//practitionerReference as x -> t1.performer = x "rule28";
+
+			practitionerReference -> t1.performer as t2 then {
+				practitionerReference as x -> t2.reference = x "rule29";
+			} "rule30";
+			anam_abk.abk_mnoz_text as s5 -> t1 then {
+
+				s5.txt -> t1.valueCodeableConcept as t2 then {
+					s5.txt as x -> t2.text = x "rule31";
+				} "rule32";
+			} "rule33";
+			anam_abk.abk_koment as s5 -> t1 then {
+
+				s5.txt -> t1.note as t2 then {
+					s5.txt as x -> t2.text = x "rule34";
+				} "rule35";
+			} "rule36";
+		} "rule37";
+	}"";
+}
+group anf_anam_abd(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anam_abd: anam_abdType,  target sectionProblems, target sectionSocialHistory, target bundle: Bundle){
+	anam_abd -> bundle.entry as entry then {
+		
+		anam_abd.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+
+		anam_abd.guid -> sectionSocialHistory.entry as sentry then {
+			anam_abd.guid as x1 -> sentry.reference = append('Observation/',x1) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			anam_abd.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				anam_abd.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-sdoh-hdr' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'final' "rule7";
+
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule8";
+
+					patientReference -> t3.code = 'social-history' "rule9";
+				} "rule10";
+			} "rule11";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding = 'complex' "rule12";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'https://dastacr.cz/dasta/hypertext/WWBWG.htm' "rule13";
+
+					anam_abd.abd_stav_kod as s5 -> t3 then {
+						s5.txt as x -> t3.code = translate(x,'#cm3570','code') "rule14";
+					} "rule15";
+					anam_abd.abd_stav_text as s5 -> t3 then {
+						s5.txt as x -> t3.display = x "rule16";
+					} "rule17";
+				} "rule18";
+
+				patientReference -> t2.coding = 'complex' "rule19";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'https://dastacr.cz/dasta/hypertext/WWBWH.htm' "rule20";
+
+					anam_abd.abd_lattyp_kod as s5 -> t3 then {
+						s5.txt as x -> t3.code = translate(x,'#cm3572','code') "rule21";
+					} "rule22";
+					anam_abd.abd_lattyp_text as s5 -> t3 then {
+						s5.txt as x -> t3.display = x "rule23";
+					} "rule24";
+				} "rule25";
+
+				patientReference -> t2.coding = 'complex' "rule26";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'https://dastacr.cz/dasta/hypertext/WWBSE.htm' "rule27";
+
+					anam_abd.abd_latzp_kod as s5 -> t3 then {
+						s5.txt as x -> t3.code = x "rule28";
+					} "rule29";
+					anam_abd.abd_latzp_text as s5 -> t3 then {
+						s5.txt as x -> t3.display = x "rule30";
+					} "rule31";
+				} "rule32";
+			} "rule33";
+
+			patientReference as x -> t1.subject = x "rule34";
+
+			//dat_ab as x -> t1.effectiveDateTime = x "rule35";
+
+			anam_abd.abd_dat_od as s5 -> t1 then {
+
+				s5.txt -> t1.effectivePeriod as t2 then {
+					s5.txt as x -> t2.start = x "rule36";
+				} "rule37";
+			} "rule38";
+			patientReference -> t1.effectivePeriod as t2 then {
+				anam_abd.abd_dat_do as s5 -> t2 then {
+					s5.txt as x -> t2.end = x "rule39";
+				} "rule40";
+			} "rule41";
+
+			//practitionerReference as x -> t1.performer = x "rule42";
+
+			practitionerReference -> t1.performer as t2 then {
+				practitionerReference as x -> t2.reference = x "rule43";
+			} "rule44";
+			anam_abd.abd_mnoz_text as s5 -> t1 then {
+
+				s5.txt -> t1.valueCodeableConcept as t2 then {
+					s5.txt as x -> t2.text = x "rule45";
+				} "rule46";
+			} "rule47";
+			anam_abd.abd_koment as s5 -> t1 then {
+
+				s5.txt -> t1.note as t2 then {
+					s5.txt as x -> t2.text = x "rule48";
+				} "rule49";
+			} "rule50";
+		} "rule51";
+	}"";
+}
+group anf_anam_abj(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anam_abj: anam_abjType,  target sectionProblems, target sectionSocialHistory, target bundle: Bundle){
+	anam_abj -> bundle.entry as entry then {
+		
+		anam_abj.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+
+		anam_abj.guid -> sectionSocialHistory.entry as sentry then {
+			anam_abj.guid as x1 -> sentry.reference = append('Observation/',x1) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Observation') as t1 then {
+			anam_abj.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				anam_abj.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-sdoh-hdr' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'final' "rule7";
+
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/observation-category' "rule8";
+
+					patientReference -> t3.code = 'social-history' "rule9";
+				} "rule10";
+			} "rule11";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding = 'complex' "rule12";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'https://dastacr.cz/dasta/hypertext/WWBWI.htm' "rule13";
+
+					anam_abj.abj_kod as s5 -> t3 then {
+						s5.kod_syst as s6 -> t3 then {
+							s6.txt as x -> t3.version = x "rule14";
+						} "rule15";
+						s5.kod as s6 -> t3 then {
+							s6.txt as x -> t3.code = x "rule16";
+						} "rule17";
+						s5.kod_text as s6 -> t3 then {
+							s6.txt as x -> t3.display = x "rule18";
+						} "rule19";
+					} "rule20";
+				} "rule21";
+			} "rule22";
+
+			patientReference as x -> t1.subject = x "rule23";
+
+			//dat_ab as x -> t1.effectiveDateTime = x "rule24";
+
+			//practitionerReference as x -> t1.performer = x "rule25";
+
+			practitionerReference -> t1.performer as t2 then {
+				practitionerReference as x -> t2.reference = x "rule26";
+			} "rule27";
+			anam_abj.abj_text as s5 -> t1 then {
+
+				s5.txt -> t1.valueCodeableConcept as t2 then {
+					s5.txt as x -> t2.text = x "rule28";
+				} "rule29";
+			} "rule30";
+		} "rule31";
+	}"";
+}
+group ocz(source Reference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source oczType: oczType, target section, target bundle: Bundle){
+	oczType -> bundle.entry as entry then {
+
+		oczType.guid as x1 -> entry.fullUrl = append('Immunization/',x1) "rule2";
+
+		oczType.guid as guid -> section.entry as sentry then {
+			oczType.vguid as vguid -> sentry.reference = append('Immunization/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		Reference -> entry.resource=create('Immunization') as t1 then {
+			oczType.guid as x -> t1.id = x "rule3";
+		
+
+			Reference -> t1.meta as t2 then {
+				oczType.vguid as x -> t2.versionId = x "rule4";
+
+				Reference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-immunization-hdr' "rule5";
+			} "rule6";
+
+			oczType.id_ockovani -> t1.identifier as t2 then {
+				oczType.id_ockovani -> t2.use = 'ID očkování' "rule7";
+
+				oczType.id_ockovani -> t2.system = 'https://dastacr.cz/dasta/hypertext/DSALA.htm' "rule8";
+
+				oczType.id_ockovani as x -> t2.value = x "rule9";
+			} "rule10";
+
+			oczType.id_ockovani_isin -> t1.identifier as t2 then {
+				oczType.id_ockovani_isin -> t2.use = 'ID očkování dle ISIN' "rule11";
+
+				oczType.id_ockovani_isin -> t2.system = 'https://www.uzis.cz/' "rule12";
+
+				oczType.id_ockovani_isin as x -> t2.value = x "rule13";
+			} "rule14";
+			oczType.davka as s5 -> t1 then {
+
+				s5.id_davka -> t1.identifier as t2 then {
+					s5.id_davka -> t2.use = 'ID dávky očkování' "rule15";
+
+					s5.id_davka -> t2.system = 'https://dastacr.cz/dasta/hypertext/DSALA.htm' "rule16";
+
+					s5.id_davka as x -> t2.value = x "rule17";
+				} "rule18";
+
+				s5.id_davka_isin -> t1.identifier as t2 then {
+					s5.id_davka_isin -> t2.use = 'ID dávky dle ISIN' "rule19";
+
+					s5.id_davka_isin -> t2.system = 'https://www.uzis.cz/' "rule20";
+
+					s5.id_davka_isin as x -> t2.value = x "rule21";
+				} "rule22";
+
+				s5.id_davka_isin -> t1.status = 'completed' "rule23";
+
+				s5.id_davka_isin -> t1.vaccineCode as t2 then {
+					s5.id_davka_isin -> t2.coding as t3 then {
+						s5.id_davka_isin -> t3.system = 'https://dastacr.cz/dasta/hypertext/DSAHW.htm' "rule24";
+
+						oczType.typ_oc_kod as x -> t3.code = x "rule25";
+
+						oczType.typ_oc_text as x -> t3.display = x "rule26";
+					} "rule27";
+
+					s5.kod_ol -> t2.coding as t3 then {
+						s5.kod_ol -> t3.system = 'http://www.sukl.cz' "rule28";
+
+						s5.kod_ol as x -> t3.code = x "rule29";
+
+						s5.nazev_ol as x -> t3.display = x "rule30";
+
+						s5.gene_ol as x -> t3.display = x "rule31";
+					} "rule32";
+
+					oczType.agens as x -> t2.coding = x "rule33";
+
+					s5.kod_ol -> t2.coding as t3 then {
+						s5.kod_ol -> t3.system = 'https://dastacr.cz/dasta/hypertext/DSAKM.htm' "rule34";
+
+						oczType.agens as s6 -> t3 then {
+							s6.agens_klic as x -> t3.code = x "rule35";
+
+							s6.agens_text as x -> t3.display = x "rule36";
+						} "rule37";
+					} "rule38";
+
+					s5.pozn as x -> t2.text = x "rule39";
+				} "rule40";
+			} "rule41";
+
+			Reference as x -> t1.patient = x "rule42";
+
+			//y0 as x -> t1.occurrenceDateTime = x "rule43";
+
+			oczType.davka as s5 -> t1 then {
+
+				s5.nazev_vyrobce -> t1.manufacturer as t2 then {
+					s5.nazev_vyrobce as x -> t2.display = x "rule44";
+				} "rule45";
+
+				s5.cis_sarze as x -> t1.lotNumber = x "rule46";
+
+				s5.dat_expirace as s6 -> t1 then {
+					s6.txt as x -> t1.expirationDate = x "rule47";
+				} "rule48";
+
+				s5.misto_apl_klic -> t1.site as t2 then {
+					s5.misto_apl_klic -> t2.coding as t3 then {
+						s5.misto_apl_klic -> t3.system = 'https://dastacr.cz/dasta/hypertext/WWBUU.htm' "rule49";
+
+						s5.misto_apl_klic as x -> t3.code = x "rule50";
+
+						s5.misto_apl_text as x -> t3.display = x "rule51";
+					} "rule52";
+				} "rule53";
+
+				s5.apl_cesta_klic -> t1.route as t2 then {
+					s5.apl_cesta_klic -> t2.coding as t3 then {
+						s5.apl_cesta_klic -> t3.system = 'https://dastacr.cz/dasta/hypertext/WWBUT.htm' "rule54";
+
+						s5.apl_cesta_klic as x -> t3.code = x "rule55";
+
+						s5.apl_cesta_text as x -> t3.display = x "rule56";
+					} "rule57";
+				} "rule58";
+			} "rule59";
+
+			practitionerReference as x -> t1.performer = x "rule60";
+
+			
+			oczType.indikace as s5 -> t1 then {
+
+				s5.txt -> t1.reasonCode as t2 then {
+					s5.txt -> t2.coding as t3 then {
+						s5.txt -> t3.system = 'https://www.uzis.cz/' "rule64";
+
+						s5.txt as x -> t3.code = x "rule65";
+					} "rule66";
+					s5.txt -> t2.coding as t3 then {
+						oczType.indikace_text as x -> t3.display = x "rule67";
+					} "rule68";
+				} "rule69";
+			} "rule70";
+			oczType.davka as s5 -> t1 then {
+				s5.reakce as x -> t1.reaction = x "rule71";
+
+				oczType.id_ockovani_isin -> t1.reaction as t2 then {
+					s5.reakce as s6 -> t2 then {
+						s6.dat_or as s7 -> t2 then {
+							s7.txt as x -> t2.date = x "rule72";
+						} "rule73";
+						oczType.id_ockovani_isin -> t2.detail as t3 then {
+							s6.typ as x -> t3.type = x "rule74";
+
+							s6.typ as x -> t3.display = translate(x,'#cm2661','code') "rule75";
+						} "rule76";
+					} "rule77";
+				} "rule78";
+			} "rule79";
+
+			oczType.davka as x -> t1.protocolApplied = x "rule80";
+
+			oczType.id_ockovani_isin -> t1.protocolApplied as t2 then {
+				oczType.davka as s5 -> t2 then {
+					s5.cis_davky as x -> t2.doseNumberPositiveInt = x "rule81";
+
+					s5.poc_davek as x -> t2.seriesDosesString = x "rule82";
+				} "rule83";
+			} "rule84";
+		} "rule85";
+	} "";
+}
+group dg(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source dgzType: dgzType, target section, target bundle: Bundle){
+
+	dgzType -> bundle.entry as entry then {
+
+		dgzType.guid as x1 -> entry.fullUrl = append('Condition/',x1) "rule2";
+
+		dgzType.guid as x1 -> section.entry as sentry then {
+			dgzType.vguid as x2 -> sentry.reference = append('Condition/',x1,'/_history/',x2) "dg ref";
+		} "section.entry";
+ 
+		patientReference -> entry.resource=create('Condition') as t1 then {
+			dgzType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				dgzType.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr' "rule5";
+			} "rule6";
+			patientReference -> t1.clinicalStatus as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/condition-clinical' "rule7";
+
+					patientReference -> t3.code = 'active' "rule8";
+				} "rule9";
+			} "rule10";
+			patientReference -> t1.verificationStatus as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/condition-ver-status' "rule11";
+
+					patientReference -> t3.code = 'confirmed' "rule12";
+				} "rule13";
+			} "rule14";
+			patientReference -> t1.category as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://terminology.hl7.org/CodeSystem/condition-category' "rule15";
+
+					patientReference -> t3.code = 'encounter-diagnosis' "rule16";
+
+					patientReference -> t3.display = 'Encounter Diagnosis' "rule17";
+				} "rule18";
+			} "rule19";
+			dgzType.zavaz_dg as s5 -> t1 then {
+
+				s5.txt -> t1.severity as t2 then {
+					s5.txt -> t2.coding as t3 then {
+						s5.txt -> t3.system = 'http://snomed.info/sct' "rule20";
+
+						s5.txt as x -> t3.code = x "rule21";
+
+						s5.txt as x -> t3.display = translate(x,'#cm2655','code') "rule22";
+					} "rule23";
+				} "rule24";
+			} "rule25";
+			patientReference -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://hl7.org/fhir/sid/icd-10' "rule27";
+
+					dgzType.diag as diag -> t3 then {
+						diag.txt as x -> t3.code = x "rule28";
+					} "diag";
+
+					dgzType.diag as s5 -> t3 then {
+						s5.nazev as x -> t3.display = x "rule29";
+					} "rule30";
+				} "rule31";
+			} "rule32";
+
+			patientReference as x -> t1.subject = x "rule33";
+
+			/* nefunguje :(
+			dgzType.dat_du as s5 -> t1 then {
+				s5.txt as x1 -> t1 then {
+					dgzType.dat_up as s6 -> t1 then {
+						s6.txt as x2 -> t1.onset = create('Period') as t2, t2.start=x1, t2.end=x2 "rule38";
+					} "rule39";
+				} "rule36";	
+			} "rule40";
+			 */
+			
+			practitionerReference as x -> t1.recorder =x  "rule42";
+			
+			dgzType.pozn as s5 -> t1.note as t2 then {
+					s5.txt as x -> t2.text = x "rule44";
+			} "rule45";
+			
+		} "rule47";
+	} "bundle.entry";
+	
+}
+
+group le(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source le: leType, source lez: lezType, target section, target bundle: Bundle){
+	lez -> bundle.entry as entry then {
+
+		lez.guid as x1 -> entry.fullUrl = append('MedicationAdministration/',x1) "rule2";
+		
+		lez.guid -> section.entry as sentry then {
+			lez.guid as x1 -> sentry.reference = append('MedicationAdministration/',x1) "rule2";
+		}"";
+
+		lez -> entry.resource=create('MedicationAdministration') as t1 then {
+			lez as s5 -> t1 then {
+				s5.guid as x -> t1.id = x "rule7";
+	
+				patientReference -> t1.meta as t2 then {
+					s5.vguid as x -> t2.versionId = x "rule9";
+				} "rule11";
+
+				s5.ind_oprav_sd as x -> t1.status = translate(x,'#cm2682','code') "rule12";
+
+				s5.zmena_m_kod as s6 -> t1 then {
+					s6.txt -> t1.statusReason as t2 then {
+						s6.txt -> t2.coding as t3 then {
+							s6.txt as x -> t3.code = translate(x,'#cm2699','code') "rule15";
+						} "rule16";
+					} "rule17";
+				} "rule18";
+				patientReference -> t1.statusReason as t2 then {
+					patientReference -> t2.coding as t3 then {
+						s5.zmena_m_text as s6 -> t3 then {
+							s6.txt as x -> t3.display = x "rule19";
+						} "rule20";
+					} "rule21";
+				} "rule22";
+				patientReference -> t1.category as t2 then {
+					 
+
+					s5.typ_med -> t2.coding as t3 then {
+						s5.typ_med -> t3.system = 'http://terminology.hl7.org/CodeSystem/medication-admin-category' "rule24";
+
+						s5.typ_med as x -> t3.code = translate(x,'#cm2684','code') "rule25";
+
+						s5.typ_med as x -> t3.display = translate(x,'#cm2679','code') "rule26";
+					} "rule27";
+				} "rule28";
+				/* nefunguje :(
+				s5.kod_lek -> t1.medication=create('CodeableConcept') as t2 then {
+					s5.kod_lek -> t2.coding as t3 then {
+						s5.kod_lek -> t3.system = 'http://www.snomed.org/' "rule29";
+
+						s5.kod_lek as x -> t3.code = x "rule30";
+
+						s5.nazev_lek as x -> t3.display = x "rule31";
+					} "rule32";
+				} "rule33";
+				 */
+			} "rule34";
+			/* nefunguje :(
+			patientReference -> t1.medicationCodeableConcept as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://www.whocc.no/atc/' "rule36";
+					lez as s5 -> t3 then {
+						s5.aktivni_latka as s6 -> t3 then {					
+							s6.kod_atc as x -> t3.code = x "rule37";
+							s6.nazev as x -> t3.display = x "rule39";
+						} "rule40";
+						s5.kod_atc as x -> t3.code = x "rule37";
+					} "rule41";
+				} "rule42";
+				lez as s5 -> t2 then {
+					s5.gene_lek as x -> t2.text = x "rule43";
+					s5.gene_lek as x -> t2.text = x "rule44";
+				} "rule45";
+			} "rule46";
+			*/
+			patientReference as x -> t1.subject = x "rule47";
+
+			//dat_ab.txt as x -> t1.effectiveDateTime = x "rule48";
+			le.dat_ab as dat -> t1 then {
+				dat.txt as x -> t1.effectiveDateTime = x "rule49";
+			} "leType.dat_ab";
+			
+			/* nefunguje :(
+			lez as s5 -> t1 then {
+				s5.dat_od as s6 -> t1.effectivePeriod as t2 then {
+					s6.txt -> t2 then {
+						s6.txt as x -> t2.start = x "rule51";
+					} "rule52";
+					s5.dat_do as s6 -> t2 then {
+						s6.txt as x -> t2.end = x "rule54";
+					} "rule56";
+				} "rule57";
+			} "rule58";
+			*/
+			practitionerReference -> t1.performer as t2 then {
+				practitionerReference -> t2.actor as t3 then {
+					practitionerReference as x -> t3.reference = x "rule60";
+				} "rule61";
+			} "rule62";
+			lez as s5 -> t1 then {
+				s5.ind_m_kod -> t1.reasonCode as t2 then {
+
+					s5.ind_m_kod -> t2.coding as t3 then {
+						patientReference -> t3.system = 'https://dastacr.cz/dasta/hypertext/WWBWI.htm' "rule65";
+
+						s5.ind_m_kod as s6 -> t3 then {
+							s6.kod_syst as s7 -> t3 then {
+								s7.txt as x -> t3.version = x "rule66";
+							} "rule67";
+							s6.kod as s7 -> t3 then {
+								s7.txt as x -> t3.code = x "rule68";
+							} "rule69";
+							s6.kod_text as s7 -> t3 then {
+								s7.txt as x -> t3.display = x "rule70";
+							} "rule71";
+						} "rule72";
+					} "rule73";
+					s5.ind_m_text as s6 -> t2 then {
+						s6.txt as x -> t2.text = x "rule74";
+
+						s6.txt as x -> t2.text = x "rule75";
+					} "rule76";
+				} "rule77";
+				s5.pozn as s6 -> t1 then {
+					s6.txt as x -> t1.note = x "rule78";
+
+					patientReference -> t1.note as t2 then {
+						s6.txt as x -> t2.text = x "rule79";
+					} "rule80";
+				} "rule81";
+				s5.rozpis_v as s6 -> t1 then {
+					s6.txt as x -> t1.dosage = x "rule82";
+				} "rule83";
+				patientReference -> t1.dosage as t2 then {
+					s5.misto_apl_klic as x -> t2.site = x "rule84";
+
+					patientReference -> t2.site as t3 then {
+						patientReference -> t3.coding as t4 then {
+							patientReference -> t4.system = 'https://dastacr.cz/dasta/hypertext/WWBUU.htm' "rule85";
+
+							s5.misto_apl_klic as x -> t4.code = x "rule86";
+
+							s5.misto_apl_text as x -> t4.display = x "rule87";
+						} "rule88";
+					} "rule89";
+
+					s5.apl_cesta_klic as x -> t2.route = x "rule90";
+
+					patientReference -> t2.route as t3 then {
+						patientReference -> t3.coding as t4 then {
+							patientReference -> t4.system = 'https://dastacr.cz/dasta/hypertext/WWBUT.htm' "rule91";
+
+							s5.apl_cesta_klic as x -> t4.code = x "rule92";
+
+							s5.apl_cesta_text as x -> t4.display = x "rule93";
+						} "rule94";
+					} "rule95";
+
+					s5.forma_klic as x -> t2.method = x "rule96";
+
+					patientReference -> t2.method as t3 then {
+						patientReference -> t3.coding as t4 then {
+							patientReference -> t4.system = 'https://dastacr.cz/dasta/hypertext/WWBRW.htm' "rule97";
+
+							s5.forma_klic as x -> t4.code = x "rule98";
+
+							s5.forma_text as x -> t4.display = x "rule99";
+						} "rule100";
+					} "rule101";
+					patientReference -> t2.dose as t3 then {
+						s5.rozpis_v as s6 -> t3 then {
+							s6.txt as x -> t3.value = x "rule102";
+						} "rule103";
+					} "rule104";
+				} "rule105";
+			} "rule106";
+		} "rule107";
+
+	} "bundle.entry";
+}
+group chv(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source chvType: chvType, target section, target bundle: Bundle){
+
+	chvType -> bundle.entry as entry then {
+
+		chvType.guid as x1 -> entry.fullUrl = append('Procedure/',x1) "rule2";
+		chvType.guid as guid -> section.entry as sentry then {
+			chvType.vguid as vguid -> sentry.reference = append('Procedure/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('Procedure') as t1 then {
+			chvType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				chvType.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-procedure-hdr' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'completed' "rule7";
+
+			patientReference -> t1.code as t2 then {
+
+				chvType.chvps_klic -> t2.coding as t3 then {
+					chvType.chvps_klic -> t3.system = 'http://snomed.info/sct' "rule8";
+
+					chvType.chvps_klic as x -> t3.code = x "rule9";
+
+					chvType.chvps_text as x -> t3.display = x "rule10";
+				} "rule11";
+			} "rule12";
+
+			patientReference as x -> t1.subject = x "rule13";
+
+			//y0 as x -> t1.performedDateTime = x "rule14";
+
+			practitionerReference as x -> t1.performer = x "rule15";
+
+			chvType.duvod_kod as x -> t1.reasonCode = x "rule19";
+
+			patientReference -> t1.reasonCode as t2 then {
+				chvType.duvod_kod as x -> t2.coding = x "rule20";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://hl7.org/fhir/sid/icd-10' "rule21";
+
+					chvType.duvod_kod as s5 -> t3 then {
+						s5.kod as s6 -> t3 then {
+							s6.txt as x -> t3.code = x "rule22";
+						} "rule23";
+						s5.kod_text as s6 -> t3 then {
+							s6.txt as x -> t3.display = x "rule24";
+						} "rule25";
+					} "rule26";
+				} "rule27";
+			} "rule28";
+
+			chvType.alv_form as x -> t1.bodySite = x "rule29";
+
+			patientReference -> t1.bodySite as t2 then {
+				chvType.alv_form as s5 -> t2 then {
+					s5.ptext as s6 -> t2 then {
+
+						s6.txt -> t2.coding as t3 then {
+							s6.txt -> t3.system = 'http://snomed.info/sct' "rule30";
+
+							s6.txt as x -> t3.display = x "rule31";
+						} "rule32";
+					} "rule33";
+				} "rule34";
+			} "rule35";
+			chvType.vysledek as s5 -> t1 then {
+
+				s5.txt -> t1.outcome as t2 then {
+					s5.txt -> t2.coding as t3 then {
+						s5.txt -> t3.system = 'http://snomed.info/sct' "rule36";
+
+						s5.txt as x -> t3.code = translate(x,'#cm20','code') "rule37";
+
+						s5.txt as x -> t3.display = translate(x,'#cm21','code') "rule38";
+					} "rule39";
+				} "rule40";
+			} "rule41";
+
+			chvType.komplikace as x -> t1.complication = x "rule42";
+
+			patientReference -> t1.complication as t2 then {
+				chvType.komplikace as x -> t2.coding = x "rule43";
+
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'http://hl7.org/fhir/sid/icd-10' "rule44";
+
+					chvType.komplikace as s5 -> t3 then {
+						s5.kod as s6 -> t3 then {
+							s6.txt as x -> t3.code = x "rule45";
+						} "rule46";
+						s5.kod_text as s6 -> t3 then {
+							s6.txt as x -> t3.display = x "rule47";
+						} "rule48";
+					} "rule49";
+				} "rule50";
+			} "rule51";
+		} "rule52";
+	}"";
+}
+group ld(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source ldType: ldType, target section, target bundle: Bundle){
+	ldType -> bundle.entry as entry then {
+
+		ldType.guid as x1 -> entry.fullUrl = append('CarePlan/',x1) "rule2";
+		ldType.guid as guid -> section.entry as sentry then {
+			ldType.vguid as vguid -> sentry.reference = append('CarePlan/',guid,'/_history/',vguid) "rule2";
+		}"";
+
+		patientReference -> entry.resource=create('CarePlan') as t1 then {
+			ldType.guid as x -> t1.id = x "rule3";
+
+			patientReference -> t1.meta as t2 then {
+				ldType.vguid as x -> t2.versionId = x "rule4";
+
+				patientReference -> t2.profile = 'https://hl7.cz/fhir/hdr/StructureDefinition/cz-carePlan-hdr' "rule5";
+			} "rule6";
+
+			patientReference -> t1.status = 'completed' "rule7";
+
+			patientReference -> t1.intent = 'plan' "rule8";
+
+			ldType.text as s5 -> t1 then {
+				s5.ptext as s6 -> t1 then {
+					s6.txt as x -> t1.description = x "rule9";
+				} "rule10";
+			} "rule11";
+
+			patientReference as x -> t1.subject = x "rule12";
+
+			//y0 as x -> t1.created = x "rule13";
+
+			practitionerReference as x -> t1.author = x "rule14";
+			
+		} "rule17";
+	}"";
+}
+group fs(source organizatinReference: Reference, source practitionerReference: Reference, source patientReference: Reference, source fsType: fsType, target section, target bundle: Bundle){
+
+	fsType -> bundle.entry as entry then {
+
+		fsType.guid as x1 -> entry.fullUrl = append('Condition/',x1) "rule2";
+
+		fsType.guid -> section.entry as sentry then {
+			fsType.guid as x1 -> sentry.reference = append('Condition/',x1) "rule2";
+		}"";
+
+		organizatinReference -> entry.resource=create('Condition') as t1 then {
+			fsType.guid as x -> t1.id = x "rule3";
+
+			organizatinReference -> t1.meta as t2 then {
+				fsType.vguid as x -> t2.versionId = x "rule4";
+			} "rule5";
+			organizatinReference -> t1.category as t2 then {
+				organizatinReference -> t2.coding as t3 then {
+					organizatinReference -> t3.system = 'http://hl7.org/fhir/ValueSet/condition-category' "rule6";
+
+					fsType.typ as x -> t3.code = x "rule7";
+
+					fsType.typ as x -> t3.display = translate(x,'#cm2656','code') "rule8";
+				} "rule9";
+			} "rule10";
+
+			fsType.text as x -> t1.code = x "rule11";
+
+			organizatinReference -> t1.code as t2 then {
+				fsType.text as s5 -> t2 then {
+					s5.ptext as s6 -> t2 then {
+						s6.txt as x -> t2.text = x "rule12";
+					} "rule13";
+				} "rule14";
+			} "rule15";
+
+			patientReference as x -> t1.subject = x "rule16";
+
+			//y0 as x -> t1.recordedDate = x "rule17";
+
+			practitionerReference as x -> t1.recorder = x "rule18";
+
+			/*organizatinReference -> t1.recorder as t2 then {
+				practitionerReference as x -> t2.reference = x "rule19";
+			} "rule20";*/
+		} "rule21";
+	}"";
+}
+group ld_all(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source ip_ld: ldType, source patsumdat_ld: ldType, source dat_prov: ip, target section, target bundle: Bundle){
+
+		ip_ld.dat_ab as dat -> bundle then ld(patientReference,practitionerReference,organizatinReference,dat,ip_ld,section,bundle) "rule1";
+
+		patsumdat_ld -> bundle then ld(patientReference,practitionerReference,organizatinReference,dat_ab,patsumdat_ld,section,bundle) "rule3";
+
+}
+group fs_all(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source ip_fs: fsType, source patsumdat_fs: fsType, source dat_prov: ip, target section, target bundle: Bundle){
+
+		ip_fs.dat_ab as dat -> bundle then fs(organizatinReference,practitionerReference,patientReference,ip_fs,dat,section,bundle) "rule1";
+
+		patsumdat_fs -> bundle then fs(organizatinReference,practitionerReference,patientReference,patsumdat_fs,dat_ab,section,bundle) "rule3";
+
+}
+group chv_all(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source dat_prov: ip, source dat_ab: dat_duType, source ip_chv: chvType, source ip_anf_anam_vyk_chv: chvType, source patsumdat_anf_anam_vyk_chv: chvType, source patsudat_chv: chvType, target section, target bundle: Bundle){
+
+		ip_chv -> bundle then chv(patientReference,practitionerReference,organizatinReference,dat_ab,ip_chv,section,bundle) "rule1";
+
+		ip_anf_anam_vyk_chv -> bundle then chv(patientReference,practitionerReference,organizatinReference,dat_ab,ip_anf_anam_vyk_chv,section,bundle) "rule3";
+		
+		patsumdat_anf_anam_vyk_chv -> bundle then chv(patientReference,practitionerReference,organizatinReference,dat_ab,patsumdat_anf_anam_vyk_chv,section,bundle) "rule6";
+		
+		patsudat_chv -> bundle then chv(patientReference,practitionerReference,organizatinReference,dat_ab,patsudat_chv,section,bundle) "rule9";
+		
+}
+group le_all(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source dat_prov: ip, source ip_le: leType, source patsumdat_le: leType, target section, target bundle: Bundle){
+
+		patientReference -> bundle then le_without_dat_ab(patientReference,practitionerReference,organizatinReference,ip_le,section,bundle) "rule1";
+
+		patientReference -> bundle then le(patientReference,practitionerReference,organizatinReference,dat_ab,patsumdat_le,section,bundle) "rule3";
+	
+}
+group dg_all(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source dat_prov: ip, source ip_dg: dgType, source patsumdat_dg: dgType, target section, target bundle: Bundle){
+		ip_dg.dgz as x1 -> bundle then dg(patientReference,practitionerReference,organizatinReference,x1,dat_prov,section,bundle) "rule1";	
+		patsumdat_dg.dgz as x1 -> bundle then dg(patientReference,practitionerReference,organizatinReference,x1,dat_prov,section,bundle) "rule4";	
+
+}
+
+group oc_all(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source dat_prov: ip, source ip_oc: ocType, source anf_anam_oc: ocType, source patsumdat_anf_anam_oc: ocType, source patsumdat_oc: ocType, target section, target bundle: Bundle){
+
+		ip_oc.ocz as x1 -> bundle then oc(patientReference,practitionerReference,organizatinReference,dat_ab,x1,section,bundle) "rule2";
+	
+		anf_anam_oc.ocz as x1 -> bundle then oc(patientReference,practitionerReference,organizatinReference,dat_ab,x1,section,bundle) "rule5";
+	
+		patsumdat_anf_anam_oc.ocz as x1 -> bundle then oc(patientReference,practitionerReference,organizatinReference,dat_ab,x1,section,bundle) "rule8";
+	
+		patsumdat_oc.ocz as x1 -> bundle then oc(patientReference,practitionerReference,organizatinReference,dat_ab,x1,section,bundle) "rule11";
+
+}
+group anf_all(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source anf: anfType, target sectionProblems, target sectionSocialHistory, target bundle: Bundle){
+
+		anf.anam_prob as x1 -> bundle then anf_anam_prob(patientReference,practitionerReference,organizatinReference,x1,sectionProblems,sectionSocialHistory,bundle) "rule1";
+		anf.anam_inf  as x1 -> bundle then anf_anam_inf (patientReference,practitionerReference,organizatinReference,x1,sectionProblems,sectionSocialHistory,bundle) "rule4";
+		anf.anam_infc as x1 -> bundle then anf_anam_infc(patientReference,practitionerReference,organizatinReference,x1,sectionProblems,sectionSocialHistory,bundle) "rule7";
+		anf.anam_rao as anam_rao -> bundle then anf_anam_rao(patientReference,practitionerReference,organizatinReference,anam_rao,sectionProblems,sectionSocialHistory,bundle) "rule10";
+		anf.anam_sa  as anam_sa  -> bundle then anf_anam_sa (patientReference,practitionerReference,organizatinReference,anam_sa ,sectionProblems,sectionSocialHistory,bundle) "rule15";
+		anf.anam_aba as anam_aba -> bundle then anf_anam_aba(patientReference,practitionerReference,organizatinReference,anam_aba,sectionProblems,sectionSocialHistory,bundle) "rule20";
+		anf.anam_abk as anam_abk -> bundle then anf_anam_abk(patientReference,practitionerReference,organizatinReference,anam_abk,sectionProblems,sectionSocialHistory,bundle) "rule25";
+		anf.anam_abd as anam_abd -> bundle then anf_anam_abd(patientReference,practitionerReference,organizatinReference,anam_abd,sectionProblems,sectionSocialHistory,bundle) "rule30";
+		anf.anam_abj as anam_abj -> bundle then anf_anam_abj(patientReference,practitionerReference,organizatinReference,anam_abj,sectionProblems,sectionSocialHistory,bundle) "rule35";	
+
+}
+group an_all(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source ip_an: anType, source patsumdat_an: anType, source dat_prov: ip, target section, target bundle: Bundle){
+
+		ip_an -> bundle then an(patientReference,practitionerReference,organizatinReference,ip_an,dat_ab,section,bundle) "rule1";
+
+		patsumdat_an -> bundle then an(patientReference,practitionerReference,organizatinReference,patsumdat_an,dat_ab,section,bundle) "rule3";		
+
+}
+
+group u(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source u: uType, target sectionResults, target sectionMedicalDevices, target sectionAlerts, target bundle: Bundle){
+
+		//u.ua as x1 -> bundle then ua(patientReference,practitionerReference,organizatinReference,x1,section,bundle) "rule1";
+
+		u.urf as x1 -> bundle then urf(patientReference,practitionerReference,organizatinReference,x1,sectionAlerts,bundle) "rule2";
+
+		u.uniz as x1 -> bundle then uniz(patientReference,practitionerReference,organizatinReference,x1,sectionMedicalDevices,bundle) "rule3";
+
+		u.utm as x1 -> bundle then utm(patientReference,practitionerReference,organizatinReference,x1,sectionAlerts,bundle) "rule4";
+
+		u.uks as x1 -> bundle then uks(patientReference,practitionerReference,organizatinReference,x1,sectionResults,bundle) "rule5";
+
+		u.uot as x1 -> bundle then uot(patientReference,practitionerReference,organizatinReference,x1,sectionAlerts,bundle) "rule6";
+
+}
+group grav_all(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source dat_prov: ip, source ip_grav: gravType, source patsumdat_grav: gravType, target section, target bundle: Bundle){
+
+		patientReference -> create('ip') as dat_prov then {
+
+			dat_prov as x -> dat_prov.dat_prov = x "rule1";
+			patientReference -> bundle then grav(patientReference,organizatinReference,practitionerReference,dat_prov,ip_grav,section,bundle) "rule2";
+		} "rule3";
+
+		patientReference -> create('ip') as dat_prov then {
+
+			dat_prov as x -> dat_prov.dat_prov = x "rule4";
+			patientReference -> bundle then grav(patientReference,organizatinReference,practitionerReference,dat_prov,patsumdat_grav,section,bundle) "rule5";
+		} "rule6";
+
+}
+group fyznal_all(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source dat_prov: ip, source ip_fyznal: fyznalType, source patsumdat_fyznal: fyznalType, target section, target bundle: Bundle){
+
+		patientReference -> create('ip') as dat_prov then {
+
+			dat_prov as x -> dat_prov.dat_prov = x "rule1";
+
+			patientReference -> bundle then fyznal(patientReference,organizatinReference,practitionerReference,dat_prov,ip_fyznal,section,bundle) "rule2";
+		} "rule3";
+
+		patientReference -> create('ip') as dat_prov then {
+
+			dat_prov as x -> dat_prov.dat_prov = x "rule4";
+
+			patientReference -> bundle then fyznal(patientReference,organizatinReference,practitionerReference,dat_prov,patsumdat_fyznal,section,bundle) "rule5";
+		} "rule6";
+
+}
+group h_all(source organizatinReference: Reference, source practitionerReference: Reference, source patientReference: Reference, source ip_h: hType, source patsumdat_h: hType, source dat_prov: ip, target section, target bundle: Bundle){
+
+		organizatinReference -> create('ip') as dat_prov then {
+
+			dat_prov as x -> dat_prov.dat_prov = x "rule1";
+
+			organizatinReference -> bundle then h(organizatinReference,practitionerReference,patientReference,ip_h,dat_prov,section,bundle) "rule2";
+		} "rule3";
+
+		organizatinReference -> create('ip') as dat_prov then {
+
+			dat_prov as x -> dat_prov.dat_prov = x "rule4";
+
+			organizatinReference -> bundle then h(organizatinReference,practitionerReference,patientReference,patsumdat_h,dat_prov,section,bundle) "rule5";
+		} "rule6";
+
+}
+group Reference_Observation(source GUID: string, source VGUID: string, target referenceObservation: string){
+
+		GUID -> referenceObservation = append('Observation/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_AllergyIntolerance(source GUID: string, source VGUID: string, target referenceAllergyIntolerance: string){
+
+		GUID -> referenceAllergyIntolerance = append('AllergyIntolerance/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_Flag(source GUID: string, source VGUID: string, target referenceFlag: string){
+
+		GUID -> referenceFlag = append('Flag/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_DeviceUseStatement(source GUID: string, source VGUID: string, target referenceDeviceUseStatement: string){
+
+		GUID -> referenceDeviceUseStatement = append('DeviceUseStatement/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_Device(source GUID: string, source VGUID: string, target referenceDevice: string){
+
+		GUID -> referenceDevice = append('Device/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_DiagnosticReport(source GUID: string, source VGUID: string, target referenceDiagnosticReport: string){
+
+		GUID -> referenceDiagnosticReport = append('DiagnosticReport/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_Condition(source GUID: string, source VGUID: string, target referenceCondition: string){
+
+		GUID -> referenceCondition = append('Condition/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_FamilyMemberHistory(source GUID: string, source VGUID: string, target referenceFamilyMemberHistory: string){
+
+		GUID -> referenceFamilyMemberHistory = append('FamilyMemberHistory/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_Immunization(source GUID: string, source VGUID: string, target referenceImmunization: string){
+
+		GUID -> referenceImmunization = append('Immunization/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_MedicationAdministration(source GUID: string, source VGUID: string, target referenceMedicationAdministration: string){
+
+		GUID -> referenceMedicationAdministration = append('MedicationAdministration/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_Procedure(source GUID: string, source VGUID: string, target referenceProcedure: string){
+
+		GUID -> referenceProcedure = append('Procedure/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_CarePlan(source GUID: string, source VGUID: string, target referenceCarePlan: string){
+
+		GUID -> referenceCarePlan = append('CarePlan/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_Patient(source GUID: string, source VGUID: string, target referencePatient: string){
+
+		GUID -> referencePatient = append('Patient/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_Organization(source GUID: string, source VGUID: string, target referenceOrganization: string){
+
+		GUID -> referenceOrganization = append('Organization/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group Reference_Practitioner(source GUID: string, source VGUID: string, target referencePractitioner: string){
+
+		GUID -> referencePractitioner = append('Practitioner/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group garant_dat(source garant_dat: dasta, target bundle: Bundle){
+
+	garant_dat -> bundle.entry as entry then {
+		
+		garant_dat.guid as x1 -> entry.fullUrl = append('Practitioner/',x1) "rule2";
+
+		garant_dat -> entry.resource=create('Practitioner') as t1 then {
+			garant_dat.guid as x -> t1.id = x "rule3";
+
+			garant_dat -> t1.meta as t2 then {
+				garant_dat.vguid as x -> t2.versionId = x "rule4";
+			} "rule5";
+
+			garant_dat.id_zp -> t1.identifier as t2 then {
+				garant_dat.id_zp as x -> t2.value = x "rule6";
+			} "rule7";
+
+			garant_dat.id_garant -> t1.identifier as t2 then {
+				garant_dat.id_garant as x -> t2.value = x "rule8";
+			} "rule9";
+
+			garant_dat.id_clk -> t1.identifier as t2 then {
+				garant_dat.id_clk as x -> t2.value = x "rule10";
+			} "rule11";
+			garant_dat.id_clk -> t1.name as t2 then {
+				garant_dat as x -> t2.text = x "rule12";
+			} "rule13";
+		} "rule14";
+
+	} "bundle.entry";
+
+	garant_dat -> bundle.entry as entry then {
+		garant_dat.guid as x1 -> entry.fullUrl = append('PractitionerRole/',x1) "rule16";
+
+		garant_dat -> entry.resource=create('PractitionerRole') as t1 then {
+			garant_dat -> t1.practitioner as t2 then {
+
+				garant_dat.guid as x1 -> t2.reference then {
+				        garant_dat.vguid as x2 -> t2.reference = append('Practitioner/',x1,'/_history/',x2) "rule17";
+				} "x1";
+			} "rule18";
+		} "rule19";
+
+		garant_dat -> entry.resource=create('PractitionerRole') as t1 then {
+
+			garant_dat.role_klic -> t1.code as t2 then {
+				garant_dat.role_klic -> t2.coding as t3 then {
+					garant_dat.role_klic -> t3.system = 'https://dasta.mzcr.cz/WWBSK.htm' "rule20";
+
+					garant_dat.role_klic as x -> t3.code = x "rule21";
+
+					garant_dat.role_text as x -> t3.display = x "rule22";
+				} "rule23";
+			} "rule24";
+
+			garant_dat.odbornost -> t1.specialty as t2 then {
+				garant_dat.odbornost -> t2.coding as t3 then {
+					garant_dat.odbornost -> t3.system = 'https://dasta.mzcr.cz/UZAGT.htm' "rule25";
+
+					garant_dat.odbornost as x -> t3.code = x "rule26";
+				} "rule27";
+			} "rule28";
+		} "rule29";
+	} "bundle.entry";
+}
+group is(source is: dasta, target bundle: Bundle){
+
+	is -> bundle.entry as entry then {
+
+		is.guid as x1 -> entry.fullUrl = append('Organization/',x1) "rule2";
+
+		is -> entry.resource=create('Organization') as t1 then {
+			is.guid as x -> t1.id = x "rule3";
+
+			is -> t1.meta as t2 then {
+				is.vguid as x -> t2.versionId = x "rule4";
+			} "rule5";
+
+			is.ico -> t1.identifier as t2 then {
+				is.ico -> t2.use = 'official' "rule6";
+
+				is.ico -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/ico' "rule7";
+
+				is.ico as x -> t2.value = x "rule8";
+			} "rule9";
+
+			is.icz -> t1.identifier as t2 then {
+				is.icz -> t2.use = 'official' "rule10";
+
+				is.icz -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/icz' "rule11";
+
+				is.icz as x -> t2.value = x "rule12";
+			} "rule13";
+
+			is.icp -> t1.identifier as t2 then {
+				is.icp -> t2.use = 'official' "rule14";
+
+				is.icp -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/icp' "rule15";
+
+				is.icp as x -> t2.value = x "rule16";
+			} "rule17";
+
+			is.icl -> t1.identifier as t2 then {
+				is.icl -> t2.use = 'official' "rule18";
+
+				is.icl -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/icl' "rule19";
+
+				is.icl as x -> t2.value = x "rule20";
+			} "rule21";
+
+			is.pcz -> t1.identifier as t2 then {
+				is.pcz -> t2.use = 'official' "rule22";
+
+				is.pcz -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/pcz' "rule23";
+
+				is.pcz as x -> t2.value = x "rule24";
+			} "rule25";
+
+			is.oddel -> t1.identifier as t2 then {
+				is.oddel -> t2.use = 'official' "rule26";
+
+				is.oddel -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/oddel' "rule27";
+
+				is.oddel as x -> t2.value = x "rule28";
+			} "rule29";
+
+			is.oavl -> t1.identifier as t2 then {
+				is.oavl -> t2.use = 'official' "rule30";
+
+				is.oavl -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/oavl' "rule31";
+
+				is.oavl as x -> t2.value = x "rule32";
+			} "rule33";
+
+			is.oavl -> t1.active = 'true' "rule34";
+
+			is.a -> t1.address as t2 then {
+				is.a -> t2.use = 'work' "rule36";
+
+				is.a as s1 -> t2 then {
+					s1.jmeno as s2 -> t2 then {
+						s2.txt as x -> t2.text = x "rule37";
+					} "rule38";
+					s1.adr as s2 -> t2 then {
+						s2.txt as x -> t2.line = x "rule39";
+					} "rule40";
+					s1.dop1 as s2 -> t2 then {
+						s2.txt as x -> t2.line = x "rule41";
+					} "rule42";
+					s1.dop2 as s2 -> t2 then {
+						s2.txt as x -> t2.line = x "rule43";
+					} "rule44";
+					s1.mesto as s2 -> t2 then {
+						s2.txt as x -> t2.city = x "rule45";
+					} "rule46";
+					s1.psc as s2 -> t2 then {
+						s2.txt as x -> t2.postalCode = x "rule47";
+					} "rule49";
+					s1.stat as stat -> t2.country then {
+						stat.txt as x1 -> t2.country then {
+					        s1.stat_text as stat_text -> t2.country then {
+					                stat_text.txt as x2 -> t2.country = append(x1, ' - ', x2) "rule48";
+					        } "x2";
+						} "stat";
+					} "x1";
+					
+				} "rule50";
+			} "rule51";
+		} "rule52";
+	} "bundle.entry";
+}
+group FullURL_Practitioner(source GUID: string, target FullURL_Practitioner: string){
+
+		GUID -> FullURL_Practitioner = append('Practitioner/', GUID) "rule1";
+
+}
+group FullURL_PractitionerRole(source GUID: string, target FullURL_PractitionerRole: string){
+
+		GUID -> FullURL_PractitionerRole = append('PractitionerRole/', GUID) "rule1";
+
+}
+group FullURL_Observation(source GUID: string, target FullURL_Observation: string){
+
+		GUID -> FullURL_Observation = append('Observation/', GUID) "rule1";
+
+}
+group FullURL_Encounter(source GUID: string, target FullURL_Encounter: string){
+
+		GUID -> FullURL_Encounter = append('Encounter/', GUID) "rule1";
+
+}
+group FullURL_Organization(source GUID: string, target FullURL_Organization: string){
+
+		GUID -> FullURL_Organization = append('Organization/', GUID) "rule1";
+
+}
+group Reference_PractitionerRole(source VGUID: string, source GUID: string, target referencePractitionerRole: string){
+
+		VGUID -> referencePractitionerRole = append('PractitionerRole/', GUID, '/_history/', VGUID) "rule1";
+
+}
+group FullURL_AllergyIntolerance(source GUID: string, target FullURL_AllergyIntolerance: string){
+
+		GUID -> FullURL_AllergyIntolerance = append('AllergyIntolerance/', GUID) "rule1";
+
+}
+group FullURL_Flag(source GUID: string, target FullURL_Flag: string){
+
+		GUID -> FullURL_Flag = append('Flag/', GUID) "rule1";
+
+}
+group FullURL_DeviceUseStatement(source GUID: string, target FullURL_DeviceUseStatement: string){
+
+		GUID -> FullURL_DeviceUseStatement = append('DeviceUseStatement/', GUID) "rule1";
+
+}
+group FullURL_Device(source GUID: string, target FullURL_Device: string){
+
+		GUID -> FullURL_Device = append('Device/', GUID) "rule1";
+
+}
+group FullURL_DiagnosticReport(source GUID: string, target FullURL_DiagnosticReport: string){
+
+		GUID -> FullURL_DiagnosticReport = append('DiagnosticReport/', GUID) "rule1";
+
+}
+group FullURL_Condition(source GUID: string, target FullURL_Condition: string){
+
+		GUID -> FullURL_Condition = append('Condition/', GUID) "rule1";
+
+}
+group FullURL_FamilyMemberHistory(source GUID: string, target FullURL_FamilyMemberHistory: string){
+
+		GUID -> FullURL_FamilyMemberHistory = append('FamilyMemberHistory/', GUID) "rule1";
+
+}
+group FullURL_Immunization(source GUID: string, target FullURL_Immunization: string){
+
+		GUID -> FullURL_Immunization = append('Immunization/', GUID) "rule1";
+
+}
+group FullURL_MedicationAdministration(source GUID: string, target FullURL_MedicationAdministration: string){
+
+		GUID -> FullURL_MedicationAdministration = append('MedicationAdministration/', GUID) "rule1";
+
+}
+group FullURL_Procedure(source GUID: string, target FullURL_Procedure: string){
+
+		GUID -> FullURL_Procedure = append('Procedure/', GUID) "rule1";
+
+}
+group FullURL_CarePlan(source GUID: string, target FullURL_CarePlan: string){
+
+		GUID -> FullURL_CarePlan = append('CarePlan/', GUID) "rule1";
+
+}
+group ip_ip(source ip: ip, target bundle: Bundle){
+
+	ip -> bundle.entry as entry then {
+		
+		ip.guid as x1 -> entry.fullUrl = append('Patient/',x1) "rule2";
+
+		ip -> entry.resource=create('Patient') as t1 then {
+			ip.guid as x -> t1.id = x "rule3";
+
+			ip -> t1.meta as t2 then {
+				ip.vguid as x -> t2.versionId = x "rule4";
+
+				ip -> t2.profile = 'https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core' "rule5";
+
+				ip.duvernost as s1 -> t2 then {
+
+					s1.txt -> t2.security as t3 then {
+						s1.txt as x -> t3.code = x "rule6";
+
+						s1.txt as x -> t3.display = translate(x,'#cm5684','code') "rule7";
+					} "rule8";
+				} "rule9";
+				ip.typ_sdel as s1 -> t2 then {
+
+					s1.txt -> t2.tag as t3 then {
+						s1.txt as x -> t3.code = x "rule10";
+
+						s1.txt as x -> t3.display = translate(x,'#cm5685','code') "rule11";
+					} "rule12";
+				} "rule13";
+			} "rule14";
+			ip.misto_nar as s1 -> t1 then {
+
+				s1.txt -> t1.extension as t2 then {
+					s1.txt -> t2.url = 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace' "rule15";
+
+					s1.txt -> t2.valueAddress as t3 then {
+						s1.txt as x -> t3.city = x "rule16";
+					} "rule17";
+				} "rule18";
+			} "rule19";
+			ip.stat_pris as s1 -> t1 then {
+
+				s1.txt -> t1.extension as t2 then {
+					s1.txt -> t2.url = 'http://hl7.org/fhir/StructureDefinition/patient-nationality' "rule20";
+
+					s1.txt -> t2.extension as t3 then {
+						s1.txt -> t3.url = 'code' "rule21";
+
+						s1.txt -> t3.valueCodeableConcept as t4 then {
+							s1.txt -> t4.coding as t5 then {
+								s1.txt -> t5.system = 'urn:iso:std:iso:3166' "rule22";
+
+								s1.txt as x -> t5.code = x "rule23";
+							} "rule24";
+						} "rule25";
+					} "rule26";
+				} "rule27";
+			} "rule28";
+
+			ip.povolani as x -> t1.extension = x "rule29";
+
+			ip -> t1.extension as t2 then {
+				ip -> t2.url = 'http://hl7.org/fhir/StructureDefinition/patient-occupation' "rule30";
+
+				ip.povolani as s1 -> t2 then {
+					s1.povolani_text as s2 -> t2 then {
+						s2.txt as x -> t2.valueString = x "rule31";
+					} "rule32";
+					s1.dat_od as s2 -> t2 then {
+
+						s2.txt -> t2.valuePeriod as t3 then {
+							s2.txt as x -> t3.start = x "rule33";
+						} "rule34";
+					} "rule35";
+					ip -> t2.valuePeriod as t3 then {
+						s1.dat_do as s2 -> t3 then {
+							s2.txt as x -> t3.end = x "rule36";
+						} "rule37";
+					} "rule38";
+
+					s1.dat_ab -> t2.valueMeta as t3 then {
+						s1.dat_ab as x -> t3.lastUpdated = x "rule39";
+					} "rule40";
+				} "rule41";
+			} "rule42";
+
+			ip.id_pac -> t1.identifier as t2 then {
+				ip.id_pac -> t2.use = 'official' "rule43";
+
+				ip.id_pac -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/cpoj' "rule44";
+
+				ip.id_pac as x -> t2.value = x "rule45";
+			} "rule46";
+			ip.rodcis as s1 -> t1 then {
+
+				s1.txt -> t1.identifier as t2 then {
+					s1.txt -> t2.use = 'official' "rule47";
+
+					s1.txt -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/rcis' "rule48";
+
+					s1.txt as x -> t2.value = x "rule49";
+				} "rule50";
+			} "rule51";
+			ip.pv_pac as s1 -> t1 then {
+				s1.pv_zp as s2 -> t1 then {
+					s2.kodpoj as s3 -> t1 then {
+
+						s3.txt -> t1.identifier as t2 then {
+							s3.txt -> t2.use = 'official' "rule52";
+
+							s3.txt -> t2.type as t3 then {
+								s3.txt -> t3.coding as t4 then {
+									s3.txt -> t4.system = 'http://terminology.hl7.org/CodeSystem/v2-0203' "rule53";
+
+									s3.txt -> t4.code = 'NIIP' "rule54";
+
+									s3.txt -> t4.display = 'National Insurance Payor Identifier (Payor)' "rule55";
+								} "rule56";
+							} "rule57";
+							s3.txt -> t2.assigner as t3 then {
+								s3.txt -> t3.identifier as t4 then {
+									s3.txt -> t4.system = 'https://www.vzp.cz/poskytovatele/ciselniky/zdravotni-pojistovny' "rule58";
+
+									s3.txt as x -> t4.value = x "rule59";
+								} "rule60";
+
+								s3.txt as x -> t3.display = translate(x,'#cm5656','code') "rule61";
+							} "rule62";
+						} "rule63";
+					} "rule64";
+				} "rule65";
+			} "rule66";
+			ip.rip as s1 -> t1 then {
+
+				s1.txt -> t1.identifier as t2 then {
+					s1.txt -> t2.use = 'official' "rule67";
+
+					s1.txt -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/rid' "rule68";
+
+					s1.txt as x -> t2.value = x "rule69";
+				} "rule70";
+			} "rule71";
+
+			ip.id_card as x -> t1.identifier = x "rule72";
+
+			ip.id_pac -> t1.identifier as t2 then {
+				ip.id_pac -> t2.use = 'official' "rule73";
+
+				ip.id_pac -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/op' "rule74";
+
+				ip.id_card as s1 -> t2 then {
+					s1.id_number as s2 -> t2 then {
+						s2.txt as x -> t2.value = x "rule75";
+					} "rule76";
+					ip.id_pac -> t2.period as t3 then {
+						s1.dat_pl as s2 -> t3 then {
+							s2.txt as x -> t3.end = x "rule77";
+						} "rule78";
+					} "rule79";
+				} "rule80";
+			} "rule81";
+
+			ip.passport as x -> t1.identifier = x "rule82";
+
+			ip.id_pac -> t1.identifier as t2 then {
+				ip.id_pac -> t2.use = 'official' "rule83";
+
+				ip.id_pac -> t2.type as t3 then {
+					ip.id_pac -> t3.coding as t4 then {
+						ip.id_pac -> t4.system = 'http://terminology.hl7.org/CodeSystem/v2-0203' "rule84";
+
+						ip.id_pac -> t4.code = 'PPN' "rule85";
+					} "rule86";
+				} "rule87";
+
+				ip.id_pac -> t2.system = 'http://hl7.org/fhir/sid/passport-CZE' "rule88";
+
+				ip.passport as s1 -> t2 then {
+					s1.id_number as s2 -> t2 then {
+						s2.txt as x -> t2.value = x "rule89";
+					} "rule90";
+					ip.id_pac -> t2.period as t3 then {
+						s1.dat_pl as s2 -> t3 then {
+							s2.txt as x -> t3.end = x "rule91";
+						} "rule92";
+					} "rule93";
+					ip.id_pac -> t2.assigner as t3 then {
+						s1.stat as s2 -> t3 then {
+							s2.txt as x -> t3.display = translate(x,'#cm5662','code') "rule94";
+						} "rule95";
+					} "rule96";
+				} "rule97";
+			} "rule98";
+			ip.ipi_o as s1 -> t1 then {
+
+				s1.nem_cis -> t1.identifier as t2 then {
+					s1.nem_cis -> t2.use = 'official' "rule99";
+
+					s1.nem_cis -> t2.type as t3 then {
+						s1.nem_cis -> t3.text = 'LR' "rule100";
+					} "rule101";
+
+					s1.nem_cis -> t2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/nem_cis' "rule102";
+
+					s1.nem_cis as x -> t2.value = x "rule103";
+				} "rule104";
+
+				s1.kat_pac -> t1.identifier as t2 then {
+					s1.kat_pac -> t2.use = 'official' "rule105";
+
+					s1.kat_pac -> t2.type as t3 then {
+						s1.kat_pac -> t3.text = 'PI' "rule106";
+					} "rule107";
+
+					s1.kat_pac -> t2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/kat_pac' "rule108";
+
+					s1.kat_pac as x -> t2.value = x "rule109";
+				} "rule110";
+
+				s1.cis_chor -> t1.identifier as t2 then {
+					s1.cis_chor -> t2.use = 'official' "rule111";
+
+					s1.cis_chor -> t2.type as t3 then {
+						s1.cis_chor -> t3.text = 'SNO' "rule112";
+					} "rule113";
+
+					s1.cis_chor -> t2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_chor' "rule114";
+
+					s1.cis_chor as x -> t2.value = x "rule115";
+				} "rule116";
+
+				s1.cis_is -> t1.identifier as t2 then {
+					s1.cis_is -> t2.use = 'official' "rule117";
+
+					s1.cis_is -> t2.type as t3 then {
+						s1.cis_is -> t3.text = 'MR' "rule118";
+					} "rule119";
+
+					s1.cis_is -> t2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_is' "rule120";
+
+					s1.cis_is as x -> t2.value = x "rule121";
+				} "rule122";
+			} "rule123";
+			ip.ipi_v as s1 -> t1 then {
+
+				s1.nem_cis -> t1.identifier as t2 then {
+					s1.nem_cis -> t2.use = 'official' "rule124";
+
+					s1.nem_cis -> t2.type as t3 then {
+						s1.nem_cis -> t3.text = 'LR' "rule125";
+					} "rule126";
+
+					s1.nem_cis -> t2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/nem_cis' "rule127";
+
+					s1.nem_cis as x -> t2.value = x "rule128";
+				} "rule129";
+
+				s1.kat_pac -> t1.identifier as t2 then {
+					s1.kat_pac -> t2.use = 'official' "rule130";
+
+					s1.kat_pac -> t2.type as t3 then {
+						s1.kat_pac -> t3.text = 'PI' "rule131";
+					} "rule132";
+
+					s1.kat_pac -> t2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/kat_pac' "rule133";
+
+					s1.kat_pac as x -> t2.value = x "rule134";
+				} "rule135";
+
+				s1.cis_chor -> t1.identifier as t2 then {
+					s1.cis_chor -> t2.use = 'official' "rule136";
+
+					s1.cis_chor -> t2.type as t3 then {
+						s1.cis_chor -> t3.text = 'SNO' "rule137";
+					} "rule138";
+
+					s1.cis_chor -> t2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_chor' "rule139";
+
+					s1.cis_chor as x -> t2.value = x "rule140";
+				} "rule141";
+
+				s1.cis_is -> t1.identifier as t2 then {
+					s1.cis_is -> t2.use = 'MR' "rule142";
+
+					s1.cis_is -> t2.type as t3 then {
+						s1.cis_is -> t3.text = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_is' "rule143";
+					} "rule144";
+
+					s1.cis_is as x -> t2.value = x "rule145";
+				} "rule146";
+
+				s1.cis_is -> t1.active = 'true' "rule147";
+
+				ip.prijmeni as s2 -> t1 then {
+
+					s2.txt -> t1.name as t2 then {
+						s2.txt -> t2.use = 'official' "rule148";
+
+						s2.txt as x -> t2.family = x "rule149";
+					} "rule150";
+				} "rule151";
+			} "rule152";
+			ip.id_pac -> t1.name as t2 then {
+				ip.jmeno as s1 -> t2 then {
+					s1.txt as x -> t2.given = x "rule153";
+				} "rule154";
+				ip.titul_pred as s1 -> t2 then {
+					s1.txt as x -> t2.prefix = x "rule155";
+				} "rule156";
+				ip.titul_za as s1 -> t2 then {
+					s1.txt as x -> t2.suffix = x "rule157";
+				} "rule158";
+			} "rule159";
+			ip.rod_prijm as s1 -> t1 then {
+
+				s1.txt -> t1.name as t2 then {
+					s1.txt -> t2.use = 'maiden' "rule160";
+
+					s1.txt as x -> t2.family = x "rule161";
+				} "rule162";
+			} "rule163";
+			ip.a as s1 -> t1 then {
+				s1.as as x -> t1.telecom = x "rule164";
+
+				ip.id_pac -> t1.telecom as t2 then {
+					s1.as as s2 -> t2 then {
+						s2.typ as x -> t2.system = translate(x,'#cm5673','code') "rule165";
+
+						s2.obsah as s3 -> t2 then {
+							s3.txt as x -> t2.value = x "rule166";
+						} "rule167";
+
+						s2.typ as x -> t2.use = translate(x,'#cm5674','code') "rule168";
+					} "rule169";
+				} "rule170";
+			} "rule171";
+			ip.sex as s1 -> t1 then {
+				s1.txt as x -> t1.gender = translate(x,'#cm5675','code') "rule172";
+			} "rule173";
+			ip.dat_dn as s1 -> t1 then {
+				s1.txt as x -> t1.birthDate = x "rule174";
+			} "rule175";
+			ip.dat_de as s1 -> t1 then {
+				s1.txt as x -> t1.deceasedDateTime = x "rule176";
+			} "rule177";
+
+			ip.a -> t1.address as t2 then {
+				ip.a as s1 -> t2 then {
+					s1.typ as x -> t2.use = translate(x,'#cm5676','code') "rule179";
+
+					s1.jmeno as s2 -> t2 then {
+						s2.txt as x -> t2.text = x "rule180";
+					} "rule181";
+					s1.adr as s2 -> t2 then {
+						s2.txt as x -> t2.line = x "rule182";
+					} "rule183";
+					s1.dop1 as s2 -> t2 then {
+						s2.txt as x -> t2.line = x "rule184";
+					} "rule185";
+					s1.dop2 as s2 -> t2 then {
+						s2.txt as x -> t2.line = x "rule186";
+					} "rule187";
+					s1.mesto as s2 -> t2 then {
+						s2.txt as x -> t2.city = x "rule188";
+					} "rule189";
+					s1.psc as s2 -> t2 then {
+						s2.txt as x -> t2.postalCode = x "rule190";
+					} "rule191";
+					s1.stat as s2 -> t2 then {
+						s2.txt as x -> t2.country = x "rule192";
+					} "rule193";
+					s1.dat_od as s2 -> t2 then {
+
+						s2.txt -> t2.period as t3 then {
+							s2.txt as x -> t3.start = x "rule194";
+						} "rule195";
+					} "rule196";
+					ip.id_pac -> t2.period as t3 then {
+						s1.dat_do as s2 -> t3 then {
+							s2.txt as x -> t3.end = x "rule197";
+						} "rule198";
+					} "rule199";
+				} "rule200";
+			} "rule201";
+
+			ip.jazyk as x -> t1.communication = x "rule202";
+
+			ip.id_pac -> t1.communication as t2 then {
+				ip.id_pac -> t2.language as t3 then {
+					ip.jazyk as s1 -> t3 then {
+
+						s1.jazyk_klic -> t3.coding as t4 then {
+							s1.jazyk_klic -> t4.system = 'https://dastacr.cz/dasta/hypertext/WWBRX.htm' "rule203";
+
+							s1.jazyk_klic as x -> t4.code = x "rule204";
+
+							s1.jazyk_text as x -> t4.display = x "rule205";
+						} "rule206";
+
+						s1.pozn as x -> t3.text = x "rule207";
+					} "rule208";
+				} "rule209";
+				ip.jazyk as s1 -> t2 then {
+					s1.pref as x -> t2.preferred = translate(x,'#cm5678','code') "rule210";
+				} "rule211";
+			} "rule212";
+		} "rule213";
+	} "bundle.entry";
+}

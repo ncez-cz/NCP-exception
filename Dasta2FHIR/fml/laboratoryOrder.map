@@ -1,0 +1,1624 @@
+/// url = 'https://ncez.mzcr.cz/model/StructureMap/laboratoryOrder'
+/// name = 'Mapování laboratoryOrder z DASTA 4 do FHIR HL7-CZ https://build.fhir.org/ig/hl7-cz/ (June 2025)'
+/// title = 'Mapování laboratoryOrder'
+/// descrition = 'This file is generated from MapForge file ./mapforce/final/laboratoryOrder.mfd by marek@matfyz.cz'
+
+uses "https://dasta.mzcr.cz/model/StructureDefinition/dasta" alias dasta as source
+uses "https://dasta.mzcr.cz/model/StructureDefinition/ip" alias ip as source
+uses "https://hl7.cz/fhir/lab-order/StructureDefinition/BundleLabOrderCz" alias Bundle as target
+uses "https://hl7.cz/fhir/lab-order/StructureDefinition/serviceRequestCz" alias ServiceRequest as target
+uses "https://hl7.cz/fhir/lab-order/StructureDefinition/specimenCz" alias Specimen as target
+
+conceptmap "cm3061" {
+  prefix s ="https://provisio.cz/dasta/3061"
+  prefix t ="https://provisio.cz/fhir/3061"
+
+  s:"B" == t:"Běžné vyšetření (implicitně)"
+  s:"P" == t:"Preventivní vyšetření"
+  s:"S" == t:"Screeningové vyšetření"
+  s:"E" == t:"Epidemiologická studie"
+  s:"UZ" == t:"Zhoršení stavu"
+  s:"UP" == t:"Neodkladné přijetí"
+  s:"UO" == t:"Po operaci"
+  s:"D" == t:"Dlouhodobé sledování"
+  s:"V" == t:"Výzkum"
+  s:"DS" == t:"Před dialýzou"
+  s:"DE" == t:"Po dialýze"
+  s:"None" == t:""
+}
+
+conceptmap "cm3056" {
+  prefix s ="https://provisio.cz/dasta/3056"
+  prefix t ="https://provisio.cz/fhir/3056"
+
+  s:"V" == t:"Vitální indikace"
+  s:"S" == t:"Vše statim"
+  s:"P" == t:"Vše přednostně"
+  s:"R" == t:"Vše rutina"
+  s:"K" == t:"Statim i rutina"
+}
+
+conceptmap "cm3060" {
+  prefix s ="https://provisio.cz/dasta/3060"
+  prefix t ="https://provisio.cz/fhir/3060"
+
+  s:"B" == t:"Běžnou cestou (donáška, svoz)"
+  s:"R" == t:"Potrubní poštou "
+  s:"P" == t:"Pacientem"
+  s:"L" == t:"Realizace odběru v laboratoři"
+  s:"O" == t:"Realizace odběru pracovníkem laboratoře na oddělení"
+  s:"U" == t:"Uloženo v laboratoři, doobjednávka"
+  s:"N" == t:"Vzorky se v této situaci nedodávají"
+}
+
+conceptmap "cm3190" {
+  prefix s ="https://provisio.cz/dasta/3190"
+  prefix t ="https://provisio.cz/fhir/3190"
+
+  s:"R" == t:"číslo"
+  s:"M" == t:"menší než"
+  s:"V" == t:"větší než"
+}
+
+conceptmap "cm3191" {
+  prefix s ="https://provisio.cz/dasta/3191"
+  prefix t ="https://provisio.cz/fhir/3191"
+
+  s:"S" == t:"sekunda"
+  s:"M" == t:"minuta"
+  s:"H" == t:"hodina"
+  s:"D" == t:"den"
+  s:"T" == t:"tyden"
+  s:"R" == t:"rok"
+}
+
+conceptmap "cm3111" {
+  prefix s ="https://provisio.cz/dasta/3111"
+  prefix t ="https://provisio.cz/fhir/3111"
+
+  s:"V" == t:"Vitální indikace"
+  s:"S" == t:"Vše statim"
+  s:"P" == t:"Vše přednostně"
+  s:"R" == t:"Vše rutina"
+  s:"K" == t:"Statim i rutina"
+}
+
+conceptmap "cm3121" {
+  prefix s ="https://provisio.cz/dasta/3121"
+  prefix t ="https://provisio.cz/fhir/3121"
+
+  s:"V" == t:"Vitální indikace"
+  s:"S" == t:"Vše statim"
+  s:"P" == t:"Vše přednostně"
+  s:"R" == t:"Vše rutina"
+  s:"K" == t:"Statim i rutina"
+}
+
+conceptmap "cm3133" {
+  prefix s ="https://provisio.cz/dasta/3133"
+  prefix t ="https://provisio.cz/fhir/3133"
+
+  s:"V" == t:"Vitální indikace"
+  s:"S" == t:"Vše statim"
+  s:"P" == t:"Vše přednostně"
+  s:"R" == t:"Vše rutina"
+  s:"K" == t:"Statim i rutina"
+}
+
+conceptmap "cm3142" {
+  prefix s ="https://provisio.cz/dasta/3142"
+  prefix t ="https://provisio.cz/fhir/3142"
+
+  s:"V" == t:"Vitální indikace"
+  s:"S" == t:"Vše statim"
+  s:"P" == t:"Vše přednostně"
+  s:"R" == t:"Vše rutina"
+  s:"K" == t:"Statim i rutina"
+}
+
+conceptmap "cm3170" {
+  prefix s ="https://provisio.cz/dasta/3170"
+  prefix t ="https://provisio.cz/fhir/3170"
+
+  s:"Z" == t:"začátek"
+  s:"P" == t:"průběh"
+  s:"K" == t:"konec"
+}
+
+conceptmap "cm3165" {
+  prefix s ="https://provisio.cz/dasta/3165"
+  prefix t ="https://provisio.cz/fhir/3165"
+
+  s:"V" == t:"Vitální indikace"
+  s:"S" == t:"Vše statim"
+  s:"P" == t:"Vše přednostně"
+  s:"R" == t:"Vše rutina"
+  s:"K" == t:"Statim i rutina"
+}
+
+conceptmap "cm3156" {
+  prefix s ="https://provisio.cz/dasta/3156"
+  prefix t ="https://provisio.cz/fhir/3156"
+
+  s:"T" == t:"Volným textem (implicitně)"
+  s:"N" == t:"Číslem"
+  s:"B" == t:"Čárovým kódem"
+  s:"E" == t:"Čipem (elektronicky)"
+  s:"Q" == t:"QR kódem"
+}
+
+conceptmap "cm3162" {
+  prefix s ="https://provisio.cz/dasta/3162"
+  prefix t ="https://provisio.cz/fhir/3162"
+
+  s:"N" == t:"Náhodný vzorek moči"
+  s:"S" == t:"Sbíraná moč"
+}
+
+conceptmap "cm3211" {
+  prefix s ="https://provisio.cz/dasta/3211"
+  prefix t ="https://provisio.cz/fhir/3211"
+
+  s:"R" == t:"číslo"
+  s:"M" == t:"menší než"
+  s:"V" == t:"větší než"
+}
+
+conceptmap "cm3192" {
+  prefix s ="https://provisio.cz/dasta/3192"
+  prefix t ="https://provisio.cz/fhir/3192"
+
+  s:"001" == t:"všeobecné praktické lékařství"
+  s:"002" == t:"praktické lékařství pro děti a dorost a pediatrie"
+}
+
+
+
+group defaultmap(source ds: dasta, target bundle: Bundle){
+	// 'message' 0-> bundle.type
+
+
+		ds -> bundle.type = 'message' "rule1";
+	// c3239.entry.txt 0-> bundle.entry
+
+
+		ds -> create('Reference') as patientReference then {
+		// 'official' 1-> patientReference.identifier.use
+
+			ds -> patientReference.identifier as t2 then {
+				ds -> t2.use = 'official' "rule2";
+		// 'https://ncez.mzcr.cz/fhir/sid/cpoj' 1-> patientReference.identifier.system
+
+
+				ds -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/cpoj' "rule3";
+		// ds.is.ip.id_pac 1-> patientReference.identifier.value
+
+				ds.is as s1 -> t2 then {
+					s1.ip as s2 -> t2 then {
+						s2.id_pac as x -> t2.value = x "rule4";
+		// ds.is.ip.ku.ku_o.ku_o_lab 1-> bundle.entry
+
+						s2.ku as s3 -> bundle then {
+							s3.ku_o as s4 -> bundle then {
+
+		// ds.is.ip.ku.ku_o.idku 1-> bundle.entry
+
+
+
+								s4.ku_o_lab as s5 -> create('Reference') as authorReference then {
+		// c3254 1-> authorReference.reference
+
+                                   
+			// ds 2-> garant_dat.garant_dat
+
+
+		// c3254 1-> authorReference.reference
+										
+										
+									ds.garant_dat as garant -> authorReference then {
+									   garant.guid as guid -> authorReference.reference = append('Practitioner/',guid) "author reference";
+                                    } "authorReference";
+	// c3239.entry.txt 0-> bundle.entry
+									s4.idku as idku -> bundle then ku_o_lab_generalAttribute(patientReference, s5, idku,authorReference, bundle) "rule8";
+                                    ds.garant_dat as garant -> bundle then garant_dat(garant,bundle) "rule7";
+								} "rule9";
+							} "rule10";
+						} "rule11";
+					} "rule12";
+				} "rule13";
+			} "rule14";
+		} "rule15";
+	// c3254 0-> bundle.entry
+}
+
+                                            
+group ku_o_lab_generalAttribute(source patientReference: Reference, source ku_o_labType: ku_o_labType, source title: string, source authorReference: Reference, target bundle: Bundle){
+    ku_o_labType -> bundle.entry as entry  then {
+	// ku_o_labType.id_lo_is 0-> entry.resource.Composition.identifier.value
+
+		ku_o_labType -> entry.resource=create('Composition') as t1 then {
+			ku_o_labType -> t1.identifier as t2 then {
+				ku_o_labType.id_lo_is as x -> t2.value = x "rule1";
+	// 'final' 0-> entry.resource.Composition.status
+			} "rule2";
+
+			patientReference -> t1.status = 'final' "rule3";
+	// patientReference 0-> entry.resource.Composition.subject
+            
+
+            patientReference as x -> t1.subject = x "Composition.subject";
+
+	// ku_o_labType.dat_du.txt 0-> entry.resource.Composition.date
+
+			ku_o_labType.dat_du as s4 -> t1 then {
+				s4.txt as x -> t1.date = x "rule4";
+	// authorReference 0-> entry.resource.Composition.author
+
+                authorReference as x -> t1.author = x "Composition.author";
+
+	// title 0-> entry.resource.Composition.title
+
+
+				title as x -> t1.title = x "rule5";
+	// 'http://loinc.org' 0-> entry.resource.Composition.section.code.coding.system
+
+				patientReference -> t1.section as t2 then {
+					patientReference -> t2.code as t3 then {
+						patientReference -> t3.coding as t4 then {
+							patientReference -> t4.system = 'http://loinc.org' "rule6";
+	// '100828-3' 0-> entry.resource.Composition.section.code.coding.code
+
+
+							patientReference -> t4.code = '100828-3' "rule7";
+	// 'Portable medical order administrative information' 0-> entry.resource.Composition.section.code.coding.display
+
+
+							patientReference -> t4.display = 'Portable medical order administrative information' "rule8";
+	// '??? - doplnim diagnozu kvuli sekci' 0-> entry.resource.Composition.section.entry.reference
+						} "rule9";
+					} "rule10";
+					patientReference -> t2.entry as t3 then {
+						patientReference -> t3.reference = '??? - doplnim diagnozu kvuli sekci' "rule11";
+	// 'http://loinc.org' 0-> entry.resource.Composition.section.code.coding.system
+					} "rule12";
+                } "Composition first section";
+                patientReference -> t1.section as t2 then {
+					patientReference -> t2.code as t3 then {
+						patientReference -> t3.coding as t4 then {
+							patientReference -> t4.system = 'http://loinc.org' "rule13";
+	// '31208-2' 0-> entry.resource.Composition.section.code.coding.code
+
+
+							patientReference -> t4.code = '31208-2' "rule14";
+	// 'Specimen' 0-> entry.resource.Composition.section.code.coding.display
+
+
+							patientReference -> t4.display = 'Specimen' "rule15";
+	// ku_o_labType.guid 0-> entry.resource.Composition.section.entry
+						} "rule16";
+					} "rule17";
+
+
+	//  0-> entry.resource.Composition.section.entry.reference
+
+					ku_o_labType.loi as loi -> t2.entry as t3 then {
+		// 'Specimen/' 1-> entry.resource.Composition.section.entry.reference
+
+		// ku_o_labType.guid 1-> entry.resource.Composition.section.entry.reference
+
+	//  0-> entry.resource.Composition.section.entry.reference
+						loi.guid as x1 -> t3.reference = append('Specimen/', x1) "rule19";
+					} "rule20";
+				} "rule21";
+			} "rule22";
+		
+	// 'http://loinc.org' 0-> entry.resource.Composition.section.code.coding.system
+
+			patientReference -> t1.section as t2 then {
+				patientReference -> t2.code as t3 then {
+					patientReference -> t3.coding as t4 then {
+						patientReference -> t4.system = 'http://loinc.org' "rule24";
+	// '64286-8' 0-> entry.resource.Composition.section.code.coding.code
+
+
+						patientReference -> t4.code = '64286-8' "rule25";
+	// 'Diagnostic imaging order' 0-> entry.resource.Composition.section.code.coding.display
+
+
+						patientReference -> t4.display = 'Diagnostic imaging order' "rule26";
+	// ku_o_labType.guid 0-> entry.resource.Composition.section.entry
+					} "rule27";
+				} "rule28";
+
+
+	//  0-> entry.resource.Composition.section.entry.reference
+
+				ku_o_labType.lop as lop -> t2.entry as t3 then {
+		// 'ServiceRequest/' 1-> entry.resource.Composition.section.entry.reference
+
+
+					
+		// ku_o_labType.guid 1-> entry.resource.Composition.section.entry.reference
+
+
+
+	//  0-> entry.resource.Composition.section.entry.reference
+					lop.guid as x1 -> t3.reference = append('ServiceRequest/', x1) "rule30";
+				} "rule31";
+			
+	// ku_o_labType.guid 0-> entry.resource.Composition.section.entry
+
+	//  0-> entry.resource.Composition.section.entry.reference
+
+				ku_o_labType.lopk as lopk -> t2.entry as t3 then {
+		// 'ServiceRequest/' 1-> entry.resource.Composition.section.entry.reference
+					
+		// ku_o_labType.guid 1-> entry.resource.Composition.section.entry.reference
+
+        //  0-> entry.resource.Composition.section.entry.reference
+					lopk.guid as x1 -> t3.reference = append('ServiceRequest/', x1) "rule35";
+				} "rule36";
+	// ku_o_labType.guid 0-> entry.resource.Composition.section.entry
+
+	//  0-> entry.resource.Composition.section.entry.reference
+
+				ku_o_labType.lopr as lopr -> t2.entry as t3 then {
+		// 'ServiceRequest/' 1-> entry.resource.Composition.section.entry.reference
+
+		// ku_o_labType.guid 1-> entry.resource.Composition.section.entry.reference
+
+	//  0-> entry.resource.Composition.section.entry.reference
+					lopr.guid as x1 -> t3.reference = append('ServiceRequest/', x1) "rule40";
+				} "rule41";
+	// ku_o_labType.guid 0-> entry.resource.Composition.section.entry
+
+	//  0-> entry.resource.Composition.section.entry.reference
+
+				ku_o_labType.lopz as lopz -> t2.entry as t3 then {
+		// 'ServiceRequest/' 1-> entry.resource.Composition.section.entry.reference
+
+		// ku_o_labType.guid 1-> entry.resource.Composition.section.entry.reference
+
+	//  0-> entry.resource.Composition.section.entry.reference
+					lopz.guid as x1 -> t3.reference = append('ServiceRequest/', x1) "rule45";
+				} "rule46 - entry";
+		
+	// c3276 0-> entry.resource.Composition.section.entry	
+
+	// c3276 0-> entry.resource.Composition.section.entry.reference
+
+				ku_o_labType.loi as loiElement -> t2 then loi(patientReference,loiElement,bundle,t2) "rule49";
+	// ku_o_labType.id_lo_is 0-> entry.resource.ServiceRequest.identifier.value
+				
+			} "rule51";
+		} "rule52";
+
+    } "Bundle:Composition";
+
+    ku_o_labType -> bundle.entry as entry then {
+		ku_o_labType -> entry.resource=create('ServiceRequest') as t1 then {
+			ku_o_labType -> t1.identifier as t2 then {
+				ku_o_labType.id_lo_is as x -> t2.value = x "rule53";
+	// 'active' 0-> entry.resource.ServiceRequest.status
+			} "rule54";
+
+			patientReference -> t1.status = 'active' "rule55";
+	// 'order' 0-> entry.resource.ServiceRequest.intent
+
+
+			patientReference -> t1.intent = 'order' "rule56";
+	// ku_o_labType.urg 0-> entry.resource.ServiceRequest.priority
+
+
+			ku_o_labType.urg as x -> t1.priority = translate(x,'#cm3056','code') "rule57";
+	// ku_o_labType.dodani 0-> entry.resource.ServiceRequest.code
+
+
+
+	// 'https://dasta.mzcr.cz/DSAIB.htm' 0-> entry.resource.ServiceRequest.code.coding.system
+
+			ku_o_labType.dodani -> t1.code as t2 then {
+				patientReference -> t2.coding as t3 then {
+					patientReference -> t3.system = 'https://dasta.mzcr.cz/DSAIB.htm' "rule58";
+	// ku_o_labType.dodani 0-> entry.resource.ServiceRequest.code.coding.code
+
+
+					ku_o_labType.dodani as x -> t3.code = x "rule59";
+	// ku_o_labType.dodani 0-> entry.resource.ServiceRequest.code.coding.display
+
+
+					ku_o_labType.dodani as x -> t3.display = translate(x,'#cm3060','code') "rule60";
+	// patientReference 0-> entry.resource.ServiceRequest.subject
+                    
+				} "rule61";
+			} "rule62";
+
+            patientReference as x -> t1.subject = x "patientReference"; 
+	// ku_o_labType.dat_poc_hosp.txt 0-> entry.resource.ServiceRequest.occurrenceDateTime
+
+			ku_o_labType.dat_poc_hosp as s4 -> t1 then {
+				s4.txt as x -> t1.occurrenceDateTime = x "rule63";
+	// ku_o_labType.dat_du.txt 0-> entry.resource.ServiceRequest.authoredOn
+
+				ku_o_labType.dat_du as s5 -> t1 then {
+					s5.txt as x -> t1.authoredOn = x "rule64";
+	// ku_o_labType.duv_objed 0-> entry.resource.ServiceRequest.reasonCode
+
+
+	// 'https://dasta.mzcr.cz/DSAHX.htm' 0-> entry.resource.ServiceRequest.reasonCode.coding.system
+
+					ku_o_labType.duv_objed -> t1.reasonCode as t2 then {
+						patientReference -> t2.coding as t3 then {
+							patientReference -> t3.system = 'https://dasta.mzcr.cz/DSAHX.htm' "rule65";
+	// ku_o_labType.duv_objed 0-> entry.resource.ServiceRequest.reasonCode.coding.code
+
+
+							ku_o_labType.duv_objed as x -> t3.code = x "rule66";
+	// ku_o_labType.duv_objed 0-> entry.resource.ServiceRequest.reasonCode.coding.display
+
+
+							ku_o_labType.duv_objed as x -> t3.display = translate(x,'#cm3061','code') "rule67";
+
+						} "rule73";
+					} "rule74";
+				} "rule75";
+			} "rule76";
+		} "rule77";
+	// c3110.entry.txt 0-> entry
+        
+        ku_o_labType.lop as x -> bundle then lop_without_specimenReference(patientReference,x,bundle) "rule49";
+        ku_o_labType.lopk as x -> bundle then lopk_without_specimenReference(patientReference,x,bundle) "rule50";
+        ku_o_labType.lopz as x -> bundle then lopz_without_specimenReference(patientReference,x,bundle) "rule51";
+        ku_o_labType.lopr as x -> bundle then lopr_without_specimenReference(patientReference,x,bundle) "rule52";
+        
+        ku_o_labType.lip as x -> bundle then lip(patientReference,x,bundle) "rule53";
+        
+    } "Bundle.entry";
+    
+}
+
+group lip(source patientReference: Reference, source lip: ku_o_labType, target bundle: Bundle){
+	// lip 0-> entry
+    lip  -> bundle.entry as entry then {
+	// FullURL_Observation 0-> entry.fullUrl
+
+
+		lip.guid as guid -> entry.fullUrl = append('Observation/',guid) "rule2";
+	// c3189 0-> entry.resource.Observation
+
+		patientReference -> entry.resource=create('Observation') as document then {
+			
+		// 'final' 1-> document.status
+
+
+				patientReference -> document.status = 'final' "rule3";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.code.coding.system
+
+				lip -> document.code as t4 then {
+					lip.klic_nclp -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule4";
+		// lip.klic_nclp 1-> document.code.coding.code
+
+
+						lip.klic_nclp as x -> t5.code = x "rule5";
+		// lip.mtv_klic 1-> document.code.coding
+					} "rule6";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAJT.htm' 1-> document.code.coding.system
+
+					lip.mtv_klic -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAJT.htm' "rule7";
+		// lip.mtv_klic 1-> document.code.coding.code
+
+
+						lip.mtv_klic as x -> t5.code = x "rule8";
+		// patientReference 1-> document.subject
+					} "rule9";
+				} "rule10";
+
+                patientReference as x -> document.subject = x "lip: Observation.subject";
+		// lip.hodnota 1-> document.valueQuantity.value
+
+				lip -> document.valueQuantity as t4 then {
+
+		// lip.hodnota 1-> document.valueQuantity.value
+
+
+					lip.hodnota as x -> t4.value = x "rule11";
+		// lip.priznak_kvant 1-> document.valueQuantity.comparator
+
+
+
+		// lip.priznak_kvant 1-> document.valueQuantity.comparator
+
+
+					lip.priznak_kvant as x -> t4.comparator = translate(x,'#cm3190','code') "rule12";
+		// lip.jednotka 1-> document.valueQuantity.unit
+
+
+
+		// lip.jednotka 1-> document.valueQuantity.unit
+
+
+					lip.jednotka as x -> t4.unit = translate(x,'#cm3191','code') "rule13";
+	// c3189 0-> entry.resource.Observation
+
+				} "rule15";
+		} "rule16 Observation";
+    } "Bundle.entry";
+}
+
+group lop_without_specimenReference(source patientReference: Reference, source lop: ku_o_labType, target bundle: Bundle){
+    
+    lop -> bundle.entry as entry then {
+	// lop 0-> entry
+
+
+	// FullURL_ServiceRequest 0-> entry.fullUrl
+
+		lop.guid as guid -> entry.fullUrl = append('ServiceRequest/',guid) "rule2";
+	// c3180 0-> entry.resource.ServiceRequest
+
+		patientReference -> entry.resource=create('ServiceRequest') as document then {
+			
+		// 'active' 1-> document.status
+
+    			patientReference -> document.status = 'active' "rule3";
+		// 'order' 1-> document.intent
+
+
+				patientReference -> document.intent = 'order' "rule4";
+		// lop.urg 1-> document.priority
+
+
+
+		// lop.urg 1-> document.priority
+
+
+				lop.urg as x -> document.priority = translate(x,'#cm3111','code') "rule5";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.code.coding.system
+
+				patientReference -> document.code as t4 then {
+					patientReference -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule6";
+		// lop.klic_nclp 1-> document.code.coding.code
+
+
+						lop.klic_nclp as x -> t5.code = x "rule7";
+		// lop.systspec_klic 1-> document.code.coding
+					} "rule8";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKB.htm' 1-> document.code.coding.system
+
+					lop.systspec_klic -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKB.htm' "rule9";
+		// lop.systspec_klic 1-> document.code.coding.code
+
+
+						lop.systspec_klic as x -> t5.code = x "rule10";
+		// lop.syst_sp_klic 1-> document.code.coding
+					} "rule11";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKB.htm' 1-> document.code.coding.version
+
+					lop.syst_sp_klic -> t4.coding as t5 then {
+						patientReference -> t5.version = 'https://dastacr.cz/dasta/hypertext/DSAKB.htm' "rule12";
+		// lop.syst_sp_klic 1-> document.code.coding.code
+
+
+						lop.syst_sp_klic as x -> t5.code = x "rule13";
+		// lop.subsp_text 1-> document.code.coding.display
+
+
+						lop.subsp_text as x -> t5.display = x "rule14";
+		// lop.ziskmat_klic 1-> document.code.coding
+					} "rule15";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKT.htm' 1-> document.code.coding.system
+
+					lop.ziskmat_klic -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKT.htm' "rule16";
+		// lop.ziskmat_klic 1-> document.code.coding.code
+
+
+						lop.ziskmat_klic as x -> t5.code = x "rule17";
+		// lop.spec_proc 1-> document.code.coding
+					} "rule18";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAJW.htm' 1-> document.code.coding.system
+
+					lop.spec_proc -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAJW.htm' "rule19";
+		// lop.spec_proc 1-> document.code.coding.code
+
+
+						lop.spec_proc as x -> t5.code = x "rule20";
+		// patientReference 1-> document.subject
+					} "rule21";
+				} "rule22";
+
+                patientReference as x -> document.subject=x "subject";
+		
+
+		// lop.pozn_lop 1-> document.note.text
+
+				lop.pozn_lop -> document.note as t4 then {
+					lop.pozn_lop as x -> t4.text = x "rule25";
+		// lop.pozn_lop_lab 1-> document.note
+				} "rule26";
+
+
+		// lop.pozn_lop_lab 1-> document.note.text
+
+				lop.pozn_lop_lab -> document.note as t4 then {
+					lop.pozn_lop_lab as x -> t4.text = x "rule27";
+	// c3180 0-> entry.resource.ServiceRequest
+
+				} "rule29";
+		} "rule31";
+    } "Bundle.entry";
+
+}
+group lop(source patientReference: Reference, source lop: ku_o_labType, source specimenReference: string, target bundle: Bundle){
+
+    lop -> bundle.entry as entry then {
+	// lop 0-> entry
+
+
+	// FullURL_ServiceRequest 0-> entry.fullUrl
+
+		lop.guid as guid -> entry.fullUrl = append('ServiceRequest/',guid) "rule2";
+	// c3180 0-> entry.resource.ServiceRequest
+
+		patientReference -> entry.resource=create('ServiceRequest') as document then {
+			
+		// 'active' 1-> document.status
+
+    			patientReference -> document.status = 'active' "rule3";
+		// 'order' 1-> document.intent
+
+
+				patientReference -> document.intent = 'order' "rule4";
+		// lop.urg 1-> document.priority
+
+
+
+		// lop.urg 1-> document.priority
+
+
+				lop.urg as x -> document.priority = translate(x,'#cm3111','code') "rule5";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.code.coding.system
+
+				patientReference -> document.code as t4 then {
+					patientReference -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule6";
+		// lop.klic_nclp 1-> document.code.coding.code
+
+
+						lop.klic_nclp as x -> t5.code = x "rule7";
+		// lop.systspec_klic 1-> document.code.coding
+					} "rule8";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKB.htm' 1-> document.code.coding.system
+
+					lop.systspec_klic -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKB.htm' "rule9";
+		// lop.systspec_klic 1-> document.code.coding.code
+
+
+						lop.systspec_klic as x -> t5.code = x "rule10";
+		// lop.syst_sp_klic 1-> document.code.coding
+					} "rule11";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKB.htm' 1-> document.code.coding.version
+
+					lop.syst_sp_klic -> t4.coding as t5 then {
+						patientReference -> t5.version = 'https://dastacr.cz/dasta/hypertext/DSAKB.htm' "rule12";
+		// lop.syst_sp_klic 1-> document.code.coding.code
+
+
+						lop.syst_sp_klic as x -> t5.code = x "rule13";
+		// lop.subsp_text 1-> document.code.coding.display
+
+
+						lop.subsp_text as x -> t5.display = x "rule14";
+		// lop.ziskmat_klic 1-> document.code.coding
+					} "rule15";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKT.htm' 1-> document.code.coding.system
+
+					lop.ziskmat_klic -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKT.htm' "rule16";
+		// lop.ziskmat_klic 1-> document.code.coding.code
+
+
+						lop.ziskmat_klic as x -> t5.code = x "rule17";
+		// lop.spec_proc 1-> document.code.coding
+					} "rule18";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAJW.htm' 1-> document.code.coding.system
+
+					lop.spec_proc -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAJW.htm' "rule19";
+		// lop.spec_proc 1-> document.code.coding.code
+
+
+						lop.spec_proc as x -> t5.code = x "rule20";
+		// patientReference 1-> document.subject
+					} "rule21";
+				} "rule22";
+
+                patientReference as x -> document.subject = x "bla bla";
+
+		// specimenReference 1-> document.specimen
+
+
+
+		// specimenReference 1-> document.specimen.reference
+
+				specimenReference as x -> document.specimen as t4 then {
+					specimenReference as x -> t4.reference = x "rule23";
+		// lop.pozn_lop 1-> document.note
+				} "rule24";
+
+
+		// lop.pozn_lop 1-> document.note.text
+
+				lop.pozn_lop -> document.note as t4 then {
+					lop.pozn_lop as x -> t4.text = x "rule25";
+		// lop.pozn_lop_lab 1-> document.note
+				} "rule26";
+
+
+		// lop.pozn_lop_lab 1-> document.note.text
+
+				lop.pozn_lop_lab -> document.note as t4 then {
+					lop.pozn_lop_lab as x -> t4.text = x "rule27";
+	// c3180 0-> entry.resource.ServiceRequest
+
+				} "rule29";
+		} "rule31";
+    } "Bundle.entry";
+
+}
+
+group lopk_without_specimenReference(source patientReference: Reference, source lopk: ku_o_labType, target bundle: Bundle){
+    lopk -> bundle.entry as entry then {
+	// lopk 0-> entry
+
+	// FullURL_ServiceRequest 0-> entry.fullUrl
+
+
+		lopk.guid as guid -> entry.fullUrl = append('ServiceRequest/',guid) "rule2";
+	// c3182 0-> entry.resource.ServiceRequest
+
+		patientReference -> entry.resource=create('ServiceRequest') as document then {
+		// 'active' 1-> document.status
+
+
+				patientReference -> document.status = 'active' "rule3";
+		// 'order' 1-> document.intent
+
+
+				patientReference -> document.intent = 'order' "rule4";
+		// lopk.urg 1-> document.priority
+
+
+
+		// lopk.urg 1-> document.priority
+
+
+				lopk.urg as x -> document.priority = translate(x,'#cm3121','code') "rule5";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.code.coding.system
+
+				patientReference -> document.code as t4 then {
+					patientReference -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule6";
+		// lopk.klic_nclp 1-> document.code.coding.code
+
+
+						lopk.klic_nclp as x -> t5.code = x "rule7";
+		// lopk.systspec_kod 1-> document.code.coding
+					} "rule8";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKQ.htm' 1-> document.code.coding.system
+
+					lopk.systspec_kod -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKQ.htm' "rule9";
+		// lopk.systspec_kod 1-> document.code.coding.code
+
+
+						lopk.systspec_kod as x -> t5.code = x "rule10";
+		// lopk.spec_text 1-> document.code.coding
+					} "rule11";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKQ.htm' 1-> document.code.coding.system
+
+					lopk.spec_text -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKQ.htm' "rule12";
+		// lopk.spec_text 1-> document.code.coding.code
+
+
+						lopk.spec_text as x -> t5.code = x "rule13";
+		// lopk.subspec_text 1-> document.code.coding.display
+
+
+						lopk.subspec_text as x -> t5.display = x "rule14";
+		// lopk.ziskmat_kod 1-> document.code.coding
+					} "rule15";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKT.htm' 1-> document.code.coding.system
+
+					lopk.ziskmat_kod -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKT.htm' "rule16";
+		// lopk.ziskmat_kod 1-> document.code.coding.code
+
+
+						lopk.ziskmat_kod as x -> t5.code = x "rule17";
+		// lopk.ziskmat_text 1-> document.code.coding.display
+
+
+						lopk.ziskmat_text as x -> t5.display = x "rule18";
+		// lopk.lopok.obj_mv_kod 1-> document.code.coding
+					} "rule19";
+
+					lopk.lopok as lopok -> t4 then {
+					  lopok.obj_mv_kod -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKP.htm' "rule20";
+					
+		// lopk.lopok.obj_mv_kod 1-> document.code.coding.code
+
+
+						lopok.obj_mv_kod as x -> t5.code = x "rule21";
+		// lopk.lopok.obj_mv_text 1-> document.code.coding.display
+
+
+						lopok.obj_mv_text as x -> t5.display = x "rule22";
+		// patientReference 1-> document.subject
+					  } "rule23";
+					} "lopok";
+				} "rule24";
+
+                patientReference as x -> document.subject = x "bla";
+	// c3182 0-> entry.resource.ServiceRequest
+
+		
+		} "rule29";
+    } "Bundle.entry";
+
+}
+
+group lopk(source patientReference: Reference, source lopk: ku_o_labType, source specimenReference: string, target bundle: Bundle){
+
+    lopk -> bundle.entry as entry then {
+	// lopk 0-> entry
+
+	// FullURL_ServiceRequest 0-> entry.fullUrl
+
+
+		lopk.guid as guid -> entry.fullUrl = append('ServiceRequest/',guid) "rule2";
+	// c3182 0-> entry.resource.ServiceRequest
+
+		patientReference -> entry.resource=create('ServiceRequest') as document then {
+		// 'active' 1-> document.status
+
+
+				patientReference -> document.status = 'active' "rule3";
+		// 'order' 1-> document.intent
+
+
+				patientReference -> document.intent = 'order' "rule4";
+		// lopk.urg 1-> document.priority
+
+
+
+		// lopk.urg 1-> document.priority
+
+
+				lopk.urg as x -> document.priority = translate(x,'#cm3121','code') "rule5";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.code.coding.system
+
+				patientReference -> document.code as t4 then {
+					patientReference -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule6";
+		// lopk.klic_nclp 1-> document.code.coding.code
+
+
+						lopk.klic_nclp as x -> t5.code = x "rule7";
+		// lopk.systspec_kod 1-> document.code.coding
+					} "rule8";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKQ.htm' 1-> document.code.coding.system
+
+					lopk.systspec_kod -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKQ.htm' "rule9";
+		// lopk.systspec_kod 1-> document.code.coding.code
+
+
+						lopk.systspec_kod as x -> t5.code = x "rule10";
+		// lopk.spec_text 1-> document.code.coding
+					} "rule11";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKQ.htm' 1-> document.code.coding.system
+
+					lopk.spec_text -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKQ.htm' "rule12";
+		// lopk.spec_text 1-> document.code.coding.code
+
+
+						lopk.spec_text as x -> t5.code = x "rule13";
+		// lopk.subspec_text 1-> document.code.coding.display
+
+
+						lopk.subspec_text as x -> t5.display = x "rule14";
+		// lopk.ziskmat_kod 1-> document.code.coding
+					} "rule15";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKT.htm' 1-> document.code.coding.system
+
+					lopk.ziskmat_kod -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKT.htm' "rule16";
+		// lopk.ziskmat_kod 1-> document.code.coding.code
+
+
+						lopk.ziskmat_kod as x -> t5.code = x "rule17";
+		// lopk.ziskmat_text 1-> document.code.coding.display
+
+
+						lopk.ziskmat_text as x -> t5.display = x "rule18";
+		// lopk.lopok.obj_mv_kod 1-> document.code.coding
+					} "rule19";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAKP.htm' 1-> document.code.coding.system
+					lopk.lopok as lopok -> t4 then {
+					  lopok.obj_mv_kod -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAKP.htm' "rule20";
+					
+		// lopk.lopok.obj_mv_kod 1-> document.code.coding.code
+
+
+						lopok.obj_mv_kod as x -> t5.code = x "rule21";
+		// lopk.lopok.obj_mv_text 1-> document.code.coding.display
+
+
+						lopok.obj_mv_text as x -> t5.display = x "rule22";
+		// patientReference 1-> document.subject
+					  } "rule23";
+					} "lopok";
+				} "rule24";
+
+                patientReference as x -> document.subject = x "uff";
+		// specimenReference 1-> document.specimen
+
+
+
+		// specimenReference 1-> document.specimen.reference
+
+				specimenReference -> document.specimen as t4 then {
+					specimenReference as x -> t4.reference = x "rule25";
+	// c3182 0-> entry.resource.ServiceRequest
+
+				} "rule27";
+		} "rule29";
+    } "Bundle.entry";
+
+}
+
+group lopz_without_specimenReference(source patientReference: Reference, source lopz: ku_o_labType,  target bundle: Bundle){
+    lopz -> bundle.entry as entry then {
+	// lopz 0-> entry
+
+
+		lopz.guid as x -> entry.fullUrl = append('ServiceRequest/',x) "rule2";
+	// c3186 0-> entry.resource.ServiceRequest
+
+		patientReference -> entry.resource=create('ServiceRequest') as document then {
+			
+		// 'active' 1-> document.status
+
+
+				patientReference -> document.status = 'active' "rule3";
+		// 'order' 1-> document.intent
+
+
+				patientReference -> document.intent = 'order' "rule4";
+		// lopz.urg 1-> document.priority
+
+
+				lopz.urg as x -> document.priority = translate(x,'#cm3133','code') "rule5";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.code.coding.system
+
+				patientReference -> document.code as t4 then {
+					patientReference -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule6";
+		// lopz.klic_nclp 1-> document.code.coding.code
+
+
+						lopz.klic_nclp as x -> t5.code = x "rule7";
+		// patientReference 1-> document.subject
+					} "rule8";
+				} "rule9";
+
+                patientReference as x -> document.subject=x "ktory debil pozaduje tyto nezmyselne komentare - debugovat by sa malo dat i podla cisel riakov..";
+		// lopz.text 1-> document.note
+
+				lopz.text as x -> document.note = x "rule12";
+		// lopz.ptext.txt 1-> document.note.text
+
+				lopz.ptext as s3 -> document.note as t4 then {
+					s3.txt as x -> t4.text = x "rule13";
+	// c3186 0-> entry.resource.ServiceRequest
+
+				} "rule15";
+			
+		} "rule17";
+    } "Bundle.entry";
+
+}
+
+group lopz(source patientReference: Reference, source lopz: ku_o_labType, source specimenReference: string, target bundle: Bundle, target serviceRequestReference: Reference){
+  
+    lopz -> bundle.entry as entry then {
+	// lopz 0-> entry
+
+
+		lopz.guid as x -> entry.fullUrl = append('ServiceRequest/',x) "rule2";
+		lopz.guid as x -> serviceRequestReference.reference = append('ServiceRequest/',x) "composition section entry";
+	// c3186 0-> entry.resource.ServiceRequest
+
+		patientReference -> entry.resource=create('ServiceRequest') as document then {
+			
+		// 'active' 1-> document.status
+
+
+				patientReference -> document.status = 'active' "rule3";
+		// 'order' 1-> document.intent
+
+
+				patientReference -> document.intent = 'order' "rule4";
+		// lopz.urg 1-> document.priority
+
+
+				lopz.urg as x -> document.priority = translate(x,'#cm3133','code') "rule5";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.code.coding.system
+
+				patientReference -> document.code as t4 then {
+					patientReference -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule6";
+		// lopz.klic_nclp 1-> document.code.coding.code
+
+
+						lopz.klic_nclp as x -> t5.code = x "rule7";
+		// patientReference 1-> document.subject
+					} "rule8";
+				} "rule9";
+
+                patientReference as x -> document.subject=x "ktory";
+		// specimenReference 1-> document.specimen
+
+
+
+		// specimenReference 1-> document.specimen.reference
+
+				specimenReference -> document.specimen as t4 then {
+					specimenReference as x -> t4.reference = x "rule10";
+		// lopz.text 1-> document.note
+				} "rule11";
+
+				lopz.text as x -> document.note = x "rule12";
+		// lopz.ptext.txt 1-> document.note.text
+
+				lopz.ptext as s3 -> document.note as t4 then {
+					s3.txt as x -> t4.text = x "rule13";
+	// c3186 0-> entry.resource.ServiceRequest
+
+				} "rule15";
+			
+		} "rule17";
+    } "Bundle.entry";
+
+}
+
+group lopr_without_specimenReference(source patientReference: Reference, source lopr: ku_o_labType,  target bundle: Bundle){
+
+    lopr -> bundle.entry as entry then {
+	// lopr 0-> entry
+
+	// FullURL_ServiceRequest 0-> entry.fullUrl
+
+		lopr.guid as x -> entry.fullUrl = append('ServiceRequest/',x) "rule2";
+	// c3184 0-> entry.resource.ServiceRequest
+
+		patientReference -> entry.resource=create('ServiceRequest') as document then {
+			
+		// 'active' 1-> document.status
+
+
+				patientReference -> document.status = 'active' "rule3";
+		// 'order' 1-> document.intent
+
+
+				patientReference -> document.intent = 'order' "rule4";
+		// lopr.urg 1-> document.priority
+
+
+				lopr.urg as x -> document.priority = translate(x,'#cm3142','code') "rule5";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.code.coding.system
+
+				patientReference -> document.code as t4 then {
+					patientReference -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule6";
+		// lopr.klic_nclp 1-> document.code.coding.code
+
+
+						lopr.klic_nclp as x -> t5.code = x "rule7";
+		// patientReference 1-> document.subject
+					} "rule8";
+				} "rule9";
+
+                patientReference as x -> document.subject=x "ktory";
+		
+		// lopr.text 1-> document.note
+		
+				lopr.text as x -> document.note = x "rule12";
+		// lopr.ptext.txt 1-> document.note.text
+
+				lopr.ptext as s3 -> document.note as t4 then {
+					s3.txt as x -> t4.text = x "rule13";
+	// c3184 0-> entry.resource.ServiceRequest
+
+				} "rule15";
+			
+		} "rule17";
+    } "Bundle.entry";
+
+}
+
+group lopr(source patientReference: Reference, source lopr: ku_o_labType, source specimenReference: string, target bundle: Bundle){
+
+    lopr -> bundle.entry as entry then {
+	// lopr 0-> entry
+
+	// FullURL_ServiceRequest 0-> entry.fullUrl
+
+		lopr.guid as x -> entry.fullUrl = append('ServiceRequest/',x) "rule2";
+	// c3184 0-> entry.resource.ServiceRequest
+
+		patientReference -> entry.resource=create('ServiceRequest') as document then {
+			
+		// 'active' 1-> document.status
+
+
+				patientReference -> document.status = 'active' "rule3";
+		// 'order' 1-> document.intent
+
+
+				patientReference -> document.intent = 'order' "rule4";
+		// lopr.urg 1-> document.priority
+
+
+				lopr.urg as x -> document.priority = translate(x,'#cm3142','code') "rule5";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.code.coding.system
+
+				patientReference -> document.code as t4 then {
+					patientReference -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule6";
+		// lopr.klic_nclp 1-> document.code.coding.code
+
+
+						lopr.klic_nclp as x -> t5.code = x "rule7";
+		// patientReference 1-> document.subject
+					} "rule8";
+				} "rule9";
+
+                patientReference as x -> document.subject=x "ktory";
+		// specimenReference 1-> document.specimen
+
+
+
+		// specimenReference 1-> document.specimen.reference
+
+				specimenReference -> document.specimen as t4 then {
+					specimenReference as x -> t4.reference = x "rule10";
+		// lopr.text 1-> document.note
+				} "rule11";
+
+				lopr.text as x -> document.note = x "rule12";
+		// lopr.ptext.txt 1-> document.note.text
+
+				lopr.ptext as s3 -> document.note as t4 then {
+					s3.txt as x -> t4.text = x "rule13";
+	// c3184 0-> entry.resource.ServiceRequest
+
+				} "rule15";
+			
+		} "rule17";
+    } "Bundle.entry";
+
+}
+
+group loi(source patientReference: Reference, source loi: loi, target bundle: Bundle, target compositionSection){
+    loi.sci as sci -> bundle.entry as entry then {
+	// c3197 0-> entry
+
+
+		// loi.sci 1-> document
+
+
+		// FullURL_ServiceRequest 1-> document.fullUrl
+
+
+			sci.guid as guid -> entry.fullUrl = append('ServiceRequest/',guid) "rule2";
+
+			sci.guid -> compositionSection.entry = create('Reference') as serviceRequestReference then {
+            	sci.guid as guid -> serviceRequestReference.reference = append('ServiceRequest/',guid) "rule2";
+			} "composition section entry";
+		// loi.id_sci_is 1-> document.resource.ServiceRequest.identifier.value
+
+			loi -> entry.resource=create('ServiceRequest') as t3 then {
+				loi -> t3.identifier as t4 then {
+					sci.id_sci_is as x -> t4.value = x "rule3";
+		// loi.prubeh 1-> document.resource.ServiceRequest.status
+				} "rule4";
+
+				sci.prubeh as x -> t3.status = translate(x,'#cm3170','code') "rule5";
+		// 'order' 1-> document.resource.ServiceRequest.intent
+
+
+				patientReference -> t3.intent = 'order' "rule6";
+		// loi.urg 1-> document.resource.ServiceRequest.priority
+
+
+
+		// loi.urg 1-> document.resource.ServiceRequest.priority
+
+
+				loi.urg as x -> t3.priority = translate(x,'#cm3165','code') "rule7";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.resource.ServiceRequest.code.coding.system
+
+				patientReference -> t3.code as t4 then {
+					patientReference -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule8";
+		// loi.klic_nclp 1-> document.resource.ServiceRequest.code.coding.code
+
+
+						sci.klic_nclp as x -> t5.code = x "rule9";
+		// patientReference 1-> document.resource.ServiceRequest.subject
+					} "rule10";
+				} "rule11";
+
+                patientReference as x -> t3.subject=x "loi: ServiceRequest.subject";
+
+		// loi.krok 1-> document.resource.ServiceRequest.note.text
+
+				sci.krok -> t3.note as t4 then {
+					sci.krok as x -> t4.text = x "rule12";
+	// c3197 0-> entry
+
+				} "rule14";
+
+			
+			} "rule15";
+		} "rule16";
+	// loi 0-> entry
+    loi -> bundle.entry as entry then {
+
+	// FullURL_Specimen 0-> entry.fullUrl
+
+	  loi.guid as x -> entry.fullUrl = append('Specimen/',x) as referenceSpecimen then {
+	// c3171 0-> entry.resource.Specimen
+
+		loi -> entry.resource=create('Specimen') as document then {
+		
+		// loi.guid 1-> document.id
+
+
+
+		// loi.guid 1-> document.id
+
+
+				loi.guid as x -> document.id = x "rule19";
+		// loi.id_loi_is 1-> document.identifier.value
+
+				loi -> document.identifier as t4 then {
+					loi.id_loi_is as x -> t4.value = x "rule20";
+		// 'https://dastacr.cz/dasta/hypertext/DSAIC.htm' 1-> document.type.coding.system
+				} "rule21";
+				patientReference -> document.type as t4 then {
+					loi.typ_znac -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAIC.htm' "rule22";
+		// loi.typ_znac 1-> document.type.coding.code
+
+
+						loi.typ_znac as x -> t5.code = x "rule23";
+		// loi.typ_znac 1-> document.type.coding.display
+
+
+						loi.typ_znac as x -> t5.display = translate(x,'#cm3156','code') "rule24";
+		// 'https://dastacr.cz/dasta/hypertext/DSAJS.htm' 1-> document.type.coding.system
+
+
+		// c3360 1-> document.type.coding.code
+
+
+						
+		// loi.anal_vzorek 1-> document.type.coding
+					} "rule27";
+                    loi.material as material -> t4.coding as t5 then {
+                        patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAJS.htm' "rule25";
+                        loi.material as x -> t5.code = x "rule26";
+                    } "rule material";
+
+		// 'https://dastacr.cz/dasta/hypertext/DSALQ.htm' 1-> document.type.coding.system
+
+					loi.anal_vzorek -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSALQ.htm' "rule28";
+		// loi.anal_vzorek 1-> document.type.coding.code
+
+
+						loi.anal_vzorek as x -> t5.code = x "rule29";
+		// loi.anal_vzorek 1-> document.type.coding.display
+
+
+						loi.anal_vzorek as x -> t5.display = translate(x,'#cm3162','code') "rule30";
+		// patientReference 1-> document.subject
+					} "rule31";
+				} "rule32";
+
+                patientReference as x -> document.subject=x "ktory";
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAJU.htm' 1-> document.container.type.coding.system
+
+				patientReference -> document.container as t4 then {
+					loi.typ_obalu -> t4.type as t5 then {
+						patientReference -> t5.coding as t6 then {
+							patientReference -> t6.system = 'https://dastacr.cz/dasta/hypertext/DSAJU.htm' "rule33";
+		// loi.typ_obalu 1-> document.container.type.coding.code
+
+
+							loi.typ_obalu as x -> t6.code = x "rule34";
+		// loi.poc_obalu 1-> document.container.capacity
+						} "rule35";
+					} "rule36";
+
+
+		// loi.poc_obalu 1-> document.container.capacity.value
+
+					loi.poc_obalu -> t4.capacity as t5 then {
+						loi.poc_obalu as x -> t5.value = x "rule37";
+		// loi.pozn_loi 1-> document.note
+					} "rule38";
+				} "rule39";
+
+
+		// loi.pozn_loi 1-> document.note.text
+
+				loi -> document.note as t4 then {
+					loi.pozn_loi as x -> t4.text = x "rule40";
+	// c3171 0-> entry.resource.Specimen
+
+				} "rule42";
+			} "rule43";
+
+		loi.lop as lop -> bundle then lop(patientReference, lop, referenceSpecimen, bundle) "rule46";
+      	loi.lopk as lopk -> bundle then lopk(patientReference, lopk, referenceSpecimen, bundle) "rule46";
+      	loi.lod as lod -> bundle then lod(patientReference, lod, bundle) "rule46";
+            
+      } "rule18";
+	  
+	  loi.lop as lop -> compositionSection.entry as e then {
+			lop.guid as x1 -> e.reference = append('ServiceRequest/', x1) "rule30";
+	  } "composition loi.lop";
+	  loi.lopk as lopk -> compositionSection.entry=create() as e2 then {
+			lopk.guid as lopkguid -> e2.reference = append('ServiceRequest/', lopkguid) "rule35";
+	  } "composition loi.lopk";
+	} "rule44";
+	// c3194.entry.txt 0-> entry
+
+
+				// patientReference 1-> patientReference.Reference
+
+		// loi.lop.txt 1-> lop.lop
+
+	
+
+}
+group lod(source patientReference: Reference, source lod: ku_o_labType, target bundle: Bundle){
+    lod -> bundle.entry as entry then {
+	// lod 0-> entry
+	// FullURL_Observation 0-> entry.fullUrl
+
+
+		lod.guid as x -> entry.fullUrl = append('Observation/',x) "rule2";
+	// c3215 0-> entry.resource.Observation
+
+		patientReference -> entry.resource=create('Observation') as document then {
+			
+		// 'final' 1-> document.status
+
+
+				patientReference -> document.status = 'final' "rule3";
+		// 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' 1-> document.code.coding.system
+
+				patientReference -> document.code as t4 then {
+					lod.klic_nclp -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' "rule4";
+		// lod.klic_nclp 1-> document.code.coding.code
+
+
+						lod.klic_nclp as x -> t5.code = x "rule5";
+		// lod.mtv_klic 1-> document.code.coding
+					} "rule6";
+
+
+		// 'https://dastacr.cz/dasta/hypertext/DSAJT.htm' 1-> document.code.coding.system
+
+					lod.mtv_klic -> t4.coding as t5 then {
+						patientReference -> t5.system = 'https://dastacr.cz/dasta/hypertext/DSAJT.htm' "rule7";
+		// lod.mtv_klic 1-> document.code.coding.code
+
+
+						lod.mtv_klic as x -> t5.code = x "rule8";
+		// patientReference 1-> document.subject
+					} "rule9";
+				} "rule10";
+
+                patientReference as x -> document.subject=x "ktory";
+
+		// lod.hodnota 1-> document.valueQuantity.value
+
+				lod -> document.valueQuantity as t4 then {
+
+		// lod.hodnota 1-> document.valueQuantity.value
+
+
+					lod.hodnota as x -> t4.value = x "rule11";
+		// lod.priznak_kvant 1-> document.valueQuantity.comparator
+
+
+
+		// lod.priznak_kvant 1-> document.valueQuantity.comparator
+
+
+					lod.priznak_kvant as x -> t4.comparator = translate(x,'#cm3211','code') "rule12";
+		// lod.text 1-> document.note.text
+				} "rule13";
+				lod.text -> document.note as t4 then {
+
+		// lod.text 1-> document.note.text
+
+
+					lod.text as x -> t4.text = x "rule14";
+	// c3215 0-> entry.resource.Observation
+
+				} "rule16";
+		} "rule18";
+    } "Bundle.entry";
+    
+}
+group garant_dat(source garant_dat: dasta, target bundle: Bundle){
+
+    
+	//  0-> entry.fullUrl
+
+
+    garant_dat -> bundle.entry as entry then {
+		// 'Practitioner/' 1-> entry.fullUrl
+
+
+		// garant_dat.guid 1-> entry.fullUrl
+
+
+
+	//  0-> entry.fullUrl
+		garant_dat.guid as x1 -> entry.fullUrl = append('Practitioner/', x1) "rule2";
+
+
+	// garant_dat.guid 0-> entry.resource.Practitioner.id
+
+		garant_dat -> entry.resource=create('Practitioner') as t1 then {
+			garant_dat.guid as x -> t1.id = x "rule3";
+	// garant_dat.id_zp 0-> entry.resource.Practitioner.identifier
+
+
+
+	// 'official' 0-> entry.resource.Practitioner.identifier.use
+
+			garant_dat -> t1.identifier as t2 then {
+				garant_dat -> t2.use = 'official' "rule4";
+	// 'https://ncez.mzcr.cz/fhir/sid/krzp' 0-> entry.resource.Practitioner.identifier.system
+
+
+				garant_dat -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/krzp' "rule5";
+	// c3195 0-> entry.resource.Practitioner.identifier.value
+
+
+				garant_dat.id_zp as x -> t2.value = x "rule6";
+                //garant_dat.id_garant as x where not garant_dat.id_zp -> t2.value = x "rule6";
+	// garant_dat.id_clk 0-> entry.resource.Practitioner.identifier
+			} "rule7";
+
+
+	// 'official' 0-> entry.resource.Practitioner.identifier.use
+
+			garant_dat.id_clk -> t1.identifier as t2 then {
+				garant_dat -> t2.use = 'official' "rule8";
+	// 'https://ncez.mzcr.cz/fhir/sid/clk' 0-> entry.resource.Practitioner.identifier.system
+
+
+				garant_dat -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/clk' "rule9";
+	// garant_dat.id_clk 0-> entry.resource.Practitioner.identifier.value
+
+
+				garant_dat.id_clk as x -> t2.value = x "rule10";
+	// 'official' 0-> entry.resource.Practitioner.identifier.use
+            } "id_clk";
+            garant_dat.id_clk -> t1.identifier as t2 then {
+
+				garant_dat -> t2.use = 'official' "rule11";
+	// 'https://ncez.mzcr.cz/fhir/sid/clek' 0-> entry.resource.Practitioner.identifier.system
+
+
+				garant_dat -> t2.system = 'https://ncez.mzcr.cz/fhir/sid/clek' "rule12";
+	// garant_dat 0-> entry.resource.Practitioner.name.text
+			} "rule13";
+			garant_dat -> t1.name as t2 then {
+				garant_dat.txt as x -> t2.text = x "rule14";
+	// 'https://dastacr.cz/dasta/hypertext/UZAGT.htm' 0-> entry.resource.Practitioner.qualification.code.coding.system
+			} "rule15";
+			garant_dat -> t1.qualification as t2 then {
+				garant_dat -> t2.code as t3 then {
+					garant_dat -> t3.coding as t4 then {
+						garant_dat -> t4.system = 'https://dastacr.cz/dasta/hypertext/UZAGT.htm' "rule16";
+	// garant_dat.odbornost 0-> entry.resource.Practitioner.qualification.code.coding.code
+
+
+						garant_dat.odbornost as x -> t4.code = x "rule17";
+	// garant_dat.odbornost 0-> entry.resource.Practitioner.qualification.code.coding.display
+
+
+						garant_dat.odbornost as x -> t4.display = translate(x,'#cm3192','code') "rule18";
+	// 'https://dastacr.cz/dasta/hypertext/WWBSK.htm' 0-> entry.resource.PractitionerRole.code.coding.system
+					} "rule19";
+				} "rule20";
+			} "rule21";
+		} "rule22";
+    } "Bundle.entry";
+    garant_dat.role_klic -> bundle.entry as entry then{ 
+		garant_dat.role_klic -> entry.resource=create('PractitionerRole') as t1 then {
+            garant_dat.guid as guid -> t1.practitioner as p then {
+                garant_dat -> p.reference = append('Practitioner/',guid) "PractiotionerRole.practitioner.reference";
+            } "PractiotionerRole.practitioner";
+			garant_dat -> t1.code as t2 then {
+				garant_dat -> t2.coding as t3 then {
+					garant_dat -> t3.system = 'https://dastacr.cz/dasta/hypertext/WWBSK.htm' "rule23";
+	// garant_dat.role_klic 0-> entry.resource.PractitionerRole.code.coding.code
+
+
+					garant_dat.role_klic as x -> t3.code = x "rule24";
+	// garant_dat.role_text 0-> entry.resource.PractitionerRole.code.coding.display
+
+
+					garant_dat.role_text as x -> t3.display = x "rule25";
+				} "rule26";
+			} "rule27";
+		} "rule28";
+    } "Bundle.entry";
+     
+}

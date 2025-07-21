@@ -305,9 +305,11 @@ def generate_uses():
        # "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/serviceRequestCz\" alias ServiceRequest as target",
        # "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/specimenCz\" alias Specimen as target"
         #"uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target",
+        "uses \"http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr\" alias Bundle as target",
+        "uses \"http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr\" alias Composition as target"
         #"uses \"http://hl7.eu/fhir/eps/StructureDefinition/allergyIntolerance-eu-eps\" alias AllergyIntolerance as target"     
-        "uses \"http://hl7.eu/fhir/eps/StructureDefinition/bundle-eu-eps\" alias Bundle as target",
-        "uses \"http://hl7.eu/fhir/eps/StructureDefinition/composition-eu-eps\" alias Composition as target"
+        #"uses \"http://hl7.eu/fhir/eps/StructureDefinition/bundle-eu-eps\" alias Bundle as target",
+        #"uses \"http://hl7.eu/fhir/eps/StructureDefinition/composition-eu-eps\" alias Composition as target"
         #"uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab\" alias Bundle as target",
         #"uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab\" alias Composition as target",
         #"uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab\" alias Observation as target",
@@ -1092,10 +1094,10 @@ def main():
         #output_file = '.\\mapforce\\output\\ua - Allergyintolerance.map'
         #mfd_file = '.\\mapforce\\final\\laboratoryOrder.mfd'
         #output_file = '.\\mapforce\\output\\laboratoryOrder.map'
-        mfd_file = '.\\mapforce\\final\\patsum.mfd'
-        output_file = '.\\mapforce\\output\\patsum.map'
-        #mfd_file = '.\\mapforce\\final\\laboratory.mfd'
-        #output_file = '.\\mapforce\\output\\laboratory.map'
+        #mfd_file = '.\\mapforce\\final\\patsum.mfd'
+        #output_file = '.\\mapforce\\output\\patsum.map'
+        mfd_file = '.\\mapforce\\final\\hdr.mfd'
+        output_file = '.\\mapforce\\output\\hdr.map'
         
     else:
         mfd_file = sys.argv[1]
@@ -1107,7 +1109,7 @@ def main():
     functions = dict()
     findComponents(root, blocks, functions)
     
-    map_name = "patsum"
+    map_name = "hdr"
     with open(output_file, 'w', encoding="utf-8") as f:
         f.write(f"/// url = 'https://ncez.mzcr.cz/model/StructureMap/{map_name}'\n")
         #f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR HL7-CZ https://build.fhir.org/ig/hl7-cz/ (June 2025)'\n")
