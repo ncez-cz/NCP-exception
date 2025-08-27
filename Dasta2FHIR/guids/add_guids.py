@@ -39,7 +39,12 @@ def fyznalTypeGuids(node: ET.Element):
     attrGuid(node,'teplota')
     
 def main():
-    if len(sys.argv) != 3:
+    if len(sys.argv) == 1:
+        sys.stdin.reconfigure(encoding='utf-8')
+        sys.stdout.reconfigure(encoding='utf-8')
+        dasta_file = sys.stdin
+        output_file = sys.stdout
+    elif len(sys.argv) != 3:
         print("Usage: python add_guids.py <input_dasta_file> <output_file>")
         sys.exit(1)
         #dasta_file = '.\\samples\\ds042703\\xml_test\\h_dat_ab.xml'
@@ -66,10 +71,13 @@ def main():
     for e in root.findall(".//dsip:fyznal",namespaces):
         fyznalTypeGuids(e)
         
-    with open(output_file, 'w', encoding="utf-8") as f:
-        f.write(ET.tostring(root).decode())
-        f.write("\n")
-            
+    if output_file is not sys.stdout:
+        with open(output_file, 'w', encoding="utf-8") as f:
+            f.write(ET.tostring(root).decode())
+            f.write("\n")
+    else:        
+        output_file.write(ET.tostring(root).decode())
+        output_file.write("\n")
     
 if __name__ == "__main__":
     main()
