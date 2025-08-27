@@ -2,10 +2,12 @@ using java.awt;
 using javax.xml.transform.stream;
 using Microsoft.AspNetCore.Mvc;
 using net.liberty_development.SaxonHE12s9apiExtensions;
+using net.sf.saxon.om;
 using net.sf.saxon.s9api;
 using Provisio.Converters.ExceptionHandlingModule.Model;
 using System.Diagnostics;
 using System.Net.Mime;
+using System.IO;
 
 namespace Provisio.Converters.ExceptionHandlingModule.Controllers
 {
@@ -15,13 +17,21 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
     public class TransformController : ControllerBase
     {
         private readonly IConfiguration _config;
+        private readonly string? _scriptInterpreter;
+        private readonly string? _addGuidsScript;
+        private readonly string? _fixDatetimeScript;
         private readonly ILogger<TransformController> _logger;
         private static Dictionary<string, Xslt30Transformer> _xsl = new Dictionary<string, Xslt30Transformer>();
-        
+
         public TransformController(IConfiguration configuration, ILogger<TransformController> logger)
         {
             _config = configuration;
             _logger = logger;
+            
+            _scriptInterpreter = _config.GetValue<string>("scriptInterpreter");
+            _addGuidsScript = _config.GetValue<string>("addGuidsScript");
+            _fixDatetimeScript = _config.GetValue<string>("fixDatetimeScript");
+
             if (_xsl.Count() == 0)
             {
                 foreach (var item in _config.GetSection("transformation").GetChildren())
@@ -76,6 +86,84 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<string> Transform(string transformation = "cda_epsos_ps7_replace_unknown_codes_EU", [FromBody] ClinicalDocument clinicalDocument = null)
         {
+        
+            var memoryStream = new MemoryStream();
+
+            var requestStream = clinicalDocument.GetStream();
+            requestStream.CopyTo(memoryStream);
+            Console.WriteLine("request size: " + memoryStream.Position);
+            memoryStream.Position = 0;
+            var inputStream = memoryStream;
+
+            if (transformation.StartsWith("dasta2fhir"))
+            {
+                //preprocessing
+
+
+                using (Process addGuidsProcess = new Process())
+                {
+                    //add guids for fhir resources
+                    addGuidsProcess.StartInfo.FileName = _scriptInterpreter;
+
+                    addGuidsProcess.StartInfo.Arguments = string.Format("{0}", _addGuidsScript);
+                    addGuidsProcess.StartInfo.UseShellExecute = false;
+                    addGuidsProcess.StartInfo.RedirectStandardInput = true;
+                    addGuidsProcess.StartInfo.RedirectStandardOutput = true;
+                    addGuidsProcess.Start();
+
+                    StreamWriter addGuidsInput = addGuidsProcess.StandardInput;
+
+                    inputStream.CopyTo(addGuidsInput.BaseStream);
+                    Console.WriteLine("addGuidsInput size: " + inputStream.Position);
+
+                    addGuidsInput.Close();
+
+                    StreamReader addGuidsOutput = addGuidsProcess.StandardOutput;
+
+                    var input2Stream = new MemoryStream();
+                    addGuidsOutput.BaseStream.CopyTo(input2Stream);
+                    Console.WriteLine("addGuidsOutput size: " + input2Stream.Position);
+                    input2Stream.Position = 0;
+
+                    using (Process fixDatetimesProcess = new Process())
+                    {
+                        //fix datetime formats
+                        fixDatetimesProcess.StartInfo.FileName = _scriptInterpreter;
+
+                        fixDatetimesProcess.StartInfo.Arguments = string.Format("{0}", _fixDatetimeScript);
+                        fixDatetimesProcess.StartInfo.UseShellExecute = false;
+                        fixDatetimesProcess.StartInfo.RedirectStandardInput = true;
+                        fixDatetimesProcess.StartInfo.RedirectStandardOutput = true;
+                        fixDatetimesProcess.Start();
+
+                        StreamWriter fixDatetimesInput = fixDatetimesProcess.StandardInput;
+
+                        input2Stream.CopyTo(fixDatetimesInput.BaseStream);
+                        Console.WriteLine("addGuidsInput size: " + input2Stream.Position);
+                        
+                        fixDatetimesInput.Close();
+
+                        StreamReader fixDatetimesOutput = fixDatetimesProcess.StandardOutput;
+
+                        inputStream = new MemoryStream();
+
+                        fixDatetimesOutput.BaseStream.CopyTo(inputStream);
+                        Console.WriteLine("fixDatetimesOutput size: " + inputStream.Position);
+
+                        fixDatetimesProcess.WaitForExit();
+
+                        //Console.WriteLine("preprocessed size: " + inputStream.Position);
+
+                        inputStream.Position = 0;
+
+                    }
+
+                    addGuidsProcess.WaitForExit();
+
+                }
+            }
+            
+
             if (transformation == null || !_xsl.ContainsKey(transformation))
             {
                 return NotFound("Volba transformace '" + transformation + "' není dostupná!");
@@ -84,9 +172,13 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
 
             var transformationResult = new XdmDestination();
 
-            transformator.transform(new StreamSource(new DotNetInputStream(clinicalDocument.GetStream())), transformationResult);
+            transformator.transform(new StreamSource(new DotNetInputStream(inputStream)), transformationResult);
 
             return Ok(transformationResult.getXdmNode());
+            
+
+
+           
         }
 
     }
