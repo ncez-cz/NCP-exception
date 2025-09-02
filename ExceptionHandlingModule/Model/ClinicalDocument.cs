@@ -7,8 +7,9 @@ namespace Provisio.Converters.ExceptionHandlingModule.Model
     {
         private string data;
 
-        public ClinicalDocument(string data) { 
-            this.data = data; 
+        public ClinicalDocument(string data)
+        {
+            this.data = data;
         }
         public Stream GetStream()
         {

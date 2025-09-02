@@ -1,7 +1,5 @@
 using Microsoft.OpenApi.Models;
-using net.sf.saxon.s9api;
 using Provisio.Converters.ExceptionHandlingModule.Formatter;
-using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 
 
@@ -11,8 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers(options =>
     {
-    options.InputFormatters.Insert(0, new InputDataFormatter());
-    options.OutputFormatters.Insert(0, new OutputDataFormatter());
+        options.InputFormatters.Insert(0, new InputDataFormatter());
+        options.OutputFormatters.Insert(0, new OutputDataFormatter());
     }); //.AddXmlSerializerFormatters();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -36,7 +34,7 @@ builder.Services.AddSwaggerGen(options =>
             Url = new Uri("https://example.com/license")
         }*/
         // using System.Reflection;
-        
+
     });
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
@@ -47,15 +45,15 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
 //{
-    app.UseSwagger(options =>
-    {
-        options.SerializeAsV2 = true;
-    });
-    app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
-    {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-        options.RoutePrefix = string.Empty;
-    });
+app.UseSwagger(options =>
+{
+    options.OpenApiVersion = Microsoft.OpenApi.OpenApiSpecVersion.OpenApi2_0; //.SerializeAsV2 = true;
+});
+app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
+{
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+    options.RoutePrefix = string.Empty;
+});
 //}
 
 app.UseHttpsRedirection();

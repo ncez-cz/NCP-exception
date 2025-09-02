@@ -9,7 +9,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Formatter
     {
         public OutputDataFormatter()
         {
-          //  SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("text/plain"));
+            //  SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("text/plain"));
             SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("application/xml"));
             SupportedEncodings.Add(Encoding.UTF8);
             SupportedEncodings.Add(Encoding.Unicode);
@@ -44,9 +44,9 @@ namespace Provisio.Converters.ExceptionHandlingModule.Formatter
             StringBuilder buffer, XdmNode node, ILogger logger)
         {
             buffer.Append($"{node}");
-            
+
             //logger.LogInformation("Writing {FirstName} {LastName}",
             //                contact.FirstName, contact.LastName);
         }
-    }   
+    }
 }

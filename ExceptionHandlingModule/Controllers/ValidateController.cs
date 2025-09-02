@@ -1,21 +1,14 @@
-using System;
-using System.IO;
-using System.Diagnostics;
-using System.Net.Mime;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.OpenApi.Models;
-using net.sf.saxon.s9api;
-using net.liberty_development.SaxonHE12s9apiExtensions;
-using System.Reflection;
-using net.sf.saxon.lib;
 using javax.xml.transform.stream;
+using Microsoft.AspNetCore.Mvc;
+using net.liberty_development.SaxonHE12s9apiExtensions;
+using net.sf.saxon.s9api;
 using Provisio.Converters.ExceptionHandlingModule.Model;
 
 
 namespace Provisio.Converters.ExceptionHandlingModule.Controllers
 {
-    [ApiController]
     /// Validace dat
+    [ApiController]
     [Route("[controller]")]
     [Produces("application/xml")]
     public class ValidateController : ControllerBase
@@ -24,7 +17,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         private readonly ILogger<ValidateController> _logger;
         private static Dictionary<string, Xslt30Transformer> _xsl = new Dictionary<string, Xslt30Transformer>();
 
-        public ValidateController(IConfiguration configuration,ILogger<ValidateController> logger)
+        public ValidateController(IConfiguration configuration, ILogger<ValidateController> logger)
         {
             _config = configuration;
             _logger = logger;
@@ -48,7 +41,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
                             var validator = xsltCompiler.compile(new java.io.File(item.Value)).load30();
 
                             _xsl.Add(item.Key, validator);
-                            
+
                             Console.WriteLine("Finished successful compilation of " + item.Key + ": " + item.Value);
                         }
                     }
@@ -87,21 +80,21 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         //[OpenApiRequestBodyType(typeof(string))]
-        public async Task<ActionResult<XdmNode>> Validate(string validation= "cda_epsos_ps7", [FromBody] ClinicalDocument clinicalDocument = null)
-		{
-			if (validation == null || !_xsl.ContainsKey(validation))
+        public ActionResult<XdmNode> Validate(string validation = "cda_epsos_ps7", [FromBody] ClinicalDocument clinicalDocument = null)
+        {
+            if (validation == null || !_xsl.ContainsKey(validation))
             {
                 return NotFound("Volba validace '" + validation + "' není dostupná!");
-			}
+            }
             var validator = _xsl[validation];
 
             var validationResult = new XdmDestination();
 
             validator.transform(new StreamSource(new DotNetInputStream(clinicalDocument.GetStream())), validationResult);
 
-            return Ok(validationResult.getXdmNode());           
-			
-		}
+            return Ok(validationResult.getXdmNode());
 
-	}
+        }
+
+    }
 }

@@ -1,13 +1,9 @@
-using java.awt;
 using javax.xml.transform.stream;
 using Microsoft.AspNetCore.Mvc;
 using net.liberty_development.SaxonHE12s9apiExtensions;
-using net.sf.saxon.om;
 using net.sf.saxon.s9api;
 using Provisio.Converters.ExceptionHandlingModule.Model;
 using System.Diagnostics;
-using System.Net.Mime;
-using System.IO;
 
 namespace Provisio.Converters.ExceptionHandlingModule.Controllers
 {
@@ -17,6 +13,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
     public class TransformController : ControllerBase
     {
         private readonly IConfiguration _config;
+        private readonly string? _out;
         private readonly string? _scriptInterpreter;
         private readonly string? _addGuidsScript;
         private readonly string? _fixDatetimeScript;
@@ -27,7 +24,13 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         {
             _config = configuration;
             _logger = logger;
-            
+            _out = _config.GetValue<string>("logOut");
+
+            if (_out != null)
+            {
+                Console.SetOut(new StreamWriter(_out));
+            }
+
             _scriptInterpreter = _config.GetValue<string>("scriptInterpreter");
             _addGuidsScript = _config.GetValue<string>("addGuidsScript");
             _fixDatetimeScript = _config.GetValue<string>("fixDatetimeScript");
@@ -59,7 +62,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
 
         // <tr><td>cda_epsos_ps7_conceptmap_CZ2EU</td><td>Pøemapování èíselníkù z CZ do EU pro CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0</td></tr>
         // <tr><td>cda_epsos_ps7_displaynames_EU</td><td>Pøepis a doplnìní všech èíselníkových hodnot dle zadaného kódu a EU èíselníku pro CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0</td></tr>
-        
+
 
         /// <summary>
         /// Transformace dat.
@@ -86,7 +89,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<string> Transform(string transformation = "cda_epsos_ps7_replace_unknown_codes_EU", [FromBody] ClinicalDocument clinicalDocument = null)
         {
-        
+
             var memoryStream = new MemoryStream();
 
             var requestStream = clinicalDocument.GetStream();
@@ -95,90 +98,97 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
             memoryStream.Position = 0;
             var inputStream = memoryStream;
 
-            if (transformation.StartsWith("dasta2fhir"))
+            try
             {
-                //preprocessing
 
-
-                using (Process addGuidsProcess = new Process())
+                if (transformation.StartsWith("dasta2fhir"))
                 {
-                    //add guids for fhir resources
-                    addGuidsProcess.StartInfo.FileName = _scriptInterpreter;
+                    //preprocessing
 
-                    addGuidsProcess.StartInfo.Arguments = string.Format("{0}", _addGuidsScript);
-                    addGuidsProcess.StartInfo.UseShellExecute = false;
-                    addGuidsProcess.StartInfo.RedirectStandardInput = true;
-                    addGuidsProcess.StartInfo.RedirectStandardOutput = true;
-                    addGuidsProcess.Start();
 
-                    StreamWriter addGuidsInput = addGuidsProcess.StandardInput;
-
-                    inputStream.CopyTo(addGuidsInput.BaseStream);
-                    Console.WriteLine("addGuidsInput size: " + inputStream.Position);
-
-                    addGuidsInput.Close();
-
-                    StreamReader addGuidsOutput = addGuidsProcess.StandardOutput;
-
-                    var input2Stream = new MemoryStream();
-                    addGuidsOutput.BaseStream.CopyTo(input2Stream);
-                    Console.WriteLine("addGuidsOutput size: " + input2Stream.Position);
-                    input2Stream.Position = 0;
-
-                    using (Process fixDatetimesProcess = new Process())
+                    using (Process addGuidsProcess = new Process())
                     {
-                        //fix datetime formats
-                        fixDatetimesProcess.StartInfo.FileName = _scriptInterpreter;
+                        //add guids for fhir resources
+                        addGuidsProcess.StartInfo.FileName = _scriptInterpreter;
 
-                        fixDatetimesProcess.StartInfo.Arguments = string.Format("{0}", _fixDatetimeScript);
-                        fixDatetimesProcess.StartInfo.UseShellExecute = false;
-                        fixDatetimesProcess.StartInfo.RedirectStandardInput = true;
-                        fixDatetimesProcess.StartInfo.RedirectStandardOutput = true;
-                        fixDatetimesProcess.Start();
+                        addGuidsProcess.StartInfo.Arguments = string.Format("{0}", _addGuidsScript);
+                        addGuidsProcess.StartInfo.UseShellExecute = false;
+                        addGuidsProcess.StartInfo.RedirectStandardInput = true;
+                        addGuidsProcess.StartInfo.RedirectStandardOutput = true;
+                        addGuidsProcess.Start();
 
-                        StreamWriter fixDatetimesInput = fixDatetimesProcess.StandardInput;
+                        StreamWriter addGuidsInput = addGuidsProcess.StandardInput;
 
-                        input2Stream.CopyTo(fixDatetimesInput.BaseStream);
-                        Console.WriteLine("addGuidsInput size: " + input2Stream.Position);
-                        
-                        fixDatetimesInput.Close();
+                        inputStream.CopyTo(addGuidsInput.BaseStream);
+                        Console.WriteLine("addGuidsInput size: " + inputStream.Position);
 
-                        StreamReader fixDatetimesOutput = fixDatetimesProcess.StandardOutput;
+                        addGuidsInput.Close();
 
-                        inputStream = new MemoryStream();
+                        StreamReader addGuidsOutput = addGuidsProcess.StandardOutput;
 
-                        fixDatetimesOutput.BaseStream.CopyTo(inputStream);
-                        Console.WriteLine("fixDatetimesOutput size: " + inputStream.Position);
+                        var input2Stream = new MemoryStream();
+                        addGuidsOutput.BaseStream.CopyTo(input2Stream);
+                        Console.WriteLine("addGuidsOutput size: " + input2Stream.Position);
+                        input2Stream.Position = 0;
 
-                        fixDatetimesProcess.WaitForExit();
+                        using (Process fixDatetimesProcess = new Process())
+                        {
+                            //fix datetime formats
+                            fixDatetimesProcess.StartInfo.FileName = _scriptInterpreter;
 
-                        //Console.WriteLine("preprocessed size: " + inputStream.Position);
+                            fixDatetimesProcess.StartInfo.Arguments = string.Format("{0}", _fixDatetimeScript);
+                            fixDatetimesProcess.StartInfo.UseShellExecute = false;
+                            fixDatetimesProcess.StartInfo.RedirectStandardInput = true;
+                            fixDatetimesProcess.StartInfo.RedirectStandardOutput = true;
+                            fixDatetimesProcess.Start();
 
-                        inputStream.Position = 0;
+                            StreamWriter fixDatetimesInput = fixDatetimesProcess.StandardInput;
+
+                            input2Stream.CopyTo(fixDatetimesInput.BaseStream);
+                            Console.WriteLine("addGuidsInput size: " + input2Stream.Position);
+
+                            fixDatetimesInput.Close();
+
+                            StreamReader fixDatetimesOutput = fixDatetimesProcess.StandardOutput;
+
+                            inputStream = new MemoryStream();
+
+                            fixDatetimesOutput.BaseStream.CopyTo(inputStream);
+                            Console.WriteLine("fixDatetimesOutput size: " + inputStream.Position);
+
+                            fixDatetimesProcess.WaitForExit();
+
+                            //Console.WriteLine("preprocessed size: " + inputStream.Position);
+
+                            inputStream.Position = 0;
+
+                        }
+
+                        addGuidsProcess.WaitForExit();
 
                     }
-
-                    addGuidsProcess.WaitForExit();
-
                 }
-            }
-            
 
-            if (transformation == null || !_xsl.ContainsKey(transformation))
+
+                if (transformation == null || !_xsl.ContainsKey(transformation))
+                {
+                    return NotFound("Volba transformace '" + transformation + "' není dostupná!");
+                }
+                var transformator = _xsl[transformation];
+
+                var transformationResult = new XdmDestination();
+
+                transformator.transform(new StreamSource(new DotNetInputStream(inputStream)), transformationResult);
+
+                return Ok(transformationResult.getXdmNode());
+
+            }
+            catch (Exception ex)
             {
-                return NotFound("Volba transformace '" + transformation + "' není dostupná!");
+                return BadRequest(ex.ToString());
             }
-            var transformator = _xsl[transformation];
-
-            var transformationResult = new XdmDestination();
-
-            transformator.transform(new StreamSource(new DotNetInputStream(inputStream)), transformationResult);
-
-            return Ok(transformationResult.getXdmNode());
-            
 
 
-           
         }
 
     }
