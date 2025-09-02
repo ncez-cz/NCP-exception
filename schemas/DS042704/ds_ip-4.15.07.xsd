@@ -2558,7 +2558,9 @@
         <xs:attribute name="icl" type="dsComm:icisType" />
         <xs:attribute name="odbornost" type="dsComm:str3e" />
         <xs:attribute name="id_pracovnik" type="dsComm:str64" />
-        <xs:attribute name="id_clk" type="dsComm:icis10Type" />
+	<xs:attribute name="id_clk" type="dsComm:icis10Type" />
+        <xs:attribute name="guid_role" type="dsComm:guidType"/>
+        <xs:attribute name="vguid_role" type="dsComm:guidType"/>
         <xs:attribute name="role_klic" type="dsComm:str10" />
         <xs:attribute name="role_text" type="dsComm:str80" />
     </xs:complexType>
