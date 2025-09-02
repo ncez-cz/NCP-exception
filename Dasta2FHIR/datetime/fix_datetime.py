@@ -65,7 +65,7 @@ def main():
         
     if output_file is not sys.stdout:
         with open(output_file, 'w', encoding="utf-8") as f:
-            f.write(ET.tostring(root).decode)
+            f.write(ET.tostring(root).decode())
             f.write("\n")
     else:        
         output_file.write(ET.tostring(root).decode())
