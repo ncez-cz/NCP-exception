@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2014 (x64) (http://www.altova.com) by Daniel Schwarz (Masaryk University) -->
+<xs:schema xmlns:dsComm="urn:cz-mzcr:ns:dasta:ds4:ds_type"
+	xmlns:nrpatv="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrpatv"
+	xmlns:dsiduCis="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_idu_nrpatv" elementFormDefault="qualified">
+	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" schemaLocation="ds_cisidu-4.03.05.xsd" />
+	<xs:import namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type" schemaLocation="ds_type-4.02.22.xsd" />
+	<xs:annotation>
+		<xs:documentation> Import common element types. </xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation> VETEV NRPATV - Národní registr pitev a toxikologických vyšetření
+			prováděných na oddělení soudního lékařství</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation> *********************************************************** Definice
+			rozhraní registru NRPATV -- Start
+			*********************************************************** </xs:documentation>
+	</xs:annotation>
+	<xs:simpleType name="str256">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1" />
+			<xs:maxLength value="256" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="denMesiceType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1" />
+			<xs:maxInclusive value="31" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="mesicType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1" />
+			<xs:maxInclusive value="12" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sekceType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation>Sekce příčin smrti I.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation>Sekce příčin smrti II.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="polozkaType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="a">
+				<xs:annotation>
+					<xs:documentation>Položka I. a příčin smrti</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="b">
+				<xs:annotation>
+					<xs:documentation>Položka I. b příčin smrti</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="c">
+				<xs:annotation>
+					<xs:documentation>Položka I. c příčin smrti</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="d">
+				<xs:annotation>
+					<xs:documentation>Položka I. d příčin smrti</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="v">
+				<xs:annotation>
+					<xs:documentation>Položka II. příčin smrti</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="number3.3">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{1,3}([.][0-9]{1,3})?" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="nrpatvType">
+		<xs:all>
+			<xs:element name="seznam_testovanych_latek" type="nrpatv:seznam_testovanych_latekType"
+				minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Seznam testovaných skupin látek při toxikologickém vyšetření.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="seznam_vysetreni" type="nrpatv:seznam_vysetreniType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Seznam látek nalezených při toxikologickém vyšetření.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="seznam_zarizeni" type="nrpatv:seznam_zarizeniType" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Seznam zdravotnických zařízení, které se na pitvě podílely.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="seznam_diagnoz" type="nrpatv:seznam_diagnozType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Seznam příčin smrti zemřelého.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+		<xs:attribute name="znama_totoznost" type="xs:boolean" use="required">
+			<xs:annotation>
+				<xs:documentation>Zda je totožnost zemřelého známá.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="rodne_cislo" type="dsComm:rodcisType">
+			<xs:annotation>
+				<xs:documentation>Rodné číslo zemřelého.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="cislo_pojistence" type="dsComm:str10">
+			<xs:annotation>
+				<xs:documentation>Číslo pojištěnce zemřelého.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="jmeno" type="dsComm:str20">
+			<xs:annotation>
+				<xs:documentation>Jméno zemřelého.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="prijmeni" type="dsComm:str30">
+			<xs:annotation>
+				<xs:documentation>Příjmení zemřelého.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="datum_narozeni" type="xs:date">
+			<xs:annotation>
+				<xs:documentation>Datum narození zemřelého.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="stari" type="xs:unsignedByte">
+			<xs:annotation>
+				<xs:documentation>Odhadovaný věk zemřelého, pokud není známa jeho totožnost.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="pohlavi" type="dsComm:str1" use="required">
+			<xs:annotation>
+				<xs:documentation>Pohlaví zemřelého dle číselníku <cl>Pohlavi</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="obcanstvi" type="dsComm:str3">
+			<xs:annotation>
+				<xs:documentation>Státní občanství zemřelého, dle číselníku <cl>csu.Zeme</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="den_umrti" type="nrpatv:denMesiceType">
+			<xs:annotation>
+				<xs:documentation>Den úmrtí zemřelého, od 1 do 31 včetně.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="mesic_umrti" type="nrpatv:mesicType">
+			<xs:annotation>
+				<xs:documentation>Měsíc úmrtí zemřelého, od 1 do 12 včetně.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="rok_umrti" type="dsComm:number4de" use="required">
+			<xs:annotation>
+				<xs:documentation>Rok úmrtí zemřelého.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="cas_umrti" type="xs:time">
+			<xs:annotation>
+				<xs:documentation>Čas úmrtí zemřelého.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="misto_umrti_obec" type="dsComm:str6">
+			<xs:annotation>
+				<xs:documentation>Kód obce místa úmrtí zmeřelého dle číselníku <cl>Obec</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="misto_umrti" type="xs:unsignedByte" use="required">
+			<xs:annotation>
+				<xs:documentation>Místo úmrtí dle číselníku <cl>KdeNastaloUmrti</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="misto_umrti_upresneni" type="dsComm:str100">
+			<xs:annotation>
+				<xs:documentation>Textové upřesnění místa úmrtí v případě, že misto_umrti = jinde.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="misto_pobytu_ulice" type="dsComm:str20">
+			<xs:annotation>
+				<xs:documentation>Ulice místa trvalého pobytu zemřelého.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="misto_pobytu_cp" type="dsComm:str10">
+			<xs:annotation>
+				<xs:documentation>Číslo popisné místa trvalého pobytu zemřelého.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="misto_pobytu_obec" type="dsComm:str6">
+			<xs:annotation>
+				<xs:documentation>Kód obce místa trvalého pobytu zemřelého dle číselníku <cl>Obec</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="misto_pobytu_okres" type="dsComm:str6">
+			<xs:annotation>
+				<xs:documentation>Kód okresu místa trvalého pobytu dle číselníku <cl>KrajOkres</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="misto_pobytu_stat" type="dsComm:str3">
+			<xs:annotation>
+				<xs:documentation>Kód státu místa trvalého pobytu dle číselníku <cl>csu.Zeme</cl>
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="vzdelani" type="xs:unsignedByte" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód vzdělání zemřelého dle číselníku <cl>VzdelaniLpz</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="rodinny_stav" type="xs:unsignedByte" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód rodinného stavu zemřelého dle číselníku <cl>Stav</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="anamneza" type="dsComm:str50">
+			<xs:annotation>
+				<xs:documentation>Anamnéza.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="zamestnani" type="dsComm:str50">
+			<xs:annotation>
+				<xs:documentation>Zaměstnání zemřelého.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="dalsi_okolnosti" type="dsComm:str50">
+			<xs:annotation>
+				<xs:documentation>Další okolnosti úmrtí.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="datum" type="xs:date" use="required">
+			<xs:annotation>
+				<xs:documentation>Datum pitvy.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="cislo_protokolu" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Číslo protokolu.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="provedena_toxikologie" type="xs:boolean" use="required">
+			<xs:annotation>
+				<xs:documentation>Zda bylo provedeno toxikologické vyšetření.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="typ_umrti" type="xs:unsignedByte">
+			<xs:annotation>
+				<xs:documentation>Kód typu úmrtí dle číselníku <cl>TypUmrti</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="vp_mechanismus_umrti" type="dsComm:str100">
+			<xs:annotation>
+				<xs:documentation>Textový popis mechanismu úmrtí.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="vp_aktivita" type="xs:unsignedByte">
+			<xs:annotation>
+				<xs:documentation>Mechanismus úmrtí - kód aktivity dle číselníku <cl>
+					Ciselnik9Pro5MistoDg</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="vp_misto" type="xs:unsignedByte">
+			<xs:annotation>
+				<xs:documentation>Mechanismus úmrtí - kód místa dle číselníku <cl>MistoUdalosti</cl>
+					.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="vp_datum" type="xs:date">
+			<xs:annotation>
+				<xs:documentation>Datum události popsané v mechanismu úmrtí.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="vp_diagnoza" type="dsComm:str5">
+			<xs:annotation>
+				<xs:documentation>Kód mechanismu úmrtí dle číselníku <cl>MKN10_5</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="rozhodnuti_pitva_provedena" type="xs:boolean" use="required">
+			<xs:annotation>
+				<xs:documentation>Zda byla pitva provedena.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="rozhodnuti_pitva_text" type="dsComm:str100">
+			<xs:annotation>
+				<xs:documentation>Důvod neprovedení pitvy.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="seznam_testovanych_latekType">
+		<xs:sequence>
+			<xs:element name="skupina" type="nrpatv:nrpatvTestovanaSkupinaLatekType" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="seznam_vysetreniType">
+		<xs:sequence>
+			<xs:element name="vysetreni" type="nrpatv:nrpatvToxikologickeVysetreniType" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="seznam_zarizeniType">
+		<xs:sequence>
+			<xs:element name="zarizeni" type="nrpatv:nrpatvToxikologieZarizeniType"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="seznam_diagnozType">
+		<xs:sequence>
+			<xs:element name="diagnoza" type="nrpatv:nrpatvDiagnozaType" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nrpatvToxikologieZarizeniType">
+		<xs:sequence>
+			<xs:element name="lekari" type="nrpatv:lekariType">
+				<xs:annotation>
+					<xs:documentation>Seznam lékařů tohoto zařízení, kteří se na pitvě podíleli.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="zarizeni" type="dsComm:str11" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód zdravotnického zařízení dle číselníku <cl>ZdravotnickeZarizeni</cl>
+					.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="odd" type="dsComm:str2">
+			<xs:annotation>
+				<xs:documentation>Kód oddělení dle číselníku <cl>Oddeleni</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="nrpatvDiagnozaType">
+		<xs:attribute name="sekce" type="nrpatv:sekceType" use="required">
+			<xs:annotation>
+				<xs:documentation>Sekce této příčiny smrti.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="polozka" type="nrpatv:polozkaType" use="required">
+			<xs:annotation>
+				<xs:documentation>Položka této příčiny smrti.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="diagnoza" type="dsComm:str5" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód diagnózy dle číselníku <cl>MKN10_5</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="upresneni" type="nrpatv:str256">
+			<xs:annotation>
+				<xs:documentation>Upřesňovací text.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="nrpatvToxikologickeVysetreniType">
+		<xs:attribute name="material" type="dsComm:str5" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód materiálu dle číselníku <cl>ToxikologieMaterial</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="material_jiny" type="dsComm:str100">
+			<xs:annotation>
+				<xs:documentation>Popis jiného materiálu.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="latka" type="dsComm:str5" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód látky dle číselníku <cl>ToxikologieLatka</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="metoda" type="dsComm:str5" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód metody toxikologického vyšetření dle <cl>ToxikologieMetoda</cl>
+					.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="mnozstvi" type="nrpatv:number3.3">
+			<xs:annotation>
+				<xs:documentation>Množství nalezené látky. Jednotkou je jednotka přidělená zvolené
+					látce.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="vliv_na_umrti" type="dsComm:str1" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód vlivu látky na úmrtí dle číselníku <cl>
+					ToxikologieVlivLatkyNaUmrti</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="nrpatvTestovanaSkupinaLatekType">
+		<xs:attribute name="kod" type="dsComm:str5" use="required">
+			<xs:annotation>
+				<xs:documentation>Kód skupiny látek dle číselníku <cl>ToxikologieSkupinaLatky</cl>.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="lekariType">
+		<xs:sequence>
+			<xs:element name="lekar" type="nrpatv:pitvaToxikologieLekarType" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="pitvaToxikologieLekarType">
+		<xs:attribute name="icp" type="dsComm:str8" use="required">
+			<xs:annotation>
+				<xs:documentation>IČP lékaře.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="jmeno" type="dsComm:str30" use="required">
+			<xs:annotation>
+				<xs:documentation>Jméno lékaře.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="prijmeni" type="dsComm:str30" use="required">
+			<xs:annotation>
+				<xs:documentation>Příjmení lékaře.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation> *********************************************************** Definice
+			rozhraní registru NRPATV -- Konec
+			*********************************************************** </xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation> ************************************************************************
+			KORENOVY ELEMENT IDU (kompozice vyse definovanych komplexnich typu)
+			*********************************************************************** </xs:documentation>
+	</xs:annotation>
+	<xs:element name="idu">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nr">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nrpatv" type="nrpatv:nrpatvType" minOccurs="0"
+								maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

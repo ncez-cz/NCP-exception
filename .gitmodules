@@ -43,3 +43,6 @@
 [submodule "Dasta2FHIR/malac-hd"]
 	path = Dasta2FHIR/malac-hd
 	url = https://gitlab.com/cdehealth/malac-hd.git
+[submodule "ds4"]
+	path = ds4
+	url = https://github.com/eZprava/ds4.git
