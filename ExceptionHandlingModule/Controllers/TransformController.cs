@@ -1,9 +1,13 @@
 using javax.xml.transform.stream;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using net.liberty_development.SaxonHE12s9apiExtensions;
+using net.sf.saxon.om;
 using net.sf.saxon.s9api;
 using Provisio.Converters.ExceptionHandlingModule.Model;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
 
 namespace Provisio.Converters.ExceptionHandlingModule.Controllers
 {
@@ -19,6 +23,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         private readonly string? _fixDatetimeScript;
         private readonly ILogger<TransformController> _logger;
         private static Dictionary<string, Xslt30Transformer> _xsl = new Dictionary<string, Xslt30Transformer>();
+        private static Dictionary<string, List<string>> _commands = new Dictionary<string, List<string>>();
 
         public TransformController(IConfiguration configuration, ILogger<TransformController> logger)
         {
@@ -37,26 +42,38 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
 
             if (_xsl.Count() == 0)
             {
-                foreach (var item in _config.GetSection("transformation").GetChildren())
-                    if (item.Value != null && (item.Value.EndsWith(".xsl") || item.Value.EndsWith(".xslt")))
+                foreach (var item in _config.GetSection("transformation").GetChildren()) {
+
+                    var cmds = new List<string>();
+                    foreach (var s in item.GetChildren())
                     {
-                        if (!System.IO.File.Exists(item.Value))
+                        string command = s.Value;
+                        cmds.Add(command);
+
+
+                            if (command != null && (command.EndsWith(".xsl") || command.EndsWith(".xslt")))
                         {
-                            Console.WriteLine("template " + Directory.GetCurrentDirectory() + "/" + item.Value + " does not exists!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("compilation of " + item.Key + ": " + item.Value);
+                            if (!System.IO.File.Exists(command))
+                            {
+                                Console.WriteLine("template " + Directory.GetCurrentDirectory() + "/" + command + " does not exists!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("compilation of " + item.Key + ": " + command);
 
-                            var processor = new Processor(false);
+                                var processor = new Processor(false);
 
-                            var xsltCompiler = processor.newXsltCompiler();
+                                var xsltCompiler = processor.newXsltCompiler();
 
-                            var validator = xsltCompiler.compile(new java.io.File(item.Value)).load30();
+                                var validator = xsltCompiler.compile(new java.io.File(command)).load30();
 
-                            _xsl.Add(item.Key, validator);
+                                _xsl.Add(command, validator);
+                            }
                         }
                     }
+                    _commands.Add(item.Key, cmds);
+                }
+                    
             }
         }
 
@@ -90,84 +107,147 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         public ActionResult<string> Transform(string transformation = "cda_epsos_ps7_replace_unknown_codes_EU", [FromBody] ClinicalDocument clinicalDocument = null)
         {
 
-            var memoryStream = new MemoryStream();
+           // var memoryStream = new MemoryStream();
 
             var requestStream = clinicalDocument.GetStream();
-            requestStream.CopyTo(memoryStream);
-            Console.WriteLine("request size: " + memoryStream.Position);
-            memoryStream.Position = 0;
-            var inputStream = memoryStream;
+           // requestStream.CopyTo(memoryStream);
+           // Console.WriteLine("request size: " + memoryStream.Position);
+          //  memoryStream.Position = 0;
+            var stream = requestStream;
+
+            XdmNode? result = null;
 
             try
             {
-
-                if (transformation.StartsWith("dasta2fhir"))
+                if (transformation == null || !_commands.ContainsKey(transformation))
                 {
-                    //preprocessing
-
-
-                    using (Process addGuidsProcess = new Process())
+                    return NotFound("Volba transformace '" + transformation + "' není dostupná!");
+                }
+                foreach(string command in _commands[transformation])
+                {
+                    if (command != null && (command.EndsWith(".xsl") || command.EndsWith(".xslt")))
                     {
-                        //add guids for fhir resources
-                        addGuidsProcess.StartInfo.FileName = _scriptInterpreter;
 
-                        addGuidsProcess.StartInfo.Arguments = string.Format("{0}", _addGuidsScript);
-                        addGuidsProcess.StartInfo.UseShellExecute = false;
-                        addGuidsProcess.StartInfo.RedirectStandardInput = true;
-                        addGuidsProcess.StartInfo.RedirectStandardOutput = true;
-                        addGuidsProcess.Start();
-
-                        StreamWriter addGuidsInput = addGuidsProcess.StandardInput;
-
-                        inputStream.CopyTo(addGuidsInput.BaseStream);
-                        Console.WriteLine("addGuidsInput size: " + inputStream.Position);
-
-                        addGuidsInput.Close();
-
-                        StreamReader addGuidsOutput = addGuidsProcess.StandardOutput;
-
-                        var input2Stream = new MemoryStream();
-                        addGuidsOutput.BaseStream.CopyTo(input2Stream);
-                        Console.WriteLine("addGuidsOutput size: " + input2Stream.Position);
-                        input2Stream.Position = 0;
-
-                        using (Process fixDatetimesProcess = new Process())
+                        if (transformation == null || !_xsl.ContainsKey(command))
                         {
-                            //fix datetime formats
-                            fixDatetimesProcess.StartInfo.FileName = _scriptInterpreter;
+                            return NotFound("Xslt '" + command + "' není pøipraveno!");
+                        }
+                        Console.WriteLine("Xslt \"" + command + "\" ... ");
+                        var transformator = _xsl[command];
 
-                            fixDatetimesProcess.StartInfo.Arguments = string.Format("{0}", _fixDatetimeScript);
-                            fixDatetimesProcess.StartInfo.UseShellExecute = false;
-                            fixDatetimesProcess.StartInfo.RedirectStandardInput = true;
-                            fixDatetimesProcess.StartInfo.RedirectStandardOutput = true;
-                            fixDatetimesProcess.Start();
+                        var transformationResult = new XdmDestination();
 
-                            StreamWriter fixDatetimesInput = fixDatetimesProcess.StandardInput;
+                        transformator.transform(new StreamSource(new DotNetInputStream(stream)), transformationResult);
 
-                            input2Stream.CopyTo(fixDatetimesInput.BaseStream);
-                            Console.WriteLine("addGuidsInput size: " + input2Stream.Position);
+                        result = transformationResult.getXdmNode();
+                        string resultString = result.ToString();
+                        stream = new MemoryStream();
+                        byte[] resultBytes = Encoding.UTF8.GetBytes(resultString);
+                        stream.Write(resultBytes, 0, resultBytes.Length);
+                        stream.Close();
+                        
 
-                            fixDatetimesInput.Close();
+                    } else
+                    {
+                        using (Process process = new Process())
+                        {
+                            //add guids for fhir resources
+                            process.StartInfo.FileName = command.Split(' ')[0];
 
-                            StreamReader fixDatetimesOutput = fixDatetimesProcess.StandardOutput;
+                            process.StartInfo.Arguments = string.Format("{0}", command.Substring(command.IndexOf(' ')));
+                            process.StartInfo.UseShellExecute = false;
+                            process.StartInfo.RedirectStandardInput = true;
+                            process.StartInfo.RedirectStandardOutput = true;
+                            process.Start();
 
-                            inputStream = new MemoryStream();
+                            StreamWriter processInput = process.StandardInput;
+                            stream.CopyTo(processInput.BaseStream);
+                            Console.WriteLine("process \"" + command + "\" is running ... !"); // with input stream size: " + stream.Position);
+                            processInput.Close();
 
-                            fixDatetimesOutput.BaseStream.CopyTo(inputStream);
-                            Console.WriteLine("fixDatetimesOutput size: " + inputStream.Position);
-
-                            fixDatetimesProcess.WaitForExit();
-
-                            //Console.WriteLine("preprocessed size: " + inputStream.Position);
-
-                            inputStream.Position = 0;
+                            stream = process.StandardOutput.BaseStream;
+                            
+                            //process.WaitForExit();
 
                         }
-
-                        addGuidsProcess.WaitForExit();
-
                     }
+
                 }
+                if (result!=null) 
+                    return Ok(result);
+                else
+                {
+                    return Ok(stream);
+                }
+
+                /*
+                if (transformation.StartsWith("dasta2fhir"))
+                    {
+                        //preprocessing
+
+
+                        using (Process addGuidsProcess = new Process())
+                        {
+                            //add guids for fhir resources
+                            addGuidsProcess.StartInfo.FileName = _scriptInterpreter;
+
+                            addGuidsProcess.StartInfo.Arguments = string.Format("{0}", _addGuidsScript);
+                            addGuidsProcess.StartInfo.UseShellExecute = false;
+                            addGuidsProcess.StartInfo.RedirectStandardInput = true;
+                            addGuidsProcess.StartInfo.RedirectStandardOutput = true;
+                            addGuidsProcess.Start();
+
+                            StreamWriter addGuidsInput = addGuidsProcess.StandardInput;
+
+                            inputStream.CopyTo(addGuidsInput.BaseStream);
+                            Console.WriteLine("addGuidsInput size: " + inputStream.Position);
+
+                            addGuidsInput.Close();
+
+                            StreamReader addGuidsOutput = addGuidsProcess.StandardOutput;
+
+                            var input2Stream = new MemoryStream();
+                            addGuidsOutput.BaseStream.CopyTo(input2Stream);
+                            Console.WriteLine("addGuidsOutput size: " + input2Stream.Position);
+                            input2Stream.Position = 0;
+
+                            using (Process fixDatetimesProcess = new Process())
+                            {
+                                //fix datetime formats
+                                fixDatetimesProcess.StartInfo.FileName = _scriptInterpreter;
+
+                                fixDatetimesProcess.StartInfo.Arguments = string.Format("{0}", _fixDatetimeScript);
+                                fixDatetimesProcess.StartInfo.UseShellExecute = false;
+                                fixDatetimesProcess.StartInfo.RedirectStandardInput = true;
+                                fixDatetimesProcess.StartInfo.RedirectStandardOutput = true;
+                                fixDatetimesProcess.Start();
+
+                                StreamWriter fixDatetimesInput = fixDatetimesProcess.StandardInput;
+
+                                input2Stream.CopyTo(fixDatetimesInput.BaseStream);
+                                Console.WriteLine("addGuidsInput size: " + input2Stream.Position);
+
+                                fixDatetimesInput.Close();
+
+                                StreamReader fixDatetimesOutput = fixDatetimesProcess.StandardOutput;
+
+                                inputStream = new MemoryStream();
+
+                                fixDatetimesOutput.BaseStream.CopyTo(inputStream);
+                                Console.WriteLine("fixDatetimesOutput size: " + inputStream.Position);
+
+                                fixDatetimesProcess.WaitForExit();
+
+                                //Console.WriteLine("preprocessed size: " + inputStream.Position);
+
+                                inputStream.Position = 0;
+
+                            }
+
+                            addGuidsProcess.WaitForExit();
+
+                        }
+                    }
 
 
                 if (transformation == null || !_xsl.ContainsKey(transformation))
@@ -181,7 +261,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
                 transformator.transform(new StreamSource(new DotNetInputStream(inputStream)), transformationResult);
 
                 return Ok(transformationResult.getXdmNode());
-
+                */
             }
             catch (Exception ex)
             {
