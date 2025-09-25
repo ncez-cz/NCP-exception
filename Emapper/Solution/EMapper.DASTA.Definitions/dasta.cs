@@ -38,7 +38,23 @@ public partial class dasta {
     private bool potvrzeniFieldSpecified;
         
     private System.DateTime dat_vbField;
-        
+
+    private System.Xml.XmlElement[] anyField;
+
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAnyElementAttribute()]
+    public System.Xml.XmlElement[] Any
+    {
+        get
+        {
+            return this.anyField;
+        }
+        set
+        {
+            this.anyField = value;
+        }
+    }
+
     /// <remarks/>
     public zdroj_isType zdroj_is {
         get {
