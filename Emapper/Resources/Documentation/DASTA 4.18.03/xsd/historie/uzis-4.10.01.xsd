@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="_uzisver">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="_uzisverVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="ciszar">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="ciszarVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="czem">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="czemVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="dglpz">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="dglpzVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="dophosp">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="dophospVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="drg">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="drgVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="droper">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="droperVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="duprij">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="duprijVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="hoschy">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="hoschyVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="hosprv">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="hosprvVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="jednotka">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="jednotkaVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="kzam">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="kzamVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lpzchy">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="lpzchyVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="m5dg9">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="m5dg9VetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="mistouda">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="mistoudaVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="mkn10_5">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="mkn10_5VetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="nahrady">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="nahradyVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="nemnak">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="nemnakVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="obcan">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="obcanVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="obce">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="obceVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="oddel">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="oddelVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="podape">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="podapeVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="poopko">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="poopkoVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="pracov">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="pracovVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="prij">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="prijVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="reoper">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="reoperVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="rostav">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="rostavVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="typumrti">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="typumrtiVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="ukhosp">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="ukhospVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="umrtikde">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="umrtikdeVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="zdrpoj">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="zdrpojVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="zrodstav">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="zrodstavVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="zujlpz">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="zujlpzVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="zvzdel">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" type="zvzdelVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:attributeGroup name="DScisAttrGroup">
+	<xs:attribute name="dat_gen" type="datetype" use="required" />
+	<xs:attribute name="cas_gen" type="timetype" use="required" />
+	<xs:attribute name="ver_nclp" type="str8type" use="required" />
+	<xs:attribute name="ver_ds" type="str8type" use="required" />
+	<xs:attribute name="uzivatel" type="str50type" use="optional" />
+	<xs:attribute name="uzis_verze" type="str6type" use="required" />
+	<xs:attribute name="u_plati_od" type="datetype" use="required" />
+</xs:attributeGroup>
+
+<xs:complexType name="_uzisverVetaType">
+		<xs:attribute name="jm_prog" type="str8type" use="required" />
+		<xs:attribute name="lic_c" type="str10type" use="optional" />
+		<xs:attribute name="ver_prog" type="str8type" use="optional" />
+		<xs:attribute name="ver_nclp" type="str8type" use="required" />
+		<xs:attribute name="dat_gen" type="datetype" use="required" />
+		<xs:attribute name="cas_gen" type="timetype" use="required" />
+		<xs:attribute name="kod_ces" type="str6type" use="required" />
+		<xs:attribute name="xsd" type="str70type" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="ciszarVetaType">
+		<xs:attribute name="icopcz" type="str11type" use="required" />
+		<xs:attribute name="ico" type="str8type" use="optional" />
+		<xs:attribute name="pcz" type="str3type" use="optional" />
+		<xs:attribute name="krajn" type="str2type" use="optional" />
+		<xs:attribute name="okresn" type="str1type" use="optional" />
+		<xs:attribute name="drzar" type="str3type" use="optional" />
+		<xs:attribute name="rezort" type="str4type" use="optional" />
+		<xs:attribute name="zujedn" type="str6type" use="optional" />
+		<xs:attribute name="naz" type="str50type" use="optional" />
+		<xs:attribute name="zknaz" type="str30type" use="optional" />
+		<xs:attribute name="ulice" type="str40type" use="optional" />
+		<xs:attribute name="cisdom" type="str4type" use="optional" />
+		<xs:attribute name="cisori" type="str4type" use="optional" />
+		<xs:attribute name="psc" type="str5type" use="optional" />
+		<xs:attribute name="nazob" type="str40type" use="optional" />
+		<xs:attribute name="zriz" type="str1type" use="optional" />
+		<xs:attribute name="typorg" type="str2type" use="optional" />
+		<xs:attribute name="orp" type="str4type" use="optional" />
+		<xs:attribute name="pou" type="str1type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="czemVetaType">
+		<xs:attribute name="kod" type="str3type" use="required" />
+		<xs:attribute name="a2" type="str2type" use="optional" />
+		<xs:attribute name="a3" type="str3type" use="optional" />
+		<xs:attribute name="cnazevpl" type="str55type" use="optional" />
+		<xs:attribute name="cnazevzk" type="str45type" use="optional" />
+		<xs:attribute name="anazevpl" type="str56type" use="optional" />
+		<xs:attribute name="anazevzk" type="str45type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="dglpzVetaType">
+		<xs:attribute name="kod" type="str4type" use="required" />
+		<xs:attribute name="naz" type="str115type" use="optional" />
+		<xs:attribute name="znak" type="str1type" use="optional" />
+		<xs:attribute name="dgzakl" type="str4type" use="optional" />
+		<xs:attribute name="pohlav" type="str1type" use="optional" />
+		<xs:attribute name="vekod" type="str2type" use="optional" />
+		<xs:attribute name="vekdo" type="str2type" use="optional" />
+		<xs:attribute name="dusled_p" type="str1type" use="optional" />
+		<xs:attribute name="dusled_v" type="str1type" use="optional" />
+		<xs:attribute name="vyskyt" type="str1type" use="optional" />
+		<xs:attribute name="nejasna" type="str1type" use="optional" />
+		<xs:attribute name="skupla8" type="str1type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="dophospVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str60type" use="optional" />
+		<xs:attribute name="znaz" type="str22type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="drgVetaType">
+		<xs:attribute name="kod" type="str5type" use="required" />
+		<xs:attribute name="naz" type="str130type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="droperVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str11type" use="optional" />
+		<xs:attribute name="skupla1" type="str1type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="duprijVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str14type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="hoschyVetaType">
+		<xs:attribute name="kod" type="str3type" use="required" />
+		<xs:attribute name="naz" type="str254type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="hosprvVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str10type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="jednotkaVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str10type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="kzamVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str91type" use="optional" />
+		<xs:attribute name="znaz" type="str22type" use="optional" />
+		<xs:attribute name="skupla1" type="str1type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="lpzchyVetaType">
+		<xs:attribute name="kod" type="str3type" use="required" />
+		<xs:attribute name="naz" type="str250type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="m5dg9VetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str30type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="mistoudaVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str50type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="mkn10_5VetaType">
+		<xs:attribute name="kod" type="str5type" use="required" />
+		<xs:attribute name="m5dg" type="str1type" use="optional" />
+		<xs:attribute name="naz" type="str70type" use="optional" />
+		<xs:attribute name="znak" type="str1type" use="optional" />
+		<xs:attribute name="dgzakl" type="str4type" use="optional" />
+		<xs:attribute name="pumrti" type="str1type" use="optional" />
+		<xs:attribute name="pohlav" type="str1type" use="optional" />
+		<xs:attribute name="pohlav_t" type="str1type" use="optional" />
+		<xs:attribute name="vekod" type="str2type" use="optional" />
+		<xs:attribute name="vekdo" type="str2type" use="optional" />
+		<xs:attribute name="tdg" type="str3type" use="optional" />
+		<xs:attribute name="swho1" type="str3type" use="optional" />
+		<xs:attribute name="swho2" type="str2type" use="optional" />
+		<xs:attribute name="swho3" type="str5type" use="optional" />
+		<xs:attribute name="swho4" type="str2type" use="optional" />
+		<xs:attribute name="swho5" type="str3type" use="optional" />
+		<xs:attribute name="snzis" type="str2type" use="optional" />
+		<xs:attribute name="skupla1" type="str1type" use="optional" />
+		<xs:attribute name="skupla2" type="str1type" use="optional" />
+		<xs:attribute name="skupla3" type="str1type" use="optional" />
+		<xs:attribute name="skupla4" type="str1type" use="optional" />
+		<xs:attribute name="skupla5" type="str1type" use="optional" />
+		<xs:attribute name="skupla6" type="str1type" use="optional" />
+		<xs:attribute name="skupla7" type="str1type" use="optional" />
+		<xs:attribute name="skupla8" type="str1type" use="optional" />
+		<xs:attribute name="skupla9" type="str1type" use="optional" />
+		<xs:attribute name="prevod" type="str4type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="nahradyVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str30type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="nemnakVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str13type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="obcanVetaType">
+		<xs:attribute name="kod" type="str3type" use="required" />
+		<xs:attribute name="naz" type="str23type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="obceVetaType">
+		<xs:attribute name="cobuz" type="str7type" use="optional" />
+		<xs:attribute name="kodpr" type="str1type" use="optional" />
+		<xs:attribute name="kampr" type="str7type" use="optional" />
+		<xs:attribute name="kamzuj" type="str6type" use="optional" />
+		<xs:attribute name="kdypr" type="str6type" use="optional" />
+		<xs:attribute name="krajn" type="str2type" use="optional" />
+		<xs:attribute name="okresn" type="str1type" use="optional" />
+		<xs:attribute name="kraj" type="str2type" use="optional" />
+		<xs:attribute name="okres" type="str2type" use="optional" />
+		<xs:attribute name="zujedn" type="str6type" use="required" />
+		<xs:attribute name="psc" type="str5type" use="optional" />
+		<xs:attribute name="tuz" type="str5type" use="optional" />
+		<xs:attribute name="nazob" type="str40type" use="optional" />
+		<xs:attribute name="orp" type="str4type" use="optional" />
+		<xs:attribute name="pou" type="str1type" use="optional" />
+		<xs:attribute name="skupla1" type="str1type" use="optional" />
+		<xs:attribute name="skupla2" type="str1type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="oddelVetaType">
+		<xs:attribute name="kod" type="str2type" use="required" />
+		<xs:attribute name="zkratka" type="str4type" use="optional" />
+		<xs:attribute name="naz" type="str15type" use="optional" />
+		<xs:attribute name="celnaz" type="str35type" use="optional" />
+		<xs:attribute name="skupla1" type="str1type" use="optional" />
+		<xs:attribute name="skupla2" type="str1type" use="optional" />
+		<xs:attribute name="skupla3" type="str1type" use="optional" />
+		<xs:attribute name="skupla6" type="str1type" use="optional" />
+		<xs:attribute name="skupla7" type="str1type" use="optional" />
+		<xs:attribute name="skupla8" type="str4type" use="optional" />
+		<xs:attribute name="skupla9" type="str1type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="podapeVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str20type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="poopkoVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str23type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="pracovVetaType">
+		<xs:attribute name="kod" type="str2type" use="required" />
+		<xs:attribute name="naz" type="str15type" use="optional" />
+		<xs:attribute name="skupla1" type="str4type" use="optional" />
+		<xs:attribute name="skupla2" type="str1type" use="optional" />
+		<xs:attribute name="skupla3" type="str1type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="prijVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str10type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="reoperVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str55type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="rostavVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str15type" use="optional" />
+		<xs:attribute name="skupla1" type="str1type" use="optional" />
+		<xs:attribute name="skupla2" type="str1type" use="optional" />
+		<xs:attribute name="skupla3" type="str1type" use="optional" />
+		<xs:attribute name="skupla4" type="str1type" use="optional" />
+		<xs:attribute name="skupla5" type="str1type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="typumrtiVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str30type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="ukhospVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str35type" use="optional" />
+		<xs:attribute name="znaz" type="str24type" use="optional" />
+		<xs:attribute name="skupla1" type="str1type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="umrtikdeVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str55type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="zdrpojVetaType">
+		<xs:attribute name="kod" type="str3type" use="required" />
+		<xs:attribute name="ico" type="str8type" use="optional" />
+		<xs:attribute name="naz" type="str40type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="zrodstavVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str40type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="zujlpzVetaType">
+		<xs:attribute name="krajn" type="str2type" use="optional" />
+		<xs:attribute name="okresn" type="str1type" use="optional" />
+		<xs:attribute name="zujedn" type="str6type" use="required" />
+		<xs:attribute name="nazob" type="str25type" use="optional" />
+		<xs:attribute name="orp" type="str4type" use="optional" />
+		<xs:attribute name="pou" type="str1type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:complexType name="zvzdelVetaType">
+		<xs:attribute name="kod" type="str1type" use="required" />
+		<xs:attribute name="naz" type="str40type" use="optional" />
+		<xs:attribute name="plati_od" type="datetype" use="optional" />
+		<xs:attribute name="plati_do" type="datetype" use="optional" />
+</xs:complexType>
+
+<xs:simpleType name="datetype">
+	<xs:restriction base="xs:date">
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str1type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="1" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str2type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="2" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str3type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="3" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str4type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="4" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str5type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="5" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str6type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="6" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str7type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="7" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str8type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="8" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str10type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="10" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str11type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="11" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str13type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="13" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str14type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="14" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str15type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="15" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str20type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="20" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str22type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="22" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str23type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="23" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str24type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="24" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str25type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="25" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str30type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="30" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str35type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="35" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str40type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="40" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str45type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="45" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str50type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="50" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str55type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="55" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str56type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="56" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str60type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="60" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str70type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="70" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str91type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="91" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str115type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="115" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str130type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="130" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str240type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="240" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str250type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="250" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str254type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="254" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="timetype">
+	<xs:restriction base="xs:string">
+	<xs:pattern value="\d{2}:\d{2}"/>
+	</xs:restriction>
+</xs:simpleType>
+</xs:schema>

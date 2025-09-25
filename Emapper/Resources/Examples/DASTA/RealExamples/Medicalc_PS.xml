@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<ds:dasta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.17.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.08.04.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ido http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ido-4.02.14.xsd" id_soubor="MEDICALC_MEX_3.2.5.6_0000001200992" verze_ds="04.18.03" verze_nclp="04.01.08" bin_priloha="T" ur="R" typ_odesm="NN" ozn_soub="00992" dat_vb="2019-06-12T12:58:54" potvrzeni="N" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+  <ds:zdroj_is kod_firmy="MEDICALC" kod_prog="MEX" verze_prog="3.2.5.6" liccis_prog="CHRU" />
+  <ds:pm icz="99999999">
+    <ds:as typ="I" />
+  </ds:pm>
+  <ds:is icz="62001000">
+    <ds:as typ="I" />
+    <dsip:ip id_pac="9660060696" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+      <dsip:rodcis>9660060696</dsip:rodcis>
+      <dsip:jmeno>Transmise</dsip:jmeno>
+      <dsip:prijmeni>TESTOVACÍ</dsip:prijmeni>
+      <dsip:dat_dn format="D">1996-10-06</dsip:dat_dn>
+      <dsip:sex>F</dsip:sex>
+      <ds:a typ="1">
+        <ds:jmeno>Transmise TESTOVACÍ</ds:jmeno>
+        <ds:adr>Pernštýnské náměstí 51</ds:adr>
+        <ds:psc>53002</ds:psc>
+        <ds:mesto>Pardubice</ds:mesto>
+        <ds:as typ="T">
+          <ds:obsah>420777888999</ds:obsah>
+        </ds:as>
+      </ds:a>
+      <dsip:h hmotnost="56.000" vyska="169" dat_ab="2019-05-13T10:47:00" />
+      <dsip:pv_pac typ_pv="SM" />
+      <dsip:p ind_oprav_sd="N" dat_ab="2019-06-12T12:58:54">
+        <dsip:cispoj>9660060696</dsip:cispoj>
+        <dsip:kodpoj>999</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        <dsip:dat_od>1996-10-06</dsip:dat_od>
+        <dsip:dat_do>3000-01-01</dsip:dat_do>
+      </dsip:p>
+      <dsip:u>
+        <dsip:ua ind_oprav_sd="N" dat_ab="2019-06-12T12:58:54" typ="AN">
+          <dsip:u_al>TTC, senná rýma</dsip:u_al>
+          <dsip:autor>Správce Správce kis (medicalc)</dsip:autor>
+          <dsip:dat_du format="DT" typ="O">2019-05-13T10:47</dsip:dat_du>
+          <dsip:iid root="ZDRINFOPAC.284142" />
+        </dsip:ua>
+        <dsip:utm ind_oprav_sd="N">
+          <dsip:u_tm>ZYRTEC 10mg tbl flm 90, dle potřeby</dsip:u_tm>
+          <dsip:autor>Správce Správce kis (medicalc)</dsip:autor>
+        </dsip:utm>
+        <dsip:utm ind_oprav_sd="N">
+          <dsip:u_tm>IBUPROFEN AL 400 400mg tbl flm 30, 1 - 1 - 1</dsip:u_tm>
+          <dsip:autor>Správce Správce kis (medicalc)</dsip:autor>
+        </dsip:utm>
+        <dsip:uks ind_oprav_sd="N" dat_ab="2019-06-12T12:58:54">
+          <dsip:ks_rh>A-</dsip:ks_rh>
+          <dsip:ks_rh_text>A-</dsip:ks_rh_text>
+          <dsip:autor>Správce Správce kis (medicalc)</dsip:autor>
+          <dsip:dat_ak format="DTS">2019-05-13T10:47:09</dsip:dat_ak>
+          <dsip:iid root="ZDRINFOPAC.284142" />
+        </dsip:uks>
+      </dsip:u>
+      <dsip:dg dat_ab="2019-06-12T12:58:54">
+        <dsip:dgz typ_dg="T">
+          <dsip:diag mkn_verze="2014" poradi="1" nazev="Astma převážně alergické">J450</dsip:diag>
+          <dsip:dat_du typ="A">2019-05-13</dsip:dat_du>
+          <dsip:spec_dg>Astma převážně alergické</dsip:spec_dg>
+          <dsip:iid root="KLINDG.14193698" />
+        </dsip:dgz>
+      </dsip:dg>
+      <dsip:ku>
+        <dsip:ku_z typku="PATSUM.DAT" fazespec="ZF" idsub="SCSOFT__:-F:W:Fy1EafZLcWCanJPw__.1">
+          <dsip:dat_prov>2019-06-12T12:58:54</dsip:dat_prov>
+          <dsip:dat_vydani>2019-06-12T12:58:54</dsip:dat_vydani>
+          <dsip:p_pracoviste icz="62001000" icp="62001000" odb="000">
+            <dsip:nazev>NPK, a.s. Chrudimská nemocnice</dsip:nazev>
+            <ds:a typ="P">
+              <ds:jmeno>NPK, a.s. Chrudimská nemocnice</ds:jmeno>
+            </ds:a>
+          </dsip:p_pracoviste>
+          <dsip:zpo icz="62001000">
+            <dsip:nazev>NPK, a.s. Chrudimská nemocnice</dsip:nazev>
+            <dsip:prijmeni>Pracovník</dsip:prijmeni>
+            <ds:a_p typ="7">
+              <ds:jmeno>NPK, a.s. Chrudimská nemocnice</ds:jmeno>
+              <ds:adr>Václavská 570</ds:adr>
+              <ds:psc>53727</ds:psc>
+              <ds:mesto>Chrudim</ds:mesto>
+            </ds:a_p>
+          </dsip:zpo>
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacientský souhrn - TESTOVACÍ Transmise - 12.6.2019</dsip:ptext>
+          </dsip:text>
+          <dsip:ku_pac id_pac="9660060696">
+            <dsip:jmeno>Transmise</dsip:jmeno>
+            <dsip:prijmeni>TESTOVACÍ</dsip:prijmeni>
+            <dsip:dat_dn format="D">1996-10-06</dsip:dat_dn>
+            <dsip:sex>F</dsip:sex>
+            <ds:a typ="1">
+              <ds:jmeno>Transmise TESTOVACÍ</ds:jmeno>
+              <ds:adr>Pernštýnské náměstí 51</ds:adr>
+              <ds:psc>53002</ds:psc>
+              <ds:mesto>Pardubice</ds:mesto>
+              <ds:as typ="T">
+                <ds:obsah>420777888999</ds:obsah>
+              </ds:as>
+            </ds:a>
+          </dsip:ku_pac>
+          <dsip:ku_z_patsumdat>
+            <dsip:h hmotnost="56.000" vyska="169" dat_ab="2019-05-13T10:47:00" />
+            <dsip:u>
+              <dsip:ua ind_oprav_sd="N" dat_ab="2019-06-12T12:58:54" typ="AN">
+                <dsip:u_al>TTC, senná rýma</dsip:u_al>
+                <dsip:autor>Správce Správce kis (medicalc)</dsip:autor>
+                <dsip:dat_du format="DT" typ="O">2019-05-13T10:47</dsip:dat_du>
+                <dsip:iid root="ZDRINFOPAC.284142" />
+              </dsip:ua>
+              <dsip:utm ind_oprav_sd="N"> 
+                <dsip:u_tm>ZYRTEC 10mg tbl flm 90, dle potřeby</dsip:u_tm>
+                <dsip:autor>Správce Správce kis (medicalc)</dsip:autor>
+              </dsip:utm>
+              <dsip:utm ind_oprav_sd="N">
+                <dsip:u_tm>IBUPROFEN AL 400 400mg tbl flm 30, 1 - 1 - 1</dsip:u_tm>
+                <dsip:autor>Správce Správce kis (medicalc)</dsip:autor>
+              </dsip:utm>
+              <dsip:uks ind_oprav_sd="N" dat_ab="2019-06-12T12:58:54">
+                <dsip:ks_rh>A-</dsip:ks_rh>
+                <dsip:ks_rh_text>A-</dsip:ks_rh_text> 
+                <dsip:autor>Správce Správce kis (medicalc)</dsip:autor>
+                <dsip:dat_ak format="DTS">2019-05-13T10:47:09</dsip:dat_ak>
+                <dsip:iid root="ZDRINFOPAC.284142" />
+              </dsip:uks>
+            </dsip:u>
+            <dsip:an dat_ab="2019-06-12T12:58:54">
+              <dsip:text>
+                <dsip:ptext>
+                </dsip:ptext>
+              </dsip:text>
+            </dsip:an>
+            <dsip:dg dat_ab="2019-06-12T12:58:54">
+              <dsip:dgz typ_dg="T">
+                <dsip:diag mkn_verze="2014" poradi="1" nazev="Astma převážně alergické">J450</dsip:diag>
+                <dsip:dat_du typ="A">2019-05-13</dsip:dat_du>
+                <dsip:spec_dg>Astma převážně alergické</dsip:spec_dg>
+                <dsip:iid root="KLINDG.14193698" />
+              </dsip:dgz>
+            </dsip:dg>
+            <dsip:le typ="A">
+              <dsip:lez typ_med="P" ind_oprav_sd="N" nazev_lek="ZYRTEC 10mg tbl flm 90" kod_lek="0155686" cis_kod_lek="KLK"> 
+                <dsip:dat_od format="D">2019-06-12</dsip:dat_od>
+                <dsip:dat_do format="D">2020-06-11</dsip:dat_do>
+                <dsip:rozpis_v>dle potřeby</dsip:rozpis_v>
+                <dsip:autor>Správce Správce kis (medicalc)</dsip:autor>
+              </dsip:lez>
+              <dsip:lez typ_med="P" ind_oprav_sd="N" nazev_lek="IBUPROFEN AL 400 400mg tbl flm 30" kod_lek="0032018" cis_kod_lek="KLK">
+                <dsip:dat_od format="D">2019-06-12</dsip:dat_od>
+                <dsip:dat_do format="D">2019-09-10</dsip:dat_do>
+                <dsip:rozpis_v>1 - 1 - 1</dsip:rozpis_v>
+                <dsip:autor>Správce Správce kis (medicalc)</dsip:autor>
+              </dsip:lez>
+            </dsip:le>
+            <dsip:zdroj_sw kod_firmy="MEDICALC" kod_prog="MEX" verze_prog="3.2.5.6" liccis_prog="CHRU" />
+          </dsip:ku_z_patsumdat>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

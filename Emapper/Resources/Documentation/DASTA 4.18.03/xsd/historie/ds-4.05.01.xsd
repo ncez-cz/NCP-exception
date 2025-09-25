@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="_dsver">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="_dsverVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="druh_ku">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="druh_kuVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="duprp">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="duprpVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="ku_lokal">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="ku_lokalVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="ku_modal">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="ku_modalVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lgcesn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lgcesnVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lgkbn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lgkbnVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lkkolize">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lkkolizeVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lmhcn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lmhcnVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lmhpuvn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lmhpuvnVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lmidvan">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lmidvanVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lmipan">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lmipanVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lmphkn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lmphknVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lmszmmn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lmszmmnVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lockol">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lockolVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="locto">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="loctoVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lodo">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lodoVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lohpol">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lohpolVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lohpvl">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lohpvlVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="loppp">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lopppVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lotdv">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lotdvVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lotoz">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lotozVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lotplip">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lotplipVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lotplop">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lotplopVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lotzdcu">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lotzdcuVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="loup">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="loupVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lozdfvec">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lozdfvecVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lozdg">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lozdgVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lozdk">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lozdkVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lozdn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lozdnVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lozds">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lozdsVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lozdsec">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lozdsecVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lozdv">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lozdvVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lozdve">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lozdveVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lozrk">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lozrkVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lozts">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="loztsVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="luksab0">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="luksab0VetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lviosn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lviosnVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lvivfvn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lvivfvnVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lvphkn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lvphknVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lvsvn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lvsvnVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lvtsvn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lvtsvnVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lvtzdcun">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lvtzdcunVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lvuin">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lvuinVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lvuzn">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lvuznVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lvvisa">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lvvisaVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lvvist">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lvvistVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lzsoz">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lzsozVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lzszz">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lzszzVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lztozv">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lztozvVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lztzov">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lztzovVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="tab_kf">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="tab_kfVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="tab_ta">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="tab_taVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="tab_to">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="tab_toVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="typ_anam">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="typ_anamVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="typ_ku">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="typ_kuVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="v_ds">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="v_dsVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="v_nclp">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="v_nclpVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="v_nrc">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="v_nrcVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="v_nzis">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="v_nzisVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="zzspl">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="zzsplVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="zzstypl">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="zzstyplVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="zzstypp">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="zzstyppVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:attributeGroup name="DScisAttrGroup">
+	<xs:attribute name="dat_gen" type="datetype" use="required" />
+	<xs:attribute name="cas_gen" type="timetype" use="required" />
+	<xs:attribute name="ver_nclp" type="str8type" use="required" />
+	<xs:attribute name="ver_ds" type="str8type" use="required" />
+	<xs:attribute name="uzivatel" type="str50type" use="optional" />
+</xs:attributeGroup>
+
+<xs:complexType name="_dsverVetaType">
+	<xs:sequence>
+		<xs:attribute name="JM_PROG" type="str8type" use="required" />
+		<xs:attribute name="LIC_C" type="str10type" use="optional" />
+		<xs:attribute name="VER_PROG" type="str8type" use="optional" />
+		<xs:attribute name="VER_NCLP" type="str8type" use="required" />
+		<xs:attribute name="DAT_GEN" type="datetype" use="required" />
+		<xs:attribute name="CAS_GEN" type="timetype" use="required" />
+		<xs:attribute name="KOD_CES" type="str6type" use="required" />
+		<xs:attribute name="XSD" type="str70type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="druh_kuVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="duprpVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ku_lokalVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ku_modalVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lgcesnVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str3type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lgkbnVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lkkolizeVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str3type" use="required" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="N90" type="str90type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lmhcnVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lmhpuvnVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lmidvanVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lmipanVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lmphknVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lmszmmnVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lockolVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loctoVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str4type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="AKTUAL" type="int123type" use="required" />
+		<xs:attribute name="PLATI_OD" type="datetype" use="optional" />
+		<xs:attribute name="PLATI_DO" type="datetype" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lodoVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str2type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lohpolVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lohpvlVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lopppVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lotdvVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lotozVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lotplipVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lotplopVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lotzdcuVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loupVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lozdfvecVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lozdgVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lozdkVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lozdnVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lozdsVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lozdsecVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lozdvVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lozdveVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lozrkVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loztsVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="luksab0VetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lviosnVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lvivfvnVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lvphknVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lvsvnVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lvtsvnVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lvtzdcunVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lvuinVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lvuznVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lvvisaVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lvvistVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lzsozVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str2type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lzszzVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lztozvVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lztzovVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tab_kfVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tab_taVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tab_toVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str2type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="typ_anamVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="typ_kuVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str20type" use="required" />
+		<xs:attribute name="DRUH_KU" type="str8type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="POPIS" type="str254type" use="optional" />
+		<xs:attribute name="SB_KU_O" type="str20type" use="optional" />
+		<xs:attribute name="SB_KU_Z" type="str20type" use="optional" />
+		<xs:attribute name="KU_O" type="str1-1type" use="optional" />
+		<xs:attribute name="KU_Z" type="str1-1type" use="optional" />
+		<xs:attribute name="IDKU" type="str1-1type" use="optional" />
+		<xs:attribute name="IDSUB" type="str1-1type" use="optional" />
+		<xs:attribute name="PLATI_OD" type="datetype" use="optional" />
+		<xs:attribute name="PLATI_DO" type="datetype" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="v_dsVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+		<xs:attribute name="PLATI_OD" type="datetype" use="optional" />
+		<xs:attribute name="PLATI_DO" type="datetype" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="v_nclpVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="ROZSAH_KL" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+		<xs:attribute name="PLATI_OD" type="datetype" use="optional" />
+		<xs:attribute name="PLATI_DO" type="datetype" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="v_nrcVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+		<xs:attribute name="PLATI_OD" type="datetype" use="optional" />
+		<xs:attribute name="PLATI_DO" type="datetype" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="v_nzisVetaType">
+	<xs:sequence>
+		<xs:attribute name="KOD" type="str6type" use="required" />
+		<xs:attribute name="NAZ" type="str30type" use="optional" />
+		<xs:attribute name="PLATI_OD" type="datetype" use="optional" />
+		<xs:attribute name="PLATI_DO" type="datetype" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="zzsplVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLICTYPP" type="str8type" use="required" />
+		<xs:attribute name="KLICTYPL" type="str8type" use="required" />
+		<xs:attribute name="VHODNOST" type="str1type" use="required" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="zzstyplVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N88" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="zzstyppVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="datetype">
+	<xs:restriction base="xs:date">
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str1type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="1" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str2type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="2" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str3type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="3" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str4type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="4" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str6type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="6" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str8type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="8" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str10type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="10" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str20type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="20" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str30type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="30" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str32type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="32" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str50type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="50" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str55type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="55" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str70type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="70" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str90type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="90" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str240type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="240" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str254type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="254" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str1-1type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="1" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="int123type">
+	<xs:restriction base="xs:positiveInteger">
+		<xs:minInclusive value="1" />
+		<xs:maxInclusive value="3" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="timetype">
+	<xs:restriction base="xs:time">
+	</xs:restriction>
+</xs:simpleType>
+</xs:schema>

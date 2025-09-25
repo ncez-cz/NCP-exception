@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestingZone", "TestingZone", "{FA6EDC8E-6E55-4D3A-8A5E-EB99166AB553}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMapper.TestingDastaParsing", "EMapper.TestingDastaParsing\EMapper.TestingDastaParsing.csproj", "{FFE124AF-1418-4D2B-9DC3-1AC9A4EC70D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMapper.HL7.Definitions", "EMapper.HL7.Definitions\EMapper.HL7.Definitions.csproj", "{92849D28-475F-4ED4-B027-78A8322674A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMapper.Convertor.Service.Core", "EMapper.Convertor.Service.Core\EMapper.Convertor.Service.Core.csproj", "{93C4EE0F-D827-45AD-9FE3-52CD141CDF0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMapper.Testing.HL7.Console", "EMapper.Testing.HL7.Console\EMapper.Testing.HL7.Console.csproj", "{8DE7D743-C28C-4F82-8328-D3A62172E33A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMapper.Convertor.DastaHL7", "EMapper.Convertor.DastaHL7\EMapper.Convertor.DastaHL7.csproj", "{57E0F365-C3E7-4F4B-AE5F-CECD79BF1109}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{D066F3B3-CB14-43CB-ADD8-92F9AE0AADEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMapper.HL7.Epsos.Definitions", "EMapper.HL7.Epsos.Definitions\EMapper.HL7.Epsos.Definitions.csproj", "{904593E0-B316-4F41-B309-689746015845}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMapper.Convertor.Service", "EMapper.Convertor.Service\EMapper.Convertor.Service.csproj", "{6A828FB9-E59C-411B-B5C1-BC2C728B9CB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMapper.HL7.Pharm.Definitions", "EMapper.HL7.Pharm.Definitions\EMapper.HL7.Pharm.Definitions.csproj", "{D74C1655-FB6F-4172-84C9-3914594CECDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMapper.DASTA.Definitions", "EMapper.DASTA.Definitions\EMapper.DASTA.Definitions.csproj", "{B0D7CC6A-34ED-4E64-8A01-A10B1C278058}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFE124AF-1418-4D2B-9DC3-1AC9A4EC70D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE124AF-1418-4D2B-9DC3-1AC9A4EC70D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE124AF-1418-4D2B-9DC3-1AC9A4EC70D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE124AF-1418-4D2B-9DC3-1AC9A4EC70D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92849D28-475F-4ED4-B027-78A8322674A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92849D28-475F-4ED4-B027-78A8322674A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92849D28-475F-4ED4-B027-78A8322674A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92849D28-475F-4ED4-B027-78A8322674A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93C4EE0F-D827-45AD-9FE3-52CD141CDF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C4EE0F-D827-45AD-9FE3-52CD141CDF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C4EE0F-D827-45AD-9FE3-52CD141CDF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C4EE0F-D827-45AD-9FE3-52CD141CDF0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE7D743-C28C-4F82-8328-D3A62172E33A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE7D743-C28C-4F82-8328-D3A62172E33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE7D743-C28C-4F82-8328-D3A62172E33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE7D743-C28C-4F82-8328-D3A62172E33A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E0F365-C3E7-4F4B-AE5F-CECD79BF1109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E0F365-C3E7-4F4B-AE5F-CECD79BF1109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E0F365-C3E7-4F4B-AE5F-CECD79BF1109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E0F365-C3E7-4F4B-AE5F-CECD79BF1109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{904593E0-B316-4F41-B309-689746015845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{904593E0-B316-4F41-B309-689746015845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{904593E0-B316-4F41-B309-689746015845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{904593E0-B316-4F41-B309-689746015845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A828FB9-E59C-411B-B5C1-BC2C728B9CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A828FB9-E59C-411B-B5C1-BC2C728B9CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A828FB9-E59C-411B-B5C1-BC2C728B9CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A828FB9-E59C-411B-B5C1-BC2C728B9CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D74C1655-FB6F-4172-84C9-3914594CECDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D74C1655-FB6F-4172-84C9-3914594CECDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D74C1655-FB6F-4172-84C9-3914594CECDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D74C1655-FB6F-4172-84C9-3914594CECDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D7CC6A-34ED-4E64-8A01-A10B1C278058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D7CC6A-34ED-4E64-8A01-A10B1C278058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D7CC6A-34ED-4E64-8A01-A10B1C278058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D7CC6A-34ED-4E64-8A01-A10B1C278058}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FFE124AF-1418-4D2B-9DC3-1AC9A4EC70D1} = {FA6EDC8E-6E55-4D3A-8A5E-EB99166AB553}
+		{8DE7D743-C28C-4F82-8328-D3A62172E33A} = {FA6EDC8E-6E55-4D3A-8A5E-EB99166AB553}
+		{6A828FB9-E59C-411B-B5C1-BC2C728B9CB8} = {D066F3B3-CB14-43CB-ADD8-92F9AE0AADEA}
+		{93C4EE0F-D827-45AD-9FE3-52CD141CDF0C} = {D066F3B3-CB14-43CB-ADD8-92F9AE0AADEA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB5D2058-17EB-41C6-AAAA-B1CDFF47608B}
+	EndGlobalSection
+EndGlobal

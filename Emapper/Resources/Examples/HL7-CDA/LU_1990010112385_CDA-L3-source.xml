@@ -1,0 +1,1274 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3"
+    xmlns:voc="urn:hl7-org:v3/voc" classCode="DOCCLIN" moodCode="EVN">
+    <realmCode code="LU"/>
+    <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+    <templateId root="1.3.182.11.9"/>
+    <templateId root="1.3.182.11.10"/>
+    <templateId root="2.16.840.1.113883.10.20.30"/>
+    <id root="1.3.182.3.1.1.10000000.6.3.1.1.123456789"/>
+    <code code="60591-5" codeSystem="2.16.840.1.113883.6.1"/>
+    <title>Résumé patient</title>
+    <effectiveTime value="20170717143404+0200"/>
+    <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"
+        codeSystemName="HL7:Confidentiality" displayName="Normal"/>
+    <languageCode code="fr-LU"/>
+    <setId extension="123456789" root="1.3.182.3.1.1.10000000.6.3.1.1"/>
+    <versionNumber value="1"/>
+    <recordTarget>
+        <patientRole>
+            <id extension="12345" root="1.3.182.3.1.1.10000000.2"/>
+            <id extension="1990010112385" root="1.3.182.4.4"/>
+            <id extension="8729593390" root="1.3.182.2.4.2"/>
+            <addr use="H">
+                <streetAddressLine>125 route d'Esch</streetAddressLine>
+                <postalCode>1471</postalCode>
+                <city>Luxembourg</city>
+                <country>LUX</country>
+            </addr>
+            <patient>
+                <name>
+                    <family qualifier="BR">Peters</family>
+                    <given qualifier="BR">Natasha-Caroline</given>
+                </name>
+                <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1"
+                    codeSystemName="HL7:AdministrativeGender" displayName="Féminin"/>
+                <birthTime value="19900101"/>
+            </patient>
+        </patientRole>
+    </recordTarget>
+
+    <author>
+        <time value="20170717143404+0200"/>
+        <assignedAuthor>
+            <id extension="2999999999" root="1.3.182.4.1"/>
+            <assignedPerson>
+                <name>
+                    <family>Doctor</family>
+                    <given>Bob</given>
+                </name>
+            </assignedPerson>
+        </assignedAuthor>
+    </author>
+
+
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <id nullFlavor="NI"/>
+                <name>Cabinet médical</name>
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+
+    <legalAuthenticator>
+        <time value="20170717143404+0200"/>
+        <signatureCode code="S"/>
+        <assignedEntity>
+            <id extension="99999999" root="1.3.182.4.1"/>
+            <assignedPerson>
+                <name>
+                    <family qualifier="BR">Doctor</family>
+                    <given qualifier="BR">Bob</given>
+                </name>
+            </assignedPerson>
+        </assignedEntity>
+    </legalAuthenticator>
+
+    <component>
+        <structuredBody>
+            <!-- Medication Summary -->
+            <component>
+                <section>
+                    <templateId root="1.3.182.11.10.2.7"/>
+                    <code code="10160-0" codeSystem="2.16.840.1.113883.6.1"/>
+                    <title>Medication Summary</title>
+                    <text>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Prise début présumée</th>
+                                    <th>N° du problème actif associé</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ID="medicationSummary1">
+                                    <td ID="medicationSummary1-desc">Euthyrox 100 ug</td>
+                                    <td>06/10/1997</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr ID="medicationSummary2">
+                                    <td ID="medicationSummary2-desc">Tazko 5/5</td>
+                                    <td>06/05/2017</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr ID="medicationSummary3">
+                                    <td ID="medicationSummary3-desc">Tresiba 100</td>
+                                    <td>30/04/2012</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr ID="medicationSummary4">
+                                    <td ID="medicationSummary4-desc">Augmentin 500mg</td>
+                                    <td>07/05/2017</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr ID="medicationSummary5">
+                                    <td ID="medicationSummary5-desc">Combivent</td>
+                                    <td>02/01/2015</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <!-- First medication -->
+                    <entry>
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="1.3.182.11.10.3.12"/>
+                            <id root="d5b30608-80e6-4db9-aabf-d13c614e877b"/>
+                            <text>
+                                <reference value="#medicationSummary1"></reference>
+                            </text>
+                            <statusCode code="active"/>
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="19971006"/>
+                                <high nullFlavor="UNK"/>
+                            </effectiveTime>
+                            <consumable>
+                                <manufacturedProduct>
+                                    <manufacturedMaterial>
+                                        <code code="1996073711" codeSystem="1.3.182.4.13">
+                                            <originalText>
+                                                <reference value="#medicationSummary1-desc"/>
+                                            </originalText>
+                                        </code>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <reference typeCode="REFR">
+                                <externalObservation>
+                                    <id root="c661b0ba-f0f6-412b-836b-3b97309c2251"/>
+                                </externalObservation>
+                            </reference>
+                        </substanceAdministration>
+                    </entry>
+                    <!-- Second medication -->
+                    <entry>
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="1.3.182.11.10.3.12"/>
+                            <id root="b107b7e3-fe08-4d50-a92d-4318edca2ab7"/>
+                            <text>
+                                <reference value="#medicationSummary2"></reference>
+                            </text>
+                            <statusCode code="active"/>
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20170506"/>
+                                <high nullFlavor="UNK"/>
+                            </effectiveTime>
+                            <consumable>
+                                <manufacturedProduct>
+                                    <manufacturedMaterial>
+                                        <code code="2008039279" codeSystem="1.3.182.4.13">
+                                            <originalText>
+                                                <reference value="#medicationSummary2-desc"/>
+                                            </originalText>
+                                        </code>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <reference typeCode="REFR">
+                                <externalObservation>
+                                    <id root="dd7c3ee1-f734-4990-9c3a-234585873d63"/>
+                                </externalObservation>
+                            </reference>
+                        </substanceAdministration>
+                    </entry>
+                    <!-- Third medication -->
+                    <entry>
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="1.3.182.11.10.3.12"/>
+                            <id root="d4b1e341-a309-4347-8bdf-ad4cc985280c"/>
+                            <text>
+                                <reference value="#medicationSummary3"></reference>
+                            </text>
+                            <statusCode code="active"/>
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20120430"/>
+                                <high nullFlavor="UNK"/>
+                            </effectiveTime>
+                            <consumable>
+                                <manufacturedProduct>
+                                    <manufacturedMaterial>
+                                        <code code="1235" codeSystem="1.3.182.4.13">
+                                            <originalText>
+                                                <reference value="#medicationSummary3-desc"/>
+                                            </originalText>
+                                        </code>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <reference typeCode="REFR">
+                                <externalObservation>
+                                    <id root="b3755d8b-1995-43d6-a344-a129a0679c7f"/>
+                                </externalObservation>
+                            </reference>
+                        </substanceAdministration>
+                    </entry>
+                    <!-- Forth medication -->
+                    <entry>
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="1.3.182.11.10.3.12"/>
+                            <id root="afa0b115-aa8c-48e8-b6fe-a3fa8be294ff"/>
+                            <text>
+                                <reference value="#medicationSummary4"></reference>
+                            </text>
+                            <statusCode code="active"/>
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20170507"/>
+                                <high nullFlavor="UNK"/>
+                            </effectiveTime>
+                            <consumable>
+                                <manufacturedProduct>
+                                    <manufacturedMaterial>
+                                        <code code="2001096526" codeSystem="1.3.182.4.13">
+                                            <originalText>
+                                                <reference value="#medicationSummary4-desc"/>
+                                            </originalText>
+                                        </code>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <reference typeCode="REFR">
+                                <externalObservation>
+                                    <id root="08a86816-2d40-4e15-99a3-b65bf7844d1f"/>
+                                </externalObservation>
+                            </reference>
+                        </substanceAdministration>
+                    </entry>
+                    <!-- Fifth medication -->
+                    <entry>
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                            <templateId root="1.3.182.11.10.3.12"/>
+                            <id root="ae72755e-f67e-4fba-897b-4e9de2cd9267"/>
+                            <text>
+                                <reference value="#medicationSummary5"></reference>
+                            </text>
+                            <statusCode code="active"/>
+                            <effectiveTime xsi:type="IVL_TS">
+                                <low value="20150102"/>
+                                <high nullFlavor="UNK"/>
+                            </effectiveTime>
+                            <consumable>
+                                <manufacturedProduct>
+                                    <manufacturedMaterial>
+                                        <code code="2001097766" codeSystem="1.3.182.4.13">
+                                            <originalText>
+                                                <reference value="#medicationSummary5-desc"/>
+                                            </originalText>
+                                        </code>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <reference typeCode="REFR">
+                                <externalObservation>
+                                    <id root="efcf3f78-8d2d-4760-81c3-cdf99c50f181"/>
+                                </externalObservation>
+                            </reference>
+                        </substanceAdministration>
+                    </entry>
+                </section>
+            </component>
+            <!-- Allergies and Other Adverse Reactions -->
+            <component>
+                <section>
+                    <templateId root="1.3.182.11.10.2.2"/>
+                    <code code="48765-2" codeSystem="2.16.840.1.113883.6.1"/>
+                    <title>Allergies and Other Adverse Reactions</title>
+                    <text>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Agent</th>
+                                    <th>Symptôme</th>
+                                    <th>Gravité</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ID="allergy1">
+                                    <td ID="allergy1-type">Substance</td>
+                                    <td ID="allergy1-participant">Latex</td>
+                                    <td ID="allergy1-manif">Urticaire</td>
+                                    <td ID="allergy1-sev">Léger à modéré</td>
+                                </tr>
+                                <tr ID="allergy2">
+                                    <td ID="allergy2-type">Alimentaire</td>
+                                    <td ID="allergy2-participant">Kiwi</td>
+                                    <td ID="allergy2-manif">Eczéma</td>
+                                    <td ID="allergy2-sev">Léger à modéré</td>
+                                </tr>
+                                <tr ID="allergy3">
+                                    <td ID="allergy3-type">Intolérance alimentaire</td>
+                                    <td ID="allergy3-participant">Lactose</td>
+                                    <td ID="allergy3-manif">Diarrhée</td>
+                                    <td ID="allergy3-sev">Léger</td>
+                                </tr>
+                                <tr ID="allergy4">
+                                    <td ID="allergy4-type">Médicamenteux</td>
+                                    <td ID="allergy4-participant">AAS</td>
+                                    <td ID="allergy4-manif">Asthme</td>
+                                    <td ID="allergy4-sev">Moyen/Sévère</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <!-- First and only concern -->
+                    <entry>
+                        <act classCode="ACT" moodCode="EVN">
+                            <templateId root="1.3.182.11.10.3.5"/>
+                            <code nullFlavor="NA"/>
+                            <statusCode code="active"/>
+                            <!-- First allergy -->
+                            <entryRelationship typeCode="SUBJ" inversionInd="false">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.4"/>
+                                    <code code="419199007" codeSystem="2.16.840.1.113883.6.96" displayName="Allergie à une substance">
+                                        <originalText>
+                                            <reference value="#allergy1-type"/>
+                                        </originalText>
+                                    </code>
+                                    <text>
+                                        <reference value="#allergy1-manif"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <value xsi:type="CD" nullFlavor="UNK">
+                                    <originalText>
+                                        <reference value="#allergy1"/>
+                                    </originalText>
+                                    </value>
+                                    <participant typeCode="CSM">
+                                        <participantRole classCode="MANU">
+                                            <playingEntity classCode="MMAT">
+                                                <code code="111088007" displayName="Latex" codeSystem="2.16.840.1.113883.6.96">
+                                                    <originalText>
+                                                        <reference value="#allergy1-participant"/>
+                                                    </originalText>
+                                                </code>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                    <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="1.3.182.11.10.3.2"/>
+                                            <id root="615e8c6c-cc4b-4c06-9423-b75ee7d4efdc"/>
+                                            <code nullFlavor="UNK"/>
+                                            <text>
+                                                <reference value="#allergy1-manif"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                            <value xsi:type="CD" code="126485001" codeSystem="2.16.840.1.113883.6.96" displayName="Urticaire">
+                                                <originalText>
+                                                    <reference value="#allergy1-manif"/>
+                                                </originalText>
+                                            </value>
+                                        </observation>
+                                    </entryRelationship>
+                                    <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="1.3.182.11.10.3.6"/>
+                                            <code code="SEV" codeSystem="2.16.840.1.113883.5.4"/>
+                                            <text>
+                                                <reference value="#allergy1-sev"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                            <value xsi:type="CD" code="371923003" codeSystem="2.16.840.1.113883.6.96" displayName="Léger à modéré">
+                                                <originalText>
+                                                    <reference value="#allergy1-sev"/>
+                                                </originalText>
+                                            </value>
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                            <!-- Second allergy -->
+                            <entryRelationship typeCode="SUBJ" inversionInd="false">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.4"/>
+                                    <code code="414285001" codeSystem="2.16.840.1.113883.6.96" displayName="Hypersensibilité alimentaire">
+                                        <originalText>
+                                            <reference value="#allergy2-type"/>
+                                        </originalText>
+                                    </code>
+                                    <text>
+                                        <reference value="#allergy2-manif"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <value xsi:type="CD" nullFlavor="UNK">
+                                        <originalText>
+                                            <reference value="#allergy2"/>
+                                        </originalText>
+                                    </value>
+                                    <participant typeCode="CSM">
+                                        <participantRole classCode="MANU">
+                                            <playingEntity classCode="MMAT">
+                                                <code code="260176001" displayName="Kiwi" codeSystem="2.16.840.1.113883.6.96">
+                                                    <originalText>
+                                                        <reference value="#allergy2-participant"/>
+                                                    </originalText>
+                                                </code>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                    <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="1.3.182.11.10.3.2"/>
+                                            <id root="fd94872a-6908-4439-952d-3b035a51f7da"/>
+                                            <code nullFlavor="UNK"/>
+                                            <text>
+                                                <reference value="#allergy2-manif"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                            <value xsi:type="CD" code="43116000" codeSystem="2.16.840.1.113883.6.96" displayName="Eczéma">
+                                                <originalText>
+                                                    <reference value="#allergy2-manif"/>
+                                                </originalText>
+                                            </value>
+                                        </observation>
+                                    </entryRelationship>
+                                    <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="1.3.182.11.10.3.6"/>
+                                            <code code="SEV" codeSystem="2.16.840.1.113883.5.4"/>
+                                            <text>
+                                                <reference value="#allergy2-sev"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                            <value xsi:type="CD" code="371923003" codeSystem="2.16.840.1.113883.6.96" displayName="Léger à modéré">
+                                                <originalText>
+                                                    <reference value="#allergy2-sev"/>
+                                                </originalText>
+                                            </value>
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                            <!-- Third allergy -->
+                            <entryRelationship typeCode="SUBJ" inversionInd="false">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.4"/>
+                                    <code code="235719002" codeSystem="2.16.840.1.113883.6.96" displayName="Intolérance alimentaire">
+                                        <originalText>
+                                            <reference value="#allergy3-type"/>
+                                        </originalText>
+                                    </code>
+                                    <text>
+                                        <reference value="#allergy3-manif"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <value xsi:type="CD" nullFlavor="UNK">
+                                        <originalText>
+                                            <reference value="#allergy3"/>
+                                        </originalText>
+                                    </value>
+                                    <participant typeCode="CSM">
+                                        <participantRole classCode="MANU">
+                                            <playingEntity classCode="MMAT">
+                                                <code code="47703008" displayName="Lactose" codeSystem="2.16.840.1.113883.6.96">
+                                                    <originalText>
+                                                        <reference value="#allergy3-participant"/>
+                                                    </originalText>
+                                                </code>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                    <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="1.3.182.11.10.3.2"/>
+                                            <id root="c047bdbb-28e0-4a17-aa06-7229db6df63b"/>
+                                            <code nullFlavor="UNK"/>
+                                            <text>
+                                                <reference value="#allergy3-manif"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                            <value xsi:type="CD" code="62315008" codeSystem="2.16.840.1.113883.6.96" displayName="Diarrhée">
+                                                <originalText>
+                                                    <reference value="#allergy3-manif"/>
+                                                </originalText>
+                                            </value>
+                                        </observation>
+                                    </entryRelationship>
+                                    <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="1.3.182.11.10.3.6"/>
+                                            <code code="SEV" codeSystem="2.16.840.1.113883.5.4"/>
+                                            <text>
+                                                <reference value="#allergy3-sev"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                            <value xsi:type="CD" code="255604002" codeSystem="2.16.840.1.113883.6.96" displayName="Léger">
+                                                <originalText>
+                                                    <reference value="#allergy3-sev"/>
+                                                </originalText>
+                                            </value>
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                            <!-- Forth allergy -->
+                            <entryRelationship typeCode="SUBJ" inversionInd="false">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.4"/>
+                                    <code code="416098002" codeSystem="2.16.840.1.113883.6.96" displayName="Hypersensibilité médicamenteuse">
+                                        <originalText>
+                                            <reference value="#allergy4-type"/>
+                                        </originalText>
+                                    </code>
+                                    <text>
+                                        <reference value="#allergy4-manif"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <value xsi:type="CD" nullFlavor="UNK">
+                                        <originalText>
+                                            <reference value="#allergy4"/>
+                                        </originalText>
+                                    </value>
+                                    <participant typeCode="CSM">
+                                        <participantRole classCode="MANU">
+                                            <playingEntity classCode="MMAT">
+                                                <code code="A01AD05" displayName="ACIDE ACETYLSALICYLIQUE" codeSystem="2.16.840.1.113883.6.73">
+                                                    <originalText>
+                                                        <reference value="#allergy4-participant"/>
+                                                    </originalText>
+                                                </code>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                    <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="1.3.182.11.10.3.2"/>
+                                            <id root="848aacee-92d2-4267-b9b4-094129e99358"/>
+                                            <code nullFlavor="UNK"/>
+                                            <text>
+                                                <reference value="#allergy4-manif"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                            <value xsi:type="CD" code="195967001" codeSystem="2.16.840.1.113883.6.96" displayName="Asthme">
+                                                <originalText>
+                                                    <reference value="#allergy4-manif"/>
+                                                </originalText>
+                                            </value>
+                                        </observation>
+                                    </entryRelationship>
+                                    <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="1.3.182.11.10.3.6"/>
+                                            <code code="SEV" codeSystem="2.16.840.1.113883.5.4"/>
+                                            <text>
+                                                <reference value="#allergy4-sev"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                            <value xsi:type="CD" code="371924009" codeSystem="2.16.840.1.113883.6.96" displayName="Modéré à sévère">
+                                                <originalText>
+                                                    <reference value="#allergy4-sev"/>
+                                                </originalText>
+                                            </value>
+                                        </observation>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                </section>
+            </component>
+            <!-- Immunizations -->
+            <component>
+                <section>
+                    <templateId root="1.3.182.11.10.2.1"/>
+                    <code code="11369-6" codeSystem="2.16.840.1.113883.6.1"/>
+                    <title>Immunizations</title>
+                    <text>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Vaccination</th>
+                                    <th>Etat</th>
+                                    <th>Prochain rappel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ID="vacc1">
+                                    <td ID="vacc1-vacc">Hépatite B</td>
+                                    <td ID="vacc1-etat">A jour</td>
+                                    <td ID="vacc1-rappel">Juin 2021</td>
+                                </tr>
+                                <tr ID="vacc2">
+                                    <td ID="vacc2-vacc">d T aP IPV</td>
+                                    <td ID="vacc2-etat">A jour</td>
+                                    <td ID="vacc2-rappel">Juin 2021</td>
+                                </tr>
+                                <tr ID="vacc3">
+                                    <td ID="vacc3-vacc">Hib</td>
+                                    <td ID="vacc3-etat">A jour</td>
+                                    <td ID="vacc3-rappel">Juin 2021</td>
+                                </tr>
+                                <tr ID="vacc4">
+                                    <td ID="vacc4-vacc">HPV</td>
+                                    <td ID="vacc4-etat">A jour</td>
+                                    <td ID="vacc4-rappel">Juin 2021</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <!-- First immunization -->
+                    <entry>
+                        <substanceAdministration moodCode="EVN" classCode="SBADM" negationInd="false">
+                            <templateId root="1.3.182.11.10.3.1"/>
+                            <id root="50a95a16-493d-4975-b7d9-7e12ccebcb23"/>
+                            <code code="IMMUNIZ" codeSystem="1.3.5.1.4.1.19376.1.5.3.2"/>
+                            <text>
+                                <reference value="#vacc1"/>
+                            </text>
+                            <statusCode code="completed"/>
+                            <consumable typeCode="CSM">
+                                <manufacturedProduct classCode="MANU">
+                                    <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                                        <code code="34689006" codeSystem="2.16.840.1.113883.6.96" displayName="Vaccin contre le virus de l'hépatite B">
+                                            <originalText>
+                                                <reference value="#vacc1-vacc"/>
+                                            </originalText>
+                                        </code>
+                                        <name nullFlavor="UNK"/>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="REFR">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.3"/>
+                                    <code code="48767-8" codeSystem="2.16.840.1.113883.6.1"/>
+                                    <text>
+                                        <reference value="#vacc1-rappel"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                </act>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <!-- Second immunization -->
+                    <entry>
+                        <substanceAdministration moodCode="EVN" classCode="SBADM" negationInd="false">
+                            <templateId root="1.3.182.11.10.3.1"/>
+                            <id root="c19190f7-e5ab-42fc-8366-dea33cb6b9f6"/>
+                            <code code="IMMUNIZ" codeSystem="1.3.5.1.4.1.19376.1.5.3.2"/>
+                            <text>
+                                <reference value="#vacc2"/>
+                            </text>
+                            <statusCode code="completed"/>
+                            <consumable typeCode="CSM">
+                                <manufacturedProduct classCode="MANU">
+                                    <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                                        <code code="414005006" codeSystem="2.16.840.1.113883.6.96" displayName="Vaccin anti diphtérie-coqueluche-tétanos-poliomyélite">
+                                            <originalText>
+                                                <reference value="#vacc2-vacc"/>
+                                            </originalText>
+                                        </code>
+                                        <name nullFlavor="UNK"/>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="REFR">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.3"/>
+                                    <code code="48767-8" codeSystem="2.16.840.1.113883.6.1"/>
+                                    <text>
+                                        <reference value="#vacc2-rappel"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                </act>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <!-- Third immunization -->
+                    <entry>
+                        <substanceAdministration moodCode="EVN" classCode="SBADM" negationInd="false">
+                            <templateId root="1.3.182.11.10.3.1"/>
+                            <id root="7923ec88-80d9-455c-95a9-454d3074ccb9"/>
+                            <code code="IMMUNIZ" codeSystem="1.3.5.1.4.1.19376.1.5.3.2"/>
+                            <text>
+                                <reference value="#vacc3"/>
+                            </text>
+                            <statusCode code="completed"/>
+                            <consumable typeCode="CSM">
+                                <manufacturedProduct classCode="MANU">
+                                    <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                                        <code code="333680004" codeSystem="2.16.840.1.113883.6.96" displayName="Vaccin anti hemophilus type b">
+                                            <originalText>
+                                                <reference value="#vacc3-vacc"/>
+                                            </originalText>
+                                        </code>
+                                        <name nullFlavor="UNK"/>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="REFR">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.3"/>
+                                    <code code="48767-8" codeSystem="2.16.840.1.113883.6.1"/>
+                                    <text>
+                                        <reference value="#vacc3-rappel"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                </act>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                    <!-- Forth immunization -->
+                    <entry>
+                        <substanceAdministration moodCode="EVN" classCode="SBADM" negationInd="false">
+                            <templateId root="1.3.182.11.10.3.1"/>
+                            <id root="ed0e1590-675a-4b92-b8ef-3f2de34398e7"/>
+                            <code code="IMMUNIZ" codeSystem="1.3.5.1.4.1.19376.1.5.3.2"/>
+                            <text>
+                                <reference value="#vacc4"/>
+                            </text>
+                            <statusCode code="completed"/>
+                            <consumable typeCode="CSM">
+                                <manufacturedProduct classCode="MANU">
+                                    <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                                        <code code="424519000" codeSystem="2.16.840.1.113883.6.96" displayName="Vaccin anti papillomavirus">
+                                            <originalText>
+                                                <reference value="#vacc4-vacc"/>
+                                            </originalText>
+                                        </code>
+                                        <name nullFlavor="UNK"/>
+                                    </manufacturedMaterial>
+                                </manufacturedProduct>
+                            </consumable>
+                            <entryRelationship typeCode="REFR">
+                                <act classCode="ACT" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.3"/>
+                                    <code code="48767-8" codeSystem="2.16.840.1.113883.6.1"/>
+                                    <text>
+                                        <reference value="#vacc4-rappel"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                </act>
+                            </entryRelationship>
+                        </substanceAdministration>
+                    </entry>
+                </section>
+            </component>
+            <!-- History of Past Illness -->
+            <component>
+                <section>
+                    <templateId root="1.3.182.11.10.2.6"/>
+                    <code code="11348-0" codeSystem="2.16.840.1.113883.6.1"/>
+                    <title>History of Past Illness</title>
+                    <text>
+                            <table ID="history">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                        <th>Date d'apparition présumée</th>
+                                        <th>Fin présumée</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ID="history1">
+                                        <td ID="history1-type">Cancer de la thyroïde durant l'adolescence</td>
+                                        <td ID="history1-desc">Carcinome in situ</td>
+                                        <td ID="history1-start">01/10/1997</td>
+                                        <td ID="history1-end">06/10/1997</td>
+                                    </tr>
+                                    <tr ID="history2">
+                                        <td ID="history2-type">Diabète gestationnel</td>
+                                        <td ID="history2-desc"></td>
+                                        <td ID="history2-start">12/10/2011</td>
+                                        <td ID="history2-end">30/04/2012</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </text>
+                    <!-- First and only concern -->
+                    <entry>
+                        <act classCode="ACT" moodCode="EVN">
+                            <templateId root="1.3.182.11.10.3.11"/>
+                            <code nullFlavor="NA"/>
+                            <text>
+                                <reference value="#history"/>
+                            </text>
+                            <statusCode code="active"/>
+                            <!-- First past illness-->
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.2"/>
+                                    <id root="0c7545ad-72b6-48a3-b2ec-3793aa9da8d7"/>
+                                    <code nullFlavor="NI"/>
+                                    <text>
+                                        <reference value="#history1"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime xsi:type="IVL_TS">
+                                        <low value="19971001"/>
+                                        <high value="19971006"/>
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="D09.3" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.2" displayName="Thyroïde et autres glandes endocrines">
+                                        <originalText>
+                                            <reference value="#history1-type"/>
+                                        </originalText>
+                                    </value>
+                                    <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                        <act classCode="ACT" moodCode="EVN">
+                                            <templateId root="1.3.182.11.10.3.3"/>
+                                            <code code="48767-8" codeSystem="2.16.840.1.113883.6.1"/>
+                                            <text>
+                                                <reference value="#history1-desc"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                        </act>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                            <!-- Second past illness-->
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.2"/>
+                                    <id root="ca5959d2-e57f-44d4-8724-eca373fbc2ae"/>
+                                    <code nullFlavor="NI"/>
+                                    <text>
+                                        <reference value="#history2"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime xsi:type="IVL_TS">
+                                        <low value="20111012"/>
+                                        <high value="20120430"/>
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="O24.4" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.2" displayName="Diabète sucré survenant au cours de la grossesse">
+                                        <originalText>
+                                            <reference value="#history2-type"/>
+                                        </originalText>
+                                    </value>
+                                    <entryRelationship typeCode="SUBJ" inversionInd="true">
+                                        <act classCode="ACT" moodCode="EVN">
+                                            <templateId root="1.3.182.11.10.3.3"/>
+                                            <code code="48767-8" codeSystem="2.16.840.1.113883.6.1"/>
+                                            <text>
+                                                <reference value="#history2-desc"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                        </act>
+                                    </entryRelationship>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                </section>
+            </component>
+            <!-- List of surgeries -->
+            <component>
+                <section>
+                    <templateId root="1.3.182.11.10.2.8"/>
+                    <code code="47519-4" codeSystem="2.16.840.1.113883.6.1"/>
+                    <title>Coded List of Surgeries</title>
+                    <text>
+                        <table ID="surg">
+                            <thead>
+                                <tr>
+                                    <th>Procédure</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ID="surg1">
+                                    <td ID="surg1-type">Implantation défibrillateur automatique</td>
+                                    <td ID="surg1-date">20/10/2014</td>
+                                </tr>
+                                <tr ID="surg2">
+                                    <td ID="surg2-type">Césarienne</td>
+                                    <td ID="surg2-date">14/04/2012</td>
+                                </tr>
+                                <tr ID="surg3">
+                                    <td ID="surg3-type">Thyroïdectomie</td>
+                                    <td ID="surg3-date">05/06/1997</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <!-- First surgery -->
+                    <entry>
+                        <procedure classCode="PROC" moodCode="EVN">
+                            <templateId root="1.3.182.11.10.3.13"/>
+                            <code code="118955007" codeSystem="2.16.840.1.113883.6.96" displayName="Implantation sur le système cardio-vascuaire">
+                                <originalText>
+                                    <reference value="#surg1-type"/>
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#surg1"/>
+                            </text>
+                            <statusCode code="completed"/>
+                            <effectiveTime value="20141020"/>
+                        </procedure>
+                    </entry>
+                    <!-- Second surgery -->
+                    <entry>
+                        <procedure classCode="PROC" moodCode="EVN">
+                            <templateId root="1.3.182.11.10.3.13"/>
+                            <code code="11466000" codeSystem="2.16.840.1.113883.6.96" displayName="Césarienne">
+                                <originalText>
+                                    <reference value="#surg2-type"/>
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#surg2"/>
+                            </text>
+                            <statusCode code="completed"/>
+                            <effectiveTime value="20120414"/>
+                        </procedure>
+                    </entry>
+                    <!-- Third surgery -->
+                    <entry>
+                        <procedure classCode="PROC" moodCode="EVN">
+                            <templateId root="1.3.182.11.10.3.13"/>
+                            <code code="13619001" codeSystem="2.16.840.1.113883.6.96" displayName="Thyroïdectomie">
+                                <originalText>
+                                    <reference value="#surg3-type"/>
+                                </originalText>
+                            </code>
+                            <text>
+                                <reference value="#surg3"/>
+                            </text>
+                            <statusCode code="completed"/>
+                            <effectiveTime value="19970605"/>
+                        </procedure>
+                    </entry>
+                </section>
+            </component>
+            <!-- Active Problems -->
+            <component>
+                <section>
+                    <templateId root="1.3.182.11.10.2.5"/>
+                    <code code="11450-4" codeSystem="2.16.840.1.113883.6.1"/>
+                    <title>Active Problems</title>
+                    <text>
+                        <table ID="active">
+                            <thead>
+                                <tr>
+                                    <th>Maladie/Problème</th>
+                                    <th>Pris en charge par</th>
+                                    <th>Date d'apparition présumée</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ID="active1">
+                                    <td ID="active1-type">Asthme allergique</td>
+                                    <td ID="active1-part">Dr. Martin</td>
+                                    <td ID="active1-start">03/10/1994</td>
+                                </tr>
+                                <tr ID="active2">
+                                    <td ID="active2-type">Hypothyroidie suite cancer</td>
+                                    <td ID="active2-part">Dr. Albert (271250181)</td>
+                                    <td ID="active2-start">06/10/1997</td>
+                                </tr>
+                                <tr ID="active3">
+                                    <td ID="active3-type">Syndrome de Brugada</td>
+                                    <td ID="active3-part">Dr. Albert (271250181)</td>
+                                    <td ID="active3-start">09/01/2013</td>
+                                </tr>
+                                <tr ID="active4">
+                                    <td ID="active4-type">Diabète type 2 (suite grossesse)</td>
+                                    <td ID="active4-part">Dr. Albert (271250181)</td>
+                                    <td ID="active4-start">30/04/2012</td>
+                                </tr>
+                                <tr ID="active5">
+                                    <td ID="active5-type">Prééclampsie sévère</td>
+                                    <td ID="active5-part">Dr. Albert (271250181)</td>
+                                    <td ID="active5-start">06/05/2017</td>
+                                </tr>
+                                <tr ID="active6">
+                                    <td ID="active6-type">Pyélonéphrite aiguë</td>
+                                    <td ID="active6-part">Dr. Albert (271250181)</td>
+                                    <td ID="active6-start">07/05/2017</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <!-- First and only concern -->
+                    <entry>
+                        <act classCode="ACT" moodCode="EVN">
+                            <templateId root="1.3.182.11.10.3.11"/>
+                            <code nullFlavor="NA"/>
+                            <text>
+                                <reference value="#active"/>
+                            </text>
+                            <statusCode code="active"/>
+                            <!-- First active problem -->
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.2"/>
+                                    <id root="efcf3f78-8d2d-4760-81c3-cdf99c50f181"/>
+                                    <code nullFlavor="NI"/>
+                                    <text>
+                                        <reference value="#active1"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime xsi:type="IVL_TS">
+                                        <low value="19941003"/>
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="J45.0" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.2" displayName="Asthme à prédominance allergique">
+                                        <originalText>
+                                            <reference value="#active1-type"/>
+                                        </originalText>
+                                    </value>
+                                    <participant typeCode="CALLBCK">
+                                        <participantRole>
+                                            <playingEntity>
+                                                <name>
+                                                    <prefix>Dr.</prefix>
+                                                    <family>Martin</family>
+                                                </name>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                </observation>
+                            </entryRelationship>
+                            <!-- Second active problem -->
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.2"/>
+                                    <id root="c661b0ba-f0f6-412b-836b-3b97309c2251"/>
+                                    <code nullFlavor="NI"/>
+                                    <text>
+                                        <reference value="#active2"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime xsi:type="IVL_TS">
+                                        <low value="19971006"/>
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="E89.0" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.2" displayName="Hypothyroïdie après un acte à visée diagnostique et thérapeutique">
+                                        <originalText>
+                                            <reference value="#active2-type"/>
+                                        </originalText>
+                                    </value>
+                                    <participant typeCode="CALLBCK">
+                                        <participantRole>
+                                            <telecom value="tel:271250181"/>
+                                            <playingEntity>
+                                                <name>
+                                                    <prefix>Dr.</prefix>
+                                                    <family>Albert</family>
+                                                </name>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                </observation>
+                            </entryRelationship>
+                            <!-- Third active problem -->
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.2"/>
+                                    <id root="f964a902-7ee7-4b30-9f00-dd6c3b501ccc"/>
+                                    <code nullFlavor="NI"/>
+                                    <text>
+                                        <reference value="#active3"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime xsi:type="IVL_TS">
+                                        <low value="20130109"/>
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="I49.8" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.2" displayName="Autres arythmies cardiaques précisées">
+                                        <originalText>
+                                            <reference value="#active3-type"/>
+                                        </originalText>
+                                    </value>
+                                    <participant typeCode="CALLBCK">
+                                        <participantRole>
+                                            <telecom value="tel:271250181"/>
+                                            <playingEntity>
+                                                <name>
+                                                    <prefix>Dr.</prefix>
+                                                    <family>Albert</family>
+                                                </name>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                </observation>
+                            </entryRelationship>
+                            <!-- Forth active problem -->
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.2"/>
+                                    <id root="b3755d8b-1995-43d6-a344-a129a0679c7f"/>
+                                    <code nullFlavor="NI"/>
+                                    <text>
+                                        <reference value="#active4"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime xsi:type="IVL_TS">
+                                        <low value="20120430"/>
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="E11" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.2" displayName="Diabète sucré de type 2">
+                                        <originalText>
+                                            <reference value="#active4-type"/>
+                                        </originalText>
+                                    </value>
+                                    <participant typeCode="CALLBCK">
+                                        <participantRole>
+                                            <telecom value="tel:271250181"/>
+                                            <playingEntity>
+                                                <name>
+                                                    <prefix>Dr.</prefix>
+                                                    <family>Albert</family>
+                                                </name>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                </observation>
+                            </entryRelationship>
+                            <!-- Fifth active problem -->
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.2"/>
+                                    <id root="dd7c3ee1-f734-4990-9c3a-234585873d63"/>
+                                    <code nullFlavor="NI"/>
+                                    <text>
+                                        <reference value="#active5"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime xsi:type="IVL_TS">
+                                        <low value="20170506"/>
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="O14.1" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.2" displayName="Prééclampsie sévère">
+                                        <originalText>
+                                            <reference value="#active5-type"/>
+                                        </originalText>
+                                    </value>
+                                    <participant typeCode="CALLBCK">
+                                        <participantRole>
+                                            <telecom value="tel:271250181"/>
+                                            <playingEntity>
+                                                <name>
+                                                    <prefix>Dr.</prefix>
+                                                    <family>Albert</family>
+                                                </name>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                </observation>
+                            </entryRelationship>
+                            <!-- Sixth active problem -->
+                            <entryRelationship typeCode="SUBJ">
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.3.182.11.10.3.2"/>
+                                    <id root="08a86816-2d40-4e15-99a3-b65bf7844d1f"/>
+                                    <code nullFlavor="NI"/>
+                                    <text>
+                                        <reference value="#active6"/>
+                                    </text>
+                                    <statusCode code="completed"/>
+                                    <effectiveTime xsi:type="IVL_TS">
+                                        <low value="20170507"/>
+                                    </effectiveTime>
+                                    <value xsi:type="CD" code="N10" codeSystem="1.3.6.1.4.1.12559.11.10.1.3.1.44.2" displayName="Néphrite tubulo-interstitielle aigüe">
+                                        <originalText>
+                                            <reference value="#active6-type"/>
+                                        </originalText>
+                                    </value>
+                                    <participant typeCode="CALLBCK">
+                                        <participantRole>
+                                            <telecom value="tel:271250181"/>
+                                            <playingEntity>
+                                                <name>
+                                                    <prefix>Dr.</prefix>
+                                                    <family>Albert</family>
+                                                </name>
+                                            </playingEntity>
+                                        </participantRole>
+                                    </participant>
+                                </observation>
+                            </entryRelationship>
+                        </act>
+                    </entry>
+                </section>
+            </component>
+            <!-- Medical Devices Coded -->
+            <component>
+                <section>
+                    <templateId root="1.3.182.11.10.2.4"/>
+                    <code code="46264-8" codeSystem="2.16.840.1.113883.6.1"/>
+                    <title>Medical Devices Coded</title>
+                    <text>
+                        <table ID="devices">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ID="devices1">
+                                    <td ID="devices1-desc">Défibrillateur automatique</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry>
+                        <supply moodCode="EVN" classCode="SPLY">
+                            <templateId root="1.3.182.11.10.3.10"/>
+                            <text>
+                                <reference value="#devices1"/>
+                            </text>
+                            <effectiveTime nullFlavor="UNK"/>
+                            <participant typeCode="DEV">
+                                <participantRole classCode="MANU">
+                                    <playingDevice classCode="DEV" determinerCode="INSTANCE">
+                                        <code code="72506001" codeSystem="2.16.840.1.113883.6.96" displayName="Défibrillateur interne">
+                                            <originalText>
+                                                <reference value="#devices1-desc"/>
+                                            </originalText>
+                                        </code>
+                                    </playingDevice>
+                                </participantRole>
+                            </participant>
+                        </supply>
+                    </entry>
+                </section>
+            </component>
+            <!-- Pregnancy History -->
+            <component>
+                <section>
+                    <templateId root="1.3.182.11.10.2.3"/>
+                    <code code="10162-6" codeSystem="2.16.840.1.113883.6.1"/>
+                    <title>Pregnancy History</title>
+                    <text>
+                        <table ID="pregn">
+                            <thead>
+                                <tr>
+                                    <th>Date présumée d'accouchement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ID="pregn1">
+                                    <td ID="pregn1-date">01/01/2018</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </text>
+                    <entry>
+                        <observation classCode="OBS" moodCode="EVN">
+                            <templateId root="1.3.182.11.10.3.9"/>
+                            <id nullFlavor="NI"/>
+                            <code code="11778-8" codeSystem="2.16.840.1.113883.6.1" displayName="Date présumée d'accouchement (Estimation clinique)"/>
+                            <text>
+                                <reference value="#pregn1-date"/>
+                            </text>
+                            <statusCode code="completed"/>
+                            <effectiveTime value="20170415"/>
+                            <value xsi:type="TS" value="20180101"/>
+                        </observation>
+                    </entry>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+	
+</ClinicalDocument>

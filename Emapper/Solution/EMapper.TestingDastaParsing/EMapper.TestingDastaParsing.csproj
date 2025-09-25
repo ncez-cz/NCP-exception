@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <PackageId>EMapper.TestingDastaParsing</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EMapper.DASTA.Definitions\EMapper.DASTA.Definitions.csproj" />
+      <ProjectReference Include="..\EMapper.HL7.Definitions\EMapper.HL7.Definitions.csproj" />
+    </ItemGroup>
+
+</Project>

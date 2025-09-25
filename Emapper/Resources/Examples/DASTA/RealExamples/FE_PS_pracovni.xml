@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PRACOVNÍ VERZE Z 16.8. -->
+<dasta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.18.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.09.01.xsd" id_soubor="STAPRO__FonsEnterprise_2f24bbd8c8_201908" verze_ds="04.19.01" verze_nclp="02.01.01" bin_priloha="T" ur="R" typ_odesm="NN" ozn_soub="RNN" potvrzeni="N" dat_vb="2019-08-13T10:08:02" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+	<zdroj_is kod_firmy="STAPRO__" kod_prog="StaproFE" verze_prog="1.135.19" liccis_prog="StaproDe" />
+	<pm icz="99999999" icp="99999999">
+		<as typ="I" />
+	</pm>
+	<is icz="89903000" icp="89903000">
+		<as typ="I" />
+		<ip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id_pac="9660060696" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+			<rodcis>9660060696</rodcis>
+			<jmeno>Transmise</jmeno>
+			<prijmeni>Testovací</prijmeni>
+			<dat_dn>1996-10-06T00:00:00</dat_dn>
+			<ipi_o cis_is="d40ce6a2-4d56-4ad3-8f73-7a6ae345a688" />
+			<a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+				<jmeno>Testovací Transmise</jmeno>
+				<adr>Pernštýnské nám. 51</adr>
+				<psc>53002</psc>
+				<mesto>Pardubice</mesto>
+				<stat>203</stat>
+				<as typ="E">
+					<obsah>transmise@staproemail.cz</obsah>
+				</as>
+				<as typ="B">
+					<obsah>420777888999</obsah>
+				</as>
+			</a>
+			<a typ="K" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+				<jmeno>Testovací Fons</jmeno>
+				<adr>Pernštýnské náměstí 51</adr>
+				<psc>53002</psc>
+				<mesto>Pardubice</mesto>
+				<stat>203</stat>
+				<as typ="B">
+					<obsah>420888999000</obsah>
+				</as>
+			</a>
+			<a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+				<jmeno>MUDr. Praktik Zkušený</jmeno>
+				<adr>Jindřišská 16</adr>
+				<psc>53002</psc>
+				<mesto>Pardubice</mesto>
+				<stat>203</stat>
+				<as typ="E">
+					<obsah>praktik@staproemail.cz</obsah>
+				</as>
+				<as typ="B">
+					<obsah>420111222333</obsah>
+				</as>
+			</a>
+			<pv_pac typ_pv="X" dat_ab="2019-08-13T10:08:03" />
+			<ku>
+				<ku_z typku="PATSUM.DAT" fazespec="ZF" idku="STAPRO__12345678_0110000028777_X32VORE.1" idsub="SCSOFT__KZIZHPUK0UAYCDPASDO99A__.1"> <!-- DOPLNIT IDKU -->
+					<dat_prov>2019-07-31T11:08:33</dat_prov>
+					<dat_vydani>2019-08-13T10:08:03</dat_vydani>
+					<z_pracoviste icz="99999999" icp="99999999" odb="000">
+						<nazev>WebApplication</nazev>
+						<a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+							<jmeno>WebApplication</jmeno>
+						</a>
+					</z_pracoviste>
+					<p_pracoviste icz="89903000" icp="89903000" odb="000">
+						<nazev>Vojenská nemocnice Olomouc</nazev>
+						<a typ="7" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"> <!-- DOPLNIT BLOK A S ADRESOU PRACOVIŠTĚ -->
+							<jmeno>Vojenská nemocnice Olomouc, a.s.</jmeno>
+							<adr>K Nemocnici 52</adr>
+							<psc>77111</psc>
+							<mesto>Olomouc</mesto>
+							<stat>203</stat>
+						</a>		
+					</p_pracoviste>
+					<zpo icz="89903000" id_zp="136"> <!-- DOPLNIT ATRIBUT ID_ZP (ZODPOVĚDNÁ OSOBA, PROZATÍM UŽIVATEL, KTERÝ PROVEDL POSLEDNÍ ZMĚNU V PS) -->
+						<nazev>Vojenská nemocnice Olomouc</nazev>
+						<a_p typ="A">
+							<jmeno xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Vojenská nemocnice Olomouc, a.s.</jmeno>
+							<adr xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">K Nemocnici 52</adr>
+							<psc xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">77111</psc>
+							<mesto xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Olomouc</mesto>
+							<stat xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">203</stat>
+							<as typ="E" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"> <!-- DOPLNIT BLOKY AS -->
+								<obsah>sekretariat@nemocnice.cz</obsah>
+							</as>
+							<as typ="B" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"> 
+								<obsah>420123456789</obsah>
+							</as>
+						</a_p>
+						<jmeno>Petr</jmeno> <!-- DOPLNIT JMÉNO ZODPOVĚDNÉ OSOBY  -->
+						<prijmeni>Klíč</prijmeni>
+						<titul_pred>MUDr.</titul_pred> <!-- DOPLNIT TITUL ZODPOVĚDNÉ OSOBY  -->
+						<titul_za>Ph.D.</titul_za> <!-- DOPLNIT TITUL ZODPOVĚDNÉ OSOBY  -->
+						<a_zo typ="C"> <!-- DOPLNIT BLOK A_ZO S ADRESOU ZODPOVĚDNÉ OSOBY -->
+							<jmeno xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Vojenská nemocnice Olomouc, a.s., MUDr. Petr Klíč, Ph.D.</jmeno>
+							<adr xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">K Nemocnici 52</adr>
+							<psc xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">77111</psc>
+							<mesto xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Olomouc</mesto>
+							<stat xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">203</stat>
+						</a_zo>
+					</zpo>
+					<text>
+						<ptext xml:space="preserve">Pacientský souhrn Transmise Testovací 2019-07-31</ptext>
+					</text>
+					<ku_pac id_pac="9660060696">
+						<jmeno>Transmise</jmeno>
+						<prijmeni>Testovací</prijmeni>
+						<dat_dn>1996-10-06T00:00:00</dat_dn>
+						<sex>F</sex>
+						<a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+							<jmeno>Testovací Transmise</jmeno>
+							<adr>Pernštýnské nám. 51</adr>
+							<psc>53002</psc>
+							<mesto>Pardubice</mesto>
+							<stat>203</stat>
+							<as typ="E">
+								<obsah>transmise@staproemail.cz</obsah>
+							</as>
+							<as typ="B">
+								<obsah>420777888999</obsah>
+							</as>
+						</a>
+						<a typ="K" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+							<jmeno>Testovací Fons</jmeno>
+							<adr>Pernštýnské náměstí 51</adr>
+							<psc>53002</psc>
+							<mesto>Pardubice</mesto>
+							<stat>203</stat>
+							<as typ="B">
+								<obsah>420888999000</obsah>
+							</as>
+						</a>
+						<a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+							<jmeno>MUDr. Praktik Zkušený</jmeno>
+							<adr>Jindřišská 16</adr>
+							<psc>53002</psc>
+							<mesto>Pardubice</mesto>
+							<stat>203</stat>
+							<as typ="E">
+								<obsah>praktik@staproemail.cz</obsah>
+							</as>
+							<as typ="B">
+								<obsah>420111222333</obsah>
+							</as>
+						</a>
+					</ku_pac>
+					<ku_z_patsumdat>
+						<jazyk jazyk_klic="cs-CZ" pref="P" ind_oprav_sd="N" />
+						<povolani dat_ab="2019-05-10T15:45:55"> <!-- DOPLNIT ATRIBUT DAT_AB A AUTOR -->
+							<povolani_text>ošetřovatelka</povolani_text> 
+							<autor id_zp="136">MUDr. Petr Klíč, Ph.D.</autor> <!-- DOPLNIT ID AUTORA V ATRIBUTU ID_ZP -->
+						</povolani>
+						<h vyska="169" hmotnost="57.000" dat_ab="2019-05-28T11:18:39" />
+						<grav typ="G" dat_ab="2019-07-31T11:06:41" ind_oprav_sd="N">
+							<grav_tp>
+								<dat_por>2019-07-31</dat_por>
+							</grav_tp>
+							<autor id_zp="136">MUDr. Petr Klíč, Ph.D.</autor> 
+							<iid root="1.2.203.24341.1.10.89903000.3" ext="4694d006-c50f-4127-9716-c3c6371574b0" /> <!-- UPRAVIT ELEMENT IDD  -->
+						</grav>
+						<u>
+							<ua typ="AN" dat_ab="2019-05-10T15:45:55" ind_oprav_sd="N">
+								<u_al>Senná rýma</u_al>
+								<autor id_zp="136">MUDr. Petr Klíč, Ph.D.</autor>
+								<dat_du format="D" typ="L">1985-01-01</dat_du>
+								<iid root="1.2.203.24341.1.10.89903000.3" ext="4694d006-c50f-4127-9716-c3c6371574b1" /> 
+							</ua>
+							<ua typ="AN" dat_ab="2019-05-10T14:46:02" ind_oprav_sd="N">
+								<u_al>TTC</u_al>
+								<autor id_zp="136">MUDr. Petr Klíč, Ph.D.</autor>
+								<iid root="1.2.203.24341.1.10.89903000.3" ext="4694d006-c50f-4127-9716-c3c6371574b2" /> 
+							</ua>
+							<uks dat_ab="2019-05-10T14:34:32" ind_oprav_sd="N">
+								<ks_rh>A+</ks_rh>
+								<ks_rh_text>A Rh(D) pozitivní</ks_rh_text>
+								<autor id_zp="136">MUDr. Petr Klíč, Ph.D.</autor>
+								<iid root="1.2.203.24341.1.10.89903000.3" ext="4694d006-c50f-4127-9716-c3c6371574b3" /> 
+							</uks>
+						</u>
+						<an dat_ab="2019-07-31T11:08:33">
+							<text>
+								<ptext xml:space="preserve">Souhrná: 
+bez sledovaných onemocnění, senná rýma
+
+Rodinná: 
+negat.
+
+Pracovní: 
+ošetřovatelka
+
+Sociální: 
+s rodinou, v domě, zvířata ne
+
+Toxikologie: 
+nekouří, alkohol příležitostně, drogy 0
+
+								</ptext>
+							</text>
+							<autor id_zp="136">MUDr. Petr Klíč, Ph.D.</autor>
+							<iid root="1.2.203.24341.1.10.89903000.3" ext="4694d006-c50f-4127-9716-c3c6371574b4" /> 
+						</an>
+						<dg dat_ab="2019-06-21T12:16:05">
+							<dgz typ_dg="T">
+								<diag mkn_verze="2014" poradi="1" nazev="Astma převážně alergické">J450</diag>
+								<dat_du format="D" typ="L">2019-05-10</dat_du>
+								<autor id_zp="136">MUDr. Petr Klíč, Ph.D.</autor>
+								<dat_vb>2019-05-10</dat_vb>
+								<iid root="1.2.203.24341.1.10.89903000.3" ext="4694d006-c50f-4127-9716-c3c6371574b5" /> 
+							</dgz>
+							<dgz typ_dg="P">
+								<diag mkn_verze="2014" poradi="2" nazev="Nevolnost a únava">R53</diag>
+								<dat_du format="D" typ="L">2019-05-13</dat_du>
+								<autor id_zp="136">MUDr. Petr Klíč, Ph.D.</autor>
+								<dat_vb>2019-05-13</dat_vb>
+								<iid root="1.2.203.24341.1.10.89903000.3" ext="4694d006-c50f-4127-9716-c3c6371574b6" />
+							</dgz>
+							<dgz typ_dg="P">
+								<diag mkn_verze="2014" poradi="3" nazev="Polypoidní degenerace vedlejší nosní dutiny">J331</diag>
+								<dat_du format="D" typ="L">2019-05-13</dat_du>
+								<autor id_zp="136">MUDr. Petr Klíč, Ph.D.</autor>
+								<dat_vb>2019-05-13</dat_vb>
+								<iid root="1.2.203.24341.1.10.89903000.3" ext="4694d006-c50f-4127-9716-c3c6371574b7" />
+							</dgz>
+						</dg>
+						<le typ="A" dat_ab="2019-05-13T08:16:09">
+							<lez typ_med="T" ind_oprav_sd="N" nazev_lek="ZYRTEC" kod_lek="0047032" cis_kod_lek="KLK">
+								<dat_od>2018-05-16</dat_od>
+								<rozpis_v>:dle potřeby</rozpis_v>
+								<autor id_zp="136">MUDr. Petr Klíč, Ph.D.</autor>
+								<dat_vb>2019-05-13T08:14:50</dat_vb>
+								<iid root="1.2.203.24341.1.10.89903000.3" ext="4694d006-c50f-4127-9716-c3c6371574b8" />
+							</lez>
+						</le>
+						<zdroj_sw kod_firmy="STAPRO__" kod_prog="StaproFE" verze_prog="1.135.19" liccis_prog="StaproDe" />
+					</ku_z_patsumdat>
+				</ku_z>
+			</ku>
+		</ip>
+	</is>
+</dasta>

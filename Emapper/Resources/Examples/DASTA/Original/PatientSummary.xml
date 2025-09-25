@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dasta 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.16.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.08.03.xsd" 
+id_soubor="STAPRO__FonsEnterprise_e7120e2fab_201901" 
+verze_ds="04.18.02" 
+verze_nclp="02.01.01" 
+bin_priloha="T" 
+ur="R" 
+typ_odesm="NN" 
+ozn_soub="RNN" 
+potvrzeni="N" 
+dat_vb="2019-01-04T14:29:38" 
+xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+	<zdroj_is kod_firmy="STAPRO__" kod_prog="FE" verze_prog="1.119" />
+	<!-- kód firmy, NIS a číslo verze -->
+	<pm icz="99999999">
+		<!-- příjmové místo (Transmise) -->
+		<as typ="I" />
+	</pm>
+	<is icz="89903000">
+		<!-- IČZ zdravotnického zařízení (NIS) -->
+		<as typ="I" />
+		<ip id_pac="7161264528" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+			<!-- id pacienta v NIS -->
+			<jmeno>Mračena</jmeno> 
+			<prijmeni>Mrakomorová</prijmeni>
+			<typ_sdel>PS</typ_sdel>	
+			<pv_pac typ_pv="X"/>
+			<ku>
+				<ku_z typku="PATSUM.DAT" fazespec="ZF" idku="STAPRO__602CD4EE85B54826B81063ABD8D0.123" idsub="STAPRO__8D60E70D27F0ED96201901020.808" duvernost="1">
+					<!-- identifikátory:
+					idku - id klinické události z NIS
+					idsub - id žádosti o zaslání PS
+					důvěrnost ku:
+					1 - standardní
+					2 - důvěrná
+					3 - velmi důvěrná (tajná) -->			
+					<idkuglob root="1.2.203.24341.11.3"/>
+					<!-- ikuglob - globální id pro použití v zahraničí -->
+					<dat_prov>2019-01-04T10:00:00</dat_prov>
+					<!-- čas, k němuž jsou sdělovaná data vztažena -->
+					<dat_vydani>2017-07-14T10:00:00</dat_vydani>
+					<!-- datum vytvoření souhrnu -->
+					<p_pracoviste icz="00064190" icp="00064191" odb="501"> 
+						<!-- id zařízení, pracoviště a její odbornost (nemocnice, NIS)  /"Health Professional's Represented Organisation"/-->
+						<nazev>Thomayerova nemocnice</nazev> 
+						<!-- název pracoviště (nemocnice, klinika, oddělení...) -->
+						<a typ="A" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+							<!-- typy adres:
+							1 = trvalé bydliště (pacienta) - viz indikátor ind_kont pro vyznačení kontaktní adresy
+							2 = přechodné bydliště (pacienta) - viz indikátor ind_kont pro vyznačení kontaktní adresy
+							3 = příbuzný (pacienta), nejedná se o kontaktní osobu „K“ - příbuzenský vztah se ukládá do elementu ”vztah” (nyní nahrazuje typ=K)
+							4 = registrující praktický lékař nebo pediatr (pacienta) - IČL se ukládá do elementu „icl”, ID ZP do elementu „id_zp“
+							5 = zaměstnavatel (pacienta)
+							6 = plátce nemocenských dávek (pacienta)
+							7 = zdravotnické zařízení (pacienta) - kde je vyšetřován, či hospitalizován
+							8 = právní zástupce (pacienta), nejedná se o zákonného zástupce „Z“
+							9 = farnost (pacienta) - fakultativní údaj
+							S = základní škola (dětského pacienta)
+							A = zdravotnické pracoviště (poskytovatel, klinika, pracoviště)
+							C = kontaktní zdravotnický profesionál či poskytovatel zdrav. služeb (ve vazbě k pacientovi) dle projektu Patient Summary
+							K = kontaktní osoba (ve vazbě k pacientovi) dle projektu Patient Summary; vztah je v elementu „k_osoba_xxx“
+							Z = zákonný zástupce (pacienta)
+							G = registrující gynekolog (pacientky)- IČL se ukládá do elementu „icl”, ID ZP do elementu „id_zp“
+							M = registrující stomatolog (pacienta)- IČL se ukládá do elementu „icl”, ID ZP do elementu „id_zp“”
+							T = tlumočník - překladatel do jazyka pacienta - fakultativní údaj -->
+							<jmeno>Thomayerova nemocnice</jmeno>
+							<adr>Vídeňská 800</adr>
+							<psc>14059</psc>
+							<mesto>Praha 4 - Krč</mesto>
+							<stat>203</stat> 
+							<as typ="E">
+								<!-- použitelné typy adresy spojení:
+								T = telefon (pevná linka)
+								B = mobilní telefon (možnost zasílání SMS zpráv)
+								F = fax
+								E = e-mailová adresa
+								I = dle interní dohody -->
+							</as>
+						</a>					
+					</p_pracoviste>
+					<p_pracovnik role_klic="2211" role_text="Praktičtí lékaři" id_pracovnik="56272890">
+						<!-- role autora PS podle číselníku EZDRROLE a jeho identifikace, id je zcela vymyšlené než bude rozumná identita lékaře /"Auhor, Health Professional" + "Legal Authenticator"/ -->
+						<titul_pred>MUDr.</titul_pred>
+						<jmeno>Ludmila</jmeno>
+						<prijmeni>Lékařská</prijmeni>
+						<a typ="C" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+							<jmeno>MUDr. Ludmila Lékařská</jmeno>
+							<adr>Thomayerova 403/4</adr>
+							<psc>25101</psc>
+							<mesto>Říčany</mesto>
+							<stat>203</stat>
+							<as typ="B">
+								<obsah>+420777888999</obsah>
+							</as>
+							<as typ="E">
+								<obsah>lekar@qgmail.com</obsah>
+							</as>
+						</a>
+					</p_pracovnik>
+					<zpo icz="00064190">  <!-- /M/ /"Custodian/ -->
+						<!-- zodpovědná organizace a pracovník -->
+						<nazev>Thomayerova nemocnice</nazev>
+						<a_p typ="A" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"> 
+							<jmeno>Thomayerova nemocnice</jmeno>
+							<!-- první řádek adresy -->
+							<adr>Vídeňská 800</adr>
+							<psc>14059</psc>
+							<mesto>Praha 4 - Krč</mesto> 
+							<stat>203</stat>
+							<!-- stát dle ISO3166-1 (3 znaky) -->
+							<as typ="E">
+								<obsah>krc@qgmail.com</obsah>
+							</as>
+						</a_p>
+						<jmeno>Ludmila</jmeno>
+						<prijmeni>Lékařská</prijmeni>
+						<titul_pred>MUDr.</titul_pred>						
+						<!-- jméno provádějící osoby - garanta PS -->
+					</zpo>
+					<text>
+						<ptext>Pacientský souhrn - Mračena Mrakomorová - 04. 01. 2019</ptext> <!-- /M/ -->
+					</text>
+					<!-- jen formálně, povinný údaj -->
+					
+<!-- základní údaje o pacientovi pro účely Patient Summary -->
+					<ku_pac id_pac="7161264528">
+						<!-- identifikace pacienta v NIS  -->
+						<ident_pac id="7161264528" id_typ="HA">
+							<!--
+							id: hodnota identifikátoru (rodné číslo)
+							id_typ: 
+							CI - národní identifikátor občana = country ID (v ČR rodné číslo)
+							HA - národní identifikátor pacienta v zemi původu = national health care ID - country of affiliation (v ČR číslo pojištěnce + pojišťovny)
+							HT - národní identifikátor pacienta v zemi poskytovatele = national health care ID - country of treatment (v ČR jako „HA“ - pro cizince) 
+							
+							příklady:
+							1) občan ČR podle rč: id=rč (9/10 znaků), id_typ=CI, autorita=prázdné, stát=CZ
+							2) občan Rumunska: id=CNP (13 znaků), id_typ=CI, autorita=prázdné, stát RO
+							3) občan ČR podle č. poj.: id=číslo pojištěnce (10 znaků), id_typ=HA, autorita= kód ZP (levá část před pomlčkou), stát=CZ
+							-->
+							<autorita>11134</autorita>
+							<!-- označení vydavatele identifikátoru (na průkazu pojištěnce EU položka č. 7, levá část před pomlčkou, v ČR 5 znaků z průkazu) -->
+							<stat>CZ</stat>
+							<!-- podle iso 3166-1, 2 znaky -->
+						</ident_pac>
+						<jmeno>Mračena</jmeno> 
+						<prijmeni>Mrakomorová</prijmeni> 
+						<titul_pred>Ing.</titul_pred>
+						<dat_dn format="D">1971-11-26</dat_dn> <!-- /M/ -->
+						<!-- datum narození, format D, DT, M, MR -->
+						<sex>F</sex>
+						<!-- pohlaví, u stavu X se pro Patient Summary uvádí UN -->
+
+					<!-- Kontaktní informace
+						pokud nejsou adresy dostupné, neposílá se žádná z částí bloku -->
+						<a typ="1" ind_kont="K" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+							<!-- ind_kont: indikátor kontaktní/korespondenční adresy -->
+							<jmeno>Ing. Mračena Mrakomorová Novotná</jmeno>
+							<adr>Trmalova 64</adr>
+							<psc>25101</psc>
+							<mesto>Jihlava</mesto> 
+							<stat>203</stat>
+							<!-- stát dle ISO3166-1 (3 znaky) -->
+							<as typ="B">
+								<!-- adresa spojení
+								použitelné typy adresy spojení:
+								T = telefon (pevná linka)
+								B = mobilní telefon (možnost zasílání SMS zpráv)
+								F = fax
+								E = e-mailová adresa
+								I = dle interní dohody -->
+								<obsah>+420777666555</obsah>
+							</as>
+							<as typ="E">
+								<obsah>mracena.mrak@qgmail.com</obsah>
+							</as>
+						</a>					
+						<a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+							<o_jmeno>Ludmila</o_jmeno>
+							<o_prijmeni>Lékařská</o_prijmeni>
+							<o_titul_pred>MUDr.</o_titul_pred>
+							<jmeno>MUDR. Ludmila Lékařská</jmeno>
+							<!-- konstruuje se z údajů uvedených výše -->
+							<adr>Thomayerova 403/4</adr>
+							<psc>25101</psc>
+							<mesto>Říčany</mesto>
+							<stat>203</stat>
+							<as typ="B">
+								<obsah>+420777888999</obsah>
+							</as>
+							<as typ="E">
+								<obsah>lekar@qgmail.com</obsah>
+							</as>
+						</a>							
+						<a typ="K" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+							<!-- adresa kontaktní osoby -->
+							<o_jmeno>Merlin</o_jmeno>
+							<o_prijmeni>Mrakomor</o_prijmeni>
+							<jmeno>Merlin Mrakomor</jmeno>
+							<adr>Trmalova 64</adr>
+							<psc>25101</psc>
+							<mesto>Říčany</mesto>
+							<stat>203</stat>
+							<k_osoba_klic>SON</k_osoba_klic>
+							<!-- kód typu kontaktní osoby z číselníku EVZTAH -->
+							<k_osoba_text>vlastní syn</k_osoba_text>
+							<!-- text typu kontaktní osoby z číselníku EVZTAH -->
+							<k_osoba_typ>E</k_osoba_typ>
+							<!-- povinné označení emergentního kontaktu pro PS, hodnota "E" -->
+							<as typ="B">
+								<obsah>+420666555444</obsah>
+							</as>
+							<as typ="E">
+								<obsah>syn@qgmail.com</obsah>
+							</as>
+						</a>
+					</ku_pac>
+
+<!-- souhrn klinických údajů o pacientovi pro účely Patient Summary -->
+					<ku_z_patsumdat>
+						<jazyk jazyk_klic="cs-CZ" ind_oprav_sd="N" pref="P"/>
+						<!-- komunikační jazyk pacienta -->
+						
+						<povolani dat_ab="2018-02-10T10:10:20">
+							<povolani_text>Referentka</povolani_text>
+						</povolani>
+						<!-- povolání pacienta -->
+						<h vyska="172" hmotnost="62" dat_ab="2018-02-05T12:45:00"/>
+						<!--Výška aktuální (NČLP klíč = 20411)
+						Hmotnost aktuální (NČLP klíč = 20042) -->
+	<!-- fyzikální nález -->
+						<fyznal ind_oprav_sd="N"> 
+							<!-- hodnota tlaku a datum posledního vyšetření  /"Coded Vital Signs"/ -->
+							<tk_syst>160</tk_syst>
+							<tk_diast>110</tk_diast>
+							<dat_vys format="D">2017-05-06</dat_vys>
+							<!-- formát D, DT -->
+						</fyznal>
+						
+						
+						<!-- gravidita, sděluje se jen aktuální gravidita, ne předchozí /"Pregnancy"/ -->
+						<grav typ="G" ind_oprav_sd="N" dat_ab="2017-04-15T10:55:53">
+							<!-- gravidita pacientky, typ:
+							U = neznámá informace (anamnéza není známa, informace nedostupná - tj. pacientka může a nemusí být gravidní)
+							N = není gravidní
+							T = utajená informace
+							A = pacientka je gravidní, předpokládaný termín porodu a den početí nejsou uvedeny (nezjištěno, neznámé)
+							G = pacientka je gravidní, předpokládaný termín porodu nebo den početí je uveden (jsou uvedeny) 
+							dat_ab - datum a čas aktualizace záznamu	-->
+							<grav_tp zutp_klic="11778-8" zutp_text="Předpokládaný termín porodu"> <!-- /M/ -->
+								<!-- kód a text zjištění porodu, z číselníku ETERMPOR:
+								11778-8	Předpokládaný termín porodu
+								11780-4	Předpokládaný termín porodu dle data ovulace
+								11779-6	Předpokládaný termín porodu dle poslední menstruace -->
+								<dat_por>2018-01-01</dat_por> 
+								<!-- předpokl. datum porodu, formát D -->
+							</grav_tp>
+						</grav>
+						
+						<u>
+	<!-- urgentní informace -->
+		<!-- alergie -->
+							<!-- alergie, jednotlivě v samost. bloku <ua> /"Allergies and Other Adverse Reactions"/ --> 
+							<ua typ="AF" ind_oprav_sd="N">
+								<!-- typ:
+								U = neznámá informace (není známo, informace je nedostupná - tj. může i nemusí být alergie)
+								N = nejsou známy žádné alergie (žádné aktuální problémy)
+								AF = alergie přítomna, je formalizovaně popsána v bloku uaf (případný údaj v elementu u_al se ignoruje
+								AN = alergie přítomna, je popsána v elementu u_al (neformalizovaně, samostatně jako jedna)
+								AS = alergie přítomna, je popsána v elementu u_al sumárně (pouze textově a jen v jednom volání bloku ua) - původní již nevhodná forma! -->
+								<uaf typ_agens="S" typ_reakce="A" ar_klic="126485001" ar_text="Kopřivka" szp_klic="371923003" szp_text="Mírný/á až střední">
+									<!-- typy agens:
+									L = léky
+									P = potraviny
+									S = substance (látky)
+									N = neznámý typ agens
+									
+									typy reakcí:
+									A = alergie
+									I = intolerance
+									S = sklon k nežádoucí reakci
+									
+									kódy a texty popisu a závažnosti projevu reakcí (spz_klic, spz_text) z číselníků EALERGRE, EZAVAZ -->
+									<alerg_nelek_klic>111088007</alerg_nelek_klic>
+									<!-- kód alergie na léky z číselníku EACTING -->
+									<alerg_text>Latex</alerg_text>
+									<!-- text alergie na léky z číselníku číselník EACTING -->	
+								</uaf>
+								<dat_du typ="A" format="D">1990-01-10</dat_du>
+							</ua>
+							<ua typ="AF" ind_oprav_sd="N">
+								<uaf typ_agens="P" typ_reakce="I" ar_klic="43116000" ar_text="Ekzém" szp_klic="371923003" szp_text="Mírný/á až střední">
+									<alerg_nelek_klic>260176001</alerg_nelek_klic>
+									<alerg_text>Kiwi</alerg_text>
+								</uaf>
+								<dat_du typ="A" format="D">1990-01-10</dat_du>
+							</ua>
+							<ua typ="AF" ind_oprav_sd="N">
+								<uaf typ_agens="P" typ_reakce="I" ar_klic="62315008" ar_text="Průjem" szp_klic="255604002" szp_text="Mírný">
+									<alerg_nelek_klic>47703008</alerg_nelek_klic>
+									<alerg_text>Laktóza</alerg_text>		
+								</uaf>
+								<dat_du typ="A" format="D">1983-05-05</dat_du>
+							</ua>
+							<ua typ="AF" ind_oprav_sd="N">
+								<uaf typ_agens="L" typ_reakce="A" ar_klic="195967001" ar_text="Astma" szp_klic="371924009" szp_text="Střední až závažný/á">
+									<alerg_lek_klic>N02BA01</alerg_lek_klic>
+									<alerg_text>kyselina acetylsalicyová</alerg_text>
+								</uaf>
+								<dat_du typ="A" format="D">1994-03-10</dat_du>
+							</ua>	
+							<!-- údaje o další alergii neformalizovaně, pro PS nelze použít -->
+							<ua typ="AN" ind_oprav_sd="N">
+								<u_al>Laktóza</u_al>
+								<dat_du typ="A" format="R">2005</dat_du>
+							</ua> 
+													
+		<!-- rizikové faktory -->
+							<!-- rizikové faktory, jednotlivě v samost. bloku urf  -->
+							<urf typ="RN" ind_oprav_sd="N">
+							<!-- 
+							U = neznámá informace (není známo, informace je nedostupná - tj. mohou i nemusí být přítomné rizikové faktory)
+							N = nejsou známé žádné rizikové faktory (žádné aktuální problémy)
+							RF = rizikový faktor je přítomen, je formalizovaně popsán v bloku urff (případný údaj v elementu u_rf se ignoruje)
+							RN = rizikový faktor je přítomen, je popsán v elementu u_rf (neformalizovaně, samostatně)
+							RS = rizikové faktory přítomny, jsou popsány v elementu u_rf sumárně (pouze textově a jen v jednom volání bloku urf) - původní již nevhodná forma! 
+							
+							V současnosti zatím nejsou v DASA naplněny číselníky ERIZFAKT pro formalizovaný zápis v bloku urff, nelze tedy použít
+							-->
+								<u_rf>Rizikové fkatory neformalizovaně </u_rf>
+								<dat_du typ="A" format="D">2007-04-15</dat_du>
+								<!-- datum vzniku nebo diagnostikování tohoto rizikového faktoru -->
+							</urf>
+							
+		<!--náhrady, implantáty, zařízení -->
+							<!--náhrady, implantáty, zařízení, jednotlivě v samost. bloku <uniz> /"Medical Devices Coded"/ -->
+							<uniz typ="SF" ind_oprav_sd="N">
+								<!-- typy:
+								U = neznámá informace (anamnéza není známa, informace nedostupná - tj. mohou i nemusí být přítomné implantáty či náhrady)
+								N = nejsou známé žádné pacientovy implantáty, náhrady či zařízení
+								SF = formalizované sdělení - je blíže specifikováno v bloku unizf (formalizovaně, samostatně)
+								SN = neformalizované sdělení - je blíže specifikováno v elementu u_niz (neformalizovaně, samostatně) -->
+								<unizf niz_klic="314523008" niz_text="Kloubní implantát"/>
+								<!-- kód a text náhrad z číselníku ENAHRADY -->
+								<dat_du typ="A">2018-05-05T13:35:55</dat_du>
+								<!-- datum implementace náhrady, formát DT, D, MR, R -->
+							</uniz>
+							<uniz typ="SF" ind_oprav_sd="N">
+								<unizf niz_klic="72506001" niz_text="Implantabilní defibrilátor"/>
+								<dat_du typ="A" format="D">2014-10-20</dat_du>
+							</uniz>
+							<uniz typ="SN" ind_oprav_sd="N">
+								<u_niz>Náhrady a implantáty volným textem, pokud není formalizované.</u_niz>
+								<dat_du typ="A" format="R">2001</dat_du>
+							</uniz>
+
+							
+		<!-- krevní skupina  /"Coded Results"/ -->
+							<uks ind_oprav_sd="N">
+								<!-- kód i text dle číselníku LUKSAB0 -->
+								<ks_rh>AB+</ks_rh>
+								<ks_rh_text>AB Rh(D) pozitivní</ks_rh_text>
+								<dat_du typ="L">2005-08-11T09:15:12</dat_du>
+								<!-- format DTS -->
+							</uks>
+						</u>
+						
+		<!-- anamnéza souhrnná, neformalizovaná -->					
+						<an dat_ab="2019-01-06T11:00:20">
+							<text>
+								<ptext>Nynější onemocnění: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis pulvinar.
+								Osobní anamnéza: Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Etiam quis quam.
+								Rodinná anamnéza: Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Pellentesque sapien.
+								</ptext>
+							</text>					
+						</an>
+						
+		<!-- očkování /"Immunizations"/ -->
+						<oc typ="D">
+							<!--
+							typy sdělované informace:
+							U = informace o očkování nejsou známé
+							P = je sdělována pouze aktuální informace o právě provedeném (prováděném) očkování
+							D = jsou sdělované dílčí informace o očkování, jak jsou k dispozici v IS odesílatele
+							A = jsou sdělované kompletní informace o očkování pacienta
+							-->
+							<ocz typ_oc_kod="HEPA" typ_oc_text="Očkování proti viru hepatitidy B">
+								<!-- typ očkování z číselníku LOCTO -->
+								<davka cis_davky="1" ind_oprav_sd="N" nazev_ol="Egerix-B">
+								<!-- číso dávky a název očkovací látky -->
+									<dat_du typ="L" format="D">1983-01-02</dat_du>
+									<!-- formát DT -->
+								</davka>
+							</ocz>
+							<ocz typ_oc_kod="TTEP" typ_oc_text="Očkování proti záškrtu, tetanu, černému kašli a poliomy">
+								<davka cis_davky="1" ind_oprav_sd="N" nazev_ol="Boostrix Polio">
+									<dat_du typ="L" format="D">1983-01-02</dat_du>
+								</davka>
+							</ocz>
+							<ocz typ_oc_kod="HPVO" typ_oc_text="Očkování proti lidskému papiloviru">
+								<davka cis_davky="1" ind_oprav_sd="N" nazev_ol="Cervarix">
+									<dat_du typ="L" format="D">1994-05-20</dat_du>
+								</davka>
+							</ocz>
+							<ocz typ_oc_kod="HEIB" typ_oc_text="Očkování proti Heamophilus infuenzae typu b">
+								<davka cis_davky="1" ind_oprav_sd="N" nazev_ol="Hiberix">
+									<dat_du typ="L" format="D">1983-01-02</dat_du>
+								</davka>
+							</ocz>
+						</oc>
+						
+		<!-- Seznam zdravotních problémů a diagnóz /"History of Past Illness"/ + /"Active Problems"/ -->
+						<dg>
+							<!-- diagnózy pacienta, jednotlivě v samost. bloku <dgz> -->
+							<dgz typ_dg="T" duverne="A">
+								<!-- typ diagnózy:
+								T = trvalá
+								P = přechodná (dočasná)
+								duverne:
+								A - jedná se o důvěrné sdělení pouze lékaři = informace je určena jen pro lékaře, ne pro pacienta
+								N - není důvěrné (implicitní)								-->
+								<diag poradi="1" nazev="Ca.in situ - štítná žláza a jiné žlázy s vnitřní sekrecí" mkn_verze="2014">D093</diag> 
+								<stav_dg>55561003</stav_dg>
+									<!-- specifikace stavu diagnózy dle číselníku ESTAV:
+									55561003		Aktivní
+									90734009		Chronický/á
+									7087005		Intermitentní
+									73425007		Neaktivní
+									410516002	Nepřítomný/á
+									255227004	Opakující se
+									415684004	Suspektní
+									413322009	Vyřešený/á	-->
+								<zavaz_dg>255604002</zavaz_dg>
+									<!-- závažnost diagnózy dle číselníku EZAVAZ:
+									255604002	Mírný/á
+									371923003	Mírný/á až střední
+									6736007		Středně těžký/á
+									371924009	Střední až závažný/á
+									24484000		Závažný/á
+									442452003	Život ohrožující	-->
+								<dat_du typ="A">2018-11-03T10:00:15</dat_du>
+								<!-- datum vzniku diagnózy, formát D, MR, R-->
+								<dat_up typ="A">2018-11-09T08:30:50</dat_up>
+								<!-- datum ukončení platnosti diagnózy, formát D, MR, R -->
+								<spec_dg>Poznámka k diagnóze</spec_dg>
+								<!-- upřesnění a další informace lékaře k diagnóz-->
+							</dgz>
+							<dgz typ_dg="T">
+								<diag poradi="2" nazev="Diabetes mellitus vzniklý v těhotenství" mkn_verze="2014">O244</diag>
+								<dat_du typ="A" format="D">2011-10-12</dat_du>
+								<dat_up typ="A" format="D">2012-04-30</dat_up>
+							</dgz>
+							<dgz typ_dg="T">
+								<diag poradi="3" nazev="Astma převážně alergické" mkn_verze="2014">J450</diag>
+								<dat_du typ="A" format="D">1994-10-03</dat_du>
+							</dgz>
+							<dgz typ_dg="T">
+								<diag poradi="4" nazev="Hypotyreóza po operačních a jiných výkoneché" mkn_verze="2014">E890</diag>
+								<dat_du typ="A" format="D">1997-10-06</dat_du>
+							</dgz>
+							<dgz typ_dg="T">
+								<diag poradi="5" nazev="Jiné určené srdeční arytmie" mkn_verze="2014">I498</diag>
+								<dat_du typ="A" format="D">2013-01-02</dat_du>
+							</dgz>
+							<dgz typ_dg="T">
+								<diag poradi="6" nazev="Diabetes mellitus 2. typu" mkn_verze="2014">E11</diag>
+								<dat_du typ="A" format="D">2012-04-30</dat_du>
+							</dgz>
+							<dgz typ_dg="T">
+								<diag poradi="7" nazev="Těžká preeklampsie" mkn_verze="2014">O141</diag>
+								<dat_du typ="A" format="D">1997-05-06</dat_du>
+							</dgz>
+							<dgz typ_dg="T">
+								<diag poradi="8" nazev="Akutní tubulo-intersticiální nefritida" mkn_verze="2014">N10</diag>
+								<dat_du typ="A" format="D">2017-05-07</dat_du>
+							</dgz>
+						</dg>
+						
+	<!-- podávané léky /"Medication Status"/ -->
+						<le typ="A">
+							<!-- typ:
+							U = léková terapie není známá
+							N = pacient léky neužívá (tj. zcela bez léků)
+							M = pacient neužívá léky na předpis (užívané léky mimo předpis nejsou známé)
+							A = pacient užívá léky uvedené v bloku lez -->
+							<!-- jednotlivé medikace, v samost. bloku <lez> -->
+							<lez typ_med="P" ind_oprav_sd="N" nazev_lek="Triasyn" kod_atc="C09BB05">
+								<!-- typ medikace:
+								T = trvalá
+								P = přechodná
+								kod_atc = kód léku podle číselníku ATC								
+								Pro min. rozsah Patient Summary chybí: 
+								- Síla podávaného léku /M/
+								- Léková forma 
+								- Způsob podání 
+								- Podávané množství/dávka 	-->
+								<dat_od format="D">2017-05-06</dat_od>
+								<!-- datum zahájení medikace, formát D nebo DT -->
+								<dat_do format="D">2017-10-12</dat_do>
+								<!-- datum ukončení medikace, formát D nebo DT -->
+								<rozpis_v>denně ráno</rozpis_v>
+								<!-- textový rozpis dávkování -->
+							</lez>
+							
+							<lez typ_med="T" ind_oprav_sd="N" nazev_lek="Euthyrox" kod_atc="H03AA01">
+								<dat_od format="D">2017-10-06</dat_od>
+								<rozpis_v>denně ráno nalačno</rozpis_v>
+							</lez>
+							<lez typ_med="P" ind_oprav_sd="N" nazev_lek="Humalog MIX25" kod_atc="A10AD04">
+								<dat_od format="D">2018-01-01</dat_od>
+								<rozpis_v>denně</rozpis_v>
+							</lez>
+							<lez typ_med="P" ind_oprav_sd="N" nazev_lek="Augmentin" kod_atc="J01CR02">
+								<dat_od format="D">2017-05-07</dat_od>
+								<dat_do format="D">2017-05-21</dat_do>
+								<rozpis_v>co 8 hodin</rozpis_v>
+							</lez>
+							<lez typ_med="P" ind_oprav_sd="N" nazev_lek="Berodual N" kod_atc="R03AL01">
+								<dat_od format="D">2015-01-02</dat_od>
+								<rozpis_v>co 8 hodin</rozpis_v>
+							</lez>
+						</le>
+						
+	<!-- chirurgické výkony /"Coded List of Surgeries"/ -->
+						<chv typ="A" chvps_klic="118955007" chvps_text="Implantace v oblasti kardiovaskulárního systému" ind_oprav_sd="N">
+							<!-- typ:
+							U = neznámá informace (anamnéza není známa, informace nedostupná - tj. mohou i nemusí být chirurgické výkony)
+							N = nebyly dosud žádné chirurgické výkony
+							A = sdělovaný chirurgický výkon
+							
+							kód a text výkonů z číselníku EPROC -->
+							<dat_vyk typ="A" format="D">2014-10-20</dat_vyk>
+							<!-- datum provedení výkonu, formát DT, D, MR, R -->
+						</chv>
+						<chv typ="A" chvps_klic="11466000" chvps_text="Císařský řez" ind_oprav_sd="N">
+							<dat_vyk typ="A" format="D">2012-04-14</dat_vyk>
+						</chv>
+						<chv typ="A" chvps_klic="13619001" chvps_text="Tyroidektomie" ind_oprav_sd="N">
+							<dat_vyk typ="A" format="D">1997-06-05</dat_vyk>
+						</chv>
+						
+		<!-- faktory životního stylu, DASTA zatím neřeší  /"Coded Social History"/ -->
+						<fzs typ="A" ind_oprav_sd="N">
+							<!-- typy:
+							U = neznámá informace (není známo, informace nedostupná - tj. mohou i nemusí být patřičné údaje)
+							N = nebyly dosud žádné zaznamenatelné faktory životního stylu
+							A = sdělované faktory životního stylu 
+							ostatní požadavky PS zatím nejsou v DASTA implementováno 					
+							-->
+						</fzs>	
+
+		<!-- léčebná doporučení, sděluje se pouze volným textem -->
+						<ld typ="A" ind_oprav_sd="N" dat_ab="2018-01-08T11:35:00">
+							<!-- typy sdělení
+							U = neznámá informace (informace nedostupná - tj. mohou i nemusí být patřičné údaje)
+							N = nebyla dosud žádná zaznamenatelná léčebná doporučení
+							A = sdělovaná léčebná doporučení -->
+							<text>
+								<ptext>
+								Text sdělení. Léčebná doporučení, která nezahrnují medikamentózní léčbu (tj. dieta, fyzická aktivita, apod.). 
+								</ptext>
+							</text>
+						</ld>
+							
+		<!-- funkční stav, číselník s ID invalidity (HANDICAP) zatím chybí, sděluje se volným textem /"Functional Status"/ -->
+						<fs typ="A" ind_oprav_sd="N" dat_ab="2018-01-08T13:30:55">
+							<!-- typy sdělení:
+							U = neznámá informace (informace nedostupná - tj. mohou i nemusí být patřičné údaje)
+							N = nebyla dosud žádná zaznamenaná informace o funkčním stavu pacienta
+							A = sdělovaný funkční stav pacienta -->
+							<text>
+								<ptext>Text sdělení. Potřeba pacienta mít asistenci jiných osob či služeb. Stav invalidity může ovlivnit rozhodování o další léčbě.
+								</ptext>
+							</text>
+						</fs>
+						
+						<zdroj_sw kod_firmy="STAPRO__" kod_prog="FE" verze_prog="1.120"/>
+						<!-- program, který kompletoval PS, je povinné uvádět jen tehdy, nebyla-li data připravena či zkontrolována garantem dat, tj. pracovníikem uvedenýmv ku_z -->
+					</ku_z_patsumdat>
+				</ku_z>
+			</ku>
+		</ip>
+	</is>
+</dasta>

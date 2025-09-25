@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dasta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.17.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.08.04.xsd" id_soubor="STAPRO__Akord_0247c417a0_20190916114407" verze_ds="04.18.03" verze_nclp="02.01.01" bin_priloha="T" ur="R" typ_odesm="NN" ozn_soub="RNN" potvrzeni="N" dat_vb="2019-09-16T11:44:07" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+  <zdroj_is kod_firmy="STAPRO__" kod_prog="StaproFE" verze_prog="1.137.19" liccis_prog="StaproDe" />
+  <pm icz="04664272" icp="04664272">
+    <as typ="I" />
+  </pm>
+  <is icz="89903000" icp="89903000">
+    <as typ="I" />
+    <a typ="O">
+      <jmeno>FonsEnterprise - nemocnice</jmeno>
+    </a>
+    <ip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id_pac="511207703" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+      <rodcis>511207703</rodcis>
+      <jmeno>Jan</jmeno>
+      <prijmeni>Šťablý</prijmeni>
+      <dat_dn>1951-12-07T00:00:00</dat_dn>
+      <ipi_o cis_is="88d525c2-6c0e-4da9-b3df-4f20897ab296" />
+      <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+        <jmeno>Šťablý Jan</jmeno>
+        <adr>Křivá 15</adr>
+        <psc>60200</psc>
+        <mesto>Brno</mesto>
+        <stat>203</stat>
+        <as typ="E">
+          <obsah>verifieduser@example.com</obsah>
+        </as>
+        <as typ="B">
+          <obsah>+420000000003</obsah>
+        </as>
+        <as typ="T">
+          <obsah>603488781</obsah>
+        </as>
+      </a>
+      <a typ="K" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+        <jmeno>Šťáblý Linh</jmeno>
+        <adr>Brněnská 25</adr>
+        <psc>77900</psc>
+        <mesto>Olomouc</mesto>
+        <stat>203</stat>
+        <as typ="B">
+          <obsah>999888777</obsah>
+        </as>
+      </a>
+      <a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+        <jmeno>MUDr. Břetislav Pokorný</jmeno>
+        <adr>AB Tower, 15. patro</adr>
+        <dop1>Bílá 25/5866</dop1>
+        <dop2>Bílá 25/5866</dop2>
+        <psc>60200</psc>
+        <mesto>Brno</mesto>
+        <stat>203</stat>
+        <as typ="B">
+          <obsah>555444666</obsah>
+        </as>
+      </a>
+      <pv_pac typ_pv="X" dat_ab="2019-09-16T11:44:07" />
+      <ku>
+        <ku_z typku="PATSUM.DAT" fazespec="ZF" idsub="STAPRO__B436DE3B30D3F065201909161105.1">
+          <dat_prov>2019-09-16T11:42:24</dat_prov>
+          <dat_vydani>2019-09-16T11:44:07</dat_vydani>
+          <z_pracoviste icz="04664272" icp="04664272" odb="000">
+            <nazev>Scalesoft</nazev>
+            <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+              <jmeno>Scalesoft</jmeno>
+            </a>
+          </z_pracoviste>
+          <p_pracoviste icz="89903000" icp="89903000" odb="000">
+            <nazev>Pardubická krajská nemocnice, a. s.</nazev>
+          </p_pracoviste>
+          <zpo icz="89903000">
+            <nazev>Pardubická krajská nemocnice, a. s.</nazev>
+            <a_p typ="A">
+              <jmeno xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Pardubická krajská nemocnice, a.s.</jmeno>
+              <adr xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Kyjevská 44</adr>
+              <psc xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">33501</psc>
+              <mesto xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Neurazy</mesto>
+              <stat xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">203</stat>
+              <as typ="E" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <obsah>veverka@nempce.cz</obsah>
+              </as>
+              <as typ="T" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <obsah>0609123456</obsah>
+              </as>
+            </a_p>
+            <prijmeni>Pracovník</prijmeni>
+          </zpo>
+          <text>
+            <ptext xml:space="preserve">Pacientský souhrn Jan Šťablý 2019-09-16</ptext>
+          </text>
+          <ku_pac id_pac="511207703">
+            <jmeno>Jan</jmeno>
+            <prijmeni>Šťablý</prijmeni>
+            <dat_dn>1951-12-07T00:00:00</dat_dn>
+            <sex>M</sex>
+            <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+              <jmeno>Šťablý Jan</jmeno>
+              <adr>Křivá 15</adr>
+              <psc>60200</psc>
+              <mesto>Brno</mesto>
+              <stat>203</stat>
+              <as typ="E">
+                <obsah>verifieduser@example.com</obsah>
+              </as>
+              <as typ="B">
+                <obsah>+420000000003</obsah>
+              </as>
+              <as typ="T">
+                <obsah>603488781</obsah>
+              </as>
+            </a>
+            <a typ="K" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+              <jmeno>Šťáblý Linh</jmeno>
+              <adr>Brněnská 25</adr>
+              <psc>77900</psc>
+              <mesto>Olomouc</mesto>
+              <stat>203</stat>
+              <as typ="B">
+                <obsah>999888777</obsah>
+              </as>
+            </a>
+            <a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+              <jmeno>MUDr. Břetislav Pokorný</jmeno>
+              <adr>AB Tower, 15. patro</adr>
+              <dop1>Bílá 25/5866</dop1>
+              <dop2>Bílá 25/5866</dop2>
+              <psc>60200</psc>
+              <mesto>Brno</mesto>
+              <stat>203</stat>
+              <as typ="B">
+                <obsah>555444666</obsah>
+              </as>
+            </a>
+          </ku_pac>
+          <ku_z_patsumdat>
+            <jazyk jazyk_klic="cs-CZ" pref="P" ind_oprav_sd="N" />
+            <povolani>
+              <povolani_text>učitel</povolani_text>
+            </povolani>
+            <h vyska="178" hmotnost="96.000" dat_ab="2019-02-08T12:47:33" />
+            <u>
+              <ua typ="AN" dat_ab="2019-04-25T15:20:27" ind_oprav_sd="N">
+                <u_al>Zvířecí srst</u_al>
+                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_du format="D" typ="L">2000-01-01</dat_du>
+                <iid root="7377df34-9212-470e-9b84-abac0ebbf992" />
+              </ua>
+              <uks dat_ab="2016-05-18T13:46:06" ind_oprav_sd="N">
+                <ks_rh>A1+</ks_rh>
+                <ks_rh_text>A1 Rh(D) pozitivní</ks_rh_text>
+                <autor>Přijímací Kancelář</autor>
+                <iid root="4fea4f2d-5600-4ac7-95a2-13ebfa9b55a6" />
+              </uks>
+            </u>
+            <an dat_ab="2019-04-25T15:21:04">
+              <text>
+                <ptext xml:space="preserve">Osobní: 
+stp. traumat. amputaci čl.4. prstu HK (08), stp. oper. nosu pro fr. nosu (12), st. p. ASK gen. l. dx 8/18,
+
+Rodinná: 
+bezvýznamná
+
+Pracovní: 
+horník
+
+Sociální: 
+bydlí s rodinou
+
+Farmace: 
+0
+
+</ptext>
+              </text>
+              <autor>Stapro Mlejnek Ondřej Ing.</autor>
+              <iid root="47f72bd6-25aa-4b12-ac37-31cb29d5cec0" />
+            </an>
+            <dg>
+              <dgz typ_dg="P">
+                <diag mkn_verze="2014" poradi="0" nazev="Algoneurodystrofie; jiné">M8908</diag>
+                <dat_du format="D" typ="L">2019-04-25</dat_du>
+                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>2019-04-25</dat_vb>
+                <iid root="2acfa49e-fd76-47cb-ad28-a1fbf3b2c938" />
+              </dgz>
+              <dgz typ_dg="P">
+                <diag mkn_verze="2014" poradi="1" nazev="Nevolnost a únava">R53</diag>
+                <dat_du format="D" typ="L">2019-04-25</dat_du>
+                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>2019-04-25</dat_vb>
+                <iid root="9df566a1-0c8d-45fe-9bf8-48a7c6a1ab1b" />
+              </dgz>
+            </dg>
+            <le typ="A" dat_ab="2019-09-16T11:42:24">
+              <lez typ_med="T" ind_oprav_sd="N" nazev_lek="PARALEN 125" kod_lek="0226694" cis_kod_lek="KLK">
+                <dat_od>2019-09-16</dat_od>
+                <rozpis_v>1-0-1</rozpis_v>
+                <autor>Stapro Targa Jan</autor>
+                <dat_vb>2019-09-16T11:42:13</dat_vb>
+                <iid root="f450e8f8-2f9a-4514-be3b-b3d864af23ba" />
+              </lez>
+            </le>
+            <zdroj_sw kod_firmy="STAPRO__" kod_prog="StaproFE" verze_prog="1.137.19" liccis_prog="StaproDe" />
+          </ku_z_patsumdat>
+        </ku_z>
+      </ku>
+    </ip>
+  </is>
+</dasta>

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+     <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="8.1.1" />
+      <PackageReference Include="TimeZoneConverter" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EMapper.DASTA.Definitions\EMapper.DASTA.Definitions.csproj" />
+      <ProjectReference Include="..\EMapper.HL7.Epsos.Definitions\EMapper.HL7.Epsos.Definitions.csproj" />
+      <ProjectReference Include="..\EMapper.HL7.Pharm.Definitions\EMapper.HL7.Pharm.Definitions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="CDAConvertor\Wave6\Utilities" />
+    </ItemGroup>
+
+</Project>

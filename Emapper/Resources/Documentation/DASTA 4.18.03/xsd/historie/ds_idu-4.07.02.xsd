@@ -1,0 +1,1767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:dsComm="urn:cz-mzcr:ns:dasta:ds4:ds_type"
+  xmlns:dsidu="urn:cz-mzcr:ns:dasta:ds4:ds_idu"
+  xmlns:dsiduCis="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu" elementFormDefault="qualified"
+  targetNamespace="urn:cz-mzcr:ns:dasta:ds4:ds_idu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import schemaLocation="ds_cisidu-4.01.07.xsd" namespace="urn:cz-mzcr:ns:dasta:ds4:ds_cisidu"/>
+    <xs:import schemaLocation="ds_type-4.01.11.xsd" namespace="urn:cz-mzcr:ns:dasta:ds4:ds_type"/>
+    <xs:annotation>
+        <xs:documentation> Import common element types. </xs:documentation>
+    </xs:annotation>
+    <xs:annotation>
+        <xs:documentation>
+      ************************************************ * 
+      Komplexni typy spolecne pro vykazy 
+      * ************************************************ 
+    </xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="vykzaverType">
+        <xs:sequence>
+            <xs:element name="dat_vyp" type="dsComm:dat_xxType" />
+        </xs:sequence>
+        <xs:attribute name="vyplnil" type="dsComm:str30" use="required"/>
+        <xs:attribute name="vyptel" type="dsComm:str20" use="required"/>
+        <xs:attribute name="vypmail" type="dsComm:str50" />
+        <xs:attribute name="komentar" type="dsComm:str128" />
+    </xs:complexType>
+    <xs:complexType name="vykhlavType">
+        <xs:attribute name="dazpr" type="xs:gYear" use="required"/>
+        <xs:attribute name="cisobd" type="dsiduCis:cisobdType" use="required"/>
+        <xs:attribute name="drvyk" type="dsiduCis:drvykType" use="required"/>
+        <xs:attribute name="ico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="pcz" type="dsComm:number3de" use="required" />
+        <xs:attribute name="drzar" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="kraj" type="dsComm:str2" />
+        <xs:attribute name="okres" type="dsComm:str1" />
+        <xs:attribute name="orp" type="dsComm:str4" />
+        <xs:attribute name="pou" type="dsComm:str1" />
+        <xs:attribute name="nazzar" type="dsComm:str38" />
+        <xs:attribute name="ulice" type="dsComm:str30" />
+        <xs:attribute name="cisdom" type="dsComm:str4" />
+        <xs:attribute name="cisori" type="dsComm:str4" />
+        <xs:attribute name="psc" type="dsComm:number5d" />
+        <xs:attribute name="nazob" type="dsComm:str25" />
+        <xs:attribute name="naz" type="dsComm:str15" />
+        <xs:attribute name="ptitul" type="dsComm:str15" />
+        <xs:attribute name="jmeno" type="dsComm:str10" />
+        <xs:attribute name="prijmeni" type="dsComm:str20" />
+        <xs:attribute name="ztitul" type="dsComm:str15" />
+        <xs:attribute name="rezort" type="dsComm:str4" />
+        <xs:attribute name="zriz" type="dsComm:str1" />
+        <xs:attribute name="plati_od" type="xs:date" />
+        <xs:attribute name="plati_do" type="xs:date" />
+    </xs:complexType>
+    <xs:complexType name="avykhlavType">
+        <xs:attribute name="dazpr" type="xs:gYear" use="required"/>
+        <xs:attribute name="cisobd" type="dsiduCis:cisobdType" use="required"/>
+        <xs:attribute name="drvyk" type="dsiduCis:drvykType" use="required"/>
+        <xs:attribute name="ico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="pcz" type="dsComm:number3de" use="required" />
+        <xs:attribute name="oddel" type="dsComm:number0-99" use="required" />
+        <xs:attribute name="pcod" type="dsComm:number1d" use="required" />
+        <xs:attribute name="pracov" type="dsComm:number0-99" use="required" />
+        <xs:attribute name="drzar" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="kraj" type="dsComm:str2e" />
+        <xs:attribute name="okres" type="dsComm:str1" />
+        <xs:attribute name="orp" type="dsComm:str4" />
+        <xs:attribute name="pou" type="dsComm:str1" />
+        <xs:attribute name="nazzar" type="dsComm:str38" />
+        <xs:attribute name="ulice" type="dsComm:str30" />
+        <xs:attribute name="cisdom" type="dsComm:str4" />
+        <xs:attribute name="cisori" type="dsComm:str4" />
+        <xs:attribute name="psc" type="dsComm:number5d" />
+        <xs:attribute name="nazob" type="dsComm:str25" />
+        <xs:attribute name="naz" type="dsComm:str15" />
+        <xs:attribute name="ptitul" type="dsComm:str15" />
+        <xs:attribute name="jmeno" type="dsComm:str10" />
+        <xs:attribute name="prijmeni" type="dsComm:str20" />
+        <xs:attribute name="ztitul" type="dsComm:str15" />
+        <xs:attribute name="rezort" type="dsComm:str4" />
+        <xs:attribute name="zriz" type="dsComm:str1" />
+        <xs:attribute name="plati_od" type="xs:date" />
+        <xs:attribute name="plati_do" type="xs:date" />
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation>
+      ************************************************ * 
+      Komplexni typy pro vetev  NA (vykazy typu A) 
+      * ************************************************ 
+    </xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="a101Type">
+        <xs:sequence>
+            <xs:element name="avykhlav" type="dsidu:avykhlavType"/>
+            <xs:element maxOccurs="unbounded" name="a101h">
+                <xs:complexType>
+                    <xs:attribute name="radek" type="dsComm:number11-99" use="required"/>
+                    <xs:attribute name="slo1" type="dsComm:str9"/>
+                    <xs:attribute name="slo2" type="dsComm:str9"/>
+                    <xs:attribute name="slo3" type="dsComm:str9"/>
+                    <xs:attribute name="slo4" type="dsComm:str9"/>
+                    <xs:attribute name="slo5" type="dsComm:str9"/>
+                    <xs:attribute name="slo6" type="dsComm:str9"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:choice>
+                <xs:element maxOccurs="unbounded" name="a101p">
+                    <xs:complexType>
+                        <xs:attribute name="radek" type="dsComm:number121-199" use="required" />
+                        <xs:attribute name="slo1" type="dsComm:str8"/>
+                        <xs:attribute name="slo2" type="dsComm:str8"/>
+                        <xs:attribute name="slo3" type="dsComm:str8"/>
+                        <xs:attribute name="slo4" type="dsComm:str8"/>
+                        <xs:attribute name="slo5" type="dsComm:str8"/>
+                        <xs:attribute name="slo6" type="dsComm:str8"/>
+                        <xs:attribute name="slo7" type="dsComm:str8"/>
+                        <xs:attribute name="slo8" type="dsComm:str8"/>
+                        <xs:attribute name="slo9" type="dsComm:str8"/>
+                        <xs:attribute name="slo10" type="dsComm:str8"/>
+                        <xs:attribute name="slo11" type="dsComm:str8"/>
+                        <xs:attribute name="slo12" type="dsComm:str8"/>
+                        <xs:attribute name="slo13" type="dsComm:str8"/>
+                        <xs:attribute name="slo14" type="dsComm:str8"/>
+                        <xs:attribute name="slo15" type="dsComm:str8"/>
+                        <xs:attribute name="slo16" type="dsComm:str8"/>
+                        <xs:attribute name="slo17" type="dsComm:str8"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="a101pkb">
+                    <xs:complexType>
+                        <xs:attribute name="kod_vzp" type="dsComm:str5" use="required"/>
+                        <xs:attribute name="pocet" type="dsComm:str8"/>
+                        <xs:attribute name="poceto" type="dsComm:str8"/>
+                        <xs:attribute name="typ" type="dsComm:str1"/>
+                        <xs:attribute name="kamera" type="dsComm:str1"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+            <xs:element name="vykzaver" type="dsidu:vykzaverType" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation>
+      ************************************************ * 
+      Komplexni typy pro vetev   NE (vykazy typu E) 
+      * ************************************************ 
+    </xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="e2Type">
+        <xs:sequence>
+            <xs:element name="e2ha" maxOccurs="unbounded" type="dsidu:e2hType" />
+            <xs:element name="e2hb" minOccurs="0" type="dsidu:e2hType" />
+            <xs:element name="e2od5a" minOccurs="0" maxOccurs="unbounded" type="dsidu:e2od5Type" />
+            <xs:element name="e2od5b" minOccurs="0" maxOccurs="unbounded" type="dsidu:e2od5Type" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="e2p">
+                <xs:complexType>
+                    <xs:attribute name="tab" type="dsComm:number1-3" use="required"/>
+                    <xs:attribute name="radek" type="dsComm:number71-87" use="required"/>
+                    <xs:attribute name="slo1" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo2" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo3" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo4" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo5" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo6" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo7" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo8" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo9" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo10" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo11" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo12" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo13" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo14" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo15" type="dsComm:str13" use="required"/>
+                    <xs:attribute name="slo16" type="dsComm:str13" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="vykzaver" type="dsidu:vykzaverType" />
+        </xs:sequence>
+        <xs:attribute name="dazpr" type="xs:gYear" use="required"/>
+        <xs:attribute name="cisobd" type="dsiduCis:cisobdType" use="required"/>
+        <xs:attribute name="drvyk" type="dsiduCis:drvykType" use="required"/>
+        <xs:attribute name="ico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="pcz" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="drzar" type="dsComm:number3de" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="e2hType">
+        <xs:attribute name="radek" type="dsComm:number21-99" use="required"/>
+        <xs:attribute name="slo1" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo2" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo3" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo4" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo5" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo6" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo7" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo8" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo9" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo10" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo11" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo12" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo13" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo14" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo15" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo16" type="dsComm:str13" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="e2od5Type">
+        <xs:attribute name="pcz" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="drzar" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="radek" type="dsComm:number2d" use="required"/>
+        <xs:attribute name="slo17" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo18" type="dsComm:str13" use="required"/>
+        <xs:attribute name="slo19" type="dsComm:str13" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="e3Type" >
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="e3h">
+                <xs:complexType>
+                    <xs:attribute name="radek" type="dsComm:number2d" use="required"/>
+                    <xs:attribute name="slo1" type="dsComm:str10" use="required"/>
+                    <xs:attribute name="slo2" type="dsComm:str10" use="required"/>
+                    <xs:attribute name="slo3" type="dsComm:str10" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="e3od3">
+                <xs:complexType>
+                    <xs:attribute name="pcz" type="dsComm:number3de" use="required"/>
+                    <xs:attribute name="drzar" type="dsComm:number3de" use="required"/>
+                    <xs:attribute name="radek" type="dsComm:number2d" use="required"/>
+                    <xs:attribute name="slo1" type="dsComm:str10" use="required"/>
+                    <xs:attribute name="slo2" type="dsComm:str10" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="vykzaver" type="dsidu:vykzaverType" />
+        </xs:sequence>
+        <xs:attribute name="dazpr" type="xs:gYear" use="required"/>
+        <xs:attribute name="cisobd" type="dsiduCis:cisobdType" use="required"/>
+        <xs:attribute name="drvyk" type="dsiduCis:drvykType" use="required"/>
+        <xs:attribute name="ico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="pcz" type="dsComm:number3de"/>
+        <xs:attribute name="drzar" type="dsComm:number3de" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="e4Type" >
+        <xs:sequence>
+            <xs:element name="vykhlav" type="dsidu:vykhlavType" />
+            <xs:element maxOccurs="unbounded" name="e4h">
+                <xs:complexType>
+                    <xs:attribute name="radek" type="dsComm:number11-199" use="required"/>
+                    <xs:attribute name="slo1" type="dsComm:str10"/>
+                    <xs:attribute name="slo2" type="dsComm:str10"/>
+                    <xs:attribute name="slo3" type="dsComm:str10"/>
+                    <xs:attribute name="slo4" type="dsComm:str10"/>
+                    <xs:attribute name="slo5" type="dsComm:str10"/>
+                    <xs:attribute name="slo6" type="dsComm:str10"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="vykzaver" type="dsidu:vykzaverType" />
+        </xs:sequence>
+        <xs:attribute name="zp111" type="dsComm:str1"/>
+        <xs:attribute name="zp201" type="dsComm:str1"/>
+        <xs:attribute name="zp205" type="dsComm:str1"/>
+        <xs:attribute name="zp207" type="dsComm:str1"/>
+        <xs:attribute name="zp209" type="dsComm:str1"/>
+        <xs:attribute name="zp211" type="dsComm:str1"/>
+        <xs:attribute name="zp217" type="dsComm:str1"/>
+        <xs:attribute name="zp228" type="dsComm:str1"/>
+        <xs:attribute name="zp000" type="dsComm:str1"/>
+        <xs:attribute name="danevid" type="dsComm:str1"/>
+        <xs:attribute name="ucetni" type="dsComm:str1"/>
+        <xs:attribute name="datschr" type="dsComm:str1"/>
+        <xs:attribute name="zzweb" type="dsComm:str30"/>
+        <xs:attribute name="zztel" type="dsComm:str20"/>
+        <xs:attribute name="zzfax" type="dsComm:str20"/>
+        <xs:attribute name="zzmail" type="dsComm:str50"/>
+        <xs:attribute name="sztitl" type="dsComm:str15"/>
+        <xs:attribute name="szjmeno" type="dsComm:str15"/>
+        <xs:attribute name="szprijm" type="dsComm:str20"/>
+        <xs:attribute name="sztel" type="dsComm:str20"/>
+        <xs:attribute name="szfax" type="dsComm:str20"/>
+        <xs:attribute name="szmail" type="dsComm:str50"/>
+    </xs:complexType>
+    <xs:complexType name="e5_8Type" >
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="e5_8h">
+                <xs:complexType>
+                    <xs:attribute name="radek" type="dsComm:number3d" use="required"/>
+                    <xs:attribute name="slo1" type="dsComm:str13" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="vykzaver" type="dsidu:vykzaverType" />
+        </xs:sequence>
+        <xs:attribute name="dazpr" type="xs:gYear" use="required"/>
+        <xs:attribute name="cisobd" type="dsiduCis:cisobdType" use="required"/>
+        <xs:attribute name="drvyk" type="dsiduCis:drvykType" use="required"/>
+        <xs:attribute name="ico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="pcz" type="dsComm:number3de"/>
+        <xs:attribute name="oddel" type="dsiduCis:oddeleniType" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="e6Type">
+        <xs:sequence>
+            <xs:element name="e6_vyk">
+                <xs:complexType>
+                    <xs:attribute name="nehim" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nehim_nz" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nehim_np" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="hmim" type="dsComm:number8d" use="required"/>
+                    <xs:attribute name="hmim_nz" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="hmim_np" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zdrtech" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zdrtech_nz" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zdrtech_np" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="celkim" type="dsComm:number8d" use="required"/>
+                    <xs:attribute name="celkim_nz" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="celkim_np" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="leciva" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="leciva_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="leciva_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="leciva_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="leciva_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="leciva_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pzt" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pzt_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pzt_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pzt_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pzt_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pzt_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="naproz" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="naproz_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="naproz_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="naproz_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="naproz_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="naproz_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="energ" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="energ_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="energ_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="energ_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="energ_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="energ_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="sluzby" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="sluzby_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="sluzby_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="sluzby_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="sluzby_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="sluzby_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="osnakl" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="osnakl_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="osnakl_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="osnakl_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="osnakl_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="osnakl_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="odpisy" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="odpisy_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="odpisy_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="odpisy_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="odpisy_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="odpisy_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="dalnak" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="dalnak_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="dalnak_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="dalnak_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="dalnak_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="dalnak_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nakcel" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nakcel_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nakcel_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nakcel_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nakcel_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nakcel_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trzzp" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trzzp_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trzzp_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trzzp_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trzzp_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trvzp" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trvzp_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trvzp_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trvzp_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trvzp_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trso" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trso_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trso_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trso_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trso_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpo" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpo_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpo_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpo_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpo_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpo_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpc" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpc_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpc_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpc_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpc_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trmzpc_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trproz" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trproz_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trproz_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trproz_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trproz_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trproz_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="provdot" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="vynost" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="vyncel" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="vyncel_l" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="vyncel_a" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="vyncel_d" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="vyncel_j" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="vyncel_n" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="dary" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="granty" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="odpisy_zt" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nebuv" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nejiuv" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="nelea" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="him_vz" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="him_uv" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="him_psf" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="him_ps" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="him_dz" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="him_ds" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="him_fksp" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zup" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohled" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohled_2" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohled_3" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohled_4" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohled_5" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohled_6" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohledzp" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohledzp_2" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohledzp_3" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohledzp_4" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohledzp_5" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pohledzp_6" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavaz" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavaz_2" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavaz_3" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavaz_4" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavaz_5" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavaz_6" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavazdl" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavazdl_2" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavazdl_3" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavazdl_4" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavazdl_5" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="zavazdl_6" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="matene" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="spnak" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="krev" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="potrav" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="vsemat" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="biomat" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="oprudr" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="cestov" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="najem" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="socpoj" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="socnak" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="trzvyr" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pofore" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="neforep" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="pluzek" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="posdnu" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="poc_amb" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="body" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="aktiva" type="dsComm:number7.2" use="required"/>
+                    <xs:attribute name="vl_zdroje" type="dsComm:number7.2" use="required"/>
+                    <xs:attribute name="kr_zavaz" type="dsComm:number7.2" use="required"/>
+                    <xs:attribute name="ci_zdroje" type="dsComm:number7.2" use="required"/>
+                    <xs:attribute name="ob_aktiva" type="dsComm:number7.2" use="required"/>
+                    <xs:attribute name="zasoby" type="dsComm:number7.2" use="required"/>
+                    <xs:attribute name="poh_cel" type="dsComm:number7.2" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="vykzaver" type="dsidu:vykzaverType" />
+        </xs:sequence>
+        <xs:attribute fixed="E602" name="drvyk" use="required"/>
+        <xs:attribute name="dazpr" type="xs:gYear" use="required"/>
+        <xs:attribute name="cisobd" type="dsiduCis:cisobdTypeE6" use="required"/>
+        <xs:attribute name="ico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="pcz" type="dsComm:number3de" use="required"/>
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation> ************************************************ * Komplexni typy pro vetev
+      NL (vykazy typu L) * ************************************************ </xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="nelfType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="nelfv">
+                <xs:complexType>
+                    <xs:attribute name="lodd" type="dsComm:oddType" use="required"/>
+                    <xs:attribute name="lpocodd" type="dsComm:number3d" use="required"/>
+                    <xs:attribute name="llekp" type="dsComm:number6.2" use="required"/>
+                    <xs:attribute name="llekps" type="dsComm:number6.2" use="required"/>
+                    <xs:attribute name="lluzka" type="dsComm:number5d" use="required"/>
+                    <xs:attribute name="lnasl" type="dsComm:number5d" />
+                    <xs:attribute name="ldeti" type="dsComm:number4d" use="optional"/>
+                    <xs:attribute name="lprpocluz" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="lprijati" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="lppred" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="lpprac" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="lpropus" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="lumrti" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="lupred" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="luprac" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="losdny" type="dsComm:number8d" use="required"/>
+                    <xs:attribute name="lvyrzdrp" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="lluzkap" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="lszpp" type="dsComm:number7.2" use="required"/>
+                    <xs:attribute name="lszpuluz" type="dsComm:number7.2" use="required"/>
+                    <xs:attribute name="lnzpuluz" type="dsComm:number7.2" use="required"/>
+                    <xs:attribute name="lpocops" type="dsComm:number2d" use="optional"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="lico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="lpcz" type="dsComm:number3d" use="required"/>
+        <xs:attribute name="lkraj" type="dsComm:str2" use="required"/>
+        <xs:attribute name="lokres" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="ldrzar" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="lobdobi" type="dsiduCis:cisobdTypeNelf" use="required"/>
+        <xs:attribute name="lrok" type="xs:gYear" use="required"/>
+        <xs:attribute name="lrezort" type="dsComm:number4d" use="required"/>
+        <xs:attribute name="lzriz" type="dsiduCis:zrizType" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="nelfdiType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="nelfdt">
+                <xs:complexType>
+                    <xs:attribute name="dodd" type="dsComm:oddType" use="required"/>
+                    <xs:attribute name="dr21" type="dsComm:number4d" use="required"/>
+                    <xs:attribute name="dr22" type="dsComm:number4d" use="required"/>
+                    <xs:attribute name="dr23" type="dsComm:number4d" use="required"/>
+                    <xs:attribute name="dr24" type="dsComm:number4d" use="required"/>
+                    <xs:attribute name="dr25" type="dsComm:number4d" use="required"/>
+                    <xs:attribute name="dr26" type="dsComm:number4d" use="required"/>
+                    <xs:attribute name="dr27" type="dsComm:number4d" use="required"/>
+                    <xs:attribute name="dr28" type="dsComm:number4d" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="dlico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="dpcz" type="dsComm:number3d" use="required"/>
+        <xs:attribute name="dkraj" type="dsComm:number2d" use="required"/>
+        <xs:attribute name="dokres" type="dsComm:str1" use="required"/>
+        <xs:attribute name="dobdobi" type="dsiduCis:cisobdTypeNelf" use="required"/>
+        <xs:attribute name="drok" type="xs:gYear" use="required"/>
+        <xs:attribute name="drezort" type="dsComm:number3de" use="required"/>
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation> 
+      ********************************************************** * 
+      Komplexni typy     pro vetev NR (blok narodnich registru) *
+      ********************************************************** 
+    </xs:documentation>
+    </xs:annotation>
+    <xs:annotation>
+        <xs:documentation> VETEV NRH (Narodni registr hospitalizaci)</xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="nrhhType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="nrhi" type="dsidu:nrhiType"/>
+        </xs:sequence>
+        <xs:attribute name="hobd" type="dsComm:yearMonthType" use="required"/>
+        <xs:attribute name="hico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="hpcz" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="hodd" type="dsComm:oddType" use="required"/>
+        <xs:attribute name="hpoch" type="dsComm:number4d" use="required"/>
+        <xs:attribute name="hpocv" type="dsComm:number6d" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="nrhiType">
+        <xs:sequence>
+            <xs:element name="nrhv" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute name="hdavyk" type="xs:date" use="required"/>
+                    <xs:attribute name="hvyk" type="dsComm:str5" use="required"/>
+                    <xs:attribute name="hpocvyk" type="dsComm:number2d"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="hidcis" type="dsComm:rodcisType" use="required"/>
+        <xs:attribute name="hcispac" type="dsComm:number5d" use="optional"/>
+        <xs:attribute name="hobec" type="dsComm:number6d" use="required"/>
+        <xs:attribute name="horp" type="dsComm:number4de" />
+        <xs:attribute name="hstaobc" type="dsComm:str3" use="required"/>
+        <xs:attribute name="hrostav" type="dsComm:number0-5" use="required"/>
+        <xs:attribute name="hkzam" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="hdophosp" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="hdapri" type="dsComm:dateTimeMin" use="required"/>
+        <xs:attribute name="hduprij" type="dsComm:number1-7" use="required"/>
+        <xs:attribute name="hprij" type="dsComm:number1-3" use="required"/>
+        <xs:attribute name="hdapr" type="dsComm:dateTimeMin"/>
+        <xs:attribute name="hdgz" type="dsComm:str5" use="required"/>
+        <xs:attribute name="hhosprv" type="dsComm:number0-2" use="required"/>
+        <xs:attribute name="hdg1" type="dsComm:str5" use="optional"/>
+        <xs:attribute name="hdg2" type="dsComm:str5" use="optional"/>
+        <xs:attribute name="hdg3" type="dsComm:str5" use="optional"/>
+        <xs:attribute name="hdg4" type="dsComm:str5" use="optional"/>
+        <xs:attribute name="hdg5" type="dsComm:str5" use="optional"/>
+        <xs:attribute name="hdaop" type="dsComm:dateTimeMin" use="optional"/>
+        <xs:attribute name="hdgo" type="dsComm:str5" use="optional"/>
+        <xs:attribute name="hnemnak" type="dsComm:number0-5" use="optional"/>
+        <xs:attribute name="hdroper" type="dsComm:number0-2" use="optional"/>
+        <xs:attribute name="hreoper" type="dsComm:number0-3" use="optional"/>
+        <xs:attribute name="hpoopko1" type="dsComm:number1d" use="optional"/>
+        <xs:attribute name="hpoopko2" type="dsComm:number1d" use="optional"/>
+        <xs:attribute name="hpoopko3" type="dsComm:number1d" use="optional"/>
+        <xs:attribute name="hpoopko4" type="dsComm:number1d" use="optional"/>
+        <xs:attribute name="hdnyjip" type="dsComm:number3d" use="optional"/>
+        <xs:attribute name="hdrg" type="dsComm:str5" use="optional"/>
+        <xs:attribute name="hdapp" type="dsComm:dateTimeMin" use="required"/>
+        <xs:attribute name="hdg1c" type="dsComm:str5" use="optional"/>
+        <xs:attribute name="hdg1a" type="dsComm:str5" use="optional"/>
+        <xs:attribute name="hukhosp" type="dsComm:number0-8" use="required"/>
+        <xs:attribute name="hpodape" type="dsComm:number0-6" use="required"/>
+        <xs:attribute name="hdnykat1" type="dsComm:number4d"/>
+        <xs:attribute name="hdnykat2" type="dsComm:number4d"/>
+        <xs:attribute name="hdnykat3" type="dsComm:number4d"/>
+        <xs:attribute name="hdnykat4" type="dsComm:number4d"/>
+        <xs:attribute name="hdnykat5" type="dsComm:number4d"/>
+        <xs:attribute name="hdnykat0" type="dsComm:number4d"/>
+        <xs:attribute name="huhrady" type="dsiduCis:uhradyType"/>
+        <xs:attribute name="hkrok" type="dsComm:str3"/>
+        <xs:attribute name="hzdrpoj" type="dsComm:number3de" />
+        <xs:attribute name="hdgzzz" type="dsComm:str5" />
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation> VETEV NRR (Narodni registr rodicek) </xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="nrrType">
+        <xs:choice>
+            <xs:element maxOccurs="unbounded" name="nrrod" type="dsidu:nrrodType"/>
+            <xs:element maxOccurs="unbounded" name="nrr_chy" type="dsidu:nrr_chyType"/>
+        </xs:choice>
+        <xs:attribute name="rico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="rpcz" type="dsComm:number3d" use="required"/>
+        <xs:attribute name="rodd" type="dsComm:oddType" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="nrrodType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="nrrodp">
+                <xs:complexType>
+                    <xs:attribute name="rpord" type="dsComm:number1-9" use="required"/>
+                    <xs:attribute name="rplod" type="dsComm:number1-3" use="required"/>
+                    <xs:attribute name="rvagin" type="dsComm:number1-7"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="nrrodn">
+                <xs:complexType>
+                    <xs:attribute name="rpord" type="dsComm:number1-9" use="required"/>
+                    <xs:attribute name="rpohl" type="dsComm:number1-3" use="required"/>
+                    <xs:attribute name="rvit" type="dsComm:number1-2" use="required"/>
+                    <xs:attribute name="rhmot" type="dsComm:number300-8000"/>
+                    <xs:attribute name="rapgar1" type="dsComm:number0-10"/>
+                    <xs:attribute name="rapgar5" type="dsComm:number0-10"/>
+                    <xs:attribute name="rapgar10" type="dsComm:number0-10"/>
+                    <xs:attribute name="rph" type="dsComm:number650-760"/>
+                    <xs:attribute name="rstavd" type="dsComm:number1-4"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="rcispor" type="dsComm:number0-9999" use="required"/>
+        <xs:attribute name="rjmm" type="dsComm:str35"/>
+        <xs:attribute name="rrcm" type="dsComm:rodcisType" use="required"/>
+        <xs:attribute name="rbydlm" type="dsComm:number3d" />
+        <xs:attribute name="robecm" type="dsComm:number6d" use="required"/>
+        <xs:attribute name="rorp" type="dsComm:number4de" />
+        <xs:attribute name="rstaobc" type="dsComm:number3d" use="required"/>
+        <xs:attribute name="rzp" type="dsComm:number3de" />
+        <xs:attribute name="rprij" type="dsComm:dateHour" use="required"/>
+        <xs:attribute name="rstav" type="dsComm:number0-5"/>
+        <xs:attribute name="rvzdel" type="dsComm:number1-4"/>
+        <xs:attribute name="rcelpor" type="dsComm:number0-15" use="required"/>
+        <xs:attribute name="rpredpor" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="rscpor" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="rmrtve" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="rcnu" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="rpnu" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="rsampot" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="rupt" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="rmimo" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="rprenat" type="dsComm:number0a2-43" use="required"/>
+        <xs:attribute name="rkontr" type="dsComm:number0-25" use="required"/>
+        <xs:attribute name="rhosp" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="rhostyd" type="dsComm:number0-40" use="required"/>
+        <xs:attribute name="rprirus" type="dsComm:number0-40" use="required"/>
+        <xs:attribute name="rkour" type="dsComm:logical" use="required"/>
+        <xs:attribute name="ralkoh" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rdrogy" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rultr1" type="dsComm:number0a5-43"/>
+        <xs:attribute name="rultr2" type="dsComm:number0a5-43"/>
+        <xs:attribute name="rultr3" type="dsComm:number0a5-43"/>
+        <xs:attribute name="rultr4" type="dsComm:number0a5-43"/>
+        <xs:attribute name="rdiab1" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rdiab2" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rdiab3" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rdiab4" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rdiab5" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rdiab6" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh1" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh2" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh3" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh4" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh5" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh6" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh7" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh8" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh9" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh10" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh11" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rteh12" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rdgteh1" type="dsComm:str4"/>
+        <xs:attribute name="rdgteh2" type="dsComm:str4"/>
+        <xs:attribute name="rpred" type="xs:date" use="required"/>
+        <xs:attribute name="rodhad" type="dsComm:number1-2" use="required"/>
+        <xs:attribute name="rdatpor" type="dsComm:dateHour" use="required"/>
+        <xs:attribute name="rodtok" type="dsComm:dateHour" use="required"/>
+        <xs:attribute name="rcetteh" type="dsComm:number1-9" use="required"/>
+        <xs:attribute name="rgesta" type="dsComm:number22-45" use="required"/>
+        <xs:attribute name="rdgind1" type="dsComm:str4"/>
+        <xs:attribute name="rdgind2" type="dsComm:str4"/>
+        <xs:attribute name="rriziko1" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rriziko2" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rriziko3" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rriziko4" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rctg1" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rctg2" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rdgsc1" type="dsComm:str4"/>
+        <xs:attribute name="rdgsc2" type="dsComm:str4"/>
+        <xs:attribute name="ranes" type="dsComm:number1-3"/>
+        <xs:attribute name="rsc" type="dsComm:number1-4"/>
+        <xs:attribute name="rsckp" type="dsComm:number1-2"/>
+        <xs:attribute name="rporod1" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rporod2" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rporod3" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rporod4" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rporod5" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rporod6" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rporod7" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rporod8" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rdgpor" type="dsComm:str4"/>
+        <xs:attribute name="rleky1" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rleky2" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rleky3" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rleky4" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rleky5" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rleky6" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rleky7" type="dsComm:logical" use="required"/>
+        <xs:attribute name="rvedl" type="dsComm:number1-6" use="required"/>
+        <xs:attribute name="rzhodn" type="dsComm:number1-3" use="required"/>
+        <xs:attribute name="rdatuk" type="dsComm:dateHour" use="required"/>
+        <xs:attribute name="rduvuk" type="dsComm:number1-4" use="required"/>
+        <xs:attribute name="rdgsest1" type="dsComm:str4"/>
+        <xs:attribute name="rdgsest2" type="dsComm:str4"/>
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation> VETEV NRN (Narodni registr novorozencu) </xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="nrnType">
+        <xs:choice>
+            <xs:element maxOccurs="unbounded" name="nrnar">
+                <xs:complexType>
+                    <xs:attribute name="nzprava" type="dsComm:number1-9" use="required"/>
+                    <xs:attribute name="ncispor" type="dsComm:number0-9999" use="required"/>
+                    <xs:attribute name="njmd" type="dsComm:str35"/>
+                    <xs:attribute name="ncetteh" type="dsComm:number1-9" use="required"/>
+                    <xs:attribute name="npord" type="dsComm:number1d" use="required"/>
+                    <xs:attribute name="nrcd" type="dsComm:rodcisType"/>
+                    <xs:attribute name="njmm" type="dsComm:str35"/>
+                    <xs:attribute name="nzp" type="dsComm:number3de" />
+                    <xs:attribute name="nrcm" type="dsComm:rodcisType" use="required"/>
+                    <xs:attribute name="nrnaro" type="xs:gYear"/>
+                    <xs:attribute name="nbydlm" type="dsComm:number3de" />
+                    <xs:attribute name="nobecm" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="norp" type="dsComm:number4de" />
+                    <xs:attribute name="nstaobc" type="dsComm:number3d" use="required"/>
+                    <xs:attribute name="nporod" type="dsComm:number1-5"/>
+                    <xs:attribute name="nzpusob" type="dsComm:number1-2"/>
+                    <xs:attribute name="nkleste" type="dsComm:number1-2"/>
+                    <xs:attribute name="npoloha" type="dsComm:number1-3"/>
+                    <xs:attribute name="nnar" type="dsComm:dateHourMin" use="required"/>
+                    <xs:attribute name="nvital" type="dsComm:number1-2" use="required"/>
+                    <xs:attribute name="npohl" type="dsComm:number1-3" use="required"/>
+                    <xs:attribute name="nhmot" type="dsComm:number200-8000"/>
+                    <xs:attribute name="ndelka" type="dsComm:number20-70"/>
+                    <xs:attribute name="ngesta" type="dsComm:number22-45"/>
+                    <xs:attribute name="nlecsal1" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecsal2" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecsal3" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecsal4" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecsal5" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecsal6" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="napgar1" type="dsComm:number2de"/>
+                    <xs:attribute name="napgar5" type="dsComm:number2de"/>
+                    <xs:attribute name="napgar10" type="dsComm:number2de"/>
+                    <xs:attribute name="npri" type="dsComm:dateHourMin"/>
+                    <xs:attribute name="nlecodd1" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecodd2" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecodd3" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="ndnyupv" type="dsComm:number0-92"/>
+                    <xs:attribute name="nlecodd4" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecodd5" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecodd6" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecodd7" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nlecodd8" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="ndgop" type="dsComm:str4"/>
+                    <xs:attribute name="nmaxbe" type="dsComm:BE"/>
+                    <xs:attribute name="nmaxo" type="dsComm:number21-100"/>
+                    <xs:attribute name="nmino" type="dsComm:number21-100"/>
+                    <xs:attribute name="nnem1" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem2" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem3" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem4" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem5" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem6" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem7" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem8" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem9" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem10" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem11" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem12" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nnem13" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nkalm" type="dsComm:number1-2"/>
+                    <xs:attribute name="nskrin1" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nskrin2" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nskrin3" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nskrin4" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nskrin5" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nskrin6" type="dsComm:logical" use="required"/>
+                    <xs:attribute name="nvv" type="dsComm:number1-2" use="required"/>
+                    <xs:attribute name="ndgvv1" type="dsComm:str4"/>
+                    <xs:attribute name="ndgvv2" type="dsComm:str4"/>
+                    <xs:attribute name="ndgvv3" type="dsComm:str4"/>
+                    <xs:attribute name="ndgvv4" type="dsComm:str4"/>
+                    <xs:attribute name="ndgvv5" type="dsComm:str4"/>
+                    <xs:attribute name="nuko" type="dsComm:dateHourMin" use="required"/>
+                    <xs:attribute name="nhmotp" type="dsComm:number500-8000"/>
+                    <xs:attribute name="nhlava" type="dsComm:number150-600"/>
+                    <xs:attribute name="nvyziv" type="dsComm:number0-4"/>
+                    <xs:attribute name="nduvuk" type="dsComm:number0-5"/>
+                    <xs:attribute name="nicoprel" type="dsComm:icisType"/>
+                    <xs:attribute name="npczprel" type="dsComm:number3de"/>
+                    <xs:attribute name="noddprel" type="dsiduCis:oddeleniType"/>
+                    <xs:attribute name="numrti" type="dsComm:number1-5"/>
+                    <xs:attribute name="ndg1" type="dsComm:str4" use="required"/>
+                    <xs:attribute name="ndg2" type="dsComm:str4"/>
+                    <xs:attribute name="ndg3" type="dsComm:str4"/>
+                    <xs:attribute name="ndg4" type="dsComm:str4"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" name="nrn_chy" type="dsidu:nrn_chyType" />
+        </xs:choice>
+        <xs:attribute name="nico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="npcz" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="nodd" type="dsComm:oddType" use="required"/>
+    </xs:complexType>
+
+<xs:annotation>
+  <xs:documentation> VETEV NOR (Narodni onkologicky registr) </xs:documentation>
+</xs:annotation>
+
+<xs:complexType name="norType">
+ <xs:sequence>
+  <xs:element  name='nor_hla'   type="dsidu:nor_hlaType"/>
+  <xs:choice>
+   <xs:element name='nor_vstup'  type="dsidu:nor_vstupType"  maxOccurs='unbounded'/>
+   <xs:element name='nor_vystup' type="dsidu:nor_vystupType" maxOccurs='unbounded'/>
+  </xs:choice>
+ </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nor_hlaType">
+ <xs:attribute name='hl_ic'    type='dsComm:icisType'          use='required'/>
+ <xs:attribute name='dat_od'   type='xs:dateTime'              use='required'/>
+ <xs:attribute name='davka_zz' type='dsComm:str20'             use='required'/>
+ <xs:attribute name='davka_pz' type='dsComm:number0-9999'      use='required'/>
+</xs:complexType>
+
+<xs:complexType name="nor_vstupType">
+ <xs:sequence>
+  <xs:element name='nor_cast1'   type="dsidu:nor_cast1Type"/>
+  <xs:element name='nor_cast2'   type="dsidu:nor_cast2Type"   minOccurs='0' maxOccurs='1'/>
+  <xs:element name='nor_vyjimka' type="dsidu:nor_vyjimkaType" minOccurs='0' maxOccurs='unbounded'/>
+ </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nor_cast1Type">
+ <xs:attribute name='id_zz'      type='dsComm:str20'           use='required'/>
+ <xs:attribute name='evidc'      type='dsComm:number6d'        use='optional'/>
+ <xs:attribute name='h1_zar'     type='dsComm:number14d'       use='required'/>
+ <xs:attribute name='h1_odd'     type='dsComm:number2d'        use='required'/>
+ <xs:attribute name='dat_h1'     type='xs:date'                use='optional'/>
+ <xs:attribute name='rodcis'     type='dsComm:rodcisType'      use='required'/>
+ <xs:attribute name='pohl'       type='dsComm:number1-2'       use='optional'/>
+ <xs:attribute name='dat_na'     type='xs:date'                use='optional'/>
+ <xs:attribute name='obec'       type='dsComm:number6d'        use='required'/>
+ <xs:attribute name='socpost'    type='dsiduCis:socpostType'   use='optional'/>
+ <xs:attribute name='stav'       type='dsComm:stavType'        use='optional'/>
+ <xs:attribute name='zjipri'     type='dsiduCis:zjipriType'    use='optional'/>
+ <xs:attribute name='kour'       type='dsiduCis:kourType'      use='optional'/>
+ <xs:attribute name='lateral'    type='dsiduCis:lateralType'   use='optional'/>
+ <xs:attribute name='zeme'       type='dsComm:number3d'        use='optional'/>
+ <xs:attribute name='dat_1n'     type='xs:date'                use='optional'/>
+ <xs:attribute name='dat_dg'     type='xs:date'                use='required'/>
+ <xs:attribute name='dgstan'     type='dsiduCis:dgstanType'    use='optional'/>
+ <xs:attribute name='dg_sl'      type='dsComm:str80'           use='optional'/>
+ <xs:attribute name='dg_kod'     type='dsiduCis:dg_kodType'    use='optional'/>
+ <xs:attribute name='topo_kod'   type='dsiduCis:topo_kodType'  use='optional'/>
+ <xs:attribute name='morfo_sl'   type='dsComm:str80'           use='optional'/>
+ <xs:attribute name='morfo_m'    type='dsiduCis:morfo_mType'   use='optional'/>
+ <xs:attribute name='morfo_kod'  type='dsiduCis:morfo_kodType' use='optional'/>
+ <xs:attribute name='grading'    type='dsiduCis:gradingType'   use='optional'/>
+ <xs:attribute name='tnm_t'      type='dsiduCis:tnm_tType'     use='optional'/>
+ <xs:attribute name='tnm_tmm'    type='xs:float'               use='optional'/>
+ <xs:attribute name='tnm_n'      type='dsiduCis:tnm_nType'     use='optional'/>
+ <xs:attribute name='tnm_m'      type='dsiduCis:tnm_mType'     use='optional'/>
+ <xs:attribute name='ptnm_y'     type='dsComm:number1-2'       use='optional'/>
+ <xs:attribute name='ptnm_t'     type='dsiduCis:tnm_tType'     use='optional'/>
+ <xs:attribute name='ptnm_tmm'   type='xs:float'               use='optional'/>
+ <xs:attribute name='ptnm_n'     type='dsiduCis:tnm_nType'     use='optional'/>
+ <xs:attribute name='ptnm_n_vys' type='dsComm:number0-99'      use='optional'/>
+ <xs:attribute name='ptnm_n_poz' type='dsComm:number0-99'      use='optional'/>
+ <xs:attribute name='ptnm_n_sn'  type='dsiduCis:ptnm_n_snType' use='optional'/>
+ <xs:attribute name='ptnm_m'     type='dsiduCis:tnm_mType'     use='optional'/>
+ <xs:attribute name='ptnm_itc'   type='dsiduCis:ptnm_itcType'  use='optional'/>
+ <xs:attribute name='tnm_riz'    type='dsiduCis:tnm_rizType'   use='optional'/>
+ <xs:attribute name='tnm_s'      type='dsiduCis:tnm_sType'     use='optional'/>
+ <xs:attribute name='klstaon'    type='dsiduCis:klstaonType'   use='optional'/>
+ <xs:attribute name='onemoc'     type='dsiduCis:onemocType'    use='optional'/>
+ <xs:attribute name='pl_zar'     type='dsComm:number14d'       use='optional'/>
+ <xs:attribute name='pl_odd'     type='dsComm:number2d'        use='optional'/>
+</xs:complexType>
+
+<xs:complexType name="nor_cast2Type">
+ <xs:attribute name='h2_zar'     type='dsComm:number14d'       use='optional'/>
+ <xs:attribute name='h2_odd'     type='dsComm:number2d'        use='optional'/>
+ <xs:attribute name='dat_h2'     type='xs:date'                use='optional'/>
+ <xs:attribute name='dat_pe'     type='xs:date'                use='optional'/>
+ <xs:attribute name='lepost'     type='dsComm:str128'          use='optional'/>
+ <xs:attribute name='dat_op'     type='xs:date'                use='optional'/>
+ <xs:attribute name='op_sl'      type='dsComm:str80'           use='optional'/>
+ <xs:attribute name='op_zar'     type='dsComm:number14d'       use='optional'/>
+ <xs:attribute name='op_odd'     type='dsComm:number2d'        use='optional'/>
+ <xs:attribute name='op_druh'    type='dsiduCis:op_druhType'   use='optional'/>
+ <xs:attribute name='op_odst'    type='dsiduCis:op_odstType'   use='optional'/>
+ <xs:attribute name='op_endo'    type='dsiduCis:op_endoType'   use='optional'/>
+ <xs:attribute name='dat_ra'     type='xs:date'                use='optional'/>
+ <xs:attribute name='ra_sl'      type='dsComm:str80'           use='optional'/>
+ <xs:attribute name='ra_zar'     type='dsComm:number14d'       use='optional'/>
+ <xs:attribute name='ra_odd'     type='dsComm:number2d'        use='optional'/>
+ <xs:attribute name='ra_druh'    type='dsiduCis:ra_druhType'   use='optional'/>
+ <xs:attribute name='ra_forma'   type='dsiduCis:ra_formaType'  use='optional'/>
+ <xs:attribute name='ra_ksch'    type='dsComm:number1-2'       use='optional'/>
+ <xs:attribute name='dat_ch'     type='xs:date'                use='optional'/>
+ <xs:attribute name='che_sl'     type='dsComm:str80'           use='optional'/>
+ <xs:attribute name='che_zar'    type='dsComm:number14d'       use='optional'/>
+ <xs:attribute name='che_odd'    type='dsComm:number2d'        use='optional'/>
+ <xs:attribute name='che_forma'  type='dsiduCis:che_formaType' use='optional'/>
+ <xs:attribute name='che_typ'    type='dsiduCis:che_typType'   use='optional'/>
+ <xs:attribute name='dat_ho'     type='xs:date'                use='optional'/>
+ <xs:attribute name='ho_sl'      type='dsComm:str80'           use='optional'/>
+ <xs:attribute name='ho_zar'     type='dsComm:number14d'       use='optional'/>
+ <xs:attribute name='ho_odd'     type='dsComm:number2d'        use='optional'/>
+ <xs:attribute name='ho_druh'    type='dsiduCis:ho_druhType'   use='optional'/>
+ <xs:attribute name='dat_ji'     type='xs:date'                use='optional'/>
+ <xs:attribute name='ji_sl'      type='dsComm:str80'           use='optional'/>
+ <xs:attribute name='ji_zar'     type='dsComm:number14d'       use='optional'/>
+ <xs:attribute name='ji_odd'     type='dsComm:number2d'        use='optional'/>
+ <xs:attribute name='ji_druh'    type='dsiduCis:ji_druhType'   use='optional'/>
+ <xs:attribute name='nelpro'     type='dsiduCis:nelproType'    use='optional'/>
+ <xs:attribute name='dat_um'     type='xs:date'                use='optional'/>
+ <xs:attribute name='dg1a'       type='dsiduCis:diagnozaType'  use='optional'/>
+ <xs:attribute name='dg1a_sl'    type='dsComm:str80'           use='optional'/>
+ <xs:attribute name='dg1c'       type='dsiduCis:diagnozaType'  use='optional'/>
+ <xs:attribute name='dg1c_sl'    type='dsComm:str80'           use='optional'/>
+ <xs:attribute name='dg2'        type='dsiduCis:diagnozaType'  use='optional'/>
+ <xs:attribute name='dg2_sl'     type='dsComm:str80'           use='optional'/>
+ <xs:attribute name='pitva'      type='dsComm:number1-2'       use='optional'/>
+ <xs:attribute name='dat_ku'     type='xs:date'                use='optional'/>
+ <xs:attribute name='lecba_um'   type='dsiduCis:lecba_umType'  use='optional'/>
+ <xs:attribute name='stav_um'    type='dsComm:number1d'        use='optional'/>
+ <xs:attribute name='di_zar'     type='dsComm:number14d'       use='optional'/>
+ <xs:attribute name='di_odd'     type='dsComm:number2d'        use='optional'/>
+ <xs:attribute name='pozn'       type='dsComm:str80'           use='optional'/>
+</xs:complexType>
+
+<xs:complexType name="nor_vyjimkaType">
+ <xs:attribute name='id_zz'       type='dsComm:str20'          use='required'/>
+ <xs:attribute name='id_kont'     type='dsiduCis:id_kontType'  use='required'/>
+ <xs:attribute name='duvod'       type='dsComm:str80'          use='required'/>
+</xs:complexType>
+
+<xs:complexType name='nor_vystupType'>
+ <xs:sequence>
+  <xs:element name='nor_chyba' type="dsidu:nor_chybaType" minOccurs='0' maxOccurs='unbounded'/>
+ </xs:sequence>
+ <xs:attribute name='id_zz' type='dsComm:str20'                use='required'/>
+ <xs:attribute name='evidc' type='dsComm:number6d'             use='required'/>
+ <xs:attribute name='stav'  type='dsComm:number1-2'            use='required'/>
+</xs:complexType>
+
+<xs:complexType name='nor_chybaType'>
+ <xs:attribute name='id_kont'     type='dsiduCis:id_kontType'  use='required'/>
+ <xs:attribute name='druh_chyby'  type='dsComm:str255'         use='required'/>
+</xs:complexType>
+
+    <xs:annotation>
+        <xs:documentation> VETEV NRV (Narodni registr vrozenych vad) </xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="nrvsType">
+        <xs:attribute name="vasrepr" type="dsComm:number0-2" use="required"/>
+        <xs:attribute name="vduvvys" type="dsiduCis:duvVysType"/>
+        <xs:attribute name="vprendiag" type="dsComm:number0-3" use="required"/>
+        <xs:attribute name="vmetoda" type="dsiduCis:metodaType"/>
+        <xs:attribute name="vvysetr" type="dsiduCis:vysetreniType"/>
+        <xs:attribute name="vduvnepr" type="dsComm:number0-4" use="required"/>
+        <xs:attribute name="vpohlav" type="dsComm:number0-3" use="required"/>
+        <xs:attribute name="vvyslteh" type="dsComm:number0-5" use="required"/>
+        <xs:attribute name="vdg1" type="dsComm:str4" use="required"/>
+        <xs:attribute name="vdg2" type="dsComm:str4"/>
+        <xs:attribute name="vdg3" type="dsComm:str4"/>
+        <xs:attribute name="vdg4" type="dsComm:str4"/>
+        <xs:attribute name="vrodcism" type="dsComm:rodcisType" use="required"/>
+        <xs:attribute name="vtrvbyd" type="dsComm:str60"/>
+        <xs:attribute name="vobec" type="dsComm:number6de" use="required"/>
+        <xs:attribute name="vbydl" type="dsComm:number3de" />
+        <xs:attribute name="vorp" type="dsComm:number4de" use="required"/>
+        <xs:attribute name="vstaobcm" type="dsComm:number3d" />
+        <xs:attribute name="vrostav" type="dsComm:number0-5" use="required"/>
+        <xs:attribute name="vkzamm" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="vrezortm" type="dsComm:number0-5" use="required"/>
+        <xs:attribute name="vtytehd" type="dsComm:number0-47" use="required"/>
+        <xs:attribute name="vcetteh" type="dsComm:number0-7" use="required"/>
+        <xs:attribute name="vvvvrod1" type="dsComm:number1-4"/>
+        <xs:attribute name="vdgvro1" type="dsComm:str4"/>
+        <xs:attribute name="vvvvrod2" type="dsComm:number1-4"/>
+        <xs:attribute name="vdgvro2" type="dsComm:str4"/>
+        <xs:attribute name="vdiamel" type="dsComm:str4"/>
+        <xs:attribute name="vinfoty" type="dsComm:number0-16"/>
+        <xs:attribute name="vdginfo" type="dsComm:str4"/>
+        <xs:attribute name="vdgjine" type="dsComm:str4"/>
+        <xs:attribute name="vlek1s" type="dsComm:str60"/>
+        <xs:attribute name="vleky1" type="dsComm:number7de"/>
+        <xs:attribute name="vlek2s" type="dsComm:str60"/>
+        <xs:attribute name="vleky2" type="dsComm:number7de"/>
+        <xs:attribute name="vlek3s" type="dsComm:str60"/>
+        <xs:attribute name="vleky3" type="dsComm:number7de"/>
+        <xs:attribute name="vporgra" type="dsComm:number0-20" use="required"/>
+        <xs:attribute name="vporpar" type="dsComm:number0-20" use="required"/>
+        <xs:attribute name="vposap" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="vpoint" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="vroknaro" type="xs:gYear"/>
+        <xs:attribute name="vkzamo" type="dsComm:number1d"/>
+        <xs:attribute name="vrezorto" type="dsComm:number0-5"/>
+    </xs:complexType>
+    <xs:complexType name="nrvpType">
+        <xs:sequence>
+            <xs:element name="nrvs" type="dsidu:nrvsType"/>
+        </xs:sequence>
+        <xs:attribute name="vteh" type="dsComm:number1-3" use="required"/>
+        <xs:attribute name="vtytehp" type="dsComm:number5-40" use="required"/>
+        <xs:attribute name="vdatzjip" type="xs:date" use="required"/>
+        <xs:attribute name="vdatuko" type="xs:date"/>
+    </xs:complexType>
+    <xs:complexType name="nrvdType">
+        <xs:sequence>
+            <xs:element name="nrvs" type="dsidu:nrvsType"/>
+        </xs:sequence>
+        <xs:attribute name="vzp" type="dsComm:number3de" />
+        <xs:attribute name="vrodcisd" type="dsComm:rodcisType" use="required"/>
+        <xs:attribute name="vstaobcd" type="dsComm:number3d" use="required"/>
+        <xs:attribute name="vjmeno" type="dsComm:str60"/>
+        <xs:attribute name="vhmot" type="dsComm:number100-6000" use="required"/>
+        <xs:attribute name="vpordel" type="dsComm:number20-60" use="required"/>
+        <xs:attribute name="vdatzjid" type="xs:date" use="required"/>
+        <xs:attribute name="vdatumr" type="xs:date"/>
+    </xs:complexType>
+    <xs:complexType name="nrvType">
+        <xs:choice>
+            <xs:element maxOccurs="unbounded" name="nrvv">
+                <xs:complexType>
+                    <xs:choice>
+                        <xs:element maxOccurs="unbounded" name="nrvp" type="dsidu:nrvpType"/>
+                        <xs:element maxOccurs="unbounded" name="nrvd" type="dsidu:nrvdType"/>
+                    </xs:choice>
+                </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" name="nrv_chy" type="dsidu:nrv_chyType" />
+        </xs:choice>
+        <xs:attribute name="vico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="vpcz" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="vodd" type="dsComm:oddType" use="required"/>
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation> VETEV NRT (hlaseni potratu) </xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="nrtType" >
+        <xs:choice>
+            <xs:element name="nrpot"  maxOccurs="unbounded" >
+                <xs:complexType>
+                    <xs:attribute name="picov" type="dsComm:icisType" use="required"/>
+                    <xs:attribute name="ppczv" type="dsComm:number3de" use="required"/>
+                    <xs:attribute name="prodcis" type="dsComm:rodcisType" use="required"/>
+                    <xs:attribute name="pobec" type="dsComm:number6de" use="required"/>
+                    <xs:attribute name="pbydl" type="dsComm:str3" />
+                    <xs:attribute name="porp" type="dsComm:number4de" />
+                    <xs:attribute name="pkzam" type="dsComm:number1d" use="required"/>
+                    <xs:attribute name="prostav" type="dsComm:number0-5" use="required"/>
+                    <xs:attribute name="pstaobc" type="dsComm:number3d" use="required"/>
+                    <xs:attribute name="pvzdela" type="dsComm:number1-9" use="required"/>
+                    <xs:attribute name="ppopor" type="dsComm:number1d" use="required"/>
+                    <xs:attribute name="ppozive" type="dsComm:number1d" use="required"/>
+                    <xs:attribute name="ppoint" type="dsComm:number1d" use="required"/>
+                    <xs:attribute name="pposap" type="dsComm:number1d" use="required"/>
+                    <xs:attribute name="pdrupot" type="dsComm:number1-5" use="required"/>
+                    <xs:attribute name="pzduupt" type="dsComm:number1-2" use="required"/>
+                    <xs:attribute name="pdg" type="dsComm:str4"/>
+                    <xs:attribute name="pdapot" type="xs:date" use="required"/>
+                    <xs:attribute name="pstari" type="dsComm:number2de" use="required"/>
+                    <xs:attribute name="phmot" type="dsComm:number4d"/>
+                    <xs:attribute name="pdelka" type="dsComm:number2de"/>
+                    <xs:attribute name="pantiko" type="dsComm:number1-4" use="required"/>
+                    <xs:attribute name="ppopupt" type="dsComm:number1-2" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="nrt_chy"  maxOccurs="unbounded" type="dsidu:nrt_chyType" />
+        </xs:choice>
+        <xs:attribute name="pico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="ppcz" type="dsComm:number3de" use="required"/>
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation> VETEV NRZ - list o prohlidce zemreleho</xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="nrzType">
+        <xs:choice>
+            <xs:element name="nrzz" type="dsidu:nrzzType" maxOccurs="unbounded"/>
+            <xs:element name="nrz_chy" type="dsidu:nrz_chyType" maxOccurs="unbounded"/>
+        </xs:choice>
+        <xs:attribute name="zico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="zpcz" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="zodd" type="dsComm:number2de" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="nrzzType">
+        <xs:sequence>
+            <xs:element name="nrzpit" type="dsidu:nrzpitType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="zopr" type="dsiduCis:lpz1-2Type" use="required"/>
+        <xs:attribute name="zzdrpoj" type="dsComm:number3de"/>
+        <xs:attribute name="zcispoj" type="dsComm:str10"/>
+        <xs:attribute name="zmrtvnar" type="dsiduCis:lpz1-2Type" use="required"/>
+        <xs:attribute name="ztotoz" type="dsiduCis:lpz1-2Type" use="required"/>
+        <xs:attribute name="zjmeno" type="dsComm:str20"/>
+        <xs:attribute name="zprijm" type="dsComm:str30"/>
+        <xs:attribute name="zrodprjm" type="dsComm:str30"/>
+        <xs:attribute name="zdanar" type="xs:date"/>
+        <xs:attribute name="zstari" type="dsComm:number3d"/>
+        <xs:attribute name="zrodcis" type="dsComm:rodcisType"/>
+        <xs:attribute name="zpohlav" type="dsiduCis:lpz1-3Type"/>
+        <xs:attribute name="zobcan" type="dsiduCis:lpz1-3Type"/>
+        <xs:attribute name="zjineobc" type="dsComm:str3"/>
+        <xs:attribute name="zdaum" type="xs:date" use="required"/>
+        <xs:attribute name="zcasum" type="dsComm:str4"/>
+        <xs:attribute name="zodhad" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="zmumob" type="dsComm:str6" use="required"/>
+        <xs:attribute name="zmumcp" type="dsComm:str4"/>
+        <xs:attribute name="zmumokr" type="dsComm:str3"/>
+        <xs:attribute name="znalez" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="zmnarob" type="dsComm:str6"/>
+        <xs:attribute name="zmnarokr" type="dsComm:str3"/>
+        <xs:attribute name="zmnarst" type="dsComm:str3"/>
+        <xs:attribute name="zmbydul" type="dsComm:str20"/>
+        <xs:attribute name="zmbydcp" type="dsComm:str4"/>
+        <xs:attribute name="zmbydob" type="dsComm:str6"/>
+        <xs:attribute name="zmbydokr" type="dsComm:str3"/>
+        <xs:attribute name="zmbydst" type="dsComm:str3"/>
+        <xs:attribute name="zvzdel" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zrodstav" type="dsiduCis:lpz1-8Type"/>
+        <xs:attribute name="zjmpart" type="dsComm:str30"/>
+        <xs:attribute name="znarpart" type="xs:date"/>
+        <xs:attribute name="znahrady" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="znahrtxt" type="dsComm:str200"/>
+        <xs:attribute name="znavrh" type="dsComm:str200"/>
+        <xs:attribute name="znavrhp" type="dsiduCis:lpz1-2Type" use="required"/>
+        <xs:attribute name="zumrkde" type="dsiduCis:lpz1-8Type"/>
+        <xs:attribute name="zumrktxt" type="dsComm:str200"/>
+        <xs:attribute name="zdnarmat" type="xs:date"/>
+        <xs:attribute name="ztehot" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="zporod" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="zsesti" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="zumrmat" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="zdelteh" type="dsiduCis:lpz0-43Type"/>
+        <xs:attribute name="zdaukteh" type="xs:date"/>
+        <xs:attribute name="zzpukteh" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="zmukteh" type="dsiduCis:str77"/>
+        <xs:attribute name="zmutehic" type="dsComm:str8"/>
+        <xs:attribute name="zmutehpc" type="dsComm:str3"/>
+        <xs:attribute name="zmutehod" type="dsComm:str2"/>
+        <xs:attribute name="zprohnaz" type="dsiduCis:str77"/>
+        <xs:attribute name="zprohjm" type="dsComm:str30" use="required"/>
+        <xs:attribute name="zprohpr" type="dsComm:str30" use="required"/>
+        <xs:attribute name="zprohtel" type="dsComm:str9" use="required"/>
+        <xs:attribute name="zprohic" type="dsComm:str8" use="required"/>
+        <xs:attribute name="zprohpc" type="dsComm:str3" use="required"/>
+        <xs:attribute name="zprohod" type="dsComm:str2" use="required"/>
+        <xs:attribute name="zmisproh" type="dsComm:str6" use="required"/>
+        <xs:attribute name="zdatproh" type="xs:date" use="required"/>
+        <xs:attribute name="zp1atxt" type="dsComm:str100"/>
+        <xs:attribute name="zp2atxt" type="dsComm:str100"/>
+        <xs:attribute name="zp3atxt" type="dsComm:str100"/>
+        <xs:attribute name="zp4atxt" type="dsComm:str100"/>
+        <xs:attribute name="zp5atxt" type="dsComm:str100"/>
+        <xs:attribute name="zp6atxt" type="dsComm:str100"/>
+        <xs:attribute name="zp7atxt" type="dsComm:str100"/>
+        <xs:attribute name="zp8atxt" type="dsComm:str100"/>
+        <xs:attribute name="zp1akod" type="dsComm:str4"/>
+        <xs:attribute name="zp2akod" type="dsComm:str4"/>
+        <xs:attribute name="zp3akod" type="dsComm:str4"/>
+        <xs:attribute name="zp4akod" type="dsComm:str4"/>
+        <xs:attribute name="zp5akod" type="dsComm:str4"/>
+        <xs:attribute name="zp6akod" type="dsComm:str4"/>
+        <xs:attribute name="zp7akod" type="dsComm:str4"/>
+        <xs:attribute name="zp8akod" type="dsComm:str4"/>
+        <xs:attribute name="zp1apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp2apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp3apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp4apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp5apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp6apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp7apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp8apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp1ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp2ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp3ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp4ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp5ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp6ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp7ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp8ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp1btxt" type="dsComm:str100"/>
+        <xs:attribute name="zp2btxt" type="dsComm:str100"/>
+        <xs:attribute name="zp3btxt" type="dsComm:str100"/>
+        <xs:attribute name="zp4btxt" type="dsComm:str100"/>
+        <xs:attribute name="zp5btxt" type="dsComm:str100"/>
+        <xs:attribute name="zp6btxt" type="dsComm:str100"/>
+        <xs:attribute name="zp7btxt" type="dsComm:str100"/>
+        <xs:attribute name="zp8btxt" type="dsComm:str100"/>
+        <xs:attribute name="zp1bkod" type="dsComm:str4"/>
+        <xs:attribute name="zp2bkod" type="dsComm:str4"/>
+        <xs:attribute name="zp3bkod" type="dsComm:str4"/>
+        <xs:attribute name="zp4bkod" type="dsComm:str4"/>
+        <xs:attribute name="zp5bkod" type="dsComm:str4"/>
+        <xs:attribute name="zp6bkod" type="dsComm:str4"/>
+        <xs:attribute name="zp7bkod" type="dsComm:str4"/>
+        <xs:attribute name="zp8bkod" type="dsComm:str4"/>
+        <xs:attribute name="zp1bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp2bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp3bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp4bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp5bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp6bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp7bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp8bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp1bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp2bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp3bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp4bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp5bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp6bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp7bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp8bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp1ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zp2ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zp3ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zp4ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zp5ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zp6ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zp7ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zp8ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zp1ckod" type="dsComm:str4"/>
+        <xs:attribute name="zp2ckod" type="dsComm:str4"/>
+        <xs:attribute name="zp3ckod" type="dsComm:str4"/>
+        <xs:attribute name="zp4ckod" type="dsComm:str4"/>
+        <xs:attribute name="zp5ckod" type="dsComm:str4"/>
+        <xs:attribute name="zp6ckod" type="dsComm:str4"/>
+        <xs:attribute name="zp7ckod" type="dsComm:str4"/>
+        <xs:attribute name="zp8ckod" type="dsComm:str4"/>
+        <xs:attribute name="zp1cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp2cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp3cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp4cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp5cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp6cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp7cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp8cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp1cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp2cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp3cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp4cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp5cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp6cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp7cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp8cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp1dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp2dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp3dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp4dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp5dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp6dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp7dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp8dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp1dkod" type="dsComm:str4"/>
+        <xs:attribute name="zp2dkod" type="dsComm:str4"/>
+        <xs:attribute name="zp3dkod" type="dsComm:str4"/>
+        <xs:attribute name="zp4dkod" type="dsComm:str4"/>
+        <xs:attribute name="zp5dkod" type="dsComm:str4"/>
+        <xs:attribute name="zp6dkod" type="dsComm:str4"/>
+        <xs:attribute name="zp7dkod" type="dsComm:str4"/>
+        <xs:attribute name="zp8dkod" type="dsComm:str4"/>
+        <xs:attribute name="zp1dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp2dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp3dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp4dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp5dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp6dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp7dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp8dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp1djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp2djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp3djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp4djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp5djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp6djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp7djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp8djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp1vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp2vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp3vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp4vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp5vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp6vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp7vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp8vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zp1vkod" type="dsComm:str4"/>
+        <xs:attribute name="zp2vkod" type="dsComm:str4"/>
+        <xs:attribute name="zp3vkod" type="dsComm:str4"/>
+        <xs:attribute name="zp4vkod" type="dsComm:str4"/>
+        <xs:attribute name="zp5vkod" type="dsComm:str4"/>
+        <xs:attribute name="zp6vkod" type="dsComm:str4"/>
+        <xs:attribute name="zp7vkod" type="dsComm:str4"/>
+        <xs:attribute name="zp8vkod" type="dsComm:str4"/>
+        <xs:attribute name="zp1vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp2vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp3vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp4vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp5vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp6vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp7vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp8vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zp1vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp2vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp3vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp4vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp5vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp6vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp7vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zp8vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zdrogy" type="dsiduCis:lpz1-2Type" use="required"/>
+        <xs:attribute name="ztypumr" type="dsiduCis:lpz1-7Type" use="required"/>
+        <xs:attribute name="zvptxt" type="dsComm:str100"/>
+        <xs:attribute name="zvpakt" type="dsiduCis:lpz0-9Type"/>
+        <xs:attribute name="zvpmist" type="dsiduCis:lpz0-9Type"/>
+        <xs:attribute name="zvpdat" type="xs:date"/>
+        <xs:attribute name="zvpdg" type="dsComm:str4"/>
+        <xs:attribute name="zpitva" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="zpnahrad" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="zpntxt" type="dsComm:str200"/>
+        <xs:attribute name="zpsdel" type="dsComm:str200"/>
+    </xs:complexType>
+    <xs:complexType name="nrzpitType">
+        <xs:attribute name="zpp1atxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp2atxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp3atxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp4atxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp5atxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp6atxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp7atxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp8atxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp1akod" type="dsComm:str4"/>
+        <xs:attribute name="zpp2akod" type="dsComm:str4"/>
+        <xs:attribute name="zpp3akod" type="dsComm:str4"/>
+        <xs:attribute name="zpp4akod" type="dsComm:str4"/>
+        <xs:attribute name="zpp5akod" type="dsComm:str4"/>
+        <xs:attribute name="zpp6akod" type="dsComm:str4"/>
+        <xs:attribute name="zpp7akod" type="dsComm:str4"/>
+        <xs:attribute name="zpp8akod" type="dsComm:str4"/>
+        <xs:attribute name="zpp1apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp2apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp3apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp4apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp5apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp6apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp7apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp8apoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp1ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp2ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp3ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp4ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp5ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp6ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp7ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp8ajed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp1btxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp2btxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp3btxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp4btxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp5btxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp6btxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp7btxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp8btxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp1bkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp2bkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp3bkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp4bkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp5bkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp6bkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp7bkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp8bkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp1bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp2bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp3bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp4bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp5bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp6bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp7bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp8bpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp1bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp2bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp3bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp4bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp5bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp6bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp7bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp8bjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp1ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp2ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp3ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp4ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp5ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp6ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp7ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp8ctxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp1ckod" type="dsComm:str4"/>
+        <xs:attribute name="zpp2ckod" type="dsComm:str4"/>
+        <xs:attribute name="zpp3ckod" type="dsComm:str4"/>
+        <xs:attribute name="zpp4ckod" type="dsComm:str4"/>
+        <xs:attribute name="zpp5ckod" type="dsComm:str4"/>
+        <xs:attribute name="zpp6ckod" type="dsComm:str4"/>
+        <xs:attribute name="zpp7ckod" type="dsComm:str4"/>
+        <xs:attribute name="zpp8ckod" type="dsComm:str4"/>
+        <xs:attribute name="zpp1cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp2cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp3cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp4cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp5cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp6cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp7cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp8cpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp1cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp2cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp3cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp4cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp5cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp6cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp7cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp8cjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp1dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp2dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp3dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp4dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp5dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp6dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp7dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp8dtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp1dkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp2dkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp3dkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp4dkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp5dkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp6dkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp7dkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp8dkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp1dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp2dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp3dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp4dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp5dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp6dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp7dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp8dpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp1djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp2djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp3djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp4djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp5djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp6djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp7djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp8djed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp1vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp2vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp3vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp4vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp5vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp6vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp7vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp8vtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpp1vkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp2vkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp3vkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp4vkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp5vkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp6vkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp7vkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp8vkod" type="dsComm:str4"/>
+        <xs:attribute name="zpp1vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp2vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp3vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp4vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp5vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp6vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp7vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp8vpoc" type="dsComm:number3d"/>
+        <xs:attribute name="zpp1vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp2vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp3vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp4vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp5vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp6vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp7vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpp8vjed" type="dsiduCis:lpz1-6Type"/>
+        <xs:attribute name="zpdrogy" type="dsiduCis:lpz1-2Type"/>
+        <xs:attribute name="zptypumr" type="dsiduCis:lpz1-7Type"/>
+        <xs:attribute name="zpvprtxt" type="dsComm:str100"/>
+        <xs:attribute name="zpvprakt" type="dsiduCis:lpz0-9Type"/>
+        <xs:attribute name="zpvprmis" type="dsiduCis:lpz0-9Type"/>
+        <xs:attribute name="zpvprdat" type="xs:date"/>
+        <xs:attribute name="zpvprdg" type="dsComm:str4"/>
+        <xs:attribute name="zpitnaz" type="dsiduCis:str77"/>
+        <xs:attribute name="zpitjm" type="dsComm:str30"/>
+        <xs:attribute name="zpitprij" type="dsComm:str30"/>
+        <xs:attribute name="zpittel" type="dsComm:str9"/>
+        <xs:attribute name="zpitic" type="dsComm:str8"/>
+        <xs:attribute name="zpitpc" type="dsComm:str3"/>
+        <xs:attribute name="zpitod" type="dsComm:str2"/>
+        <xs:attribute name="zdapitva" type="xs:date"/>
+        <xs:attribute name="zmispit" type="dsComm:str6"/>
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation>
+	************************************************
+	bloky pro osetreni chyb narodnich registru
+	************************************************
+	</xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="nrh_chyType">
+        <xs:attribute name="zopr" type="dsComm:number9d" use="required"/>
+        <xs:attribute name="hidcis" type="dsComm:rodcisType" use="required"/>
+        <xs:attribute name="hodd"   type="dsComm:oddType" use="required"/>
+        <xs:attribute name="hdapri" type="dsComm:dateTimeMin" use="required"/>
+        <xs:attribute name="hdapp" type="xs:date" use="required"/>
+        <xs:attribute name="kodch" type="dsidu:kodChyby" use="required"/>
+        <xs:attribute name="hvyk"  type="dsComm:str5" />
+    </xs:complexType>
+    <xs:complexType name="nrr_chyType">
+        <xs:attribute name="davka" type="dsComm:number9d" use="required"/>
+        <xs:attribute name="rrcm" type="dsComm:rodcisType" use="required"/>
+        <xs:attribute name="rdatpor" type="dsComm:dateHour" use="required"/>
+        <xs:attribute name="kodch" type="dsidu:kodChyby" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="nrn_chyType">
+        <xs:attribute name="davka" type="dsComm:number9d" use="required"/>
+        <xs:attribute name="nrcm" type="dsComm:rodcisType" use="required"/>
+        <xs:attribute name="nnar"   type="dsComm:dateHourMin" use="required"/>
+        <xs:attribute name="npord" type="dsComm:number1d" use="required"/>
+        <xs:attribute name="nzprava" type="dsComm:number1-9" use="required"/>
+        <xs:attribute name="kodch" type="dsidu:kodChyby" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="nrv_chyType">
+        <xs:attribute name="davka" type="dsComm:number9d" use="required"/>
+        <xs:attribute name="vrodcisd" type="dsComm:rodcisType" />
+        <xs:attribute name="vdatzjid" type="xs:date" />
+        <xs:attribute name="vrodcism" type="dsComm:rodcisType" use="required"/>
+        <xs:attribute name="vdatzjip" type="xs:date" />
+        <xs:attribute name="kodch" type="dsidu:kodChyby" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="nrt_chyType">
+        <xs:attribute name="davka" type="dsComm:number9d" use="required"/>
+        <xs:attribute name="prodcis" type="dsComm:rodcisType" use="required"/>
+        <xs:attribute name="pdapot" type="xs:date" use="required"/>
+        <xs:attribute name="kodch" type="dsidu:kodChyby" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="nrz_chyType">
+        <xs:attribute name="davka" type="dsComm:number9d" use="required"/>
+        <xs:attribute name="zrodcis" type="dsComm:rodcisType" use="required"/>
+        <xs:attribute name="zdaum" type="xs:date" use="required"/>
+        <xs:attribute name="kodch" type="dsidu:kodChyby" use="required"/>
+    </xs:complexType>
+    <xs:simpleType name="kodChyby">
+	    <xs:restriction base="dsComm:str3" >
+	</xs:restriction>	    
+    </xs:simpleType>
+    <xs:annotation>
+        <xs:documentation>
+      *********************************************************** 
+      Komplexni typy     pro vetev NV (vykazy typu V) 
+      ***********************************************************
+    </xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="v1Type">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="v1_osoby">
+                <xs:complexType>
+                    <xs:attribute name="crad" type="dsComm:number2d" use="required"/>
+                    <xs:attribute name="icelk" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl2" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl3" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl4" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl5" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl6" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl7" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl8" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl9" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl10" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl11" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="isl12" type="dsComm:number6d" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="v1_uhrada">
+                <xs:complexType>
+                    <xs:attribute name="crad" type="dsComm:number2d" use="required"/>
+                    <xs:attribute name="icelk" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="isl2" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="isl3" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="isl4" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="isl5" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="isl6" type="dsComm:number7d"/>
+                    <xs:attribute name="isl7" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="isl8" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="isl9" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="isl10" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="isl11" type="dsComm:number7d" use="required"/>
+                    <xs:attribute name="isl12" type="dsComm:number7d" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="vykzaver" type="dsidu:vykzaverType" />
+        </xs:sequence>
+        <xs:attribute name="cico" type="dsComm:icisType" use="required"/>
+        <xs:attribute name="cicp" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="kraj" type="dsComm:str2" use="required"/>
+        <xs:attribute name="okres" type="dsComm:str2" use="required"/>
+        <xs:attribute name="rezort" type="dsComm:number3de" use="required"/>
+        <xs:attribute name="zriz" type="dsiduCis:zrizType" use="required"/>
+        <xs:attribute name="drvla" type="dsComm:number1-2" use="required"/>
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation> 
+      *********************************************************** 
+      Komplexni typy  pro vetev NT (vykazy typu T)
+      ***********************************************************
+    </xs:documentation>
+    </xs:annotation>
+    <xs:complexType name="t1Type">
+        <xs:sequence>
+            <xs:element name="vykhlav" type="dsidu:vykhlavType" />
+            <xs:element name="netr" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute name="tcrad" type="dsComm:number2d" use="required"/>
+                    <xs:attribute name="tsl01" type="dsComm:number6d" use="required"/>
+                    <xs:attribute name="tsl02" type="dsComm:number6d"/>
+                    <xs:attribute name="tsl03" type="dsComm:number6d"/>
+                    <xs:attribute name="tsl04" type="dsComm:number6d"/>
+                    <xs:attribute name="tsl05" type="dsComm:number6d"/>
+                    <xs:attribute name="tsl06" type="dsComm:number6d"/>
+                    <xs:attribute name="tsl07" type="dsComm:number6d"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="vykzaver" type="dsidu:vykzaverType" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:annotation>
+        <xs:documentation>
+      ************************************************************************
+      KORENOVY ELEMENT IDU (kompozice vyse definovanych komplexnich typu)
+      ***********************************************************************
+    </xs:documentation>
+    </xs:annotation>
+    <xs:element name="idu">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="na">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="a101" type="dsidu:a101Type" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ne">
+                    <xs:complexType>
+                        <xs:choice>
+                            <xs:element  name="e2" type="dsidu:e2Type" maxOccurs="unbounded"/>
+                            <xs:element  name="e3" type="dsidu:e3Type" maxOccurs="unbounded"/>
+                            <xs:element  name="e4" type="dsidu:e4Type" maxOccurs="unbounded"/>
+                            <xs:element  name="e5_8" type="dsidu:e5_8Type" maxOccurs="unbounded"/>
+                            <xs:element  name="e6" type="dsidu:e6Type" maxOccurs="unbounded"/>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="nl">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="l1" maxOccurs="unbounded" >
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="nelf" type="dsidu:nelfType"/>
+                                        <xs:element minOccurs="0" maxOccurs="unbounded" name="nelfdi"
+                      type="dsidu:nelfdiType"/>
+                                        <xs:element name="vykzaver" type="dsidu:vykzaverType" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="nr">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nrh" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:choice>
+					    <xs:element name="nrhh" maxOccurs="unbounded" type="dsidu:nrhhType"/>
+					    <xs:element name="nrh_chy" maxOccurs="unbounded" type="dsidu:nrh_chyType"/>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="nrr" type="dsidu:nrrType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="nrn" type="dsidu:nrnType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="nor" type="dsidu:norType" minOccurs="0"/>
+                            <xs:element name="nrv" type="dsidu:nrvType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="nrt" type="dsidu:nrtType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="nrz" type="dsidu:nrzType" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="nv">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="v1" type="dsidu:v1Type" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="nt">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="t1" type="dsidu:t1Type" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

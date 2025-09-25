@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="_lclpver">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="_lclpverVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lclpazp">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lclpazpVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lclplpz">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lclplpzVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lclppol">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lclppolVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lclpskal">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lclpskalVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lclpskup">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lclpskupVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lclpslab">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lclpslabVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lclptlg">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lclptlgVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="lclpvazb">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="lclpvazbVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="mpplab">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="mpplabVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="mppmetod">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="mppmetodVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="stametod">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="stametodVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="statridy">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="VETA" typ="statridyVetaType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attributeGroup ref="DScisAttrGroup" />
+	</xs:complexType>
+</xs:element>
+
+<xs:attributeGroup name="DScisAttrGroup">
+	<xs:attribute name="dat_gen" type="datetype" use="required" />
+	<xs:attribute name="cas_gen" type="timetype" use="required" />
+	<xs:attribute name="ver_nclp" type="str8type" use="required" />
+	<xs:attribute name="ver_ds" type="str8type" use="required" />
+	<xs:attribute name="uzivatel" type="str50type" use="optional" />
+</xs:attributeGroup>
+
+<xs:complexType name="_lclpverVetaType">
+	<xs:sequence>
+		<xs:attribute name="JM_PROG" type="str8type" use="required" />
+		<xs:attribute name="LIC_C" type="str10type" use="optional" />
+		<xs:attribute name="VER_PROG" type="str8type" use="optional" />
+		<xs:attribute name="VER_NCLP" type="str8type" use="required" />
+		<xs:attribute name="DAT_GEN" type="datetype" use="required" />
+		<xs:attribute name="CAS_GEN" type="timetype" use="required" />
+		<xs:attribute name="KOD_CES" type="str6type" use="required" />
+		<xs:attribute name="XSD" type="str70type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lclpazpVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lclplpzVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str5type" use="required" />
+		<xs:attribute name="KODLOK" type="str26type" use="optional" />
+		<xs:attribute name="KLICMATL" type="str8type" use="optional" />
+		<xs:attribute name="NMATL" type="str32type" use="optional" />
+		<xs:attribute name="KLICONPL" type="str8type" use="optional" />
+		<xs:attribute name="NONPL" type="str32type" use="optional" />
+		<xs:attribute name="ODB_MN" type="str8type" use="optional" />
+		<xs:attribute name="ODB_JK" type="str2type" use="optional" />
+		<xs:attribute name="ANAL_MN" type="str8type" use="optional" />
+		<xs:attribute name="ANAL_JK" type="str2type" use="optional" />
+		<xs:attribute name="INTOZ" type="str4type" use="optional" />
+		<xs:attribute name="INTOZJK" type="str4type" use="optional" />
+		<xs:attribute name="TEMPOZ" type="str8type" use="optional" />
+		<xs:attribute name="ODBPOZN" type="str250type" use="optional" />
+		<xs:attribute name="DOSR" type="str55type" use="optional" />
+		<xs:attribute name="ODEZR" type="str55type" use="optional" />
+		<xs:attribute name="PRIJEMR" type="str55type" use="optional" />
+		<xs:attribute name="DOSS" type="str55type" use="optional" />
+		<xs:attribute name="ODEZS" type="str55type" use="optional" />
+		<xs:attribute name="PRIJEMS" type="str55type" use="optional" />
+		<xs:attribute name="DOSTPOZN" type="str150type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lclppolVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str5type" use="required" />
+		<xs:attribute name="KODSKP" type="str26type" use="optional" />
+		<xs:attribute name="KODLOK" type="str26type" use="optional" />
+		<xs:attribute name="ZKRLOK" type="str26type" use="optional" />
+		<xs:attribute name="KLICSYST" type="str8type" use="required" />
+		<xs:attribute name="KODSYST" type="str8type" use="optional" />
+		<xs:attribute name="NSYSTL" type="str32type" use="optional" />
+		<xs:attribute name="KLICKOMP" type="str8type" use="required" />
+		<xs:attribute name="KODKOMP" type="str8type" use="optional" />
+		<xs:attribute name="NKOMPL" type="str55type" use="optional" />
+		<xs:attribute name="KLICDRVL" type="str8type" use="required" />
+		<xs:attribute name="KODDRVL" type="str8type" use="optional" />
+		<xs:attribute name="NDRVLL" type="str32type" use="optional" />
+		<xs:attribute name="KLICPROC" type="str8type" use="required" />
+		<xs:attribute name="KODPROC" type="str8type" use="optional" />
+		<xs:attribute name="NPROCL" type="str32type" use="optional" />
+		<xs:attribute name="KLICSP" type="str8type" use="optional" />
+		<xs:attribute name="KODSP" type="str8type" use="optional" />
+		<xs:attribute name="TSP" type="str55type" use="optional" />
+		<xs:attribute name="KLICJEDN" type="str8type" use="optional" />
+		<xs:attribute name="NJEDN" type="str20type" use="optional" />
+		<xs:attribute name="KLICJL" type="str8type" use="optional" />
+		<xs:attribute name="NJL" type="str20type" use="optional" />
+		<xs:attribute name="PREPFAK" type="str16type" use="optional" />
+		<xs:attribute name="NAZEVLP1" type="str120type" use="optional" />
+		<xs:attribute name="NAZEVLP2" type="str90type" use="optional" />
+		<xs:attribute name="N1L" type="str17type" use="optional" />
+		<xs:attribute name="N2L" type="str41type" use="optional" />
+		<xs:attribute name="N3L" type="str64type" use="optional" />
+		<xs:attribute name="N4L" type="str100type" use="optional" />
+		<xs:attribute name="GESCEL" type="str1type" use="optional" />
+		<xs:attribute name="TYPDIALL" type="str2type" use="optional" />
+		<xs:attribute name="FORMRML" type="str1type" use="optional" />
+		<xs:attribute name="FORMHL" type="str2type" use="optional" />
+		<xs:attribute name="SPNL" type="str8type" use="optional" />
+		<xs:attribute name="KLICMATL" type="str8type" use="optional" />
+		<xs:attribute name="NMATL" type="str32type" use="optional" />
+		<xs:attribute name="KLICAVL" type="str1type" use="optional" />
+		<xs:attribute name="NAVL" type="str32type" use="optional" />
+		<xs:attribute name="KLICONPL" type="str8type" use="optional" />
+		<xs:attribute name="NONPL" type="str32type" use="optional" />
+		<xs:attribute name="KODSKAL" type="str26type" use="optional" />
+		<xs:attribute name="KLICSOP" type="str5type" use="optional" />
+		<xs:attribute name="NSOP" type="str45type" use="optional" />
+		<xs:attribute name="ALGZPR" type="str8type" use="optional" />
+		<xs:attribute name="MEZ_STAND" type="str8type" use="optional" />
+		<xs:attribute name="MEZ_STANH" type="str8type" use="optional" />
+		<xs:attribute name="PLATI_OD" type="datetype" use="optional" />
+		<xs:attribute name="PLATI_DO" type="datetype" use="optional" />
+		<xs:attribute name="DAT_ZMEN" type="datetype" use="optional" />
+		<xs:attribute name="STAV" type="int1234type" use="required" />
+		<xs:attribute name="AKTUAL" type="int123type" use="required" />
+		<xs:attribute name="PRISTUP" type="inttype" use="optional" />
+		<xs:attribute name="SMLAB" type="str8type" use="optional" />
+		<xs:attribute name="DRUHOTNA" type="str1type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lclpskalVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="KODSKAL" type="str26type" use="required" />
+		<xs:attribute name="KODSKALL" type="str26type" use="optional" />
+		<xs:attribute name="SEX" type="str1type" use="optional" />
+		<xs:attribute name="VEKD" type="str5type" use="optional" />
+		<xs:attribute name="VEKH" type="str5type" use="optional" />
+		<xs:attribute name="ODBTD" type="str2type" use="optional" />
+		<xs:attribute name="ODBTH" type="str2type" use="optional" />
+		<xs:attribute name="UDAL" type="str8type" use="optional" />
+		<xs:attribute name="UDALJ" type="str1type" use="optional" />
+		<xs:attribute name="UDALTD" type="str5type" use="optional" />
+		<xs:attribute name="UDALTH" type="str5type" use="optional" />
+		<xs:attribute name="STAVTYP" type="str8type" use="optional" />
+		<xs:attribute name="ODBER" type="str8type" use="optional" />
+		<xs:attribute name="DIETA" type="str8type" use="optional" />
+		<xs:attribute name="ALGSKAL" type="str8type" use="optional" />
+		<xs:attribute name="PCASSB" type="str2type" use="optional" />
+		<xs:attribute name="PHMOT" type="str1type" use="optional" />
+		<xs:attribute name="PPLOCH" type="str1type" use="optional" />
+		<xs:attribute name="VAHA" type="str3type" use="optional" />
+		<xs:attribute name="S1" type="str8type" use="optional" />
+		<xs:attribute name="S2" type="str8type" use="optional" />
+		<xs:attribute name="S3" type="str8type" use="optional" />
+		<xs:attribute name="S4" type="str8type" use="optional" />
+		<xs:attribute name="S5" type="str8type" use="optional" />
+		<xs:attribute name="S6" type="str8type" use="optional" />
+		<xs:attribute name="S7" type="str8type" use="optional" />
+		<xs:attribute name="S8" type="str8type" use="optional" />
+		<xs:attribute name="DRUHZ" type="str1type" use="optional" />
+		<xs:attribute name="PLATI_OD" type="datetype" use="optional" />
+		<xs:attribute name="PLATI_DO" type="datetype" use="optional" />
+		<xs:attribute name="DAT_ZMEN" type="datetype" use="optional" />
+		<xs:attribute name="STAV" type="int1234type" use="required" />
+		<xs:attribute name="AKTUAL" type="int123type" use="required" />
+		<xs:attribute name="NJL" type="str20type" use="optional" />
+		<xs:attribute name="PREPFAK" type="str16type" use="optional" />
+		<xs:attribute name="LABL" type="str1type" use="optional" />
+		<xs:attribute name="FRML" type="str1type" use="optional" />
+		<xs:attribute name="HODTEXT" type="str8type" use="optional" />
+		<xs:attribute name="HODOD" type="str8type" use="optional" />
+		<xs:attribute name="HODDO" type="str8type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lclpskupVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lclpslabVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="NAZEV" type="str50type" use="optional" />
+		<xs:attribute name="ULICE" type="str30type" use="optional" />
+		<xs:attribute name="MESTO" type="str30type" use="optional" />
+		<xs:attribute name="PSC" type="str6type" use="optional" />
+		<xs:attribute name="TEL" type="str50type" use="optional" />
+		<xs:attribute name="MOBIL" type="str50type" use="optional" />
+		<xs:attribute name="FAX" type="str50type" use="optional" />
+		<xs:attribute name="MAIL" type="str50type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lclptlgVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lclpvazbVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str5type" use="required" />
+		<xs:attribute name="N90" type="str120type" use="optional" />
+		<xs:attribute name="KVALV" type="str2type" use="required" />
+		<xs:attribute name="KLICV" type="str5type" use="required" />
+		<xs:attribute name="N90V" type="str120type" use="optional" />
+		<xs:attribute name="TDIF" type="str5type" use="optional" />
+		<xs:attribute name="JTDIF" type="str1type" use="optional" />
+		<xs:attribute name="DAT_ZMEN" type="datetype" use="optional" />
+		<xs:attribute name="STAV" type="int1234type" use="required" />
+		<xs:attribute name="AKTUAL" type="int123type" use="required" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mpplabVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str1type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mppmetodVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str5type" use="required" />
+		<xs:attribute name="C_MET" type="str3type" use="optional" />
+		<xs:attribute name="N_MET" type="str16type" use="optional" />
+		<xs:attribute name="JEDN" type="str12type" use="optional" />
+		<xs:attribute name="P_DESM" type="inttype" use="optional" />
+		<xs:attribute name="KLIC_SL" type="str4type" use="optional" />
+		<xs:attribute name="PREDN_H" type="str8type" use="optional" />
+		<xs:attribute name="MAT" type="inttype" use="optional" />
+		<xs:attribute name="PREP" type="str1type" use="optional" />
+		<xs:attribute name="SPL1" type="inttype" use="optional" />
+		<xs:attribute name="SPL2" type="inttype" use="optional" />
+		<xs:attribute name="SPL3" type="inttype" use="optional" />
+		<xs:attribute name="B_VST" type="str1type" use="optional" />
+		<xs:attribute name="B_TISK" type="str1type" use="optional" />
+		<xs:attribute name="TXT_VYST" type="str1type" use="optional" />
+		<xs:attribute name="C_SLOV" type="inttype" use="optional" />
+		<xs:attribute name="B_ARCH" type="str1type" use="optional" />
+		<xs:attribute name="B_EKON" type="str1type" use="optional" />
+		<xs:attribute name="POUZE_DOC" type="str1type" use="optional" />
+		<xs:attribute name="POUZE_CET" type="str1type" use="optional" />
+		<xs:attribute name="MODEL_VYP" type="str1type" use="optional" />
+		<xs:attribute name="DCCAS_JEDN" type="str1type" use="optional" />
+		<xs:attribute name="NEJST_NAST" type="dec5-0type" use="optional" />
+		<xs:attribute name="KPLUS" type="dec5-3type" use="optional" />
+		<xs:attribute name="QPLUS" type="dec5-3type" use="optional" />
+		<xs:attribute name="KMINUS" type="dec5-3type" use="optional" />
+		<xs:attribute name="QMINUS" type="dec5-3type" use="optional" />
+		<xs:attribute name="NVCAS_JEDN" type="str1type" use="optional" />
+		<xs:attribute name="NEJBL_STAN" type="dec5-0type" use="optional" />
+		<xs:attribute name="KOLIKRAT" type="dec5-0type" use="optional" />
+		<xs:attribute name="LAB" type="str1type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="stametodVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str5type" use="required" />
+		<xs:attribute name="ASICENAR" type="dec7-2type" use="optional" />
+		<xs:attribute name="ASICENAS" type="dec7-2type" use="optional" />
+		<xs:attribute name="TRIDA1" type="str8type" use="optional" />
+		<xs:attribute name="TRIDA2" type="str8type" use="optional" />
+		<xs:attribute name="TRIDA3" type="str8type" use="optional" />
+		<xs:attribute name="PORAD1" type="str8type" use="optional" />
+		<xs:attribute name="PORAD2" type="str8type" use="optional" />
+		<xs:attribute name="PORAD3" type="str8type" use="optional" />
+		<xs:attribute name="ZKRLIS" type="str8type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="statridyVetaType">
+	<xs:sequence>
+		<xs:attribute name="KLIC" type="str8type" use="required" />
+		<xs:attribute name="N32" type="str32type" use="optional" />
+		<xs:attribute name="N55" type="str55type" use="optional" />
+		<xs:attribute name="PORADI" type="str6type" use="optional" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="datetype">
+	<xs:restriction base="xs:date">
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="dec5-0type">
+	<xs:restriction base="xs:decimal">
+		<xs:totalDigits value="5" />
+		<xs:fractionDigits value="0" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="dec5-3type">
+	<xs:restriction base="xs:decimal">
+		<xs:totalDigits value="5" />
+		<xs:fractionDigits value="3" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="dec7-2type">
+	<xs:restriction base="xs:decimal">
+		<xs:totalDigits value="7" />
+		<xs:fractionDigits value="2" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str1type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="1" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str2type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="2" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str3type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="3" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str4type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="4" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str5type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="5" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str6type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="6" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str8type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="8" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str10type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="10" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str12type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="12" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str16type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="16" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str17type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="17" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str20type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="20" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str26type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="26" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str30type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="30" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str32type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="32" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str41type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="41" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str45type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="45" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str50type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="50" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str55type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="55" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str64type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="64" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str70type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="70" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str90type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="90" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str100type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="100" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str120type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="120" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str150type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="150" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str240type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="240" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="str250type">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="1" />
+		<xs:maxLength value="250" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="inttype">
+	<xs:restriction base="xs:positiveInteger">
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="int123type">
+	<xs:restriction base="xs:positiveInteger">
+		<xs:minInclusive value="1" />
+		<xs:maxInclusive value="3" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="int1234type">
+	<xs:restriction base="xs:positiveInteger">
+		<xs:minInclusive value="1" />
+		<xs:maxInclusive value="4" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="timetype">
+	<xs:restriction base="xs:time">
+	</xs:restriction>
+</xs:simpleType>
+</xs:schema>

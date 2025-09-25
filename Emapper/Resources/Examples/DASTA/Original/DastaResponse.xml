@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dasta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.16.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.08.03.xsd" id_soubor="STAPRO__Medea_84648b43f5_20190329143204" verze_ds="04.18.02" verze_nclp="02.01.01" bin_priloha="T" ur="R" typ_odesm="NN" ozn_soub="RNN" potvrzeni="N" dat_vb="2019-03-29T14:32:04" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+    <zdroj_is kod_firmy="STAPRO__" kod_prog="Stapro.T" verze_prog="3.17" />
+    <pm icz="99999999">
+        <as typ="I" />
+    </pm>
+    <is icz="66232000">
+        <as typ="I" />
+        <ip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id_pac="511207703" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+            <rodcis>511207703</rodcis>
+            <jmeno>Adam</jmeno>
+            <prijmeni>Aderle</prijmeni>
+            <dat_dn>1951-12-07T00:00:00</dat_dn>
+            <ipi_o cis_is="119901" />
+            <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <jmeno>Cyrner Adam</jmeno>
+                <adr>U nádraží 12345/47</adr>
+                <psc>27061</psc>
+                <mesto>Lány</mesto>
+            </a>
+            <pv_pac typ_pv="X" dat_ab="2019-03-29T14:32:04" />
+            <u>
+                <urf typ="U" dat_ab="2010-12-14T00:00:00" ind_oprav_sd="N">
+                    <u_rf>Povrch těla (m2) =   0,97 ; BMI=  20,83 ; Výška= 120 ; Váha= 30 ;</u_rf>
+                    <dat_ak>2010-12-14T00:00:00</dat_ak>
+                </urf>
+            </u>
+            <an dat_ab="2011-04-05T00:00:00">
+                <text>
+                    <ptext xml:space="preserve">Společná anamnéza, datum změny: 05.04.2011
+Anamnéza CR, 21.05.2010 21:25, Plegerová Michaela:
+abcdef 
+
+Anamnéza CR, 05.04.2011 14:40, konverze:
+fbfbfb
+dsivjh vsdiovhds 
+
+
+</ptext>
+                </text>
+            </an>
+            <dg>
+                <dgz typ_dg="T">
+                    <diag poradi="1">J111</diag>
+                </dgz>
+                <dgz typ_dg="T">
+                    <diag poradi="2">K800</diag>
+                </dgz>
+                <dgz typ_dg="T">
+                    <diag poradi="3">A000</diag>
+                </dgz>
+                <dgz typ_dg="T">
+                    <diag poradi="4">K381</diag>
+                </dgz>
+            </dg>
+            <ku>
+                <ku_z typku="SOUPIS.ZPRAV" fazespec="ZK">
+                    <dat_prov>2019-03-29T14:32:04</dat_prov>
+                    <dat_vydani>2019-03-29T14:32:04</dat_vydani>
+                    <p_pracoviste>
+                        <nazev>Pracoviště</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Pracoviště</jmeno>
+                        </a>
+                    </p_pracoviste>
+                    <text>
+                        <ptext xml:space="preserve">SOUPIS.ZPRAV</ptext>
+                    </text>
+                    <ku_z_soupis>
+                        <ku_z_soupis_u typku="AMB.VYS" fazespec="ZK" idku="STAPRO.MEDEA.66114000.AR.3285572.0" idkulok="STAPRO.MEDEA.66114000.AR.3285572.0">
+                            <dat_prov>2018-05-29T14:09:49</dat_prov>
+                            <dat_vydani>2018-05-29T14:09:49</dat_vydani>
+                            <p_pracoviste kod_lok="KARAMB" odb="107">
+                                <nazev>Kardiologická ambulance</nazev>
+                                <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                                    <jmeno>Kardiologická ambulance</jmeno>
+                                </a>
+                            </p_pracoviste>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="1">A000</diag>
+                                <spec_dg>Cholera, původce: Vibrio cholerae 01, biotyp cholerae</spec_dg>
+                            </dg_vys>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="2">K800</diag>
+                                <spec_dg>Žlučník</spec_dg>
+                            </dg_vys>
+                        </ku_z_soupis_u>
+                        <ku_z_soupis_u typku="AMB.VYS" fazespec="ZK" idku="STAPRO.MEDEA.66114000.AR.3285332.0" idkulok="STAPRO.MEDEA.66114000.AR.3285332.0">
+                            <dat_prov>2018-03-20T09:13:37</dat_prov>
+                            <dat_vydani>2018-03-20T09:13:37</dat_vydani>
+                            <p_pracoviste kod_lok="KARAMB" odb="107">
+                                <nazev>Kardiologická ambulance</nazev>
+                                <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                                    <jmeno>Kardiologická ambulance</jmeno>
+                                </a>
+                            </p_pracoviste>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="1">A000</diag>
+                                <spec_dg>Cholera, původce: Vibrio cholerae 01, biotyp cholerae</spec_dg>
+                            </dg_vys>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="2">K800</diag>
+                                <spec_dg>Žlučník</spec_dg>
+                            </dg_vys>
+                        </ku_z_soupis_u>
+                        <ku_z_soupis_u typku="AMB.VYS" fazespec="ZK" idku="STAPRO.MEDEA.66114000.AR.3285005.0" idkulok="STAPRO.MEDEA.66114000.AR.3285005.0">
+                            <dat_prov>2018-01-12T10:05:19</dat_prov>
+                            <dat_vydani>2018-01-12T10:05:19</dat_vydani>
+                            <p_pracoviste kod_lok="KARAMB" odb="107">
+                                <nazev>Kardiologická ambulance</nazev>
+                                <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                                    <jmeno>Kardiologická ambulance</jmeno>
+                                </a>
+                            </p_pracoviste>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="1">A000</diag>
+                                <spec_dg>Cholera, původce: Vibrio cholerae 01, biotyp cholerae</spec_dg>
+                            </dg_vys>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="2">K800</diag>
+                                <spec_dg>Žlučník</spec_dg>
+                            </dg_vys>
+                        </ku_z_soupis_u>
+                        <ku_z_soupis_u typku="AMB.VYS" fazespec="ZK" idku="STAPRO.MEDEA.66114000.AR.3284964.0" idkulok="STAPRO.MEDEA.66114000.AR.3284964.0">
+                            <dat_prov>2018-01-04T11:10:48</dat_prov>
+                            <dat_vydani>2018-01-04T11:10:48</dat_vydani>
+                            <p_pracoviste kod_lok="KARAMB" odb="107">
+                                <nazev>Kardiologická ambulance</nazev>
+                                <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                                    <jmeno>Kardiologická ambulance</jmeno>
+                                </a>
+                            </p_pracoviste>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="1">A000</diag>
+                                <spec_dg>Cholera, původce: Vibrio cholerae 01, biotyp cholerae</spec_dg>
+                            </dg_vys>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="2">K800</diag>
+                                <spec_dg>Žlučník</spec_dg>
+                            </dg_vys>
+                        </ku_z_soupis_u>
+                        <ku_z_soupis_u typku="AMB.VYS" fazespec="ZK" idku="STAPRO.MEDEA.66114000.AR.3284803.0" idkulok="STAPRO.MEDEA.66114000.AR.3284803.0">
+                            <dat_prov>2017-11-16T09:10:34</dat_prov>
+                            <dat_vydani>2017-11-16T09:10:34</dat_vydani>
+                            <p_pracoviste kod_lok="KARAMB" odb="107">
+                                <nazev>Kardiologická ambulance</nazev>
+                                <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                                    <jmeno>Kardiologická ambulance</jmeno>
+                                </a>
+                            </p_pracoviste>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="1">A000</diag>
+                                <spec_dg>Cholera, původce: Vibrio cholerae 01, biotyp cholerae</spec_dg>
+                            </dg_vys>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="2">K800</diag>
+                                <spec_dg>Žlučník</spec_dg>
+                            </dg_vys>
+                        </ku_z_soupis_u>
+                        <ku_z_soupis_u typku="AMB.VYS" fazespec="ZK" idku="STAPRO.MEDEA.66114000.AR.3283209.0" idkulok="STAPRO.MEDEA.66114000.AR.3283209.0">
+                            <dat_prov>2016-05-13T09:18:24</dat_prov>
+                            <dat_vydani>2016-05-13T09:18:24</dat_vydani>
+                            <p_pracoviste kod_lok="KARAMB" odb="107">
+                                <nazev>Kardiologická ambulance</nazev>
+                                <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                                    <jmeno>Kardiologická ambulance</jmeno>
+                                </a>
+                            </p_pracoviste>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="1">A000</diag>
+                                <spec_dg>Cholera, původce: Vibrio cholerae 01, biotyp cholerae</spec_dg>
+                            </dg_vys>
+                            <dg_vys typ_dg="P">
+                                <diag poradi="2">K800</diag>
+                                <spec_dg>Žlučník</spec_dg>
+                            </dg_vys>
+                        </ku_z_soupis_u>
+                        <dat_vb>2019-03-29T14:32:04</dat_vb>
+                    </ku_z_soupis>
+                </ku_z>
+            </ku>
+        </ip>
+    </is>
+</dasta>

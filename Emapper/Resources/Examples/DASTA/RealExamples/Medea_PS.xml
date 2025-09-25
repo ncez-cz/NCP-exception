@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dasta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.17.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.08.04.xsd" id_soubor="STAPRO__Medea_9525dcc219_20190605145440" verze_ds="04.18.03" verze_nclp="02.01.01" bin_priloha="T" ur="R" typ_odesm="NN" ozn_soub="RNN" potvrzeni="N" dat_vb="2019-06-05T14:54:40" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+    <zdroj_is kod_firmy="STAPRO__" kod_prog="StaproME" verze_prog="342A02.2" liccis_prog="Nemocnic" />
+    <pm icz="99999999" icp="99999999">
+        <as typ="I" />
+    </pm>
+    <is icz="89903000" icp="89903000">
+        <as typ="I" />
+        <ip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id_pac="9799221217" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+            <rodcis>8701022121</rodcis>
+            <prijmeni>Žluťoučký</prijmeni>
+            <dat_dn>1985-01-02T00:00:00</dat_dn>
+            <ipi_o cis_is="130235" />
+            <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <jmeno>Kůň</jmeno>
+                <adr>Mezibranská 125/4, a</adr>
+                <psc>14700</psc>
+                <mesto>Praha 4</mesto>
+                <stat>203</stat>
+                <as typ="E">
+                    <obsah>kun@nazdar.cz</obsah>
+                </as>
+                <as typ="T">
+                    <obsah>123456789</obsah>
+                </as>
+            </a>
+            <a typ="K" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <jmeno>Kůň</jmeno>
+                <adr>Abbey Road 1</adr>
+                <mesto>Liverpool</mesto>
+                <stat>203</stat>
+                <as typ="E">
+                    <obsah>kun@beatlws.com</obsah>
+                </as>
+                <as typ="T">
+                    <obsah>neznámý</obsah>
+                </as>
+            </a>
+            <pv_pac typ_pv="X" dat_ab="2019-06-05T14:54:40" />
+            <ku>
+                <ku_z typku="AMB.VYS" fazespec="ZF" idku="STAPRO.MEDEA.66114000.AR.3286466.0" idsub="STAPRO__01901020.808" idkulok="STAPRO.MEDEA.66114000.AR.3286466.0">
+                    <dat_prov>2019-04-25T16:24:37</dat_prov>
+                    <dat_vydani>2019-04-25T16:24:37</dat_vydani>
+                    <p_pracoviste kod_lok="ZZS" odb="000">
+                        <nazev>ZZS</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>ZZS</jmeno>
+                        </a>
+                    </p_pracoviste>
+                    <text>
+                        <ptext xml:space="preserve">NisKom1
+
+
+</ptext>
+                    </text>
+                    <dg_vys typ_dg="P">
+                        <diag mkn_verze="2014" poradi="1">H026</diag>
+                    </dg_vys>
+                    <dg_vys typ_dg="P">
+                        <diag mkn_verze="2014" poradi="2">I010</diag>
+                    </dg_vys>
+                </ku_z>
+                <ku_z typku="AMB.VYS" fazespec="ZF" idku="STAPRO.MEDEA.66114000.AR.3286464.0" idsub="STAPRO__01901020.808" idkulok="STAPRO.MEDEA.66114000.AR.3286464.0">
+                    <dat_prov>2019-04-25T15:49:50</dat_prov>
+                    <dat_vydani>2019-04-25T15:49:50</dat_vydani>
+                    <p_pracoviste kod_lok="INTAMB 1" odb="101">
+                        <nazev>Interní ambulance I._ZAD_VFN_OC</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Interní ambulance I._ZAD_VFN_OC</jmeno>
+                        </a>
+                    </p_pracoviste>
+                    <text>
+                        <ptext xml:space="preserve">
+_NAzdar Piotře, 1. amb. zpráva.
+</ptext>
+                    </text>
+                </ku_z>
+                <ku_z typku="AMB.VYS" fazespec="ZF" idku="STAPRO.MEDEA.66114000.AR.3283689.0" idsub="STAPRO__01901020.808" idkulok="STAPRO.MEDEA.66114000.AR.3283689.0">
+                    <dat_prov>2016-11-09T12:17:11</dat_prov>
+                    <dat_vydani>2016-11-09T12:17:11</dat_vydani>
+                    <p_pracoviste kod_lok="ZZS" odb="000">
+                        <nazev>ZZS</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>ZZS</jmeno>
+                        </a>
+                    </p_pracoviste>
+                    <text>
+                        <ptext xml:space="preserve">6666-- Anamneza --
+</ptext>
+                    </text>
+                    <dg_vys typ_dg="P">
+                        <diag mkn_verze="2014" poradi="1">H026</diag>
+                    </dg_vys>
+                    <dg_vys typ_dg="P">
+                        <diag mkn_verze="2014" poradi="2">I010</diag>
+                    </dg_vys>
+                </ku_z>
+                <ku_z typku="AMB.VYS" fazespec="ZF" idku="STAPRO.MEDEA.66114000.AR.3283692.0" idsub="STAPRO__01901020.808" idkulok="STAPRO.MEDEA.66114000.AR.3283692.0">
+                    <dat_prov>2013-05-24T08:53:00</dat_prov>
+                    <dat_vydani>2013-05-24T08:53:00</dat_vydani>
+                    <p_pracoviste kod_lok="ZZS" odb="000">
+                        <nazev>ZZS</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>ZZS</jmeno>
+                        </a>
+                    </p_pracoviste>
+                    <text>
+                        <ptext xml:space="preserve">8888-- Anamneza --
+</ptext>
+                    </text>
+                    <dg_vys typ_dg="P">
+                        <diag mkn_verze="2014" poradi="1">H026</diag>
+                    </dg_vys>
+                    <dg_vys typ_dg="P">
+                        <diag mkn_verze="2014" poradi="2">I010</diag>
+                    </dg_vys>
+                </ku_z>
+                <ku_z typku="AMB.VYS" fazespec="ZF" idku="STAPRO.MEDEA.66114000.AR.3283691.0" idsub="STAPRO__01901020.808" idkulok="STAPRO.MEDEA.66114000.AR.3283691.0">
+                    <dat_prov>2013-05-24T08:52:00</dat_prov>
+                    <dat_vydani>2013-05-24T08:52:00</dat_vydani>
+                    <p_pracoviste kod_lok="ZZS" odb="000">
+                        <nazev>ZZS</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>ZZS</jmeno>
+                        </a>
+                    </p_pracoviste>
+                    <text>
+                        <ptext xml:space="preserve">7777-- Anamneza --
+</ptext>
+                    </text>
+                    <dg_vys typ_dg="P">
+                        <diag mkn_verze="2014" poradi="1">H026</diag>
+                    </dg_vys>
+                    <dg_vys typ_dg="P">
+                        <diag mkn_verze="2014" poradi="2">I010</diag>
+                    </dg_vys>
+                </ku_z>
+                <ku_z typku="H.PROPZ" fazespec="ZF" idku="STAPRO.MEDEA.66114000.AR.3286467.0" idsub="STAPRO__01901020.808" idkulok="STAPRO.MEDEA.66114000.AR.3286467.0">
+                    <dat_prov>2019-04-25T15:50:00</dat_prov>
+                    <dat_real_od>2019-04-25T15:50:00</dat_real_od>
+                    <dat_vydani>2019-04-25T15:50:00</dat_vydani>
+                    <p_pracoviste kod_lok="CH-O" odb="5F1">
+                        <nazev>Chirugické oddělení</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Chirugické oddělení</jmeno>
+                        </a>
+                    </p_pracoviste>
+                    <text>
+                        <ptext xml:space="preserve">Niskom 2 propouštěčka
+</ptext>
+                    </text>
+                    <dg_vys typ_dg="P">
+                        <diag mkn_verze="2014" poradi="1" nazev="Žaludeční vřed akutní s perforací">K251</diag>
+                    </dg_vys>
+                </ku_z>
+                <ku_z typku="PATSUM.DAT" fazespec="ZF" idsub="STAPRO__01901020.808">
+                    <dat_prov>2019-06-05T00:00:00</dat_prov>
+                    <dat_vydani>2019-06-05T14:54:40</dat_vydani>
+                    <z_pracoviste icz="99999999" icp="99999999" odb="999">
+                        <nazev>WebApplication</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>WebApplication</jmeno>
+                        </a>
+                    </z_pracoviste>
+                    <p_pracoviste icz="89903000" icp="89903000" odb="000">
+                        <nazev>StaproMEDEA</nazev>
+                    </p_pracoviste>
+                    <zpo icz="89903000">
+                        <nazev>StaproMEDEA</nazev>
+                        <a_p typ="7">
+                            <jmeno xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Nemocnice Pardubice</jmeno>
+                            <adr xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Nemocniční 1</adr>
+                            <psc xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">51234</psc>
+                            <mesto xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Pardubice</mesto>
+                            <stat xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">203</stat>
+                            <as typ="E" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                                <obsah>kontakt@pkn.cz</obsah>
+                            </as>
+                            <as typ="B" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                                <obsah>+420602123456</obsah>
+                            </as>
+                            <as typ="T" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                                <obsah>+420461234568</obsah>
+                            </as>
+                        </a_p>
+                        <prijmeni>Pracovník</prijmeni>
+                    </zpo>
+                    <text>
+                        <ptext xml:space="preserve">Pacientský souhrn  Žluťoučký 2019-06-05</ptext>
+                    </text>
+                    <ku_pac id_pac="9799221217">
+                        <prijmeni>Žluťoučký</prijmeni>
+                        <dat_dn>1985-01-02T00:00:00</dat_dn>
+                        <sex>M</sex>
+                        <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Kůň</jmeno>
+                            <adr>Mezibranská 125/4, a</adr>
+                            <psc>14700</psc>
+                            <mesto>Praha 4</mesto>
+                            <stat>203</stat>
+                            <as typ="E">
+                                <obsah>kun@nazdar.cz</obsah>
+                            </as>
+                            <as typ="T">
+                                <obsah>123456789</obsah>
+                            </as>
+                        </a>
+                        <a typ="K" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Kůň</jmeno>
+                            <adr>Abbey Road 1</adr>
+                            <mesto>Liverpool</mesto>
+                            <stat>203</stat>
+                            <as typ="E">
+                                <obsah>kun@beatlws.com</obsah>
+                            </as>
+                            <as typ="T">
+                                <obsah>neznámý</obsah>
+                            </as>
+                        </a>
+                    </ku_pac>
+                    <ku_z_patsumdat>
+                        <jazyk jazyk_klic="cs-CZ" pref="P" ind_oprav_sd="N" />
+                        <povolani />
+                        <h dat_ab="0001-01-01T00:00:00" />
+                        <u>
+                            <ua typ="AN" dat_ab="2019-04-24T00:00:00" ind_oprav_sd="N">
+                                <u_al>Penicilin.</u_al>
+                                <autor>Wurm Lubomír</autor>
+                                <iid root="Allergy_scpac_130235" />
+                            </ua>
+                            <urf typ="U" dat_ab="2019-04-24T00:00:00" ind_oprav_sd="N"> 
+                                <u_rf>Povrch těla (m2) =   2,08 ; BMI=  27,78 ; Výška= 180 ; Váha= 90 ; Slabá paměť.</u_rf>
+                                <dat_ak>2019-04-24T00:00:00</dat_ak>
+                            </urf>
+                            <uks dat_ab="2019-04-15T00:00:00" ind_oprav_sd="N">
+                                <ks_rh>A+</ks_rh>
+                                <ks_rh_text>A Rh(D) pozitivní</ks_rh_text>
+                                <autor>Wurm Lubomír</autor>
+                                <iid root="Blood_scpac_130235" />
+                            </uks>
+                        </u>
+                        <an dat_ab="2019-04-25T00:00:00">
+                            <text>
+                                <ptext xml:space="preserve">Společná anamnéza, datum změny: 25.04.2019
+Anamnéza, 25.04.2019 16:53, Wurm Lubomír:
+NisKon 5
+
+Centrální anamnéza, 25.04.2019 17:00, Wurm Lubomír:
+NisKon 8
+
+
+</ptext>
+                            </text>
+                        </an>
+                        <dg dat_ab="2019-04-17T00:00:00">
+                            <dgz typ_dg="T">
+                                <diag mkn_verze="2014" poradi="1">I050</diag>
+                                <dat_du format="D" typ="L">2019-04-17</dat_du>
+                                <dat_up format="D" typ="L">2019-04-17</dat_up>
+                                <autor>Wurm Lubomír</autor>
+                                <dat_vb>2019-04-17</dat_vb>
+                                <iid root="Dg_scdg_1362118944" />
+                            </dgz>
+                            <dgz typ_dg="T">
+                                <diag mkn_verze="2014" poradi="2">Q030</diag>
+                                <dat_du format="D" typ="L">2019-04-17</dat_du>
+                                <dat_up format="D" typ="L">2019-04-17</dat_up>
+                                <autor>Wurm Lubomír</autor>
+                                <dat_vb>2019-04-17</dat_vb>
+                                <iid root="Dg_scdg_119126811" />
+                            </dgz>
+                        </dg>
+                        <le typ="A" dat_ab="2019-06-05T00:00:00">
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="Trvale bere cosi na srdce.&#xA;A něco na čůrání." cis_kod_lek="DLP">
+                                <dat_od>2019-02-25</dat_od>
+                                <dat_do>0001-01-01</dat_do>
+                                <rozpis_v />
+                                <autor>Jmeno</autor>
+                                <dat_vb>2019-02-15T00:00:00</dat_vb>
+                                <iid root="abcd_12345678" />
+                            </lez>
+                            <lez typ_med="P" ind_oprav_sd="N" nazev_lek="" cis_kod_lek="DLP">
+                                <dat_od>2019-02-25</dat_od>
+                                <dat_do>0001-01-01</dat_do>
+                                <rozpis_v>1-0-1</rozpis_v>
+                                <autor>Jmeno</autor>
+                                <dat_vb>2019-02-15T00:00:00</dat_vb>
+                                <iid root="abcd_87654321" />
+                            </lez>
+                        </le>
+                        <zdroj_sw kod_firmy="STAPRO__" kod_prog="StaproME" verze_prog="342A02.2" liccis_prog="Nemocnic" />
+                    </ku_z_patsumdat>
+                </ku_z>
+            </ku>
+        </ip>
+    </is>
+</dasta>

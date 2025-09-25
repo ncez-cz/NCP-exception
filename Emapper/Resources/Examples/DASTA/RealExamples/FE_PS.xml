@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dasta 
+xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xsi:schemaLocation="
+	urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.17.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.08.04.xsd" 
+id_soubor="STAPRO__FonsEnterprise_0966253fbc_201906" 
+verze_ds="04.18.03" 
+verze_nclp="02.01.01" 
+bin_priloha="T" 
+ur="R" 
+typ_odesm="NN" 
+ozn_soub="RNN" 
+potvrzeni="N" 
+dat_vb="2019-06-10T09:09:07" 
+>
+    <zdroj_is kod_firmy="STAPRO__" kod_prog="StaproFE" verze_prog="1.130.19" liccis_prog="StaproDe" />
+    <pm icz="99999999" icp="99999999">
+        <as typ="I" />
+    </pm>
+    <is icz="89903000" icp="89903000">
+        <as typ="I" />
+        <ip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id_pac="9660060696" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+            <rodcis>9660060696</rodcis>
+            <jmeno>Transmise</jmeno>
+            <prijmeni>Testovací</prijmeni>
+            <dat_dn>1996-10-06T00:00:00</dat_dn>
+            <ipi_o cis_is="d40ce6a2-4d56-4ad3-8f73-7a6ae345a688" />
+            <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <jmeno>Testovací Transmise</jmeno>
+                <adr>Pernštýnské nám. 51</adr>
+                <psc>53002</psc>
+                <mesto>Pardubice</mesto>
+                <stat>203</stat>
+                <as typ="E">
+                    <obsah>transmise@staproemail.cz</obsah>
+                </as>
+                <as typ="B">
+                    <obsah>420777888999</obsah>
+                </as>
+            </a>
+            <a typ="K" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <jmeno>Testovací Fons</jmeno>
+                <adr>Pernštýnské náměstí 51</adr>
+                <psc>53002</psc>
+                <mesto>Pardubice</mesto>
+                <stat>203</stat>
+                <as typ="B">
+                    <obsah>420888999000</obsah>
+                </as>
+            </a>
+            <a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <jmeno>MUDr. Praktik Zkušený</jmeno>
+                <adr>Jindřišská 16</adr>
+                <psc>53002</psc>
+                <mesto>Pardubice</mesto>
+                <stat>203</stat>
+                <as typ="E">
+                    <obsah>praktik@staproemail.cz</obsah>
+                </as>
+                <as typ="B">
+                    <obsah>420111222333</obsah>
+                </as>
+            </a>
+		   <pv_pac typ_pv="X" dat_ab="2019-06-10T09:09:07" />
+            <ku>
+                <ku_z typku="PATSUM.DAT" fazespec="ZF" idsub="SCSOFT__KzIZHpuK0UaYcDpAsdo99A__.1" idku="STAPRO_TESTDOC1.10">
+                    <dat_prov>2019-06-04T09:47:38</dat_prov>
+                    <dat_vydani>2019-06-10T09:09:07</dat_vydani>
+                    <z_pracoviste icz="99999999" icp="99999999" odb="000">
+                        <nazev>WebApplication</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>WebApplication</jmeno>
+                        </a>
+                    </z_pracoviste>
+                    <p_pracoviste icz="89903000" icp="89903000" odb="000">
+                        <nazev>Vojenská nemocnice Olomouc</nazev>
+                    </p_pracoviste>
+                    <zpo icz="89903000">
+                        <nazev>Vojenská nemocnice Olomouc</nazev>
+                        <a_p typ="7">
+                            <jmeno xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Vojenská nemocnice Olomouc, a.s.</jmeno>
+                            <adr xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">K Nemocnici 52</adr>
+                            <psc xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">77111</psc>
+                            <mesto xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Olomouc</mesto>
+                            <stat xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">203</stat>
+                        </a_p>
+                        <prijmeni>Pracovník</prijmeni>
+                    </zpo>
+                    <text>
+                        <ptext xml:space="preserve">Pacientský souhrn Transmise Testovací 2019-06-04</ptext>
+                    </text>
+                    <ku_pac id_pac="9660060696">
+                        <jmeno>Transmise</jmeno>
+                        <prijmeni>Testovací</prijmeni>
+                        <dat_dn>1996-10-06T00:00:00</dat_dn>
+                        <sex>F</sex>
+                        <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Testovací Transmise</jmeno>
+                            <adr>Pernštýnské nám. 51</adr>
+                            <psc>53002</psc>
+                            <mesto>Pardubice</mesto>
+                            <stat>203</stat>
+                            <as typ="E">
+                                <obsah>transmise@staproemail.cz</obsah>
+                            </as>
+                            <as typ="B">
+                                <obsah>420777888999</obsah>
+                            </as>
+                        </a>
+                        <a typ="K" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Testovací Fons</jmeno>
+                            <adr>Pernštýnské náměstí 51</adr>
+                            <psc>53002</psc>
+                            <mesto>Pardubice</mesto>
+                            <stat>203</stat>
+                            <as typ="B">
+                                <obsah>420888999000</obsah>
+                            </as>
+                        </a>
+                        <a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>MUDr. Praktik Zkušený</jmeno>
+                            <adr>Jindřišská 16</adr>
+                            <psc>53002</psc>
+                            <mesto>Pardubice</mesto>
+                            <stat>203</stat>
+                            <as typ="E">
+                                <obsah>praktik@staproemail.cz</obsah>
+                            </as>
+                            <as typ="B">
+                                <obsah>420111222333</obsah>
+                            </as>
+                        </a>
+                    </ku_pac>
+                    <ku_z_patsumdat>
+                        <jazyk jazyk_klic="cs-CZ" pref="P" ind_oprav_sd="N" />
+                        <povolani>
+                            <povolani_text>strojvůdce</povolani_text>
+                        </povolani>
+                        <h vyska="169" hmotnost="57.000" dat_ab="2019-05-28T11:18:39" />
+                        <u>
+                            <ua typ="AN" dat_ab="2019-05-10T15:45:55" ind_oprav_sd="N">
+                                <u_al>Senná rýma</u_al>
+                                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                                <dat_du format="D" typ="L">1985-01-01</dat_du>
+                                <iid root="5db5cb58-b95f-4efd-ba70-6615adf6e31e" /> 
+                            </ua>
+                            <ua typ="AN" dat_ab="2019-05-10T14:46:02" ind_oprav_sd="N">
+                                <u_al>TTC</u_al>
+                                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                                <iid root="5db5cb58-b95f-4efd-ba70-6615adf6e31e" />
+                            </ua>
+                            <uks dat_ab="2019-05-10T14:34:32" ind_oprav_sd="N">
+                                <ks_rh>A+</ks_rh>
+                                <ks_rh_text>A Rh(D) pozitivní</ks_rh_text>
+                                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                                <iid root="46810a36-355f-4ebb-acbe-8f5a48f0cbcc" />
+                            </uks>
+                        </u>
+                        <an dat_ab="2019-05-13T08:19:10">
+                            <text>
+                                <ptext xml:space="preserve">Souhrná: 
+bez sledovaných onemocnění, senná rýma
+
+Rodinná: 
+negat.
+
+Pracovní: 
+strojvůdce
+
+Sociální: 
+s rodinou, v domě, zvířata ne
+
+Toxikologie: 
+nekouří, alkohol příležitostně, drogy 0
+
+</ptext>
+                            </text>
+                            <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                            <iid root="1790c0a9-dd8b-43b5-aaa8-54c1ff53f947" />
+                        </an>
+                        <dg dat_ab="2019-06-04T09:47:38">
+                            <dgz typ_dg="T">
+                                <diag mkn_verze="2014" poradi="1" nazev="Astma převážně alergické">J450</diag>
+                                <dat_du format="D" typ="L">2019-05-10</dat_du>
+                                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                                <dat_vb>2019-05-10</dat_vb>
+                                <iid root="ed439412-b7d9-45ce-b1f6-66ddeacba30b" />
+                            </dgz>
+                            <dgz typ_dg="P">
+                                <diag mkn_verze="2014" poradi="1" nazev="Cyklista zraněný při jiné a neurč.dopr.nehodě">V19</diag>
+                                <dat_du format="D" typ="L">2019-06-04</dat_du>
+                                <autor>Stapro Service</autor>
+                                <dat_vb>2019-06-04</dat_vb>
+                                <iid root="c1f49972-f8c7-4933-8d59-99c6fd84d879" />
+                            </dgz>
+                            <dgz typ_dg="P">
+                                <diag mkn_verze="2014" poradi="2" nazev="Zlomenina klíční kosti; zavřená">S4200</diag>
+                                <dat_du format="D" typ="L">2019-06-04</dat_du>
+                                <autor>Stapro Service</autor>
+                                <dat_vb>2019-06-04</dat_vb>
+                                <iid root="c44da029-cd02-4c88-80da-8a3f529d0193" />
+                            </dgz>
+                            <dgz typ_dg="P">
+                                <diag mkn_verze="2014" poradi="3" nazev="Napadení tělesnou silou; sportoviště; volný čas">Y0431</diag>
+                                <dat_du format="D" typ="L">2019-05-28</dat_du>
+                                <autor>Stapro Service</autor>
+                                <dat_vb>2019-05-28</dat_vb>
+                                <iid root="d4634e3a-8561-46a5-b709-1f5f56b24191" />
+                            </dgz>
+                            <dgz typ_dg="P">
+                                <diag mkn_verze="2014" poradi="4" nazev="Mnohočetná poranění hrudníku">S297</diag>
+                                <dat_du format="D" typ="L">2019-05-28</dat_du>
+                                <autor>Stapro Service</autor>
+                                <dat_vb>2019-05-28</dat_vb>
+                                <iid root="0f3c0007-6620-453b-8fe5-5cfccc56f14b" />
+                            </dgz>
+                            <dgz typ_dg="P">
+                                <diag mkn_verze="2014" poradi="5" nazev="Nevolnost a únava">R53</diag>
+                                <dat_du format="D" typ="L">2019-05-13</dat_du>
+                                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                                <dat_vb>2019-05-13</dat_vb>
+                                <iid root="d77550f5-2c03-445d-8e43-02937b3f2318" />
+                            </dgz>
+                            <dgz typ_dg="P">
+                                <diag mkn_verze="2014" poradi="6" nazev="Chronická rýma - rhinitis chronica">J310</diag>
+                                <dat_du format="D" typ="L">2019-05-13</dat_du>
+                                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                                <dat_vb>2019-05-13</dat_vb>
+                                <iid root="e4c218df-11f0-4abb-b208-987144c5ba79" />
+                            </dgz>
+                            <dgz typ_dg="P">
+                                <diag mkn_verze="2014" poradi="7" nazev="Polypoidní degenerace vedlejší nosní dutiny">J331</diag>
+                                <dat_du format="D" typ="L">2019-05-13</dat_du>
+                                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                                <dat_vb>2019-05-13</dat_vb>
+                                <iid root="d035c2a4-8133-4db0-acc9-23aa96ced1fd" />
+                            </dgz>
+                        </dg>
+                        <le typ="A" dat_ab="2019-05-13T08:16:09">
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="ZYRTEC" kod_lek="0047032" cis_kod_lek="KLK">
+                                <dat_od>2018-05-16</dat_od>
+                                <rozpis_v>:dle potřeby</rozpis_v>
+                                <autor>Stapro Mlejnek Ondřej Ing.</autor>
+                                <dat_vb>2019-05-13T08:14:50</dat_vb>
+                                <iid root="42bd89fa-2b5f-4a2a-8b20-04bae6661232" />
+                            </lez>
+                        </le>
+                        <zdroj_sw kod_firmy="STAPRO__" kod_prog="StaproFE" verze_prog="1.130.19" liccis_prog="StaproDe" />
+                    </ku_z_patsumdat>
+                </ku_z>
+            </ku>
+        </ip>
+    </is>
+</dasta>

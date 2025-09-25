@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dasta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" id_soubor="STAPRO__Akord_7c6559628e_20220216065329"
+    verze_ds="04.22.01" verze_nclp="02.73.01" bin_priloha="T" ur="R" typ_odesm="NN" ozn_soub="RNN"
+    potvrzeni="N" dat_vb="2022-02-16T06:53:29" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+    <zdroj_is kod_firmy="STAPRO__" kod_prog="StaproFA" verze_prog="814.20.0" liccis_prog="Nemocnic" />
+    <pm icz="70890749" icp="70890749">
+        <as typ="I" />
+    </pm>
+    <is icz="999990000" icp="999990000">
+        <as typ="I" />
+        <ip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" id_pac="7161264528"
+            xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+            <rodcis>7161264528</rodcis>
+            <jmeno>Mračena</jmeno>
+            <prijmeni>Mrakomorová</prijmeni>
+            <dat_dn>1971-11-26T00:00:00</dat_dn>
+            <sex>F</sex>
+            <ipi_o cis_is="9155287" />
+            <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <jmeno>Mrakomorová Mračena</jmeno>
+                <adr>Trmalova 64</adr>
+                <psc>25101</psc>
+                <mesto>Říčany,Jažlovice</mesto>
+                <stat>203</stat>
+                <as typ="E">
+                    <obsah>mracena.mrak@qgmail.com</obsah>
+                </as>
+                <as typ="B">
+                    <obsah> +420777666555</obsah>
+                </as>
+            </a>
+            <a typ="3" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <o_prijmeni>Merlin Mrakomor</o_prijmeni>
+                <jmeno>Merlin Mrakomor</jmeno>
+                <adr>Trmalova 64</adr>
+                <psc>25101</psc>
+                <mesto>Říčany,Jažlovice</mesto>
+                <stat>203</stat>
+                <as typ="E">
+                    <obsah>syn@qgmail.com</obsah>
+                </as>
+                <as typ="B">
+                    <obsah>+420666555444</obsah>
+                </as>
+            </a>
+            <a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <o_prijmeni>Ludmila Lékařská</o_prijmeni>
+                <jmeno>Ludmila Lékařská</jmeno>
+                <adr>Thomayerova 403/4</adr>
+                <psc>25101</psc>
+                <mesto>Říčany,Jažlovice</mesto>
+                <stat>203</stat>
+                <as typ="E">
+                    <obsah>lekar@qgmail.com</obsah>
+                </as>
+                <as typ="B">
+                    <obsah> +420777888999</obsah>
+                </as>
+            </a>
+            <pv_pac typ_pv="X" dat_ab="2022-02-16T06:53:29" />
+            <ku>
+                <ku_z typku="PATSUM.DAT" fazespec="ZF"
+                    idku="STAPRO__59ce49d26b6b4529b3e6ad9a91e87d89"
+                    idsub="SCSOFT__KzIZHpuK0UaYcDpAsdo99A__.1">
+                    <dat_prov>2022-02-10T08:44:42</dat_prov>
+                    <dat_vydani>2022-02-16T06:53:29</dat_vydani>
+                    <z_pracoviste icz="70890749" icp="70890749" odb="00">
+                        <nazev>WebApplication</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>WebApplication</jmeno>
+                        </a>
+                    </z_pracoviste>
+                    <p_pracoviste icz="999990000" icp="999990000" odb="000">
+                        <nazev>Nemocnice DEMO</nazev>
+                        <a typ="7" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Nemocnice DEMO</jmeno>
+                            <adr>Ulice 11</adr>
+                            <psc>99999 </psc>
+                            <mesto>OBEC</mesto>
+                            <stat>203</stat>
+                            <as typ="B">
+                                <obsah>999 999 999</obsah>
+                            </as>
+                        </a>
+                    </p_pracoviste>
+                    <zpo icz="999990000">
+                        <nazev>Nemocnice DEMO</nazev>
+                        <a_p typ="7">
+                            <jmeno xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Nemocnice DEMO</jmeno>
+                            <adr xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Ulice 11</adr>
+                            <psc xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">99999 </psc>
+                            <mesto xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">OBEC</mesto>
+                            <stat xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">203</stat>
+                            <as typ="B" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                                <obsah>999 999 999</obsah>
+                            </as>
+                        </a_p>
+                        <prijmeni>ChiAlekar</prijmeni>
+                        <iid_zp root="1.2.203.24341.1.10.999990000.2" ext="17" />
+                    </zpo>
+                    <text>
+                        <ptext xml:space="preserve">Pacientský souhrn Mračena Mrakomorová 2022-02-10</ptext>
+                    </text>
+                    <ku_pac id_pac="7161264528">
+                        <jmeno>Mračena</jmeno>
+                        <prijmeni>Mrakomorová</prijmeni>
+                        <dat_dn>1971-11-26T00:00:00</dat_dn>
+                        <sex>F</sex>
+                        <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Mrakomorová Mračena</jmeno>
+                            <adr>Trmalova 64</adr>
+                            <psc>25101</psc>
+                            <mesto>Říčany,Jažlovice</mesto>
+                            <stat>203</stat>
+                            <as typ="E">
+                                <obsah>mracena.mrak@qgmail.com</obsah>
+                            </as>
+                            <as typ="B">
+                                <obsah> +420777666555</obsah>
+                            </as>
+                        </a>
+                        <a typ="3" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <o_prijmeni>Merlin Mrakomor</o_prijmeni>
+                            <jmeno>Merlin Mrakomor</jmeno>
+                            <adr>Trmalova 64</adr>
+                            <psc>25101</psc>
+                            <mesto>Říčany,Jažlovice</mesto>
+                            <stat>203</stat>
+                            <as typ="E">
+                                <obsah>syn@qgmail.com</obsah>
+                            </as>
+                            <as typ="B">
+                                <obsah>+420666555444</obsah>
+                            </as>
+                        </a>
+                        <a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <o_prijmeni>Ludmila Lékařská</o_prijmeni>
+                            <jmeno>Ludmila Lékařská</jmeno>
+                            <adr>Thomayerova 403/4</adr>
+                            <psc>25101</psc>
+                            <mesto>Říčany,Jažlovice</mesto>
+                            <stat>203</stat>
+                            <as typ="E">
+                                <obsah>lekar@qgmail.com</obsah>
+                            </as>
+                            <as typ="B">
+                                <obsah> +420777888999</obsah>
+                            </as>
+                        </a>
+                    </ku_pac>
+                    <ku_z_patsumdat>
+                        <jazyk jazyk_klic="cs-CZ" pref="P" ind_oprav_sd="N" />
+                        <povolani dat_ab="2022-02-10T08:26:29">
+                            <povolani_text>1 - vedoucí a řídící pracovník</povolani_text>
+                            <autor id_autor="17">MUDr. Josef Hladký</autor>
+                        </povolani>
+                        <h vyska="172" hmotnost="60" dat_ab="2022-02-10T08:44:42">
+                            <autor id_autor="17">ChiAlekar</autor>
+                        </h>
+                        <u>
+                            <ua typ="AN" dat_ab="2022-01-18T13:46:49" ind_oprav_sd="N">
+                                <u_al>léková:podrážděníCELASKON 100 MG OCHUCENÉ TABLETY Testovací</u_al>
+                                <autor id_autor="12">Interní Lékař</autor>
+                                <dat_du format="D" typ="L">2021-01-01</dat_du>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="409" />
+                            </ua>
+                            <ua typ="AN" dat_ab="2022-02-10T08:35:03" ind_oprav_sd="N">
+                                <u_al>kontaktní:podráždění reaguje na dotyk trouby</u_al>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_du format="D" typ="L">2022-02-10</dat_du>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="410" />
+                            </ua>
+                            <ua typ="AN" dat_ab="2022-02-10T08:35:03" ind_oprav_sd="N">
+                                <u_al>kontaktní:mírná Latex - kopřivka</u_al>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_du format="D" typ="L">1990-01-10</dat_du>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="411" />
+                            </ua>
+                            <ua typ="AN" dat_ab="2022-02-10T08:35:03" ind_oprav_sd="N">
+                                <u_al>potravinová:mírná Kiwi - Ekzém</u_al>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_du format="D" typ="L">1990-01-10</dat_du>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="412" />
+                            </ua>
+                            <ua typ="AN" dat_ab="2021-10-04T12:13:34" ind_oprav_sd="N">
+                                <u_al>R100 Akutní břicho</u_al>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_du format="D" typ="L">2021-10-03</dat_du>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="65042" />
+                            </ua>
+                            <ua typ="AN" dat_ab="2021-10-04T11:41:58" ind_oprav_sd="N">
+                                <u_al>J020 Streptokokový zánět hltanu</u_al>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_du format="D" typ="L">2021-10-04</dat_du>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="65041" />
+                            </ua>
+                            <uks dat_ab="2022-02-10T08:26:29" ind_oprav_sd="N">
+                                <ks_rh>A+</ks_rh>
+                                <ks_rh_text>A Rh(D) pozitivní</ks_rh_text>
+                                <autor id_autor="17">Josef Hladký</autor>
+                            </uks>
+                        </u>
+                        <dg dat_ab="2021-10-04T12:13:47">
+                            <dgz typ_dg="T">
+                                <diag mkn_verze="2014" poradi="1" nazev="Nezhoubný novotvar - ret">
+                                    D100 </diag>
+                                <dat_du format="D" typ="L">2021-01-15</dat_du>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2021-01-15T00:00:00</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="65040" />
+                            </dgz>
+                            <dgz typ_dg="T">
+                                <diag mkn_verze="2014" poradi="2"
+                                    nazev="Carcinoma in situ- štítná žláza a jiné žlázy s vnitřní sekrecí">
+                                    D093 </diag>
+                                <dat_du format="D" typ="L">2021-01-15</dat_du>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2021-01-15T00:00:00</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="65039" />
+                            </dgz>
+                        </dg>
+                        <le typ="A" dat_ab="2022-02-10T08:43:02">
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="HUMALOG" kod_lek="0025592"
+                                cis_kod_lek="DLP">
+                                <dat_od format="D">2022-02-10</dat_od>
+                                <rozpis_v>denně </rozpis_v>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2022-02-10T08:43:02</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="94" />
+                            </lez>
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="HUMALOG 100 IU"
+                                kod_lek="0025592" cis_kod_lek="DLP">
+                                <dat_od format="D">2022-02-10</dat_od>
+                                <rozpis_v>denně </rozpis_v>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2022-02-10T08:43:02</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="94" />
+                            </lez>
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="HUMALOG 100 IU/ML"
+                                kod_lek="0025592" cis_kod_lek="DLP">
+                                <dat_od format="D">2022-02-10</dat_od>
+                                <rozpis_v>denně </rozpis_v>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2022-02-10T08:43:02</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="94" />
+                            </lez>
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="TRIASYN" kod_lek="0050117"
+                                cis_kod_lek="DLP">
+                                <dat_od format="D">2022-02-10</dat_od>
+                                <rozpis_v>1-0-0 </rozpis_v>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2022-02-10T08:42:12</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="93" />
+                            </lez>
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="TRIASYN 5/5 MG"
+                                kod_lek="0050117" cis_kod_lek="DLP">
+                                <dat_od format="D">2022-02-10</dat_od>
+                                <rozpis_v>1-0-0 </rozpis_v>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2022-02-10T08:42:12</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="93" />
+                            </lez>
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="EUTHYROX" kod_lek="0097186"
+                                cis_kod_lek="DLP">
+                                <dat_od format="D">1997-10-06</dat_od>
+                                <rozpis_v>1-0-0 </rozpis_v>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2022-02-10T08:41:22</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="92" />
+                            </lez>
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="EUTHYROX 100"
+                                kod_lek="0097186" cis_kod_lek="DLP">
+                                <dat_od format="D">1997-10-06</dat_od>
+                                <rozpis_v>1-0-0 </rozpis_v>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2022-02-10T08:41:22</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="92" />
+                            </lez>
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="EUTHYROX 100 MIKROGRAMŮ"
+                                kod_lek="0097186" cis_kod_lek="DLP">
+                                <dat_od format="D">1997-10-06</dat_od>
+                                <rozpis_v>1-0-0 </rozpis_v>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2022-02-10T08:41:22</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="92" />
+                            </lez>
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="IBALGIN" kod_lek="0020401"
+                                cis_kod_lek="DLP">
+                                <dat_od format="D">2022-01-18</dat_od>
+                                <rozpis_v>1-1-1 </rozpis_v>
+                                <autor id_autor="12">Interní Lékař</autor>
+                                <dat_vb>2022-01-18T13:56:09</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="91" />
+                            </lez>
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="IBALGIN GEL"
+                                kod_lek="0020401" cis_kod_lek="DLP">
+                                <dat_od format="D">2022-01-18</dat_od>
+                                <rozpis_v>1-1-1 </rozpis_v>
+                                <autor id_autor="12">Interní Lékař</autor>
+                                <dat_vb>2022-01-18T13:56:09</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="91" />
+                            </lez>
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="ACYLCOFFIN"
+                                kod_lek="0000009" cis_kod_lek="DLP">
+                                <dat_od format="D">2021-10-04</dat_od>
+                                <rozpis_v>1-1-1 </rozpis_v>
+                                <autor id_autor="17">Josef Hladký</autor>
+                                <dat_vb>2021-10-04T12:12:54</dat_vb>
+                                <iid root="1.2.203.24341.1.10.999990000.4" ext="90" />
+                            </lez>
+                        </le>
+                        <zdroj_sw kod_firmy="STAPRO__" kod_prog="StaproFA" verze_prog="814.20.0"
+                            liccis_prog="Nemocnic" />
+                    </ku_z_patsumdat>
+                </ku_z>
+            </ku>
+        </ip>
+    </is>
+</dasta>

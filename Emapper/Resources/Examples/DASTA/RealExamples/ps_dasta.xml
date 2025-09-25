@@ -1,0 +1,299 @@
+<dasta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.18.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.09.01.xsd" id_soubor="STAPRO__FonsEnterprise_fa4de92083_202010" verze_ds="04.19.01" verze_nclp="02.01.01" bin_priloha="T" ur="R" typ_odesm="NN" ozn_soub="RNN" potvrzeni="N" dat_vb="2020-10-05T11:16:40">
+  <zdroj_is kod_firmy="STAPRO__" kod_prog="StaproFE" verze_prog="1.164.20" liccis_prog="StaproDe" />
+  <pm icz="70890749" icp="70890749">
+    <as typ="I" />
+  </pm>
+  <is icz="89903000" icp="89903000">
+    <as typ="I" />
+    <a typ="O">
+      <jmeno>Stapro FE - Nemocnice</jmeno>
+    </a>
+    <ip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" id_pac="7161264528">
+      <rodcis>7161264528</rodcis>
+      <jmeno>Mračena</jmeno>
+      <prijmeni>Mrakomorová</prijmeni>
+      <dat_dn>1971-11-26T00:00:00</dat_dn>
+      <ipi_o cis_is="556b9089-8ee2-4bbb-83fb-1fa7581eb962" />
+      <a xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" typ="1">
+        <jmeno>Mrakomorová Mračena</jmeno>
+        <adr>Trmalova 64</adr>
+        <psc>25101</psc>
+        <mesto>Říčany</mesto>
+        <stat>203</stat>
+        <as typ="E">
+          <obsah>mracena.mrak@qgmail.com</obsah>
+        </as>
+        <as typ="B">
+          <obsah>+420777666555</obsah>
+        </as>
+        <as typ="T">
+          <obsah>+420123456789</obsah>
+        </as>
+      </a>
+      <a xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" typ="K">
+        <jmeno>Merlin Mrakomor</jmeno>
+        <adr>Trmalova 64</adr>
+        <psc>25101</psc>
+        <mesto>Říčany</mesto>
+        <stat>203</stat>
+        <as typ="E">
+          <obsah>syn@qgmail.com</obsah>
+        </as>
+        <as typ="B">
+          <obsah>+420666555444</obsah>
+        </as>
+      </a>
+      <a xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" typ="4">
+        <jmeno>MUDr. Ludmila Lékařská</jmeno>
+        <adr>Thomayerova 403/4</adr>
+        <psc>25101</psc>
+        <mesto>Říčany</mesto>
+        <stat>203</stat>
+        <as typ="E">
+          <obsah>lekar@qgmail.com</obsah>
+        </as>
+        <as typ="B">
+          <obsah>+420777888999</obsah>
+        </as>
+      </a>
+      <pv_pac typ_pv="X" dat_ab="2020-10-05T11:16:40" />
+      <ku>
+        <ku_z typku="PATSUM.DAT" fazespec="ZF" idku="STAPRO__50760d7185f148569e8d88573e2a2506" idsub="STAPRO__AD52C6241793AC23202010051139.1">
+          <dat_prov>2020-10-05T11:16:25</dat_prov>
+          <dat_vydani>2020-10-05T11:16:40</dat_vydani>
+          <z_pracoviste icz="70890749" icp="70890749" odb="000">
+            <nazev>NCP Vysočina</nazev>
+            <a xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" typ="P">
+              <jmeno>NCP Vysočina</jmeno>
+            </a>
+          </z_pracoviste>
+          <p_pracoviste icz="89903000" icp="89903000" odb="000">
+            <nazev>Pardubická krajská nemocnice, a. s.</nazev>
+            <a xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" typ="A">
+              <jmeno>Pardubická krajská nemocnice, a.s.</jmeno>
+              <adr>Kyjevská 44</adr>
+              <psc>53003</psc>
+              <mesto>Pardubice</mesto>
+              <stat>203</stat>
+              <as typ="E">
+                <obsah>info@xxnempce.cz</obsah>
+              </as>
+              <as typ="T">
+                <obsah>0609123456</obsah>
+              </as>
+            </a>
+          </p_pracoviste>
+          <zpo icz="89903000" id_zp="136">
+            <nazev>Pardubická krajská nemocnice, a. s.</nazev>
+            <a_p typ="A">
+              <jmeno xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Pardubická krajská nemocnice, a.s.</jmeno>
+              <adr xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Kyjevská 44</adr>
+              <psc xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">53003</psc>
+              <mesto xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">Pardubice</mesto>
+              <stat xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">203</stat>
+              <as xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" typ="E">
+                <obsah>info@xxnempce.cz</obsah>
+              </as>
+              <as xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" typ="T">
+                <obsah>0609123456</obsah>
+              </as>
+            </a_p>
+            <prijmeni>Stapro Mlejnek Ondřej Ing.</prijmeni>
+          </zpo>
+          <text>
+            <ptext xml:space="preserve">Pacientský souhrn Mračena Mrakomorová 2020-10-05</ptext>
+          </text>
+          <ku_pac id_pac="7161264528">
+            <jmeno>Mračena</jmeno>
+            <prijmeni>Mrakomorová</prijmeni>
+            <dat_dn>1971-11-26T00:00:00</dat_dn>
+            <sex>F</sex>
+            <a xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" typ="1">
+              <jmeno>Mrakomorová Mračena</jmeno>
+              <adr>Trmalova 64</adr>
+              <psc>25101</psc>
+              <mesto>Říčany</mesto>
+              <stat>203</stat>
+              <as typ="E">
+                <obsah>mracena.mrak@qgmail.com</obsah>
+              </as>
+              <as typ="B">
+                <obsah>+420777666555</obsah>
+              </as>
+              <as typ="T">
+                <obsah>+420123456789</obsah>
+              </as>
+            </a>
+            <a xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" typ="K">
+              <jmeno>Merlin Mrakomor</jmeno>
+              <adr>Trmalova 64</adr>
+              <psc>25101</psc>
+              <mesto>Říčany</mesto>
+              <stat>203</stat>
+              <as typ="E">
+                <obsah>syn@qgmail.com</obsah>
+              </as>
+              <as typ="B">
+                <obsah>+420666555444</obsah>
+              </as>
+            </a>
+            <a xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" typ="4">
+              <jmeno>MUDr. Ludmila Lékařská</jmeno>
+              <adr>Thomayerova 403/4</adr>
+              <psc>25101</psc>
+              <mesto>Říčany</mesto>
+              <stat>203</stat>
+              <as typ="E">
+                <obsah>lekar@qgmail.com</obsah>
+              </as>
+              <as typ="B">
+                <obsah>+420777888999</obsah>
+              </as>
+            </a>
+          </ku_pac>
+          <ku_z_patsumdat>
+            <jazyk jazyk_klic="cs-CZ" pref="P" ind_oprav_sd="N" />
+            <povolani dat_ab="2020-08-24T13:06:57">
+              <povolani_text>úřednice</povolani_text>
+              <autor id_zp="95">Stapro Činčalová Veronika</autor>
+            </povolani>
+            <h vyska="165" hmotnost="53.000" dat_ab="2019-02-22T15:23:40">
+              <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+            </h>
+            <grav typ="G" dat_ab="2019-12-16T15:54:06" ind_oprav_sd="N">
+              <grav_tp>
+                <dat_por>2018-01-01</dat_por>
+              </grav_tp>
+              <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+              <iid root="1.2.203.24341.1.10.89903000.4" ext="45e9c0cf-1f75-4d1d-9882-5eae70b8142c" />
+            </grav>
+            <u>
+              <ua typ="AN" dat_ab="2019-12-12T16:02:17" ind_oprav_sd="N">
+                <u_al>Latex</u_al>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_du format="D" typ="L">1990-01-10</dat_du>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="39a11316-04f8-4dc3-a1ce-199b267986a6" />
+              </ua>
+              <ua typ="AN" dat_ab="2019-12-12T16:02:17" ind_oprav_sd="N">
+                <u_al>Kiwi</u_al>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_du format="D" typ="L">1990-01-10</dat_du>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="dc74df91-187b-43be-bf9b-e4de82662dcb" />
+              </ua>
+              <ua typ="AN" dat_ab="2019-12-12T16:02:17" ind_oprav_sd="N">
+                <u_al>Laktóza</u_al>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_du format="D" typ="L">1983-05-05</dat_du>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="c453ede7-e1d1-4d19-aaac-b75a7b04efe4" />
+              </ua>
+              <ua typ="AN" dat_ab="2019-12-12T16:02:17" ind_oprav_sd="N">
+                <u_al>Kyselina acetylsalicyová</u_al>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_du format="D" typ="L">1994-03-10</dat_du>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="a65b00e9-44bc-4714-8bd9-48f05d8bf17c" />
+              </ua>
+              <uks dat_ab="2019-02-26T10:57:59" ind_oprav_sd="N">
+                <ks_rh>A+</ks_rh>
+                <ks_rh_text>A Rh(D) pozitivní</ks_rh_text>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="1d987f90-4be8-4eb1-86ac-dfa2e7087b9c" />
+              </uks>
+            </u>
+            <an dat_ab="2020-02-19T08:57:18">
+              <text>
+                <ptext xml:space="preserve">Souhrnná: 
+Text souhrnné anamnézy.
+
+</ptext>
+              </text>
+              <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+              <iid root="1.2.203.24341.1.10.89903000.4" ext="9a601c2c-e27b-4456-8ffd-cf62d9773211" />
+            </an>
+            <dg dat_ab="2020-10-05T11:16:25">
+              <dgz typ_dg="T">
+                <diag mkn_verze="2014" poradi="1" nazev="Diabetes mellitus 2. typu bez komplikací">E119</diag>
+                <dat_du format="D" typ="L">2012-04-30</dat_du>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>2012-04-30</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="5330a83c-ad6f-40c6-b432-5cd727d896f9" />
+              </dgz>
+              <dgz typ_dg="T">
+                <diag mkn_verze="2014" poradi="2" nazev="Astma převážně alergické">J450</diag>
+                <dat_du format="D" typ="L">1994-10-03</dat_du>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>1994-10-03</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="35102495-c698-468f-8c4f-9b9101527f2c" />
+              </dgz>
+              <dgz typ_dg="T">
+                <diag mkn_verze="2014" poradi="3" nazev="Hypotyreóza po operačních a jiných výkonech">E890</diag>
+                <dat_du format="D" typ="L">1997-10-06</dat_du>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>1997-10-06</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="b0dbb2b7-c4e5-4a50-997d-0462cc316250" />
+              </dgz>
+              <dgz typ_dg="T">
+                <diag mkn_verze="2014" poradi="4" nazev="Jiné určené srdeční arytmie">I498</diag>
+                <dat_du format="D" typ="L">2013-01-09</dat_du>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>2013-01-09</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="2326e6a5-5d16-4c02-8a4c-d96ab75e7b32" />
+              </dgz>
+              <dgz typ_dg="T">
+                <diag mkn_verze="2014" poradi="5" nazev="Těžká preeklampsie">O141</diag>
+                <dat_du format="D" typ="L">2017-05-06</dat_du>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>2017-05-06</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="6d5e0e5e-6a30-46e9-af0a-733fc9ed0e19" />
+              </dgz>
+              <dgz typ_dg="T">
+                <diag mkn_verze="2014" poradi="6" nazev="Akutní tubulo-intersticiální nefritida">N10</diag>
+                <dat_du format="D" typ="L">2017-05-07</dat_du>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>2017-05-07</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="807e959f-b1a8-4215-a055-fb627b1cd4de" />
+              </dgz>
+              <dgz typ_dg="T">
+                <diag mkn_verze="2014" poradi="7" nazev="Cystická fibróza NS">E849</diag>
+                <dat_du format="D" typ="L">2020-10-04</dat_du>
+                <autor id_zp="137">Stapro Jaroš Pavel</autor>
+                <dat_vb>2020-10-04</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="f4769074-4ed5-4eba-8e27-4fe701c3fe27" />
+              </dgz>
+              <dgz typ_dg="T">
+                <diag mkn_verze="2014" poradi="8" nazev="Opožděný vývoj následující po protein-energetické podvýživě">E45</diag>
+                <dat_du format="D" typ="L">2020-10-05</dat_du>
+                <autor id_zp="137">Stapro Jaroš Pavel</autor>
+                <dat_vb>2020-10-05</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="29c622e6-de27-408c-a709-a3d1cf9ce491" />
+              </dgz>
+            </dg>
+            <le typ="A" dat_ab="2019-12-16T15:33:06">
+              <lez typ_med="T" ind_oprav_sd="N" nazev_lek="BERODUAL N" kod_lek="0002679" cis_kod_lek="DLP">
+                <dat_od>2015-01-02</dat_od>
+                <rozpis_v>:á 8h</rozpis_v>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>2019-12-16T15:33:00</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="6adba46c-8ab1-473d-bcf9-2d5e1083f636" />
+              </lez>
+              <lez typ_med="T" ind_oprav_sd="N" nazev_lek="HUMALOG MIX25" kod_lek="0025593" cis_kod_lek="DLP">
+                <dat_od>2012-04-30</dat_od>
+                <rozpis_v>10-0-0</rozpis_v>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>2019-12-16T15:06:11</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="b029ca92-f02e-4d4f-92fb-eea50569d2ef" />
+              </lez>
+              <lez typ_med="T" ind_oprav_sd="N" nazev_lek="EUTHYROX" kod_lek="0219994" cis_kod_lek="DLP">
+                <dat_od>2017-10-06</dat_od>
+                <rozpis_v>:denně ráno nalačno</rozpis_v>
+                <autor id_zp="136">Stapro Mlejnek Ondřej Ing.</autor>
+                <dat_vb>2019-02-22T15:47:40</dat_vb>
+                <iid root="1.2.203.24341.1.10.89903000.4" ext="a53fca23-065d-4087-bcd2-5f8b029db529" />
+              </lez>
+            </le>
+            <zdroj_sw kod_firmy="STAPRO__" kod_prog="StaproFE" verze_prog="1.164.20" liccis_prog="StaproDe" />
+          </ku_z_patsumdat>
+        </ku_z>
+      </ku>
+    </ip>
+  </is>
+</dasta>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dasta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.17.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.08.04.xsd" id_soubor="STAPRO__Akord_8e7e90ba8a_20190613144041" verze_ds="04.18.03" verze_nclp="02.01.01" bin_priloha="T" ur="R" typ_odesm="NN" ozn_soub="RNN" potvrzeni="N" dat_vb="2019-06-13T14:40:41" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+    <zdroj_is kod_firmy="STAPRO__" kod_prog="Stapro.T" verze_prog="3.21" />
+    <pm icz="99999999" icp="99999999">
+        <as typ="I" />
+    </pm>
+    <is icz="89903000" icp="89903000">
+        <as typ="I" />
+        <ip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id_pac="9660060696" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+            <rodcis>9660060696</rodcis>
+            <jmeno>Testovací</jmeno>
+            <prijmeni>Transmise</prijmeni>
+            <dat_dn>1996-10-06T00:00:00</dat_dn>
+            <ipi_o cis_is="103147" />
+            <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <jmeno>Testovací Transmise</jmeno>
+                <adr>Perštýnské náměstí 511</adr>
+                <psc>53002</psc>
+                <mesto>Pardubice</mesto>
+                <stat>CZ</stat>
+                <as typ="E">
+                    <obsah>transmise@staproemail.cz</obsah>
+                </as>
+            </a>
+            <a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <jmeno>MUDr. Praktik Zkušený</jmeno>
+                <adr>Jindřišská 16</adr>
+                <psc>53002</psc>
+                <mesto>Pardubice</mesto>
+                <stat>CZ</stat>
+                <as typ="E">
+                    <obsah>praktik@staproemail.cz</obsah>
+                </as>
+            </a>
+            <a typ="3" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                <jmeno>Testovací Fons</jmeno>
+                <adr>Perštýnské náměstí 51</adr>
+                <psc>53002</psc>
+                <mesto>Pardubice</mesto>
+                <stat>CZ</stat>
+                <as typ="E">
+                    <obsah>fons@staproemail.cz</obsah>
+                </as>
+            </a>
+            <pv_pac typ_pv="X" dat_ab="2019-06-13T14:40:41" />
+            <ku>
+                <ku_z typku="PATSUM.DAT" fazespec="ZF" idsub="SCSOFT__KzIZHpuK0UaYcDpAsdo99A__.1">
+                    <dat_prov>2019-05-30T12:08:54</dat_prov>
+                    <dat_vydani>2019-06-13T14:40:41</dat_vydani>
+                    <z_pracoviste icz="99999999" icp="99999999" odb="000">
+                        <nazev>WebApplication</nazev>
+                        <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>WebApplication</jmeno>
+                        </a>
+                    </z_pracoviste>
+                    <p_pracoviste odb="000" />
+                    <zpo>
+                        <prijmeni>Pracovník</prijmeni>
+                    </zpo>
+                    <text>
+                        <ptext xml:space="preserve">Pacientský souhrn Testovací Transmise 2019-05-30</ptext>
+                    </text>
+                    <ku_pac id_pac="9660060696">
+                        <jmeno>Testovací</jmeno>
+                        <prijmeni>Transmise</prijmeni>
+                        <dat_dn>1996-10-06T00:00:00</dat_dn>
+                        <sex>F</sex>
+                        <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Testovací Transmise</jmeno>
+                            <adr>Perštýnské náměstí 511</adr>
+                            <psc>53002</psc>
+                            <mesto>Pardubice</mesto>
+                            <stat>CZ</stat>
+                            <as typ="E">
+                                <obsah>transmise@staproemail.cz</obsah>
+                            </as>
+                        </a>
+                        <a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>MUDr. Praktik Zkušený</jmeno>
+                            <adr>Jindřišská 16</adr>
+                            <psc>53002</psc>
+                            <mesto>Pardubice</mesto>
+                            <stat>CZ</stat>
+                            <as typ="E">
+                                <obsah>praktik@staproemail.cz</obsah>
+                            </as>
+                        </a>
+                        <a typ="3" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                            <jmeno>Testovací Fons</jmeno>
+                            <adr>Perštýnské náměstí 51</adr>
+                            <psc>53002</psc>
+                            <mesto>Pardubice</mesto>
+                            <stat>CZ</stat>
+                            <as typ="E">
+                                <obsah>fons@staproemail.cz</obsah>
+                            </as>
+                        </a>
+                    </ku_pac>
+                    <ku_z_patsumdat>
+                        <jazyk jazyk_klic="cs-CZ" pref="P" ind_oprav_sd="N" />
+                        <povolani>
+                            <povolani_text />
+                        </povolani>
+                        <h vyska="169" hmotnost="56" dat_ab="2019-05-30T00:00:00" />
+                        <u>
+                            <ua typ="AN" dat_ab="2019-05-30T10:51:54" ind_oprav_sd="N">
+                                <u_al>TTC</u_al>
+                                <autor>Administrator</autor>
+                            </ua>
+                            <ua typ="AN" dat_ab="2019-05-30T10:51:54" ind_oprav_sd="N">
+                                <u_al>senná rýma</u_al>
+                                <autor>Administrator</autor>
+                            </ua>
+                            <uks dat_ab="2019-05-30T10:54:01" ind_oprav_sd="N">
+                                <krevskup>A</krevskup>
+                                <rh>-</rh>
+                                <autor>Administrator</autor>
+                            </uks>
+                        </u>
+                        <dg dat_ab="2019-05-30T10:54:01">
+                            <dgz typ_dg="T">
+                                <diag mkn_verze="2014" poradi="1" nazev="Astma převážně alergické">J450 </diag>
+                                <autor>Administrator</autor>
+                            </dgz>
+                        </dg>
+                        <le typ="A" dat_ab="2019-05-30T12:08:54">
+                            <lez typ_med="T" ind_oprav_sd="N" nazev_lek="ZYRTEC" kod_lek="0047032" cis_kod_lek="DLP">
+                                <dat_od>2019-05-30</dat_od>
+                                <autor>Administrator</autor>
+                            </lez>
+                        </le>
+                        <zdroj_sw kod_firmy="STAPRO__" kod_prog="Stapro.T" verze_prog="3.21" />
+                    </ku_z_patsumdat>
+                </ku_z>
+            </ku>
+        </ip>
+    </is>
+</dasta>

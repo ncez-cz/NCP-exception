@@ -1,0 +1,3001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:pharm="urn:hl7-org:pharm">
+	<realmCode code="CZ" />
+	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3" />
+	<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.1.3" />
+	<id extension="0003" root="1.3.154.70890749.98" />
+	<code code="60591-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+		displayName="Pacientský souhrn" />
+	<title>
+		CDA dokument pacienta: 7954072775, JIRÁKOVÁ KLÁRA
+	</title>
+	<effectiveTime value="20200506232900+0200" />
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"
+		codeSystemName="Confidentiality" displayName="Normální" />
+	<languageCode code="cs-CZ" />
+	<!-- RECORD TARGET -->
+	<recordTarget typeCode="RCT" contextControlCode="OP">
+		<patientRole classCode="PAT">
+			<id extension="7954072775" root="2.16.840.1.113883.2.40.1" />
+			<addr use="HP">
+				<streetAddressLine>
+					HUMPOLECKÝ DVŮR 1593
+				</streetAddressLine>
+				<city>
+					Humpolec
+				</city>
+				<postalCode>
+					39601
+				</postalCode>
+				<country>
+					CZ
+				</country>
+			</addr>
+			<telecom value="tel:+420606486742" use="MC" />
+			<telecom value="mailto:jirakova@kr-vysocina.cz" use="HP" />
+			<patient classCode="PSN" determinerCode="INSTANCE">
+				<name>
+					<given>
+						Klára
+					</given>
+					<family>
+						Jiráková
+					</family>
+				</name>
+				<administrativeGenderCode code="F" codeSystem="1.2.203.24341.11.2.3"
+					codeSystemName="administrativeGender" displayName="Žena" />
+				<birthTime value="19790407" />
+				<guardian classCode="GUARD">
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.4" />
+					<code code="FAMMEMB" codeSystem="2.16.840.1.113883.5.111"
+						displayName="Family member" />
+					<addr>
+						<streetAddressLine>
+							Žižkova 1
+						</streetAddressLine>
+						<city>
+							Jihlava
+						</city>
+						<postalCode>
+							58601
+						</postalCode>
+						<country>
+							CZ
+						</country>
+					</addr>
+					<telecom value="tel:+420777888999" use="MC" />
+					<telecom value="mailto:jirak@qgmail.com" use="WP" />
+					<guardianPerson classCode="PSN" determinerCode="INSTANCE">
+						<name>
+							<given>
+								Patrik
+							</given>
+							<family>
+								Novák
+							</family>
+						</name>
+					</guardianPerson>
+				</guardian>
+				<languageCommunication>
+					<languageCode code="cs-CZ" />
+				</languageCommunication>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	<!-- AUTHOR -->
+	<author typeCode="AUT" contextControlCode="OP">
+		<functionCode code="2211" codeSystem="2.16.840.1.113883.2.9.6.2.7" codeSystemName="ISCO"
+			displayName="Praktičtí lékaři" />
+		<time value="20200505135535+0200" />
+		<assignedAuthor>
+			<id extension="56272890" root="1.2.203.24341.1.20.4" />
+			<!-- 9 místný identifikátor (kód) lékaře v NRZP -->
+			<!-- <code code="1234" displayName="Všeobecný lékař" />  tady by v budoucnu měl být kód
+			specializace, zatím však není součástí MVC -->
+			<addr>
+				<streetAddressLine>
+					Žižkova 1
+				</streetAddressLine>
+				<city>
+					Jihlava
+				</city>
+				<postalCode>
+					58601
+				</postalCode>
+				<country>
+					CZ
+				</country>
+			</addr>
+			<telecom use="MC" value="tel:+420777888999" />
+			<telecom value="mailto:novaklekar@qgmail.com" use="WP" />
+			<assignedPerson>
+				<name>
+					<family>
+						Novák
+					</family>
+					<given>
+						Patrik
+					</given>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id extension="00090638" root="1.3.154" />
+				<!-- IČO nemocnice, případně lze použit také IČZ: <id extension="76001000"
+				root="1.2.203.24341.1.10"/> -->
+				<name>
+					Nemocnice Jihlava
+				</name>
+				<telecom value="mailto:info@qnemji.cz" use="WP" />
+				<addr>
+					<country>
+						CZ
+					</country>
+					<postalCode>
+						586 01
+					</postalCode>
+					<streetAddressLine>
+						Vrchlického 57
+					</streetAddressLine>
+					<city>
+						Jihlava
+					</city>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<!-- CUSTODIAN -->
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="00090638" root="1.3.154" />
+				<!-- IČO nemocnice, případně lze použit také IČZ: <id extension="76001000"
+				root="1.2.203.24341.1.10"/> -->
+				<name>
+					Nemocnice Jihlava
+				</name>
+				<telecom value="mailto:info@qnemji.cz" use="WP" />
+				<addr>
+					<country>
+						CZ
+					</country>
+					<postalCode>
+						586 01
+					</postalCode>
+					<streetAddressLine>
+						Vrchlického 57
+					</streetAddressLine>
+					<city>
+						Jihlava
+					</city>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- LEGAL AUTHENTICATOR -->
+	<legalAuthenticator typeCode="LA" contextControlCode="OP">
+		<time value="20200505100033+0200" />
+		<signatureCode code="S" />
+		<assignedEntity>
+			<id extension="1212121234" root="2.16.840.1.113883.2.40.1" />
+			<!-- identifikátor zodpovědné osoby (za pacientký souhrn), např. rodné číslo ! -->
+			<addr>
+				<country>
+					CZ
+				</country>
+				<postalCode>
+					581 01
+				</postalCode>
+				<streetAddressLine>
+					Vrchlického 57
+				</streetAddressLine>
+				<city>
+					Jihlava
+				</city>
+			</addr>
+			<telecom value="mailto:rybakmir@qgmail.com" use="WP" />
+			<assignedPerson>
+				<name>
+					<family>
+						Rybák
+					</family>
+					<given>
+						Miroslav
+					</given>
+				</name>
+			</assignedPerson>
+			<representedOrganization>
+				<id extension="00090638" root="1.3.154" />
+				<!-- IČO nemocnice, případně lze použit také IČZ: <id extension="76001000"
+				root="1.2.203.24341.1.10"/> -->
+				<name>
+					Nemocnice Jihlava
+				</name>
+				<telecom value="mailto:info@qnemji.cz" use="WP" />
+				<addr>
+					<country>
+						CZ
+					</country>
+					<postalCode>
+						586 01
+					</postalCode>
+					<streetAddressLine>
+						Vrchlického 57
+					</streetAddressLine>
+					<city>
+						Jihlava
+					</city>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!-- PARTICIPANT -->
+	<participant typeCode="IND">
+		<templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.4" />
+		<associatedEntity classCode="NOK">
+			<code code="SPS" codeSystem="2.16.840.1.113883.5.111" displayName="manžel/maželka" />
+			<addr>
+				<country>
+					CZ
+				</country>
+				<postalCode>
+					586 01
+				</postalCode>
+				<streetAddressLine>
+					Koněvova 666
+				</streetAddressLine>
+				<city>
+					Jihlava
+				</city>
+			</addr>
+			<telecom value="tel:+420663555441" use="MC" />
+			<telecom value="mailto:jirakpetr@qseznam.com" use="WP" />
+			<associatedPerson>
+				<name>
+					<family>
+						Jirák
+					</family>
+					<given>
+						Petr
+					</given>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<!-- DOCUMENTATION OF ....1.3.6.1.4.1.19376.1.5.3.1.4.5 -->
+	<documentationOf typeCode="DOC">
+		<serviceEvent classCode="PCPR" moodCode="EVN">
+			<effectiveTime>
+				<low value="20110316135535+0200" />
+				<high value="20200506135535+0200" />
+			</effectiveTime>
+		</serviceEvent>
+	</documentationOf>
+	<!-- RELATED DOCUMENT -->
+	<relatedDocument typeCode="XFRM">
+		<!-- zde by měl být identifikátor záznamu, za kterého se PS tvořilo -->
+		<parentDocument>
+			<id extension="KOD_ZAZNAMU_V_NEMOCNICI_JIHLAVA" root="1.2.203.24341.1.10.76001000.4" />
+			<!-- toto je příklad identifikátoru v identitním prostoru dokumentů nemocnice Jihlava -->
+		</parentDocument>
+	</relatedDocument>
+	<!-- STRUCTRED BODY -->
+	<component>
+		<structuredBody classCode="DOCBODY">
+			<!-- Medication History Section -->
+			<component>
+				<section classCode="DOCSECT">
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.3" />
+					<templateId root="2.16.840.1.113883.10.20.1.8" />
+					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						displayName="Léková anamnéza" />
+					<title>
+						Medikace
+					</title>
+					<text> Známá medikační historie (nezahrnuje doplňky stravy a volně prodejné
+						léky): <table width="100%">
+							<thead>
+								<tr>
+									<th>
+										ATC
+									</th>
+									<th>
+										Název léčiva
+									</th>
+									<th>
+										Síla
+									</th>
+									<th>
+										Léková forma
+									</th>
+									<th>
+										Dávka
+									</th>
+									<th>
+										Dávkování
+									</th>
+									<th>
+										Datum od
+									</th>
+									<th>
+										Datum do
+									</th>
+									<th>
+										Ingredience
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="medicationSummary.1">
+									<td ID="medicationSummary.1.ATC">
+										H03AA01
+									</td>
+									<td ID="medicationSummary.1.nazev">
+										Euthyrox
+									</td>
+									<td ID="medicationSummary.1.sila">
+										100 ug
+									</td>
+									<td ID="medicationSummary.1.forma">
+										tableta
+									</td>
+									<td ID="medicationSummary.1.davka">
+										1
+									</td>
+									<td ID="medicationSummary.1.davkovani">
+										30 min před snídaní (lat. ante cibus matutinus)
+									</td>
+									<td ID="medicationSummary.1.dat_od">
+										6.10.1997
+									</td>
+									<td ID="medicationSummary.1.dat_do">
+									</td>
+									<td ID="medicationSummary.1.ingredience">
+										LEVOTHYROXINUM NATRICUM 100ug
+									</td>
+								</tr>
+								<tr ID="medicationSummary.2">
+									<td ID="medicationSummary.2.ATC">
+										C09BB05
+									</td>
+									<td ID="medicationSummary.2.nazev">
+										Triasyn
+									</td>
+									<td ID="medicationSummary.2.sila">
+										5mg+5mg
+									</td>
+									<td ID="medicationSummary.2.forma">
+										tableta
+									</td>
+									<td ID="medicationSummary.2.davka">
+										1
+									</td>
+									<td ID="medicationSummary.2.davkovani">
+										před snídaní (lat. ante cibus matutinus)
+									</td>
+									<td ID="medicationSummary.2.dat_od">
+										6.5.2017
+									</td>
+									<td ID="medicationSummary.2.dat_do">
+									</td>
+									<td ID="medicationSummary.2.ingredience">
+										<list>
+											<item ID="medicationSummary.2.ingredience.1">
+												<content>FELODIPINUM 5mg</content>
+											</item>
+											<item ID="medicationSummary.2.ingredience.2">
+												<content>RAMIPRILUM 5mg</content>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr ID="medicationSummary.3">
+									<td ID="medicationSummary.3.ATC">
+										A10AD04
+									</td>
+									<td ID="medicationSummary.3.nazev">
+										HUMALOG MIX25
+									</td>
+									<td ID="medicationSummary.3.sila">
+										100 U/ml
+									</td>
+									<td ID="medicationSummary.3.forma">
+										injekční suspenze
+									</td>
+									<td ID="medicationSummary.3.davka">
+										10 {unit}
+									</td>
+									<td ID="medicationSummary.3.davkovani">
+										1 denně
+									</td>
+									<td ID="medicationSummary.3.dat_od">
+										30.4.2012
+									</td>
+									<td ID="medicationSummary.3.dat_do">
+									</td>
+									<td ID="medicationSummary.3.ingredience">
+										INSULINUM LISPRUM 100U
+									</td>
+								</tr>
+								<tr ID="medicationSummary.4">
+									<td ID="medicationSummary.4.ATC">
+										J01CR02
+									</td>
+									<td ID="medicationSummary.4.nazev">
+										AUGMENTIN 625 MG
+									</td>
+									<td ID="medicationSummary.4.sila">
+										500mg+125mg
+									</td>
+									<td ID="medicationSummary.4.forma">
+										potahovaná tableta
+									</td>
+									<td ID="medicationSummary.4.davka">
+										1
+									</td>
+									<td ID="medicationSummary.4.davkovani">
+										každých 8h
+									</td>
+									<td ID="medicationSummary.4.dat_od">
+										7.5.2017
+									</td>
+									<td ID="medicationSummary.4.dat_do">
+										19.5.2017
+									</td>
+									<td ID="medicationSummary.4.ingredience">
+										<list>
+											<item ID="medicationSummary.4.ingredience.1">
+												<content>AMOXICILLINUM TRIHYDRICUM 500mg</content>
+											</item>
+											<item ID="medicationSummary.4.ingredience.2">
+												<content>KALII CLAVULANAS 125mg</content>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr ID="medicationSummary.5">
+									<td ID="medicationSummary.5.ATC">
+										R03AL01
+									</td>
+									<td ID="medicationSummary.5.nazev">
+										BERODUAL N
+									</td>
+									<td ID="medicationSummary.5.sila">
+										21ug/{unit}+50ug/{unit}
+									</td>
+									<td ID="medicationSummary.5.forma">
+										Roztok k inhalaci v tlakovém obalu
+									</td>
+									<td ID="medicationSummary.5.davka">
+										1
+									</td>
+									<td ID="medicationSummary.5.davkovani">
+										každých 8h
+									</td>
+									<td ID="medicationSummary.5.dat_od">
+										2.1.2015
+									</td>
+									<td ID="medicationSummary.5.dat_do">
+									</td>
+									<td ID="medicationSummary.5.ingredience">
+										<list>
+											<item ID="medicationSummary.5.ingredience.1">
+												<content>IPRATROPII BROMIDUM MONOHYDRICUM
+													21ug/{unit}</content>
+											</item>
+											<item ID="medicationSummary.5.ingredience.2">
+												<content>FENOTEROLI HYDROBROMIDUM 50ug/{unit}</content>
+											</item>
+										</list>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- first medication entry -->
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<!-- eHDSI Medication Item -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.4" />
+							<!-- opt. A "normal" act that may not contain any subordinate acts -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+							<!-- opt. A act that records combination medication component
+							information in subordinate acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.11" />
+							<!-- opt. A act that records split dose information in subordinate acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" />
+							<!-- Medication Activity (CCD) -->
+							<templateId root="2.16.840.1.113883.10.20.1.24" />
+							<id root="1.2.203.24341.1.10.76001000.4"
+								extension="KOD_ZAZNAMU_V_NEMOCNICI_JIHLAVA.medication.1" />
+							<text>
+								<reference value="#medicationSummary.1">
+								</reference>
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="19971006" />
+								<high nullFlavor="UNK" />
+							</effectiveTime>
+							<effectiveTime xsi:type="EIVL_TS" operator="A">
+								<event code="ACM" codeSystem="2.16.840.1.113883.5.139"
+									codeSystemName="TimingEvent" />
+								<offset>
+									<low value="-30" unit="min" />
+								</offset>
+							</effectiveTime>
+							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1"
+								displayName="Perorální podání" codeSystemName="EDQM" />
+							<doseQuantity value="1" unit="{tablet}" />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.31" />
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.32" />
+										<code code="0097186" codeSystem="1.2.203.24341.11.2.7.1"
+											codeSystemName="Databáze léčivých přípravků"
+											displayName="EUTHYROX">
+											<originalText>
+												<reference value="#medicationSummary.1.nazev">
+												</reference>
+											</originalText>
+										</code>
+										<name>
+											EUTHYROX
+										</name>
+										<pharm:desc>
+											100 mikrogramů v tabletě
+										</pharm:desc>
+										<pharm:formCode code="10219000"
+											codeSystem="0.4.0.127.0.16.1.1.2.1"
+											codeSystemName="EDQM" displayName="Tableta">
+											<originalText>
+												<reference value="#medicationSummary.1.forma">
+												</reference>
+											</originalText>
+										</pharm:formCode>
+										<!-- Packaging -->
+										<pharm:asContent classCode="CONT">
+											<pharm:quantity value="20" unit="{tablet}" />
+											<pharm:containerPackagedProduct classCode="CONT"
+												determinerCode="KIND">
+												<pharm:name>
+													EUTHYROX 100MCG TBL NOB 100 I
+												</pharm:name>
+												<pharm:formCode code="30007000" displayName="Blistr"
+													codeSystem="0.4.0.127.0.16.1.1.2.1"
+													codeSystemName="EDQM" />
+												<pharm:asContent classCode="CONT">
+													<pharm:quantity value="5" unit="1" />
+													<pharm:containerPackagedProduct classCode="CONT"
+														determinerCode="KIND">
+														<pharm:formCode code="30009000"
+															displayName="Krabička"
+															codeSystem="0.4.0.127.0.16.1.1.2.1"
+															codeSystemName="EDQM" />
+													</pharm:containerPackagedProduct>
+												</pharm:asContent>
+											</pharm:containerPackagedProduct>
+										</pharm:asContent>
+										<pharm:asSpecializedKind classCode="GEN">
+											<pharm:generalizedMaterialKind classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code code="H03AA01"
+													codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="Anatomical Therapeutic Chemical"
+													displayName="sodná sůl levothyroxinu">
+													<originalText>
+														<reference
+															value="#medicationSummary.1.ATC">
+														</reference>
+													</originalText>
+												</pharm:code>
+											</pharm:generalizedMaterialKind>
+										</pharm:asSpecializedKind>
+										<pharm:ingredient classCode="ACTI">
+											<pharm:quantity>
+												<numerator unit="ug" value="100"
+													xsi:type="PQ" />
+												<denominator unit="1" value="1"
+													xsi:type="PQ" />
+											</pharm:quantity>
+											<pharm:ingredientSubstance classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code code="H03AA01"
+													codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="Anatomical Therapeutic Chemical"
+													displayName="sodná sůl levothyroxinu">
+													<originalText>
+														<reference
+															value="#medicationSummary.1.ingredience">
+														</reference>
+													</originalText>
+												</pharm:code>
+												<pharm:name>
+													LEVOTHYROXINUM NATRICUM
+												</pharm:name>
+											</pharm:ingredientSubstance>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<!-- second medication entry -->
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<!-- eHDSI Medication Item -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.4" />
+							<!-- opt. A "normal" act that may not contain any subordinate acts -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+							<!-- opt. A act that records combination medication component
+							information in subordinate acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.11" />
+							<!-- opt. A act that records split dose information in subordinate acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" />
+							<!-- Medication Activity (CCD) -->
+							<templateId root="2.16.840.1.113883.10.20.1.24" />
+							<id root="1.2.203.24341.1.10.76001000.4"
+								extension="KOD_ZAZNAMU_V_NEMOCNICI_JIHLAVA.medication.2" />
+							<text>
+								<reference value="#medicationSummary.2">
+								</reference>
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20170506" />
+								<high nullFlavor="UNK" />
+							</effectiveTime>
+							<effectiveTime xsi:type="EIVL_TS" operator="A">
+								<event code="ACM" codeSystem="2.16.840.1.113883.5.139"
+									codeSystemName="TimingEvent" />
+							</effectiveTime>
+							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1"
+								displayName="Perorální podání" codeSystemName="EDQM" />
+							<doseQuantity value="1" unit="{tablet}" />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.31" />
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.32" />
+										<code code="0050117" codeSystem="1.2.203.24341.11.2.7.1"
+											codeSystemName="Databáze léčivých přípravků"
+											displayName="TRIASYN">
+											<originalText>
+												<reference value="#medicationSummary.2.nazev">
+												</reference>
+											</originalText>
+										</code>
+										<name>
+											TRIASYN
+										</name>
+										<pharm:desc>
+											5mg+5mg
+										</pharm:desc>
+										<pharm:formCode code="10226000"
+											codeSystem="0.4.0.127.0.16.1.1.2.1"
+											codeSystemName="EDQM"
+											displayName="Tableta s prodlouženým uvolňováním">
+											<originalText>
+												<reference value="#medicationSummary.2.forma">
+												</reference>
+											</originalText>
+										</pharm:formCode>
+										<!-- Packaging -->
+										<pharm:asContent classCode="CONT">
+											<pharm:containerPackagedProduct classCode="CONT"
+												determinerCode="KIND">
+												<pharm:name>
+													TRIASYN 5MG/5MG TBL RET 30
+												</pharm:name>
+												<pharm:formCode code="30007000" displayName="Blistr"
+													codeSystem="0.4.0.127.0.16.1.1.2.1"
+													codeSystemName="EDQM" />
+												<pharm:capacityQuantity value="30" unit="1" />
+											</pharm:containerPackagedProduct>
+										</pharm:asContent>
+										<pharm:asSpecializedKind classCode="GEN">
+											<pharm:generalizedMaterialKind classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code code="C09BB05"
+													codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="Anatomical Therapeutic Chemical"
+													displayName="ramipril a felodipin">
+													<originalText>
+														<reference
+															value="#medicationSummary.2.ATC">
+														</reference>
+													</originalText>
+												</pharm:code>
+											</pharm:generalizedMaterialKind>
+										</pharm:asSpecializedKind>
+										<!-- Ingredient -->
+										<pharm:ingredient classCode="ACTI">
+											<pharm:quantity>
+												<numerator unit="mg" value="5"
+													xsi:type="PQ" />
+												<denominator unit="1" value="1"
+													xsi:type="PQ" />
+											</pharm:quantity>
+											<pharm:ingredientSubstance classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code nullFlavor="OTH">
+													<originalText>
+														<reference
+															value="#medicationSummary.2.ingredience.1">
+														</reference>
+													</originalText>
+												</pharm:code>
+												<pharm:name>
+													FELODIPINUM
+												</pharm:name>
+											</pharm:ingredientSubstance>
+										</pharm:ingredient>
+										<pharm:ingredient classCode="ACTI">
+											<pharm:quantity>
+												<numerator unit="mg" value="5"
+													xsi:type="PQ" />
+												<denominator unit="1" value="1"
+													xsi:type="PQ" />
+											</pharm:quantity>
+											<pharm:ingredientSubstance classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code nullFlavor="OTH">
+													<originalText>
+														<reference
+															value="#medicationSummary.2.ingredience.2">
+														</reference>
+													</originalText>
+												</pharm:code>
+												<pharm:name>
+													RAMIPRILUM
+												</pharm:name>
+											</pharm:ingredientSubstance>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<!-- third medication entry -->
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<!-- eHDSI Medication Item -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.4" />
+							<!-- opt. A "normal" act that may not contain any subordinate acts -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+							<!-- opt. A act that records combination medication component
+							information in subordinate acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.11" />
+							<!-- opt. A act that records split dose information in subordinate acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" />
+							<!-- Medication Activity (CCD) -->
+							<templateId root="2.16.840.1.113883.10.20.1.24" />
+							<id root="1.2.203.24341.1.10.76001000.4"
+								extension="KOD_ZAZNAMU_V_NEMOCNICI_JIHLAVA.medication.3" />
+							<text>
+								<reference value="#medicationSummary.3">
+								</reference>
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20120430" />
+								<high nullFlavor="UNK" />
+							</effectiveTime>
+							<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true"
+								operator="A">
+								<period value="24" unit="h" />
+							</effectiveTime>
+							<routeCode code="20066000" codeSystem="0.4.0.127.0.16.1.1.2.1"
+								codeSystemName="EDQM" displayName="Subkutánní podání" />
+							<doseQuantity value="10" unit="{unit}" />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.31" />
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.32" />
+										<code code="0025593" codeSystem="1.2.203.24341.11.2.7.1"
+											codeSystemName="Databáze léčivých přípravků"
+											displayName="HUMALOG MIX25">
+											<originalText>
+												<reference value="#medicationSummary.3.nazev">
+												</reference>
+											</originalText>
+										</code>
+										<name>
+											Humalog MIX25
+										</name>
+										<pharm:desc>
+											100U/ML
+										</pharm:desc>
+										<pharm:formCode code="11202000"
+											codeSystem="0.4.0.127.0.16.1.1.2.1"
+											codeSystemName="EDQM" displayName="Injekční suspenze">
+											<originalText>
+												<reference value="#medicationSummary.3.forma">
+												</reference>
+											</originalText>
+										</pharm:formCode>
+										<!-- Packaging -->
+										<pharm:asContent classCode="CONT">
+											<pharm:containerPackagedProduct classCode="CONT"
+												determinerCode="KIND">
+												<pharm:name>
+													HUMALOG MIX25 100U/ML INJ SUS 1X10ML
+												</pharm:name>
+												<pharm:formCode code="30014000"
+													displayName="Zásobní vložka"
+													codeSystem="0.4.0.127.0.16.1.1.2.1"
+													codeSystemName="EDQM" />
+												<pharm:capacityQuantity value="5" unit="1" />
+											</pharm:containerPackagedProduct>
+										</pharm:asContent>
+										<pharm:asSpecializedKind classCode="GEN">
+											<pharm:generalizedMaterialKind classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code code="A10AD04"
+													codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="Anatomical Therapeutic Chemical"
+													displayName="insulin lispro">
+													<originalText>
+														<reference
+															value="#medicationSummary.3.ATC">
+														</reference>
+													</originalText>
+												</pharm:code>
+											</pharm:generalizedMaterialKind>
+										</pharm:asSpecializedKind>
+										<pharm:ingredient classCode="ACTI">
+											<pharm:quantity>
+												<numerator unit="{unit}" value="100"
+													xsi:type="PQ" />
+												<denominator unit="ml" value="1"
+													xsi:type="PQ" />
+											</pharm:quantity>
+											<pharm:ingredientSubstance classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code code="A10AD04"
+													codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="Anatomical Therapeutic Chemical"
+													displayName="insulin lispro">
+													<originalText>
+														<reference
+															value="#medicationSummary.3.ingredience">
+														</reference>
+													</originalText>
+												</pharm:code>
+												<pharm:name>
+													INSULINUM LISPRUM
+												</pharm:name>
+											</pharm:ingredientSubstance>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<!-- fourth medication entry -->
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<!-- eHDSI Medication Item -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.4" />
+							<!-- opt. A "normal" act that may not contain any subordinate acts -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+							<!-- opt. A act that records combination medication component
+							information in subordinate acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.11" />
+							<!-- opt. A act that records split dose information in subordinate acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" />
+							<!-- Medication Activity (CCD) -->
+							<templateId root="2.16.840.1.113883.10.20.1.24" />
+							<id root="1.2.203.24341.1.10.76001000.4"
+								extension="KOD_ZAZNAMU_V_NEMOCNICI_JIHLAVA.medication.4" />
+							<text>
+								<reference value="#medicationSummary.4">
+								</reference>
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20170507" />
+								<high value="20170519" />
+							</effectiveTime>
+							<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true"
+								operator="A">
+								<period value="8" unit="h" />
+							</effectiveTime>
+							<routeCode code="20053000" codeSystem="0.4.0.127.0.16.1.1.2.1"
+								codeSystemName="EDQM" displayName="Perorální podání" />
+							<doseQuantity value="1" unit="{tablet}" />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.31" />
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.32" />
+										<code code="0086148" codeSystem="1.2.203.24341.11.2.7.1"
+											codeSystemName="Databáze léčivých přípravků"
+											displayName="AUGMENTIN 625 MG">
+											<originalText>
+												<reference value="#medicationSummary.4.nazev">
+												</reference>
+											</originalText>
+										</code>
+										<name>
+											AUGMENTIN 625 MG
+										</name>
+										<pharm:desc>
+											500 mg + 125 mg v tabletě
+										</pharm:desc>
+										<pharm:formCode code="10221000"
+											codeSystem="0.4.0.127.0.16.1.1.2.1"
+											codeSystemName="EDQM" displayName="Potahovaná tableta">
+											<originalText>
+												<reference value="#medicationSummary.4.forma">
+												</reference>
+											</originalText>
+										</pharm:formCode>
+										<!-- Packaging -->
+										<pharm:asContent classCode="CONT">
+											<pharm:containerPackagedProduct classCode="CONT"
+												determinerCode="KIND">
+												<pharm:name>
+													AUGMENTIN 625 MG 500MG/125MG TBL FLM 21 II
+												</pharm:name>
+												<pharm:formCode code="30007000" displayName="Blistr"
+													codeSystem="0.4.0.127.0.16.1.1.2.1"
+													codeSystemName="EDQM" />
+												<pharm:capacityQuantity value="30" unit="1" />
+											</pharm:containerPackagedProduct>
+										</pharm:asContent>
+										<pharm:asSpecializedKind classCode="GEN">
+											<pharm:generalizedMaterialKind classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code code="J01CR02"
+													codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="Anatomical Therapeutic Chemical"
+													displayName="amoxicilin a inhibitor beta-laktamasy">
+													<originalText>
+														<reference
+															value="#medicationSummary.4.ATC">
+														</reference>
+													</originalText>
+												</pharm:code>
+											</pharm:generalizedMaterialKind>
+										</pharm:asSpecializedKind>
+										<!-- Ingredient -->
+										<pharm:ingredient classCode="ACTI">
+											<pharm:quantity>
+												<numerator unit="mg" value="500"
+													xsi:type="PQ" />
+												<denominator unit="1" value="1"
+													xsi:type="PQ" />
+											</pharm:quantity>
+											<pharm:ingredientSubstance classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code nullFlavor="OTH">
+													<originalText>
+														<reference
+															value="#medicationSummary.4.ingredience.1">
+														</reference>
+													</originalText>
+												</pharm:code>
+												<pharm:name>
+													AMOXICILLINUM TRIHYDRICUM
+												</pharm:name>
+											</pharm:ingredientSubstance>
+										</pharm:ingredient>
+										<pharm:ingredient classCode="ACTI">
+											<pharm:quantity>
+												<numerator unit="mg" value="125"
+													xsi:type="PQ" />
+												<denominator unit="1" value="1"
+													xsi:type="PQ" />
+											</pharm:quantity>
+											<pharm:ingredientSubstance classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code nullFlavor="OTH">
+													<originalText>
+														<reference
+															value="#medicationSummary.4.ingredience.2">
+														</reference>
+													</originalText>
+												</pharm:code>
+												<pharm:name>
+													KALII CLAVULANAS
+												</pharm:name>
+											</pharm:ingredientSubstance>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<!-- fifth medication entry -->
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<!-- eHDSI Medication Item -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.4" />
+							<!-- opt. A "normal" act that may not contain any subordinate acts -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1" />
+							<!-- opt. A act that records combination medication component
+							information in subordinate acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.11" />
+							<!-- opt. A act that records split dose information in subordinate acts. -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.9" />
+							<!-- Medication Activity (CCD) -->
+							<templateId root="2.16.840.1.113883.10.20.1.24" />
+							<id root="1.2.203.24341.1.10.76001000.4"
+								extension="KOD_ZAZNAMU_V_NEMOCNICI_JIHLAVA.medication.5" />
+							<text>
+								<reference value="#medicationSummary.5">
+								</reference>
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20150102" />
+								<high nullFlavor="UNK" />
+							</effectiveTime>
+							<effectiveTime xsi:type="PIVL_TS" institutionSpecified="true"
+								operator="A">
+								<period value="8" unit="h" />
+							</effectiveTime>
+							<routeCode code="20020000" codeSystem="0.4.0.127.0.16.1.1.2.1"
+								codeSystemName="EDQM" displayName="Inhalační podání" />
+							<doseQuantity value="1" unit="{unit}" />
+							<consumable>
+								<manufacturedProduct>
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.31" />
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.32" />
+										<code code="0002679" codeSystem="1.2.203.24341.11.2.7.1"
+											codeSystemName="Databáze léčivých přípravků"
+											displayName="BERODUAL N">
+											<originalText>
+												<reference value="#medicationSummary.5.nazev">
+												</reference>
+											</originalText>
+										</code>
+										<name>
+											BERODUAL N
+										</name>
+										<pharm:desc>
+											21 µg + 50 µg na 1 dávku
+										</pharm:desc>
+										<pharm:formCode code="11106000"
+											codeSystem="0.4.0.127.0.16.1.1.2.1"
+											codeSystemName="EDQM"
+											displayName="Roztok k inhalaci v tlakovém obalu">
+											<originalText>
+												<reference value="#medicationSummary.5.forma">
+												</reference>
+											</originalText>
+										</pharm:formCode>
+										<!-- Packaging -->
+										<pharm:asContent classCode="CONT">
+											<pharm:containerPackagedProduct classCode="CONT"
+												determinerCode="KIND">
+												<pharm:name>
+													BERODUAL N 21MCG/50MCG/DÁV INH SOL PSS 200DÁV
+												</pharm:name>
+												<pharm:formCode code="30039400"
+													displayName="Vícedávkový obal s dávkovací pumpou"
+													codeSystem="0.4.0.127.0.16.1.1.2.1"
+													codeSystemName="EDQM" />
+												<pharm:capacityQuantity value="200" unit="1" />
+											</pharm:containerPackagedProduct>
+										</pharm:asContent>
+										<pharm:asSpecializedKind classCode="GEN">
+											<pharm:generalizedMaterialKind classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code code="R03AL01"
+													codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="Anatomical Therapeutic Chemical"
+													displayName="fenoterol a ipratropium-bromid">
+													<originalText>
+														<reference
+															value="#medicationSummary.5.ATC">
+														</reference>
+													</originalText>
+												</pharm:code>
+											</pharm:generalizedMaterialKind>
+										</pharm:asSpecializedKind>
+										<pharm:ingredient classCode="ACTI">
+											<pharm:quantity>
+												<numerator unit="ug" value="21"
+													xsi:type="PQ" />
+												<denominator unit="1" value="1"
+													xsi:type="PQ" />
+											</pharm:quantity>
+											<pharm:ingredientSubstance classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code nullFlavor="OTH">
+													<originalText>
+														<reference
+															value="#medicationSummary.5.ingredience.1">
+														</reference>
+													</originalText>
+												</pharm:code>
+												<pharm:name>
+													IPRATROPII BROMIDUM MONOHYDRICUM
+												</pharm:name>
+											</pharm:ingredientSubstance>
+										</pharm:ingredient>
+										<pharm:ingredient classCode="ACTI">
+											<pharm:quantity>
+												<numerator unit="ug" value="50"
+													xsi:type="PQ" />
+												<denominator unit="1" value="1"
+													xsi:type="PQ" />
+											</pharm:quantity>
+											<pharm:ingredientSubstance classCode="MMAT"
+												determinerCode="KIND">
+												<pharm:code nullFlavor="OTH">
+													<originalText>
+														<reference
+															value="#medicationSummary.5.ingredience.2">
+														</reference>
+													</originalText>
+												</pharm:code>
+												<pharm:name>
+													FENOTEROLI HYDROBROMIDUM
+												</pharm:name>
+											</pharm:ingredientSubstance>
+										</pharm:ingredient>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<!-- Allergy Section -->
+			<component>
+				<section classCode="DOCSECT">
+					<!-- eHDSI Allergies and Other Adverse Reactions -->
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.12" />
+					<!-- opt. IHE Allergies and Other Adverse Reactions Section (IHE PCC) -->
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.13" />
+					<!-- opt. Alerts section (CCD) -->
+					<templateId root="2.16.840.1.113883.10.20.1.2" />
+					<code code="48765-2" displayName="Alergie a nežádoucí reakce"
+						codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+					<title>
+						Allergie a jiné nežádoucí reakce
+					</title>
+					<text> Známé alergie a intolerance jsou: <table width="100%">
+							<thead>
+								<tr>
+									<th>
+										Datum od
+									</th>
+									<th>
+										Datum do
+									</th>
+									<th>
+										Typ
+									</th>
+									<th>
+										Alergen
+									</th>
+									<th>
+										Manifestace
+									</th>
+									<th>
+										Riziko
+									</th>
+									<th>
+										Míra jistoty
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="allergy.1">
+									<td ID="allergy.1.dat_od">
+										10.1.1990
+									</td>
+									<td ID="allergy.1.dat_do">
+									</td>
+									<td ID="allergy.1.typ">
+										Alergická dispozice
+									</td>
+									<td ID="allergy.1.alergen">
+										Latex
+									</td>
+									<td ID="allergy.1.projev">
+										Kopřivka
+									</td>
+									<td ID="allergy.1.riziko">
+										Nízké
+									</td>
+									<td ID="allergy.1.jistota">
+										Nepotvrzeno
+									</td>
+								</tr>
+								<tr ID="allergy.2">
+									<td ID="allergy.2.dat_od">
+										10.1.1990
+									</td>
+									<td ID="allergy.2.dat_do">
+									</td>
+									<td ID="allergy.2.typ">
+										Intolerance
+									</td>
+									<td ID="allergy.2.alergen">
+										Kiwi
+									</td>
+									<td ID="allergy.2.projev">
+										Ekzém
+									</td>
+									<td ID="allergy.2.riziko">
+										Nízké
+									</td>
+									<td ID="allergy.2.jistota">
+										Potvrzeno
+									</td>
+								</tr>
+								<tr ID="allergy.3">
+									<td ID="allergy.3.dat_od">
+										5.5.1983
+									</td>
+									<td ID="allergy.3.dat_do">
+									</td>
+									<td ID="allergy.3.typ">
+										Intolerance
+									</td>
+									<td ID="allergy.3.alergen">
+										Laktóza
+									</td>
+									<td ID="allergy.3.projev">
+										Průjem
+									</td>
+									<td ID="allergy.3.riziko">
+										Nízké
+									</td>
+									<td ID="allergy.3.jistota">
+										Nepotvrzeno
+									</td>
+								</tr>
+								<tr ID="allergy.4">
+									<td ID="allergy.4.dat_od">
+										10.3.1994
+									</td>
+									<td ID="allergy.4.dat_do">
+									</td>
+									<td ID="allergy.4.typ">
+										Alergická dispozice
+									</td>
+									<td ID="allergy.4.alergen">
+										kyselina acetylsalicylová
+									</td>
+									<td ID="allergy.4.projev">
+										Astma
+									</td>
+									<td ID="allergy.4.riziko">
+										Vysoké
+									</td>
+									<td ID="allergy.4.jistota">
+										Potvrzeno
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- First concern -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<!-- eHDSI Allergy and Intolerance Concern -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.16" />
+							<!-- opt. IHE Concern Entry (IHE PCC) -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<!-- opt. IHE Allergy and Intolerance Concern Entry (IHE PCC) -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.3" />
+							<!-- opt. IHE Allergy and Intolerance Concern Entry (IHE PCC) -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<statusCode code="active" />
+							<!-- 1..* entry relationships identifying allergies of concern -->
+							<entryRelationship inversionInd="false" typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- eHDSI Allergies And Intolerances -->
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.17" />
+									<!-- opt. IHE Problem Entry (IHE PCC) -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<!-- opt. IHE Allergies And Intolerances Entry (IHE PCC) -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6" />
+									<!-- opt. Alert observation (CCD) -->
+									<templateId root="2.16.840.1.113883.10.20.1.18" />
+									<!-- opt. Problem observation (CCD) -->
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+									<!-- id záznamu o alergii v NIS, nepovinné -->
+									<code code="609328004" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT" displayName="Alergická dispozice">
+										<originalText>
+											<reference value="#allergy.1.typ" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#allergy.1" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="19900110" />
+									</effectiveTime>
+									<participant typeCode="CSM">
+										<participantRole classCode="MANU">
+											<playingEntity classCode="MMAT">
+												<code code="111088007"
+													codeSystem="2.16.840.1.113883.6.96"
+													codeSystemName="SNOMED CT" displayName="Latex">
+													<originalText>
+														<reference value="#allergy.1.alergen" />
+													</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<!-- manifestation -->
+									<entryRelationship typeCode="MFST">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.44" />
+											<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+											<!-- just en axample, real GUID should be used -->
+											<code code="404684003"
+												codeSystem="2.16.840.1.113883.6.96"
+												displayName="Klinický nález"
+												codeSystemName="SNOMED CT" />
+											<text>
+												<reference value="#allergy.1.projev" />
+											</text>
+											<statusCode code="completed" />
+											<effectiveTime>
+												<low nullFlavor="NI" />
+											</effectiveTime>
+											<value code="126485001"
+												codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT" displayName="Kopřivka"
+												xsi:type="CD">
+												<originalText>
+													<reference value="#allergy.1.projev" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+									<!-- criticality -->
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.33" />  <!--
+											eHDSI Criticality -->
+											<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+											<code code="82606-5" codeSystem="2.16.840.1.113883.6.1"
+												codeSystemName="LOINC"
+												displayName="Allergy or intolerance criticality" />
+											<text>
+												<reference value="#allergy.1.riziko" />
+											</text>
+											<statusCode code="completed" />
+											<value code="low"
+												codeSystem="2.16.840.1.113883.4.642.4.130"
+												codeSystemName="FHIR AllergyIntoleranceCriticality"
+												displayName="Nízké riziko" xsi:type="CD">
+												<originalText>
+													<reference value="#allergy.1.riziko" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+									<!-- certainty -->
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.35" />  <!--
+											eHDSI Certainty -->
+											<code code="66455-7" codeSystem="2.16.840.1.113883.6.1"
+												displayName="Condition status" />
+											<text>
+												<reference value="#allergy.1.jistota" />
+											</text>
+											<statusCode code="completed" />
+											<value code="unconfirmed" displayName="Nepotvrzeno"
+												codeSystem="2.16.840.1.113883.4.642.4.1371"
+												codeSystemName="FHIR AllergyIntoleranceVerificationStatusCodes"
+												xsi:type="CD" />
+										</observation>
+									</entryRelationship>
+									<!-- status -->
+									<entryRelationship typeCode="REFR">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.34" /> <!-- Template ID for eHDSI Allergy Status Observation -->
+											<code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Stav diagnózy"/>
+											<text>
+												<reference nullFlavor="NI"/>
+											</text>
+											<statusCode code="completed"/>
+											<value code="active" codeSystem="2.16.840.1.113883.4.642.4.1373" codeSystemName="Allergy or Intolerance Clinical Status" displayName="Aktivní" />
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- Second concern -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<!-- eHDSI Allergy and Intolerance Concern -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.16" />
+							<!-- opt. IHE Concern Entry (IHE PCC) -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<!-- opt. IHE Allergy and Intolerance Concern Entry (IHE PCC) -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.3" />
+							<!-- opt. IHE Allergy and Intolerance Concern Entry (IHE PCC) -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<statusCode code="active" />
+							<!-- 1..* entry relationships identifying allergies of concern -->
+							<entryRelationship inversionInd="false" typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- eHDSI Allergies And Intolerances -->
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.17" />
+									<!-- opt. IHE Problem Entry (IHE PCC) -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<!-- opt. IHE Allergies And Intolerances Entry (IHE PCC) -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6" />
+									<!-- opt. Alert observation (CCD) -->
+									<templateId root="2.16.840.1.113883.10.20.1.18" />
+									<!-- opt. Problem observation (CCD) -->
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+									<!-- id záznamu o alergii v NIS, nepovinné -->
+									<code code="29544009" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT"
+										displayName="Intolerance">
+										<originalText>
+											<reference value="#allergy.2.typ" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#allergy.2" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="19900110" />
+									</effectiveTime>
+									<participant typeCode="CSM">
+										<participantRole classCode="MANU">
+											<playingEntity classCode="MMAT">
+												<code code="260176001"
+													codeSystem="2.16.840.1.113883.6.96"
+													codeSystemName="SNOMED CT" displayName="Kiwi">
+													<originalText>
+														<reference value="#allergy.2.alergen" />
+													</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<!-- manifestation -->
+									<entryRelationship typeCode="MFST">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.44" />
+											<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+											<!-- just en axample, real GUID should be used -->
+											<code code="404684003"
+												codeSystem="2.16.840.1.113883.6.96"
+												displayName="Klinický nález"
+												codeSystemName="SNOMED CT" />
+											<text>
+												<reference value="#allergy.2.projev" />
+											</text>
+											<statusCode code="completed" />
+											<effectiveTime>
+												<low nullFlavor="NI" />
+											</effectiveTime>
+											<value code="43116000"
+												codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT" displayName="Ekzém"
+												xsi:type="CD">
+												<originalText>
+													<reference value="#allergy.2.projev" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+									<!-- criticality -->
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.33" />  <!--
+											eHDSI criticality -->
+											<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+											<!-- just en axample, real GUID should be used -->
+											<code code="82606-5" codeSystem="2.16.840.1.113883.6.1"
+												codeSystemName="LOINC"
+												displayName="Allergy or intolerance criticality" />
+											<text>
+												<reference value="#allergy.2.riziko" />
+											</text>
+											<statusCode code="completed" />
+											<value code="low"
+												codeSystem="2.16.840.1.113883.4.642.4.130"
+												codeSystemName="FHIR AllergyIntoleranceCriticality"
+												displayName="Nízké riziko" xsi:type="CD">
+												<originalText>
+													<reference value="#allergy.2.riziko" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+									<!-- certainty -->
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.35" />  <!--
+											eHDSI Certainty -->
+											<code code="66455-7" codeSystem="2.16.840.1.113883.6.1"
+												displayName="Condition status" />
+											<text>
+												<reference value="#allergy.2.jistota" />
+											</text>
+											<statusCode code="completed" />
+											<value code="unconfirmed" displayName="Nepotvrzeno"
+												codeSystem="2.16.840.1.113883.4.642.4.1371"
+												codeSystemName="FHIR AllergyIntoleranceVerificationStatusCodes"
+												xsi:type="CD" />
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- Third concern -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<!-- eHDSI Allergy and Intolerance Concern -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.16" />
+							<!-- opt. IHE Concern Entry (IHE PCC) -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<!-- opt. IHE Allergy and Intolerance Concern Entry (IHE PCC) -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.3" />
+							<!-- opt. IHE Allergy and Intolerance Concern Entry (IHE PCC) -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<statusCode code="active" />
+							<!-- 1..* entry relationships identifying allergies of concern -->
+							<entryRelationship inversionInd="false" typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- eHDSI Allergies And Intolerances -->
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.17" />
+									<!-- opt. IHE Problem Entry (IHE PCC) -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<!-- opt. IHE Allergies And Intolerances Entry (IHE PCC) -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6" />
+									<!-- opt. Alert observation (CCD) -->
+									<templateId root="2.16.840.1.113883.10.20.1.18" />
+									<!-- opt. Problem observation (CCD) -->
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+									<!-- id záznamu o alergii v NIS, nepovinné -->
+									<code code="29544009" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT"
+										displayName="Intolerance">
+										<originalText>
+											<reference value="#allergy.3.typ" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#allergy.3" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="19830505" />
+									</effectiveTime>
+									<participant typeCode="CSM">
+										<participantRole classCode="MANU">
+											<playingEntity classCode="MMAT">
+												<code code="47703008"
+													codeSystem="2.16.840.1.113883.6.96"
+													codeSystemName="SNOMED CT" displayName="Laktóza">
+													<originalText>
+														<reference value="#allergy.3.alergen" />
+													</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<!-- manifestation -->
+									<entryRelationship typeCode="MFST">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.44" />
+											<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+											<!-- just en axample, real GUID should be used -->
+											<code code="404684003"
+												codeSystem="2.16.840.1.113883.6.96"
+												displayName="Klinický nález"
+												codeSystemName="SNOMED CT" />
+											<text>
+												<reference value="#allergy.3.projev" />
+											</text>
+											<statusCode code="completed" />
+											<effectiveTime>
+												<low nullFlavor="NI" />
+												<high nullFlavor="UNK" />
+											</effectiveTime>
+											<value code="62315008"
+												codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT" displayName="Průjem"
+												xsi:type="CD">
+												<originalText>
+													<reference value="#allergy.3.projev" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+									<!-- criticality -->
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.33" />  <!--
+											eHDSI criticality -->
+											<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+											<code code="82606-5" codeSystem="2.16.840.1.113883.6.1"
+												codeSystemName="LOINC"
+												displayName="Allergy or intolerance criticality" />
+											<text>
+												<reference value="#allergy.3.riziko" />
+											</text>
+											<statusCode code="completed" />
+											<value code="low"
+												codeSystem="2.16.840.1.113883.4.642.4.130"
+												codeSystemName="FHIR AllergyIntoleranceCriticality"
+												displayName="Nízké riziko" xsi:type="CD">
+												<originalText>
+													<reference value="#allergy.3.riziko" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+									<!-- certainty -->
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.35" />  <!--
+											eHDSI Certainty -->
+											<code code="66455-7" codeSystem="2.16.840.1.113883.6.1"
+												displayName="Condition status" />
+											<text>
+												<reference value="#allergy.3.jistota" />
+											</text>
+											<statusCode code="completed" />
+											<value code="unconfirmed" displayName="Nepotvrzeno"
+												codeSystem="2.16.840.1.113883.4.642.4.1371"
+												codeSystemName="FHIR AllergyIntoleranceVerificationStatusCodes"
+												xsi:type="CD" />
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- Fourth concern -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<!-- eHDSI Allergy and Intolerance Concern -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.16" />
+							<!-- opt. IHE Concern Entry (IHE PCC) -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<!-- opt. IHE Allergy and Intolerance Concern Entry (IHE PCC) -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.3" />
+							<!-- opt. IHE Allergy and Intolerance Concern Entry (IHE PCC) -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<statusCode code="active" />
+							<!-- 1..* entry relationships identifying allergies of concern -->
+							<entryRelationship inversionInd="false" typeCode="SUBJ">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- eHDSI Allergies And Intolerances -->
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.17" />
+									<!-- opt. IHE Problem Entry (IHE PCC) -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<!-- opt. IHE Allergies And Intolerances Entry (IHE PCC) -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6" />
+									<!-- opt. Alert observation (CCD) -->
+									<templateId root="2.16.840.1.113883.10.20.1.18" />
+									<!-- opt. Problem observation (CCD) -->
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+									<!-- id záznamu o alergii v NIS, nepovinné -->
+									<code code="609328004" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT" displayName="Alergická dispozice">
+										<originalText>
+											<reference value="#allergy.4.typ" />
+										</originalText>
+									</code>
+									<text>
+										<reference value="#allergy.4" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="19940310" />
+									</effectiveTime>
+									<participant typeCode="CSM">
+										<participantRole classCode="MANU">
+											<playingEntity classCode="MMAT">
+												<code code="N02BA01"
+													codeSystem="2.16.840.1.113883.6.73"
+													codeSystemName="Anatomical Therapeutic Chemical"
+													displayName="kyselina acetylsalicylová">
+													<originalText>
+														<reference value="#allergy.4.alergen" />
+													</originalText>
+												</code>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<!-- manifestation -->
+									<entryRelationship typeCode="MFST">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.44" />
+											<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+											<!-- just en axample, real GUID should be used -->
+											<code code="404684003"
+												codeSystem="2.16.840.1.113883.6.96"
+												displayName="Klinický nález"
+												codeSystemName="SNOMED CT" />
+											<text>
+												<reference value="#allergy.4.projev" />
+											</text>
+											<statusCode code="completed" />
+											<effectiveTime>
+												<low nullFlavor="NI"/>
+											</effectiveTime>
+											<value code="195967001"
+												codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT" displayName="Astma"
+												xsi:type="CD">
+												<originalText>
+													<reference value="#allergy.4.projev" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+									<!-- criticality -->
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.33" />  <!--
+											eHDSI criticality -->
+											<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+											<code code="82606-5" codeSystem="2.16.840.1.113883.6.1"
+												codeSystemName="LOINC"
+												displayName="Allergy or intolerance criticality" />
+											<text>
+												<reference value="#allergy.4.riziko" />
+											</text>
+											<statusCode code="completed" />
+											<value code="high"
+												codeSystem="2.16.840.1.113883.4.642.4.130"
+												codeSystemName="FHIR AllergyIntoleranceCriticality"
+												displayName="Vysoké riziko" xsi:type="CD">
+												<originalText>
+													<reference value="#allergy.4.riziko" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+									<!-- certainty -->
+									<entryRelationship typeCode="SUBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.35" />  <!--
+											eHDSI Certainty -->
+											<code code="66455-7" codeSystem="2.16.840.1.113883.6.1"
+												displayName="Condition status" />
+											<text>
+												<reference value="#allergy.4.jistota" />
+											</text>
+											<statusCode code="completed" />
+											<value code="confirmed" displayName="Potvrzeno"
+												codeSystem="2.16.840.1.113883.4.642.4.1371"
+												codeSystemName="FHIR AllergyIntoleranceVerificationStatusCodes"
+												xsi:type="CD" />
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!-- Section Immunizations -->
+			<component>
+				<section classCode="DOCSECT">
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.15" />  <!-- eHDSI Immunizations -->
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.23" />
+					<templateId root="2.16.840.1.113883.10.20.1.6" />
+					<code code="11369-6" displayName="Očkování" codeSystemName="LOINC"
+						codeSystem="2.16.840.1.113883.6.1" />
+					<title>
+						Očkování
+					</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Datum</th>
+									<th>Očkování</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="vacc1">
+									<td ID="vacc1-dat">2.1.1983</td>
+									<td ID="vacc1-vacc">Očkování proti viru hepatitidy B</td>
+								</tr>
+								<tr ID="vacc2">
+									<td ID="vacc2-dat">2.1.1983</td>
+									<td ID="vacc2-vacc">Očkování proti záškrtu, tetanu, černému
+										kašli a poliomyelitidě</td>
+								</tr>
+								<tr ID="vacc3">
+									<td ID="vacc3-dat">2.1.1983</td>
+									<td ID="vacc3-vacc">Očkování proti Heamophilus influenzae typu b</td>
+								</tr>
+								<tr ID="vacc4">
+									<td ID="vacc4-dat">20.5.1994</td>
+									<td ID="vacc4-vacc">Očkování proti lidskému papilomaviru</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN"
+							negationInd="false">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.19" /> <!-- eHDSI
+							Immunizations -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12" />
+							<templateId root="2.16.840.1.113883.10.20.1.24" />
+							<id root="EE9F61CB-5B8C-4F73-AAAA-E802CF5A44E8" />
+							<code code="IMMUNIZ" codeSystem="1.3.5.1.4.1.19376.1.5.3.2"
+								codeSystemName="ActCode" displayName="Immunization" />
+							<text>
+								<reference value="#vacc1" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime value="19830102" />
+							<routeCode code="IM" codeSystem="2.16.840.1.113883.5.112"
+								codeSystemName="RouteOfAdministration"
+								displayName="Intramuskulární podání" />
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.18" /> <!--
+									eHDSI Immunization Product -->
+									<templateId root="2.16.840.1.113883.10.20.1.53" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<code code="34689006"
+											displayName="Očkování proti viru hepatitidy B"
+											codeSystemName="SNOMED CT"
+											codeSystem="2.16.840.1.113883.6.96">
+											<originalText>
+												<reference value="#vacc1-vacc" />
+											</originalText>
+										</code>
+										<name>
+											Engerix-B
+										</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN"
+							negationInd="false">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.19" /> <!-- eHDSI
+							Immuniations -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12" />
+							<templateId root="2.16.840.1.113883.10.20.1.24" />
+							<id root="EE9F61CB-5B8C-4F73-AAAA-E802CF5A44E9" />
+							<code code="IMMUNIZ" codeSystem="1.3.5.1.4.1.19376.1.5.3.2"
+								codeSystemName="ActCode" displayName="Immunization" />
+							<text>
+								<reference value="#vacc2" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime value="19830102" />
+							<routeCode code="IM" codeSystem="2.16.840.1.113883.5.112"
+								codeSystemName="RouteOfAdministration"
+								displayName="Intramuskulární podání" />
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.18" /> <!--
+									eHDSI Immunization Product -->
+									<templateId root="2.16.840.1.113883.10.20.1.53" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<code code="414005006"
+											displayName="Diphtheria + tetanus + pertussis + poliomyelitis vaccine"
+											codeSystemName="SNOMED CT"
+											codeSystem="2.16.840.1.113883.6.96">
+											<originalText>
+												<reference value="#vacc2-vacc" />
+											</originalText>
+										</code>
+										<name>
+											Boostrix Polio
+										</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN"
+							negationInd="false">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.19" /> <!-- eHDSI
+							Immuniations -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12" />
+							<templateId root="2.16.840.1.113883.10.20.1.24" />
+							<id root="EE9F61CB-5B8C-4F73-AAAA-E802CF5A44E8" />
+							<code code="IMMUNIZ" codeSystem="1.3.5.1.4.1.19376.1.5.3.2"
+								codeSystemName="ActCode" displayName="Immunization" />
+							<text>
+								<reference value="#vacc3" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime value="19830102" />
+							<routeCode code="IM" codeSystem="2.16.840.1.113883.5.112"
+								codeSystemName="RouteOfAdministration"
+								displayName="Intramuskulární podání" />
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.18" /> <!--
+									eHDSI Immunization Product -->
+									<templateId root="2.16.840.1.113883.10.20.1.53" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<code code="333680004"
+											displayName="Haemophilus influenzae Type b vaccine"
+											codeSystemName="SNOMED CT"
+											codeSystem="2.16.840.1.113883.6.96">
+											<originalText>
+												<reference value="#vacc3-vacc" />
+											</originalText>
+										</code>
+										<name>
+											Hiberix
+										</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN"
+							negationInd="false">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.19" /> <!-- eHDSI
+							Immuniations -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12" />
+							<templateId root="2.16.840.1.113883.10.20.1.24" />
+							<id root="EE9F61CB-5B8C-4F73-AAAA-E802CF5A44E8" />
+							<code code="IMMUNIZ" codeSystem="1.3.5.1.4.1.19376.1.5.3.2"
+								codeSystemName="ActCode" displayName="Immunization" />
+							<text>
+								<reference value="#vacc4" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime value="19940520" />
+							<routeCode code="IM" codeSystem="2.16.840.1.113883.5.112"
+								codeSystemName="RouteOfAdministration"
+								displayName="Intramuskulární podání" />
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.18" /> <!--
+									eHDSI Immunization Product -->
+									<templateId root="2.16.840.1.113883.10.20.1.53" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2" />
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<code code="424519000"
+											displayName="Human papillomavirus vaccine"
+											codeSystemName="SNOMED CT"
+											codeSystem="2.16.840.1.113883.6.96">
+											<originalText>
+												<reference value="#vacc4-vacc" />
+											</originalText>
+										</code>
+										<name>
+											Cervarix
+										</name>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<!-- Section History of Past Illness -->
+			<component>
+				<section classCode="DOCSECT">
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.10" />  <!-- eHDSI History Of
+					Past Illness -->
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.8" />
+					<code code="11348-0" displayName="Osobní anamnéza" codeSystemName="LOINC"
+						codeSystem="2.16.840.1.113883.6.1" />
+					<title>
+						Osobní anamnéza
+					</title>
+					<text> Osobní anamnéza: <table ID="OA">
+							<thead>
+								<tr>
+									<th>Typ</th>
+									<th>Kód</th>
+									<th>Popis</th>
+									<th>Stav problému</th>
+									<th>Zdravotní stav</th>
+									<th>Datum začátku onemocnění</th>
+									<th>Datum ukončení onemocnění</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="OA.1">
+									<td ID="OA.1.typ">Onemocnění</td>
+									<td ID="OA.1.kod">D093</td>
+									<td ID="OA.1.popis">Ca.in situ - štítná žláza a jiné žlázy s
+						vnitřní sekrecí</td>
+									<td ID="OA.1.stav">Vyřešený/á</td>
+									<td ID="OA.1.zdrstav">Onemocnění v remisi</td>
+									<td ID="OA.1.start">01.10.1997</td>
+									<td ID="OA.1.end">06.10.1997</td>
+								</tr>
+								<tr ID="OA.2">
+									<td ID="OA.2.typ">Onemocnění</td>
+									<td ID="OA.2.kod">O244</td>
+									<td ID="OA.2.popis">Diabetes mellitus vzniklý v těhotenství</td>
+									<td ID="OA.2.stav">Neaktivní</td>
+									<td ID="OA.2.zdrstav">Onemocnění v remisi</td>
+									<td ID="OA.2.start">12.10.2011</td>
+									<td ID="OA.2.end">30.4.2012</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.15" /> <!-- eHDSI
+							Problem Concern -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" />
+							<id root="1.2.203.24341.1.10.76001000.4"
+								extension="KOD_ZAZNAMU_V_NEMOCNICI_JIHLAVA.anamneza.1" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<text>
+								<reference value="#OA.1" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime>
+								<low value="19971001" />
+								<high value="19971006" />
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.7" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="1.2.203.24341.1.10.76001000.4"
+										extension="ab654ab1a3b12a" /> 	<!-- id záznamu o problému
+									(nemoci) v informačním systému -->
+									<code code="64572001" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT" displayName="Onemocnění" />
+									<text>
+										<reference value="#OA.1.typ" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="19971001" />
+										<high value="19971006" />
+									</effectiveTime>
+									<value xsi:type="CD" code="D093"
+										displayName="Ca.in situ - štítná žláza a jiné žlázy s vnitřní sekrecí"
+										codeSystem="1.2.203.24341.11.2.1" codeSystemName="MKN-10">
+										<originalText>
+											<reference value="#OA.1.popis" />
+										</originalText>
+									</value>
+									<entryRelationship typeCode="REFR">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.9" />  <!--
+											eHDSI Problem Status Observation -->
+											<templateId root="2.16.840.1.113883.10.20.1.57" />
+											<templateId root="2.16.840.1.113883.10.20.1.50" />
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.1" />
+											<code code="33999-4" codeSystem="2.16.840.1.113883.6.1"
+												codeSystemName="LOINC" displayName="Status" />
+											<text>
+												<reference value="#OA.1.stav" />
+											</text>
+											<statusCode code="completed" />
+											<value xsi:type="CE" code="413322009"
+												displayName="Vyřešený/á"
+												codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT">
+												<originalText>
+													<reference value="#OA.1.stav" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode="REFR">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.10" />  <!--
+											eHDSI Health Status Observation -->
+											<templateId root="2.16.840.1.113883.10.20.1.51" />
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.2" />
+											<code code="11323-3" codeSystem="2.16.840.1.113883.6.1"
+												codeSystemName="LOINC" displayName="Health Status" />
+											<text>
+												<reference value="#OA.1.zdrstav" />
+											</text>
+											<statusCode code="completed" />
+											<value xsi:type="CE" code="765205004"
+												displayName="Onemocnění v remisi"
+												codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT">
+												<originalText>
+													<reference value="#OA.1.zdrstav" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.15" /> <!-- eHDSI
+							Problem Concern -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" />
+							<id root="1.2.203.24341.1.10.76001000.4"
+								extension="KOD_ZAZNAMU_V_NEMOCNICI_JIHLAVA.anamneza.2" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<statusCode code="completed" />
+							<effectiveTime>
+								<low value="20111012" />
+								<high value="20120430" />
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.7" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="1.2.203.24341.1.10.76001000.4"
+										extension="historyIllness2" /> 	<!-- id záznamu o problému
+									(nemoci) v informačním systému -->
+									<code code="64572001" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT" displayName="Onemocnění" />
+									<text>
+										<reference value="#OA.2.typ" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="20111012" />
+										<high value="20120430" />
+									</effectiveTime>
+									<value xsi:type="CD" code="O244"
+										displayName="Diabetes mellitus vzniklý v těhotenství"
+										codeSystem="1.2.203.24341.11.2.1" codeSystemName="MKN-10">
+										<originalText>
+											<reference value="#OA.2.popis" />
+										</originalText>
+									</value>
+									<entryRelationship typeCode="REFR">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.9" />  <!--
+											eHDSI Problem Status Observation -->
+											<templateId root="2.16.840.1.113883.10.20.1.57" />
+											<templateId root="2.16.840.1.113883.10.20.1.50" />
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.1" />
+											<code code="33999-4" codeSystem="2.16.840.1.113883.6.1"
+												codeSystemName="LOINC" displayName="Status" />
+											<text>
+												<reference value="#OA.2.stav" />
+											</text>
+											<statusCode code="completed" />
+											<value xsi:type="CE" code="73425007"
+												displayName="Neaktivní"
+												codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT">
+												<originalText>
+													<reference value="#OA.2.stav" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+									<entryRelationship typeCode="REFR">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.10" />  <!--
+											eHDSI Health Status Observation -->
+											<templateId root="2.16.840.1.113883.10.20.1.51" />
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.2" />
+											<code code="11323-3" codeSystem="2.16.840.1.113883.6.1"
+												codeSystemName="LOINC" displayName="Health Status" />
+											<text>
+												<reference value="#OA.2.zdrstav" />
+											</text>
+											<statusCode code="completed" />
+											<value xsi:type="CE" code="765205004"
+												displayName="Onemocnění v remisi"
+												codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT">
+												<originalText>
+													<reference value="#OA.2.zdrstav" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!-- Section Coded List of Surgeries -->
+			<component>
+				<section classCode="DOCSECT">
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.11" />  <!-- eHDSI List of
+					Surgeries -->
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.12" />
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.11" />
+					<code code="47519-4" displayName="Anamnéza provedených operací a jiných výkonů"
+						codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+					<title>
+						Významné chirurgické zákroky
+					</title>
+					<text>
+						<table ID="surg">
+							<thead>
+								<tr>
+									<th>Procedura</th>
+									<th>Datum provedení</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="surg1">
+									<td ID="surg1-type">Implantace kardioverter-defibrilátoru</td>
+									<td ID="surg1-date">20.10.2014</td>
+								</tr>
+								<tr ID="surg2">
+									<td ID="surg2-type">Císařský řez</td>
+									<td ID="surg2-date">14.04.2012</td>
+								</tr>
+								<tr ID="surg3">
+									<td ID="surg3-type">Tyroidektomie</td>
+									<td ID="surg3-date">05.06.1997</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<procedure classCode="PROC" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.26" />  <!-- eHDSI
+							Procedure -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19" />
+							<templateId root="2.16.840.1.113883.10.20.1.29" />
+							<id nullFlavor="NI" />
+							<code code="118955007" codeSystem="2.16.840.1.113883.6.96"
+								codeSystemName="SNOMED CT"
+								displayName="Implantace kardioverter-defibrilátoru">
+								<originalText>
+									<reference value="#surg1-type" />
+								</originalText>
+							</code>
+							<text>
+								<reference value="#surg1" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime value="20141020" />
+						</procedure>
+					</entry>
+					<entry>
+						<procedure classCode="PROC" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.26" />  <!-- eHDSI
+							Procedure -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19" />
+							<templateId root="2.16.840.1.113883.10.20.1.29" />
+							<id nullFlavor="NI" />
+							<code code="11466000" codeSystem="2.16.840.1.113883.6.96"
+								codeSystemName="SNOMED CT" displayName="Císařský řez">
+								<originalText>
+									<reference value="#surg2-type" />
+								</originalText>
+							</code>
+							<text>
+								<reference value="#surg2" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime value="20120414" />
+						</procedure>
+					</entry>
+					<entry>
+						<procedure classCode="PROC" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.26" />  <!-- eHDSI
+							Procedure -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.19" />
+							<templateId root="2.16.840.1.113883.10.20.1.29" />
+							<id nullFlavor="NI" />
+							<code code="13619001" codeSystem="2.16.840.1.113883.6.96"
+								codeSystemName="SNOMED CT" displayName="Tyroidektomie">
+								<originalText>
+									<reference value="#surg3-type" />
+								</originalText>
+							</code>
+							<text>
+								<reference value="#surg3" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime value="19970605" />
+						</procedure>
+					</entry>
+				</section>
+			</component>
+			<!-- Section Active Problems -->
+			<component>
+				<section classCode="DOCSECT">
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.9" />   <!-- eHDSI Active
+					Problems -->
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.6" />
+					<templateId root="2.16.840.1.113883.10.20.1.11" />
+					<code code="11450-4" displayName="Přehled obtíží (problémů)"
+						codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+					<title>
+						Aktivní problémy
+					</title>
+					<text> Aktivní problémy: <table ID="active">
+							<thead>
+								<tr>
+									<th>MKN-10</th>
+									<th>Popis onemocnění</th>
+									<th>Závažnost onemocnění</th>
+									<th>Datum onemocnění</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="active1">
+									<td ID="active1-kod">J450</td>
+									<td ID="active1-type">Alergické astma</td>
+									<td ID="active1-sev"></td>
+									<td ID="active1-start">03.10.1994</td>
+								</tr>
+								<tr ID="active2">
+									<td ID="active2-kod">E890</td>
+									<td ID="active2-type">Hypotyreóza po operaci karcinomu štítné
+						žlázy</td>
+									<td ID="active2-sev"></td>
+									<td ID="active2-start">06.10.1997</td>
+								</tr>
+								<tr ID="active3">
+									<td ID="active3-kod">I498</td>
+									<td ID="active3-type">Brugada Syndrom</td>
+									<td ID="active3-sev"></td>
+									<td ID="active3-start">09.01.2013</td>
+								</tr>
+								<tr ID="active4">
+									<td ID="active4-kod">E11</td>
+									<td ID="active4-type">Diabetes 2. typu po těhotenství</td>
+									<td ID="active4-sev"></td>
+									<td ID="active4-start">30.04.2012</td>
+								</tr>
+								<tr ID="active5">
+									<td ID="active5-kod"></td>
+									<td ID="active5-type">Těžká preeklamsie</td>
+									<td ID="active5-sev">Závažný/á</td>
+									<td ID="active5-start">06.05.2017</td>
+								</tr>
+								<tr ID="active6">
+									<td ID="active6-kod">N10</td>
+									<td ID="active6-type">Akutní pyelonefritida</td>
+									<td ID="active6-sev">Střední až závažný/á</td>
+									<td ID="active6-start">07.05.2017</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- First active problem -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.15" />  <!-- eHDSI
+							Problem Concern -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" />
+							<id root="2.1.234.333.223" extension="k3542" />
+							<!-- id záznamu v informačním systému -->
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<text>
+								<reference value="#active1" />
+							</text>
+							<statusCode code="active" />
+							<effectiveTime>
+								<low value="19941003" />
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.7" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="64BBF123-31AB-4A86-A996-53C17560E902" />
+									<code code="64572001" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT" displayName="Onemocnění" />
+									<text>
+										<reference value="#active1" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="19941003" />
+									</effectiveTime>
+									<value code="J450" codeSystem="1.2.203.24341.11.2.1"
+										codeSystemName="MKN-10"
+										displayName="Astma převážně alergické" xsi:type="CD">
+										<originalText>
+											<reference value="#active1-type" />
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- Second active problem -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.15" />  <!-- eHDSI
+							Problem Concern -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" />
+							<id root="2.1.234.333.223" extension="k3542" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<text>
+								<reference value="#active2" />
+							</text>
+							<statusCode code="active" />
+							<effectiveTime>
+								<low value="19971006" />
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.7" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="1527F346-40DA-4053-8760-B17C5C9608F5" />
+									<code code="64572001" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT" displayName="Onemocnění" />
+									<text>
+										<reference value="#active2" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="19971006" />
+									</effectiveTime>
+									<value code="E890" codeSystem="1.2.203.24341.11.2.1"
+										codeSystemName="MKN-10"
+										displayName="Hypotyreóza po operačních a jiných výkonech"
+										xsi:type="CD">
+										<originalText>
+											<reference value="#active2-type" />
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- Third active problem -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.15" />  <!-- eHDSI
+							Problem Concern -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" />
+							<id root="2.1.234.333.223" extension="k3542" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<text>
+								<reference value="#active3" />
+							</text>
+							<statusCode code="active" />
+							<effectiveTime>
+								<low value="20130109" />
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.7" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="F18FDF12-AB0E-4794-8D77-0B217F272BC0" />
+									<code code="64572001" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT" displayName="Onemocnění" />
+									<text>
+										<reference value="#active3" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="20130109" />
+									</effectiveTime>
+									<value code="I498" codeSystem="1.2.203.24341.11.2.1"
+										codeSystemName="MKN-10"
+										displayName="Jiné určené srdeční arytmie" xsi:type="CD">
+										<originalText>
+											<reference value="#active3-type" />
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- Fourth active problem -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.15" />  <!-- eHDSI
+							Problem Concern -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" />
+							<id root="2.1.234.333.223" extension="k3542" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<text>
+								<reference value="#active4" />
+							</text>
+							<statusCode code="active" />
+							<effectiveTime>
+								<low value="20120430" />
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.7" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="358AD902-1161-4A20-BBEC-EED46D0CF5AD" />
+									<code code="64572001" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT" displayName="Onemocnění" />
+									<text>
+										<reference value="#active4" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="20120430" />
+									</effectiveTime>
+									<value code="E11" codeSystem="1.2.203.24341.11.2.1"
+										codeSystemName="MKN-10"
+										displayName="Type 2 diabetes mellitus" xsi:type="CD">
+										<originalText>
+											<reference value="#active4-type" />
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- Fifth active problem -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.15" />  <!-- eHDSI
+							Problem Concern -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" />
+							<id root="2.1.234.333.223" extension="k3542" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<text>
+								<reference value="#active5" />
+							</text>
+							<statusCode code="active" />
+							<effectiveTime>
+								<low value="20170506" />
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.7" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="F40D2F9B-5696-4844-8BA1-5328D7248378" />
+									<code code="55607006" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT" displayName="Problem" />
+									<text>
+										<reference value="#active5" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="20170506" />
+									</effectiveTime>
+									<value code="O141" codeSystem="1.2.203.24341.11.2.1"
+										codeSystemName="MKN-10" displayName="Těžká preeklampsie"
+										xsi:type="CD">
+										<originalText>
+											<reference value="#active5-type" />
+										</originalText>
+									</value>
+									<entryRelationship typeCode="SUBJ" inversionInd="true">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.8" />  <!--
+											eHDSI Severity -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1" />
+											<templateId root="2.16.840.1.113883.10.20.1.55" />
+											<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+											<code code="SEV" codeSystem="2.16.840.1.113883.5.4"
+												displayName="Severity" codeSystemName="ActCode" />
+											<text>
+												<reference value="#active5-sev" />
+											</text>
+											<statusCode code="completed" />
+											<value code="24484000"
+												codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT" displayName="Závažný/á"
+												xsi:type="CD">
+												<originalText>
+													<reference value="#active5-sev" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- Sixth active problem -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.15" />  <!-- eHDSI
+							Problem Concern -->
+							<templateId root="2.16.840.1.113883.10.20.1.27" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2" />
+							<id root="2.1.234.333.223" extension="k3542" />
+							<code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+							<text>
+								<reference value="#active6" />
+							</text>
+							<statusCode code="active" />
+							<effectiveTime>
+								<low value="19941003" />
+							</effectiveTime>
+							<entryRelationship typeCode="SUBJ" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.7" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5" />
+									<templateId root="2.16.840.1.113883.10.20.1.28" />
+									<id root="D38D63E0-5A7E-4BEA-AFEA-8F84E8D28842" />
+									<code code="55607006" codeSystem="2.16.840.1.113883.6.96"
+										codeSystemName="SNOMED CT" displayName="Problem" />
+									<text>
+										<reference value="#active6" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime>
+										<low value="19941003" />
+									</effectiveTime>
+									<value code="N10" codeSystem="1.2.203.24341.11.2.1"
+										codeSystemName="MKN-10"
+										displayName="Acute tubulo-interstitial nephritis"
+										xsi:type="CD" />
+									<entryRelationship typeCode="SUBJ" inversionInd="true">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.8" />  <!--
+											eHDSI Severity -->
+											<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1" />
+											<templateId root="2.16.840.1.113883.10.20.1.55" />
+											<id root="AF58C270-6F80-477A-AB05-47BCFFBC62F7" />
+											<code code="SEV" codeSystem="2.16.840.1.113883.5.4"
+												displayName="Severity" codeSystemName="ActCode" />
+											<text>
+												<reference value="#active6-sev" />
+											</text>
+											<statusCode code="completed" />
+											<value code="371924009"
+												codeSystem="2.16.840.1.113883.6.96"
+												codeSystemName="SNOMED CT"
+												displayName="Střední až závažný/á" xsi:type="CD">
+												<originalText>
+													<reference value="#active6-sev" />
+												</originalText>
+											</value>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!-- Medical Devices Coded -->
+			<component>
+				<section classCode="DOCSECT">
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.4" />
+					<templateId root="2.16.840.1.113883.10.20.1.7" />
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.5" />
+					<id nullFlavor="NI" />
+					<code code="46264-8" displayName="Zdravotní přístroje a implantáty"
+						codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+					<title>
+						Pomůcky a implantáty
+					</title>
+					<text>
+						<table ID="devices">
+							<thead>
+								<tr>
+									<th>Popis</th>
+									<th>Datum</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="devices1">
+									<td ID="devices1-desc">Implantabilní defibrilátor</td>
+									<td ID="devices1-date">20.10.2014</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<supply classCode="SPLY" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.5" />
+							<text>
+								<reference value="#devices1" />
+							</text>
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20141020" />
+							</effectiveTime>
+							<participant typeCode="DEV">
+								<participantRole classCode="MANU">
+									<playingDevice classCode="DEV" determinerCode="INSTANCE">
+										<code code="72506001" codeSystem="2.16.840.1.113883.6.96"
+											codeSystemName="SNOMED CT"
+											displayName="Implantable defibrillator">
+											<originalText>
+												<reference value="#devices1-desc" />
+											</originalText>
+										</code>
+									</playingDevice>
+								</participantRole>
+							</participant>
+						</supply>
+					</entry>
+				</section>
+			</component>
+			<!-- Coded Social history -->
+			<component>
+				<section classCode="DOCSECT">
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.13" />
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.16.1" />
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.16" />
+					<templateId root="2.16.840.1.113883.10.20.1.15" />
+					<!-- <id nullFlavor="NI" /> -->
+					<code code="29762-2" displayName="Faktory životního stylu"
+						codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+					<title>
+						Faktory životního stylu
+					</title>
+					<text> Faktory životního stylu: <list>
+							<item ID="social1">
+								Kouření cigaret - půl krabičky denně
+							</item>
+							<item ID="social2">
+								Požívání alkoholu - 4 sklenky denně
+							</item>
+						</list>
+					</text>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.23" />  <!-- eHDSI
+							Social History Observation -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.20" />  <!-- eHDSI
+							Simple Observation -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" />
+							<templateId root="2.16.840.1.113883.10.20.1.33" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.4" />
+							<id root="DD525A55-C7F6-4D26-BB5E-C753E23BBCC5" />
+							<code code="229819007" displayName="Smoking"
+								codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+							<text>
+								<reference value="#social1" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20170415" />
+								<high nullFlavor="UNK" />
+							</effectiveTime>
+							<value xsi:type="PQ" value="0.5" unit="{pack}/d" />
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.23" />  <!-- eHDSI
+							Social History Observation -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.20" />  <!-- eHDSI
+							Simple Observation -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" />
+							<templateId root="2.16.840.1.113883.10.20.1.33" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.4" />
+							<id root="32A15FA9-4793-4A28-B664-A3BE10DFB1F8" />
+							<code code="160573003" displayName="ETOH (Alcohol) Use"
+								codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+							<text>
+								<reference value="#social1" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20160415" />
+								<high nullFlavor="UNK" />
+							</effectiveTime>
+							<value xsi:type="PQ" value="4" unit="{glass}/d" />
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- Pregnancy history -->
+			<component>
+				<section classCode="DOCSECT">
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.7" />
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.4" />
+					<id nullFlavor="NI" />
+					<code code="10162-6" displayName="Těhotenská anamnéza" codeSystemName="LOINC"
+						codeSystem="2.16.840.1.113883.6.1" />
+					<title>
+						Těhotenství
+					</title>
+					<text>
+						<content ID="pregnancy1">
+							Očekávaný termín porodu 1.4.2018
+						</content>
+					</text>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.24" />  <!-- eHDSI
+							Pregnancy Observation -->
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.20" />  <!-- eHDSI
+							Simple Observation -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.5" />
+							<id root="7CE10D98-518E-4022-BB6B-E1AA279E0CEF" />
+							<code code="11778-8" displayName="Předpokládaný termín porodu"
+								codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+							<text>
+								<reference value="#pregnancy1" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime value="20170415" />
+							<value xsi:type="TS" value="20180401" />
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- Coded results -->
+			<component>
+				<section classCode="DOCSECT" moodCode="EVN">
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.5" />
+					<id extension="f32ad52d-983a-4359-a7b0-4eab4e8affb7.CodedResultsSection"
+						root="1.2.203.24341.1.10.60001000.4" />
+					<code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						codeSystemVersion="2.59"
+						displayName="Výsledky diagnostických/laboratorních vyšetření (volným textem)">
+					</code>
+					<title>Výsledky vyšetření/Result section</title>
+					<text>
+						<table>
+							<thead>
+								<tr>
+									<th>Datum testu</th>
+									<th>Název testu</th>
+									<th>Výsledek</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="bloodGroup">
+									<td>10.11.2022 9:20:01</td>
+									<td>Krevní skupina</td>
+									<td>Krevní skupina 0 Rh(D) negativní</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.6" />
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" />
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.25" />
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.20" />
+							<id extension="f32ad52d-983a-4359-a7b0-4eab4e8affb7.CodedResultsEntry.0"
+								root="1.2.203.24341.1.10.60001000.4" />
+							<code code="34530-6" codeSystem="2.16.840.1.113883.6.1"
+								codeSystemName="LOINC"
+								displayName="ABO a Rh faktor - krev" />
+							<text>
+								<reference value="#bloodGroup" />
+							</text>
+							<statusCode code="completed" />
+							<effectiveTime value="20221110" />
+							<value code="278148006" codeSystem="2.16.840.1.113883.6.96"
+								codeSystemName="SNOMED CT"
+								displayName="Krevní skupina 0 Rh(D) negativní"
+								xsi:type="CE">
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- Vital Signs Observations -->
+			<component>
+				<section classCode="DOCSECT">
+					<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.2.6" />  <!-- eHDSI Vital Signs -->
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.5.3.2" />
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.25" />
+					<!-- <id nullFlavor="NI" /> -->
+					<code code="8716-3" displayName="Vitální funkce" codeSystemName="LOINC"
+						codeSystem="2.16.840.1.113883.6.1" />
+					<title>
+						Fyzikální vyšetření
+					</title>
+					<text>
+						<list>
+							<item>
+								<content ID="vitalSigns2">
+									Systolický krevní tlak: 160
+								</content>
+							</item>
+							<item>
+								<content ID="vitalSigns1">
+									Diastolický krevní tlak: 110
+								</content>
+							</item>
+						</list>
+					</text>
+					<entry>
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.21" /> <!-- eHDSI Vital
+							Signs Organizer -->
+							<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.1" />
+							<templateId root="2.16.840.1.113883.10.20.1.32" />
+							<templateId root="2.16.840.1.113883.10.20.1.35" />
+							<id root="B6CE022E-52BE-4357-8F35-259FC0CC648F" />
+							<code code="46680005" displayName="Vital signs"
+								codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+							<statusCode code="completed" />
+							<effectiveTime value="20170506" />
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.22" />  <!--
+									eHDSI Vital Signs Observation -->
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.20" />  <!--
+									eHDSI Simple Observation -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" />
+									<templateId root="2.16.840.1.113883.10.20.1.31" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" />
+									<id root="021412B5-6627-4A69-91C6-8FE081AE4A9C" />
+									<code code="8462-4" displayName="Diastolický krevní tlak"
+										codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+									<text>
+										<reference value="#vitalSigns1" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime value="20170506" />
+									<value xsi:type="PQ" value="110" unit="mm[Hg]" />
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.22" />  <!--
+									eHDSI Vital Signs Observation -->
+									<templateId root="1.3.6.1.4.1.12559.11.10.1.3.1.3.20" />  <!--
+									eHDSI Simple Observation -->
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13" />
+									<templateId root="2.16.840.1.113883.10.20.1.31" />
+									<templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.13.2" />
+									<id root="BAD9A503-1932-4A4C-B059-E27B83C622FB" />
+									<code code="8480-6" displayName="Systolický krevní tlak"
+										codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" />
+									<text>
+										<reference value="#vitalSigns2" />
+									</text>
+									<statusCode code="completed" />
+									<effectiveTime value="20170506" />
+									<value xsi:type="PQ" value="160" unit="mm[Hg]" />
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

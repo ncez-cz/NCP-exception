@@ -1,0 +1,179 @@
+﻿<dasta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.18.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.09.01.xsd" id_soubor="STAPRO__Akord_58bb10b343_20191018162301" verze_ds="04.19.01" verze_nclp="02.01.01" bin_priloha="T" ur="R" typ_odesm="NN" ozn_soub="RNN" potvrzeni="N" dat_vb="2019-10-18T16:23:01" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+      <zdroj_is kod_firmy="STAPRO__" kod_prog="Stapro.T" verze_prog="3.21" />
+      <pm icz="04664272" icp="04664272">
+        <as typ="I" />
+      </pm>
+      <is icz="89903000" icp="89903000">
+        <as typ="I" />
+        <a typ="O">
+          <jmeno>FonsEnterprise - nemocnice</jmeno>
+        </a>
+        <ip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id_pac="511207703" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+          <rodcis>511207703</rodcis>
+          <jmeno>Linh</jmeno>
+          <prijmeni>Šťablý</prijmeni>
+          <dat_dn>1951-12-07T00:00:00</dat_dn>
+          <ipi_o cis_is="80200" />
+          <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+            <jmeno>Šťablý Linh</jmeno>
+            <adr>Na Valech 5</adr>
+            <psc>67154</psc>
+            <mesto>Hostim</mesto>
+            <stat>CZ</stat>
+          </a>
+          <a typ="3" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+            <jmeno>Podlipná Soňa</jmeno>
+            <adr>Slovenská 6</adr>
+            <psc>67154</psc>
+            <mesto>Boskovštejn</mesto>
+            <stat>CZ</stat>
+            <as typ="B">
+              <obsah>604918170(777575388syn Libor)</obsah>
+            </as>
+            <as typ="T">
+              <obsah>604918170(777575388syn Libor)</obsah>
+            </as>
+          </a>
+          <a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+            <jmeno>Úspěšný Bohumil MUDr.</jmeno>
+            <adr>Ulice U stromu 11</adr>
+            <psc>67154</psc>
+            <mesto>Obec</mesto>
+            <stat>CZ</stat>
+            <as typ="B">
+              <obsah>123456789</obsah>
+            </as>
+            <as typ="T">
+              <obsah>123456789</obsah>
+            </as>
+          </a>
+          <a typ="5" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+            <jmeno>Policie ČR</jmeno>
+            <adr>Cínová hora</adr>
+            <psc>67154</psc>
+            <mesto>Boskovštejn</mesto>
+            <stat>CZ</stat>
+          </a>
+          <pv_pac typ_pv="X" dat_ab="2019-10-18T16:23:01" />
+          <ku>
+            <ku_z typku="PATSUM.DAT" fazespec="ZF" idku="STAPRO__556491d661ff4824bdbc39d4956331fb" idsub="STAPRO__AA769EEBCEC028D0201910181600.1">
+              <dat_prov>2016-04-04T15:47:52</dat_prov>
+              <dat_vydani>2019-10-18T16:23:01</dat_vydani>
+              <z_pracoviste icz="04664272" icp="04664272" odb="000">
+                <nazev>Scalesoft</nazev>
+                <a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                  <jmeno>Scalesoft</jmeno>
+                </a>
+              </z_pracoviste>
+              <p_pracoviste odb="000" />
+              <zpo>
+                <prijmeni>Jakub Fildán</prijmeni>
+              </zpo>
+              <text>
+                <ptext xml:space="preserve">Pacientský souhrn Linh Šťablý 2016-04-04</ptext>
+              </text>
+              <ku_pac id_pac="511207703 ">
+                <jmeno>Linh</jmeno>
+                <prijmeni>Šťablý</prijmeni>
+                <dat_dn>1951-12-07T00:00:00</dat_dn>
+                <sex>M</sex>
+                <a typ="1" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                  <jmeno>Šťablý Linh</jmeno>
+                  <adr>Na Valech 5</adr>
+                  <psc>67154</psc>
+                  <mesto>Hostim</mesto>
+                  <stat>CZ</stat>
+                </a>
+                <a typ="3" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                  <jmeno>Podlipná Soňa</jmeno>
+                  <adr>Slovenská 6</adr>
+                  <psc>67154</psc>
+                  <mesto>Boskovštejn</mesto>
+                  <stat>CZ</stat>
+                  <as typ="B">
+                    <obsah>604918170(777575388syn Libor)</obsah>
+                  </as>
+                  <as typ="T">
+                    <obsah>604918170(777575388syn Libor)</obsah>
+                  </as>
+                </a>
+                <a typ="4" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                  <jmeno>Úspěšný Bohumil MUDr.</jmeno>
+                  <adr>Ulice U stromu 11</adr>
+                  <psc>67154</psc>
+                  <mesto>Obec</mesto>
+                  <stat>CZ</stat>
+                  <as typ="B">
+                    <obsah>123456789</obsah>
+                  </as>
+                  <as typ="T">
+                    <obsah>123456789</obsah>
+                  </as>
+                </a>
+                <a typ="5" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+                  <jmeno>Policie ČR</jmeno>
+                  <adr>Cínová hora</adr>
+                  <psc>67154</psc>
+                  <mesto>Boskovštejn</mesto>
+                  <stat>CZ</stat>
+                </a>
+              </ku_pac>
+              <ku_z_patsumdat>
+                <jazyk jazyk_klic="cs-CZ" pref="P" ind_oprav_sd="N" />
+                <povolani>
+                  <povolani_text>instalatér</povolani_text>
+                </povolani>
+                <h vyska="184" hmotnost="84" dat_ab="2006-10-30T00:10:59" />
+                <u>
+                  <ua typ="AN" dat_ab="2015-01-30T13:45:04" ind_oprav_sd="N">
+                    <u_al>penicilin</u_al>
+                    <autor>Karel Sova</autor>
+                    <dat_du format="D" typ="L">2000-01-30</dat_du>
+                  </ua>
+                  <ua typ="AN" dat_ab="2015-01-30T13:44:53" ind_oprav_sd="N">
+                    <u_al>pyl</u_al>
+                    <autor>Karel Sova</autor>
+                    <dat_du format="D" typ="L">2012-01-30</dat_du>
+                  </ua>
+                  <ua typ="AN" dat_ab="2015-01-30T13:44:53" ind_oprav_sd="N">
+                    <u_al>pyl</u_al>
+                    <autor>Karel Sova</autor>
+                    <dat_du format="D" typ="L">2012-01-30</dat_du>
+                  </ua>
+                  <ua typ="AN" dat_ab="2015-01-30T13:45:04" ind_oprav_sd="N">
+                    <u_al>penicilin</u_al>
+                    <autor>Karel Sova</autor>
+                    <dat_du format="D" typ="L">2000-01-30</dat_du>
+                  </ua>
+                  <uks dat_ab="2016-04-04T15:47:52" ind_oprav_sd="N">
+                    <krevskup>0</krevskup>
+                    <rh>+</rh>
+                    <autor>Jakub Fildán</autor>
+                  </uks>
+                </u>
+                <dg dat_ab="2015-01-30T13:44:15">
+                  <dgz typ_dg="T">
+                    <diag mkn_verze="2014" poradi="1" nazev="Středoevropská encefalitida přenášená klíšťaty">A841 </diag>
+                    <autor>Karel Sova</autor>
+                  </dgz>
+                  <dgz typ_dg="T">
+                    <diag mkn_verze="2014" poradi="2" nazev="Zbytnění prostaty - hyperplasia prostatae">N40  </diag>
+                    <autor>Karel Sova</autor>
+                  </dgz>
+                  <dgz typ_dg="T">
+                    <diag mkn_verze="2014" poradi="3" nazev="Bronchopneumonie, NS">J180 </diag>
+                    <autor>Karel Sova</autor>
+                  </dgz>
+                  <dgz typ_dg="T">
+                    <diag mkn_verze="2014" poradi="4" nazev="Tracheostomie 9.11.06">Z930 </diag>
+                    <autor>Karel Sova</autor>
+                  </dgz>
+                </dg>
+                <le typ="A" />
+                <zdroj_sw kod_firmy="STAPRO__" kod_prog="Stapro.T" verze_prog="3.21" />
+              </ku_z_patsumdat>
+            </ku_z>
+          </ku>
+        </ip>
+      </is>
+    </dasta>

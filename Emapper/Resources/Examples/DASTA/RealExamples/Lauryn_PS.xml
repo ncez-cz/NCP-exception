@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dasta id_soubor="LAURYN__CZBRANRU_R3Ss3pEV_20190528151724" verze_ds="04.18.02" verze_nclp="02.64.01" bin_priloha="T" ur="R" typ_odesm="NN" ozn_soub="RNN" potvrzeni="N" dat_vb="2019-05-28T15:17:24" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.10.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.05.02.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+	<zdroj_is kod_firmy="LAURYN__" kod_prog="LaConnector" verze_prog="19.2.1.1" liccis_prog="CZBRANRU"  />
+	<pm icz="99999999" >
+		<as typ="I" />
+	</pm>
+	<is icz="70012000" icp="70012000" oddel="RUBNO" >
+		<as typ="I" />
+		<ip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id_pac="9660060696" typ_id_pac="0" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_ip">
+			<rodcis >9660060696</rodcis>
+			<jmeno >Transmise</jmeno>
+			<prijmeni >Testovací</prijmeni>
+			<typ_sdel >PS</typ_sdel>
+			<pv_pac typ_pv="X"  />
+			<ku >
+				<ku_z typku="PATSUM.DAT" fazespec="ZF" idsub="STAPRO__01901020.999" idku="LAURYN__CZBRANRU_04_0000028777_3s0dVpP.1">
+					<dat_prov>2019-05-28T15:17:24</dat_prov>
+					<dat_vydani>2019-05-28T15:17:24</dat_vydani>
+					<p_pracoviste icz="70012000" icp="70012000" odb="2U1">
+						<nazev>Odborný léčebný ústav - 2U1</nazev>
+						<a typ="P" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+							<jmeno >Rehabilitační ústav Brandýs nad Orlicí, Jindřišská 16, 53002 Pardubice</jmeno>
+						</a>
+					</p_pracoviste>
+					<zpo icz="70012000">
+						<nazev>Odborný léčebný ústav - 2U1</nazev>
+						<a_p typ="A">
+							<jmeno>Rehabilitační ústav Brandýs nad Orlicí, Jindřišská 16, 53002 Pardubice</jmeno>
+							<adr>Jindřišská 16</adr>
+							<psc>53002</psc>
+							<mesto>Pardubice</mesto>
+							<stat>203</stat>
+							<as typ="E">
+								<obsah>praktik@staproemail.cz</obsah>
+							</as>
+						</a_p>
+						<prijmeni>MUDr. Nejzkušenější</prijmeni>
+						<jmeno>Praktik</jmeno>
+					</zpo>
+					<text><ptext xml:space="preserve">Pacientský souhrn - Transmise Testovací - 28.05.2019</ptext>
+					</text>
+					<ku_pac id_pac="9660060696">
+						<jmeno>Transmise</jmeno>
+						<prijmeni>Testovací</prijmeni>
+						<dat_dn format="D">1996-10-06</dat_dn>
+						<sex>F</sex>
+						<a typ="1">
+							<jmeno>Testovací Transmise</jmeno>
+							<adr>Pernštýnské náměstí 51</adr>
+							<psc>53002</psc>
+							<mesto>Pardubice</mesto>
+							<stat>203</stat>
+						</a>
+					</ku_pac>
+					<ku_z_patsumdat>
+						<jazyk jazyk_klic="cs-CZ" pref="P" ind_oprav_sd="N" />
+						<u>
+							<ua typ="AN" ind_oprav_sd="N">
+								<u_al>TTC, Senná rýma</u_al>
+								<uaAny>
+									<kis_id>28777_01</kis_id>
+								</uaAny>
+							</ua>
+							<urf typ="U" ind_oprav_sd="N">
+								<urfAny>
+									<kis_id>28777_02</kis_id>
+								</urfAny>
+							</urf>
+							<uniz typ="SN" ind_oprav_sd="N">
+								<u_niz>STENT, Kovy v těle</u_niz>
+								<unizAny>
+									<kis_id>28777_03</kis_id>
+								</unizAny>
+							</uniz>
+						</u>
+						<an dat_ab="2019-05-28T15:17:24">
+							<text><ptext xml:space="preserve">OA:bez sledovaných onemocnění, senná rýma; nekouří, alkohol příležitostně, drogy 0
+RA:negat.
+FA:Zyrtec 50mg. tbl dle potřeby, IBUPROFEN ZENTIVA 400 mg. por 1-0-0
+AA:TTC, Senná rýma
+PA:strojvůdce
+NO:pacientka přichází k opak. hospitalizaci, byla zde před 7 lety.Obtíže podobné, má téměř trvalé bolesti v bedrech s trvalým brněním přední plochy stehna, někdy brnění i doprava, pocity nestability nemá, nebrká.Vadí chůze , stánáí, práce v předklonu. Více vadí záda. Břišní lis bývá lehce +, v noci se budí, vadí přetáčení na lůžku.Částečnou úlečvu cítí vleže na boku zkroucená do klubíčka s polštářem mezi koleny</ptext>
+							</text>
+							<anAny>
+								<kis_id>28777_04</kis_id>
+							</anAny>
+						</an>
+						<dg>
+							<dgz>
+								<diag poradi="1" mkn_verze="2014">J450</diag>
+								<spec_dg>Astma převážně alergické</spec_dg>
+								<dgzAny>
+									<kis_id>28777_05</kis_id>
+								</dgzAny>
+							</dgz>
+							<dgz>
+								<diag poradi="2" mkn_verze="2014">M255</diag>
+								<spec_dg>Bolest v kloubu</spec_dg>
+								<dgzAny>
+									<kis_id>28777_05</kis_id>
+								</dgzAny>
+							</dgz>
+							<dgz>
+								<diag poradi="3" mkn_verze="2014">Z966</diag>
+								<spec_dg>Přítomnost ortopedických kloubních implantátů</spec_dg>
+								<dgzAny>
+									<kis_id>28777_05</kis_id>
+								</dgzAny>
+							</dgz>
+						</dg>
+						<le typ="U" />
+						<ld ind_oprav_sd="N" typ="A">
+							<text><ptext xml:space="preserve">chron. medikace, kontrola u PL MUDr. Jaroše do tří dnů, u odborného lékaře dle stavu, resp. objednání, pokračovat v navozeném RHB režimu. Dieta 3, racionální bez ryby a vnitřností. Je vhodné zopakovat řízenou rehabilitaci za hospitalizace dle aktuálního zdravotního stavu.</ptext>
+							</text>
+							<autor>MUDr. Praktik Zkušený</autor>
+							<ldAny>
+								<kis_id>28777_07</kis_id>
+							</ldAny>
+						</ld>
+						<zdroj_sw kod_firmy="LAURYN__" kod_prog="LaConnector" verze_prog="19.2.1.1" liccis_prog="CZBRANRU" />
+					</ku_z_patsumdat>
+				</ku_z>
+			</ku>
+		</ip>
+	</is>
+	<pd id_soubor="STAPRO__TMise.2.5.2.0.001" stav="A" >
+		<as typ="I" />
+		<dat_ps format="DTS">2019-05-28T15:17:24</dat_ps>
+	</pd>
+</dasta>

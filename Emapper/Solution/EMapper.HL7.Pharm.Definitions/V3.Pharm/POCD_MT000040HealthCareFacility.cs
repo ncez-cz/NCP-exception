@@ -1,0 +1,129 @@
+namespace EMapper.HL7.Pharm.Definitions.V3.Pharm
+{
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="POCD_MT000040.HealthCareFacility", Namespace="urn:hl7-org:v3")]
+    public partial class POCD_MT000040HealthCareFacility {
+    
+        private CS[] realmCodeField;
+    
+        private POCD_MT000040InfrastructureRoottypeId typeIdField;
+    
+        private II[] templateIdField;
+    
+        private II[] idField;
+    
+        private CE codeField;
+    
+        private POCD_MT000040Place locationField;
+    
+        private POCD_MT000040Organization serviceProviderOrganizationField;
+    
+        private string nullFlavorField;
+    
+        private RoleClassServiceDeliveryLocation classCodeField;
+    
+        public POCD_MT000040HealthCareFacility() {
+            this.classCodeField = RoleClassServiceDeliveryLocation.SDLOC;
+        }
+    
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("realmCode")]
+        public CS[] realmCode {
+            get {
+                return this.realmCodeField;
+            }
+            set {
+                this.realmCodeField = value;
+            }
+        }
+    
+        /// <remarks/>
+        public POCD_MT000040InfrastructureRoottypeId typeId {
+            get {
+                return this.typeIdField;
+            }
+            set {
+                this.typeIdField = value;
+            }
+        }
+    
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("templateId")]
+        public II[] templateId {
+            get {
+                return this.templateIdField;
+            }
+            set {
+                this.templateIdField = value;
+            }
+        }
+    
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("id")]
+        public II[] id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+    
+        /// <remarks/>
+        public CE code {
+            get {
+                return this.codeField;
+            }
+            set {
+                this.codeField = value;
+            }
+        }
+    
+        /// <remarks/>
+        public POCD_MT000040Place location {
+            get {
+                return this.locationField;
+            }
+            set {
+                this.locationField = value;
+            }
+        }
+    
+        /// <remarks/>
+        public POCD_MT000040Organization serviceProviderOrganization {
+            get {
+                return this.serviceProviderOrganizationField;
+            }
+            set {
+                this.serviceProviderOrganizationField = value;
+            }
+        }
+    
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string nullFlavor {
+            get {
+                return this.nullFlavorField;
+            }
+            set {
+                this.nullFlavorField = value;
+            }
+        }
+    
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [System.ComponentModel.DefaultValueAttribute(RoleClassServiceDeliveryLocation.SDLOC)]
+        public RoleClassServiceDeliveryLocation classCode {
+            get {
+                return this.classCodeField;
+            }
+            set {
+                this.classCodeField = value;
+            }
+        }
+    }
+}

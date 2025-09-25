@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMapper.Convertor.Service</name>
+    </assembly>
+    <members>
+        <member name="M:EMapper.Convertor.Service.Controllers.API.V1.ConversionController.ConvertTo(EMapper.Convertor.Service.Core.Services.DocumentFormat,EMapper.Convertor.Service.Core.Services.DocumentFormat,System.String,System.String,System.String)">
+            <summary>
+            This method will convert dastaDocument to the Wave 4 EHDSI L3 Document
+            </summary>
+            <param name="sourceFormat">not used</param>
+            <param name="targetFormat">not used</param>
+            <param name="dastaDocument">input dasta document</param>
+            <param name="documentRootId">Document root id</param>
+            <param name="documentExtensionId">Document extension id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMapper.Convertor.Service.Controllers.API.V1.ConversionController.ConvertToFromFile(EMapper.Convertor.Service.Core.Services.DocumentFormat,EMapper.Convertor.Service.Core.Services.DocumentFormat,Microsoft.AspNetCore.Http.IFormFile,System.String,System.String)">
+            <summary>
+            This method will convert dastaDocument to the Wave 4 EHDSI L3 Document
+            </summary>
+            <param name="sourceFormat">not used</param>
+            <param name="targetFormat">not used</param>
+            <param name="dastaDocument">input dasta document</param>
+            <param name="documentRootId">Document root id</param>
+            <param name="documentExtensionId">Document extension id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMapper.Convertor.Service.Controllers.API.V1.ConversionController.SayHello(System.String)">
+            <summary>
+            Method for testing connection to this service
+            </summary>
+            <param name="name">name</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMapper.Convertor.Service.Controllers.API.V2.ConversionController.ConvertToHL7(EMapper.Convertor.DastaHL7.HL7FormatVersion,EMapper.Convertor.DastaHL7.HL7Level,System.String,System.String,System.String)">
+            <summary>
+            Converts input DASTA document to the target document format based on different eHDSI Waves
+            </summary>
+            <param name="targetFormat">Target Format version (eHDSI Wave and Specification)</param>
+            <param name="targetLevel">Target document level</param>
+            <param name="dastaDocument">Input DASTA Document</param>
+            <param name="documentRootId">Optional Root ID that will be used in converted document</param>
+            <param name="documentExtensionId">Optional Extension ID that will be used in converted document</param>
+            <returns>Converted document in HL7 CDA format</returns>
+        </member>
+        <member name="M:EMapper.Convertor.Service.Controllers.API.V2.ConversionController.ConvertToHL7FromFile(EMapper.Convertor.DastaHL7.HL7FormatVersion,EMapper.Convertor.DastaHL7.HL7Level,Microsoft.AspNetCore.Http.IFormFile,System.String,System.String)">
+            <summary>
+            Converts input DASTA document to the target document format based on different eHDSI Waves from HTML Form
+            </summary>
+            <param name="targetFormat">Target Format version (eHDSI Wave and Specification)</param>
+            <param name="targetLevel">Target document level</param>
+            <param name="dastaDocument">Input DASTA Document</param>
+            <param name="documentRootId">Optional Root ID that will be used in converted document</param>
+            <param name="documentExtensionId">Optional Extension ID that will be used in converted document</param>
+            <returns>Converted document in HL7 CDA format</returns>
+        </member>
+        <member name="M:EMapper.Convertor.Service.Controllers.API.V2.ConversionController.SayHello(System.String)">
+            <summary>
+            Method for testing connection to this service
+            </summary>
+            <param name="name">name</param>
+            <returns></returns>
+        </member>
+        <member name="M:EMapper.Convertor.Service.Controllers.API.V2.ConversionController.TestConversion">
+            <summary>
+            Method for conversion testing
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

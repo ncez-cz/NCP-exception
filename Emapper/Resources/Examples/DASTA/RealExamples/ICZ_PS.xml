@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<dasta
+xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" 
+xmlns:ns2="urn:cz-mzcr:ns:dasta:ds4:ds_ip" 
+xmlns:ns3="urn:cz-mzcr:ns:dasta:ds4:ds_ido" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="
+	urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.18.xsd 
+	urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.09.01.xsd 
+	urn:cz-mzcr:ns:dasta:ds4:ds_ido http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ido-4.02.15.xsd" 
+id_soubor="ICZ_____.AmisH.2019-07-02T10:17:12.485" 
+verze_ds="04.19.01" 
+verze_nclp="02.66.01" 
+bin_priloha="T" 
+ur="R" 
+typ_odesm="NN" 
+potvrzeni="N" 
+dat_vb="2019-07-02T10:17:12.485+02:00" 
+> 
+  <zdroj_is kod_firmy="ICZ_____" kod_prog="AmisH" verze_prog="AMIS*H" liccis_prog="2.10.48" />
+  <pm icz="99999999">
+    <as typ="I" />
+  </pm>
+  <is icz="68002000">
+    <as typ="I" />
+    <a typ="O">
+      <jmeno>NPK - Litomyšlská nemocnice</jmeno>
+    </a>
+    <ns2:ip id_pac="9660060696">
+      <ns2:rodcis>9660060696</ns2:rodcis>
+      <ns2:jmeno>TRANSMISE</ns2:jmeno>
+      <ns2:prijmeni>TESTOVACÍ</ns2:prijmeni>
+      <ns2:dat_dn>1996-10-06</ns2:dat_dn>
+      <ns2:typ_sdel>PS</ns2:typ_sdel>
+      <a typ="1">
+        <jmeno>TESTOVACÍ TRANSMISE</jmeno>
+        <adr>Pernštýnské náměstí 51</adr>
+        <psc>53002</psc>
+        <mesto>Pardubice</mesto>
+      </a>
+      <ns2:pv_pac typ_pv="X" dat_ab="2019-07-02T10:17:12.545+02:00" />
+      <ns2:ku>
+        <ns2:ku_z typku="PATSUM.DAT" fazespec="ZK" idsub="SCSOFT__KzIZHpuK0UaYcDpAsdo99A__.1">
+          <ns2:dat_prov format="DTS">2019-07-02T10:17:12.545</ns2:dat_prov>
+          <ns2:dat_vydani format="DTS">2019-07-02T10:17:12.545</ns2:dat_vydani>
+          <ns2:p_pracoviste icz="68002000" icp="68002000" odb="000">
+            <ns2:nazev>NPK</ns2:nazev>
+            <a typ="P">
+              <jmeno>NPK</jmeno>
+            </a>
+          </ns2:p_pracoviste>
+          <ns2:zpo icz="68002000">
+            <ns2:nazev>NPK</ns2:nazev>
+            <ns2:a_p typ="7">
+              <jmeno>NPK</jmeno>
+              <adr>Kyjevská 44</adr>
+              <psc>53002</psc>
+              <mesto>Pardubice</mesto>
+            </ns2:a_p>
+            <ns2:prijmeni>Pracovník</ns2:prijmeni>
+          </ns2:zpo>
+          <ns2:text>
+            <ns2:ptext xml:space="preserve">Pacientský souhrn - TRANSMISE TESTOVACÍ - 1996-10-06</ns2:ptext>
+          </ns2:text>
+          <ns2:ku_pac id_pac="9660060696">
+            <ns2:jmeno>TRANSMISE</ns2:jmeno>
+            <ns2:prijmeni>TESTOVACÍ</ns2:prijmeni>
+            <ns2:dat_dn>1996-10-06</ns2:dat_dn>
+            <ns2:sex>F</ns2:sex>
+            <a typ="1">
+              <jmeno>TRANSMISE TESTOVACÍ</jmeno>
+              <adr>Pernštýnské náměstí 51</adr>
+              <psc>53002</psc>
+              <mesto>Pardubice</mesto>
+            </a>
+          </ns2:ku_pac>
+          <ns2:ku_z_patsumdat>
+            <ns2:u>
+              <ns2:ua typ="AS" dat_ab="2019-07-02T10:17:12.617+02:00" ind_oprav_sd="N">
+                <ns2:u_al>TTC, Senná rýma</ns2:u_al>
+                <ns2:autor>Ing. Ota Bydžovský</ns2:autor>
+                <ns2:dat_du format="D" typ="L">2019-06-19</ns2:dat_du>
+                <ns2:iid root="4.428914" />
+              </ns2:ua>
+              <ns2:urf typ="RN" ind_oprav_sd="N">
+                <ns2:u_rf>Diabetes II. stupně.</ns2:u_rf>
+                <ns2:autor>Ing. Ota Bydžovský</ns2:autor>
+                <ns2:dat_du format="D" typ="L">2019-06-19</ns2:dat_du>
+                <ns2:iid root="5.428914" />
+              </ns2:urf>
+            </ns2:u>
+            <ns2:an dat_ab="2019-06-19T11:44:00.000+02:00">
+              <ns2:text>
+                <ns2:ptext xml:space="preserve">OA: bez sledovaných onemocnění, senná rýma
+SA: s rodinou, v domě, zvířata ne
+PA: strojvůdce
+TA: nekouří, alkohol příležitostně, drogy 0</ns2:ptext>
+              </ns2:text>
+              <ns2:autor>amis</ns2:autor>
+              <ns2:iid root="3.428914" />
+            </ns2:an>
+            <ns2:dg>
+              <ns2:dgz typ_dg="P">
+                <ns2:diag mkn_verze="2014" poradi="1" nazev="Astma převážně alergické">J450</ns2:diag>
+                <ns2:dat_du format="D" typ="L">2019-05-20</ns2:dat_du>
+                <ns2:spec_dg>Astma převážně alergické</ns2:spec_dg>
+                <ns2:dat_vb format="DTS">2019-07-02T10:17:12.758</ns2:dat_vb>
+                <ns2:iid root="6.2845324" />
+              </ns2:dgz>
+              <ns2:dgz typ_dg="P">
+                <ns2:diag mkn_verze="2014" poradi="2" nazev="Astma převážně alergické">J450</ns2:diag>
+                <ns2:dat_du format="D" typ="L">2019-05-20</ns2:dat_du>
+                <ns2:spec_dg>Astma převážně alergické</ns2:spec_dg>
+                <ns2:dat_vb format="DTS">2019-07-02T10:17:12.784</ns2:dat_vb>
+                <ns2:iid root="7.275470" />
+              </ns2:dgz>
+            </ns2:dg>
+            <ns2:le typ="A">
+              <ns2:lez typ_med="T" ind_oprav_sd="N" nazev_lek="ACYLPYRIN" cis_kod_lek="LEKY">
+                <ns2:rozpis_v>1-1-1 PO</ns2:rozpis_v>
+                <ns2:iid root="8.1" />
+              </ns2:lez>
+              <ns2:lez typ_med="T" ind_oprav_sd="N" nazev_lek="WARFARIN ORION" cis_kod_lek="LEKY">
+                <ns2:rozpis_v>1-0-0 PO</ns2:rozpis_v>
+                <ns2:iid root="8.2" />
+              </ns2:lez>
+              <ns2:lez typ_med="T" ind_oprav_sd="N" nazev_lek="DIGOXIN LÉČIVA" cis_kod_lek="LEKY">
+                <ns2:rozpis_v>1-0-0 PO</ns2:rozpis_v>
+                <ns2:iid root="8.3" />
+              </ns2:lez>
+            </ns2:le>
+            <ns2:zdroj_sw kod_firmy="ICZ_____" kod_prog="AmisH" verze_prog="AMIS*H" liccis_prog="2.10.48" />
+          </ns2:ku_z_patsumdat>
+        </ns2:ku_z>
+      </ns2:ku>
+    </ns2:ip>
+  </is>
+</dasta>
