@@ -32,6 +32,9 @@ namespace EMapper.Testing.HL7.Console
                         System.Console.WriteLine();
                      */
                         //var dasta = (dasta) xmlSerializer.Deserialize(inStream);
+                        System.Console.InputEncoding = Encoding.UTF8;
+                        System.Console.OutputEncoding = Encoding.UTF8;
+
                         var dasta = (dasta)xmlSerializer.Deserialize(System.Console.In);
 
                         var mapper = new W6DastaMapper();
@@ -67,11 +70,11 @@ namespace EMapper.Testing.HL7.Console
                                 var dastaSerializer = new XmlSerializer(typeof(dasta));
                                 dastaSerializer.Serialize(stream, dasta);
 
-                                var dastaText = Encoding.Default.GetString(stream.ToArray());
+                                var dastaText = Encoding.UTF8.GetString(stream.ToArray());
 
-                              //  WriteToFile($"testCda{DateTime.Now.ToString("yy-MM-dd-hh-mm-ss")}.xml", dastaText);
+                                //  WriteToFile($"testCda{DateTime.Now.ToString("yy-MM-dd-hh-mm-ss")}.xml", dastaText);
 
-
+                                
                                 System.Console.WriteLine(dastaText);
                             }
                             
