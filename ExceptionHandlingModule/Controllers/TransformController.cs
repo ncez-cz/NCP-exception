@@ -95,6 +95,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         /// <tr><td>dasta2fhir_laboratoryOrder_EU</td><td>Pøevod laboratorních žádanek z formátu DASTA 4.27.04 (s doplnìnými guids s ošetøenými datetime) do HL7 FHIR 4.0.1, Czech Laboratory Order(0.0.1 - ci-build Czechia)</td></tr>
         /// <tr><td>dasta2fhir_patsum_EU</td><td>Pøevod pacientského souhrnu z formátu DASTA 4.27.04 (s dopnìnými guids s ošetøenými datetime) do HL7 FHIR 4.0.1, EU Patient Summary(0.0.1-ci - ci-build 150)</td></tr>
         /// <tr><td>cda_epsos_ps7_replace_unknown_codes_EU</td><td>Ošetøení neznámých kódù v EU èíselnících pro CDA HL7 eHDSI(epsos-) Patient Summary 7.2.0</td></tr>
+        /// <tr><td>dasta2cdaIPS</td><td>Pøevod pacientského souhrnu z formátu DASTA 4.27.04 (s dopnìnými guids s ošetøenými datetime) do CDA HL7 eHDSI(epsos-) Patient Summary 7.2.0</td></tr>
         /// </table>
         /// </remarks>
         /// <response code="200">Transformované data</response>
@@ -153,13 +154,19 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
                         {
                             //add guids for fhir resources
                             process.StartInfo.FileName = command.Split(' ')[0];
-
-                            process.StartInfo.Arguments = string.Format("{0}", command.Substring(command.IndexOf(' ')));
+                            if (command.Contains(' '))
+                            {
+                                process.StartInfo.Arguments = string.Format("{0}", command.Substring(command.IndexOf(' ')+1));
+                            }
+                            
                             process.StartInfo.UseShellExecute = false;
                             process.StartInfo.RedirectStandardInput = true;
                             process.StartInfo.RedirectStandardOutput = true;
+                            //process.StartInfo.StandardInputEncoding = Encoding.UTF8;
+                            process.StartInfo.StandardOutputEncoding = Encoding.UTF8;
                             process.Start();
 
+                            
                             StreamWriter processInput = process.StandardInput;
                             stream.CopyTo(processInput.BaseStream);
                             Console.WriteLine("process \"" + command + "\" is running ... !"); // with input stream size: " + stream.Position);

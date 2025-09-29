@@ -20,8 +20,8 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Modul na ošetøení výjimek",
-        Description = "Internetová služba formou RESTApi, která slouží na validaci, na mapování èíselníkových hodnot a na úpravu finálních dat tak, aby odpovídaly specifikaci CDA HL7 eHDSI (epsos-) Patient Summary 7.2.0. Služba také loguje v anonymní podobì problematické pøípady za úèelem upozornìní na problémy a chyby na terminologickém serveru nebo ve vstupních datech.\r\n.Služba neukládá ani neposkytuje jiná zdravotní data pacientù než ty, které dostává na vstupu pøi konkrétním dotazu.\r\n",
+        Title = "Pøevodník, Validátor a Modul na ošetøení výjimek",
+        Description = "Internetová služba formou RESTApi, která slouží na pøevod, validaci a fixaci standardù DASTA 4, HL7 FHIR EU IG a HL7 CDA IPS 7.\r\n",
         //TermsOfService = new Uri(""),
         Contact = new OpenApiContact
         {
