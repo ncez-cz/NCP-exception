@@ -415,7 +415,7 @@ group defaultmap(source ds: dasta, target bundle: Bundle){
 
 group addObservationReferenceToSection(source observationGuid, target section){
 	observationGuid -> section.entry as entry then {
-		observationGuid -> entry.reference = append('Observation/',observationGuid) "referenceString";
+		observationGuid -> entry.reference = append('urn:uuid:',observationGuid) "referenceString";
 	} "section.entry";
 }
 
@@ -473,7 +473,7 @@ group vrf(source effectiveDateTime: Observation, source patientReference: Refere
 
 
 	// c3716 0-> entry.fullUrl
-		vrfType.guid as x1 -> entry.fullUrl = append('Observation/',x1) then addObservationReferenceToSection(x1, compositionObservationSection) "rule1";
+		vrfType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) then addObservationReferenceToSection(x1, compositionObservationSection) "rule1";
 	// 'final' 0-> entry.resource.Observation.status
 
 		effectiveDateTime -> entry.resource=create('Observation') as t1 then {
@@ -539,7 +539,7 @@ group vrf(source effectiveDateTime: Observation, source patientReference: Refere
 
 	// c3694 0-> entry.resource.Observation.specimen.reference
 						ku_z_labType.guid as x1 -> t3 then {
-							ku_z_labType.vguid as x2 -> t3.reference = append('Specimen/',x1,'/_history/',x2) "rule17";
+							ku_z_labType.vguid as x2 -> t3.reference = append('urn:uuid:',x1) "x2 rule17";
 						} "kokoti";
 					} "rule18";
 				} "rule19";
@@ -556,7 +556,7 @@ group vrs(source patientReference: Reference, source effectiveDateTime: Observat
 
 
 	// c3706 0-> entry.fullUrl
-		vrsType.guid as x1 -> entry.fullUrl = append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+		vrsType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
 
 	// 'final' 0-> entry.resource.Observation.status
 
@@ -592,7 +592,7 @@ group vrs(source patientReference: Reference, source effectiveDateTime: Observat
 
 	// c3698 0-> entry.resource.Observation.specimen.reference
 				ku_z_labType.guid as x1 -> t2 then {
-					 ku_z_labType.vguid as x2 -> t2.reference = append('Specimen/',x1,'/_history/',x2) "rule7";
+					 ku_z_labType.vguid as x2 -> t2.reference = append('urn:uuid:',x1) "x2 rule7";
 				} "ochliveno";
 			} "rule8";
 		
@@ -655,8 +655,8 @@ group vrn(source effectiveDateTime: Observation, source patientReference: Refere
 		
 
 	// c3714 0-> entry.fullUrl
-		//vrnType.guid as x1 -> entry.fullUrl = append('Observation/',x1) as x then addEntryToSection(x, compositionObservationSection) "rule1";
-		vrnType.guid as x1 -> entry.fullUrl = append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+		//vrnType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) as x then addEntryToSection(x, compositionObservationSection) "rule1";
+		vrnType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
 
 	// 'final' 0-> entry.resource.Observation.status
 
@@ -801,7 +801,7 @@ group vrn(source effectiveDateTime: Observation, source patientReference: Refere
 
 	// c3690 0-> entry.resource.Observation.specimen.reference
 						ku_z_labType.guid as x1 -> t3 then {
-							ku_z_labType.vguid as x2 -> t3.reference=append('Specimen/',x1,'/_history/',x2) "rule42";
+							ku_z_labType.vguid as x2 -> t3.reference=append('urn:uuid:',x1) "x2 rule42";
 						} "ochliveno"; 
 					} "rule43";
 				} "rule44";
@@ -1700,7 +1700,7 @@ group vrx(source effectiveDateTime: Observation, source patientReference: Refere
 
 
 	// c3704 0-> entry.fullUrl
-		vrxType.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+		vrxType.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
 
 	// 'final' 0-> entry.resource.Observation.status
 
@@ -1749,7 +1749,7 @@ group vrx(source effectiveDateTime: Observation, source patientReference: Refere
 
 	// c3699 0-> entry.resource.Observation.specimen.reference
 						ku_z_labType.guid as x1 -> t3 then {
-							ku_z_labType.vguid as x2 -> t3.reference =append('Specimen/',x1,'/_history/',x2) "rule10";
+							ku_z_labType.vguid as x2 -> t3.reference =append('urn:uuid:',x1) "x2 rule10";
 						} "ochliveno";
 					} "rule11";
 				} "rule12";
@@ -1766,7 +1766,7 @@ group vrb(source effectiveDateTime: Observation, source patientReference: Refere
 
 
 	// c3722 0-> entry.fullUrl
-		vrbType.guid as x1 -> entry.fullUrl=append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+		vrbType.guid as x1 -> entry.fullUrl=append('urn:uuid:',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
 
 	// 'final' 0-> entry.resource.Observation.status
 
@@ -1833,7 +1833,7 @@ group vrb(source effectiveDateTime: Observation, source patientReference: Refere
 
 	// c3691 0-> entry.resource.Observation.specimen.reference
 							ku_z_labType.guid as x1 -> t3 then {
-								ku_z_labType.vguid as x2 -> t3.reference=append('Specimen/',x1,'/_history/',x2) "rule15";
+								ku_z_labType.vguid as x2 -> t3.reference=append('urn:uuid:',x1) "x2 rule15";
 							} "ochliveno";
 						} "rule16";
 					} "rule17";
@@ -1851,7 +1851,7 @@ group vrr(source effectiveDateTime: Observation, source patientReference: Refere
 
 
 	// c3708 0-> entry.fullUrl
-		vrrType.guid as x1 -> entry.fullUrl =append('DiagnosticReport/',x1)  "rule1";
+		vrrType.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1)  "rule1";
 
 	// 'Generated' 0-> entry.resource.DiagnosticReport.text.status
 
@@ -1934,7 +1934,7 @@ group vrr(source effectiveDateTime: Observation, source patientReference: Refere
 
 	// c3697 0-> entry.resource.DiagnosticReport.specimen.reference
 					ku_z_labType.guid as x1 -> t3 then{
-						ku_z_labType.vguid as x2 -> t3.reference=append('Specimen/',x1,'/_history/',x2) "rule23";
+						ku_z_labType.vguid as x2 -> t3.reference=append('urn:uuid:',x1) "x2 rule23";
 					} "ochliveno";
 				} "rule24";
 			} "rule25";
@@ -1950,7 +1950,7 @@ group vrp(source patientReference: Reference, source effectiveDateTime: Observat
 
 
 	// c3710 0-> entry.fullUrl
-		vrpType.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+		vrpType.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
 
 	// 'final' 0-> entry.resource.Observation.status
 
@@ -1987,7 +1987,7 @@ group vrp(source patientReference: Reference, source effectiveDateTime: Observat
 
 	// c3696 0-> entry.resource.Observation.specimen.reference
 				ku_z_labType.guid as x1 -> t2 then {
-					ku_z_labType.vguid as x2 -> t2.reference =append('Specimen/',x1,'/_history/',x2) "rule7";
+					ku_z_labType.vguid as x2 -> t2.reference =append('urn:uuid:',x1) "x2 rule7";
 				} "ochliveno";
 			} "rule8";
 		} "rule9";
@@ -2002,7 +2002,7 @@ group vrc(source patientReference: Reference, source effectiveDateTime: Observat
 
 
 	// c3720 0-> entry.fullUrl
-		vrcType.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
+		vrcType.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule1";
 
 	// vrcType.jednotka 0-> entry.resource.Observation.extension
 
@@ -2056,7 +2056,7 @@ group vrc(source patientReference: Reference, source effectiveDateTime: Observat
 
 	// c3692 0-> entry.resource.Observation.specimen.reference
 				ku_z_labType.guid as x1 -> "t2" then {
-					ku_z_labType.vguid as x2 -> t2.reference =append('Specimen/',x1,'/_history/',x2) "rule12";
+					ku_z_labType.vguid as x2 -> t2.reference =append('urn:uuid:',x1) "x2 rule12";
 				} "ochliveno";
 			} "rule13";
 		} "rule14";
@@ -2071,7 +2071,7 @@ group vrd(source effectiveDateTime: Observation, source vrdType: vrdType, source
 
 
 	// c3718 0-> entry.fullUrl
-		vrdType.guid as x1 -> entry.fullUrl =append('DiagnosticReport/',x1) "rule1";
+		vrdType.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1) "rule1";
 
 	// 'https://dasta.mzcr.cz/DSACW.htm' 0-> entry.resource.DiagnosticReport.extension.url
 
@@ -2118,7 +2118,7 @@ group vrd(source effectiveDateTime: Observation, source vrdType: vrdType, source
 
 	// c3693 0-> entry.resource.DiagnosticReport.specimen.reference
 				ku_z_labType.guid as x1 -> t2 then {
-					ku_z_labType.vguid as x2 -> t2.reference =append('Specimen/',x1,'/_history/',x2) "rule11";
+					ku_z_labType.vguid as x2 -> t2.reference =append('urn:uuid:',x1) "x2 rule11";
 				} "jebnuty";
 			} "rule12";
 		} "rule13";
@@ -2133,7 +2133,7 @@ group vrk(source patientReference: Reference, source vrkType: vrkType, source ku
 
 		//vrkType.guid as x1 -> compositionObservationSection then addEntryToSection(x1, compositionObservationSection) "rule1";
 	// c3688 0-> entry.fullUrl
-		vrkType.guid as x1 -> entry.fullUrl =append('DiagnosticReport/',x1) "rule1";
+		vrkType.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1) "rule1";
 		
 	// vrkType.guid 0-> entry.resource.DiagnosticReport.id
 
@@ -2230,7 +2230,7 @@ group vrk(source patientReference: Reference, source vrkType: vrkType, source ku
 
 	// c3595 0-> entry.resource.DiagnosticReport.specimen.reference
 					ku_z_labType.guid as x1 -> t2 then {
-						ku_z_labType.vguid as x2 -> t2.reference =append('Specimen/',x1,'/_history/',x2) "rule24";
+						ku_z_labType.vguid as x2 -> t2.reference =append('urn:uuid:',x1) "x2 rule24";
 					} "ktery";
 				} "rule25";
 			} "rule26";
@@ -2254,7 +2254,7 @@ group vrk(source patientReference: Reference, source vrkType: vrkType, source ku
 
 		// c3595 1-> entry
 				ku_z_labType.guid as x1 -> entry then {
-				  ku_z_labType.vguid as x2 -> append('Specimen/',x1,'/_history/',x2) as specimenRef then {
+				  ku_z_labType.vguid as x2 -> append('urn:uuid:',x1) as specimenRef then {
 
 						vrkType.vrkpa as vrkpa -> entry then vrk_vrkpa(specimenRef,patientReference,vrkpa,compositionObservationSection,bundle) "rule31";
 					
@@ -2265,7 +2265,7 @@ group vrk(source patientReference: Reference, source vrkType: vrkType, source ku
 	// 'final' 0-> entry.resource.Observation.status
 	} "Bundle.entry";
 	vrkType -> bundle.entry as entry then {
-		vrkType.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "guid";
+		vrkType.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "guid";
 		
 		patientReference -> entry.resource=create('Observation') as t1 then {
 			vrkType.guid as x1 -> t1.id = x1 "id";
@@ -2284,7 +2284,7 @@ group vrk(source patientReference: Reference, source vrkType: vrkType, source ku
 
 
 	// c3595 0-> entry.resource.Observation.specimen.reference
-					ku_z_labType.vguid as x2 -> t3.reference =append('Specimen/',x1,'/_history/',x2) "rule37";
+					ku_z_labType.vguid as x2 -> t3.reference =append('urn:uuid:',x1) "x2 rule37";
 				} "rule38";
 			} "rule39";
 	
@@ -2339,7 +2339,7 @@ group vro(source effectiveDateTime: Observation, source patientReference: Refere
 
 
 	// c3712 0-> entry.fullUrl
-		vroType.guid as x1 -> entry.fullUrl =append('DiagnosticReport/',x1) "rule1";
+		vroType.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1) "rule1";
 
 	// 'final' 0-> entry.resource.DiagnosticReport.status
 
@@ -2376,7 +2376,7 @@ group vro(source effectiveDateTime: Observation, source patientReference: Refere
 
 	// c3695 0-> entry.resource.DiagnosticReport.specimen.reference
 				ku_z_labType.guid as x1 -> t2 then {
-					ku_z_labType.vguid as x2 -> t2.reference=append('Specimen/',x1,'/_history/',x2) "rule7";
+					ku_z_labType.vguid as x2 -> t2.reference=append('urn:uuid:',x1) "x2 rule7";
 				} "vymysleli";
 			} "rule8";
 		} "rule9";
@@ -2439,7 +2439,7 @@ group vrz(source patientReference: Reference, source effectiveDateTime: Observat
 
 
 	// c3702 0-> entry.fullUrl
-		vrzType.guid as x1 -> entry.fullUrl =append('DiagnosticReport/',x1) "rule1";
+		vrzType.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1) "rule1";
 
 	// 'final' 0-> entry.resource.DiagnosticReport.status
 
@@ -2473,7 +2473,7 @@ group vrz(source patientReference: Reference, source effectiveDateTime: Observat
 
 	// c3700 0-> entry.resource.DiagnosticReport.specimen.reference
 				ku_z_labType.guid as x1 -> t2 then {
-					 ku_z_labType.vguid as x2 -> t2.reference =append('Specimen/',x1,'/_history/',x2) "rule7";
+					 ku_z_labType.vguid as x2 -> t2.reference =append('urn:uuid:',x1) "x2 rule7";
 				} "tuhle";
 			} "rule8";
 		} "rule9";
@@ -2498,7 +2498,7 @@ group vrk_vrkpa(source SpecimenReference: string, source patientReference: Refer
 
 
 	// c3686 0-> entry.fullUrl
-		vrkpa.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule2";
+		vrkpa.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule2";
 
 	// vrkpa.guid 0-> entry.resource.Observation.id
 
@@ -2566,7 +2566,7 @@ group vrk_vrkpa(source SpecimenReference: string, source patientReference: Refer
 
 
 	// c3563 0-> entry.resource.Observation.hasMember.reference
-					s3.vguid as x2 -> t2.reference = append('Observation/',x1,'/_history/',x2) "rule20";
+					s3.vguid as x2 -> t2.reference = append('urn:uuid:',x1) "x2 rule20";
 				} "rule21";
 			} "rule22";
 		
@@ -2583,7 +2583,7 @@ group vrk_vrkpa(source SpecimenReference: string, source patientReference: Refer
 
 	// c3565 0-> entry.resource.Observation.hasMember.reference
 					s3.guid as x1 -> t2 then {
-						s3.vguid as x2 -> t2.reference = append('Observation/',x1,'/_history/',x2) "rule25";
+						s3.vguid as x2 -> t2.reference = append('urn:uuid:',x1) "x2 rule25";
 					} "ochliveno";
 				} "rule26";
 			} "rule27";
@@ -2837,7 +2837,7 @@ group vrk_vrkpa_vrac(source SpecimenReference: string, source patientReference: 
 
 
 	// c3684 0-> entry.fullUrl
-		vrac.guid as x1 -> entry.fullUrl =append('Observation/',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule2";
+		vrac.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1) then addObservationReferenceToSection(x1,compositionObservationSection) "rule2";
 
 	// vrac.guid 0-> entry.resource.Observation.id
 
@@ -2966,7 +2966,7 @@ group vrk_vrkpa_vrav(source SpecimenReference: string, source patientReference: 
 
 
 	// c3682 0-> entry.fullUrl
-		vrav.guid as x1 -> entry.fullUrl =append('Observation/',x1)  then addObservationReferenceToSection(x1,compositionObservationSection) "rule2";
+		vrav.guid as x1 -> entry.fullUrl =append('urn:uuid:',x1)  then addObservationReferenceToSection(x1,compositionObservationSection) "rule2";
 
 	// vrav.guid 0-> entry.resource.Observation.id
 

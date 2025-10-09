@@ -216,7 +216,7 @@ group defaultmap(source ds: dasta, target bundle: Bundle){
 										
 										
 									ds.garant_dat as garant -> authorReference then {
-									   garant.guid as guid -> authorReference.reference = append('Practitioner/',guid) "author reference";
+									   garant.guid as guid -> authorReference.reference = append('urn:uuid:',guid) "author reference";
                                     } "authorReference";
 	// c3239.entry.txt 0-> bundle.entry
 									s4.idku as idku -> bundle then ku_o_lab_generalAttribute(patientReference, s5, idku,authorReference, bundle) "rule8";
@@ -307,7 +307,7 @@ group ku_o_lab_generalAttribute(source patientReference: Reference, source ku_o_
 		// ku_o_labType.guid 1-> entry.resource.Composition.section.entry.reference
 
 	//  0-> entry.resource.Composition.section.entry.reference
-						loi.guid as x1 -> t3.reference = append('Specimen/', x1) "rule19";
+						loi.guid as x1 -> t3.reference = append('urn:uuid:', x1) "rule19";
 					} "rule20";
 				} "rule21";
 			} "rule22";
@@ -343,7 +343,7 @@ group ku_o_lab_generalAttribute(source patientReference: Reference, source ku_o_
 
 
 	//  0-> entry.resource.Composition.section.entry.reference
-					lop.guid as x1 -> t3.reference = append('ServiceRequest/', x1) "rule30";
+					lop.guid as x1 -> t3.reference = append('urn:uuid:', x1) "rule30";
 				} "rule31";
 			
 	// ku_o_labType.guid 0-> entry.resource.Composition.section.entry
@@ -356,7 +356,7 @@ group ku_o_lab_generalAttribute(source patientReference: Reference, source ku_o_
 		// ku_o_labType.guid 1-> entry.resource.Composition.section.entry.reference
 
         //  0-> entry.resource.Composition.section.entry.reference
-					lopk.guid as x1 -> t3.reference = append('ServiceRequest/', x1) "rule35";
+					lopk.guid as x1 -> t3.reference = append('urn:uuid:', x1) "rule35";
 				} "rule36";
 	// ku_o_labType.guid 0-> entry.resource.Composition.section.entry
 
@@ -368,7 +368,7 @@ group ku_o_lab_generalAttribute(source patientReference: Reference, source ku_o_
 		// ku_o_labType.guid 1-> entry.resource.Composition.section.entry.reference
 
 	//  0-> entry.resource.Composition.section.entry.reference
-					lopr.guid as x1 -> t3.reference = append('ServiceRequest/', x1) "rule40";
+					lopr.guid as x1 -> t3.reference = append('urn:uuid:', x1) "rule40";
 				} "rule41";
 	// ku_o_labType.guid 0-> entry.resource.Composition.section.entry
 
@@ -380,7 +380,7 @@ group ku_o_lab_generalAttribute(source patientReference: Reference, source ku_o_
 		// ku_o_labType.guid 1-> entry.resource.Composition.section.entry.reference
 
 	//  0-> entry.resource.Composition.section.entry.reference
-					lopz.guid as x1 -> t3.reference = append('ServiceRequest/', x1) "rule45";
+					lopz.guid as x1 -> t3.reference = append('urn:uuid:', x1) "rule45";
 				} "rule46 - entry";
 		
 	// c3276 0-> entry.resource.Composition.section.entry	
@@ -483,7 +483,7 @@ group lip(source patientReference: Reference, source lip: ku_o_labType, target b
 	// FullURL_Observation 0-> entry.fullUrl
 
 
-		lip.guid as guid -> entry.fullUrl = append('Observation/',guid) "rule2";
+		lip.guid as guid -> entry.fullUrl = append('urn:uuid:',guid) "rule2";
 	// c3189 0-> entry.resource.Observation
 
 		patientReference -> entry.resource=create('Observation') as document then {
@@ -557,7 +557,7 @@ group lop_without_specimenReference(source patientReference: Reference, source l
 
 	// FullURL_ServiceRequest 0-> entry.fullUrl
 
-		lop.guid as guid -> entry.fullUrl = append('ServiceRequest/',guid) "rule2";
+		lop.guid as guid -> entry.fullUrl = append('urn:uuid:',guid) "rule2";
 	// c3180 0-> entry.resource.ServiceRequest
 
 		patientReference -> entry.resource=create('ServiceRequest') as document then {
@@ -672,7 +672,7 @@ group lop(source patientReference: Reference, source lop: ku_o_labType, source s
 
 	// FullURL_ServiceRequest 0-> entry.fullUrl
 
-		lop.guid as guid -> entry.fullUrl = append('ServiceRequest/',guid) "rule2";
+		lop.guid as guid -> entry.fullUrl = append('urn:uuid:',guid) "rule2";
 	// c3180 0-> entry.resource.ServiceRequest
 
 		patientReference -> entry.resource=create('ServiceRequest') as document then {
@@ -798,7 +798,7 @@ group lopk_without_specimenReference(source patientReference: Reference, source 
 	// FullURL_ServiceRequest 0-> entry.fullUrl
 
 
-		lopk.guid as guid -> entry.fullUrl = append('ServiceRequest/',guid) "rule2";
+		lopk.guid as guid -> entry.fullUrl = append('urn:uuid:',guid) "rule2";
 	// c3182 0-> entry.resource.ServiceRequest
 
 		patientReference -> entry.resource=create('ServiceRequest') as document then {
@@ -908,7 +908,7 @@ group lopk(source patientReference: Reference, source lopk: ku_o_labType, source
 	// FullURL_ServiceRequest 0-> entry.fullUrl
 
 
-		lopk.guid as guid -> entry.fullUrl = append('ServiceRequest/',guid) "rule2";
+		lopk.guid as guid -> entry.fullUrl = append('urn:uuid:',guid) "rule2";
 	// c3182 0-> entry.resource.ServiceRequest
 
 		patientReference -> entry.resource=create('ServiceRequest') as document then {
@@ -1025,7 +1025,7 @@ group lopz_without_specimenReference(source patientReference: Reference, source 
 	// lopz 0-> entry
 
 
-		lopz.guid as x -> entry.fullUrl = append('ServiceRequest/',x) "rule2";
+		lopz.guid as x -> entry.fullUrl = append('urn:uuid:',x) "rule2";
 	// c3186 0-> entry.resource.ServiceRequest
 
 		patientReference -> entry.resource=create('ServiceRequest') as document then {
@@ -1078,8 +1078,8 @@ group lopz(source patientReference: Reference, source lopz: ku_o_labType, source
 	// lopz 0-> entry
 
 
-		lopz.guid as x -> entry.fullUrl = append('ServiceRequest/',x) "rule2";
-		lopz.guid as x -> serviceRequestReference.reference = append('ServiceRequest/',x) "composition section entry";
+		lopz.guid as x -> entry.fullUrl = append('urn:uuid:',x) "rule2";
+		lopz.guid as x -> serviceRequestReference.reference = append('urn:uuid:',x) "composition section entry";
 	// c3186 0-> entry.resource.ServiceRequest
 
 		patientReference -> entry.resource=create('ServiceRequest') as document then {
@@ -1142,7 +1142,7 @@ group lopr_without_specimenReference(source patientReference: Reference, source 
 
 	// FullURL_ServiceRequest 0-> entry.fullUrl
 
-		lopr.guid as x -> entry.fullUrl = append('ServiceRequest/',x) "rule2";
+		lopr.guid as x -> entry.fullUrl = append('urn:uuid:',x) "rule2";
 	// c3184 0-> entry.resource.ServiceRequest
 
 		patientReference -> entry.resource=create('ServiceRequest') as document then {
@@ -1197,7 +1197,7 @@ group lopr(source patientReference: Reference, source lopr: ku_o_labType, source
 
 	// FullURL_ServiceRequest 0-> entry.fullUrl
 
-		lopr.guid as x -> entry.fullUrl = append('ServiceRequest/',x) "rule2";
+		lopr.guid as x -> entry.fullUrl = append('urn:uuid:',x) "rule2";
 	// c3184 0-> entry.resource.ServiceRequest
 
 		patientReference -> entry.resource=create('ServiceRequest') as document then {
@@ -1264,10 +1264,10 @@ group loi(source patientReference: Reference, source loi: loi, target bundle: Bu
 		// FullURL_ServiceRequest 1-> document.fullUrl
 
 
-			sci.guid as guid -> entry.fullUrl = append('ServiceRequest/',guid) "rule2";
+			sci.guid as guid -> entry.fullUrl = append('urn:uuid:',guid) "rule2";
 
 			sci.guid -> compositionSection.entry = create('Reference') as serviceRequestReference then {
-            	sci.guid as guid -> serviceRequestReference.reference = append('ServiceRequest/',guid) "rule2";
+            	sci.guid as guid -> serviceRequestReference.reference = append('urn:uuid:',guid) "rule2";
 			} "composition section entry";
 		// loi.id_sci_is 1-> document.resource.ServiceRequest.identifier.value
 
@@ -1321,7 +1321,7 @@ group loi(source patientReference: Reference, source loi: loi, target bundle: Bu
 
 	// FullURL_Specimen 0-> entry.fullUrl
 
-	  loi.guid as x -> entry.fullUrl = append('Specimen/',x) as referenceSpecimen then {
+	  loi.guid as x -> entry.fullUrl = append('urn:uuid:',x) as referenceSpecimen then {
 	// c3171 0-> entry.resource.Specimen
 
 		loi -> entry.resource=create('Specimen') as document then {
@@ -1423,10 +1423,10 @@ group loi(source patientReference: Reference, source loi: loi, target bundle: Bu
       } "rule18";
 	  
 	  loi.lop as lop -> compositionSection.entry as e then {
-			lop.guid as x1 -> e.reference = append('ServiceRequest/', x1) "rule30";
+			lop.guid as x1 -> e.reference = append('urn:uuid:', x1) "rule30";
 	  } "composition loi.lop";
 	  loi.lopk as lopk -> compositionSection.entry=create() as e2 then {
-			lopk.guid as lopkguid -> e2.reference = append('ServiceRequest/', lopkguid) "rule35";
+			lopk.guid as lopkguid -> e2.reference = append('urn:uuid:', lopkguid) "rule35";
 	  } "composition loi.lopk";
 	} "rule44";
 	// c3194.entry.txt 0-> entry
@@ -1445,7 +1445,7 @@ group lod(source patientReference: Reference, source lod: ku_o_labType, target b
 	// FullURL_Observation 0-> entry.fullUrl
 
 
-		lod.guid as x -> entry.fullUrl = append('Observation/',x) "rule2";
+		lod.guid as x -> entry.fullUrl = append('urn:uuid:',x) "rule2";
 	// c3215 0-> entry.resource.Observation
 
 		patientReference -> entry.resource=create('Observation') as document then {
@@ -1527,7 +1527,7 @@ group garant_dat(source garant_dat: dasta, target bundle: Bundle){
 
 
 	//  0-> entry.fullUrl
-		garant_dat.guid as x1 -> entry.fullUrl = append('Practitioner/', x1) "rule2";
+		garant_dat.guid as x1 -> entry.fullUrl = append('urn:uuid:', x1) "rule2";
 
 
 	// garant_dat.guid 0-> entry.resource.Practitioner.id
@@ -1603,7 +1603,7 @@ group garant_dat(source garant_dat: dasta, target bundle: Bundle){
     garant_dat.role_klic -> bundle.entry as entry then{ 
 		garant_dat.role_klic -> entry.resource=create('PractitionerRole') as t1 then {
             garant_dat.guid as guid -> t1.practitioner as p then {
-                garant_dat -> p.reference = append('Practitioner/',guid) "PractiotionerRole.practitioner.reference";
+                garant_dat -> p.reference = append('urn:uuid:',guid) "PractiotionerRole.practitioner.reference";
             } "PractiotionerRole.practitioner";
 			garant_dat -> t1.code as t2 then {
 				garant_dat -> t2.coding as t3 then {

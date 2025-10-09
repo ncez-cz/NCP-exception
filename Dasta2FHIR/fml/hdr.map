@@ -561,10 +561,10 @@ group QQQ(source patientReference: Reference, source ku_z_propz_admuType: ku_z_p
 group ku_z_propz_dvp(source patientReference: Reference, source ku_z_propz_dvpType: ku_z_propz_dvpType, target section, target bundle: Bundle){
 	ku_z_propz_dvpType -> bundle.entry as entry then {
 
-		ku_z_propz_dvpType.guid as x1 -> entry.fullUrl = append('Consent/',x1) "rule2";
+		ku_z_propz_dvpType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		ku_z_propz_dvpType.guid as guid -> section.entry as sentry then {
-			ku_z_propz_dvpType.vguid as vguid -> sentry.reference = append('Consent/',guid,'/_history/',vguid) "";
+			ku_z_propz_dvpType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		patientReference -> entry.resource=create('Consent') as t1 then {
@@ -613,7 +613,7 @@ group ku_z_propz_dvp(source patientReference: Reference, source ku_z_propz_dvpTy
 			ku_z_propz_dvpType.dvp_dokum as dvp_dokum -> t1 then {
 				dvp_dokum.priloha as s3 -> t1.sourceReference as t2 then {
 					s3.guid as x1 -> t2.reference then {
-						        s3.vguid as x2 -> t2.reference = append('DocumentReference/',x1,'/_history/',x2) "rule26";
+						        s3.vguid as x2 -> t2.reference = append('urn:uuid:',x1) "x2 rule26";
 					} "x1";
 				} "rule28";
 			} "rule29";
@@ -665,7 +665,7 @@ group ku_z_propz_admu(source patientReference: Reference, source ku_z_propz_admu
 					ku_z_propz_admuType.a_pracovnik as s3 -> t2 then {
 
 						s3.guid as x1 -> t2.reference then {
-						        s3.vguid as x2 -> t2.reference = append('Practitioner/',x1,'/_history/',x2) "rule25";
+						        s3.vguid as x2 -> t2.reference = append('urn:uuid:',x1) "x2 rule25";
 						} "x1";
 						s3.prijmeni as s4 -> t2 then {
 							s4.txt as x -> t2.display = x "rule30";
@@ -688,7 +688,7 @@ group ku_z_propz_admu(source patientReference: Reference, source ku_z_propz_admu
 					ku_z_propz_admuType.o_pracovnik as s3 -> t3 then {
 
 						s3.guid as x1 -> t3.reference then {
-							        s3.vguid as x2 -> t3.reference = append('PractitionerRole/',x1,'/_history/',x2) "rule38";
+							        s3.vguid as x2 -> t3.reference = append('urn:uuid:',x1) "x2 rule38";
 						} "x1";
 						s3.prijmeni as s4 -> t3 then {
 							s4.txt as x -> t3.display = x "rule44";
@@ -708,7 +708,7 @@ group ku_z_propz_admu(source patientReference: Reference, source ku_z_propz_admu
 					ku_z_propz_admuType.z_pracovnik as s3 -> t3 then {
 
 						s3.guid as x1 -> t3.reference then {
-					        s3.vguid as x2 -> t3.reference = append('PractitionerRole/',x1,'/_history/',x2) "rule52";
+					        s3.vguid as x2 -> t3.reference = append('urn:uuid:',x1) "x2 rule52";
 						} "x1";
 						s3.prijmeni as s4 -> t3 then {
 							s4.txt as x -> t3.display = x "rule58";
@@ -718,7 +718,7 @@ group ku_z_propz_admu(source patientReference: Reference, source ku_z_propz_admu
 			} "rule55";
 
 			ku_z_propz_admuType.a_pracoviste as a_pracoviste -> composition.custodian as t2 then {
-					a_pracoviste.guid as guid -> t2.reference = append('Organization/',guid) "";
+					a_pracoviste.guid as guid -> t2.reference = append('urn:uuid:',guid) "";
 					a_pracoviste.nazev as s3 -> t2 then {
 						s3.txt as x -> t2.display = x "rule67";
 					}"";
@@ -1104,7 +1104,7 @@ group adresa(source a: a, target Address: Address){
 group pracovnik(source pracovnikType: pracovnikType, target bundle: Bundle){
 	pracovnikType -> bundle.entry as entry then {
 
-		pracovnikType.guid as x1 -> entry.fullUrl = append('Practitioner/',x1) "rule1";
+		pracovnikType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule1";
 		
 		pracovnikType -> entry.resource=create('Practitioner') as t1 then {
 			pracovnikType.guid as x -> t1.id = x "rule3";
@@ -1160,7 +1160,7 @@ group pracovnik(source pracovnikType: pracovnikType, target bundle: Bundle){
 	}"";
 	pracovnikType.role_klic -> bundle.entry as entry then {
 
-		pracovnikType.guid_role as x1 -> entry.fullUrl = append('PractitionerRole/',x1) "rule39";
+		pracovnikType.guid_role as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule39";
 		
 		pracovnikType -> entry.resource=create('PractitionerRole') as t1 then {
 
@@ -1169,7 +1169,7 @@ group pracovnik(source pracovnikType: pracovnikType, target bundle: Bundle){
 			} "rule44";
 		
 			pracovnikType.guid -> t1.practitioner as t3 then {
-				pracovnikType.guid as x1 -> t3.reference = append('Practitioner/',x1) "rule42";
+				pracovnikType.guid as x1 -> t3.reference = append('urn:uuid:',x1) "rule42";
 			} "x1";
 		
 			pracovnikType.role_klic -> t1.code as t2 then {
@@ -1186,7 +1186,7 @@ group pracovnik(source pracovnikType: pracovnikType, target bundle: Bundle){
 group pracovnik_a_pracoviste(source pracovnikType: pracovnikType, source pracovisteType: pracovisteType, target bundle: Bundle){
 	pracovnikType -> bundle.entry as entry then {
 
-		pracovnikType.guid as x1 -> entry.fullUrl = append('Practitioner/',x1) "rule1";
+		pracovnikType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule1";
 		
 		pracovnikType -> entry.resource=create('Practitioner') as t1 then {
 			pracovnikType.guid as x -> t1.id = x "rule3";
@@ -1242,7 +1242,7 @@ group pracovnik_a_pracoviste(source pracovnikType: pracovnikType, source pracovi
 	}"";
 	pracovnikType.role_klic -> bundle.entry as entry then {
 
-		pracovnikType.guid_role as x1 -> entry.fullUrl = append('PractitionerRole/',x1) "rule39";
+		pracovnikType.guid_role as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule39";
 		
 		pracovnikType -> entry.resource=create('PractitionerRole') as t1 then {
 
@@ -1251,11 +1251,11 @@ group pracovnik_a_pracoviste(source pracovnikType: pracovnikType, source pracovi
 			} "rule44";
 		
 			pracovnikType.guid -> t1.practitioner as t3 then {
-				pracovnikType.guid as x1 -> t3.reference = append('Practitioner/',x1) "rule42";
+				pracovnikType.guid as x1 -> t3.reference = append('urn:uuid:',x1) "rule42";
 			} "x1";
 		
 			pracovisteType.guid as x1 -> t1.organization then {
-			    pracovisteType.guid as x2 -> t1.organization = append('Organization/',x1) "rule46";
+			    pracovisteType.guid as x2 -> t1.organization = append('urn:uuid:',x1) "rule46";
 			} "x1";
 		
 			pracovnikType.role_klic -> t1.code as t2 then {
@@ -1270,7 +1270,7 @@ group pracovnik_a_pracoviste(source pracovnikType: pracovnikType, source pracovi
 
 	pracovisteType.nazev as s2 -> bundle.entry as entry then {
 		
-		pracovisteType.guid as x1 -> entry.fullUrl = append('PractitionerRole/',x1) "rule39";
+		pracovisteType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule39";
 
 		pracovnikType -> entry.resource=create('Organization') as t1 then {
 			pracovisteType.guid as x -> t1.id = x "rule57";
@@ -1360,10 +1360,10 @@ group adresa_spojeni(source as: as, target ContactPoint: ContactPoint){
 group ku_z_propz_sprij(source practitionerReference: Reference, source organizatinReference: Reference, source patientReference: Reference, source ku_z_propz_sprijType: ku_z_propz_sprijType, target section67852_4, target section8716_3, target section55286_9, target section47420_5, target bundle: Bundle){
 	ku_z_propz_sprijType -> bundle.entry as entry then {
 
-		ku_z_propz_sprijType.guid as x1 -> entry.fullUrl = append('Encounter/',x1) "rule1";
+		ku_z_propz_sprijType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule1";
 
 		ku_z_propz_sprijType.guid as guid -> section67852_4.entry as sentry then {
-			ku_z_propz_sprijType.vguid as vguid -> sentry.reference = append('Encounter/',guid,'/_history/',vguid) "";
+			ku_z_propz_sprijType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		practitionerReference -> entry.resource=create('Encounter') as t1 then {
@@ -1387,7 +1387,7 @@ group ku_z_propz_sprij(source practitionerReference: Reference, source organizat
 				practitionerReference -> t2.individual as t3 then {
 					ku_z_propz_sprijType.prij_pracovnik as s5 -> t3 then {
 						s5.guid as x1 -> t3.reference then {
-						        s5.vguid as x2 -> t3.reference = append('Practitioner/',x1,'/_history/',x2) "rule12";
+						        s5.vguid as x2 -> t3.reference = append('urn:uuid:',x1) "x2 rule12";
 						}"";
 		
 						s5.titul_pred as tp -> t3.display then {
@@ -1450,10 +1450,10 @@ group ku_z_propz_sprij(source practitionerReference: Reference, source organizat
 group ku_z_propz_sprop(source organizatinReference: Reference, source practitionerReference: Reference, source patientReference: Reference, source ku_z_propz_spropType: ku_z_propz_spropType, target section67852_4, target section8716_3, target section55286_9, target section47420_5, target bundle: Bundle){
 	ku_z_propz_spropType -> bundle.entry as entry then {
 
-		ku_z_propz_spropType.guid as x1 -> entry.fullUrl = append('Encounter/',x1) "rule1";
+		ku_z_propz_spropType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule1";
 
 		ku_z_propz_spropType.guid as guid -> section67852_4.entry as sentry then {
-			ku_z_propz_spropType.vguid as vguid -> sentry.reference = append('Encounter/',guid,'/_history/',vguid) "";
+			ku_z_propz_spropType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		organizatinReference -> entry.resource=create('Encounter') as t1 then {
@@ -1491,7 +1491,7 @@ group ku_z_propz_sprop(source organizatinReference: Reference, source practition
 					ku_z_propz_spropType.prij_pracovnik as s5 -> t3 then {
 
 						s5.guid as x1 -> t3.reference then {
-						        s5.vguid as x2 -> t3.reference = append('Practitioner/',x1,'/_history/',x2) "rule18";
+						        s5.vguid as x2 -> t3.reference = append('urn:uuid:',x1) "x2 rule18";
 						} "x1";
 		
 						
@@ -1543,7 +1543,7 @@ group ku_z_propz_sprop(source organizatinReference: Reference, source practition
 group ku_z_propz_dopor(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source ku_z_propz_doporType: ku_z_propz_doporType, target section, target bundle: Bundle){
 	ku_z_propz_doporType -> bundle.entry as entry then {
 
-		ku_z_propz_doporType.guid as x1 -> entry.fullUrl = append('CarePlan/',x1) "rule2";
+		ku_z_propz_doporType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 		
 
 		patientReference -> entry.resource=create('CarePlan') as t1 then {
@@ -1633,31 +1633,31 @@ group ku_z_propz_dopor(source patientReference: Reference, source organizatinRef
 }
 group FullURL_Practitioner(source GUID: string, target FullURL_Practitioner: string){
 
-		GUID -> FullURL_Practitioner = append('Practitioner/', GUID) "rule1";
+		GUID -> FullURL_Practitioner = append('urn:uuid:', GUID) "rule1";
 
 }
 group FullURL_PractitionerRole(source GUID: string, target FullURL_PractitionerRole: string){
 
-		GUID -> FullURL_PractitionerRole = append('PractitionerRole/', GUID) "rule1";
+		GUID -> FullURL_PractitionerRole = append('urn:uuid:', GUID) "rule1";
 
 }
 group FullURL_Encounter(source GUID: string, target FullURL_Encounter: string){
 
-		GUID -> FullURL_Encounter = append('Encounter/', GUID) "rule1";
+		GUID -> FullURL_Encounter = append('urn:uuid:', GUID) "rule1";
 
 }
 group Reference_Practitioner(source VGUID: string, source GUID: string, target referencePractitioner: string){
 
-		VGUID -> referencePractitioner = append('Practitioner/', GUID, '/_history/', VGUID) "rule1";
+		VGUID -> referencePractitioner = append('urn:uuid:', GUID) "VGUID rule1";
 
 }
 group text_autor_ptext_ktext_priloha(source patientReference: Reference, source text: text, target section, target bundle: Bundle){
 
 	text -> bundle.entry as entry then {
-		text.guid as x1 -> entry.fullUrl = append('DiagnosticReport/',x1) "rule1";
+		text.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule1";
 
 		text.guid as guid -> section.entry as sentry then {
-			text.vguid as vguid -> sentry.reference = append('DiagnosticReport/',guid,'/_history/',vguid) "";
+			text.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('DiagnosticReport') as t1 then {
@@ -1683,7 +1683,7 @@ group text_autor_ptext_ktext_priloha(source patientReference: Reference, source 
 				text.priloha -> t2.link as t3 then {
 					text.priloha as s3 -> t3 then {
 						s3.guid as x1 -> t3.reference then {
-						    s3.vguid as x2 -> t3.reference = append('DocumentReference/',x1,'/_history/',x2) "rule14";
+						    s3.vguid as x2 -> t3.reference = append('urn:uuid:',x1) "x2 rule14";
 						} "x1";
 					} "rule15";
 				} "rule16";
@@ -1702,10 +1702,10 @@ group text_autor_ptext_ktext_priloha(source patientReference: Reference, source 
 
 	text.priloha as priloha -> bundle.entry as entry then {
 
-		priloha.guid as x1 -> entry.fullUrl = append('DocumentReference/',x1) "rule27";
+		priloha.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule27";
 
 		priloha.guid as guid -> section.entry as sentry then {
-			priloha.vguid as vguid -> sentry.reference = append('DocumentReference/',guid,'/_history/',vguid) "";
+			priloha.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 		
 		text.priloha as s3 -> entry.resource=create('DocumentReference') as DocumentReference then {
@@ -1749,7 +1749,7 @@ group autor(source autor: text, target bundle: Bundle){
 
 		autor as x -> entry = x "rule1";
 
-		autor.guid as x1 -> entry.fullUrl = append('Practitioner/',x1) "rule2";
+		autor.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		autor -> entry.resource=create('Practitioner') as t1 then {
 			autor.guid as x -> t1.id = x "rule3";
@@ -1772,19 +1772,19 @@ group autor(source autor: text, target bundle: Bundle){
 			autor.id_clk -> t1.name as t2 then {
 				autor as x -> t2.text = x "rule12";
 
-				autor.guid as x1 -> entry.fullUrl = append('PractitionerRole/',x1) "rule13";
+				autor.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule13";
 			} "rule14";
 		} "rule15";
 	}"";
 	autor.role_klic -> bundle.entry as entry then {
 
-		autor.guid_role as x1 -> entry.fullUrl = append('PractitionerRole/',x1) "rule2";
+		autor.guid_role as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		autor -> entry.resource=create('PractitionerRole') as t1 then {
 			autor -> t1.practitioner as t2 then {
 
 				autor.guid as x1 -> t2.reference then {
-				        autor.vguid as x2 -> t2.reference = append('Practitioner/',x1,'/_history/',x2) "rule16";
+				        autor.vguid as x2 -> t2.reference = append('urn:uuid:',x1) "x2 rule16";
 				} "x1";
 			} "rule17";
 		
@@ -1811,12 +1811,12 @@ group autor(source autor: text, target bundle: Bundle){
 }
 group Reference_DocumentReference(source GUID: string, source VGUID: string, target referenceDocumentReference: Reference){
 
-		GUID -> referenceDocumentReference = append('DocumentReference/', GUID, '/_history/', VGUID) "rule1";
+		GUID -> referenceDocumentReference = append('urn:uuid:', GUID) "VGUID rule1";
 
 }
 group FullURL_DocumentReference(source GUID: string, target FullURL_DocumentReference: Reference){
 
-		GUID -> FullURL_DocumentReference = append('DocumentReference/', GUID) "rule1";
+		GUID -> FullURL_DocumentReference = append('urn:uuid:', GUID) "rule1";
 
 }
 group Composition_section(source textSekce: string, source nazevSekce: string, source kodSekce: string, target section: Composition){
@@ -1854,10 +1854,10 @@ group ku_z_propz_urg_alerg_int(source organizatinReference: Reference, source pa
 	uaType -> bundle.entry as entry then {
 
 		uaType.uaf as s5 -> entry then {
-			s5.guid as x1 -> entry.fullUrl = append('AllergyIntolerance/',x1) "rule2";
+			s5.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 			s5.guid as guid -> section48765_2.entry as sentry then {
-				s5.vguid as vguid -> sentry.reference = append('AllergyIntolerance/',guid,'/_history/',vguid) "";
+				s5.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 			}"";
 		} "rule3";
 
@@ -1970,16 +1970,16 @@ group ku_z_propz_urg_alerg_int(source organizatinReference: Reference, source pa
 }
 group Reference_AllergyIntolerance(source GUID: string, source VGUID: string, target referenceAllergyIntolerance: string){
 
-		GUID -> referenceAllergyIntolerance = append('AllergyIntolerance/', GUID, '/_history/', VGUID) "rule1";
+		GUID -> referenceAllergyIntolerance = append('urn:uuid:', GUID) "VGUID rule1";
 
 }
 group ku_z_propz_urg_v(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source ku_z_propz_urg_vType: ku_z_propz_urg_vType, target section75310_3, target bundle: Bundle){
 	ku_z_propz_urg_vType -> bundle.entry as entry then {
 
-		ku_z_propz_urg_vType.guid as x1 -> entry.fullUrl = append('Flag/',x1) "rule2";
+		ku_z_propz_urg_vType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		ku_z_propz_urg_vType.guid as guid -> section75310_3.entry as sentry then {
-			ku_z_propz_urg_vType.vguid as vguid -> sentry.reference = append('Flag/',guid,'/_history/',vguid) "";
+			ku_z_propz_urg_vType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Flag') as t1 then {
@@ -2033,7 +2033,7 @@ group ku_z_propz_urg_v(source patientReference: Reference, source organizatinRef
 }
 group Reference_Flag(source GUID: string, source VGUID: string, target referenceFlag: string){
 
-		GUID -> referenceFlag = append('Flag/', GUID, '/_history/', VGUID) "rule1";
+		GUID -> referenceFlag = append('urn:uuid:', GUID) "VGUID rule1";
 
 }
 group is(source is: isType, target organizationReference: Reference, target bundle: Bundle){
@@ -2041,8 +2041,8 @@ group is(source is: isType, target organizationReference: Reference, target bund
 
 		
 		is.guid as x1 -> entry.fullUrl then {
-			x1 -> entry.fullUrl = append('Organization/',x1) "rule2";
-		    is.vguid as x2 -> organizationReference.reference = append('Organization/',x1,'/_history/',x2) "";
+			x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
+		    is.vguid as x2 -> organizationReference.reference = append('urn:uuid:',x1) "x2 ";
 		} "x1";
 
 		is -> entry.resource=create('Organization') as t1 then {
@@ -2148,10 +2148,10 @@ group is(source is: isType, target organizationReference: Reference, target bund
 group ku_z_propz_sprij_h(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source hType: hType, target section8716_3, target bundle: Bundle){
 	hType.vyska -> bundle.entry as entry then {
 
-		hType.guid_vyska as x1 -> entry.fullUrl = append('Observation/',x1) "rule1";
+		hType.guid_vyska as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule1";
 
 		hType.guid_vyska as guid -> section8716_3.entry as sentry then {
-			hType.vguid_vyska as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			hType.vguid_vyska as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		hType.vyska -> entry.resource=create('Observation') as t1 then {
@@ -2218,17 +2218,17 @@ group ku_z_propz_sprij_h(source patientReference: Reference, source organizatinR
 	}"";
 	hType.hmotnost -> bundle.entry as entry then {
 
-		hType.guid_hmotnost as x1 -> entry.fullUrl = append('Observation/',x1) "rule34";
+		hType.guid_hmotnost as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule34";
 
 		hType.guid_hmotnost as guid -> section8716_3.entry as sentry then {
-			hType.vguid_hmotnost as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			hType.vguid_hmotnost as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		hType.hmotnost -> entry.resource=create('Observation') as t1 then {
 			hType.guid_hmotnost as x -> t1.id = x "rule35";
 
 			hType.guid_vyska as guid -> section8716_3.entry as sentry then {
-			hType.vguid_vyska as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			hType.vguid_vyska as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 			}"";
 
 			hType.hmotnost -> t1.meta as t2 then {
@@ -2289,10 +2289,10 @@ group ku_z_propz_sprij_h(source patientReference: Reference, source organizatinR
 
 	hType.bmi -> bundle.entry as entry then {
 
-		hType.guid_bmi as x1 -> entry.fullUrl = append('Observation/',x1) "rule64";
+		hType.guid_bmi as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule64";
 
 		hType.guid_bmi as guid -> section8716_3.entry as sentry then {
-			hType.vguid_bmi as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			hType.vguid_bmi as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		hType.bmi -> entry.resource=create('Observation') as t1 then {
@@ -2354,10 +2354,10 @@ group ku_z_propz_sprij_h(source patientReference: Reference, source organizatinR
 	} "";
 	hType.o_hlava -> bundle.entry as entry then {
 
-		hType.guid_o_hlava as x1 -> entry.fullUrl = append('Observation/',x1) "rule94";
+		hType.guid_o_hlava as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule94";
 
 		hType.guid_o_hlava as guid -> section8716_3.entry as sentry then {
-			hType.vguid_o_hlava as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			hType.vguid_o_hlava as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		hType.o_hlava -> entry.resource=create('Observation') as t1 then {
@@ -2418,10 +2418,10 @@ group ku_z_propz_sprij_h(source patientReference: Reference, source organizatinR
 	}"";
 	hType.o_hrudnik -> bundle.entry as entry then {
 
-		hType.guid_o_hrudnik as x1 -> entry.fullUrl = append('Observation/',x1) "rule124";
+		hType.guid_o_hrudnik as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule124";
 
 		hType.guid_o_hrudnika as guid -> section8716_3.entry as sentry then {
-			hType.vguid_o_hrudnik as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			hType.vguid_o_hrudnik as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		hType.o_hrudnik -> entry.resource=create('Observation') as t1 then {
@@ -2482,10 +2482,10 @@ group ku_z_propz_sprij_h(source patientReference: Reference, source organizatinR
 	}"";
 	hType.o_pas -> bundle.entry as entry then {
 
-		hType.guid_o_pas as x1 -> entry.fullUrl = append('Observation/',x1) "rule154";
+		hType.guid_o_pas as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule154";
 
 		hType.guid_o_pas as guid -> section8716_3.entry as sentry then {
-			hType.vguid_o_pas as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			hType.vguid_o_pas as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		hType.o_pas -> entry.resource=create('Observation') as t1 then {
@@ -2548,10 +2548,10 @@ group ku_z_propz_sprij_h(source patientReference: Reference, source organizatinR
 group ku_z_propz_sprij_fyznal(source patientReference: Reference, source organizatinReference: Reference, source practitionerReference: Reference, source fyznalType: fyznalType, target section8716_3, target bundle: Bundle){
 	fyznalType.tk_diast -> bundle.entry as entry then {
 
-		fyznalType.guid_tk as x1 -> entry.fullUrl = append('Observation/',x1) "rule1";
+		fyznalType.guid_tk as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule1";
 
 		fyznalType.guid_tk as guid -> section8716_3.entry as sentry then {
-			fyznalType.vguid_tk as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			fyznalType.vguid_tk as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		fyznalType -> entry.resource=create('Observation') as t1 then {
@@ -2648,10 +2648,10 @@ group ku_z_propz_sprij_fyznal(source patientReference: Reference, source organiz
 
 	fyznalType.pulz -> bundle.entry as entry then {
 
-		fyznalType.guid_pulz as x1 -> entry.fullUrl = append('Observation/',x1) "rule52";
+		fyznalType.guid_pulz as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule52";
 
 		fyznalType.guid_pulz as guid -> section8716_3.entry as sentry then {
-			fyznalType.vguid_pulz as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			fyznalType.vguid_pulz as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		fyznalType -> entry.resource=create('Observation') as t1 then {
@@ -2708,10 +2708,10 @@ group ku_z_propz_sprij_fyznal(source patientReference: Reference, source organiz
 	}"";
 	fyznalType.o2sat -> bundle.entry as entry then {
 
-		fyznalType.guid_o2sat as x1 -> entry.fullUrl = append('Observation/',x1) "rule82";
+		fyznalType.guid_o2sat as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule82";
 
 		fyznalType.guid_o2sat as guid -> section8716_3.entry as sentry then {
-			fyznalType.vguid_o2sat as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			fyznalType.vguid_o2sat as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		fyznalType -> entry.resource=create('Observation') as t1 then {
@@ -2767,10 +2767,10 @@ group ku_z_propz_sprij_fyznal(source patientReference: Reference, source organiz
 	}"";
 	fyznalType.dech -> bundle.entry as entry then {
 
-		fyznalType.guid_dech as x1 -> entry.fullUrl = append('Observation/',x1) "rule112";
+		fyznalType.guid_dech as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule112";
 		
 		fyznalType.guid_dech as guid -> section8716_3.entry as sentry then {
-			fyznalType.vguid_dech as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			fyznalType.vguid_dech as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		fyznalType -> entry.resource=create('Observation') as t1 then {
@@ -2827,10 +2827,10 @@ group ku_z_propz_sprij_fyznal(source patientReference: Reference, source organiz
 
 	fyznalType.teplota -> bundle.entry as entry then {
 
-		fyznalType.guid_teplota as x1 -> entry.fullUrl = append('Observation/',x1) "rule142";
+		fyznalType.guid_teplota as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule142";
 
 		fyznalType.guid_teplota as guid -> section8716_3.entry as sentry then {
-			fyznalType.vguid_teplota as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			fyznalType.vguid_teplota as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		fyznalType -> entry.resource=create('Observation') as t1 then {
@@ -2887,21 +2887,21 @@ group ku_z_propz_sprij_fyznal(source patientReference: Reference, source organiz
 }
 group Reference_Observation(source GUID: string, source VGUID: string, target referenceObservation: string){
 
-		GUID -> referenceObservation = append('Observation/', GUID, '/_history/', VGUID) "rule1";
+		GUID -> referenceObservation = append('urn:uuid:', GUID) "VGUID rule1";
 
 }
 group Reference_Organization(source GUID: string, source VGUID: string, target referenceOrganization: string){
 
-		GUID -> referenceOrganization = append('Organization/', GUID, '/_history/', VGUID) "rule1";
+		GUID -> referenceOrganization = append('urn:uuid:', GUID) "VGUID rule1";
 
 }
 group garant_dat(source garant_dat: garant_datType, target ref: Reference, target bundle: Bundle){
 	garant_dat -> bundle.entry as entry then {
 
-		garant_dat.guid as x1 -> entry.fullUrl = append('Practitioner/',x1) "rule2";
+		garant_dat.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 		
 		garant_dat.guid as guid -> entry then {
-			garant_dat.vguid as vguid -> ref.reference = append('Practitioner/',guid,'/_history/',vguid) "practitioner reference";
+			garant_dat.vguid as vguid -> ref.reference = append('urn:uuid:',guid) "vguid practitioner reference";
 		}"";
 
 		garant_dat -> entry.resource=create('Practitioner') as t1 then {
@@ -2930,7 +2930,7 @@ group garant_dat(source garant_dat: garant_datType, target ref: Reference, targe
 	}"";
 	garant_dat.role_klic as role -> bundle.entry as entry then {
 
-		garant_dat.guid_role as x1 -> entry.fullUrl = append('PractitionerRole/',x1) "rule13";
+		garant_dat.guid_role as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule13";
 
 		garant_dat -> entry.resource=create('PractitionerRole') as t1 then {
 		
@@ -2938,12 +2938,12 @@ group garant_dat(source garant_dat: garant_datType, target ref: Reference, targe
 				guid -> t1.id = guid "";
 				garant_dat.vguid_role as vguid -> meta then {
 					vguid -> meta.versionId = vguid "";
-					vguid -> ref.reference = append('PractitionerRole/',guid,'/_history/',vguid) "practitioner role reference";
+					vguid -> ref.reference = append('urn:uuid:',guid) "vguid practitioner role reference";
 				}"";
 			}"";
 
 			garant_dat.guid as guid -> t1.practitioner as p then {
-				garant_dat.vguid as vguid -> p.reference = append('Practitioner/',guid) "practitioner reference";
+				garant_dat.vguid as vguid -> p.reference = append('urn:uuid:',guid) "practitioner reference";
 			}"";		
 
 			garant_dat.role_klic -> t1.code as t2 then {
@@ -2968,17 +2968,17 @@ group garant_dat(source garant_dat: garant_datType, target ref: Reference, targe
 }
 group FullURL_Observation(source GUID: string, target FullURL_Observation: string){
 
-		GUID -> FullURL_Observation = append('Observation/', GUID) "rule1";
+		GUID -> FullURL_Observation = append('urn:uuid:', GUID) "rule1";
 
 }
 
 group vys_v_snomed(source vys_v_snomed: vys_v_snomedType, target section8716_3, target bundle: Bundle){
 	vys_v_snomed -> bundle.entry as entry then {
 
-		vys_v_snomed.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+		vys_v_snomed.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		vys_v_snomed.guid as guid -> section8716_3.entry as sentry then {
-			vys_v_snomed.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			vys_v_snomed.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		vys_v_snomed -> entry.resource=create('Observation') as t1 then {
@@ -3006,7 +3006,7 @@ group vys_v_snomed(source vys_v_snomed: vys_v_snomedType, target section8716_3, 
 			} "rule18";
 			vys_v_snomed.vysl_pracovnik as s1 -> t1 then {
 				s1.guid as x1 -> t1.performer as t2 then {
-				    s1.vguid as x2 -> t2.reference = append('PractitionerRole/',x1,'/_history/',x2) "rule19";
+				    s1.vguid as x2 -> t2.reference = append('urn:uuid:',x1) "x2 rule19";
 					s1.prijmeni as s2 -> t2 then {
 						s2.txt as x -> t2.display = x "rule24";
 					} "rule25";
@@ -3081,10 +3081,10 @@ group ku_z_propz_anam( source ku_z_propz_anamType: ku_z_propz_anamType, source p
 group ku_z_propz_anam_anam_prob(source patientReference: Reference, source anam_probType: anam_probType, source practitionerReference: Reference, source organizatinReference: Reference, target section11450_4, target bundle: Bundle){
 	anam_probType -> bundle.entry as entry then {
 
-		anam_probType.guid as x1 -> entry.fullUrl = append('Condition/',x1) "rule2";
+		anam_probType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		anam_probType.guid as guid -> section11450_4.entry as sentry then {
-			anam_probType.vguid as vguid -> sentry.reference = append('Condition/',guid,'/_history/',vguid) "";
+			anam_probType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 
@@ -3218,10 +3218,10 @@ group ku_z_propz_anam_anam_prob(source patientReference: Reference, source anam_
 group uniz(source patientReference: Reference, source uniz: unizType, source practitionerReference: Reference, source organizatinReference: Reference, target section46264_8, target bundle: Bundle){
 	uniz  -> bundle.entry as entry then {
 
-		uniz.guid as x1 -> entry.fullUrl = append('DeviceUseStatement/',x1) "rule2";
+		uniz.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 		
 		uniz.guid as guid -> section46264_8.entry as sentry then {
-			uniz.vguid as vguid -> sentry.reference = append('DeviceUseStatement/',guid,'/_history/',vguid) "";
+			uniz.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('DeviceUseStatement') as t1 then {
@@ -3258,7 +3258,7 @@ group uniz(source patientReference: Reference, source uniz: unizType, source pra
 			practitionerReference as x -> t1.source = x "rule23";
 
 			uniz.unizf as s6 -> t1.device as t3 then {
-				s6.guid as x1 -> t3.reference = append('Device/', x1) "rule25";
+				s6.guid as x1 -> t3.reference = append('urn:uuid:', x1) "rule25";
 			} "rule29";
 
 			uniz as s5 -> t1 then {
@@ -3292,7 +3292,7 @@ group uniz(source patientReference: Reference, source uniz: unizType, source pra
 	uniz -> bundle then {
 	  uniz.unizf as unizf -> bundle.entry as entry then {
 
-		unizf.guid as x1 -> entry.fullUrl = append('Device/',x1) "rule52";
+		unizf.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule52";
 		
 		patientReference -> entry.resource=create('Device') as t1 then {
 			unizf as s5 -> t1 then {
@@ -3340,10 +3340,10 @@ group uniz(source patientReference: Reference, source uniz: unizType, source pra
 group ku_z_propz_anam_anam_zpi(source patientReference: Reference, source anam_zpi: ku_z_propz_anamType, source practitionerReference: Reference, source organizatinReference: Reference, target section46264_8, target bundle: Bundle){
 	anam_zpi.uniz as uniz -> bundle.entry as entry then {
 
-		uniz.guid as x1 -> entry.fullUrl = append('DeviceUseStatement/',x1) "rule2";
+		uniz.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 		
 		uniz.guid as guid -> section46264_8.entry as sentry then {
-			uniz.vguid as vguid -> sentry.reference = append('DeviceUseStatement/',guid,'/_history/',vguid) "";
+			uniz.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('DeviceUseStatement') as t1 then {
@@ -3380,7 +3380,7 @@ group ku_z_propz_anam_anam_zpi(source patientReference: Reference, source anam_z
 			practitionerReference as x -> t1.source = x "rule23";
 
 			uniz.unizf as s6 -> t1.device as t3 then {
-				s6.guid as x1 -> t3.reference = append('Device/', x1) "rule25";
+				s6.guid as x1 -> t3.reference = append('urn:uuid:', x1) "rule25";
 			} "rule29";
 
 			uniz as s5 -> t1 then {
@@ -3420,7 +3420,7 @@ group ku_z_propz_anam_anam_zpi(source patientReference: Reference, source anam_z
 	anam_zpi.uniz as uniz -> bundle then {
 	  uniz.unizf as unizf -> bundle.entry as entry then {
 
-		unizf.guid as x1 -> entry.fullUrl = append('Device/',x1) "rule52";
+		unizf.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule52";
 		
 		patientReference -> entry.resource=create('Device') as t1 then {
 			unizf as s5 -> t1 then {
@@ -3467,10 +3467,10 @@ group ku_z_propz_anam_anam_zpi(source patientReference: Reference, source anam_z
 group chv(source patientReference: Reference, source chv: chvType,  source practitionerReference: Reference, source organizatinReference: Reference, target section, target bundle: Bundle){
 	chv as chv -> bundle.entry as entry then {
 
-		chv.guid as x1 -> entry.fullUrl = append('Procedure/',x1) "rule2";
+		chv.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		chv.guid as guid -> section.entry as sentry then {
-			chv.vguid as vguid -> sentry.reference = append('Procedure/',guid,'/_history/',vguid) "";
+			chv.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 		
 		patientReference -> entry.resource=create('Procedure') as t1 then {
@@ -3580,10 +3580,10 @@ group chv(source patientReference: Reference, source chv: chvType,  source pract
 group ku_z_propz_anam_anam_vyk(source patientReference: Reference, source anam_vyk: ku_z_propz_anamType,  source practitionerReference: Reference, source organizatinReference: Reference, target section47519_4, target bundle: Bundle){
 	anam_vyk.chv as chv -> bundle.entry as entry then {
 
-		chv.guid as x1 -> entry.fullUrl = append('Procedure/',x1) "rule2";
+		chv.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		chv.guid as guid -> section47519_4.entry as sentry then {
-			chv.vguid as vguid -> sentry.reference = append('Procedure/',guid,'/_history/',vguid) "";
+			chv.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 		
 		patientReference -> entry.resource=create('Procedure') as t1 then {
@@ -3700,10 +3700,10 @@ group ku_z_propz_anam_anam_oc(source Reference: Reference, source practitionerRe
 		
 		anam_oc.ocz as s5 -> entry then {
 
-			s5.guid as x1 -> entry.fullUrl = append('Immunization/',x1) "rule2";
+			s5.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 			s5.guid as guid -> section.entry as sentry then {
-				s5.vguid as vguid -> sentry.reference = append('Immunization/',guid,'/_history/',vguid) "";
+				s5.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 			} "";
 		} "rule3";
 
@@ -3890,10 +3890,10 @@ group ku_z_propz_anam_anam_oc(source Reference: Reference, source practitionerRe
 group ku_z_propz_anam_anam_inf(source patientReference: Reference, source anam_infType: anam_infType, source practitionerReference: Reference, source organizatinReference: Reference, target section, target bundle: Bundle){
 	anam_infType -> bundle.entry as entry then {	
 
-		anam_infType.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+		anam_infType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 		
 		anam_infType.guid as guid -> section.entry as sentry then {
-				anam_infType.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+				anam_infType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Observation') as t1 then {
@@ -3961,10 +3961,10 @@ group ku_z_propz_anam_anam_infc(source patientReference: Reference, source anam_
 	anam_infcType -> bundle.entry as entry then {
 
 
-		anam_infcType.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+		anam_infcType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		anam_infcType.guid as guid -> section.entry as sentry then {
-				anam_infcType.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+				anam_infcType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 
@@ -4033,10 +4033,10 @@ group ku_z_propz_anam_anam_infc(source patientReference: Reference, source anam_
 group ku_z_propz_anam_anam_rao(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source anam_rao: anfType, target section, target bundle: Bundle){
 	anam_rao -> bundle.entry as entry then {
 
-		anam_rao.guid as x1 -> entry.fullUrl = append('FamilyMemberHistory/',x1) "rule2";
+		anam_rao.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 		
 		anam_rao.guid as guid -> section.entry as sentry then {
-			anam_rao.vguid as vguid -> sentry.reference = append('FamilyMemberHistory/',guid,'/_history/',vguid) "";
+			anam_rao.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('FamilyMemberHistory') as t1 then {
@@ -4139,10 +4139,10 @@ group ku_z_propz_anam_anam_rao(source patientReference: Reference, source practi
 group ku_z_propz_anam_anam_sa(source patientReference: Reference, source anam_sa: anfType, source practitionerReference: Reference, source organizatinReference: Reference, target section, target bundle: Bundle){
 	anam_sa -> bundle.entry as entry then {
 
-		anam_sa.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+		anam_sa.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		anam_sa.guid as guid -> section.entry as sentry then {
-			anam_sa.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			anam_sa.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Observation') as t1 then {
@@ -4363,10 +4363,10 @@ group ku_z_propz_anam_anam_sa(source patientReference: Reference, source anam_sa
 group ku_z_propz_anam_anam_aba(source patientReference: Reference, source anam_aba: anfType, source practitionerReference: Reference, source organizatinReference: Reference, target section, target bundle: Bundle){
 	anam_aba -> bundle.entry as entry then {
 
-		anam_aba.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+		anam_aba.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		anam_aba.guid as guid -> section.entry as sentry then {
-			anam_aba.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			anam_aba.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Observation') as t1 then {
@@ -4442,10 +4442,10 @@ group ku_z_propz_anam_anam_aba(source patientReference: Reference, source anam_a
 group ku_z_propz_anam_anam_abd(source patientReference: Reference, source anam_abd: anfType, source practitionerReference: Reference, source organizatinReference: Reference,  target section,target bundle: Bundle){
 	anam_abd -> bundle.entry as entry then {
 
-		anam_abd.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+		anam_abd.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		anam_abd.guid as guid -> section.entry as sentry then {
-			anam_abd.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			anam_abd.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Observation') as t1 then {
@@ -4542,10 +4542,10 @@ group ku_z_propz_anam_anam_abd(source patientReference: Reference, source anam_a
 group ku_z_propz_anam_anam_abj(source patientReference: Reference, source anam_abj, source practitionerReference: Reference, source organizatinReference: Reference, target section, target bundle: Bundle){
 	anam_abj -> bundle.entry as entry then {
 
-		anam_abj.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+		anam_abj.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		anam_abj.guid as guid -> section.entry as sentry then {
-			anam_abj.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			anam_abj.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Observation') as t1 then {
@@ -4605,10 +4605,10 @@ group ku_z_propz_anam_anam_abj(source patientReference: Reference, source anam_a
 group ku_z_propz_anam_anam_abk(source patientReference: Reference,  source practitionerReference: Reference, source organizatinReference: Reference, source anam_abk, target section, target bundle: Bundle){
 	anam_abk -> bundle.entry as entry then {
 
-		anam_abk.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+		anam_abk.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		anam_abk.guid as guid -> section.entry as sentry then {
-			anam_abk.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			anam_abk.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Observation') as t1 then {
@@ -4689,10 +4689,10 @@ group ku_z_propz_prubh(source practitionerReference: Reference, source organizat
 group ku_z_propz_prubh_le(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source leType: leType, target section, target bundle: Bundle){
 	leType.lez as lez -> bundle.entry as entry then {
 	
-		lez.guid as x1 -> entry.fullUrl = append('MedicationAdministration/',x1) "rule2";
+		lez.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 		
 		lez.guid as guid -> section.entry as sentry then {
-			lez.vguid as vguid -> sentry.reference = append('MedicationAdministration/',guid,'/_history/',vguid) "";
+			lez.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 		
 		patientReference -> entry.resource=create('MedicationAdministration') as t1 then {
@@ -4822,9 +4822,7 @@ group ku_z_propz_prubh_le(source patientReference: Reference, source practitione
 						s6.txt as x -> t2.text = x "rule80";
 					} "rule81";
 				} "rule82";
-				s5.rozpis_v as s6 -> t1 then {
-					s6.txt as x -> t1.dosage = x "rule83";
-				} "rule84";
+				
 				patientReference -> t1.dosage as t2 then {
 					s5.misto_apl_klic as x -> t2.site = x "rule85";
 
@@ -4861,7 +4859,7 @@ group ku_z_propz_prubh_le(source patientReference: Reference, source practitione
 							s5.forma_text as x -> t4.display = x "rule100";
 						} "rule101";
 					} "rule102";
-					patientReference -> t2.dose as t3 then {
+					patientReference -> t2.text as t3 then {
 						s5.rozpis_v as s6 -> t3 then {
 							s6.txt as x -> t3.value = x "rule103";
 						} "rule104";
@@ -4874,10 +4872,10 @@ group ku_z_propz_prubh_le(source patientReference: Reference, source practitione
 group ku_z_propz_prubh_p(source patientReference: Reference, source practitionerReference: Reference, source organizatinReference: Reference, source ku_z_propz_prubh_pType: ku_z_propz_prubh_pType, target section, target bundle: Bundle){
 	ku_z_propz_prubh_pType -> bundle.entry as entry then {
 
-		ku_z_propz_prubh_pType.guid as x1 -> entry.fullUrl = append('Condition/',x1) "rule2";
+		ku_z_propz_prubh_pType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		ku_z_propz_prubh_pType.guid as guid -> section.entry as sentry then {
-			ku_z_propz_prubh_pType.vguid as vguid -> sentry.reference = append('Condition/',guid,'/_history/',vguid) "";
+			ku_z_propz_prubh_pType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Condition') as t1 then {
@@ -5003,10 +5001,10 @@ group ku_z_propz_prubh_p(source patientReference: Reference, source practitioner
 group ku_z_propz_prubh_d(source patientReference: Reference, source ku_z_propz_prubh_dType: ku_z_propz_prubh_dType,  source practitionerReference: Reference, source organizatinReference: Reference, target section, target bundle: Bundle){
 	ku_z_propz_prubh_dType -> bundle.entry as entry then {
 
-		ku_z_propz_prubh_dType.guid as x1 -> entry.fullUrl = append('Procedure/',x1) "rule2";
+		ku_z_propz_prubh_dType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		ku_z_propz_prubh_dType.guid as guid -> section.entry as sentry then {
-			ku_z_propz_prubh_dType.vguid as vguid -> sentry.reference = append('Procedure/',guid,'/_history/',vguid) "";
+			ku_z_propz_prubh_dType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Procedure') as t1 then {
@@ -5065,10 +5063,10 @@ group ku_z_propz_prubh_d(source patientReference: Reference, source ku_z_propz_p
 group ku_z_propz_prubh_v(source patientReference: Reference, source ku_z_propz_prubh_vType: ku_z_propz_prubh_vType, target section, target bundle: Bundle){
 	ku_z_propz_prubh_vType -> bundle.entry as entry then {
 
-		ku_z_propz_prubh_vType.guid as x1 -> entry.fullUrl = append('Composition/',x1) "rule2";
+		ku_z_propz_prubh_vType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 
 		ku_z_propz_prubh_vType.guid as guid -> section.entry as sentry then {
-			ku_z_propz_prubh_vType.vguid as vguid -> sentry.reference = append('Composition/',guid,'/_history/',vguid) "";
+			ku_z_propz_prubh_vType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Composition') as t1 then {
@@ -5110,7 +5108,7 @@ group ku_z_propz_prubh_v(source patientReference: Reference, source ku_z_propz_p
 					ku_z_propz_prubh_vType.pracovnik as s3 -> t2 then {
 
 						s3.guid as x1 -> t2.reference then {
-						        s3.vguid as x2 -> t2.reference = append('PractitionerRole/',x1,'/_history/',x2) "rule21";
+						        s3.vguid as x2 -> t2.reference = append('urn:uuid:',x1) "x2 rule21";
 						} "x1";
 					} "rule22";
 				} "rule23";
@@ -5123,7 +5121,7 @@ group ku_z_propz_prubh_v(source patientReference: Reference, source ku_z_propz_p
 					ku_z_propz_prubh_vType.pracoviste as s3 -> t2 then {
 
 						s3.guid as x1 -> t2.reference then {
-						        s3.vguid as x2 -> t2.reference = append('Organization/',x1,'/_history/',x2) "rule27";
+						        s3.vguid as x2 -> t2.reference = append('urn:uuid:',x1) "x2 rule27";
 						} "x1";
 					} "rule28";
 				} "rule29";
@@ -5147,7 +5145,7 @@ group ku_z_propz_prubh_v(source patientReference: Reference, source ku_z_propz_p
 								ku_z_propz_prubh_vType.vys_v_snomed as s3 -> t5 then {
 
 									s3.guid as x1 -> t5.reference then {
-									        s3.vguid as x2 -> t5.reference = append('Observation/',x1,'/_history/',x2) "rule38";
+									        s3.vguid as x2 -> t5.reference = append('urn:uuid:',x1) "x2 rule38";
 									} "x1";
 								} "rule39";
 							} "rule40";
@@ -5160,7 +5158,7 @@ group ku_z_propz_prubh_v(source patientReference: Reference, source ku_z_propz_p
 					ku_z_propz_prubh_vType.text_puvod as s2 -> t3 then {
 
 						s2.guid as x1 -> t3.reference then {
-						        s2.vguid as x2 -> t3.reference = append('DocumentReference/',x1,'/_history/',x2) "rule46";
+						        s2.vguid as x2 -> t3.reference = append('urn:uuid:',x1) "x2 rule46";
 						} "x1";
 					} "rule47";
 				} "rule48";
@@ -5170,7 +5168,7 @@ group ku_z_propz_prubh_v(source patientReference: Reference, source ku_z_propz_p
 					ku_z_propz_prubh_vType.text_uprav as s2 -> t3 then {
 
 						s2.guid as x1 -> t3.reference then {
-						        s2.vguid as x2 -> t3.reference = append('DocumentReference/',x1,'/_history/',x2) "rule51";
+						        s2.vguid as x2 -> t3.reference = append('urn:uuid:',x1) "x2 rule51";
 						} "x1";
 					} "rule52";
 				} "rule53";
@@ -5192,10 +5190,10 @@ group ku_z_propz_prubh_s(source patientReference: Reference, source practitioner
 	ku_z_propz_prubh_sType -> bundle.entry as entry then {
 
 		
-		ku_z_propz_prubh_sType.guid as x1 -> entry.fullUrl = append('Observation/',x1) "rule2";
+		ku_z_propz_prubh_sType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule2";
 		
 		ku_z_propz_prubh_sType.guid as guid -> section.entry as sentry then {
-			ku_z_propz_prubh_sType.vguid as vguid -> sentry.reference = append('Observation/',guid,'/_history/',vguid) "";
+			ku_z_propz_prubh_sType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('Observation') as t1 then {
@@ -5225,10 +5223,10 @@ group ku_z_propz_prubh_s(source patientReference: Reference, source practitioner
 	}"";
 	ku_z_propz_prubh_sType.ks_duv_prub_h as ks_duv_prub_h -> bundle.entry as entry then {
 
-		ks_duv_prub_h.guid as x1 -> entry.fullUrl = append('DiagnosticReport/',x1) "rule21";
+		ks_duv_prub_h.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule21";
 
 		ks_duv_prub_h.guid as guid -> section.entry as sentry then {
-			ks_duv_prub_h.vguid as vguid -> sentry.reference = append('DiagnosticReport/',guid,'/_history/',vguid) "";
+			ks_duv_prub_h.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('DiagnosticReport') as t1 then {
@@ -5257,10 +5255,10 @@ group ku_z_propz_prubh_s(source patientReference: Reference, source practitioner
 	}"";
 	ku_z_propz_prubh_sType.ks_klin_uvaha as ks_klin_uvaha -> bundle.entry as entry then {
 
-		ks_klin_uvaha.guid as x1 -> entry.fullUrl = append('DiagnosticReport/',x1) "rule40";
+		ks_klin_uvaha.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule40";
 
 		ks_klin_uvaha.guid as guid -> section.entry as sentry then {
-			ks_klin_uvaha.vguid as vguid -> sentry.reference = append('DiagnosticReport/',guid,'/_history/',vguid) "";
+			ks_klin_uvaha.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		} "";
 
 		patientReference -> entry.resource=create('DiagnosticReport') as t1 then {
@@ -5294,10 +5292,10 @@ group ku_z_propz_prubh_s(source patientReference: Reference, source practitioner
 group ku_z_propz_hosp(source practitionerReference: Reference, source organizatinReference: Reference, source patientReference: Reference, source ku_z_propz_hospType: ku_z_propz_hospType, target section46240_8, target bundle: Bundle){
 	ku_z_propz_hospType -> bundle.entry as entry then {
 
-		ku_z_propz_hospType.guid as x1 -> entry.fullUrl = append('Encounter/',x1) "rule1";
+		ku_z_propz_hospType.guid as x1 -> entry.fullUrl = append('urn:uuid:',x1) "rule1";
 
 		ku_z_propz_hospType.guid as guid -> section46240_8.entry as sentry then {
-			ku_z_propz_hospType.vguid as vguid -> sentry.reference = append('Encounter/',guid,'/_history/',vguid) "";
+			ku_z_propz_hospType.vguid as vguid -> sentry.reference = append('urn:uuid:',guid) "vguid ";
 		}"";
 
 		practitionerReference -> entry.resource=create('Encounter') as t1 then {
@@ -5343,7 +5341,7 @@ group ku_z_propz_hosp(source practitionerReference: Reference, source organizati
 					ku_z_propz_hospType.prij_pracovnik as s5 -> t3 then {
 
 						s5.guid as x1 -> t3.reference then {
-						    s5.vguid as x2 -> t3.reference = append('PractitionerRole/',x1,'/_history/',x2) "rule22";
+						    s5.vguid as x2 -> t3.reference = append('urn:uuid:',x1) "x2 rule22";
 						} "x1";
 						s5.prijmeni as s6 -> t3 then {
 							s6.txt as x -> t3.display = x "rule27";
@@ -5365,7 +5363,7 @@ group ku_z_propz_hosp(source practitionerReference: Reference, source organizati
 							ku_z_propz_hospType.dop_pracovnik as s5 -> t5 then {
 
 								s5.guid as x1 -> t5.reference then {
-								        s5.vguid as x2 -> t5.reference = append('PractitionerRole/',x1,'/_history/',x2) "rule35";
+								        s5.vguid as x2 -> t5.reference = append('urn:uuid:',x1) "x2 rule35";
 								} "x1";
 								s5.prijmeni as s6 -> t5 then {
 									s6.txt as x -> t5.display = x "rule42";
@@ -5424,7 +5422,7 @@ group ku_z_propz_hosp(source practitionerReference: Reference, source organizati
 					}"";
 					ku_z_propz_hospType.prop_pracoviste as s6 -> t2.destination as t5 then {
 						s6.guid as x1 -> t5.reference then {
-				        	s6.vguid as x2 -> t5.reference = append('Organization/',x1,'/_history/',x2) "rule73";
+				        	s6.vguid as x2 -> t5.reference = append('urn:uuid:',x1) "x2 rule73";
 						} "x1";
 						s6.nazev as s7 -> t5 then {
 								s7.txt as x -> t5.display = x "rule81";
@@ -5442,7 +5440,7 @@ group ku_z_propz_hosp(source practitionerReference: Reference, source organizati
 			ku_z_propz_hospType.dop_pracoviste -> t1.serviceProvider as t4 then {
 				ku_z_propz_hospType.dop_pracoviste as s6 -> t4 then {
 					s6.guid as x1 -> t4.reference then {
-				        s6.vguid as x2 -> t4.reference = append('Organization/',x1,'/_history/',x2) "rule86";
+				        s6.vguid as x2 -> t4.reference = append('urn:uuid:',x1) "x2 rule86";
 					} "x1";
 				} "rule87";
 			} "rule88";
