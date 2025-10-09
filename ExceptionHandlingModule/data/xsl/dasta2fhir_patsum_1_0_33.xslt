@@ -1827,7 +1827,7 @@ http://www.altova.com/mapforce
 								</versionId>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-procedure-hdr'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-procedure-hdr'))"/>
 							</profile>
 						</meta>
 						<status>
@@ -2940,7 +2940,7 @@ http://www.altova.com/mapforce
 								</versionId>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/core/StructureDefinition/cz-allergyIntolerance'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/core/StructureDefinition/cz-allergyIntolerance'))"/>
 							</profile>
 						</meta>
 						<text>
@@ -3191,7 +3191,7 @@ http://www.altova.com/mapforce
 								</lastUpdated>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-flag-hdr'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-flag-hdr'))"/>
 							</profile>
 						</meta>
 						<text>
@@ -3288,7 +3288,7 @@ http://www.altova.com/mapforce
 								</lastUpdated>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-flag-hdr'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-flag-hdr'))"/>
 							</profile>
 						</meta>
 						<text>
@@ -3566,7 +3566,7 @@ http://www.altova.com/mapforce
 								</lastUpdated>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-flag-hdr'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-flag-hdr'))"/>
 							</profile>
 						</meta>
 						<text>
@@ -4132,7 +4132,7 @@ http://www.altova.com/mapforce
 								</versionId>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-immunization-hdr'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-immunization-hdr'))"/>
 							</profile>
 						</meta>
 						<xsl:for-each select="@id_ockovani">
@@ -4558,7 +4558,7 @@ http://www.altova.com/mapforce
 								</versionId>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-condition-hdr'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-condition-hdr'))"/>
 							</profile>
 						</meta>
 						<clinicalStatus>
@@ -5097,7 +5097,7 @@ http://www.altova.com/mapforce
 								</versionId>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-carePlan-hdr'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-carePlan-hdr'))"/>
 							</profile>
 						</meta>
 						<status>
@@ -5653,7 +5653,7 @@ http://www.altova.com/mapforce
 								</versionId>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/core/StructureDefinition/cz-patient-core'))"/>
 							</profile>
 							<xsl:for-each select="ns2:duvernost">
 								<xsl:variable name="var3_cur_as_string" as="xs:string" select="fn:string(.)"/>
@@ -6969,7 +6969,7 @@ http://www.altova.com/mapforce
 									</versionId>
 								</xsl:for-each>
 								<profile>
-									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-height-hdr'))"/>
+									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-observation-height-hdr'))"/>
 								</profile>
 							</meta>
 							<status>
@@ -7070,7 +7070,7 @@ http://www.altova.com/mapforce
 									</versionId>
 								</xsl:for-each>
 								<profile>
-									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-weight-hdr'))"/>
+									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-observation-weight-hdr'))"/>
 								</profile>
 							</meta>
 							<status>
@@ -7164,7 +7164,7 @@ http://www.altova.com/mapforce
 									</versionId>
 								</xsl:for-each>
 								<profile>
-									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-BMI-hdr'))"/>
+									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-observation-BMI-hdr'))"/>
 								</profile>
 							</meta>
 							<status>
@@ -7258,7 +7258,7 @@ http://www.altova.com/mapforce
 									</versionId>
 								</xsl:for-each>
 								<profile>
-									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-headCircumference-hdr'))"/>
+									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-observation-headCircumference-hdr'))"/>
 								</profile>
 							</meta>
 							<status>
@@ -7352,7 +7352,7 @@ http://www.altova.com/mapforce
 									</versionId>
 								</xsl:for-each>
 								<profile>
-									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-chestCircumference-hdr'))"/>
+									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-observation-chestCircumference-hdr'))"/>
 								</profile>
 							</meta>
 							<status>
@@ -7446,7 +7446,7 @@ http://www.altova.com/mapforce
 									</versionId>
 								</xsl:for-each>
 								<profile>
-									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-abdominalCircumference-hdr'))"/>
+									<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/hdr/StructureDefinition/cz-observation-abdominalCircumference-hdr'))"/>
 								</profile>
 							</meta>
 							<status>
@@ -9357,7 +9357,7 @@ http://www.altova.com/mapforce
 								</versionId>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/core/StructureDefinition/cz-organization-core'))"/>
 							</profile>
 						</meta>
 						<xsl:for-each select="@ico">
@@ -9551,7 +9551,7 @@ http://www.altova.com/mapforce
 								</xsl:for-each>
 							</versionId>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/core/StructureDefinition/cz-practitioner-core'))"/>
 							</profile>
 						</meta>
 						<xsl:for-each select="@id_zp">
@@ -9618,7 +9618,7 @@ http://www.altova.com/mapforce
 								</xsl:for-each>
 							</versionId>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/core/StructureDefinition/cz-practitionerrole-core'))"/>
 							</profile>
 						</meta>
 						<practitioner>

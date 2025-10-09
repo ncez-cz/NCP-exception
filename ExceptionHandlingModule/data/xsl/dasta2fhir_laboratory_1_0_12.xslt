@@ -2614,7 +2614,7 @@ http://www.altova.com/mapforce
 							<xsl:variable name="var2_test_cur" as="xs:string?">
 								<xsl:choose>
 									<xsl:when test=".">
-										<xsl:sequence select="'https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs'"/>
+										<xsl:sequence select="'https://fhir.hl7cr.eu/fhir/lab/ValueSet/cz-nclp-labpol-vs'"/>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:for-each select="$var18_id_lis">
@@ -2779,7 +2779,7 @@ http://www.altova.com/mapforce
 			<xsl:for-each select="$ku_z_labType/@klic_nclp_o">
 				<coding>
 					<system>
-						<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs'))"/>
+						<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/lab/ValueSet/cz-nclp-labpol-vs'))"/>
 					</system>
 					<xsl:sequence select="$var15_create_version_of_nclp_verze"/>
 					<code>
@@ -3783,7 +3783,7 @@ http://www.altova.com/mapforce
 								</versionId>
 							</xsl:for-each>
 							<profile>
-								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core'))"/>
+								<xsl:attribute name="value" namespace="" select="xs:string(xs:anyURI('https://fhir.hl7cr.eu/fhir/core/StructureDefinition/cz-patient-core'))"/>
 							</profile>
 							<xsl:for-each select="ns2:duvernost">
 								<xsl:variable name="var3_cur_as_string" as="xs:string" select="fn:string(.)"/>
