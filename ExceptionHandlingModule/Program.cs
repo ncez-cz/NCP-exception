@@ -1,7 +1,10 @@
 using Microsoft.OpenApi.Models;
 using Provisio.Converters.ExceptionHandlingModule.Formatter;
 using System.Reflection;
+using System.Text;
 
+
+Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
 var builder = WebApplication.CreateBuilder(args);
 

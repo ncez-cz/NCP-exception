@@ -32,7 +32,7 @@ def main():
         sys.stdin.reconfigure(encoding='utf-8')
         sys.stdout.reconfigure(encoding='utf-8')
         dasta_file = sys.stdin
-        output_file = sys.stdout
+        output_file = sys.stdout.buffer
     elif len(sys.argv) != 3:
         print("Usage: python add_guids.py <input_dasta_file> <output_file>")
         sys.exit(1)
@@ -63,13 +63,21 @@ def main():
           if isinstance(e,ET.Element) and (e.tag.startswith('{urn:cz-mzcr:ns:dasta:ds4:ds_ip}dat_') or e.tag.startswith('{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dat_')): 
             fixDateTimeElem(e)
         
-    if output_file is not sys.stdout:
-        with open(output_file, 'w', encoding="utf-8") as f:
-            f.write(ET.tostring(root).decode())
-            f.write("\n")
+    if output_file is not sys.stdout.buffer:
+        with open(output_file, 'wb') as f:
+            ET.ElementTree(root).write(f, encoding="UTF-8",xml_declaration=True)
+            #f.write(ET.tostring(root,"utf-8").decode("utf-8"))
+            #f.write("\n")
     else:        
-        output_file.write(ET.tostring(root).decode())
-        output_file.write("\n")
+        #with open('C:\\converters\\out.xml', 'wb') as f:
+        # ET.ElementTree(root).write('C:\\converters\\out2.xml', encoding="UTF-8",xml_declaration=True)
+        #    f.write(ET.tostring(root,"utf-8"))
+        #    f.write("\n")
+        ET.ElementTree(root).write(output_file, encoding="UTF-8",xml_declaration=True)  
+        # output_file.write(ET.tostring(root,"utf-8").decode("utf-8"))
+        # output_file.write("\n")
+
+   
 
     
 if __name__ == "__main__":

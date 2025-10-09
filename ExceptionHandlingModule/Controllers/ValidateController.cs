@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using net.liberty_development.SaxonHE12s9apiExtensions;
 using net.sf.saxon.s9api;
 using Provisio.Converters.ExceptionHandlingModule.Model;
+using System.Diagnostics;
+using System.Text;
+using System.Windows.Input;
 
 
 namespace Provisio.Converters.ExceptionHandlingModule.Controllers
@@ -14,37 +17,59 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
     public class ValidateController : ControllerBase
     {
         private readonly IConfiguration _config;
+        private readonly string? _out;
+
         private readonly ILogger<ValidateController> _logger;
         private static Dictionary<string, Xslt30Transformer> _xsl = new Dictionary<string, Xslt30Transformer>();
+        private static Dictionary<string, List<string>> _commands = new Dictionary<string, List<string>>();
+
 
         public ValidateController(IConfiguration configuration, ILogger<ValidateController> logger)
         {
             _config = configuration;
             _logger = logger;
+            _out = _config.GetValue<string>("logOut");
+
+            if (_out != null)
+            {
+                Console.SetOut(new StreamWriter(_out));
+            }
+
             if (_xsl.Count() == 0)
             {
                 foreach (var item in _config.GetSection("validation").GetChildren())
-                    if (item.Value != null && (item.Value.EndsWith(".xsl") || item.Value.EndsWith(".xslt")))
+                {
+
+                    var cmds = new List<string>();
+                    foreach (var s in item.GetChildren())
                     {
-                        if (!System.IO.File.Exists(item.Value))
+                        string command = s.Value;
+                        cmds.Add(command);
+
+
+                        if (command != null && (command.EndsWith(".xsl") || command.EndsWith(".xslt")))
                         {
-                            Console.WriteLine("template " + Directory.GetCurrentDirectory() + "/" + item.Value + " does not exists!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Starting compilation of " + item.Key + ": " + item.Value);
+                            if (!System.IO.File.Exists(command))
+                            {
+                                Console.WriteLine("template " + Directory.GetCurrentDirectory() + "/" + command + " does not exists!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("compilation of " + item.Key + ": " + command);
 
-                            var processor = new Processor(false);
+                                var processor = new Processor(false);
 
-                            var xsltCompiler = processor.newXsltCompiler();
+                                var xsltCompiler = processor.newXsltCompiler();
 
-                            var validator = xsltCompiler.compile(new java.io.File(item.Value)).load30();
+                                var validator = xsltCompiler.compile(new java.io.File(command)).load30();
 
-                            _xsl.Add(item.Key, validator);
-
-                            Console.WriteLine("Finished successful compilation of " + item.Key + ": " + item.Value);
+                                _xsl.Add(command, validator);
+                            }
                         }
                     }
+                    _commands.Add(item.Key, cmds);
+                }
+
             }
         }
 
@@ -82,6 +107,90 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         //[OpenApiRequestBodyType(typeof(string))]
         public ActionResult<XdmNode> Validate(string validation = "cda_epsos_ps7", [FromBody] ClinicalDocument clinicalDocument = null)
         {
+            var requestStream = clinicalDocument.GetStream();
+            var stream = requestStream;
+
+            XdmNode? result = null;
+
+            try
+            {
+                if (validation == null || !_commands.ContainsKey(validation))
+                {
+                    return NotFound("Volba validace '" + validation + "' není dostupná!");
+                }
+                foreach (string command in _commands[validation])
+                {
+                    if (command != null && (command.EndsWith(".xsl") || command.EndsWith(".xslt")))
+                    {
+
+                        if (validation == null || !_xsl.ContainsKey(command))
+                        {
+                            return NotFound("Xslt '" + command + "' není pøipraveno!");
+                        }
+                        Console.WriteLine("Xslt \"" + command + "\" ... ");
+                        var transformator = _xsl[command];
+
+                        var transformationResult = new XdmDestination();
+
+                        transformator.transform(new StreamSource(new DotNetInputStream(stream)), transformationResult);
+
+                        result = transformationResult.getXdmNode();
+                        string resultString = result.ToString();
+                        stream = new MemoryStream();
+                        byte[] resultBytes = Encoding.UTF8.GetBytes(resultString);
+                        stream.Write(resultBytes, 0, resultBytes.Length);
+                        stream.Close();
+
+
+                    }
+                    else
+                    {
+                        using (Process process = new Process())
+                        {
+                            //add guids for fhir resources
+                            process.StartInfo.FileName = command.Split(' ')[0];
+                            if (command.Contains(' '))
+                            {
+                                process.StartInfo.Arguments = string.Format("{0}", command.Substring(command.IndexOf(' ') + 1));
+                            }
+
+                            process.StartInfo.UseShellExecute = false;
+                            process.StartInfo.RedirectStandardInput = true;
+                            process.StartInfo.RedirectStandardOutput = true;
+                            //process.StartInfo.StandardInputEncoding = Encoding.UTF8;
+                            process.StartInfo.StandardOutputEncoding = Encoding.UTF8;
+                            process.Start();
+
+
+                            StreamWriter processInput = process.StandardInput;
+                            stream.CopyTo(processInput.BaseStream);
+                            Console.WriteLine("process \"" + command + "\" is running ... !"); // with input stream size: " + stream.Position);
+                            processInput.Close();
+
+                            stream = process.StandardOutput.BaseStream;
+
+                            //process.WaitForExit();
+
+                        }
+                    }
+
+                }
+                if (result != null)
+                    return Ok(result);
+                else
+                {
+                    return Ok(stream);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+
+
+            /*
             if (validation == null || !_xsl.ContainsKey(validation))
             {
                 return NotFound("Volba validace '" + validation + "' není dostupná!");
@@ -93,7 +202,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
             validator.transform(new StreamSource(new DotNetInputStream(clinicalDocument.GetStream())), validationResult);
 
             return Ok(validationResult.getXdmNode());
-
+            */
         }
 
     }

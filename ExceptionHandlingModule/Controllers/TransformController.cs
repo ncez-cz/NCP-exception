@@ -1,3 +1,4 @@
+using javax.xml.crypto;
 using javax.xml.transform.stream;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -18,9 +19,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
     {
         private readonly IConfiguration _config;
         private readonly string? _out;
-        private readonly string? _scriptInterpreter;
-        private readonly string? _addGuidsScript;
-        private readonly string? _fixDatetimeScript;
+      
         private readonly ILogger<TransformController> _logger;
         private static Dictionary<string, Xslt30Transformer> _xsl = new Dictionary<string, Xslt30Transformer>();
         private static Dictionary<string, List<string>> _commands = new Dictionary<string, List<string>>();
@@ -35,10 +34,6 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
             {
                 Console.SetOut(new StreamWriter(_out));
             }
-
-            _scriptInterpreter = _config.GetValue<string>("scriptInterpreter");
-            _addGuidsScript = _config.GetValue<string>("addGuidsScript");
-            _fixDatetimeScript = _config.GetValue<string>("fixDatetimeScript");
 
             if (_xsl.Count() == 0)
             {
@@ -108,12 +103,11 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
         public ActionResult<string> Transform(string transformation = "cda_epsos_ps7_replace_unknown_codes_EU", [FromBody] ClinicalDocument clinicalDocument = null)
         {
 
-           // var memoryStream = new MemoryStream();
+            //String EncodingType;
+            //EncodingType = Request.ContentEncoding.EncodingName;
 
             var requestStream = clinicalDocument.GetStream();
-           // requestStream.CopyTo(memoryStream);
-           // Console.WriteLine("request size: " + memoryStream.Position);
-          //  memoryStream.Position = 0;
+            var encoding = clinicalDocument.GetEncoding();
             var stream = requestStream;
 
             XdmNode? result = null;
@@ -137,12 +131,23 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
                         var transformator = _xsl[command];
 
                         var transformationResult = new XdmDestination();
-
+                        /* encoding debugging
+                        using (FileStream file = new FileStream("C://converters//b" + _commands[transformation].IndexOf(command) + ".xml", FileMode.Create, System.IO.FileAccess.Write))
+                        {
+                            byte[] bytes = new byte[stream.Length];
+                            stream.Read(bytes, 0, (int)stream.Length);
+                            file.Write(bytes, 0, bytes.Length);
+                            //stream.Close();
+                            stream.Position = 0;
+                        }
+                        */
                         transformator.transform(new StreamSource(new DotNetInputStream(stream)), transformationResult);
 
                         result = transformationResult.getXdmNode();
                         string resultString = result.ToString();
                         stream = new MemoryStream();
+                        byte[] header = Encoding.UTF8.GetBytes(@"<?xml version=""1.0"" encoding=""utf-8""?>");
+                        stream.Write(header, 0, header.Length);
                         byte[] resultBytes = Encoding.UTF8.GetBytes(resultString);
                         stream.Write(resultBytes, 0, resultBytes.Length);
                         stream.Close();
@@ -162,18 +167,42 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
                             process.StartInfo.UseShellExecute = false;
                             process.StartInfo.RedirectStandardInput = true;
                             process.StartInfo.RedirectStandardOutput = true;
-                            //process.StartInfo.StandardInputEncoding = Encoding.UTF8;
+                            process.StartInfo.StandardInputEncoding = encoding; // Encoding.UTF8;
                             process.StartInfo.StandardOutputEncoding = Encoding.UTF8;
                             process.Start();
 
-                            
+                            /* encoding debugging
+                            using (FileStream file = new FileStream("C://converters//a"+ _commands[transformation].IndexOf(command)+".xml", FileMode.Create, System.IO.FileAccess.Write))
+                            {
+                                byte[] bytes = new byte[stream.Length];
+                                stream.Read(bytes, 0, (int)stream.Length);
+                                file.Write(bytes, 0, bytes.Length);
+                                //stream.Close();
+                                stream.Position = 0;
+                            }
+                            */
                             StreamWriter processInput = process.StandardInput;
                             stream.CopyTo(processInput.BaseStream);
+
+                            stream.Position = 0;
+                            var streamReader2 = new StreamReader(stream, encoding);
+                            var data = streamReader2.ReadToEnd();
+
                             Console.WriteLine("process \"" + command + "\" is running ... !"); // with input stream size: " + stream.Position);
                             processInput.Close();
 
                             stream = process.StandardOutput.BaseStream;
-                            
+                            encoding = Encoding.UTF8;
+
+                            var stream2 = new MemoryStream();
+                            stream.CopyTo(stream2);
+                            stream2.Position = 0;
+                            streamReader2 = new StreamReader(stream2,Encoding.UTF8);
+                            data = streamReader2.ReadToEnd();
+                            stream2.Position = 0;
+                            stream = stream2;
+
+
                             //process.WaitForExit();
 
                         }
@@ -187,88 +216,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Controllers
                     return Ok(stream);
                 }
 
-                /*
-                if (transformation.StartsWith("dasta2fhir"))
-                    {
-                        //preprocessing
-
-
-                        using (Process addGuidsProcess = new Process())
-                        {
-                            //add guids for fhir resources
-                            addGuidsProcess.StartInfo.FileName = _scriptInterpreter;
-
-                            addGuidsProcess.StartInfo.Arguments = string.Format("{0}", _addGuidsScript);
-                            addGuidsProcess.StartInfo.UseShellExecute = false;
-                            addGuidsProcess.StartInfo.RedirectStandardInput = true;
-                            addGuidsProcess.StartInfo.RedirectStandardOutput = true;
-                            addGuidsProcess.Start();
-
-                            StreamWriter addGuidsInput = addGuidsProcess.StandardInput;
-
-                            inputStream.CopyTo(addGuidsInput.BaseStream);
-                            Console.WriteLine("addGuidsInput size: " + inputStream.Position);
-
-                            addGuidsInput.Close();
-
-                            StreamReader addGuidsOutput = addGuidsProcess.StandardOutput;
-
-                            var input2Stream = new MemoryStream();
-                            addGuidsOutput.BaseStream.CopyTo(input2Stream);
-                            Console.WriteLine("addGuidsOutput size: " + input2Stream.Position);
-                            input2Stream.Position = 0;
-
-                            using (Process fixDatetimesProcess = new Process())
-                            {
-                                //fix datetime formats
-                                fixDatetimesProcess.StartInfo.FileName = _scriptInterpreter;
-
-                                fixDatetimesProcess.StartInfo.Arguments = string.Format("{0}", _fixDatetimeScript);
-                                fixDatetimesProcess.StartInfo.UseShellExecute = false;
-                                fixDatetimesProcess.StartInfo.RedirectStandardInput = true;
-                                fixDatetimesProcess.StartInfo.RedirectStandardOutput = true;
-                                fixDatetimesProcess.Start();
-
-                                StreamWriter fixDatetimesInput = fixDatetimesProcess.StandardInput;
-
-                                input2Stream.CopyTo(fixDatetimesInput.BaseStream);
-                                Console.WriteLine("addGuidsInput size: " + input2Stream.Position);
-
-                                fixDatetimesInput.Close();
-
-                                StreamReader fixDatetimesOutput = fixDatetimesProcess.StandardOutput;
-
-                                inputStream = new MemoryStream();
-
-                                fixDatetimesOutput.BaseStream.CopyTo(inputStream);
-                                Console.WriteLine("fixDatetimesOutput size: " + inputStream.Position);
-
-                                fixDatetimesProcess.WaitForExit();
-
-                                //Console.WriteLine("preprocessed size: " + inputStream.Position);
-
-                                inputStream.Position = 0;
-
-                            }
-
-                            addGuidsProcess.WaitForExit();
-
-                        }
-                    }
-
-
-                if (transformation == null || !_xsl.ContainsKey(transformation))
-                {
-                    return NotFound("Volba transformace '" + transformation + "' není dostupná!");
-                }
-                var transformator = _xsl[transformation];
-
-                var transformationResult = new XdmDestination();
-
-                transformator.transform(new StreamSource(new DotNetInputStream(inputStream)), transformationResult);
-
-                return Ok(transformationResult.getXdmNode());
-                */
+             
             }
             catch (Exception ex)
             {

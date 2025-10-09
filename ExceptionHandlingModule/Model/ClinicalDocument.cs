@@ -1,25 +1,30 @@
-﻿using System.Xml.Serialization;
+﻿using com.sun.org.apache.xml.@internal.resolver.helpers;
+using System.Text;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Provisio.Converters.ExceptionHandlingModule.Model
 {
     [XmlRoot("ClinicalDocument", Namespace = "urn:hl7-org:v3")]
     public class ClinicalDocument
     {
-        private string data;
+        private Stream stream;
+        private Encoding encoding;
 
-        public ClinicalDocument(string data)
+        public ClinicalDocument(Stream stream, Encoding encoding)
         {
-            this.data = data;
+            this.stream = stream;
+            this.encoding = encoding;
         }
+
+        public Encoding GetEncoding()
+        {
+            return encoding;
+        }
+       
         public Stream GetStream()
         {
-            // kůli wrap-u na java saxon je nutné mít synchronní stream (asynchnonní nefunguje)
-            var bodyStream = new MemoryStream();
-            var bodyWriter = new StreamWriter(bodyStream);
-            bodyWriter.Write(data);
-            bodyWriter.Flush();
-            bodyStream.Position = 0;
-            return bodyStream;
+            return stream;
         }
 
     }

@@ -12,6 +12,11 @@ namespace Provisio.Converters.ExceptionHandlingModule.Formatter
             //  SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("text/plain"));
             SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse("application/xml"));
             SupportedEncodings.Add(Encoding.UTF8);
+            SupportedEncodings.Add(Encoding.GetEncoding(852)); //  IBM 852
+            SupportedEncodings.Add(Encoding.GetEncoding("ISO-8859-2")); // ISO - 8859 - 2
+            SupportedEncodings.Add(Encoding.Latin1);
+            SupportedEncodings.Add(Encoding.ASCII);
+            SupportedEncodings.Add(Encoding.GetEncoding("windows-1250"));
             SupportedEncodings.Add(Encoding.Unicode);
         }
 
