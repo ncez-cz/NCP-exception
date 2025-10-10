@@ -2153,7 +2153,6 @@ http://www.altova.com/mapforce
 			</xsl:for-each>
 		</xsl:variable>
 		<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:ips="urn:hl7-org:ips" xmlns:pharm="urn:hl7-org:pharm">
-			<xsl:attribute name="xsi:schemaLocation" namespace="http://www.w3.org/2001/XMLSchema-instance" select="'urn:hl7-org:v3 file:///C:/PROVISIO/Mapping/schemas/CDA-IPS-main/validation/schema/CDA_IPS.xsd'"/>
 			<typeId>
 				<xsl:attribute name="root" namespace="" select="'2.16.840.1.113883.1.3'"/>
 				<xsl:attribute name="extension" namespace="" select="'POCD_HD000040'"/>

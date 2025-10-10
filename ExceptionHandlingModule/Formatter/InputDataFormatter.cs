@@ -29,7 +29,7 @@ namespace Provisio.Converters.ExceptionHandlingModule.Formatter
         protected override bool CanReadType(Type type)
             => type == typeof(ClinicalDocument);
 
-        private static Encoding GetXmlEncoding(string xmlString)
+        private static Encoding GetXmlEncoding(string xmlString,Encoding defaultEncoding)
         {
             if (string.IsNullOrWhiteSpace(xmlString)) throw new ArgumentException("The provided string value is null or empty.");
 
@@ -42,7 +42,13 @@ namespace Provisio.Converters.ExceptionHandlingModule.Formatter
                     if (!xmlReader.Read()) throw new ArgumentException(
                         "The provided XML string does not contain enough data to be valid XML (see https://msdn.microsoft.com/en-us/library/system.xml.xmlreader.read)");
                     var encoding = xmlReader.GetAttribute("encoding");
-                    var result = Encoding.GetEncoding(encoding);
+                    Encoding result;
+                    if (encoding != null)
+                    {
+                        result = Encoding.GetEncoding(encoding);
+                    } else
+                        result= defaultEncoding;
+
                     return result;
                 }
             }
@@ -60,7 +66,11 @@ namespace Provisio.Converters.ExceptionHandlingModule.Formatter
             using (var streamReader = new StreamReader(stream))
             {
                 string data = streamReader.ReadToEnd();
-                enc = GetXmlEncoding(data); 
+                if (encoding == null)
+                {
+                    encoding = Encoding.UTF8;
+                }
+                enc = GetXmlEncoding(data,encoding); 
                 
             }
 
