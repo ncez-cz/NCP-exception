@@ -213,95 +213,99 @@ namespace EMapper.Convertor.DastaHL7.CDAConvertor.Wave6
 
             var result = new List<POCD_MT000040Participant1>();
 
-            foreach (var dastaAddress in relevatntKuz.Items.OfType<ku_pacType>().Single().a)
+            var addresses = relevatntKuz.Items.OfType<ku_pacType>()?.Single().a;
+
+            if (addresses != null)
             {
-                POCD_MT000040Participant1 participant = null;
-                switch (dastaAddress.typ)
+                foreach (var dastaAddress in addresses)
                 {
-                    case "4":
-                    case "C":
-                    case "G":
-                    case "M":
+                    POCD_MT000040Participant1 participant = null;
+                    switch (dastaAddress.typ)
+                    {
+                        case "4":
+                        case "C":
+                        case "G":
+                        case "M":
 
 
-                        participant = new POCD_MT000040Participant1
-                        {
-                            typeCode = "IND",
-                            templateId = new[] {new II {root = "1.3.6.1.4.1.19376.1.5.3.1.2.4"}},
-                            functionCode = new CE
+                            participant = new POCD_MT000040Participant1
                             {
-                                code = "PCP",
-                                codeSystem = "2.16.840.1.113883.5.88"
-                            },
-                            associatedEntity = new POCD_MT000040AssociatedEntity
-                            {
-                                classCode = "PRS",
-                                addr = new[] {ConvertDastaAdressToCDA(dastaAddress, "WP")},
-                                telecom = ConvertTelecomTypes(dastaAddress),
-                                associatedPerson = GetCdaPersonStructure(dastaAddress.o_titul_pred,
-                                    dastaAddress.o_jmeno,
-                                    dastaAddress.o_prijmeni,
-                                    dastaAddress.o_titul_za)
-                            }
-                        };
-
-                        break;
-
-                    case "K":
-
-                        participant = new POCD_MT000040Participant1
-                        {
-                            typeCode = "IND",
-                            templateId = new[] {new II {root = "1.3.6.1.4.1.19376.1.5.3.1.2.4"}},
-                            associatedEntity = new POCD_MT000040AssociatedEntity
-                            {
-                                classCode = dastaAddress.k_osoba_typ == "E" ? "ECON" : "NOK",
-                                addr = new[]
+                                typeCode = "IND",
+                                templateId = new[] { new II { root = "1.3.6.1.4.1.19376.1.5.3.1.2.4" } },
+                                functionCode = new CE
                                 {
+                                    code = "PCP",
+                                    codeSystem = "2.16.840.1.113883.5.88"
+                                },
+                                associatedEntity = new POCD_MT000040AssociatedEntity
+                                {
+                                    classCode = "PRS",
+                                    addr = new[] { ConvertDastaAdressToCDA(dastaAddress, "WP") },
+                                    telecom = ConvertTelecomTypes(dastaAddress),
+                                    associatedPerson = GetCdaPersonStructure(dastaAddress.o_titul_pred,
+                                        dastaAddress.o_jmeno,
+                                        dastaAddress.o_prijmeni,
+                                        dastaAddress.o_titul_za)
+                                }
+                            };
+
+                            break;
+
+                        case "K":
+
+                            participant = new POCD_MT000040Participant1
+                            {
+                                typeCode = "IND",
+                                templateId = new[] { new II { root = "1.3.6.1.4.1.19376.1.5.3.1.2.4" } },
+                                associatedEntity = new POCD_MT000040AssociatedEntity
+                                {
+                                    classCode = dastaAddress.k_osoba_typ == "E" ? "ECON" : "NOK",
+                                    addr = new[]
+                                    {
                                     ConvertDastaAdressToCDA(dastaAddress, dastaAddress.k_osoba_typ == "E" ? "EC" : "HP")
                                 },
-                                telecom = ConvertTelecomTypes(dastaAddress),
-                                associatedPerson = GetCdaPersonStructure(dastaAddress?.o_titul_pred,
-                                    dastaAddress?.o_jmeno,
-                                    dastaAddress?.o_prijmeni,
-                                    dastaAddress?.o_titul_za)
-                            }
-                        };
+                                    telecom = ConvertTelecomTypes(dastaAddress),
+                                    associatedPerson = GetCdaPersonStructure(dastaAddress?.o_titul_pred,
+                                        dastaAddress?.o_jmeno,
+                                        dastaAddress?.o_prijmeni,
+                                        dastaAddress?.o_titul_za)
+                                }
+                            };
 
-                        break;
+                            break;
 
-                    case "T":
+                        case "T":
 
-                        participant = new POCD_MT000040Participant1
-                        {
-                            typeCode = "IND",
-                            templateId = new[] {new II {root = "1.3.6.1.4.1.19376.1.5.3.1.2.4"}},
-                            associatedEntity = new POCD_MT000040AssociatedEntity
+                            participant = new POCD_MT000040Participant1
                             {
-                                classCode = "PRS",
-                                code = new CE
+                                typeCode = "IND",
+                                templateId = new[] { new II { root = "1.3.6.1.4.1.19376.1.5.3.1.2.4" } },
+                                associatedEntity = new POCD_MT000040AssociatedEntity
                                 {
-                                    code = "SIGOTHR",
-                                    codeSystem = "2.16.840.1.113883.5.111",
-                                    displayName = "significant other",
-                                    codeSystemName = "RoleCode"
-                                },
-                                addr = new[] {ConvertDastaAdressToCDA(dastaAddress, "HP")},
-                                telecom = ConvertTelecomTypes(dastaAddress),
-                                associatedPerson = GetCdaPersonStructure(dastaAddress?.o_titul_pred,
-                                    dastaAddress?.o_jmeno,
-                                    dastaAddress?.o_prijmeni,
-                                    dastaAddress?.o_titul_za)
-                            }
-                        };
+                                    classCode = "PRS",
+                                    code = new CE
+                                    {
+                                        code = "SIGOTHR",
+                                        codeSystem = "2.16.840.1.113883.5.111",
+                                        displayName = "significant other",
+                                        codeSystemName = "RoleCode"
+                                    },
+                                    addr = new[] { ConvertDastaAdressToCDA(dastaAddress, "HP") },
+                                    telecom = ConvertTelecomTypes(dastaAddress),
+                                    associatedPerson = GetCdaPersonStructure(dastaAddress?.o_titul_pred,
+                                        dastaAddress?.o_jmeno,
+                                        dastaAddress?.o_prijmeni,
+                                        dastaAddress?.o_titul_za)
+                                }
+                            };
 
-                        break;
+                            break;
+                    }
+
+                    result.Add(participant);
                 }
 
-                result.Add(participant);
             }
-
-
             return result.ToArray();
         }
 
@@ -755,7 +759,7 @@ namespace EMapper.Convertor.DastaHL7.CDAConvertor.Wave6
 
         private POCD_MT000040Guardian[] GetPatientGuardian(ku_pacType firstPatsum)
         {
-            var guardianBlockDasta = firstPatsum.a.Where(x => x.typ == "Z");
+            var guardianBlockDasta = firstPatsum.a?.Where(x => x.typ == "Z");
 
             var result = new List<POCD_MT000040Guardian>();
             if (guardianBlockDasta == null)
@@ -832,7 +836,7 @@ namespace EMapper.Convertor.DastaHL7.CDAConvertor.Wave6
 
         private TEL[] GetTelecomTypes(IEnumerable<ku_pacType> kuPacType)
         {
-            var relevantAddress = kuPacType.FirstOrDefault()?.a.Where(x => x.typ == "1" || x.typ == "2");
+            var relevantAddress = kuPacType.FirstOrDefault()?.a?.Where(x => x.typ == "1" || x.typ == "2");
 
             if (relevantAddress == null) return null;
 
