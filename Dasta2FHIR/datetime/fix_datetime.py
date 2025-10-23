@@ -6,26 +6,32 @@ from datetime import datetime
 
 
 def fixDateTimeElem( node:ET.Element):
-    timezone = pytz.timezone('Europe/Prague')
-    format = node.get('format')
-    dateTimeStr = node.text
-    if (format in ("D","MR","R")) or (re.match(".*T.*Z",dateTimeStr)!=None) or (re.match(".*T.*[+-].*",dateTimeStr)!=None): 
-       return
-    if format == "DT":
-        dt = datetime.strptime(dateTimeStr,"%Y-%m-%dT%H:%M")
-    else:
-        dt = datetime.strptime(dateTimeStr,"%Y-%m-%dT%H:%M:%S")
-    newdt = timezone.localize(dt)
-    node.text=newdt.strftime("%Y-%m-%dT%H:%M:%S%:z")
+    try:
+        timezone = pytz.timezone('Europe/Prague')
+        format = node.get('format')
+        dateTimeStr = node.text
+        if (format in ("D","MR","R")) or (re.match(".*T.*Z",dateTimeStr)!=None) or (re.match(".*T.*[+-].*",dateTimeStr)!=None): 
+            return
+        if format == "DT":
+            dt = datetime.strptime(dateTimeStr,"%Y-%m-%dT%H:%M")
+        else:
+            dt = datetime.strptime(dateTimeStr,"%Y-%m-%dT%H:%M:%S")
+        newdt = timezone.localize(dt)
+        node.text=newdt.strftime("%Y-%m-%dT%H:%M:%S%:z")
+    except:
+        return
 
 def fixDateTimeAttr( node:ET.Element, suffix:str):
-    timezone = pytz.timezone('Europe/Prague')
-    dateTimeStr = node.get("dat_"+suffix)
-    if (re.match(".*T.*Z",dateTimeStr)!=None) or (re.match(".*T.*[+-].*",dateTimeStr)!=None): 
-       return
-    dt = datetime.strptime(dateTimeStr,"%Y-%m-%dT%H:%M:%S")
-    newdt = timezone.localize(dt)
-    node.set("dat_"+suffix,newdt.strftime("%Y-%m-%dT%H:%M:%S%:z"))
+    try:
+        timezone = pytz.timezone('Europe/Prague')
+        dateTimeStr = node.get("dat_"+suffix)
+        if (re.match(".*T.*Z",dateTimeStr)!=None) or (re.match(".*T.*[+-].*",dateTimeStr)!=None): 
+            return
+        dt = datetime.strptime(dateTimeStr,"%Y-%m-%dT%H:%M:%S")
+        newdt = timezone.localize(dt)
+        node.set("dat_"+suffix,newdt.strftime("%Y-%m-%dT%H:%M:%S%:z"))
+    except:
+        return
     
 def main():
     if len(sys.argv) == 1:
