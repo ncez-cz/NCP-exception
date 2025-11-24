@@ -76,19 +76,11 @@
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
-	<xs:complexType name="str255_withGuid">
-        <xs:simpleContent>
- 	    <xs:extension base="dsComm:str255">
-		        <xs:attribute name="guid" type="dsComm:guidType"/>
-		        <xs:attribute name="vguid" type="dsComm:guidType"/>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
     <xs:complexType name="garant_datType">
         <xs:simpleContent>
  	    <xs:extension base="dsComm:str35">
-		        <xs:attribute name="guid" type="dsComm:guidType"/>
-		        <xs:attribute name="vguid" type="dsComm:guidType"/>
+		<xs:attribute name="guid" type="dsComm:guidType"/>
+		<xs:attribute name="vguid" type="dsComm:guidType"/>
                 <xs:attribute name="id_zp" type="dsComm:str10" use="optional" />
                 <xs:attribute name="id_garant" type="dsComm:str64" use="required" />
                 <xs:attribute name="odbornost" type="dsComm:str3" use="optional" />

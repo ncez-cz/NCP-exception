@@ -46,3 +46,6 @@
 [submodule "ds4"]
 	path = ds4
 	url = https://github.com/eZprava/ds4.git
+[submodule "schemas/ds4"]
+	path = schemas/ds4
+	url = https://github.com/kruzikh/ds4.git

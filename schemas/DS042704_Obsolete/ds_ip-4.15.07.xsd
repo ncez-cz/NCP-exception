@@ -91,8 +91,6 @@
                                 <xs:element name="kuAny" type="dsComm:AnyType" minOccurs="0" />
                             </xs:sequence>
                         </xs:choice>
-						<xs:attribute name="guid" type="dsComm:guidType"/>
-						<xs:attribute name="vguid" type="dsComm:guidType"/>
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="ipAny" type="dsComm:AnyType" minOccurs="0" />
@@ -1879,9 +1877,9 @@
                 </xs:complexType>
             </xs:element>
             <xs:element name="dourceni" type="dsComm:str255" minOccurs="0" />
-            <xs:element name="vrmahn" type="dsComm:str255_withGuid" minOccurs="0" />
-            <xs:element name="vrmlpn" type="dsComm:str255_withGuid" minOccurs="0" />
-            <xs:element name="vrmzhl" type="dsComm:str255_withGuid" minOccurs="0" />
+            <xs:element name="vrmahn" type="dsComm:str255" minOccurs="0" />
+            <xs:element name="vrmlpn" type="dsComm:str255" minOccurs="0" />
+            <xs:element name="vrmzhl" type="dsComm:str255" minOccurs="0" />
             <xs:element name="autor" type="dsComm:autorType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="vrkpaAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
@@ -1906,13 +1904,13 @@
         <xs:sequence>
             <xs:element name="nazvy" type="dsip:nazvyType" minOccurs="0" />
             <xs:element name="lopok" type="dsip:lopokType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="vrmp" type="dsComm:str255_withGuid" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vrmp" type="dsComm:str255" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="ttd" type="dsComm:dat_xxType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="vrmmn" type="dsComm:str255_withGuid" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="vrmmn" type="dsComm:str255" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="vrkpa" type="dsip:vrkpaType" minOccurs="0" maxOccurs="unbounded" />
-            <xs:element name="vrmahn" type="dsComm:str255_withGuid" minOccurs="0" />
-            <xs:element name="vrmlpn" type="dsComm:str255_withGuid" minOccurs="0" />
-            <xs:element name="vrmzhl" type="dsComm:str255_withGuid" minOccurs="0" />
+            <xs:element name="vrmahn" type="dsComm:str255" minOccurs="0" />
+            <xs:element name="vrmlpn" type="dsComm:str255" minOccurs="0" />
+            <xs:element name="vrmzhl" type="dsComm:str255" minOccurs="0" />
             <xs:element name="autor" type="dsComm:autorType" minOccurs="0" maxOccurs="unbounded" />
             <xs:element name="vrkAny" type="dsComm:AnyType" minOccurs="0" />
         </xs:sequence>
@@ -1921,8 +1919,6 @@
         <xs:attribute name="systspec_kod" type="dsComm:str16" />
         <xs:attribute name="spec_text" type="dsComm:str55" />
         <xs:attribute name="subspec_text" type="dsComm:str55" />
-		<xs:attribute name="guid_specimen" type="dsComm:guidType"/>
-        <xs:attribute name="vguid_specimen" type="dsComm:guidType"/>
         <xs:attribute name="ziskmat_kod" type="dsCis:NCMPZZM" />
         <xs:attribute name="ziskmat_text" type="dsComm:str55" />
         <xs:attribute name="lokal_mo" type="dsComm:str55" />
