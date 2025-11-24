@@ -100,46 +100,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="garant_dat" library="provisio" uid="5106" kind="19" visible="0">
-					<view ltx="429" lty="166" rbx="737" rby="305"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="garant_dat" ns="1" componentid="3183" expanded="1">
-								<entry name="garant_dat" inpkey="25"/>
-							</entry>
-						</root>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-								</namespaces>
-							</header>
-							<entry name="entry" componentid="5453" expanded="1">
-								<entry name="entry" ns="1" outkey="26">
-									<entry name="resource" ns="1" expanded="1">
-										<entry name="Practitioner" ns="1" expanded="1">
-											<entry name="id" ns="1" expanded="1">
-												<entry name="value" type="attribute" outkey="27"/>
-											</entry>
-											<entry name="meta" ns="1" expanded="1">
-												<entry name="versionId" ns="1" expanded="1">
-													<entry name="value" type="attribute" outkey="33"/>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="is" library="provisio" uid="5103" kind="19" visible="0">
 					<view ltx="437" lty="16" rbx="737" rby="111"/>
 					<data>
@@ -341,6 +301,46 @@
 							</header>
 							<entry name="entry" ns="1" componentid="5689" expanded="1">
 								<entry name="entry" outkey="63"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="garant_dat" library="provisio" uid="5106" kind="19" visible="0">
+					<view ltx="437" lty="166" rbx="745" rby="305"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="garant_dat" ns="1" componentid="3183" expanded="1">
+								<entry name="garant_dat" inpkey="25"/>
+							</entry>
+						</root>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+								</namespaces>
+							</header>
+							<entry name="entry" componentid="5453" expanded="1">
+								<entry name="entry" ns="1" outkey="26">
+									<entry name="resource" ns="1" expanded="1">
+										<entry name="Practitioner" ns="1" expanded="1">
+											<entry name="id" ns="1" expanded="1">
+												<entry name="value" type="attribute" outkey="27"/>
+											</entry>
+											<entry name="meta" ns="1" expanded="1">
+												<entry name="versionId" ns="1" expanded="1">
+													<entry name="value" type="attribute" outkey="33"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
 							</entry>
 						</root>
 					</data>
@@ -33433,7 +33433,6 @@
 		</connections>
 	</component>
 	<component name="pv_pac" library="provisio" uid="6808">
-		<description/>
 		<structure>
 			<children>
 				<component name="constant" library="core" uid="6816" kind="2">
@@ -33464,7 +33463,7 @@
 					</data>
 				</component>
 				<component name="document" library="xml" uid="6810" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="81" lty="54" rbx="231" rby="254"/>
 					<data>
 						<root scrollposition="1">
@@ -33597,7 +33596,7 @@
 					</data>
 				</component>
 				<component name="document" library="xml" uid="6811" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1319" lty="56" rbx="1619" rby="507"/>
 					<data>
 						<root scrollposition="691">
@@ -33733,7 +33732,6 @@
 		</connections>
 	</component>
 	<component name="FullURL_Coverage" library="provisio" uid="6818">
-		<description/>
 		<structure>
 			<children>
 				<component name="concat" library="core" uid="6820" kind="5" growable="1" growablebasename="value">
