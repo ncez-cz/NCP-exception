@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Edited with Altova MapForce 2026 -->
+<!-- Edited with Altova MapForce 2024r2sp1 -->
 <mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="35">
 	<settings>
 		<libraries>
-			<import path="ku_z_lab (full atribute) - laboratorní vyšetření - všechny typy, composite _v17.mfd" saverelative="1"/>
+			<import path="dasta2fhir_laboratory_CZ.mfd" saverelative="1"/>
 		</libraries>
 	</settings>
 	<resources/>
@@ -66,7 +66,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="44" componentid="1989"/>
+							<entry name="date" inpkey="44" componentid="6103"/>
 						</root>
 						<root>
 							<header>
@@ -74,7 +74,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="45" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="45" componentid="6102"/>
 						</root>
 					</data>
 				</component>
@@ -6739,7 +6739,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="44" componentid="1989"/>
+							<entry name="date" inpkey="44" componentid="6103"/>
 						</root>
 						<root>
 							<header>
@@ -6747,7 +6747,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="57" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="57" componentid="6102"/>
 						</root>
 					</data>
 				</component>
@@ -6865,7 +6865,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="42" componentid="1989"/>
+							<entry name="date" inpkey="42" componentid="6103"/>
 						</root>
 						<root>
 							<header>
@@ -6873,7 +6873,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="56" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="56" componentid="6102"/>
 						</root>
 					</data>
 				</component>
@@ -27810,28 +27810,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="Reference_Practitioner" library="provisio" uid="6786" kind="19" visible="0">
-					<view ltx="490" lty="741" rbx="676" rby="775"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="298" componentid="2787"/>
-							<entry name="VGUID" inpkey="299" componentid="2788"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="referencePractitioner" outkey="300" componentid="2791"/>
-						</root>
-					</data>
-				</component>
 				<component name="pracoviste" library="provisio" uid="6648" kind="19" visible="0">
 					<view ltx="487" lty="899" rbx="813" rby="936"/>
 					<data>
@@ -27856,11 +27834,126 @@
 						</root>
 					</data>
 				</component>
+				<component name="value-map" library="core" uid="5713" kind="23">
+					<sources>
+						<datapoint pos="0" key="22"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="23"/>
+					</targets>
+					<view ltx="578" lty="128" rbx="658" rby="166"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="R" to="registered"/>
+								<entry from="P" to="preliminary"/>
+								<entry from="F" to="final"/>
+								<entry from="Z" to="amended"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="vys_v_snomed" library="provisio" uid="5706" kind="19" visible="0">
+					<view ltx="488" lty="659" rbx="799" rby="704"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="patientReference" inpkey="288" componentid="6716"/>
+							<entry name="vys_v_snomed" componentid="5056" expanded="1">
+								<entry name="vys_v_snomed" ns="1" inpkey="14"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="5057" expanded="1">
+								<entry name="entry" outkey="21"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="text_autor_ptext_ktext_priloha" library="provisio" uid="5723" kind="19" visible="0">
+					<view ltx="666" lty="207" rbx="978" rby="296"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="patientReference" inpkey="280" componentid="6640" expanded="1"/>
+							<entry name="text" componentid="2814" expanded="1">
+								<entry name="text" ns="1" inpkey="67"/>
+							</entry>
+							<entry name="tag" inpkey="264" componentid="5837"/>
+							<entry name="tag2" inpkey="285" componentid="6715"/>
+							<entry name="practitionerReference" inpkey="328" componentid="6704"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="DiagnosticReport" ns="1" componentid="2815" expanded="1">
+								<entry name="entry" outkey="265"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="patientReference" library="core" uid="6649" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="270"/>
+					</targets>
+					<view ltx="103" lty="72" rbx="248" rby="110"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="Reference_Practitioner" library="provisio" uid="6786" kind="19" visible="0">
+					<view ltx="490" lty="741" rbx="676" rby="775"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="298" componentid="2787"/>
+							<entry name="VGUID" inpkey="299" componentid="2788"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="referencePractitioner" outkey="300" componentid="2791"/>
+						</root>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="5345" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1304" lty="35" rbx="1734" rby="858"/>
 					<data>
-						<root scrollposition="5084">
+						<root scrollposition="4534">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -28115,99 +28208,6 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="value-map" library="core" uid="5713" kind="23">
-					<sources>
-						<datapoint pos="0" key="22"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="23"/>
-					</targets>
-					<view ltx="578" lty="128" rbx="658" rby="166"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="R" to="registered"/>
-								<entry from="P" to="preliminary"/>
-								<entry from="F" to="final"/>
-								<entry from="Z" to="amended"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
-				</component>
-				<component name="vys_v_snomed" library="provisio" uid="5706" kind="19" visible="0">
-					<view ltx="488" lty="659" rbx="799" rby="704"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="patientReference" inpkey="288" componentid="6716"/>
-							<entry name="vys_v_snomed" componentid="5056" expanded="1">
-								<entry name="vys_v_snomed" ns="1" inpkey="14"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="5057" expanded="1">
-								<entry name="entry" outkey="21"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="text_autor_ptext_ktext_priloha" library="provisio" uid="5723" kind="19" visible="0">
-					<view ltx="666" lty="207" rbx="978" rby="296"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="patientReference" inpkey="280" componentid="6640" expanded="1"/>
-							<entry name="text" componentid="2814" expanded="1">
-								<entry name="text" ns="1" inpkey="67"/>
-							</entry>
-							<entry name="tag" inpkey="264" componentid="5837"/>
-							<entry name="tag2" inpkey="285" componentid="6715"/>
-							<entry name="practitionerReference" inpkey="328" componentid="6704"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="DiagnosticReport" ns="1" componentid="2815" expanded="1">
-								<entry name="entry" outkey="265"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="patientReference" library="core" uid="6649" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="270"/>
-					</targets>
-					<view ltx="103" lty="72" rbx="248" rby="110"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
-					</data>
-				</component>
 				<component name="practitionerReference" library="core" uid="6794" kind="6">
 					<sources>
 						<datapoint/>
@@ -28232,7 +28232,7 @@
 								</namespaces>
 							</header>
 							<entry name="patientReference" inpkey="326" componentid="6062" expanded="1"/>
-							<entry name="practitionerReference" inpkey="330" componentid="6111"/>
+							<entry name="referencePracoviste" inpkey="331" componentid="5800"/>
 							<entry name="ku_z_labType" componentid="3122" expanded="1">
 								<entry name="ku_z_labType" ns="1" type="xml-type" inpkey="323"/>
 							</entry>
@@ -28329,7 +28329,7 @@
 			<edge from="270" to="326"/>
 			<edge from="327" to="328"/>
 			<edge from="327" to="329"/>
-			<edge from="327" to="330"/>
+			<edge from="327" to="331"/>
 		</connections>
 	</component>
 	<component name="ku_z_propz_prubh_s" library="provisio" uid="5347">

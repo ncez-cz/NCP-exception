@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2024r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="a" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="xslt2"/>
+		<structure>
+			<children/>
+		</structure>
+	</component>
+	<component name="fixDate" library="user" uid="6845" inline="1" editable="1" blackbox="0">
+		<structure>
+			<children>
+				<component name="hl7DateTimeString" library="core" uid="6846" kind="7">
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="800" rbx="922" rby="38"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="hl7DateTimeString"/>
+					</data>
+				</component>
+				<component name="date" library="core" uid="6847" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="152" lty="51" rbx="232" rby="89"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="date" optional="1"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
