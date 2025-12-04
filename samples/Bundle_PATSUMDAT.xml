@@ -53,12 +53,15 @@
 				</subject>
 				<date value="2016-12-12T11:00:00+01:00"/>
 				<author>
+					<reference value="urn:uuid:7a79679f-b94e-4e9a-bc32-ebe7f5ef93a3"/>
+				</author>
+				<author>
 					<reference value="urn:uuid:5779af5b-5dd3-40d8-9f7a-cbbd202485c0"/>
 				</author>
-				<title value="Patient Summary"/>
-				<custodian>
+				<author>
 					<reference value="urn:uuid:d6a67ab4-168b-4741-95dc-27c9323541d5"/>
-				</custodian>
+				</author>
+				<title value="Patient Summary"/>
 				<section>
 					<title value="Problems section"/>
 					<code>
@@ -2682,6 +2685,41 @@
 					</period>
 				</address>
 			</RelatedPerson>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:7a79679f-b94e-4e9a-bc32-ebe7f5ef93a3"/>
+		<resource>
+			<Organization>
+				<id value="7a79679f-b94e-4e9a-bc32-ebe7f5ef93a3"/>
+				<meta>
+					<versionId value="970b63ac-fc9f-48fa-8aad-248d38ea4b94"/>
+					<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"/>
+					<tag>
+						<version value="p_pracoviste"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Thomayerova nemocnice</xhtml:div>
+				</text>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icz"/>
+					<value value="44101000"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icp"/>
+					<value value="44101882"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odb"/>
+					<value value="101"/>
+				</identifier>
+				<name value="Thomayerova nemocnice"/>
+			</Organization>
 		</resource>
 	</entry>
 	<entry>

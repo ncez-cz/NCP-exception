@@ -494,7 +494,7 @@
 					</dsip:z_pracovnik>
 					<dsip:p_pracoviste guid ="7a79679f-b94e-4e9a-bc32-ebe7f5ef93a3" vguid ="970b63ac-fc9f-48fa-8aad-248d38ea4b94" icz="44101000" icp="44101882" odb="101">
 						<dsip:nazev>Thomayerova nemocnice</dsip:nazev>
-						<a typ="A" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
+<!-- 						<a typ="A" xmlns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta">
 							<dsip:jmeno>Tomáš Ukázka</dsip:jmeno>
 							<dsip:adr>Plzeňská 145/8</dsip:adr>
 							<dsip:dop1>Smíchov</dsip:dop1>
@@ -508,9 +508,9 @@
 							<as typ="E">
 								<obsah>nemocnice@nemocnice.cz</obsah>
 							</as>
-						</a>					
+						</a> -->					
 					</dsip:p_pracoviste>
-					<dsip:p_pracovnik guid ="aa51ef8b-71dd-477f-bc13-6dcfa3395540" vguid ="834efb2a-4448-4e62-bddd-d6576b70df4c" role_klic="2211" role_text="Praktičtí lékaři" id_pracovnik="56272890">
+<!-- 					<dsip:p_pracovnik guid ="aa51ef8b-71dd-477f-bc13-6dcfa3395540" vguid ="834efb2a-4448-4e62-bddd-d6576b70df4c" role_klic="2211" role_text="Praktičtí lékaři" id_pracovnik="56272890">
 						<dsip:titul_pred>MUDr</dsip:titul_pred>
 						<dsip:jmeno>Ludmila</dsip:jmeno>
 						<dsip:prijmeni>Lékařská</dsip:prijmeni>
@@ -528,7 +528,7 @@
 								<obsah>lekar@qgmail.com</obsah>
 							</as>
 						</a>
-					</dsip:p_pracovnik>
+					</dsip:p_pracovnik> -->
 
 					
 					
@@ -552,7 +552,7 @@
 							</as>
 						</a>
 					</p_pracovnik> -->
-					<dsip:sdilejici>
+<!-- 					<dsip:sdilejici>
 						<dsip:pracoviste icz="12345600"
 						                 icp="12345601"
 						                 odb="103">
@@ -560,12 +560,12 @@
 						</dsip:pracoviste>
 						<dsip:poznamka>Dispenzarizující diabetolog</dsip:poznamka>
 						<dsip:stav>odeslano</dsip:stav>
-					</dsip:sdilejici>
+					</dsip:sdilejici> -->
 					<dsip:text>
 						<dsip:ptext xml:space="preserve">Nález normální, za 3 týdny doporučena kontrola u praktického lékaře.</dsip:ptext>
 					</dsip:text>
 					
-					<dsip:ku_pac id_pac="7601019998" guid="e627d3d8-c6c6-446b-b63b-87da47b888a4" vguid="cc08668a-3b22-4169-b2fb-1e0422458285">
+<!-- 					<dsip:ku_pac id_pac="7601019998" guid="e627d3d8-c6c6-446b-b63b-87da47b888a4" vguid="cc08668a-3b22-4169-b2fb-1e0422458285">
                         <dsip:jmeno>Tomáš</dsip:jmeno>
 						<dsip:prijmeni>Ukázka</dsip:prijmeni>
 						<dsip:titul_pred>Ing.</dsip:titul_pred>
@@ -588,7 +588,7 @@
 								<dsip:obsah>+420603123456</dsip:obsah>
 							</dsip:as>
 						</dsip:a>
-                    </dsip:ku_pac>
+                    </dsip:ku_pac> -->
 					<dsip:ku_z_patsumdat>
 						<dsip:povolani dat_ab="2005-12-01T12:53:12">
 							<dsip:povolani_text>Konzultant</dsip:povolani_text>
