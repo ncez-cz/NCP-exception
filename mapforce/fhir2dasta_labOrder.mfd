@@ -40,7 +40,7 @@
 								</namespaces>
 							</header>
 							<entry name="FileInstance" ns="1" expanded="1">
-								<file role="inputinstance" name="..\samples\FHIR2DASTA\input\FHIR_ku_o_lab - v18..xml"/>
+								<file role="inputinstance" name="..\samples\FHIR_ku_o_lab - v18.xml"/>
 								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
 									<entry name="Bundle" expanded="1">
 										<entry name="identifier">
