@@ -40,14 +40,32 @@ def findGraph(component,graph,graphinv,edgekeys):
             else:
                 graphinv.append(key)
         graph[key]=values
+    for edge in component.findall("./connections/edge"):
+        key = edge.get("from")
+        to = edge.get("to")
+        if  not key in graph.keys():
+                graph[key]=[to]
+        else:
+                graph[key].append(to)
+        if not to in graphinv.keys():
+                graphinv[to]=[key]
+        else:
+                graphinv.append(key)
+        
     for newTargetKey in graph.keys():
         if len(graph[newTargetKey])>1:
             for newSourceKey in graph[newTargetKey]:
                 if not isLeaf(component,newSourceKey):
                     graphinv[newSourceKey].remove(newTargetKey) 
     
-def reconstructgraph(vertices: ET.Element,graphinv,edgekeys: dict):
-    for vertex in graphinv.keys():
+def reconstructgraph(vertices: ET.Element,connections: ET.Element,graphinv,edgekeys: dict):
+    if vertices is None:
+      for vertex in graphinv.keys():
+        for tov in graphinv[vertex]:
+            e = ET.Element("edge",{"from":vertex,"to":tov})
+            connections.append(e)
+    else:
+      for vertex in graphinv.keys():
         v = ET.Element("vertex",{"vertexkey":vertex})
         es = ET.Element("edges")
         for tov in graphinv[vertex]:
@@ -72,23 +90,34 @@ def removeComponent(root,componentName):
         for componentToRemove in compomentsToRemove:
             if componentToRemove.find(".//*[@inpkey]") is not None:
                 inpkey=componentToRemove.find(".//*[@inpkey]").attrib["inpkey"]
+                inpkey1=None
                 outkey=componentToRemove.find(".//*[@outkey]").attrib["outkey"]
             else:
                 inpkey=componentToRemove.find("./sources/datapoint[@pos='0']").attrib["key"]
+                inpkey1=componentToRemove.find("./sources/datapoint[@pos='1']").attrib["key"]
                 outkey=componentToRemove.find("./targets/datapoint[@pos='0']").attrib["key"]                                                                    
             c.find("./structure/children").remove(componentToRemove)
-            if graphVertices.find(f"./vertex[@vertexkey='{outkey}']/edges/edge") is None:
-                print('?')
-            toVertex=graphVertices.find(f"./vertex[@vertexkey='{outkey}']/edges/edge").attrib["vertexkey"]
-            fromVertex=graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey}']/../..").attrib["vertexkey"]
-            graphVertices.remove(graphVertices.find(f"./vertex[@vertexkey='{outkey}']"))
-            graphVertices.remove(graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey}']/../.."))
-            v = ET.Element("vertex",{"vertexkey":fromVertex})
-            es = ET.Element("edges")
-            e = ET.Element("edge",{"vertexkey":toVertex})
-            es.append(e)
-            v.append(es)
-            graphVertices.append(v)
+            if graphVertices is None:
+                connections=c.find(f"./connections")
+                toVertex = connections.find(f"./edge[@from='{outkey}']").attrib['to']
+                fromVertex = connections.find(f"./edge[@to='{inpkey}']").attrib['from']
+                connections.remove(connections.find(f"./edge[@from='{outkey}']"))
+                connections.remove(connections.find(f"./edge[@to='{inpkey}']"))
+                if inpkey1 is not None:
+                    connections.remove(connections.find(f"./edge[@to='{inpkey1}']"))
+                e = ET.Element("edge",{"from":fromVertex,"to":toVertex})
+                connections.append(e)
+            else:
+                toVertex=graphVertices.find(f"./vertex[@vertexkey='{outkey}']/edges/edge").attrib["vertexkey"]
+                fromVertex=graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey}']/../..").attrib["vertexkey"]
+                graphVertices.remove(graphVertices.find(f"./vertex[@vertexkey='{outkey}']"))
+                graphVertices.remove(graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey}']/../.."))
+                v = ET.Element("vertex",{"vertexkey":fromVertex})
+                es = ET.Element("edges")
+                e = ET.Element("edge",{"vertexkey":toVertex})
+                es.append(e)
+                v.append(es)
+                graphVertices.append(v)
 
 
 def createVariable(croot,name,varTreeOrg: ET.Element,whenkey,varInpkey,uid):
@@ -149,7 +178,12 @@ def createVariable(croot,name,varTreeOrg: ET.Element,whenkey,varInpkey,uid):
             e.find("./data/root/entry[@name='document']").append(varTree)
             rootchildren.append(e)
             
-def splitConnection(graph,cloneSourceOutkey,variableInpkey):
+def splitConnection(graph,connections,cloneSourceOutkey,variableInpkey):
+  if graph is None:
+    edge = ET.fromstring(f"\
+                    <edge from=\"{cloneSourceOutkey}\" to=\"{variableInpkey}\"/>\n")
+    connections.append(edge)
+  else:
     edges = graph.find(f"./edges")
     if edges is None:
         edges=ET.fromstring("<edges/>")
@@ -201,21 +235,29 @@ def addEqual(component,inkey1,inkey2,outkey,uid):
 				</component>\n" )
   component.find("./structure/children").append(eq)
   
-  vertice1=ET.fromstring(f"\
+  vertices = component.find("./structure/graph/vertices")
+  if vertices is None:
+    e1 = ET.fromstring(f"\
+				<edge from=\"{inkey1}\" to=\"{k1}\"/>\n")
+    e2 = ET.fromstring(f"\
+				<edge from=\"{inkey2}\" to=\"{k2}\"/>\n")
+    component.find("./connections").append(e1)
+    component.find("./connections").append(e2)
+  else:
+    vertice1=ET.fromstring(f"\
 				<vertex vertexkey=\"{inkey1}\">\n\
 					<edges>\n\
 						<edge vertexkey=\"{k1}\"/>\n\
 					</edges>\n\
 				</vertex>\n")
-  vertice2=ET.fromstring(f"\
+    vertice2=ET.fromstring(f"\
 				<vertex vertexkey=\"{inkey2}\">\n\
 					<edges>\n\
 						<edge vertexkey=\"{k2}\"/>\n\
 					</edges>\n\
 				</vertex>\n")
-  vertices = component.find("./structure/graph/vertices")  
-  vertices.append(vertice1)
-  vertices.append(vertice2)
+    vertices.append(vertice1)
+    vertices.append(vertice2)
   
 
 def addFilter(component,sourceBooleanKeys,cloneSourceKey,targetKey,filterName):
@@ -239,13 +281,18 @@ def addFilter(component,sourceBooleanKeys,cloneSourceKey,targetKey,filterName):
             datapoints+=f"\
                         <datapoint pos=\"{pos}\" key=\"{inputkey}\"/>"
             pos+=1
-            edge=ET.fromstring(f"\
+            if vertices in None:
+                edge=ET.fromstring(f"\
+				<edge from=\"{sourceBooleanKey}\" to=\"{inputkey}\"/>\n")
+                component.find("./connections").append(edge)
+            else:
+                edge=ET.fromstring(f"\
 				<vertex vertexkey=\"{sourceBooleanKey}\">\n\
 					<edges>\n\
 						<edge vertexkey=\"{inputkey}\"/>\n\
 					</edges>\n\
 				</vertex>\n")
-            vertices.append(edge)
+                vertices.append(edge)
 
         andComponent=ET.fromstring(f"\
                 <component name=\"logical-and\" library=\"core\" uid=\"{adduid}\" kind=\"5\" growable=\"1\" growablebasename=\"value\">\n\
@@ -277,27 +324,38 @@ def addFilter(component,sourceBooleanKeys,cloneSourceKey,targetKey,filterName):
 				</component>")
     children.append(filterComponent)
 
-    edge1=ET.fromstring(f"\
+    if vertices is None:
+        edge1=ET.fromstring(f"\
+				<edge from=\"{cloneSourceKey}\" to=\"{filteredInstanceInpkey}\"/>\n")
+        edge2=ET.fromstring(f"\
+				<edge from=\"{middleoutkey}\" to=\"{middleinkey}\"/>\n")
+        edge3=ET.fromstring(f"\
+				<edge from=\"{filterInstanceOutkey}\" to=\"{targetKey}\"/>\n")
+        component.find("./connections").append(edge1)
+        component.find("./connections").append(edge2)
+        component.find("./connections").append(edge3)
+    else:
+        edge1=ET.fromstring(f"\
 				<vertex vertexkey=\"{cloneSourceKey}\">\n\
 					<edges>\n\
 						<edge vertexkey=\"{filteredInstanceInpkey}\"/>\n\
 					</edges>\n\
 				</vertex>\n")
-    edge2=ET.fromstring(f"\
+        edge2=ET.fromstring(f"\
 				<vertex vertexkey=\"{middleoutkey}\">\n\
 					<edges>\n\
 						<edge vertexkey=\"{middleinkey}\"/>\n\
 					</edges>\n\
 				</vertex>\n")
-    edge3=ET.fromstring(f"\
+        edge3=ET.fromstring(f"\
 				<vertex vertexkey=\"{filterInstanceOutkey}\">\n\
 					<edges>\n\
 						<edge vertexkey=\"{targetKey}\"/>\n\
 					</edges>\n\
 				</vertex>\n")
-    vertices.append(edge1)
-    vertices.append(edge2)
-    vertices.append(edge3)
+        vertices.append(edge1)
+        vertices.append(edge2)
+        vertices.append(edge3)
   
 def createElementPath( leaf, root, parent_map, newroot ):
     if (parent_map[leaf] == root):
@@ -349,10 +407,16 @@ def generateFilterExpression(component, entry: ET.Element, whenkey, cloneSource,
                 const.find("./sources").tag="targets"
             if datapoint is not None: 
                 inpkey1=datapoint.attrib["key"]
-                inpkey2Elem = graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey1}']/../..")
-                if inpkey2Elem is None:
-                    continue
-                inpkey2=inpkey2Elem.attrib["vertexkey"]
+                if graphVertices is None:
+                    inpkey2Elem = component.find(f"./connections/edge[@to='{inpkey1}']")
+                    if inpkey2Elem is None:
+                        continue
+                    inpkey2=inpkey2Elem.attrib["from"]
+                else:
+                    inpkey2Elem = graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey1}']/../..")
+                    if inpkey2Elem is None:
+                        continue
+                    inpkey2=inpkey2Elem.attrib["vertexkey"]
                 leaf2=entry.find(f".//*[@outkey='{inpkey2}']")
                 insideEntry = (leaf2 is not None)
                 if insideEntry:
@@ -364,7 +428,10 @@ def generateFilterExpression(component, entry: ET.Element, whenkey, cloneSource,
                     createElementPath(leaf2,entry,parent_map,newroot)
                     removeAtribute(newroot,"outkey")
                     outputSourceKey=mergeElementsAndAddOutkey(newroot.find("./*"),cloneSource,outputSourceKey)
-                    graphVertices.remove(graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey1}']/../.."))
+                    if graphVertices is None:
+                        component.remove(component.find(f"./connections/edge[@to='{inpkey1}']"))
+                    else:
+                        graphVertices.remove(graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey1}']/../.."))
                     addEqual(component,inpkey1,outputSourceKey,outputEqualKey,iuid)
                     sourceBooleanKeys.append(outputEqualKey)
         if len(sourceBooleanKeys)>0:
@@ -400,7 +467,7 @@ def solveClonesByFilters(root):
                     varUid = iuid
                     generateFilterExpression(croot, cl, whenkey, cloneSource, parent, parent_map)
                     createVariable(croot,name,cl,whenkey,varKey,varUid)
-                    splitConnection(graph,cloneSourceOutkey,varKey)
+                    splitConnection(graph,croot.find("./connections"),cloneSourceOutkey,varKey)
                     
                 for cl in parent.findall(f"./*[@name='{name}']"):
                     parent.remove(cl)
@@ -426,9 +493,14 @@ def removeConnectionsToConstants(root):
 
             if datapoint is not None: 
                 inpkey=datapoint.attrib["key"]
-                connection = graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey}']/../..")
-                if connection is not None:
-                    graphVertices.remove(connection)
+                if graphVertices is None:
+                    connection = c.find(f"./connections/edge[@to='{inpkey}']")
+                    if connection is not None:
+                        c.remove(connection)
+                else:
+                    connection = graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey}']/../..")
+                    if connection is not None:
+                        graphVertices.remove(connection)
 
 
 def main():
@@ -468,8 +540,13 @@ def main():
         #displayGraph(graph)
         #displayGraph(graphinv)
         vertices = component.find("./structure/graph/vertices")
-        vertices.clear()
-        reconstructgraph(vertices,graphinv,edgekeys)
+        if vertices is None:
+            connections=component.find("./connections")
+            connections.clear()
+            reconstructgraph(None,connections,graphinv,edgekeys)
+        else:
+            vertices.clear()
+            reconstructgraph(vertices,None,graphinv,edgekeys)
 
     sources = root.findall(".//sources")
     targets = root.findall(".//targets")
