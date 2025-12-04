@@ -86,6 +86,7 @@ def displayGraph(graph):
 def removeComponent(root,componentName):
     for c in root.findall("./component"):
         graphVertices = c.find("./structure/graph/vertices")
+        connections=c.find(f"./connections")
         compomentsToRemove=c.findall(f"./structure/children/component[@name='{componentName}']")
         for componentToRemove in compomentsToRemove:
             if componentToRemove.find(".//*[@inpkey]") is not None:
@@ -98,7 +99,8 @@ def removeComponent(root,componentName):
                 outkey=componentToRemove.find("./targets/datapoint[@pos='0']").attrib["key"]                                                                    
             c.find("./structure/children").remove(componentToRemove)
             if graphVertices is None:
-                connections=c.find(f"./connections")
+                if (connections.find(f"./edge[@from='{outkey}']") is None):
+                    continue
                 toVertex = connections.find(f"./edge[@from='{outkey}']").attrib['to']
                 fromVertex = connections.find(f"./edge[@to='{inpkey}']").attrib['from']
                 connections.remove(connections.find(f"./edge[@from='{outkey}']"))
@@ -508,7 +510,7 @@ def main():
         print("Usage: python reverse_mfd.py <path_to_mfd_file> <output_file>")
         #sys.exit(1)
         mfd_file = '.\\Mapforce\\HDR_DS_4_HL7_FHIR_4_mapping_v1.0.30_EU.mfd'
-        output_file = '.\\Mapforce\\dasta2fhir_hdr_EU.mfd'
+        output_file = '.\\Mapforce\\fhir2dasta_hdr_EU.mfd'
         #mfd_file = '.\\Mapforce\\ku_o_lab - objednávka laboratorního vyšetrření_v16.mfd'
         #output_file = '.\\Mapforce\\ku_o_lab - objednávka laboratorního vyšetrření_v16_FHIR2DASTA.mfd'
         
