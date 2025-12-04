@@ -224,7 +224,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle" outputinstance="..\..\Mapping\schemas\hl7-fhir\bundle.xml"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle" outputinstance="..\schemas\hl7-fhir\bundle.xml"/>
 					</data>
 				</component>
 				<component name="ds_dasta-4.03.31" library="xml" uid="2" kind="14">
@@ -264,7 +264,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\..\Mapping\samples\DASTA_ip-ku_z_propz.xml"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\DASTA_ip-ku_z_propz.xml"/>
 					</data>
 				</component>
 				<component name="ip_ip" library="provisio" uid="6060" kind="19" visible="0">
@@ -409,7 +409,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -436,7 +436,7 @@
 								<entry name="ku_z_propz" ns="1" outkey="12" expanded="1"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_zType">
 							<root>
 								<entry name="ku_zType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -536,7 +536,7 @@
 							</header>
 							<entry name="Reference" type="xml-type" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="input" name="patientReference">
 							<root>
 								<entry name="Reference" ns="http://hl7.org/fhir" type="xml-type"/>
@@ -557,7 +557,7 @@
 							</header>
 							<entry name="ku_z_propz_admuType" type="xml-type" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_admuType">
 							<root>
 								<entry name="ku_z_propz_admuType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -576,7 +576,7 @@
 								</namespaces>
 							</header>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -802,7 +802,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_dvpType">
 							<root>
 								<entry name="ku_z_propz_dvpType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -964,7 +964,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -1091,7 +1091,7 @@
 							</header>
 							<entry name="p_pracovnik" outkey="25" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="p_pracovnik" optional="1">
 							<root>
 								<entry name="ku_z_propzType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -1114,7 +1114,7 @@
 							</header>
 							<entry name="p_pracoviste" outkey="84"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="p_pracoviste" optional="1">
 							<root>
 								<entry name="ku_z_propz_admuType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -1196,7 +1196,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -1262,7 +1262,7 @@
 							</header>
 							<entry name="a_pracovnik" outkey="2" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="a_pracovnik">
 							<root>
 								<entry name="ku_z_propzType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -1290,7 +1290,7 @@
 							</entry>
 							<entry name="entry" inpkey="7" clone="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -1339,7 +1339,7 @@
 							</header>
 							<entry name="a_pracoviste" outkey="11"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="a_pracoviste">
 							<root>
 								<entry name="ku_z_propz_admuType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -1417,7 +1417,7 @@
 								<entry name="z_pracoviste" outkey="34"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_admuType">
 							<root>
 								<entry name="ku_z_propz_admuType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -1460,7 +1460,7 @@
 							<entry name="entry" inpkey="29" clone="1"/>
 							<entry name="entry" inpkey="30" clone="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -4434,7 +4434,7 @@
 								<entry name="entry" inpkey="505" clone="1"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="variable">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -4728,7 +4728,7 @@
 							</header>
 							<entry name="dat_prov" outkey="438"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -5133,7 +5133,7 @@
 								<entry name="ku_z_propz_dopor" ns="1" outkey="489"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propzType">
 							<root>
 								<entry name="ku_z_propzType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -5480,7 +5480,7 @@
 							<entry name="entry" ns="1" inpkey="498" clone="1"/>
 							<entry name="entry" ns="1" inpkey="490" clone="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -6666,7 +6666,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="Address">
 							<root>
 								<entry name="Address" ns="http://hl7.org/fhir" type="xml-type"/>
@@ -6700,7 +6700,7 @@
 								<entry name="stat" ns="1" outkey="27"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="a">
 							<root>
 								<entry name="a" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
@@ -6922,7 +6922,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="pracovnikType" optional="1" sequence="1">
 							<root>
 								<entry name="pracovnikType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -7016,7 +7016,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -7084,7 +7084,7 @@
 							</header>
 							<entry name="o_pracovnik" outkey="1" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="o_pracovnik" optional="1">
 							<root>
 								<entry name="ku_z_propzType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -7134,7 +7134,7 @@
 							</header>
 							<entry name="o_pracoviste" outkey="7"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="o_pracoviste" optional="1">
 							<root>
 								<entry name="ku_z_propz_admuType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -7180,7 +7180,7 @@
 							</header>
 							<entry name="entry" inpkey="6"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -7219,7 +7219,7 @@
 							</header>
 							<entry name="z_pracovnik" outkey="1" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="z_pracovnik" optional="1">
 							<root>
 								<entry name="ku_z_propz_admuType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -7268,7 +7268,7 @@
 							</header>
 							<entry name="z_pracoviste" outkey="7" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="z_pracoviste" optional="1">
 							<root>
 								<entry name="ku_z_propz_admuType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -7314,7 +7314,7 @@
 							</header>
 							<entry name="entry" inpkey="3"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -7385,7 +7385,7 @@
 							</header>
 							<entry name="a" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="a">
 							<root>
 								<entry name="a" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
@@ -7406,7 +7406,7 @@
 							</header>
 							<entry name="Address" type="xml-type" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="Address">
 							<root>
 								<entry name="Address" ns="http://hl7.org/fhir" type="xml-type"/>
@@ -7495,7 +7495,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="ContactPoint">
 							<root>
 								<entry name="ContactPoint" ns="http://hl7.org/fhir" type="xml-type"/>
@@ -7521,7 +7521,7 @@
 								<entry name="obsah" ns="1" outkey="16"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="as" optional="1">
 							<root>
 								<entry name="as" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
@@ -7660,7 +7660,7 @@
 							</header>
 							<entry name="dat_prov" outkey="129" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -7889,7 +7889,7 @@
 							<entry name="entry" inpkey="46" clone="1"/>
 							<entry name="entry" inpkey="538" clone="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -8176,7 +8176,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_sprijType">
 							<root>
 								<entry name="ku_z_propz_sprijType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -8621,7 +8621,7 @@
 							</header>
 							<entry name="dat_prov" outkey="56"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -8894,7 +8894,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_spropType" optional="1" sequence="1">
 							<root>
 								<entry name="ku_z_propz_spropType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -9078,7 +9078,7 @@
 							<entry name="entry" inpkey="45" clone="1"/>
 							<entry name="entry" inpkey="465" clone="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -9464,7 +9464,7 @@
 							</header>
 							<entry name="dat_prov" outkey="6"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -9565,7 +9565,7 @@
 								<entry name="medikace" outkey="68"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_doporType" optional="1" sequence="1">
 							<root>
 								<entry name="ku_z_propz_doporType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -9697,7 +9697,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -10238,7 +10238,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="variable">
 							<root>
 								<entry name="DocumentReference" ns="http://hl7.org/fhir"/>
@@ -10282,7 +10282,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="text">
 							<root>
 								<entry name="text" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -10476,7 +10476,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="DiagnosticReport" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -10606,7 +10606,7 @@
 								<entry name="role_text" type="attribute" outkey="19"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="autor">
 							<root>
 								<entry name="text" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -10744,7 +10744,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -11765,7 +11765,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="input" name="entry" optional="1" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -11923,7 +11923,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="section">
 							<root>
 								<entry name="Composition" ns="http://hl7.org/fhir"/>
@@ -13077,7 +13077,7 @@
 							<entry name="entry" inpkey="10"/>
 							<entry name="entry" inpkey="14" clone="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -13097,7 +13097,7 @@
 								</namespaces>
 							</header>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -13137,7 +13137,7 @@
 								<entry name="ku_z_propz_urg_v" outkey="18"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_urg" optional="1" sequence="1">
 							<root>
 								<entry name="ku_z_propz_urgType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -13330,7 +13330,7 @@
 							</header>
 							<entry name="dat_ab" outkey="211" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -13545,7 +13545,7 @@
 								<entry name="dat_up" ns="1" outkey="164"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="uaType" sequence="1">
 							<root>
 								<entry name="uaType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -13778,7 +13778,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -14049,7 +14049,7 @@
 								<entry name="var_dat_do" ns="1" outkey="68"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_urg_vType" optional="1" sequence="1">
 							<root>
 								<entry name="ku_z_propz_urg_vType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -14207,7 +14207,7 @@
 								<entry name="fullUrl" ns="1" expanded="1"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -14500,7 +14500,7 @@
 								<entry name="a" expanded="1"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="is">
 							<root>
 								<entry name="dasta" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
@@ -14581,7 +14581,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_zType" optional="1">
 							<root>
 								<entry name="ku_zType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -14725,7 +14725,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -14997,7 +14997,7 @@
 								<entry name="dat_vys" ns="1" outkey="526" expanded="1"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="hType" sequence="1">
 							<root>
 								<entry name="hType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -15038,7 +15038,7 @@
 							</header>
 							<entry name="dat_prov" outkey="530" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_prov" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -15856,7 +15856,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -16319,7 +16319,7 @@
 							</header>
 							<entry name="dat_prov" outkey="729" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_prov" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -16377,7 +16377,7 @@
 								<entry name="dat_vys" ns="1" outkey="590"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="fyznalType" sequence="1">
 							<root>
 								<entry name="fyznalType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -17118,7 +17118,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -17588,7 +17588,7 @@
 								<entry name="id_clk" type="attribute" outkey="9"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="garant_dat">
 							<root>
 								<entry name="dasta" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
@@ -17719,7 +17719,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -18148,7 +18148,7 @@
 							</entry>
 							<entry name="entry" ns="1" inpkey="41" expanded="1" clone="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -18209,7 +18209,7 @@
 								<entry name="vysl_pracoviste" ns="1" expanded="1"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="vys_v_snomed">
 							<root>
 								<entry name="ku_z_propz_sprijType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -18501,7 +18501,7 @@
 							<entry name="entry" inpkey="100" clone="1"/>
 							<entry name="entry" inpkey="108" clone="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -18542,7 +18542,7 @@
 								<entry name="anam_abj" outkey="107"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_anamType" optional="1" sequence="1">
 							<root>
 								<entry name="ku_z_propz_anamType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -18563,7 +18563,7 @@
 							</header>
 							<entry name="dat_prov" outkey="20"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -19191,7 +19191,7 @@
 							</header>
 							<entry name="dat_ab" outkey="156" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -19312,7 +19312,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="anam_probType" sequence="1">
 							<root>
 								<entry name="anam_probType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -19502,7 +19502,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -19702,7 +19702,7 @@
 								<entry name="dat_up" ns="1" outkey="163"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="unizType" sequence="1">
 							<root>
 								<entry name="unizType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -19723,7 +19723,7 @@
 							</header>
 							<entry name="dat_ab" outkey="202" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -20017,7 +20017,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -20340,7 +20340,7 @@
 							</header>
 							<entry name="dat_ab" outkey="199" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -20474,7 +20474,7 @@
 								<entry name="dat_vyk" ns="1" outkey="229"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="chvType" sequence="1">
 							<root>
 								<entry name="chvType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -20629,7 +20629,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -20928,7 +20928,7 @@
 							</header>
 							<entry name="dat_ab" outkey="232" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -21199,7 +21199,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -21260,7 +21260,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="oczType" sequence="1">
 							<root>
 								<entry name="oczType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -21525,7 +21525,7 @@
 							</header>
 							<entry name="dat_ab" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -21580,7 +21580,7 @@
 								<entry name="inf_koment" ns="1" outkey="136"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="anam_infType" sequence="1">
 							<root>
 								<entry name="anam_infType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -21871,7 +21871,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -22046,7 +22046,7 @@
 							</header>
 							<entry name="dat_ab" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -22104,7 +22104,7 @@
 								<entry name="infc_koment" ns="1" outkey="106"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="anam_infcType" sequence="1">
 							<root>
 								<entry name="anam_infcType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -22212,7 +22212,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -22316,7 +22316,7 @@
 							</header>
 							<entry name="dat_ab" outkey="140"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -22434,7 +22434,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="anam_rao" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -22611,7 +22611,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -23086,7 +23086,7 @@
 							</header>
 							<entry name="dat_ab" outkey="300" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -23130,7 +23130,7 @@
 								<entry name="sar_pecezc" ns="1" outkey="280"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="anam_sa" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -23474,7 +23474,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -23735,7 +23735,7 @@
 							</header>
 							<entry name="dat_ab" outkey="137" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -23763,7 +23763,7 @@
 								<entry name="aba_koment" ns="1" outkey="106"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="anam_aba" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -23882,7 +23882,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -24139,7 +24139,7 @@
 								<entry name="abd_koment" ns="1" outkey="124"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="anam_abd" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -24213,7 +24213,7 @@
 							</header>
 							<entry name="dat_ab" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -24356,7 +24356,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -24577,7 +24577,7 @@
 							</header>
 							<entry name="dat_ab" outkey="183" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -24608,7 +24608,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="anam_abj" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -24734,7 +24734,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -24941,7 +24941,7 @@
 							</header>
 							<entry name="dat_ab" outkey="116" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -24969,7 +24969,7 @@
 								<entry name="abk_koment" ns="1" outkey="91"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="anam_abk" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -25087,7 +25087,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -25265,7 +25265,7 @@
 								<entry name="resource" expanded="1"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -25295,7 +25295,7 @@
 								<entry name="ku_z_propz_prubh_s" outkey="54"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_prubhType" optional="1" sequence="1">
 							<root>
 								<entry name="ku_z_propz_prubhType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -25316,7 +25316,7 @@
 							</header>
 							<entry name="dat_prov" outkey="3"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -25737,7 +25737,7 @@
 							</header>
 							<entry name="dat_ab" outkey="394" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
 							<root>
 								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -25869,7 +25869,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="leType" sequence="1">
 							<root>
 								<entry name="leType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -26147,7 +26147,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -26377,7 +26377,7 @@
 							</header>
 							<entry name="dat_prov" outkey="97"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -26791,7 +26791,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -26831,7 +26831,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_prubh_pType" optional="1" sequence="1">
 							<root>
 								<entry name="ku_z_propz_prubh_pType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -26964,7 +26964,7 @@
 							</header>
 							<entry name="dat_prov" outkey="17"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -27175,7 +27175,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -27206,7 +27206,7 @@
 								<entry name="vykd_duv_kod" ns="1" outkey="28"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_prubh_dType" optional="1" sequence="1">
 							<root>
 								<entry name="ku_z_propz_prubh_dType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -27498,7 +27498,7 @@
 								<entry name="pracoviste" ns="1" outkey="17"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_prubh_vType" optional="1" sequence="1">
 							<root>
 								<entry name="ku_z_propz_prubh_vType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -27829,7 +27829,7 @@
 							<entry name="entry" ns="1" inpkey="18" clone="1"/>
 							<entry name="entry" ns="1" inpkey="19" clone="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -28080,7 +28080,7 @@
 							</header>
 							<entry name="dat_prov" outkey="5"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -28162,7 +28162,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_prubh_sType" optional="1" sequence="1">
 							<root>
 								<entry name="ku_z_propz_prubh_sType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -28513,7 +28513,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -28806,7 +28806,7 @@
 								<entry name="role_text" type="attribute" outkey="15"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="garant_dat">
 							<root>
 								<entry name="dasta" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
@@ -28911,7 +28911,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -29552,7 +29552,7 @@
 							</header>
 							<entry name="dat_prov" expanded="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="input" name="dat_prov" optional="1" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -29905,7 +29905,7 @@
 								<entry name="cil_prop" ns="1" outkey="110"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ku_z_propz_hospType">
 							<root>
 								<entry name="ku_z_propz_hospType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -30277,7 +30277,7 @@
 							<entry name="entry" ns="1" inpkey="138" clone="1"/>
 							<entry name="entry" ns="1" inpkey="186" clone="1"/>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -30524,7 +30524,7 @@
 								<entry name="vys_fo_form" outkey="11" expanded="1"/>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="vys_fs_form">
 							<root>
 								<entry name="ku_z_propz_sprijType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -30607,7 +30607,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -32130,7 +32130,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
@@ -32212,7 +32212,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="ip" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -32875,7 +32875,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
 						<parameter usageKind="input" name="pracovisteType" optional="1" sequence="1">
 							<root>
 								<entry name="pracovisteType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
@@ -33021,7 +33021,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\Mapping\schemas\hl7-fhir\bundle.xsd"/>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
 						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
