@@ -4,10 +4,10 @@ import sys
 import os
 import re
 
-ikey = 1500
-whenkey = 2700
-cloneSourceOutkey = 3600
-iuid = 9000
+ikey = 15000
+whenkey = 27000
+cloneSourceOutkey = 36000
+iuid = 90000
 
 def parse_mfd(mfd_file):
     tree = ET.parse(mfd_file)
@@ -38,7 +38,7 @@ def findGraph(component,graph,graphinv,edgekeys):
             if not to in graphinv.keys():
                 graphinv[to]=[key]
             else:
-                graphinv.append(key)
+                graphinv[to].append(key)
         graph[key]=values
     for edge in component.findall("./connections/edge"):
         key = edge.get("from")
@@ -50,7 +50,7 @@ def findGraph(component,graph,graphinv,edgekeys):
         if not to in graphinv.keys():
                 graphinv[to]=[key]
         else:
-                graphinv.append(key)
+                graphinv[to].append(key)
         
     for newTargetKey in graph.keys():
         if len(graph[newTargetKey])>1:
@@ -136,6 +136,14 @@ def createVariable(croot,name,varTreeOrg: ET.Element,whenkey,varInpkey,uid):
                 add="<entry name=\"Composition\" ns=\"http://hl7.org/fhir\" type=\"xml-type\"/>\n"
             elif name=="note":
                 add="<entry name=\"Specimen\" ns=\"http://hl7.org/fhir\" type=\"xml-type\"/>\n"
+            elif name=="attester":
+                add="<entry name=\"Composition\" ns=\"http://hl7.org/fhir\" type=\"xml-type\"/>\n"
+            elif name=="participant":
+                add="<entry name=\"CareTeam\" ns=\"http://hl7.org/fhir\" type=\"xml-type\"/>\n"
+            elif name=="component":
+                add="<entry name=\"Observation\" ns=\"http://hl7.org/fhir\" type=\"xml-type\"/>\n"
+            elif name=="content":
+                add="<entry name=\"DocumentReference\" ns=\"http://hl7.org/fhir\" type=\"xml-type\"/>\n"
             else:
                 add = ""
                 name=name.title()
@@ -283,7 +291,7 @@ def addFilter(component,sourceBooleanKeys,cloneSourceKey,targetKey,filterName):
             datapoints+=f"\
                         <datapoint pos=\"{pos}\" key=\"{inputkey}\"/>"
             pos+=1
-            if vertices in None:
+            if vertices is None:
                 edge=ET.fromstring(f"\
 				<edge from=\"{sourceBooleanKey}\" to=\"{inputkey}\"/>\n")
                 component.find("./connections").append(edge)
@@ -431,7 +439,9 @@ def generateFilterExpression(component, entry: ET.Element, whenkey, cloneSource,
                     removeAtribute(newroot,"outkey")
                     outputSourceKey=mergeElementsAndAddOutkey(newroot.find("./*"),cloneSource,outputSourceKey)
                     if graphVertices is None:
-                        component.remove(component.find(f"./connections/edge[@to='{inpkey1}']"))
+                        connections = component.find(f"./connections")
+                        for e in connections.findall(f"./edge[@to='{inpkey1}']"):
+                            connections.remove(e)
                     else:
                         graphVertices.remove(graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey1}']/../.."))
                     addEqual(component,inpkey1,outputSourceKey,outputEqualKey,iuid)
@@ -496,9 +506,9 @@ def removeConnectionsToConstants(root):
             if datapoint is not None: 
                 inpkey=datapoint.attrib["key"]
                 if graphVertices is None:
-                    connection = c.find(f"./connections/edge[@to='{inpkey}']")
-                    if connection is not None:
-                        c.remove(connection)
+                    connections = c.find(f"./connections")
+                    for e in connections.findall(f"./edge[@to='{inpkey}']"):
+                        connections.remove(e)
                 else:
                     connection = graphVertices.find(f"./vertex/edges/edge[@vertexkey='{inpkey}']/../..")
                     if connection is not None:
@@ -559,6 +569,16 @@ def main():
 
     froms = root.findall(".//*[@from]")
     tos = root.findall(".//*[@to]")
+    for e in froms:
+        e.attrib['todo'] = e.attrib.pop("from")
+    for e in tos:
+        e.attrib['from'] = e.attrib.pop("to")
+    for e in froms:
+        e.attrib['to'] = e.attrib.pop("todo")
+
+    # v prípade, že jsou hrany reprezentovány v tagu connections, tak je otoč spátky
+    froms = root.findall(".//edge[@from]")
+    tos = root.findall(".//edge[@to]")
     for e in froms:
         e.attrib['todo'] = e.attrib.pop("from")
     for e in tos:
