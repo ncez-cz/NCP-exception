@@ -5077,70 +5077,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="84" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="70" lty="179" rbx="272" rby="423"/>
-					<data>
-						<root scrollposition="436">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="ku_z_propzType" ns="1" type="xml-type" expanded="1">
-								<entry name="ku_z_propz_admu" ns="1" outkey="2" expanded="1">
-									<entry name="p_pracovnik" ns="1" expanded="1">
-										<entry name="guid" type="attribute" outkey="840"/>
-										<entry name="vguid" type="attribute" outkey="841"/>
-									</entry>
-									<entry name="p_pracoviste" ns="1">
-										<entry name="nazev" ns="1" outkey="876"/>
-									</entry>
-									<entry name="a_pracovnik" ns="1" expanded="1">
-										<entry name="guid" type="attribute" outkey="877"/>
-										<entry name="vguid" type="attribute" outkey="878"/>
-										<entry name="prijmeni" ns="1" outkey="879"/>
-									</entry>
-									<entry name="a_pracoviste" ns="1" expanded="1">
-										<entry name="guid" type="attribute" outkey="880"/>
-										<entry name="vguid" type="attribute" outkey="881"/>
-									</entry>
-									<entry name="dat_a_mod" ns="1" outkey="882"/>
-									<entry name="o_pracovnik" ns="1" outkey="883">
-										<entry name="guid" type="attribute" outkey="862"/>
-										<entry name="vguid" type="attribute" outkey="864"/>
-										<entry name="prijmeni" ns="1" outkey="884"/>
-									</entry>
-									<entry name="dat_overeni" ns="1" outkey="885"/>
-									<entry name="z_pracovnik" ns="1" outkey="886">
-										<entry name="guid" type="attribute" outkey="887"/>
-										<entry name="vguid" type="attribute" outkey="888"/>
-										<entry name="prijmeni" ns="1" outkey="889"/>
-									</entry>
-									<entry name="dat_autorizace" ns="1" outkey="890"/>
-									<entry name="stav_dokum" ns="1" outkey="891"/>
-									<entry name="spr_dokum" ns="1" outkey="892"/>
-								</entry>
-								<entry name="ku_z_propz_dvp" ns="1" outkey="8"/>
-								<entry name="ku_z_propz_urg" ns="1" outkey="433"/>
-								<entry name="ku_z_propz_hosp" ns="1" outkey="506"/>
-								<entry name="ku_z_propz_sprij" ns="1" outkey="15"/>
-								<entry name="ku_z_propz_anam" ns="1" outkey="464"/>
-								<entry name="ku_z_propz_prubh" ns="1" outkey="480"/>
-								<entry name="ku_z_propz_sprop" ns="1" outkey="504"/>
-								<entry name="ku_z_propz_dopor" ns="1" outkey="489"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
-						<parameter usageKind="input" name="ku_z_propzType">
-							<root>
-								<entry name="ku_z_propzType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
 				<component name="Reference_Organization" library="provisio" uid="6678" kind="19" visible="0">
 					<view ltx="209" lty="48" rbx="402" rby="82"/>
 					<data>
@@ -5629,8 +5565,8 @@
 						</root>
 					</data>
 				</component>
-				<component name="ku_z_propz_sprij" library="provisio" uid="2749" kind="19" visible="0">
-					<view ltx="442" lty="291" rbx="771" rby="393"/>
+				<component name="ku_z_propz_prubh" library="provisio" uid="5296" kind="19" visible="0">
+					<view ltx="939" lty="38" rbx="1274" rby="125"/>
 					<data>
 						<root>
 							<header>
@@ -5639,13 +5575,13 @@
 									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
 								</namespaces>
 							</header>
-							<entry name="practitionerReference" inpkey="477" componentid="5176"/>
-							<entry name="patientReference" inpkey="833" componentid="6153" expanded="1"/>
-							<entry name="ku_z_propz_sprijType" componentid="2745" expanded="1">
-								<entry name="ku_z_propz_sprijType" ns="1" type="xml-type" inpkey="13"/>
+							<entry name="practitionerReference" inpkey="483" componentid="5299"/>
+							<entry name="patientReference" inpkey="831" componentid="6435"/>
+							<entry name="ku_z_propz_prubhType" componentid="5302" expanded="1">
+								<entry name="ku_z_propz_prubhType" ns="1" type="xml-type" inpkey="486"/>
 							</entry>
-							<entry name="dat_prov" componentid="5089" expanded="1">
-								<entry name="dat_prov" ns="1" inpkey="455"/>
+							<entry name="dat_prov" componentid="5303" expanded="1">
+								<entry name="dat_prov" ns="1" inpkey="487"/>
 							</entry>
 						</root>
 						<root>
@@ -5655,8 +5591,8 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="entry" ns="1" componentid="2743" expanded="1">
-								<entry name="entry" outkey="14"/>
+							<entry name="entry" ns="1" componentid="5304" expanded="1">
+								<entry name="entry" outkey="488"/>
 							</entry>
 						</root>
 					</data>
@@ -5671,6 +5607,7 @@
 									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
 								</namespaces>
 							</header>
+							<entry name="dat_vys_prij" inpkey="910" componentid="6848"/>
 							<entry name="patientReference" inpkey="819" componentid="6167" expanded="1"/>
 							<entry name="ku_z_propz_hospType" componentid="5672" expanded="1">
 								<entry name="ku_z_propz_hospType" ns="1" type="xml-type" inpkey="512"/>
@@ -5705,6 +5642,104 @@
 						</root>
 					</data>
 				</component>
+				<component name="ku_z_propz_sprij" library="provisio" uid="2749" kind="19" visible="0">
+					<view ltx="442" lty="291" rbx="771" rby="393"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="practitionerReference" inpkey="477" componentid="5176"/>
+							<entry name="patientReference" inpkey="833" componentid="6153" expanded="1"/>
+							<entry name="ku_z_propz_sprijType" componentid="2745" expanded="1">
+								<entry name="ku_z_propz_sprijType" ns="1" type="xml-type" inpkey="13"/>
+							</entry>
+							<entry name="dat_prov" componentid="5089" expanded="1">
+								<entry name="dat_prov" ns="1" inpkey="455"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="2743" expanded="1">
+								<entry name="entry" outkey="14"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="84" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="70" lty="179" rbx="272" rby="423"/>
+					<data>
+						<root scrollposition="1310">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="ku_z_propzType" ns="1" type="xml-type" expanded="1">
+								<entry name="ku_z_propz_admu" ns="1" outkey="2" expanded="1">
+									<entry name="p_pracovnik" ns="1" expanded="1">
+										<entry name="guid" type="attribute" outkey="840"/>
+										<entry name="vguid" type="attribute" outkey="841"/>
+									</entry>
+									<entry name="p_pracoviste" ns="1">
+										<entry name="nazev" ns="1" outkey="876"/>
+									</entry>
+									<entry name="a_pracovnik" ns="1" expanded="1">
+										<entry name="guid" type="attribute" outkey="877"/>
+										<entry name="vguid" type="attribute" outkey="878"/>
+										<entry name="prijmeni" ns="1" outkey="879"/>
+									</entry>
+									<entry name="a_pracoviste" ns="1" expanded="1">
+										<entry name="guid" type="attribute" outkey="880"/>
+										<entry name="vguid" type="attribute" outkey="881"/>
+									</entry>
+									<entry name="dat_a_mod" ns="1" outkey="882"/>
+									<entry name="o_pracovnik" ns="1" outkey="883">
+										<entry name="guid" type="attribute" outkey="862"/>
+										<entry name="vguid" type="attribute" outkey="864"/>
+										<entry name="prijmeni" ns="1" outkey="884"/>
+									</entry>
+									<entry name="dat_overeni" ns="1" outkey="885"/>
+									<entry name="z_pracovnik" ns="1" outkey="886">
+										<entry name="guid" type="attribute" outkey="887"/>
+										<entry name="vguid" type="attribute" outkey="888"/>
+										<entry name="prijmeni" ns="1" outkey="889"/>
+									</entry>
+									<entry name="dat_autorizace" ns="1" outkey="890"/>
+									<entry name="stav_dokum" ns="1" outkey="891"/>
+									<entry name="spr_dokum" ns="1" outkey="892"/>
+								</entry>
+								<entry name="ku_z_propz_dvp" ns="1" outkey="8"/>
+								<entry name="ku_z_propz_urg" ns="1" outkey="433"/>
+								<entry name="ku_z_propz_hosp" ns="1" outkey="506"/>
+								<entry name="ku_z_propz_sprij" ns="1" outkey="15"/>
+								<entry name="ku_z_propz_anam" ns="1" outkey="464"/>
+								<entry name="ku_z_propz_prubh" ns="1" outkey="480"/>
+								<entry name="ku_z_propz_sprop" ns="1" outkey="504" expanded="1">
+									<entry name="dat_vys_prij" ns="1" outkey="911"/>
+								</entry>
+								<entry name="ku_z_propz_dopor" ns="1" outkey="489"/>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<parameter usageKind="input" name="ku_z_propzType">
+							<root>
+								<entry name="ku_z_propzType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
 				<component name="ku_z_propz_urg" library="provisio" uid="5043" kind="19" visible="0">
 					<view ltx="441" lty="58" rbx="771" rby="152"/>
 					<data>
@@ -5733,38 +5768,6 @@
 							</header>
 							<entry name="entry" ns="1" componentid="5037" expanded="1">
 								<entry name="entry" outkey="437"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="ku_z_propz_prubh" library="provisio" uid="5296" kind="19" visible="0">
-					<view ltx="939" lty="38" rbx="1274" rby="125"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="practitionerReference" inpkey="483" componentid="5299"/>
-							<entry name="patientReference" inpkey="831" componentid="6435"/>
-							<entry name="ku_z_propz_prubhType" componentid="5302" expanded="1">
-								<entry name="ku_z_propz_prubhType" ns="1" type="xml-type" inpkey="486"/>
-							</entry>
-							<entry name="dat_prov" componentid="5303" expanded="1">
-								<entry name="dat_prov" ns="1" inpkey="487"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="5304" expanded="1">
-								<entry name="entry" outkey="488"/>
 							</entry>
 						</root>
 					</data>
@@ -6454,6 +6457,7 @@
 			<edge from="870" to="907"/>
 			<edge from="876" to="908"/>
 			<edge from="817" to="909"/>
+			<edge from="911" to="910"/>
 		</connections>
 	</component>
 	<component name="adresa" library="provisio" uid="86">
@@ -8244,38 +8248,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="ku_z_propz_sprij_h" library="provisio" uid="5086" kind="19" visible="0">
-					<view ltx="661" lty="496" rbx="996" rby="593"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="patientReference" inpkey="554" componentid="6134" expanded="1"/>
-							<entry name="hType" componentid="6135" expanded="1">
-								<entry name="hType" ns="1" type="xml-type" inpkey="133"/>
-							</entry>
-							<entry name="dat_prov" componentid="6131" expanded="1">
-								<entry name="dat_prov" ns="1" inpkey="134"/>
-							</entry>
-							<entry name="practitionerReference" inpkey="152" componentid="6132"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="6151" expanded="1">
-								<entry name="entry" outkey="135"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="ku_z_propz_sprij_fyznal" library="provisio" uid="5088" kind="19" visible="0">
 					<view ltx="656" lty="772" rbx="991" rby="869"/>
 					<data>
@@ -8304,6 +8276,38 @@
 							</header>
 							<entry name="entry" ns="1" componentid="6294" expanded="1">
 								<entry name="entry" outkey="143"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="ku_z_propz_sprij_h" library="provisio" uid="5086" kind="19" visible="0">
+					<view ltx="661" lty="496" rbx="996" rby="593"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="patientReference" inpkey="554" componentid="6134" expanded="1"/>
+							<entry name="hType" componentid="6135" expanded="1">
+								<entry name="hType" ns="1" type="xml-type" inpkey="133"/>
+							</entry>
+							<entry name="dat_prov" componentid="6131" expanded="1">
+								<entry name="dat_prov" ns="1" inpkey="134"/>
+							</entry>
+							<entry name="practitionerReference" inpkey="152" componentid="6132"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="6151" expanded="1">
+								<entry name="entry" outkey="135"/>
 							</entry>
 						</root>
 					</data>
@@ -13184,12 +13188,13 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="uaType" ns="1" componentid="6325" expanded="1">
+							<entry name="uaType" ns="1" componentid="6878" expanded="1">
 								<entry name="uaType" type="xml-type" inpkey="2"/>
 							</entry>
-							<entry name="dat_ab" ns="1" componentid="6308" expanded="1"/>
-							<entry name="practitionerReference" ns="1" inpkey="24" componentid="6305"/>
-							<entry name="patientReference" ns="1" inpkey="27" componentid="6311" expanded="1"/>
+							<entry name="dat_ab" ns="1" componentid="6858" expanded="1"/>
+							<entry name="organizatinReference" ns="1" componentid="6857"/>
+							<entry name="practitionerReference" ns="1" inpkey="24" componentid="6874"/>
+							<entry name="patientReference" ns="1" inpkey="27" componentid="6859" expanded="1"/>
 						</root>
 						<root scrollposition="1">
 							<header>
@@ -13198,7 +13203,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="entry" ns="1" componentid="6328" expanded="1">
+							<entry name="entry" ns="1" componentid="6880" expanded="1">
 								<entry name="entry" outkey="9"/>
 							</entry>
 						</root>
@@ -13228,32 +13233,318 @@
 	<component name="ku_z_propz_urg_alerg_int" library="provisio" uid="5044">
 		<structure>
 			<children>
-				<component name="constant" library="core" uid="6300" kind="2">
+				<component name="constant" library="core" uid="6851" kind="2">
 					<targets>
-						<datapoint pos="0" key="235"/>
+						<datapoint pos="0" key="265"/>
 					</targets>
-					<view ltx="395" lty="283" rbx="553" rby="300"/>
+					<view ltx="1152" lty="369" rbx="1273" rby="386"/>
+					<data>
+						<constant value="http://loinc.org" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6852" kind="2">
+					<targets>
+						<datapoint pos="0" key="263"/>
+					</targets>
+					<view ltx="1152" lty="385" rbx="1234" rby="402"/>
+					<data>
+						<constant value="48765-2" datatype="string"/>
+						<comment>
+							<text>Kód pro composition</text>
+						</comment>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6853" kind="2">
+					<targets>
+						<datapoint pos="0" key="353"/>
+					</targets>
+					<view ltx="693" lty="369" rbx="851" rby="386"/>
 					<data>
 						<constant value="http://snomed.info/sct" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6301" kind="2">
+				<component name="constant" library="core" uid="6854" kind="2">
 					<targets>
-						<datapoint pos="0" key="188"/>
+						<datapoint pos="0" key="321"/>
 					</targets>
-					<view ltx="395" lty="300" rbx="553" rby="317"/>
+					<view ltx="693" lty="386" rbx="851" rby="403"/>
 					<data>
 						<constant value="http://snomed.info/sct" datatype="string"/>
 					</data>
 				</component>
-				<component name="value-map" library="core" uid="6302" kind="23">
+				<component name="value-map" library="core" uid="6855" kind="23">
 					<sources>
-						<datapoint pos="0" key="156"/>
+						<datapoint pos="0" key="288"/>
 					</sources>
 					<targets>
-						<datapoint pos="0" key="186"/>
+						<datapoint pos="0" key="312"/>
 					</targets>
-					<view ltx="395" lty="438" rbx="475" rby="476"/>
+					<view ltx="695" lty="420" rbx="775" rby="458"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="A" to="allergy"/>
+								<entry from="I" to="intolerance"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6856" kind="2">
+					<targets>
+						<datapoint pos="0" key="376"/>
+					</targets>
+					<view ltx="695" lty="341" rbx="853" rby="358"/>
+					<data>
+						<constant value="http://snomed.info/sct" datatype="string"/>
+					</data>
+				</component>
+				<component name="organizatinReference" library="core" uid="6857" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="351" lty="666" rbx="518" rby="704"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="organizatinReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="6858" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="541" lty="644" rbx="690" rby="778"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="dat_ab" outkey="340" expanded="1"/>
+						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
+							<root>
+								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+								<entry name="dat_ab" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="patientReference" library="core" uid="6859" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="305"/>
+					</targets>
+					<view ltx="351" lty="780" rbx="496" rby="818"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6860" kind="2">
+					<targets>
+						<datapoint pos="0" key="297"/>
+					</targets>
+					<view ltx="1298" lty="289" rbx="1433" rby="306"/>
+					<data>
+						<constant value="AllergyIntolerance" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6861" kind="2">
+					<targets>
+						<datapoint pos="0" key="362"/>
+					</targets>
+					<view ltx="1298" lty="273" rbx="1393" rby="290"/>
+					<data>
+						<constant value="generated" datatype="string"/>
+					</data>
+				</component>
+				<component name="FullURL_AllergyIntolerance" library="provisio" uid="6862" kind="19" visible="0">
+					<view ltx="1114" lty="138" rbx="1325" rby="155"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="350" componentid="5584"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="FullURL_AllergyIntolerance" outkey="273" componentid="5586"/>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6863" kind="2">
+					<targets>
+						<datapoint pos="0" key="310"/>
+					</targets>
+					<view ltx="693" lty="229" rbx="849" rby="246"/>
+					<data>
+						<constant value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6864" kind="2">
+					<targets>
+						<datapoint pos="0" key="373"/>
+					</targets>
+					<view ltx="693" lty="213" rbx="849" rby="230"/>
+					<data>
+						<constant value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" datatype="string"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="6865" kind="4">
+					<sources>
+						<datapoint pos="0" key="366"/>
+						<datapoint pos="1" key="367"/>
+						<datapoint pos="2" key="282"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="323"/>
+					</targets>
+					<view ltx="1398" lty="693" rbx="1502" rby="766"/>
+				</component>
+				<component name="exists" library="core" uid="6866" kind="5">
+					<sources>
+						<datapoint pos="0" key="280"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="365"/>
+					</targets>
+					<view ltx="1279" lty="780" rbx="1355" rby="818"/>
+				</component>
+				<component name="constant" library="core" uid="6867" kind="2">
+					<targets>
+						<datapoint pos="0" key="281"/>
+					</targets>
+					<view ltx="1247" lty="817" rbx="1355" rby="834"/>
+					<data>
+						<constant value="unconfirmed" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6868" kind="2">
+					<targets>
+						<datapoint pos="0" key="355"/>
+					</targets>
+					<view ltx="1279" lty="465" rbx="1350" rby="482"/>
+					<data>
+						<constant value="active" datatype="string"/>
+					</data>
+				</component>
+				<component name="substitute-missing" library="core" uid="6869" kind="5">
+					<sources>
+						<datapoint pos="0" key="284"/>
+						<datapoint pos="1" key="304"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="293"/>
+					</targets>
+					<view ltx="1050" lty="817" rbx="1172" rby="871"/>
+				</component>
+				<component name="value-map" library="core" uid="6870" kind="23">
+					<sources>
+						<datapoint pos="0" key="349"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="279"/>
+					</targets>
+					<view ltx="693" lty="289" rbx="773" rby="327"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="A" to="confirmed"/>
+								<entry from="SP" to="confirmed"/>
+								<entry from="U" to="confirmed"/>
+								<entry from="Z" to="entered-in-error"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="exists" library="core" uid="6871" kind="5">
+					<sources>
+						<datapoint pos="0" key="361"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="308"/>
+					</targets>
+					<view ltx="1279" lty="428" rbx="1355" rby="466"/>
+				</component>
+				<component name="if-else" library="core" uid="6872" kind="4">
+					<sources>
+						<datapoint pos="0" key="309"/>
+						<datapoint pos="1" key="318"/>
+						<datapoint pos="2" key="356"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="332"/>
+					</targets>
+					<view ltx="1398" lty="341" rbx="1502" rby="414"/>
+				</component>
+				<component name="value-map" library="core" uid="6873" kind="23">
+					<sources>
+						<datapoint pos="0" key="320"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="317"/>
+					</targets>
+					<view ltx="693" lty="252" rbx="773" rby="290"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="A" to="active"/>
+								<entry from="SP" to="inactive"/>
+								<entry from="U" to="resolved"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="practitionerReference" library="core" uid="6874" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="327"/>
+					</targets>
+					<view ltx="351" lty="717" rbx="519" rby="755"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="practitionerReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="substitute-missing" library="core" uid="6875" kind="5">
+					<sources>
+						<datapoint pos="0" key="315"/>
+						<datapoint pos="1" key="341"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="329"/>
+					</targets>
+					<view ltx="764" lty="682" rbx="886" rby="736"/>
+				</component>
+				<component name="value-map" library="core" uid="6876" kind="23">
+					<sources>
+						<datapoint pos="0" key="378"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="368"/>
+					</targets>
+					<view ltx="693" lty="524" rbx="773" rby="562"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -13266,97 +13557,14 @@
 						</valuemap>
 					</data>
 				</component>
-				<component name="value-map" library="core" uid="6303" kind="23">
+				<component name="value-map" library="core" uid="6877" kind="23">
 					<sources>
-						<datapoint pos="0" key="159"/>
+						<datapoint pos="0" key="339"/>
 					</sources>
 					<targets>
-						<datapoint pos="0" key="170"/>
+						<datapoint pos="0" key="271"/>
 					</targets>
-					<view ltx="397" lty="334" rbx="477" rby="372"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="A" to="allergy"/>
-								<entry from="I" to="intolerance"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6304" kind="2">
-					<targets>
-						<datapoint pos="0" key="172"/>
-					</targets>
-					<view ltx="397" lty="255" rbx="555" rby="272"/>
-					<data>
-						<constant value="http://snomed.info/sct" datatype="string"/>
-					</data>
-				</component>
-				<component name="practitionerReference" library="core" uid="6305" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="199"/>
-					</targets>
-					<view ltx="53" lty="631" rbx="221" rby="669"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="practitionerReference" optional="1" sequence="1"/>
-					</data>
-				</component>
-				<component name="substitute-missing" library="core" uid="6307" kind="5">
-					<sources>
-						<datapoint pos="0" key="206"/>
-						<datapoint pos="1" key="212"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="215"/>
-					</targets>
-					<view ltx="466" lty="596" rbx="588" rby="650"/>
-				</component>
-				<component name="document" library="xml" uid="6308" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="243" lty="558" rbx="392" rby="692"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="dat_ab" outkey="211" expanded="1"/>
-						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
-						<parameter usageKind="input" name="dat_ab" optional="1" sequence="1">
-							<root>
-								<entry name="anfType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-								<entry name="dat_ab" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="substitute-missing" library="core" uid="6309" kind="5">
-					<sources>
-						<datapoint pos="0" key="208"/>
-						<datapoint pos="1" key="218"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="237"/>
-					</targets>
-					<view ltx="752" lty="731" rbx="874" rby="785"/>
-				</component>
-				<component name="value-map" library="core" uid="6310" kind="23">
-					<sources>
-						<datapoint pos="0" key="226"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="221"/>
-					</targets>
-					<view ltx="395" lty="401" rbx="475" rby="439"/>
+					<view ltx="693" lty="487" rbx="773" rby="525"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -13372,150 +13580,11 @@
 						</valuemap>
 					</data>
 				</component>
-				<component name="patientReference" library="core" uid="6311" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="209"/>
-					</targets>
-					<view ltx="53" lty="694" rbx="198" rby="732"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
-					</data>
-				</component>
-				<component name="substitute-missing" library="core" uid="6312" kind="5">
-					<sources>
-						<datapoint pos="0" key="220"/>
-						<datapoint pos="1" key="240"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="190"/>
-					</targets>
-					<view ltx="752" lty="678" rbx="874" rby="732"/>
-				</component>
-				<component name="constant" library="core" uid="6314" kind="2">
-					<targets>
-						<datapoint pos="0" key="223"/>
-					</targets>
-					<view ltx="1000" lty="187" rbx="1095" rby="204"/>
-					<data>
-						<constant value="generated" datatype="string"/>
-					</data>
-				</component>
-				<component name="FullURL_AllergyIntolerance" library="provisio" uid="6316" kind="19" visible="0">
-					<view ltx="816" lty="52" rbx="1027" rby="69"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="243" componentid="5584"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="FullURL_AllergyIntolerance" outkey="227" componentid="5586"/>
-						</root>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6317" kind="2">
-					<targets>
-						<datapoint pos="0" key="184"/>
-					</targets>
-					<view ltx="395" lty="143" rbx="551" rby="160"/>
-					<data>
-						<constant value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6318" kind="2">
-					<targets>
-						<datapoint pos="0" key="176"/>
-					</targets>
-					<view ltx="395" lty="127" rbx="551" rby="144"/>
-					<data>
-						<constant value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" datatype="string"/>
-					</data>
-				</component>
-				<component name="exists" library="core" uid="6319" kind="5">
-					<sources>
-						<datapoint pos="0" key="259"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="257"/>
-					</targets>
-					<view ltx="981" lty="694" rbx="1057" rby="732"/>
-				</component>
-				<component name="exists" library="core" uid="6320" kind="5">
-					<sources>
-						<datapoint pos="0" key="249"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="255"/>
-					</targets>
-					<view ltx="981" lty="342" rbx="1057" rby="380"/>
-				</component>
-				<component name="value-map" library="core" uid="6321" kind="23">
-					<sources>
-						<datapoint pos="0" key="158"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="246"/>
-					</targets>
-					<view ltx="395" lty="203" rbx="475" rby="241"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="A" to="confirmed"/>
-								<entry from="SP" to="confirmed"/>
-								<entry from="U" to="confirmed"/>
-								<entry from="Z" to="entered-in-error"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
-				</component>
-				<component name="if-else" library="core" uid="6322" kind="4">
-					<sources>
-						<datapoint pos="0" key="256"/>
-						<datapoint pos="1" key="252"/>
-						<datapoint pos="2" key="254"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="161"/>
-					</targets>
-					<view ltx="1100" lty="255" rbx="1204" rby="328"/>
-				</component>
-				<component name="constant" library="core" uid="6323" kind="2">
-					<targets>
-						<datapoint pos="0" key="250"/>
-					</targets>
-					<view ltx="949" lty="731" rbx="1057" rby="748"/>
-					<data>
-						<constant value="unconfirmed" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6324" kind="2">
-					<targets>
-						<datapoint pos="0" key="253"/>
-					</targets>
-					<view ltx="981" lty="379" rbx="1052" rby="396"/>
-					<data>
-						<constant value="active" datatype="string"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="6325" kind="14">
+				<component name="document" library="xml" uid="6878" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="53" lty="241" rbx="215" rby="512"/>
+					<view ltx="351" lty="327" rbx="513" rby="598"/>
 					<data>
-						<root scrollposition="154">
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -13523,26 +13592,27 @@
 									<namespace uid="http://www.altova.com/mapforce"/>
 								</namespaces>
 							</header>
-							<entry name="uaType" ns="1" type="xml-type" outkey="203" expanded="1">
-								<entry name="guid" type="attribute" outkey="239"/>
-								<entry name="vguid" type="attribute" outkey="217"/>
-								<entry name="dat_ab" type="attribute" outkey="205"/>
-								<entry name="u_al" ns="1" outkey="193"/>
+							<entry name="uaType" ns="1" type="xml-type" outkey="269" expanded="1">
+								<entry name="guid" type="attribute" outkey="299"/>
+								<entry name="vguid" type="attribute" outkey="303"/>
+								<entry name="dat_ab" type="attribute" outkey="314"/>
+								<entry name="u_al" ns="1" outkey="291"/>
 								<entry name="uaf" ns="1" expanded="1">
-									<entry name="guid" type="attribute" outkey="219"/>
-									<entry name="vguid" type="attribute" outkey="207"/>
-									<entry name="typ_agens" type="attribute" outkey="152"/>
-									<entry name="typ_reakce" type="attribute" outkey="154"/>
-									<entry name="ar_klic" type="attribute" outkey="174"/>
-									<entry name="ar_text" type="attribute" outkey="182"/>
-									<entry name="szp_klic" type="attribute" outkey="225"/>
-									<entry name="alerg_lek_klic" ns="1" outkey="166"/>
-									<entry name="alerg_nelek_klic" ns="1" outkey="229"/>
-									<entry name="alerg_text" ns="1" outkey="178"/>
+									<entry name="guid" type="attribute" outkey="285"/>
+									<entry name="vguid" type="attribute" outkey="283"/>
+									<entry name="typ_agens" type="attribute" outkey="371"/>
+									<entry name="typ_reakce" type="attribute" outkey="287"/>
+									<entry name="ar_klic" type="attribute" outkey="275"/>
+									<entry name="ar_text" type="attribute" outkey="336"/>
+									<entry name="szp_klic" type="attribute" outkey="338"/>
+									<entry name="alerg_lek_klic" ns="1" outkey="334"/>
+									<entry name="alerg_nelek_klic" ns="1" outkey="301"/>
+									<entry name="alerg_text" ns="1" outkey="277"/>
 								</entry>
-								<entry name="stav" ns="1" outkey="157"/>
-								<entry name="dat_du" ns="1" outkey="150"/>
-								<entry name="dat_up" ns="1" outkey="164"/>
+								<entry name="stav" ns="1" outkey="319"/>
+								<entry name="autor" ns="1" outkey="289"/>
+								<entry name="dat_du" ns="1" outkey="295"/>
+								<entry name="dat_up" ns="1" outkey="325"/>
 							</entry>
 						</root>
 						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
@@ -13553,81 +13623,21 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="value-map" library="core" uid="6326" kind="23">
+				<component name="substitute-missing" library="core" uid="6879" kind="5">
 					<sources>
-						<datapoint pos="0" key="163"/>
+						<datapoint pos="0" key="286"/>
+						<datapoint pos="1" key="300"/>
 					</sources>
 					<targets>
-						<datapoint pos="0" key="248"/>
+						<datapoint pos="0" key="345"/>
 					</targets>
-					<view ltx="395" lty="166" rbx="475" rby="204"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="A" to="active"/>
-								<entry from="SP" to="inactive"/>
-								<entry from="U" to="resolved"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
+					<view ltx="1050" lty="764" rbx="1172" rby="818"/>
 				</component>
-				<component name="if-else" library="core" uid="6327" kind="4">
-					<sources>
-						<datapoint pos="0" key="258"/>
-						<datapoint pos="1" key="247"/>
-						<datapoint pos="2" key="251"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="168"/>
-					</targets>
-					<view ltx="1100" lty="607" rbx="1204" rby="680"/>
-				</component>
-				<component name="constant" library="core" uid="5048" kind="2">
-					<targets>
-						<datapoint pos="0" key="137"/>
-					</targets>
-					<view ltx="1122" lty="355" rbx="1204" rby="372"/>
-					<data>
-						<constant value="48765-2" datatype="string"/>
-						<comment>
-							<text>Kód pro composition</text>
-						</comment>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6315" kind="2">
-					<targets>
-						<datapoint pos="0" key="213"/>
-					</targets>
-					<view ltx="504" lty="70" rbx="653" rby="87"/>
-					<data>
-						<constant value="http://hl7.eu/fhir/hdr/StructureDefinition/allergyIntolerance-eu-hdr" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6329" kind="2">
-					<targets>
-						<datapoint pos="0" key="260"/>
-					</targets>
-					<view ltx="1122" lty="339" rbx="1243" rby="356"/>
-					<data>
-						<constant value="http://loinc.org" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6313" kind="2">
-					<targets>
-						<datapoint pos="0" key="231"/>
-					</targets>
-					<view ltx="1000" lty="203" rbx="1135" rby="220"/>
-					<data>
-						<constant value="AllergyIntolerance" datatype="string"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="6328" kind="14">
+				<component name="document" library="xml" uid="6880" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="1284" lty="53" rbx="1635" rby="537"/>
+					<view ltx="1582" lty="139" rbx="1933" rby="623"/>
 					<data>
-						<root scrollposition="711">
+						<root scrollposition="306">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -13636,47 +13646,47 @@
 									<namespace uid="http://www.altova.com/mapforce"/>
 								</namespaces>
 							</header>
-							<entry name="entry" ns="1" inpkey="204" expanded="1">
-								<entry name="fullUrl" ns="1" inpkey="228" expanded="1">
-									<entry name="value" type="attribute" inpkey="233"/>
+							<entry name="entry" ns="1" inpkey="270" expanded="1">
+								<entry name="fullUrl" ns="1" inpkey="274" expanded="1">
+									<entry name="value" type="attribute" inpkey="352"/>
 								</entry>
 								<entry name="resource" ns="1" expanded="1">
 									<entry name="AllergyIntolerance" ns="1" expanded="1">
-										<entry name="id" ns="1" inpkey="245" expanded="1">
-											<entry name="value" type="attribute" inpkey="191"/>
+										<entry name="id" ns="1" inpkey="357" expanded="1">
+											<entry name="value" type="attribute" inpkey="346"/>
 										</entry>
 										<entry name="meta" ns="1" expanded="1">
-											<entry name="versionId" ns="1" inpkey="242" expanded="1">
-												<entry name="value" type="attribute" inpkey="238"/>
+											<entry name="versionId" ns="1" inpkey="351" expanded="1">
+												<entry name="value" type="attribute" inpkey="294"/>
 											</entry>
 											<entry name="profile" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="214"/>
+												<entry name="value" type="attribute" inpkey="268"/>
 											</entry>
 											<entry name="tag" ns="1" expanded="1">
 												<entry name="system" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="261"/>
+													<entry name="value" type="attribute" inpkey="266"/>
 												</entry>
 												<entry name="code" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="262"/>
+													<entry name="value" type="attribute" inpkey="264"/>
 												</entry>
 												<entry name="display" ns="1" expanded="1"/>
 											</entry>
 										</entry>
 										<entry name="text" ns="1" expanded="1">
 											<entry name="status" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="224"/>
+												<entry name="value" type="attribute" inpkey="363"/>
 											</entry>
 											<entry name="div" ns="2" expanded="1">
-												<entry name="#text" inpkey="232"/>
+												<entry name="#text" inpkey="298"/>
 											</entry>
 										</entry>
 										<entry name="clinicalStatus" ns="1" expanded="1">
 											<entry name="coding" ns="1" expanded="1">
 												<entry name="system" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="177"/>
+													<entry name="value" type="attribute" inpkey="374"/>
 												</entry>
 												<entry name="code" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="162"/>
+													<entry name="value" type="attribute" inpkey="333"/>
 												</entry>
 												<entry name="display" ns="1" expanded="1"/>
 											</entry>
@@ -13684,83 +13694,85 @@
 										<entry name="verificationStatus" ns="1" expanded="1">
 											<entry name="coding" ns="1" expanded="1">
 												<entry name="system" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="185"/>
+													<entry name="value" type="attribute" inpkey="311"/>
 												</entry>
 												<entry name="code" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="169"/>
+													<entry name="value" type="attribute" inpkey="324"/>
 												</entry>
 												<entry name="display" ns="1" expanded="1"/>
 											</entry>
 										</entry>
-										<entry name="type" ns="1" inpkey="155">
-											<entry name="value" type="attribute" inpkey="171"/>
+										<entry name="type" ns="1" inpkey="379">
+											<entry name="value" type="attribute" inpkey="313"/>
 										</entry>
-										<entry name="category" ns="1" inpkey="153">
-											<entry name="value" type="attribute" inpkey="187"/>
+										<entry name="category" ns="1" inpkey="372">
+											<entry name="value" type="attribute" inpkey="369"/>
 										</entry>
-										<entry name="criticality" ns="1" inpkey="222" expanded="1">
-											<entry name="value" type="attribute" inpkey="241"/>
+										<entry name="criticality" ns="1" inpkey="348" expanded="1">
+											<entry name="value" type="attribute" inpkey="272"/>
 										</entry>
 										<entry name="code" ns="1" expanded="1">
-											<entry name="coding" ns="1" inpkey="192" expanded="1">
+											<entry name="coding" ns="1" inpkey="375" expanded="1">
 												<entry name="system" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="173"/>
+													<entry name="value" type="attribute" inpkey="377"/>
 												</entry>
 												<entry name="code" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="167"/>
+													<entry name="value" type="attribute" inpkey="335"/>
 												</entry>
-												<entry name="display" ns="1" inpkey="198" expanded="1">
-													<entry name="value" type="attribute" inpkey="179"/>
+												<entry name="display" ns="1" inpkey="278" expanded="1">
+													<entry name="value" type="attribute" inpkey="343"/>
 												</entry>
 											</entry>
-											<entry name="coding" ns="1" inpkey="234" expanded="1" clone="1">
+											<entry name="coding" ns="1" inpkey="307" expanded="1" clone="1">
 												<entry name="system" ns="1">
-													<entry name="value" type="attribute" inpkey="236"/>
+													<entry name="value" type="attribute" inpkey="354"/>
 												</entry>
 												<entry name="code" ns="1">
-													<entry name="value" type="attribute" inpkey="230"/>
+													<entry name="value" type="attribute" inpkey="302"/>
 												</entry>
-												<entry name="display" ns="1" inpkey="197">
-													<entry name="value" type="attribute" inpkey="195"/>
+												<entry name="display" ns="1" inpkey="360">
+													<entry name="value" type="attribute" inpkey="347"/>
 												</entry>
 											</entry>
-											<entry name="text" ns="1" inpkey="196" expanded="1">
-												<entry name="value" type="attribute" inpkey="194"/>
+											<entry name="text" ns="1" inpkey="344" expanded="1">
+												<entry name="value" type="attribute" inpkey="292"/>
 											</entry>
 										</entry>
 										<entry name="patient" ns="1" expanded="1">
 											<entry name="reference" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="210"/>
+												<entry name="value" type="attribute" inpkey="306"/>
 											</entry>
 										</entry>
-										<entry name="onsetPeriod" ns="1" inpkey="160" expanded="1">
+										<entry name="onsetPeriod" ns="1" inpkey="331" expanded="1">
 											<entry name="start" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="151"/>
+												<entry name="value" type="attribute" inpkey="296"/>
 											</entry>
-											<entry name="end" ns="1" inpkey="165" expanded="1">
-												<entry name="value" type="attribute" inpkey="180"/>
+											<entry name="end" ns="1" inpkey="326" expanded="1">
+												<entry name="value" type="attribute" inpkey="370"/>
 											</entry>
 										</entry>
-										<entry name="recordedDate" ns="1" inpkey="244" expanded="1">
-											<entry name="value" type="attribute" inpkey="216"/>
+										<entry name="recordedDate" ns="1" inpkey="330" expanded="1">
+											<entry name="value" type="attribute" inpkey="359"/>
 										</entry>
-										<entry name="recorder" ns="1" inpkey="202" expanded="1">
+										<entry name="recorder" ns="1" inpkey="342" expanded="1">
 											<entry name="reference" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="200"/>
+												<entry name="value" type="attribute" inpkey="328"/>
 											</entry>
-											<entry name="display" ns="1" expanded="1"/>
+											<entry name="display" ns="1" inpkey="290" expanded="1">
+												<entry name="value" type="attribute" inpkey="364"/>
+											</entry>
 										</entry>
-										<entry name="reaction" ns="1" inpkey="175">
-											<entry name="manifestation" ns="1" inpkey="181" expanded="1">
+										<entry name="reaction" ns="1" inpkey="276" expanded="1">
+											<entry name="manifestation" ns="1" inpkey="358" expanded="1">
 												<entry name="coding" ns="1" expanded="1">
 													<entry name="system" ns="1" expanded="1">
-														<entry name="value" type="attribute" inpkey="189"/>
+														<entry name="value" type="attribute" inpkey="322"/>
 													</entry>
 													<entry name="code" ns="1" expanded="1">
-														<entry name="value" type="attribute" inpkey="201"/>
+														<entry name="value" type="attribute" inpkey="316"/>
 													</entry>
 													<entry name="display" ns="1" expanded="1">
-														<entry name="value" type="attribute" inpkey="183"/>
+														<entry name="value" type="attribute" inpkey="337"/>
 													</entry>
 												</entry>
 											</entry>
@@ -13787,77 +13799,88 @@
 						</parameter>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="6315" kind="2">
+					<targets>
+						<datapoint pos="0" key="213"/>
+					</targets>
+					<view ltx="504" lty="70" rbx="653" rby="87"/>
+					<data>
+						<constant value="http://hl7.eu/fhir/hdr/StructureDefinition/allergyIntolerance-eu-hdr" datatype="string"/>
+					</data>
+				</component>
 			</children>
 		</structure>
 		<connections>
-			<edge from="150" to="151"/>
-			<edge from="152" to="153"/>
-			<edge from="154" to="155"/>
-			<edge from="152" to="156"/>
-			<edge from="157" to="158"/>
-			<edge from="154" to="159"/>
-			<edge from="150" to="160"/>
-			<edge from="161" to="162"/>
-			<edge from="157" to="163"/>
-			<edge from="164" to="165"/>
-			<edge from="166" to="167"/>
-			<edge from="168" to="169"/>
-			<edge from="170" to="171"/>
-			<edge from="172" to="173"/>
-			<edge from="174" to="175"/>
-			<edge from="176" to="177"/>
-			<edge from="178" to="179"/>
-			<edge from="164" to="180"/>
-			<edge from="174" to="181"/>
-			<edge from="182" to="183"/>
-			<edge from="184" to="185"/>
-			<edge from="186" to="187"/>
-			<edge from="188" to="189"/>
-			<edge from="190" to="191"/>
-			<edge from="166" to="192"/>
-			<edge from="193" to="194"/>
-			<edge from="178" to="195"/>
-			<edge from="193" to="196"/>
-			<edge from="178" to="197"/>
-			<edge from="178" to="198"/>
-			<edge from="199" to="200"/>
-			<edge from="174" to="201"/>
-			<edge from="199" to="202"/>
-			<edge from="203" to="204"/>
-			<edge from="205" to="206"/>
-			<edge from="207" to="208"/>
-			<edge from="209" to="210"/>
-			<edge from="211" to="212"/>
-			<edge from="213" to="214"/>
-			<edge from="215" to="216"/>
-			<edge from="217" to="218"/>
-			<edge from="219" to="220"/>
-			<edge from="221" to="222"/>
-			<edge from="223" to="224"/>
-			<edge from="225" to="226"/>
-			<edge from="227" to="228"/>
-			<edge from="229" to="230"/>
-			<edge from="231" to="232"/>
-			<edge from="227" to="233"/>
-			<edge from="229" to="234"/>
-			<edge from="235" to="236"/>
-			<edge from="237" to="238"/>
-			<edge from="239" to="240"/>
-			<edge from="221" to="241"/>
-			<edge from="237" to="242"/>
-			<edge from="190" to="243"/>
-			<edge from="215" to="244"/>
-			<edge from="190" to="245"/>
-			<edge from="246" to="247"/>
-			<edge from="248" to="249"/>
-			<edge from="250" to="251"/>
-			<edge from="248" to="252"/>
-			<edge from="253" to="254"/>
-			<edge from="255" to="256"/>
-			<edge from="257" to="258"/>
-			<edge from="246" to="259"/>
-			<edge from="260" to="261"/>
-			<edge from="137" to="262"/>
+			<edge from="263" to="264"/>
+			<edge from="265" to="266"/>
+			<edge from="213" to="268"/>
+			<edge from="269" to="270"/>
+			<edge from="271" to="272"/>
+			<edge from="273" to="274"/>
+			<edge from="275" to="276"/>
+			<edge from="277" to="278"/>
+			<edge from="279" to="280"/>
+			<edge from="281" to="282"/>
+			<edge from="283" to="284"/>
+			<edge from="285" to="286"/>
+			<edge from="287" to="288"/>
+			<edge from="289" to="290"/>
+			<edge from="291" to="292"/>
+			<edge from="293" to="294"/>
+			<edge from="295" to="296"/>
+			<edge from="297" to="298"/>
+			<edge from="299" to="300"/>
+			<edge from="301" to="302"/>
+			<edge from="303" to="304"/>
+			<edge from="305" to="306"/>
+			<edge from="301" to="307"/>
+			<edge from="308" to="309"/>
+			<edge from="310" to="311"/>
+			<edge from="312" to="313"/>
+			<edge from="314" to="315"/>
+			<edge from="275" to="316"/>
+			<edge from="317" to="318"/>
+			<edge from="319" to="320"/>
+			<edge from="321" to="322"/>
+			<edge from="323" to="324"/>
+			<edge from="325" to="326"/>
+			<edge from="327" to="328"/>
+			<edge from="329" to="330"/>
+			<edge from="295" to="331"/>
+			<edge from="332" to="333"/>
+			<edge from="334" to="335"/>
+			<edge from="336" to="337"/>
+			<edge from="338" to="339"/>
+			<edge from="340" to="341"/>
+			<edge from="327" to="342"/>
+			<edge from="277" to="343"/>
+			<edge from="291" to="344"/>
+			<edge from="345" to="346"/>
+			<edge from="277" to="347"/>
+			<edge from="271" to="348"/>
+			<edge from="319" to="349"/>
+			<edge from="345" to="350"/>
+			<edge from="293" to="351"/>
+			<edge from="273" to="352"/>
+			<edge from="353" to="354"/>
+			<edge from="355" to="356"/>
+			<edge from="345" to="357"/>
+			<edge from="275" to="358"/>
+			<edge from="329" to="359"/>
+			<edge from="277" to="360"/>
+			<edge from="317" to="361"/>
+			<edge from="362" to="363"/>
+			<edge from="289" to="364"/>
+			<edge from="365" to="366"/>
+			<edge from="279" to="367"/>
+			<edge from="368" to="369"/>
+			<edge from="325" to="370"/>
+			<edge from="371" to="372"/>
+			<edge from="373" to="374"/>
+			<edge from="334" to="375"/>
+			<edge from="376" to="377"/>
+			<edge from="371" to="378"/>
+			<edge from="287" to="379"/>
 		</connections>
 	</component>
 	<component name="Reference_AllergyIntolerance" library="provisio" uid="5045">
@@ -15079,42 +15102,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6128" kind="2">
-					<targets>
-						<datapoint pos="0" key="491"/>
-					</targets>
-					<view ltx="758" lty="408" rbx="834" rby="425"/>
-					<data>
-						<constant value="8293-3" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6127" kind="2">
-					<targets>
-						<datapoint pos="0" key="493"/>
-					</targets>
-					<view ltx="758" lty="424" rbx="917" rby="441"/>
-					<data>
-						<constant value="Chest Circumference --inspiration" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6124" kind="2">
-					<targets>
-						<datapoint pos="0" key="499"/>
-					</targets>
-					<view ltx="758" lty="456" rbx="917" rby="473"/>
-					<data>
-						<constant value="Waist Circumference at umbilicus by Tape measure" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6123" kind="2">
-					<targets>
-						<datapoint pos="0" key="503"/>
-					</targets>
-					<view ltx="758" lty="440" rbx="834" rby="457"/>
-					<data>
-						<constant value="8280-0" datatype="string"/>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="6139" kind="2">
 					<targets>
 						<datapoint/>
@@ -15911,6 +15898,42 @@
 					<view ltx="821" lty="653" rbx="917" rby="670"/>
 					<data>
 						<constant value="Vital Signs" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6128" kind="2">
+					<targets>
+						<datapoint pos="0" key="491"/>
+					</targets>
+					<view ltx="758" lty="408" rbx="834" rby="425"/>
+					<data>
+						<constant value="8280-0" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6127" kind="2">
+					<targets>
+						<datapoint pos="0" key="493"/>
+					</targets>
+					<view ltx="758" lty="424" rbx="917" rby="441"/>
+					<data>
+						<constant value="Waist Circumference at umbilicus by Tape measure" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6123" kind="2">
+					<targets>
+						<datapoint pos="0" key="503"/>
+					</targets>
+					<view ltx="758" lty="440" rbx="840" rby="457"/>
+					<data>
+						<constant value="56086-2" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6124" kind="2">
+					<targets>
+						<datapoint pos="0" key="499"/>
+					</targets>
+					<view ltx="758" lty="456" rbx="917" rby="473"/>
+					<data>
+						<constant value="Adult Waist Circumference Protocol" datatype="string"/>
 					</data>
 				</component>
 			</children>
@@ -29860,59 +29883,6 @@
 						</valuemap>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="5672" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-270" lty="-56" rbx="-106" rby="276"/>
-					<data>
-						<root scrollposition="9">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="ku_z_propz_hospType" ns="1" type="xml-type" expanded="1">
-								<entry name="guid" type="attribute" outkey="59"/>
-								<entry name="vguid" type="attribute" outkey="60"/>
-								<entry name="typ_kontaktu" ns="1" outkey="61"/>
-								<entry name="hospital_text" ns="1" outkey="62"/>
-								<entry name="urg_prij" ns="1" outkey="63"/>
-								<entry name="dat_prij" ns="1" outkey="64"/>
-								<entry name="prij_pracovnik" ns="1" outkey="65">
-									<entry name="guid" type="attribute" outkey="66"/>
-									<entry name="vguid" type="attribute" outkey="67"/>
-									<entry name="prijmeni" ns="1" outkey="68"/>
-								</entry>
-								<entry name="zdroj_prij" ns="1" outkey="96"/>
-								<entry name="dop_pracovnik" ns="1" outkey="97">
-									<entry name="guid" type="attribute" outkey="98"/>
-									<entry name="vguid" type="attribute" outkey="99"/>
-									<entry name="prijmeni" ns="1" outkey="100"/>
-								</entry>
-								<entry name="dop_pracoviste" ns="1" outkey="101">
-									<entry name="guid" type="attribute" outkey="196"/>
-									<entry name="vguid" type="attribute" outkey="197"/>
-								</entry>
-								<entry name="duv_prij_kod" ns="1" outkey="176">
-									<entry name="kod" ns="1" outkey="105"/>
-									<entry name="kod_text" ns="1" outkey="106"/>
-								</entry>
-								<entry name="duv_prij_text" ns="1" outkey="107"/>
-								<entry name="po_prij_kod" ns="1" outkey="108"/>
-								<entry name="po_prij_text" ns="1" outkey="109"/>
-								<entry name="dat_prop" ns="1" outkey="69"/>
-								<entry name="cil_prop" ns="1" outkey="110"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
-						<parameter usageKind="input" name="ku_z_propz_hospType">
-							<root>
-								<entry name="ku_z_propz_hospType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
 				<component name="Reference_Organization" library="provisio" uid="6393" kind="19" visible="0">
 					<view ltx="119" lty="340" rbx="312" rby="374"/>
 					<data>
@@ -30002,11 +29972,104 @@
 						</root>
 					</data>
 				</component>
+				<component name="pracovnik" library="provisio" uid="5689" kind="19" visible="0">
+					<view ltx="119" lty="276" rbx="415" rby="318"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="pracovnikType" ns="1" componentid="104" expanded="1">
+								<entry name="pracovnikType" type="xml-type" inpkey="85"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="105" expanded="1">
+								<entry name="entry" outkey="87"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="dat_vys_prij" library="core" uid="6848" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="198"/>
+					</targets>
+					<view ltx="-242" lty="-292" rbx="-126" rby="-254"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="dat_vys_prij"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="5672" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-270" lty="-56" rbx="-106" rby="276"/>
+					<data>
+						<root scrollposition="9">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="ku_z_propz_hospType" ns="1" type="xml-type" expanded="1">
+								<entry name="guid" type="attribute" outkey="59"/>
+								<entry name="vguid" type="attribute" outkey="60"/>
+								<entry name="typ_kontaktu" ns="1" outkey="61"/>
+								<entry name="hospital_text" ns="1" outkey="62"/>
+								<entry name="urg_prij" ns="1" outkey="63"/>
+								<entry name="dat_prij" ns="1" outkey="64"/>
+								<entry name="prij_pracovnik" ns="1" outkey="65">
+									<entry name="guid" type="attribute" outkey="66"/>
+									<entry name="vguid" type="attribute" outkey="67"/>
+									<entry name="prijmeni" ns="1" outkey="68"/>
+								</entry>
+								<entry name="zdroj_prij" ns="1" outkey="96"/>
+								<entry name="dop_pracovnik" ns="1" outkey="97">
+									<entry name="guid" type="attribute" outkey="98"/>
+									<entry name="vguid" type="attribute" outkey="99"/>
+									<entry name="prijmeni" ns="1" outkey="100"/>
+								</entry>
+								<entry name="dop_pracoviste" ns="1" outkey="101">
+									<entry name="guid" type="attribute" outkey="196"/>
+									<entry name="vguid" type="attribute" outkey="197"/>
+								</entry>
+								<entry name="duv_prij_kod" ns="1" outkey="176">
+									<entry name="kod" ns="1" outkey="105"/>
+									<entry name="kod_text" ns="1" outkey="106"/>
+								</entry>
+								<entry name="duv_prij_text" ns="1" outkey="107"/>
+								<entry name="po_prij_kod" ns="1" outkey="108"/>
+								<entry name="po_prij_text" ns="1" outkey="109"/>
+								<entry name="dat_prop" ns="1" outkey="69"/>
+								<entry name="cil_prop" ns="1" outkey="110"/>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<parameter usageKind="input" name="ku_z_propz_hospType">
+							<root>
+								<entry name="ku_z_propz_hospType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="5671" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1014" lty="-293" rbx="1532" rby="333"/>
 					<data>
-						<root scrollposition="532">
+						<root scrollposition="1380">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -30125,7 +30188,13 @@
 												</entry>
 											</entry>
 										</entry>
-										<entry name="period" ns="1">
+										<entry name="period" ns="1" expanded="1">
+											<entry name="extension" ns="1" expanded="1">
+												<entry name="url" type="attribute" inpkey="200"/>
+												<entry name="valueDateTime" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="201"/>
+												</entry>
+											</entry>
 											<entry name="start" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="56"/>
 											</entry>
@@ -30286,31 +30355,13 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="pracovnik" library="provisio" uid="5689" kind="19" visible="0">
-					<view ltx="119" lty="276" rbx="415" rby="318"/>
+				<component name="constant" library="core" uid="6849" kind="2">
+					<targets>
+						<datapoint pos="0" key="199"/>
+					</targets>
+					<view ltx="-277" lty="-251" rbx="-126" rby="-234"/>
 					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="pracovnikType" ns="1" componentid="104" expanded="1">
-								<entry name="pracovnikType" type="xml-type" inpkey="85"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="105" expanded="1">
-								<entry name="entry" outkey="87"/>
-							</entry>
-						</root>
+						<constant value="https://dasta.mzcr.cz/dat_vys_prij" datatype="string"/>
 					</data>
 				</component>
 			</children>
@@ -30396,6 +30447,8 @@
 			<edge from="196" to="189"/>
 			<edge from="197" to="190"/>
 			<edge from="101" to="194"/>
+			<edge from="199" to="200"/>
+			<edge from="198" to="201"/>
 		</connections>
 	</component>
 	<component name="FullURL_Consent" library="provisio" uid="5741">
