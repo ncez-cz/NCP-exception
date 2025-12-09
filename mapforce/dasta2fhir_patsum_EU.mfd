@@ -1049,36 +1049,6 @@
 					</targets>
 					<view ltx="730" lty="637" rbx="843" rby="691"/>
 				</component>
-				<component name="constant" library="core" uid="5075" kind="2">
-					<targets>
-						<datapoint pos="0" key="758"/>
-					</targets>
-					<view ltx="438" lty="689" rbx="532" rby="706"/>
-					<data>
-						<constant value="Condition" datatype="string"/>
-					</data>
-				</component>
-				<component name="starts-with" library="core" uid="5082" kind="5">
-					<sources>
-						<datapoint pos="0" key="785"/>
-						<datapoint pos="1" key="759"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="768"/>
-					</targets>
-					<view ltx="609" lty="689" rbx="691" rby="743"/>
-				</component>
-				<component name="value" library="core" uid="5083" kind="3">
-					<sources>
-						<datapoint pos="0" key="786"/>
-						<datapoint pos="1" key="769"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="764"/>
-						<datapoint/>
-					</targets>
-					<view ltx="730" lty="689" rbx="843" rby="743"/>
-				</component>
 				<component name="constant" library="core" uid="5076" kind="2">
 					<targets>
 						<datapoint pos="0" key="770"/>
@@ -1128,28 +1098,6 @@
 								</namespaces>
 							</header>
 							<entry name="referenceCondition" outkey="1230" componentid="4645"/>
-						</root>
-					</data>
-				</component>
-				<component name="Reference_Condition" library="provisio" uid="5988" kind="19" visible="0" blackbox="0">
-					<view ltx="888" lty="586" rbx="1066" rby="620"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="1204" componentid="4649"/>
-							<entry name="VGUID" inpkey="1205" componentid="4650"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="referenceCondition" outkey="1206" componentid="4645"/>
 						</root>
 					</data>
 				</component>
@@ -2045,85 +1993,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="anf - all" library="provisio" uid="5062" kind="19" visible="0" blackbox="0">
-					<view ltx="438" lty="153" rbx="683" rby="271"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="patientReference" inpkey="1171" componentid="5757" expanded="1"/>
-							<entry name="ip_anf" componentid="4054" expanded="1">
-								<entry name="anfType" ns="1" type="xml-type" inpkey="793"/>
-							</entry>
-							<entry name="organizatinReference" inpkey="1010" componentid="5135"/>
-							<entry name="practitionerReference" inpkey="1011" componentid="5136"/>
-							<entry name="patsumdat_anf" componentid="4034" expanded="1">
-								<entry name="anfType" ns="1" type="xml-type" inpkey="794"/>
-							</entry>
-							<entry name="dat_prov" componentid="5018" expanded="1">
-								<entry name="dat_prov" ns="1" inpkey="788"/>
-							</entry>
-						</root>
-						<root scrollposition="153">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.w3.org/1999/xhtml"/>
-								</namespaces>
-							</header>
-							<entry name="entry" componentid="5134" expanded="1">
-								<entry name="entry" ns="1" outkey="1012" expanded="1">
-									<entry name="fullUrl" ns="1" expanded="1">
-										<entry name="value" type="attribute" outkey="1013"/>
-									</entry>
-									<entry name="resource" ns="1" expanded="1">
-										<entry name="Condition" ns="1" expanded="1">
-											<entry name="meta" ns="1" expanded="1">
-												<entry name="versionId" ns="1" expanded="1">
-													<entry name="value" type="attribute" outkey="1108"/>
-												</entry>
-											</entry>
-											<entry name="text" ns="1" expanded="1">
-												<entry name="div" ns="2" expanded="1">
-													<entry name="#text" outkey="1192"/>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="FamilyMemberHistory" ns="1" expanded="1">
-											<entry name="meta" ns="1" expanded="1">
-												<entry name="versionId" ns="1" expanded="1">
-													<entry name="value" type="attribute" outkey="1109"/>
-												</entry>
-											</entry>
-											<entry name="text" ns="1" expanded="1">
-												<entry name="div" ns="2" expanded="1">
-													<entry name="#text" outkey="1194"/>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="Observation" ns="1" expanded="1">
-											<entry name="meta" ns="1" expanded="1">
-												<entry name="versionId" ns="1" expanded="1">
-													<entry name="value" type="attribute" outkey="1110"/>
-												</entry>
-											</entry>
-											<entry name="text" ns="1" expanded="1">
-												<entry name="div" ns="2" expanded="1">
-													<entry name="#text" outkey="1193"/>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="chv - all" library="provisio" uid="5063" kind="19" visible="0" blackbox="0">
 					<view ltx="1669" lty="153" rbx="1914" rby="271"/>
 					<data>
@@ -2586,10 +2455,201 @@
 						</root>
 					</data>
 				</component>
-				<component name="Composition EU PS" library="provisio" uid="5070" kind="19" visible="0" blackbox="0">
-					<view ltx="1695" lty="433" rbx="2163" rby="839"/>
+				<component name="pracoviste" library="provisio" uid="6753" kind="19" visible="0" blackbox="0">
+					<view ltx="1355" lty="321" rbx="1604" rby="434"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="pracovisteType" ns="1" componentid="6375" expanded="1">
+								<entry name="pracovisteType" type="xml-type" inpkey="1249"/>
+							</entry>
+						</root>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="6372" expanded="1">
+								<entry name="entry" outkey="1250">
+									<entry name="resource" expanded="1">
+										<entry name="Organization" expanded="1">
+											<entry name="id" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="ip_ip" library="provisio" uid="5649" kind="19" visible="0" blackbox="0">
+					<view ltx="1028" lty="321" rbx="1277" rby="434"/>
 					<data>
 						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ip" ns="1" componentid="5690" expanded="1">
+								<entry name="ip" inpkey="1159"/>
+							</entry>
+						</root>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="5689" expanded="1">
+								<entry name="entry" outkey="1160"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="Reference_Condition" library="provisio" uid="5988" kind="19" visible="0" blackbox="0">
+					<view ltx="888" lty="586" rbx="1066" rby="620"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="1204" componentid="4649"/>
+							<entry name="VGUID" inpkey="1205" componentid="4650"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="referenceCondition" outkey="1206" componentid="4645"/>
+						</root>
+					</data>
+				</component>
+				<component name="value" library="core" uid="5083" kind="3">
+					<sources>
+						<datapoint pos="0" key="786"/>
+						<datapoint pos="1" key="769"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="764"/>
+						<datapoint/>
+					</targets>
+					<view ltx="730" lty="689" rbx="843" rby="743"/>
+				</component>
+				<component name="anf - all" library="provisio" uid="5062" kind="19" visible="0" blackbox="0">
+					<view ltx="438" lty="153" rbx="683" rby="271"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="patientReference" inpkey="1171" componentid="5757" expanded="1"/>
+							<entry name="ip_anf" componentid="4054" expanded="1">
+								<entry name="anfType" ns="1" type="xml-type" inpkey="793"/>
+							</entry>
+							<entry name="organizatinReference" inpkey="1010" componentid="5135"/>
+							<entry name="practitionerReference" inpkey="1011" componentid="5136"/>
+							<entry name="patsumdat_anf" componentid="4034" expanded="1">
+								<entry name="anfType" ns="1" type="xml-type" inpkey="794"/>
+							</entry>
+							<entry name="dat_prov" componentid="5018" expanded="1">
+								<entry name="dat_prov" ns="1" inpkey="788"/>
+							</entry>
+						</root>
+						<root scrollposition="1070">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.w3.org/1999/xhtml"/>
+								</namespaces>
+							</header>
+							<entry name="entry" componentid="5134" expanded="1">
+								<entry name="entry" ns="1" outkey="1012" expanded="1">
+									<entry name="fullUrl" ns="1" expanded="1">
+										<entry name="value" type="attribute" outkey="1013"/>
+									</entry>
+									<entry name="resource" ns="1" expanded="1">
+										<entry name="Condition" ns="1" expanded="1">
+											<entry name="meta" ns="1" expanded="1">
+												<entry name="versionId" ns="1" expanded="1">
+													<entry name="value" type="attribute" outkey="1108"/>
+												</entry>
+											</entry>
+											<entry name="text" ns="1" expanded="1">
+												<entry name="div" ns="2" expanded="1">
+													<entry name="#text" outkey="1192"/>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="FamilyMemberHistory" ns="1" expanded="1">
+											<entry name="meta" ns="1" expanded="1">
+												<entry name="versionId" ns="1" expanded="1">
+													<entry name="value" type="attribute" outkey="1109"/>
+												</entry>
+											</entry>
+											<entry name="text" ns="1" expanded="1">
+												<entry name="div" ns="2" expanded="1">
+													<entry name="#text" outkey="1194"/>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="Observation" ns="1" expanded="1">
+											<entry name="meta" ns="1" expanded="1">
+												<entry name="versionId" ns="1" expanded="1">
+													<entry name="value" type="attribute" outkey="1110"/>
+												</entry>
+											</entry>
+											<entry name="text" ns="1" expanded="1">
+												<entry name="div" ns="2" expanded="1">
+													<entry name="#text" outkey="1193"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5075" kind="2">
+					<targets>
+						<datapoint pos="0" key="758"/>
+					</targets>
+					<view ltx="438" lty="689" rbx="532" rby="706"/>
+					<data>
+						<constant value="Condition" datatype="string"/>
+					</data>
+				</component>
+				<component name="starts-with" library="core" uid="5082" kind="5">
+					<sources>
+						<datapoint pos="0" key="785"/>
+						<datapoint pos="1" key="759"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="768"/>
+					</targets>
+					<view ltx="609" lty="689" rbx="691" rby="743"/>
+				</component>
+				<component name="Composition EU PS" library="provisio" uid="5070" kind="19" visible="0" blackbox="0">
+					<view ltx="1843" lty="422" rbx="2311" rby="828"/>
+					<data>
+						<root scrollposition="97">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -2693,8 +2753,8 @@
 									</entry>
 								</entry>
 							</entry>
-							<entry name="sectionProblems_anf_anam_prob" componentid="4373" expanded="1">
-								<entry name="entry" ns="1" inpkey="765">
+							<entry name="sectionPastProblems_anf_anam_prob" componentid="4373" expanded="1">
+								<entry name="entry" ns="1" inpkey="765" expanded="1">
 									<entry name="reference" ns="1" expanded="1">
 										<entry name="value" type="attribute" inpkey="772"/>
 									</entry>
@@ -2731,66 +2791,6 @@
 							</header>
 							<entry name="entry" ns="1" componentid="4296" expanded="1">
 								<entry name="entry" outkey="757"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="pracoviste" library="provisio" uid="6753" kind="19" visible="0" blackbox="0">
-					<view ltx="1355" lty="321" rbx="1604" rby="434"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="pracovisteType" ns="1" componentid="6375" expanded="1">
-								<entry name="pracovisteType" type="xml-type" inpkey="1249"/>
-							</entry>
-						</root>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="6372" expanded="1">
-								<entry name="entry" outkey="1250">
-									<entry name="resource" expanded="1">
-										<entry name="Organization" expanded="1">
-											<entry name="id" expanded="1"/>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="ip_ip" library="provisio" uid="5649" kind="19" visible="0" blackbox="0">
-					<view ltx="1028" lty="321" rbx="1277" rby="434"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ip" ns="1" componentid="5690" expanded="1">
-								<entry name="ip" inpkey="1159"/>
-							</entry>
-						</root>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="5689" expanded="1">
-								<entry name="entry" outkey="1160"/>
 							</entry>
 						</root>
 					</data>
@@ -22186,39 +22186,6 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="anf_anam_prob" library="provisio" uid="4032" kind="19" visible="0" blackbox="0">
-					<view ltx="300" rbx="548" rby="93"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="anam_probType" ns="1" componentid="3484" expanded="1">
-								<entry name="anam_probType" type="xml-type" inpkey="118"/>
-							</entry>
-							<entry name="dat_ab" ns="1" componentid="3494" expanded="1">
-								<entry name="dat_ab" inpkey="302"/>
-							</entry>
-							<entry name="organizatinReference" ns="1" inpkey="342" componentid="5137"/>
-							<entry name="practitionerReference" ns="1" inpkey="343" componentid="5138"/>
-							<entry name="patientReference" ns="1" inpkey="380" componentid="5756" expanded="1"/>
-						</root>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="3486" expanded="1">
-								<entry name="entry" outkey="125"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="4054" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="300" lty="139" rbx="476" rby="339"/>
@@ -22985,6 +22952,39 @@
 							</header>
 							<entry name="entry" ns="1" componentid="10" expanded="1">
 								<entry name="entry" outkey="126"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="anf_anam_prob" library="provisio" uid="4032" kind="19" visible="0" blackbox="0">
+					<view ltx="300" rbx="548" rby="93"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="anam_probType" ns="1" componentid="3484" expanded="1">
+								<entry name="anam_probType" type="xml-type" inpkey="118"/>
+							</entry>
+							<entry name="dat_ab" ns="1" componentid="3494" expanded="1">
+								<entry name="dat_ab" inpkey="302"/>
+							</entry>
+							<entry name="organizatinReference" ns="1" inpkey="342" componentid="5137"/>
+							<entry name="practitionerReference" ns="1" inpkey="343" componentid="5138"/>
+							<entry name="patientReference" ns="1" inpkey="380" componentid="5756" expanded="1"/>
+						</root>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="3486" expanded="1">
+								<entry name="entry" outkey="125"/>
 							</entry>
 						</root>
 					</data>
@@ -25623,15 +25623,6 @@
 						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="4314" kind="2">
-					<targets>
-						<datapoint pos="0" key="6"/>
-					</targets>
-					<view ltx="984" lty="103" rbx="1113" rby="120"/>
-					<data>
-						<constant value="Problems section" datatype="string"/>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="4303" kind="2">
 					<targets>
 						<datapoint pos="0" key="34"/>
@@ -25648,24 +25639,6 @@
 					<view ltx="988" lty="152" rbx="1114" rby="169"/>
 					<data>
 						<constant value="Allergies section" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5788" kind="2">
-					<targets>
-						<datapoint pos="0" key="366"/>
-					</targets>
-					<view ltx="958" lty="136" rbx="1110" rby="153"/>
-					<data>
-						<constant value="Problem list - Reported" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="4315" kind="2">
-					<targets>
-						<datapoint pos="0" key="41"/>
-					</targets>
-					<view ltx="1030" lty="119" rbx="1112" rby="136"/>
-					<data>
-						<constant value="11450-4" datatype="string"/>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="5789" kind="2">
@@ -25893,15 +25866,6 @@
 						<constant value="47420-5" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="4326" kind="2">
-					<targets>
-						<datapoint pos="0" key="200"/>
-					</targets>
-					<view ltx="961" lty="584" rbx="1111" rby="601"/>
-					<data>
-						<constant value="PastIllnessHx section" datatype="string"/>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="5798" kind="2">
 					<targets>
 						<datapoint pos="0" key="376"/>
@@ -25909,15 +25873,6 @@
 					<view ltx="967" lty="616" rbx="1111" rby="633"/>
 					<data>
 						<constant value="History of Past illness note" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="4327" kind="2">
-					<targets>
-						<datapoint pos="0" key="198"/>
-					</targets>
-					<view ltx="1029" lty="600" rbx="1111" rby="617"/>
-					<data>
-						<constant value="11348-0" datatype="string"/>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="4342" kind="2">
@@ -25992,15 +25947,6 @@
 						<constant value="Plan of care note" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="4331" kind="2">
-					<targets>
-						<datapoint pos="0" key="49"/>
-					</targets>
-					<view ltx="1030" lty="744" rbx="1112" rby="761"/>
-					<data>
-						<constant value="18776-5" datatype="string"/>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="4332" kind="2">
 					<targets>
 						<datapoint pos="0" key="24"/>
@@ -26048,15 +25994,6 @@
 					<view ltx="425" lty="113" rbx="515" rby="130"/>
 					<data>
 						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5905" kind="2">
-					<targets>
-						<datapoint pos="0" key="443"/>
-					</targets>
-					<view ltx="728" lty="142" rbx="884" rby="159"/>
-					<data>
-						<constant value="http://terminology.hl7.org/CodeSystem/data-absent-reason" datatype="string"/>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="4356" kind="14">
@@ -26157,17 +26094,6 @@
 					</targets>
 					<view ltx="780" lty="333" rbx="884" rby="406"/>
 				</component>
-				<component name="if-else" library="core" uid="5914" kind="4">
-					<sources>
-						<datapoint pos="0" key="473"/>
-						<datapoint pos="1" key="475"/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="471"/>
-					</targets>
-					<view ltx="781" lty="405" rbx="885" rby="478"/>
-				</component>
 				<component name="document" library="xml" uid="4352" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-13" lty="279" rbx="287" rby="305"/>
@@ -26230,17 +26156,6 @@
 						<datapoint pos="0" key="439"/>
 					</targets>
 					<view ltx="660" lty="290" rbx="737" rby="328"/>
-				</component>
-				<component name="if-else" library="core" uid="5922" kind="4">
-					<sources>
-						<datapoint pos="0" key="495"/>
-						<datapoint pos="1" key="493"/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="492"/>
-					</targets>
-					<view ltx="781" lty="978" rbx="885" rby="1051"/>
 				</component>
 				<component name="document" library="xml" uid="4353" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
@@ -26482,52 +26397,6 @@
 					</targets>
 					<view ltx="777" lty="728" rbx="884" rby="835"/>
 				</component>
-				<component name="document" library="xml" uid="4409" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-14" lty="856" rbx="286" rby="882"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="entry" outkey="175"/>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="sectionProblems_dg" optional="1" sequence="1">
-							<root>
-								<entry name="Composition" ns="http://hl7.org/fhir"/>
-								<entry name="section" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="4373" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-14" lty="712" rbx="286" rby="738"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="entry" outkey="166"/>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="sectionProblems_anf_anam_prob" optional="1" sequence="1">
-							<root>
-								<entry name="Composition" ns="http://hl7.org/fhir"/>
-								<entry name="section" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
 				<component name="concat" library="core" uid="5811" kind="5" growable="1" growablebasename="value">
 					<sources>
 						<datapoint pos="0" key="403"/>
@@ -26629,15 +26498,6 @@
 						<constant value="http://loinc.org" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="4325" kind="2">
-					<targets>
-						<datapoint pos="0" key="46"/>
-					</targets>
-					<view ltx="1036" lty="840" rbx="1112" rby="857"/>
-					<data>
-						<constant value="8716-3" datatype="string"/>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="6016" kind="2">
 					<targets>
 						<datapoint pos="0" key="558"/>
@@ -26665,47 +26525,6 @@
 						<constant value="History of family member diseases note" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="5906" kind="2">
-					<targets>
-						<datapoint pos="0" key="442"/>
-					</targets>
-					<view ltx="767" lty="158" rbx="884" rby="175"/>
-					<data>
-						<constant value="not-applicable" datatype="string"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="4389" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-14" lty="760" rbx="286" rby="786"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="entry" outkey="171"/>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="sectionFamilyMemberHistory_anf_rao" optional="1" sequence="1">
-							<root>
-								<entry name="Composition" ns="http://hl7.org/fhir"/>
-								<entry name="section" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="not-exists" library="core" uid="5921" kind="5">
-					<sources>
-						<datapoint pos="0" key="491"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="494"/>
-					</targets>
-					<view ltx="661" lty="1005" rbx="738" rby="1043"/>
-				</component>
 				<component name="document" library="xml" uid="4395" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-14" lty="808" rbx="286" rby="834"/>
@@ -26728,77 +26547,6 @@
 							</root>
 						</parameter>
 					</data>
-				</component>
-				<component name="exists" library="core" uid="5939" kind="5">
-					<sources>
-						<datapoint pos="0" key="525"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="527"/>
-					</targets>
-					<view ltx="661" lty="1138" rbx="737" rby="1176"/>
-				</component>
-				<component name="exists" library="core" uid="5940" kind="5">
-					<sources>
-						<datapoint pos="0" key="524"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="529"/>
-					</targets>
-					<view ltx="661" lty="1175" rbx="737" rby="1213"/>
-				</component>
-				<component name="not-exists" library="core" uid="6021" kind="5">
-					<sources>
-						<datapoint pos="0" key="555"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="556"/>
-					</targets>
-					<view ltx="661" lty="1247" rbx="738" rby="1285"/>
-				</component>
-				<component name="if-else" library="core" uid="5942" kind="4">
-					<sources>
-						<datapoint pos="0" key="534"/>
-						<datapoint pos="1" key="547"/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="538"/>
-					</targets>
-					<view ltx="781" lty="1228" rbx="885" rby="1301"/>
-				</component>
-				<component name="not-exists" library="core" uid="6020" kind="5">
-					<sources>
-						<datapoint pos="0" key="553"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="554"/>
-					</targets>
-					<view ltx="658" lty="1062" rbx="735" rby="1100"/>
-				</component>
-				<component name="if-else" library="core" uid="6019" kind="4">
-					<sources>
-						<datapoint pos="0" key="551"/>
-						<datapoint pos="1" key="552"/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="549"/>
-					</targets>
-					<view ltx="780" lty="1050" rbx="884" rby="1123"/>
-				</component>
-				<component name="if-else" library="core" uid="5941" kind="4">
-					<sources>
-						<datapoint pos="0" key="528"/>
-						<datapoint/>
-						<datapoint pos="2" key="530"/>
-						<datapoint/>
-						<datapoint pos="4" key="526"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="523"/>
-					</targets>
-					<view ltx="778" lty="1122" rbx="885" rby="1229"/>
 				</component>
 				<component name="constant" library="core" uid="4302" kind="2">
 					<targets>
@@ -26855,15 +26603,6 @@
 						<datapoint pos="0" key="433"/>
 					</targets>
 					<view ltx="660" lty="218" rbx="737" rby="256"/>
-				</component>
-				<component name="constant" library="core" uid="5903" kind="2">
-					<targets>
-						<datapoint pos="0" key="431"/>
-					</targets>
-					<view ltx="767" lty="174" rbx="885" rby="191"/>
-					<data>
-						<constant value="Not Applicable" datatype="string"/>
-					</data>
 				</component>
 				<component name="if-else" library="core" uid="5904" kind="4">
 					<sources>
@@ -26947,11 +26686,281 @@
 						<parameter usageKind="input" name="organizatinReference" optional="1" sequence="1"/>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="4314" kind="2">
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="984" lty="103" rbx="1113" rby="120"/>
+					<data>
+						<constant value="Problems section" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5788" kind="2">
+					<targets>
+						<datapoint pos="0" key="366"/>
+					</targets>
+					<view ltx="958" lty="136" rbx="1110" rby="153"/>
+					<data>
+						<constant value="Problem list - Reported" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="4325" kind="2">
+					<targets>
+						<datapoint pos="0" key="46"/>
+					</targets>
+					<view ltx="1036" lty="840" rbx="1112" rby="857"/>
+					<data>
+						<constant value="8716-3" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="4326" kind="2">
+					<targets>
+						<datapoint pos="0" key="200"/>
+					</targets>
+					<view ltx="961" lty="584" rbx="1111" rby="601"/>
+					<data>
+						<constant value="PastIllnessHx section" datatype="string"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="4409" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-14" lty="856" rbx="286" rby="882"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="entry" outkey="175"/>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="input" name="sectionProblems_dg" optional="1" sequence="1">
+							<root>
+								<entry name="Composition" ns="http://hl7.org/fhir"/>
+								<entry name="section" ns="http://hl7.org/fhir"/>
+								<entry name="entry" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="4315" kind="2">
+					<targets>
+						<datapoint pos="0" key="41"/>
+					</targets>
+					<view ltx="1030" lty="119" rbx="1112" rby="136"/>
+					<data>
+						<constant value="11450-4" datatype="string"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="4389" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-14" lty="760" rbx="286" rby="786"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="entry" outkey="171"/>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="input" name="sectionFamilyMemberHistory_anf_rao" optional="1" sequence="1">
+							<root>
+								<entry name="Composition" ns="http://hl7.org/fhir"/>
+								<entry name="section" ns="http://hl7.org/fhir"/>
+								<entry name="entry" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="not-exists" library="core" uid="6020" kind="5">
+					<sources>
+						<datapoint pos="0" key="553"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="554"/>
+					</targets>
+					<view ltx="658" lty="1134" rbx="735" rby="1172"/>
+				</component>
+				<component name="not-exists" library="core" uid="6021" kind="5">
+					<sources>
+						<datapoint pos="0" key="555"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="556"/>
+					</targets>
+					<view ltx="661" lty="1213" rbx="738" rby="1251"/>
+				</component>
+				<component name="if-else" library="core" uid="5942" kind="4">
+					<sources>
+						<datapoint pos="0" key="534"/>
+						<datapoint pos="1" key="547"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="538"/>
+					</targets>
+					<view ltx="781" lty="1194" rbx="885" rby="1267"/>
+				</component>
+				<component name="not-exists" library="core" uid="6854" kind="5">
+					<sources>
+						<datapoint pos="0" key="585"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="583"/>
+					</targets>
+					<view ltx="659" lty="1278" rbx="736" rby="1316"/>
+				</component>
+				<component name="if-else" library="core" uid="6855" kind="4">
+					<sources>
+						<datapoint pos="0" key="584"/>
+						<datapoint pos="1" key="581"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="582"/>
+					</targets>
+					<view ltx="781" lty="1266" rbx="885" rby="1339"/>
+				</component>
+				<component name="not-exists" library="core" uid="5921" kind="5">
+					<sources>
+						<datapoint pos="0" key="491"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="494"/>
+					</targets>
+					<view ltx="661" lty="1005" rbx="738" rby="1043"/>
+				</component>
+				<component name="if-else" library="core" uid="5922" kind="4">
+					<sources>
+						<datapoint pos="0" key="495"/>
+						<datapoint pos="1" key="493"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="492"/>
+					</targets>
+					<view ltx="781" lty="978" rbx="885" rby="1051"/>
+				</component>
+				<component name="not-exists" library="core" uid="6856" kind="5">
+					<sources>
+						<datapoint pos="0" key="586"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="589"/>
+					</targets>
+					<view ltx="661" lty="1077" rbx="738" rby="1115"/>
+				</component>
+				<component name="document" library="xml" uid="4373" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-14" lty="712" rbx="286" rby="738"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="entry" outkey="166"/>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="input" name="sectionPastProblems_anf_anam_prob" optional="1" sequence="1">
+							<root>
+								<entry name="Composition" ns="http://hl7.org/fhir"/>
+								<entry name="section" ns="http://hl7.org/fhir"/>
+								<entry name="entry" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5903" kind="2">
+					<targets>
+						<datapoint pos="0" key="431"/>
+					</targets>
+					<view ltx="767" lty="174" rbx="885" rby="191"/>
+					<data>
+						<constant value="Not Applicable" datatype="string"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="6019" kind="4">
+					<sources>
+						<datapoint pos="0" key="551"/>
+						<datapoint pos="1" key="552"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="549"/>
+					</targets>
+					<view ltx="780" lty="1122" rbx="884" rby="1195"/>
+				</component>
+				<component name="constant" library="core" uid="4331" kind="2">
+					<targets>
+						<datapoint pos="0" key="49"/>
+					</targets>
+					<view ltx="1030" lty="744" rbx="1112" rby="761"/>
+					<data>
+						<constant value="18776-5" datatype="string"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="5914" kind="4">
+					<sources>
+						<datapoint pos="0" key="473"/>
+						<datapoint pos="1" key="475"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="471"/>
+					</targets>
+					<view ltx="781" lty="405" rbx="885" rby="478"/>
+				</component>
+				<component name="constant" library="core" uid="4327" kind="2">
+					<targets>
+						<datapoint pos="0" key="198"/>
+					</targets>
+					<view ltx="1029" lty="600" rbx="1111" rby="617"/>
+					<data>
+						<constant value="11348-0" datatype="string"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="6857" kind="4">
+					<sources>
+						<datapoint pos="0" key="590"/>
+						<datapoint pos="1" key="587"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="588"/>
+					</targets>
+					<view ltx="781" lty="1050" rbx="885" rby="1123"/>
+				</component>
+				<component name="constant" library="core" uid="5906" kind="2">
+					<targets>
+						<datapoint pos="0" key="442"/>
+					</targets>
+					<view ltx="767" lty="158" rbx="884" rby="175"/>
+					<data>
+						<constant value="not-applicable" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5905" kind="2">
+					<targets>
+						<datapoint pos="0" key="443"/>
+					</targets>
+					<view ltx="728" lty="142" rbx="884" rby="159"/>
+					<data>
+						<constant value="http://terminology.hl7.org/CodeSystem/data-absent-reason" datatype="string"/>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="4296" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1354" lty="33" rbx="2127" rby="921"/>
 					<data>
-						<root scrollposition="205">
+						<root scrollposition="18520">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -27030,11 +27039,11 @@
 										<entry name="custodian" ns="1">
 											<entry name="reference" ns="1" expanded="1"/>
 										</entry>
-										<entry name="section" ns="1" expanded="1">
+										<entry name="section" ns="1">
 											<entry name="title" ns="1">
 												<entry name="value" type="attribute" inpkey="243"/>
 											</entry>
-											<entry name="code" ns="1">
+											<entry name="code" ns="1" expanded="1">
 												<entry name="coding" ns="1" inpkey="244" expanded="1">
 													<entry name="system" ns="1" expanded="1">
 														<entry name="value" type="attribute" inpkey="245"/>
@@ -27058,9 +27067,8 @@
 													</entry>
 												</entry>
 											</entry>
-											<entry name="entry" ns="1" inpkey="247"/>
-											<entry name="entry" ns="1" inpkey="248" clone="1"/>
-											<entry name="emptyReason" ns="1" inpkey="532" expanded="1">
+											<entry name="entry" ns="1" inpkey="248"/>
+											<entry name="emptyReason" ns="1" inpkey="532">
 												<entry name="coding" ns="1" expanded="1">
 													<entry name="system" ns="1" expanded="1">
 														<entry name="value" type="attribute" inpkey="541"/>
@@ -27074,7 +27082,7 @@
 												</entry>
 											</entry>
 										</entry>
-										<entry name="section" ns="1" expanded="1" clone="1">
+										<entry name="section" ns="1" clone="1">
 											<entry name="title" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="249"/>
 											</entry>
@@ -27117,7 +27125,7 @@
 												</entry>
 											</entry>
 										</entry>
-										<entry name="section" ns="1" expanded="1" clone="1">
+										<entry name="section" ns="1" clone="1">
 											<entry name="title" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="254"/>
 											</entry>
@@ -27470,13 +27478,27 @@
 													</entry>
 												</entry>
 											</entry>
-											<entry name="text" ns="1" expanded="1">
+											<entry name="text" ns="1">
 												<entry name="status" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="353"/>
 												</entry>
 												<entry name="div" ns="2" expanded="1">
 													<entry name="p" ns="2" expanded="1">
 														<entry name="#text" inpkey="354"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="entry" ns="1" inpkey="591"/>
+											<entry name="emptyReason" ns="1" inpkey="592" expanded="1">
+												<entry name="coding" ns="1" expanded="1">
+													<entry name="system" ns="1" expanded="1">
+														<entry name="value" type="attribute" inpkey="593"/>
+													</entry>
+													<entry name="code" ns="1" expanded="1">
+														<entry name="value" type="attribute" inpkey="594"/>
+													</entry>
+													<entry name="display" ns="1" expanded="1">
+														<entry name="value" type="attribute" inpkey="595"/>
 													</entry>
 												</entry>
 											</entry>
@@ -27683,7 +27705,7 @@
 												<entry name="text" ns="1" expanded="1"/>
 											</entry>
 										</entry>
-										<entry name="section" ns="1" clone="1">
+										<entry name="section" ns="1" expanded="1" clone="1">
 											<entry name="title" ns="1">
 												<entry name="value" type="attribute" inpkey="560"/>
 											</entry>
@@ -27741,11 +27763,6 @@
 			</children>
 			<graph directed="1">
 				<edges>
-					<edge edgekey="247">
-						<data>
-							<dataconnection type="2"/>
-						</data>
-					</edge>
 					<edge edgekey="248">
 						<data>
 							<dataconnection type="2"/>
@@ -27822,6 +27839,11 @@
 						</data>
 					</edge>
 					<edge edgekey="567">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="591">
 						<data>
 							<dataconnection type="2"/>
 						</data>
@@ -27910,16 +27932,10 @@
 							<edge vertexkey="246"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="166">
-						<edges>
-							<edge vertexkey="247" edgekey="247"/>
-							<edge vertexkey="525"/>
-						</edges>
-					</vertex>
 					<vertex vertexkey="175">
 						<edges>
 							<edge vertexkey="248" edgekey="248"/>
-							<edge vertexkey="524"/>
+							<edge vertexkey="585"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="5">
@@ -28334,6 +28350,7 @@
 							<edge vertexkey="541"/>
 							<edge vertexkey="544"/>
 							<edge vertexkey="569"/>
+							<edge vertexkey="593"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="414">
@@ -28354,9 +28371,10 @@
 							<edge vertexkey="493"/>
 							<edge vertexkey="504"/>
 							<edge vertexkey="515"/>
-							<edge vertexkey="526"/>
 							<edge vertexkey="547"/>
 							<edge vertexkey="552"/>
+							<edge vertexkey="581"/>
+							<edge vertexkey="587"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="425">
@@ -28402,6 +28420,7 @@
 							<edge vertexkey="542"/>
 							<edge vertexkey="545"/>
 							<edge vertexkey="570"/>
+							<edge vertexkey="594"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="416">
@@ -28492,17 +28511,7 @@
 							<edge vertexkey="522"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="527">
-						<edges>
-							<edge vertexkey="528"/>
-						</edges>
-					</vertex>
-					<vertex vertexkey="529">
-						<edges>
-							<edge vertexkey="530"/>
-						</edges>
-					</vertex>
-					<vertex vertexkey="523">
+					<vertex vertexkey="582">
 						<edges>
 							<edge vertexkey="531"/>
 							<edge vertexkey="532"/>
@@ -28562,6 +28571,28 @@
 						<edges>
 							<edge vertexkey="579"/>
 							<edge vertexkey="580"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="583">
+						<edges>
+							<edge vertexkey="584"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="166">
+						<edges>
+							<edge vertexkey="586"/>
+							<edge vertexkey="591" edgekey="591"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="589">
+						<edges>
+							<edge vertexkey="590"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="588">
+						<edges>
+							<edge vertexkey="592"/>
+							<edge vertexkey="595"/>
 						</edges>
 					</vertex>
 				</vertices>

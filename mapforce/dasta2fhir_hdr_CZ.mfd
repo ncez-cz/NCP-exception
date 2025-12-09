@@ -1678,15 +1678,6 @@
 						<constant value="8716-3" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="3013" kind="2">
-					<targets>
-						<datapoint pos="0" key="145"/>
-					</targets>
-					<view ltx="439" lty="431" rbx="521" rby="448"/>
-					<data>
-						<constant value="67851-6" datatype="string"/>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="3082" kind="2">
 					<targets>
 						<datapoint pos="0" key="181"/>
@@ -2063,60 +2054,6 @@
 					<view ltx="971" lty="1102" rbx="1053" rby="1119"/>
 					<data>
 						<constant value="48768-6" datatype="string"/>
-					</data>
-				</component>
-				<component name="Composition_section" library="provisio" uid="3220" kind="19" visible="0">
-					<view ltx="559" lty="603" rbx="847" rby="674"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-								</namespaces>
-							</header>
-							<entry name="nazevSekce" inpkey="266" componentid="3214"/>
-							<entry name="kodSekce" inpkey="265" componentid="2876"/>
-							<entry name="textSekce" inpkey="262" componentid="3189"/>
-							<entry name="entry" componentid="2858" expanded="1">
-								<entry name="entry" ns="1" inpkey="268">
-									<entry name="fullUrl" ns="1">
-										<entry name="value" type="attribute" expanded="1"/>
-									</entry>
-									<entry name="resource" ns="1">
-										<entry name="Observation" ns="1">
-											<entry name="meta" ns="1">
-												<entry name="tag" ns="1">
-													<entry name="code" ns="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="Practitioner" ns="1">
-											<entry name="meta" ns="1">
-												<entry name="tag" ns="1">
-													<entry name="code" ns="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="section" ns="1" componentid="2877" expanded="1">
-								<entry name="section" outkey="269"/>
-							</entry>
-						</root>
 					</data>
 				</component>
 				<component name="Composition_section" library="provisio" uid="3217" kind="19" visible="0">
@@ -3991,60 +3928,6 @@
 						<constant value="Problem list - Reported" datatype="string"/>
 					</data>
 				</component>
-				<component name="Composition_section" library="provisio" uid="3233" kind="19" visible="0">
-					<view ltx="1629" lty="416" rbx="1914" rby="491"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-								</namespaces>
-							</header>
-							<entry name="nazevSekce" inpkey="321" componentid="3214"/>
-							<entry name="kodSekce" inpkey="313" componentid="2876"/>
-							<entry name="textSekce" inpkey="319" componentid="3189"/>
-							<entry name="entry" componentid="2858" expanded="1">
-								<entry name="entry" ns="1" inpkey="404">
-									<entry name="fullUrl" ns="1">
-										<entry name="value" type="attribute" expanded="1"/>
-									</entry>
-									<entry name="resource" ns="1">
-										<entry name="Observation" ns="1">
-											<entry name="meta" ns="1">
-												<entry name="tag" ns="1">
-													<entry name="code" ns="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="Practitioner" ns="1">
-											<entry name="meta" ns="1">
-												<entry name="tag" ns="1">
-													<entry name="code" ns="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="section" ns="1" componentid="2877" expanded="1">
-								<entry name="section" outkey="405"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="Reference_Encounter" library="provisio" uid="6201" kind="19" visible="0">
 					<view ltx="1437" lty="190" rbx="1616" rby="224"/>
 					<data>
@@ -4383,38 +4266,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="ku_z_propz_anam" library="provisio" uid="5154" kind="19" visible="0">
-					<view ltx="939" lty="-73" rbx="1268" rby="16"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="practitionerReference" inpkey="478" componentid="5168"/>
-							<entry name="patientReference" inpkey="832" componentid="6415" expanded="1"/>
-							<entry name="ku_z_propz_anamType" componentid="5160" expanded="1">
-								<entry name="ku_z_propz_anamType" ns="1" type="xml-type" inpkey="469"/>
-							</entry>
-							<entry name="dat_prov" componentid="5161" expanded="1">
-								<entry name="dat_prov" ns="1" inpkey="470"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="5159" expanded="1">
-								<entry name="entry" outkey="471"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="value-map" library="core" uid="6684" kind="23">
 					<sources>
 						<datapoint pos="0" key="854"/>
@@ -4546,90 +4397,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="Composition_section" library="provisio" uid="6068" kind="19" visible="0">
-					<view ltx="559" lty="512" rbx="847" rby="581"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-								</namespaces>
-							</header>
-							<entry name="nazevSekce" inpkey="537" componentid="3214"/>
-							<entry name="kodSekce" inpkey="539" componentid="2876"/>
-							<entry name="textSekce" inpkey="535" componentid="3189"/>
-							<entry name="entry" componentid="2858" expanded="1">
-								<entry name="entry" ns="1" inpkey="533">
-									<entry name="fullUrl" ns="1">
-										<entry name="value" type="attribute" expanded="1"/>
-									</entry>
-									<entry name="resource" ns="1" expanded="1">
-										<entry name="Observation" ns="1">
-											<entry name="meta" ns="1">
-												<entry name="tag" ns="1">
-													<entry name="code" ns="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="Practitioner" ns="1" expanded="1">
-											<entry name="meta" ns="1" expanded="1">
-												<entry name="tag" ns="1" expanded="1">
-													<entry name="code" ns="1" expanded="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-								</namespaces>
-							</header>
-							<entry name="section" componentid="2877" expanded="1">
-								<entry name="section" ns="1" outkey="532">
-									<entry name="id" type="attribute" outkey="569"/>
-									<entry name="extension" ns="1" outkey="570"/>
-									<entry name="modifierExtension" ns="1" outkey="571"/>
-									<entry name="title" ns="1" outkey="572"/>
-									<entry name="code" ns="1" outkey="573">
-										<entry name="id" type="attribute" outkey="574"/>
-										<entry name="extension" ns="1" outkey="575"/>
-										<entry name="coding" ns="1" outkey="576">
-											<entry name="id" type="attribute" outkey="577"/>
-											<entry name="extension" ns="1" outkey="578"/>
-											<entry name="system" ns="1" outkey="579">
-												<entry name="id" type="attribute" outkey="580"/>
-												<entry name="extension" ns="1" outkey="581"/>
-											</entry>
-											<entry name="version" ns="1" outkey="582"/>
-											<entry name="code" ns="1" outkey="583"/>
-											<entry name="display" ns="1" outkey="584"/>
-											<entry name="userSelected" ns="1" outkey="585"/>
-										</entry>
-										<entry name="text" ns="1" outkey="586"/>
-									</entry>
-									<entry name="author" ns="1" outkey="587"/>
-									<entry name="focus" ns="1" outkey="588"/>
-									<entry name="text" ns="1" outkey="589"/>
-									<entry name="mode" ns="1" outkey="590"/>
-									<entry name="orderedBy" ns="1" outkey="591"/>
-									<entry name="entry" ns="1" outkey="592"/>
-									<entry name="emptyReason" ns="1" outkey="593"/>
-									<entry name="section" ns="1" outkey="594"/>
-								</entry>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="6070" kind="2">
 					<targets>
 						<datapoint pos="0" key="538"/>
@@ -4637,60 +4404,6 @@
 					<view ltx="425" lty="528" rbx="521" rby="545"/>
 					<data>
 						<constant value="248326004" datatype="string"/>
-					</data>
-				</component>
-				<component name="Composition_section" library="provisio" uid="2864" kind="19" visible="0">
-					<view ltx="559" lty="415" rbx="847" rby="489"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-								</namespaces>
-							</header>
-							<entry name="nazevSekce" inpkey="250" componentid="3214"/>
-							<entry name="kodSekce" inpkey="241" componentid="2876"/>
-							<entry name="textSekce" inpkey="242" componentid="3189"/>
-							<entry name="entry" componentid="2858" expanded="1">
-								<entry name="entry" ns="1" inpkey="243">
-									<entry name="fullUrl" ns="1">
-										<entry name="value" type="attribute" expanded="1"/>
-									</entry>
-									<entry name="resource" ns="1">
-										<entry name="Observation" ns="1">
-											<entry name="meta" ns="1">
-												<entry name="tag" ns="1">
-													<entry name="code" ns="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="Practitioner" ns="1">
-											<entry name="meta" ns="1">
-												<entry name="tag" ns="1">
-													<entry name="code" ns="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="section" ns="1" componentid="2877" expanded="1">
-								<entry name="section" outkey="244"/>
-							</entry>
-						</root>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="3016" kind="2">
@@ -4718,60 +4431,6 @@
 					<view ltx="363" lty="728" rbx="517" rby="745"/>
 					<data>
 						<constant value="Physical findings note" datatype="string"/>
-					</data>
-				</component>
-				<component name="Composition_section" library="provisio" uid="3216" kind="19" visible="0">
-					<view ltx="557" lty="696" rbx="846" rby="766"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-								</namespaces>
-							</header>
-							<entry name="nazevSekce" inpkey="255" componentid="3214"/>
-							<entry name="kodSekce" inpkey="254" componentid="2876"/>
-							<entry name="textSekce" inpkey="252" componentid="3189"/>
-							<entry name="entry" componentid="2858" expanded="1">
-								<entry name="entry" ns="1" inpkey="257">
-									<entry name="fullUrl" ns="1" expanded="1">
-										<entry name="value" type="attribute" expanded="1"/>
-									</entry>
-									<entry name="resource" ns="1">
-										<entry name="Observation" ns="1">
-											<entry name="meta" ns="1">
-												<entry name="tag" ns="1">
-													<entry name="code" ns="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="Practitioner" ns="1">
-											<entry name="meta" ns="1">
-												<entry name="tag" ns="1">
-													<entry name="code" ns="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="section" ns="1" componentid="2877" expanded="1">
-								<entry name="section" outkey="258"/>
-							</entry>
-						</root>
 					</data>
 				</component>
 				<component name="Composition_section" library="provisio" uid="6097" kind="19" visible="0">
@@ -5063,38 +4722,6 @@
 						<constant value="Physical exam by body areas" datatype="string"/>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="3246" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-9" lty="779" rbx="294" rby="962"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry" inpkey="429" outkey="430"/>
-								<entry name="entry" inpkey="431" clone="1"/>
-								<entry name="entry" inpkey="452" clone="1"/>
-								<entry name="entry" inpkey="507" clone="1"/>
-								<entry name="entry" inpkey="432" clone="1"/>
-								<entry name="entry" inpkey="466" clone="1"/>
-								<entry name="entry" inpkey="481" clone="1"/>
-								<entry name="entry" inpkey="491" clone="1"/>
-								<entry name="entry" inpkey="505" clone="1"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="6805" kind="2">
 					<targets>
 						<datapoint pos="0" key="922"/>
@@ -5294,342 +4921,6 @@
 								</entry>
 							</entry>
 						</root>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6072" kind="2">
-					<targets>
-						<datapoint pos="0" key="540"/>
-					</targets>
-					<view ltx="1505" lty="94" rbx="1663" rby="111"/>
-					<data>
-						<constant value="http://snomed.info/sct" datatype="string"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="71" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="1863" lty="-96" rbx="2208" rby="260"/>
-					<data>
-						<root scrollposition="1060">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.w3.org/1999/xhtml"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" expanded="1">
-								<entry name="fullUrl" ns="1" inpkey="515" expanded="1">
-									<entry name="value" type="attribute" inpkey="516"/>
-								</entry>
-								<entry name="resource" ns="1" expanded="1">
-									<entry name="Composition" ns="1" expanded="1">
-										<entry name="id" ns="1">
-											<entry name="value" type="attribute" inpkey="522"/>
-										</entry>
-										<entry name="meta" ns="1">
-											<entry name="profile" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="445"/>
-											</entry>
-										</entry>
-										<entry name="text" ns="1">
-											<entry name="status" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="523"/>
-											</entry>
-											<entry name="div" ns="2" expanded="1">
-												<entry name="#text" inpkey="893"/>
-											</entry>
-										</entry>
-										<entry name="status" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="426"/>
-										</entry>
-										<entry name="type" ns="1" expanded="1">
-											<entry name="coding" ns="1" inpkey="525" expanded="1">
-												<entry name="system" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="427"/>
-												</entry>
-												<entry name="code" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="428"/>
-												</entry>
-												<entry name="display" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="446"/>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="category" ns="1" expanded="1">
-											<entry name="coding" ns="1" expanded="1">
-												<entry name="system" ns="1">
-													<entry name="value" type="attribute" inpkey="894"/>
-												</entry>
-												<entry name="code" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="895"/>
-												</entry>
-												<entry name="display" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="896"/>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="subject" ns="1">
-											<entry name="reference" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="836"/>
-											</entry>
-										</entry>
-										<entry name="encounter" ns="1">
-											<entry name="reference" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="822"/>
-											</entry>
-										</entry>
-										<entry name="date" ns="1">
-											<entry name="value" type="attribute" inpkey="462"/>
-										</entry>
-										<entry name="author" ns="1" expanded="1">
-											<entry name="reference" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="463"/>
-											</entry>
-											<entry name="display" ns="1" expanded="1"/>
-										</entry>
-										<entry name="title" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="450"/>
-										</entry>
-										<entry name="attester" ns="1" inpkey="898">
-											<entry name="mode" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="899"/>
-											</entry>
-											<entry name="time" ns="1" inpkey="953" expanded="1">
-												<entry name="value" type="attribute" inpkey="900"/>
-											</entry>
-											<entry name="party" ns="1" expanded="1">
-												<entry name="reference" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="863"/>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="attester" ns="1" inpkey="902" clone="1">
-											<entry name="mode" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="903"/>
-											</entry>
-											<entry name="time" ns="1" inpkey="954" expanded="1">
-												<entry name="value" type="attribute" inpkey="904"/>
-											</entry>
-											<entry name="party" ns="1" expanded="1">
-												<entry name="reference" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="905"/>
-												</entry>
-												<entry name="display" ns="1" expanded="1"/>
-											</entry>
-										</entry>
-										<entry name="custodian" ns="1">
-											<entry name="reference" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="907"/>
-											</entry>
-											<entry name="display" ns="1" expanded="1"/>
-										</entry>
-										<entry name="section" ns="1" inpkey="227">
-											<entry name="title" ns="1">
-												<entry name="value" type="attribute" expanded="1"/>
-											</entry>
-											<entry name="code" ns="1">
-												<entry name="coding" ns="1">
-													<entry name="code" ns="1">
-														<entry name="value" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-											<entry name="entry" ns="1" expanded="1">
-												<entry name="reference" ns="1">
-													<entry name="value" type="attribute" expanded="1"/>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="section" ns="1" inpkey="541" clone="1">
-											<entry name="id" type="attribute" inpkey="542"/>
-											<entry name="extension" ns="1" inpkey="543"/>
-											<entry name="modifierExtension" ns="1" inpkey="544"/>
-											<entry name="title" ns="1" inpkey="545"/>
-											<entry name="code" ns="1" inpkey="546" expanded="1">
-												<entry name="id" type="attribute" inpkey="547"/>
-												<entry name="extension" ns="1" inpkey="548"/>
-												<entry name="coding" ns="1" inpkey="549" expanded="1">
-													<entry name="id" type="attribute" inpkey="550"/>
-													<entry name="extension" ns="1" inpkey="551"/>
-													<entry name="system" ns="1" inpkey="552" expanded="1">
-														<entry name="id" type="attribute" inpkey="553"/>
-														<entry name="value" type="attribute" inpkey="554"/>
-														<entry name="extension" ns="1" inpkey="555"/>
-													</entry>
-													<entry name="version" ns="1" inpkey="556"/>
-													<entry name="code" ns="1" inpkey="557"/>
-													<entry name="display" ns="1" inpkey="558"/>
-													<entry name="userSelected" ns="1" inpkey="559"/>
-												</entry>
-												<entry name="text" ns="1" inpkey="560"/>
-											</entry>
-											<entry name="author" ns="1" inpkey="561"/>
-											<entry name="focus" ns="1" inpkey="562"/>
-											<entry name="text" ns="1" inpkey="563"/>
-											<entry name="mode" ns="1" inpkey="564"/>
-											<entry name="orderedBy" ns="1" inpkey="565"/>
-											<entry name="entry" ns="1" inpkey="566"/>
-											<entry name="emptyReason" ns="1" inpkey="567"/>
-											<entry name="section" ns="1" inpkey="568"/>
-										</entry>
-										<entry name="section" ns="1" inpkey="379" clone="1"/>
-										<entry name="section" ns="1" inpkey="955" clone="1">
-											<entry name="id" type="attribute" inpkey="956"/>
-											<entry name="extension" ns="1" inpkey="957"/>
-											<entry name="modifierExtension" ns="1" inpkey="958"/>
-											<entry name="title" ns="1" inpkey="959"/>
-											<entry name="code" ns="1" inpkey="960" expanded="1">
-												<entry name="id" type="attribute" inpkey="961"/>
-												<entry name="extension" ns="1" inpkey="962"/>
-												<entry name="coding" ns="1" inpkey="963" expanded="1">
-													<entry name="id" type="attribute" inpkey="964"/>
-													<entry name="extension" ns="1" inpkey="965"/>
-													<entry name="system" ns="1" inpkey="966" expanded="1">
-														<entry name="id" type="attribute" inpkey="967"/>
-														<entry name="value" type="attribute" inpkey="968"/>
-														<entry name="extension" ns="1" inpkey="969"/>
-													</entry>
-													<entry name="version" ns="1" inpkey="970"/>
-													<entry name="code" ns="1" inpkey="971"/>
-													<entry name="display" ns="1" inpkey="972"/>
-													<entry name="userSelected" ns="1" inpkey="973"/>
-												</entry>
-												<entry name="text" ns="1" inpkey="974"/>
-											</entry>
-											<entry name="author" ns="1" inpkey="975"/>
-											<entry name="focus" ns="1" inpkey="976"/>
-											<entry name="text" ns="1" inpkey="977"/>
-											<entry name="mode" ns="1" inpkey="978"/>
-											<entry name="orderedBy" ns="1" inpkey="979"/>
-											<entry name="entry" ns="1" inpkey="980"/>
-											<entry name="emptyReason" ns="1" inpkey="981"/>
-											<entry name="section" ns="1" inpkey="982"/>
-										</entry>
-										<entry name="section" ns="1" inpkey="377" clone="1"/>
-										<entry name="section" ns="1" inpkey="380" clone="1"/>
-										<entry name="section" ns="1" inpkey="383" clone="1"/>
-										<entry name="section" ns="1" inpkey="384" clone="1"/>
-										<entry name="section" ns="1" inpkey="385" clone="1"/>
-										<entry name="section" ns="1" inpkey="386" clone="1"/>
-										<entry name="section" ns="1" inpkey="603" clone="1"/>
-										<entry name="section" ns="1" inpkey="388" clone="1"/>
-										<entry name="section" ns="1" inpkey="612" clone="1"/>
-										<entry name="section" ns="1" inpkey="615" clone="1"/>
-										<entry name="section" ns="1" inpkey="613" clone="1"/>
-										<entry name="section" ns="1" inpkey="614" clone="1"/>
-										<entry name="section" ns="1" inpkey="381" clone="1"/>
-										<entry name="section" ns="1" inpkey="382" clone="1"/>
-										<entry name="section" ns="1" inpkey="616" clone="1"/>
-										<entry name="section" ns="1" inpkey="251" clone="1"/>
-										<entry name="section" ns="1" inpkey="625" clone="1"/>
-										<entry name="section" ns="1" inpkey="395" clone="1"/>
-										<entry name="section" ns="1" inpkey="634" clone="1"/>
-										<entry name="section" ns="1" inpkey="392" clone="1"/>
-										<entry name="section" ns="1" inpkey="393" clone="1"/>
-										<entry name="section" ns="1" inpkey="670" clone="1">
-											<entry name="id" type="attribute" inpkey="671"/>
-											<entry name="extension" ns="1" inpkey="672"/>
-											<entry name="modifierExtension" ns="1" inpkey="673"/>
-											<entry name="title" ns="1" inpkey="674"/>
-											<entry name="code" ns="1" inpkey="675" expanded="1">
-												<entry name="id" type="attribute" inpkey="676"/>
-												<entry name="extension" ns="1" inpkey="677"/>
-												<entry name="coding" ns="1" inpkey="678" expanded="1">
-													<entry name="id" type="attribute" inpkey="679"/>
-													<entry name="extension" ns="1" inpkey="680"/>
-													<entry name="system" ns="1" inpkey="681" expanded="1">
-														<entry name="id" type="attribute" inpkey="682"/>
-														<entry name="value" type="attribute" inpkey="683"/>
-														<entry name="extension" ns="1" inpkey="684"/>
-													</entry>
-													<entry name="version" ns="1" inpkey="685"/>
-													<entry name="code" ns="1" inpkey="686"/>
-													<entry name="display" ns="1" inpkey="687"/>
-													<entry name="userSelected" ns="1" inpkey="688"/>
-												</entry>
-												<entry name="text" ns="1" inpkey="689"/>
-											</entry>
-											<entry name="author" ns="1" inpkey="690"/>
-											<entry name="focus" ns="1" inpkey="691"/>
-											<entry name="text" ns="1" inpkey="692"/>
-											<entry name="mode" ns="1" inpkey="693"/>
-											<entry name="orderedBy" ns="1" inpkey="694"/>
-											<entry name="entry" ns="1" inpkey="695"/>
-											<entry name="emptyReason" ns="1" inpkey="696"/>
-											<entry name="section" ns="1" inpkey="697"/>
-										</entry>
-										<entry name="section" ns="1" inpkey="698" clone="1"/>
-										<entry name="section" ns="1" inpkey="389" clone="1"/>
-										<entry name="section" ns="1" inpkey="417" clone="1"/>
-										<entry name="section" ns="1" inpkey="759" clone="1">
-											<entry name="id" type="attribute" inpkey="746"/>
-											<entry name="extension" ns="1" inpkey="744"/>
-											<entry name="modifierExtension" ns="1" inpkey="734"/>
-											<entry name="title" ns="1" inpkey="747"/>
-											<entry name="code" ns="1" inpkey="749" expanded="1">
-												<entry name="id" type="attribute" inpkey="755"/>
-												<entry name="extension" ns="1" inpkey="741"/>
-												<entry name="coding" ns="1" inpkey="752" expanded="1">
-													<entry name="id" type="attribute" inpkey="739"/>
-													<entry name="extension" ns="1" inpkey="740"/>
-													<entry name="system" ns="1" inpkey="737" expanded="1">
-														<entry name="id" type="attribute" inpkey="738"/>
-														<entry name="value" type="attribute" inpkey="794"/>
-														<entry name="extension" ns="1" inpkey="743"/>
-													</entry>
-													<entry name="version" ns="1" inpkey="754"/>
-													<entry name="code" ns="1" inpkey="733"/>
-													<entry name="display" ns="1" inpkey="745"/>
-													<entry name="userSelected" ns="1" inpkey="742"/>
-												</entry>
-												<entry name="text" ns="1" inpkey="751"/>
-											</entry>
-											<entry name="author" ns="1" inpkey="757"/>
-											<entry name="focus" ns="1" inpkey="758"/>
-											<entry name="text" ns="1" inpkey="748"/>
-											<entry name="mode" ns="1" inpkey="736"/>
-											<entry name="orderedBy" ns="1" inpkey="750"/>
-											<entry name="entry" ns="1" inpkey="753"/>
-											<entry name="emptyReason" ns="1" inpkey="735"/>
-											<entry name="section" ns="1" inpkey="756"/>
-										</entry>
-										<entry name="section" ns="1" inpkey="795" clone="1"/>
-										<entry name="section" ns="1" inpkey="804" clone="1"/>
-										<entry name="section" ns="1" inpkey="813" clone="1"/>
-										<entry name="section" ns="1" inpkey="390" clone="1"/>
-										<entry name="section" ns="1" inpkey="814" clone="1"/>
-										<entry name="section" ns="1" inpkey="815" clone="1"/>
-										<entry name="section" ns="1" inpkey="816" clone="1"/>
-										<entry name="section" ns="1" inpkey="983" clone="1"/>
-									</entry>
-								</entry>
-							</entry>
-							<entry name="entry" ns="1" inpkey="3" clone="1">
-								<entry name="resource" ns="1" expanded="1">
-									<entry name="Observation" ns="1" expanded="1">
-										<entry name="note" ns="1">
-											<entry name="text" ns="1" expanded="1"/>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-							<entry name="entry" ns="1" inpkey="7" clone="1"/>
-							<entry name="entry" ns="1" inpkey="508" clone="1"/>
-							<entry name="entry" ns="1" inpkey="434" clone="1"/>
-							<entry name="entry" ns="1" inpkey="16" clone="1"/>
-							<entry name="entry" ns="1" inpkey="465" clone="1"/>
-							<entry name="entry" ns="1" inpkey="482" clone="1"/>
-							<entry name="entry" ns="1" inpkey="498" clone="1"/>
-							<entry name="entry" ns="1" inpkey="490" clone="1"/>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="output" name="entry" sequence="1">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="6801" kind="2">
@@ -5850,6 +5141,657 @@
 										</entry>
 									</entry>
 								</entry>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3013" kind="2">
+					<targets>
+						<datapoint pos="0" key="145"/>
+					</targets>
+					<view ltx="439" lty="431" rbx="521" rby="448"/>
+					<data>
+						<constant value="67851-6" datatype="string"/>
+					</data>
+				</component>
+				<component name="Composition_section" library="provisio" uid="3220" kind="19" visible="0">
+					<view ltx="559" lty="603" rbx="847" rby="674"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+								</namespaces>
+							</header>
+							<entry name="nazevSekce" inpkey="266" componentid="3214"/>
+							<entry name="kodSekce" inpkey="265" componentid="2876"/>
+							<entry name="textSekce" inpkey="262" componentid="3189"/>
+							<entry name="entry" componentid="2858" expanded="1">
+								<entry name="entry" ns="1" inpkey="268">
+									<entry name="fullUrl" ns="1">
+										<entry name="value" type="attribute" expanded="1"/>
+									</entry>
+									<entry name="resource" ns="1">
+										<entry name="Observation" ns="1">
+											<entry name="meta" ns="1">
+												<entry name="tag" ns="1">
+													<entry name="code" ns="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="Practitioner" ns="1">
+											<entry name="meta" ns="1">
+												<entry name="tag" ns="1">
+													<entry name="code" ns="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="section" ns="1" componentid="2877" expanded="1">
+								<entry name="section" outkey="269"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="Composition_section" library="provisio" uid="3216" kind="19" visible="0">
+					<view ltx="557" lty="696" rbx="846" rby="766"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+								</namespaces>
+							</header>
+							<entry name="nazevSekce" inpkey="255" componentid="3214"/>
+							<entry name="kodSekce" inpkey="254" componentid="2876"/>
+							<entry name="textSekce" inpkey="252" componentid="3189"/>
+							<entry name="entry" componentid="2858" expanded="1">
+								<entry name="entry" ns="1" inpkey="257">
+									<entry name="fullUrl" ns="1" expanded="1">
+										<entry name="value" type="attribute" expanded="1"/>
+									</entry>
+									<entry name="resource" ns="1">
+										<entry name="Observation" ns="1">
+											<entry name="meta" ns="1">
+												<entry name="tag" ns="1">
+													<entry name="code" ns="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="Practitioner" ns="1">
+											<entry name="meta" ns="1">
+												<entry name="tag" ns="1">
+													<entry name="code" ns="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="section" ns="1" componentid="2877" expanded="1">
+								<entry name="section" outkey="258"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6072" kind="2">
+					<targets>
+						<datapoint pos="0" key="540"/>
+					</targets>
+					<view ltx="1505" lty="94" rbx="1663" rby="111"/>
+					<data>
+						<constant value="http://snomed.info/sct" datatype="string"/>
+					</data>
+				</component>
+				<component name="Composition_section" library="provisio" uid="3233" kind="19" visible="0">
+					<view ltx="1629" lty="416" rbx="1914" rby="491"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+								</namespaces>
+							</header>
+							<entry name="nazevSekce" inpkey="321" componentid="3214"/>
+							<entry name="kodSekce" inpkey="313" componentid="2876"/>
+							<entry name="textSekce" inpkey="319" componentid="3189"/>
+							<entry name="entry" componentid="2858" expanded="1">
+								<entry name="entry" ns="1" inpkey="404">
+									<entry name="fullUrl" ns="1">
+										<entry name="value" type="attribute" expanded="1"/>
+									</entry>
+									<entry name="resource" ns="1">
+										<entry name="Observation" ns="1">
+											<entry name="meta" ns="1">
+												<entry name="tag" ns="1">
+													<entry name="code" ns="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="Practitioner" ns="1">
+											<entry name="meta" ns="1">
+												<entry name="tag" ns="1">
+													<entry name="code" ns="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="section" ns="1" componentid="2877" expanded="1">
+								<entry name="section" outkey="405"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="ku_z_propz_anam" library="provisio" uid="5154" kind="19" visible="0">
+					<view ltx="939" lty="-73" rbx="1268" rby="16"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="practitionerReference" inpkey="478" componentid="5168"/>
+							<entry name="patientReference" inpkey="832" componentid="6415" expanded="1"/>
+							<entry name="ku_z_propz_anamType" componentid="5160" expanded="1">
+								<entry name="ku_z_propz_anamType" ns="1" type="xml-type" inpkey="469"/>
+							</entry>
+							<entry name="dat_prov" componentid="5161" expanded="1">
+								<entry name="dat_prov" ns="1" inpkey="470"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="5159" expanded="1">
+								<entry name="entry" outkey="471"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3246" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-9" lty="779" rbx="294" rby="962"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+								<entry name="entry" inpkey="429" outkey="430"/>
+								<entry name="entry" inpkey="431" clone="1"/>
+								<entry name="entry" inpkey="452" clone="1"/>
+								<entry name="entry" inpkey="507" clone="1"/>
+								<entry name="entry" inpkey="432" clone="1"/>
+								<entry name="entry" inpkey="466" clone="1"/>
+								<entry name="entry" inpkey="481" clone="1"/>
+								<entry name="entry" inpkey="491" clone="1"/>
+								<entry name="entry" inpkey="505" clone="1"/>
+							</entry>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="variable">
+							<root>
+								<entry name="Bundle" ns="http://hl7.org/fhir"/>
+								<entry name="entry" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="Composition_section" library="provisio" uid="2864" kind="19" visible="0">
+					<view ltx="559" lty="415" rbx="847" rby="489"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+								</namespaces>
+							</header>
+							<entry name="nazevSekce" inpkey="250" componentid="3214"/>
+							<entry name="kodSekce" inpkey="241" componentid="2876"/>
+							<entry name="textSekce" inpkey="242" componentid="3189"/>
+							<entry name="entry" componentid="2858" expanded="1">
+								<entry name="entry" ns="1" inpkey="243">
+									<entry name="fullUrl" ns="1">
+										<entry name="value" type="attribute" expanded="1"/>
+									</entry>
+									<entry name="resource" ns="1">
+										<entry name="Observation" ns="1">
+											<entry name="meta" ns="1">
+												<entry name="tag" ns="1">
+													<entry name="code" ns="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="Practitioner" ns="1">
+											<entry name="meta" ns="1">
+												<entry name="tag" ns="1">
+													<entry name="code" ns="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="section" ns="1" componentid="2877" expanded="1">
+								<entry name="section" outkey="244"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="71" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="1863" lty="-96" rbx="2208" rby="260"/>
+					<data>
+						<root scrollposition="1006">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.w3.org/1999/xhtml"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" expanded="1">
+								<entry name="fullUrl" ns="1" inpkey="515" expanded="1">
+									<entry name="value" type="attribute" inpkey="516"/>
+								</entry>
+								<entry name="resource" ns="1" expanded="1">
+									<entry name="Composition" ns="1" expanded="1">
+										<entry name="id" ns="1">
+											<entry name="value" type="attribute" inpkey="522"/>
+										</entry>
+										<entry name="meta" ns="1">
+											<entry name="profile" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="445"/>
+											</entry>
+										</entry>
+										<entry name="text" ns="1">
+											<entry name="status" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="523"/>
+											</entry>
+											<entry name="div" ns="2" expanded="1">
+												<entry name="#text" inpkey="893"/>
+											</entry>
+										</entry>
+										<entry name="status" ns="1">
+											<entry name="value" type="attribute" inpkey="426"/>
+										</entry>
+										<entry name="type" ns="1">
+											<entry name="coding" ns="1" inpkey="525" expanded="1">
+												<entry name="system" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="427"/>
+												</entry>
+												<entry name="code" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="428"/>
+												</entry>
+												<entry name="display" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="446"/>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="category" ns="1">
+											<entry name="coding" ns="1" expanded="1">
+												<entry name="system" ns="1">
+													<entry name="value" type="attribute" inpkey="894"/>
+												</entry>
+												<entry name="code" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="895"/>
+												</entry>
+												<entry name="display" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="896"/>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="subject" ns="1">
+											<entry name="reference" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="836"/>
+											</entry>
+										</entry>
+										<entry name="encounter" ns="1">
+											<entry name="reference" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="822"/>
+											</entry>
+										</entry>
+										<entry name="date" ns="1">
+											<entry name="value" type="attribute" inpkey="462"/>
+										</entry>
+										<entry name="author" ns="1">
+											<entry name="reference" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="463"/>
+											</entry>
+											<entry name="display" ns="1" expanded="1"/>
+										</entry>
+										<entry name="title" ns="1">
+											<entry name="value" type="attribute" inpkey="450"/>
+										</entry>
+										<entry name="attester" ns="1" inpkey="898">
+											<entry name="mode" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="899"/>
+											</entry>
+											<entry name="time" ns="1" inpkey="953" expanded="1">
+												<entry name="value" type="attribute" inpkey="900"/>
+											</entry>
+											<entry name="party" ns="1" expanded="1">
+												<entry name="reference" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="863"/>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="attester" ns="1" inpkey="902" clone="1">
+											<entry name="mode" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="903"/>
+											</entry>
+											<entry name="time" ns="1" inpkey="954" expanded="1">
+												<entry name="value" type="attribute" inpkey="904"/>
+											</entry>
+											<entry name="party" ns="1" expanded="1">
+												<entry name="reference" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="905"/>
+												</entry>
+												<entry name="display" ns="1" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="custodian" ns="1">
+											<entry name="reference" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="907"/>
+											</entry>
+											<entry name="display" ns="1" expanded="1"/>
+										</entry>
+										<entry name="section" ns="1" inpkey="227">
+											<entry name="title" ns="1">
+												<entry name="value" type="attribute" expanded="1"/>
+											</entry>
+											<entry name="code" ns="1">
+												<entry name="coding" ns="1">
+													<entry name="code" ns="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="entry" ns="1">
+												<entry name="reference" ns="1">
+													<entry name="value" type="attribute" expanded="1"/>
+												</entry>
+											</entry>
+											<entry name="section" ns="1">
+												<entry name="title" ns="1" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="section" ns="1" inpkey="986" clone="1"/>
+										<entry name="section" ns="1" inpkey="379" clone="1"/>
+										<entry name="section" ns="1" inpkey="955" clone="1">
+											<entry name="id" type="attribute" inpkey="956"/>
+											<entry name="extension" ns="1" inpkey="957"/>
+											<entry name="modifierExtension" ns="1" inpkey="958"/>
+											<entry name="title" ns="1" inpkey="959"/>
+											<entry name="code" ns="1" inpkey="960" expanded="1">
+												<entry name="id" type="attribute" inpkey="961"/>
+												<entry name="extension" ns="1" inpkey="962"/>
+												<entry name="coding" ns="1" inpkey="963" expanded="1">
+													<entry name="id" type="attribute" inpkey="964"/>
+													<entry name="extension" ns="1" inpkey="965"/>
+													<entry name="system" ns="1" inpkey="966" expanded="1">
+														<entry name="id" type="attribute" inpkey="967"/>
+														<entry name="value" type="attribute" inpkey="968"/>
+														<entry name="extension" ns="1" inpkey="969"/>
+													</entry>
+													<entry name="version" ns="1" inpkey="970"/>
+													<entry name="code" ns="1" inpkey="971"/>
+													<entry name="display" ns="1" inpkey="972"/>
+													<entry name="userSelected" ns="1" inpkey="973"/>
+												</entry>
+												<entry name="text" ns="1" inpkey="974"/>
+											</entry>
+											<entry name="author" ns="1" inpkey="975"/>
+											<entry name="focus" ns="1" inpkey="976"/>
+											<entry name="text" ns="1" inpkey="977"/>
+											<entry name="mode" ns="1" inpkey="978"/>
+											<entry name="orderedBy" ns="1" inpkey="979"/>
+											<entry name="entry" ns="1" inpkey="980"/>
+											<entry name="emptyReason" ns="1" inpkey="981"/>
+											<entry name="section" ns="1" inpkey="982"/>
+										</entry>
+										<entry name="section" ns="1" inpkey="377" clone="1"/>
+										<entry name="section" ns="1" inpkey="380" clone="1"/>
+										<entry name="section" ns="1" inpkey="383" clone="1"/>
+										<entry name="section" ns="1" inpkey="384" clone="1"/>
+										<entry name="section" ns="1" inpkey="385" clone="1"/>
+										<entry name="section" ns="1" inpkey="386" clone="1"/>
+										<entry name="section" ns="1" inpkey="603" clone="1"/>
+										<entry name="section" ns="1" inpkey="388" clone="1"/>
+										<entry name="section" ns="1" inpkey="612" clone="1"/>
+										<entry name="section" ns="1" inpkey="615" clone="1"/>
+										<entry name="section" ns="1" inpkey="613" clone="1"/>
+										<entry name="section" ns="1" inpkey="614" clone="1"/>
+										<entry name="section" ns="1" inpkey="381" clone="1"/>
+										<entry name="section" ns="1" inpkey="382" clone="1"/>
+										<entry name="section" ns="1" inpkey="616" clone="1"/>
+										<entry name="section" ns="1" inpkey="251" clone="1"/>
+										<entry name="section" ns="1" inpkey="625" clone="1"/>
+										<entry name="section" ns="1" inpkey="395" clone="1"/>
+										<entry name="section" ns="1" inpkey="634" clone="1"/>
+										<entry name="section" ns="1" inpkey="392" clone="1"/>
+										<entry name="section" ns="1" inpkey="393" clone="1"/>
+										<entry name="section" ns="1" inpkey="670" clone="1">
+											<entry name="id" type="attribute" inpkey="671"/>
+											<entry name="extension" ns="1" inpkey="672"/>
+											<entry name="modifierExtension" ns="1" inpkey="673"/>
+											<entry name="title" ns="1" inpkey="674"/>
+											<entry name="code" ns="1" inpkey="675" expanded="1">
+												<entry name="id" type="attribute" inpkey="676"/>
+												<entry name="extension" ns="1" inpkey="677"/>
+												<entry name="coding" ns="1" inpkey="678" expanded="1">
+													<entry name="id" type="attribute" inpkey="679"/>
+													<entry name="extension" ns="1" inpkey="680"/>
+													<entry name="system" ns="1" inpkey="681" expanded="1">
+														<entry name="id" type="attribute" inpkey="682"/>
+														<entry name="value" type="attribute" inpkey="683"/>
+														<entry name="extension" ns="1" inpkey="684"/>
+													</entry>
+													<entry name="version" ns="1" inpkey="685"/>
+													<entry name="code" ns="1" inpkey="686"/>
+													<entry name="display" ns="1" inpkey="687"/>
+													<entry name="userSelected" ns="1" inpkey="688"/>
+												</entry>
+												<entry name="text" ns="1" inpkey="689"/>
+											</entry>
+											<entry name="author" ns="1" inpkey="690"/>
+											<entry name="focus" ns="1" inpkey="691"/>
+											<entry name="text" ns="1" inpkey="692"/>
+											<entry name="mode" ns="1" inpkey="693"/>
+											<entry name="orderedBy" ns="1" inpkey="694"/>
+											<entry name="entry" ns="1" inpkey="695"/>
+											<entry name="emptyReason" ns="1" inpkey="696"/>
+											<entry name="section" ns="1" inpkey="697"/>
+										</entry>
+										<entry name="section" ns="1" inpkey="698" clone="1"/>
+										<entry name="section" ns="1" inpkey="389" clone="1"/>
+										<entry name="section" ns="1" inpkey="417" clone="1"/>
+										<entry name="section" ns="1" inpkey="759" clone="1">
+											<entry name="id" type="attribute" inpkey="746"/>
+											<entry name="extension" ns="1" inpkey="744"/>
+											<entry name="modifierExtension" ns="1" inpkey="734"/>
+											<entry name="title" ns="1" inpkey="747"/>
+											<entry name="code" ns="1" inpkey="749" expanded="1">
+												<entry name="id" type="attribute" inpkey="755"/>
+												<entry name="extension" ns="1" inpkey="741"/>
+												<entry name="coding" ns="1" inpkey="752" expanded="1">
+													<entry name="id" type="attribute" inpkey="739"/>
+													<entry name="extension" ns="1" inpkey="740"/>
+													<entry name="system" ns="1" inpkey="737" expanded="1">
+														<entry name="id" type="attribute" inpkey="738"/>
+														<entry name="value" type="attribute" inpkey="794"/>
+														<entry name="extension" ns="1" inpkey="743"/>
+													</entry>
+													<entry name="version" ns="1" inpkey="754"/>
+													<entry name="code" ns="1" inpkey="733"/>
+													<entry name="display" ns="1" inpkey="745"/>
+													<entry name="userSelected" ns="1" inpkey="742"/>
+												</entry>
+												<entry name="text" ns="1" inpkey="751"/>
+											</entry>
+											<entry name="author" ns="1" inpkey="757"/>
+											<entry name="focus" ns="1" inpkey="758"/>
+											<entry name="text" ns="1" inpkey="748"/>
+											<entry name="mode" ns="1" inpkey="736"/>
+											<entry name="orderedBy" ns="1" inpkey="750"/>
+											<entry name="entry" ns="1" inpkey="753"/>
+											<entry name="emptyReason" ns="1" inpkey="735"/>
+											<entry name="section" ns="1" inpkey="756"/>
+										</entry>
+										<entry name="section" ns="1" inpkey="795" clone="1"/>
+										<entry name="section" ns="1" inpkey="804" clone="1"/>
+										<entry name="section" ns="1" inpkey="813" clone="1"/>
+										<entry name="section" ns="1" inpkey="390" clone="1"/>
+										<entry name="section" ns="1" inpkey="814" clone="1"/>
+										<entry name="section" ns="1" inpkey="815" clone="1"/>
+										<entry name="section" ns="1" inpkey="816" clone="1"/>
+										<entry name="section" ns="1" inpkey="983" clone="1"/>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="entry" ns="1" inpkey="3" clone="1">
+								<entry name="resource" ns="1" expanded="1">
+									<entry name="Observation" ns="1" expanded="1">
+										<entry name="note" ns="1">
+											<entry name="text" ns="1" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="entry" ns="1" inpkey="7" clone="1"/>
+							<entry name="entry" ns="1" inpkey="508" clone="1"/>
+							<entry name="entry" ns="1" inpkey="434" clone="1"/>
+							<entry name="entry" ns="1" inpkey="16" clone="1"/>
+							<entry name="entry" ns="1" inpkey="465" clone="1"/>
+							<entry name="entry" ns="1" inpkey="482" clone="1"/>
+							<entry name="entry" ns="1" inpkey="498" clone="1"/>
+							<entry name="entry" ns="1" inpkey="490" clone="1"/>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="output" name="entry" sequence="1">
+							<root>
+								<entry name="Bundle" ns="http://hl7.org/fhir"/>
+								<entry name="entry" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="Composition_section" library="provisio" uid="6068" kind="19" visible="0">
+					<view ltx="559" lty="512" rbx="847" rby="581"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+								</namespaces>
+							</header>
+							<entry name="nazevSekce" inpkey="537" componentid="3214"/>
+							<entry name="kodSekce" inpkey="539" componentid="2876"/>
+							<entry name="textSekce" inpkey="535" componentid="3189"/>
+							<entry name="entry" componentid="2858" expanded="1">
+								<entry name="entry" ns="1" inpkey="533">
+									<entry name="fullUrl" ns="1">
+										<entry name="value" type="attribute" expanded="1"/>
+									</entry>
+									<entry name="resource" ns="1" expanded="1">
+										<entry name="Observation" ns="1">
+											<entry name="meta" ns="1">
+												<entry name="tag" ns="1">
+													<entry name="code" ns="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="Practitioner" ns="1" expanded="1">
+											<entry name="meta" ns="1" expanded="1">
+												<entry name="tag" ns="1" expanded="1">
+													<entry name="code" ns="1" expanded="1">
+														<entry name="value" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="section" ns="1" componentid="2877" expanded="1">
+								<entry name="section" outkey="532"/>
 							</entry>
 						</root>
 					</data>
@@ -6297,72 +6239,6 @@
 			<edge from="534" to="535"/>
 			<edge from="536" to="537"/>
 			<edge from="538" to="539"/>
-			<edge from="532" to="541"/>
-			<edge from="569" to="542"/>
-			<edge from="570" to="543">
-				<data type="2"/>
-			</edge>
-			<edge from="571" to="544">
-				<data type="2"/>
-			</edge>
-			<edge from="572" to="545">
-				<data type="2"/>
-			</edge>
-			<edge from="573" to="546"/>
-			<edge from="574" to="547"/>
-			<edge from="575" to="548">
-				<data type="2"/>
-			</edge>
-			<edge from="576" to="549"/>
-			<edge from="577" to="550"/>
-			<edge from="578" to="551">
-				<data type="2"/>
-			</edge>
-			<edge from="579" to="552"/>
-			<edge from="580" to="553"/>
-			<edge from="540" to="554"/>
-			<edge from="581" to="555">
-				<data type="2"/>
-			</edge>
-			<edge from="582" to="556">
-				<data type="2"/>
-			</edge>
-			<edge from="583" to="557">
-				<data type="2"/>
-			</edge>
-			<edge from="584" to="558">
-				<data type="2"/>
-			</edge>
-			<edge from="585" to="559">
-				<data type="2"/>
-			</edge>
-			<edge from="586" to="560">
-				<data type="2"/>
-			</edge>
-			<edge from="587" to="561">
-				<data type="2"/>
-			</edge>
-			<edge from="588" to="562">
-				<data type="2"/>
-			</edge>
-			<edge from="589" to="563">
-				<data type="2"/>
-			</edge>
-			<edge from="590" to="564">
-				<data type="2"/>
-			</edge>
-			<edge from="591" to="565">
-				<data type="2"/>
-			</edge>
-			<edge from="592" to="566">
-				<data type="2"/>
-			</edge>
-			<edge from="593" to="567">
-				<data type="2"/>
-			</edge>
-			<edge from="594" to="568">
-				<data type="2"/>
-			</edge>
 			<edge from="430" to="596">
 				<data type="2"/>
 			</edge>
@@ -6719,6 +6595,9 @@
 				<data type="2"/>
 			</edge>
 			<edge from="985" to="984"/>
+			<edge from="532" to="986">
+				<data type="2"/>
+			</edge>
 		</connections>
 	</component>
 	<component name="adresa" library="provisio" uid="86">
@@ -6860,32 +6739,45 @@
 						</valuemap>
 					</data>
 				</component>
-				<component name="fixDate" library="user" uid="2693" kind="19" visible="0">
-					<view ltx="488" lty="295" rbx="651" rby="312"/>
+				<component name="document" library="xml" uid="88" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="51" lty="6" rbx="207" rby="506"/>
 					<data>
-						<root>
+						<root scrollposition="16">
 							<header>
 								<namespaces>
 									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="42" componentid="6847"/>
+							<entry name="a" ns="1" expanded="1">
+								<entry name="typ" type="attribute" outkey="37"/>
+								<entry name="ind_kont" type="attribute" outkey="58"/>
+								<entry name="dat_od" ns="1" outkey="43" expanded="1"/>
+								<entry name="dat_do" ns="1" outkey="59" expanded="1"/>
+								<entry name="jmeno" ns="1" outkey="60"/>
+								<entry name="adr" ns="1" outkey="22"/>
+								<entry name="dop1" ns="1" outkey="23"/>
+								<entry name="dop2" ns="1" outkey="24"/>
+								<entry name="psc" ns="1" outkey="25"/>
+								<entry name="mesto" ns="1" outkey="26"/>
+								<entry name="stat" ns="1" outkey="27"/>
+							</entry>
 						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="hl7DateTimeString" outkey="56" componentid="6846"/>
-						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<parameter usageKind="input" name="a">
+							<root>
+								<entry name="a" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+							</root>
+						</parameter>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="2667" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="885" lty="-2" rbx="1417" rby="311"/>
 					<data>
-						<root scrollposition="1">
+						<root scrollposition="112">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -6922,7 +6814,7 @@
 									<entry name="value" type="attribute" inpkey="21"/>
 								</entry>
 								<entry name="period" ns="1" inpkey="84" expanded="1">
-									<entry name="start" ns="1" inpkey="64" expanded="1">
+									<entry name="start" ns="1" expanded="1">
 										<entry name="value" type="attribute" inpkey="65"/>
 									</entry>
 									<entry name="end" ns="1" inpkey="66" expanded="1">
@@ -6939,70 +6831,26 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="88" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="51" lty="6" rbx="207" rby="506"/>
+				<component name="fixDate" library="user" uid="2693" kind="19" visible="0">
+					<view ltx="488" lty="295" rbx="651" rby="312"/>
 					<data>
-						<root scrollposition="16">
+						<root>
 							<header>
 								<namespaces>
 									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
 								</namespaces>
 							</header>
-							<entry name="a" ns="1" expanded="1">
-								<entry name="typ" type="attribute" outkey="37"/>
-								<entry name="ind_kont" type="attribute" outkey="58"/>
-								<entry name="dat_od" ns="1" outkey="43" expanded="1"/>
-								<entry name="dat_do" ns="1" outkey="59" expanded="1"/>
-								<entry name="jmeno" ns="1" outkey="60"/>
-								<entry name="adr" ns="1" outkey="22"/>
-								<entry name="dop1" ns="1" outkey="23"/>
-								<entry name="dop2" ns="1" outkey="24"/>
-								<entry name="psc" ns="1" outkey="25"/>
-								<entry name="mesto" ns="1" outkey="26"/>
-								<entry name="stat" ns="1" outkey="27"/>
-							</entry>
+							<entry name="date" inpkey="42" componentid="6847"/>
 						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
-						<parameter usageKind="input" name="a">
-							<root>
-								<entry name="a" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-							</root>
-						</parameter>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="hl7DateTimeString" outkey="56" componentid="6846"/>
+						</root>
 					</data>
-				</component>
-				<component name="exists" library="core" uid="6701" kind="5">
-					<sources>
-						<datapoint pos="0" key="82"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="85"/>
-					</targets>
-					<view ltx="454" lty="446" rbx="530" rby="484"/>
-				</component>
-				<component name="exists" library="core" uid="6702" kind="5">
-					<sources>
-						<datapoint pos="0" key="83"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="86"/>
-					</targets>
-					<view ltx="454" lty="484" rbx="530" rby="522"/>
-				</component>
-				<component name="if-else" library="core" uid="6703" kind="4">
-					<sources>
-						<datapoint pos="0" key="87"/>
-						<datapoint/>
-						<datapoint pos="2" key="88"/>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="89"/>
-					</targets>
-					<view ltx="621" lty="447" rbx="728" rby="554"/>
 				</component>
 			</children>
 		</structure>
@@ -7032,16 +6880,11 @@
 			<edge from="58" to="61"/>
 			<edge from="52" to="62"/>
 			<edge from="60" to="63"/>
-			<edge from="56" to="64"/>
 			<edge from="56" to="65"/>
 			<edge from="57" to="66"/>
 			<edge from="57" to="67"/>
 			<edge from="81" to="80"/>
-			<edge from="43" to="82"/>
-			<edge from="59" to="83"/>
-			<edge from="89" to="84"/>
-			<edge from="85" to="87"/>
-			<edge from="86" to="88"/>
+			<edge from="56" to="84"/>
 		</connections>
 	</component>
 	<component name="pracovnik" library="provisio" uid="101">
@@ -7128,33 +6971,6 @@
 								</namespaces>
 							</header>
 							<entry name="FullURL_Practitioner" outkey="196" componentid="2761"/>
-						</root>
-					</data>
-				</component>
-				<component name="adresa" library="provisio" uid="2678" kind="19" visible="0">
-					<view ltx="435" lty="144" rbx="739" rby="182"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="a" ns="1" componentid="88" expanded="1">
-								<entry name="a" inpkey="176"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="Address" ns="1" componentid="2667" expanded="1">
-								<entry name="Address" type="xml-type" outkey="175"/>
-							</entry>
 						</root>
 					</data>
 				</component>
@@ -7288,6 +7104,33 @@
 								<entry name="entry" ns="http://hl7.org/fhir"/>
 							</root>
 						</parameter>
+					</data>
+				</component>
+				<component name="adresa" library="provisio" uid="2678" kind="19" visible="0">
+					<view ltx="435" lty="144" rbx="739" rby="182"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="a" ns="1" componentid="88" expanded="1">
+								<entry name="a" inpkey="176"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Address" ns="1" componentid="2667" expanded="1">
+								<entry name="Address" type="xml-type" outkey="175"/>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -7825,18 +7668,6 @@
 						<parameter usageKind="input" name="practitionerReference" optional="1" sequence="1"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="5795" kind="2">
-					<targets>
-						<datapoint pos="0" key="289"/>
-					</targets>
-					<view ltx="526" lty="749" rbx="602" rby="766"/>
-					<data>
-						<constant value="8716-3" datatype="string"/>
-						<comment>
-							<text>Kód pro composition</text>
-						</comment>
-					</data>
-				</component>
 				<component name="FullURL_DocumentReference" library="provisio" uid="5416" kind="19" visible="0">
 					<view ltx="660" lty="1028" rbx="881" rby="1045"/>
 					<data>
@@ -8080,87 +7911,6 @@
 							</header>
 							<entry name="referencePractitioner" outkey="603" componentid="2791"/>
 						</root>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="2743" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="1433" lty="125" rbx="1951" rby="751"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="entry" inpkey="533">
-								<entry name="fullUrl" expanded="1"/>
-								<entry name="resource" expanded="1">
-									<entry name="DocumentReference" expanded="1">
-										<entry name="meta" expanded="1">
-											<entry name="tag" expanded="1">
-												<entry name="code" expanded="1"/>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-							<entry name="entry" inpkey="131" clone="1"/>
-							<entry name="entry" inpkey="148" clone="1"/>
-							<entry name="entry" inpkey="43" clone="1"/>
-							<entry name="entry" inpkey="534" clone="1">
-								<entry name="fullUrl" expanded="1"/>
-								<entry name="resource" expanded="1">
-									<entry name="DocumentReference" expanded="1">
-										<entry name="meta" expanded="1">
-											<entry name="tag" expanded="1">
-												<entry name="code" expanded="1"/>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-							<entry name="entry" inpkey="137" clone="1"/>
-							<entry name="entry" inpkey="175" clone="1"/>
-							<entry name="entry" inpkey="44" clone="1"/>
-							<entry name="entry" inpkey="535" clone="1">
-								<entry name="fullUrl" expanded="1"/>
-								<entry name="resource" expanded="1">
-									<entry name="DocumentReference" expanded="1">
-										<entry name="id" expanded="1"/>
-										<entry name="meta" expanded="1">
-											<entry name="tag" expanded="1">
-												<entry name="code" expanded="1"/>
-											</entry>
-										</entry>
-										<entry name="date" expanded="1"/>
-									</entry>
-								</entry>
-							</entry>
-							<entry name="entry" inpkey="45" clone="1"/>
-							<entry name="entry" inpkey="536" clone="1">
-								<entry name="fullUrl" expanded="1"/>
-								<entry name="resource" expanded="1">
-									<entry name="DocumentReference">
-										<entry name="meta" expanded="1">
-											<entry name="tag" expanded="1">
-												<entry name="code" expanded="1"/>
-											</entry>
-										</entry>
-										<entry name="modifierExtension" expanded="1"/>
-									</entry>
-								</entry>
-							</entry>
-							<entry name="entry" inpkey="46" clone="1"/>
-							<entry name="entry" inpkey="538" clone="1"/>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="output" name="entry" sequence="1">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="5788" kind="2">
@@ -8478,6 +8228,87 @@
 						</root>
 					</data>
 				</component>
+				<component name="document" library="xml" uid="2743" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="1433" lty="125" rbx="1951" rby="751"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="entry" inpkey="533">
+								<entry name="fullUrl" expanded="1"/>
+								<entry name="resource" expanded="1">
+									<entry name="DocumentReference" expanded="1">
+										<entry name="meta" expanded="1">
+											<entry name="tag" expanded="1">
+												<entry name="code" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="entry" inpkey="131" expanded="1" clone="1"/>
+							<entry name="entry" inpkey="148" clone="1"/>
+							<entry name="entry" inpkey="43" clone="1"/>
+							<entry name="entry" inpkey="534" clone="1">
+								<entry name="fullUrl" expanded="1"/>
+								<entry name="resource" expanded="1">
+									<entry name="DocumentReference" expanded="1">
+										<entry name="meta" expanded="1">
+											<entry name="tag" expanded="1">
+												<entry name="code" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="entry" inpkey="137" clone="1"/>
+							<entry name="entry" inpkey="175" clone="1"/>
+							<entry name="entry" inpkey="44" clone="1"/>
+							<entry name="entry" inpkey="535" clone="1">
+								<entry name="fullUrl" expanded="1"/>
+								<entry name="resource" expanded="1">
+									<entry name="DocumentReference" expanded="1">
+										<entry name="id" expanded="1"/>
+										<entry name="meta" expanded="1">
+											<entry name="tag" expanded="1">
+												<entry name="code" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="date" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="entry" inpkey="45" clone="1"/>
+							<entry name="entry" inpkey="536" clone="1">
+								<entry name="fullUrl" expanded="1"/>
+								<entry name="resource" expanded="1">
+									<entry name="DocumentReference">
+										<entry name="meta" expanded="1">
+											<entry name="tag" expanded="1">
+												<entry name="code" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="modifierExtension" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="entry" inpkey="46" clone="1"/>
+							<entry name="entry" inpkey="538" clone="1"/>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="output" name="entry" sequence="1">
+							<root>
+								<entry name="Bundle" ns="http://hl7.org/fhir"/>
+								<entry name="entry" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
 				<component name="text_autor_ptext_ktext_priloha" library="provisio" uid="2844" kind="19" visible="0">
 					<view ltx="656" lty="246" rbx="978" rby="318"/>
 					<data>
@@ -8509,36 +8340,16 @@
 						</root>
 					</data>
 				</component>
-				<component name="ku_z_propz_sprij_fyznal" library="provisio" uid="5088" kind="19" visible="0">
-					<view ltx="656" lty="772" rbx="991" rby="869"/>
+				<component name="constant" library="core" uid="5795" kind="2">
+					<targets>
+						<datapoint pos="0" key="289"/>
+					</targets>
+					<view ltx="526" lty="749" rbx="602" rby="766"/>
 					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="fyznalType" ns="1" componentid="6283" expanded="1">
-								<entry name="fyznalType" type="xml-type" inpkey="141"/>
-							</entry>
-							<entry name="patientReference" ns="1" inpkey="567" componentid="6282" expanded="1"/>
-							<entry name="dat_prov" ns="1" componentid="6281" expanded="1">
-								<entry name="dat_prov" inpkey="142"/>
-							</entry>
-							<entry name="practitionerReference" ns="1" inpkey="153" componentid="6280"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="6294" expanded="1">
-								<entry name="entry" outkey="143"/>
-							</entry>
-						</root>
+						<constant value="8716-3" datatype="string"/>
+						<comment>
+							<text>Kód pro composition</text>
+						</comment>
 					</data>
 				</component>
 				<component name="ku_z_propz_sprij_h" library="provisio" uid="5086" kind="19" visible="0">
@@ -8552,6 +8363,7 @@
 								</namespaces>
 							</header>
 							<entry name="patientReference" inpkey="554" componentid="6134" expanded="1"/>
+							<entry name="tag" inpkey="617" componentid="6911"/>
 							<entry name="hType" componentid="6135" expanded="1">
 								<entry name="hType" ns="1" type="xml-type" inpkey="133"/>
 							</entry>
@@ -8571,6 +8383,51 @@
 								<entry name="entry" outkey="135"/>
 							</entry>
 						</root>
+					</data>
+				</component>
+				<component name="ku_z_propz_sprij_fyznal" library="provisio" uid="5088" kind="19" visible="0">
+					<view ltx="656" lty="772" rbx="991" rby="869"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="tag" inpkey="618" componentid="6914"/>
+							<entry name="fyznalType" componentid="6283" expanded="1">
+								<entry name="fyznalType" ns="1" type="xml-type" inpkey="141"/>
+							</entry>
+							<entry name="patientReference" inpkey="567" componentid="6282" expanded="1"/>
+							<entry name="dat_prov" componentid="6281" expanded="1">
+								<entry name="dat_prov" ns="1" inpkey="142"/>
+							</entry>
+							<entry name="practitionerReference" inpkey="153" componentid="6280"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="6294" expanded="1">
+								<entry name="entry" outkey="143"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6910" kind="2">
+					<targets>
+						<datapoint pos="0" key="616"/>
+					</targets>
+					<view ltx="478" lty="530" rbx="560" rby="547"/>
+					<data>
+						<constant value="67851-6" datatype="string"/>
+						<comment>
+							<text>Kód pro composition</text>
+						</comment>
 					</data>
 				</component>
 			</children>
@@ -8695,6 +8552,8 @@
 			<edge from="612" to="613"/>
 			<edge from="612" to="614"/>
 			<edge from="612" to="615"/>
+			<edge from="616" to="617"/>
+			<edge from="616" to="618"/>
 		</connections>
 	</component>
 	<component name="ku_z_propz_sprop" library="provisio" uid="2729">
@@ -9076,18 +8935,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="5809" kind="2">
-					<targets>
-						<datapoint pos="0" key="128"/>
-					</targets>
-					<view ltx="275" lty="401" rbx="351" rby="418"/>
-					<data>
-						<constant value="8716-3" datatype="string"/>
-						<comment>
-							<text>Kód pro composition</text>
-						</comment>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="6792" kind="2">
 					<targets>
 						<datapoint pos="0" key="512"/>
@@ -9286,18 +9133,19 @@
 						<root scrollposition="1">
 							<header>
 								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
 									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
 								</namespaces>
 							</header>
-							<entry name="fyznalType" ns="1" componentid="6283" expanded="1">
-								<entry name="fyznalType" type="xml-type" inpkey="61"/>
+							<entry name="tag" inpkey="532" componentid="6914"/>
+							<entry name="fyznalType" componentid="6283" expanded="1">
+								<entry name="fyznalType" ns="1" type="xml-type" inpkey="61"/>
 							</entry>
-							<entry name="patientReference" ns="1" inpkey="494" componentid="6282" expanded="1"/>
-							<entry name="dat_prov" ns="1" componentid="6281" expanded="1">
-								<entry name="dat_prov" inpkey="83"/>
+							<entry name="patientReference" inpkey="494" componentid="6282" expanded="1"/>
+							<entry name="dat_prov" componentid="6281" expanded="1">
+								<entry name="dat_prov" ns="1" inpkey="83"/>
 							</entry>
-							<entry name="practitionerReference" ns="1" inpkey="90" componentid="6280"/>
+							<entry name="practitionerReference" inpkey="90" componentid="6280"/>
 						</root>
 						<root>
 							<header>
@@ -9308,38 +9156,6 @@
 							</header>
 							<entry name="entry" ns="1" componentid="6294" expanded="1">
 								<entry name="entry" outkey="50"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="ku_z_propz_sprij_h" library="provisio" uid="5494" kind="19" visible="0">
-					<view ltx="411" lty="80" rbx="746" rby="177"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="patientReference" inpkey="489" componentid="6134" expanded="1"/>
-							<entry name="hType" componentid="6135" expanded="1">
-								<entry name="hType" ns="1" type="xml-type" inpkey="89"/>
-							</entry>
-							<entry name="dat_prov" componentid="6131" expanded="1">
-								<entry name="dat_prov" ns="1" inpkey="57"/>
-							</entry>
-							<entry name="practitionerReference" inpkey="71" componentid="6132"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="6151" expanded="1">
-								<entry name="entry" outkey="52"/>
 							</entry>
 						</root>
 					</data>
@@ -9527,6 +9343,63 @@
 						</root>
 					</data>
 				</component>
+				<component name="ku_z_propz_sprij_h" library="provisio" uid="5494" kind="19" visible="0">
+					<view ltx="411" lty="80" rbx="746" rby="177"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="patientReference" inpkey="489" componentid="6134" expanded="1"/>
+							<entry name="tag" inpkey="533" componentid="6911"/>
+							<entry name="hType" componentid="6135" expanded="1">
+								<entry name="hType" ns="1" type="xml-type" inpkey="89"/>
+							</entry>
+							<entry name="dat_prov" componentid="6131" expanded="1">
+								<entry name="dat_prov" ns="1" inpkey="57"/>
+							</entry>
+							<entry name="practitionerReference" inpkey="71" componentid="6132"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="6151" expanded="1">
+								<entry name="entry" outkey="52"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5809" kind="2">
+					<targets>
+						<datapoint pos="0" key="128"/>
+					</targets>
+					<view ltx="275" lty="401" rbx="351" rby="418"/>
+					<data>
+						<constant value="8716-3" datatype="string"/>
+						<comment>
+							<text>Kód pro composition</text>
+						</comment>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6916" kind="2">
+					<targets>
+						<datapoint pos="0" key="531"/>
+					</targets>
+					<view ltx="216" lty="269" rbx="292" rby="286"/>
+					<data>
+						<constant value="8650-4" datatype="string"/>
+						<comment>
+							<text>Kód pro composition</text>
+						</comment>
+					</data>
+				</component>
 			</children>
 		</structure>
 		<connections>
@@ -9658,6 +9531,8 @@
 			<edge from="502" to="528"/>
 			<edge from="479" to="529"/>
 			<edge from="479" to="530"/>
+			<edge from="531" to="532"/>
+			<edge from="531" to="533"/>
 		</connections>
 	</component>
 	<component name="ku_z_propz_dopor" library="provisio" uid="2731">
@@ -10407,19 +10282,6 @@
 						<constant value="http://loinc.org" datatype="string"/>
 					</data>
 				</component>
-				<component name="tag" library="core" uid="5837" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="79"/>
-					</targets>
-					<view ltx="69" lty="541" rbx="143" rby="579"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="tag" optional="1"/>
-					</data>
-				</component>
 				<component name="normalize-space" library="core" uid="5116" kind="5">
 					<sources>
 						<datapoint pos="0" key="36"/>
@@ -10428,100 +10290,6 @@
 						<datapoint pos="0" key="35"/>
 					</targets>
 					<view ltx="269" lty="287" rbx="379" rby="325"/>
-				</component>
-				<component name="document" library="xml" uid="5832" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="657" lty="199" rbx="957" rby="645"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.w3.org/1999/xhtml"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="DocumentReference" ns="1" outkey="43" expanded="1">
-									<entry name="id" ns="1" inpkey="44">
-										<entry name="value" type="attribute" inpkey="45"/>
-									</entry>
-									<entry name="meta" ns="1" inpkey="46">
-										<entry name="versionId" ns="1">
-											<entry name="value" type="attribute" inpkey="47"/>
-										</entry>
-										<entry name="tag" ns="1">
-											<entry name="system" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="108"/>
-											</entry>
-											<entry name="code" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="78"/>
-											</entry>
-										</entry>
-									</entry>
-									<entry name="text" ns="1">
-										<entry name="status" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="93"/>
-										</entry>
-										<entry name="div" ns="2" expanded="1">
-											<entry name="#text" inpkey="94"/>
-										</entry>
-									</entry>
-									<entry name="status" ns="1">
-										<entry name="value" type="attribute" inpkey="48"/>
-									</entry>
-									<entry name="type" ns="1">
-										<entry name="coding" ns="1" expanded="1">
-											<entry name="system" ns="1">
-												<entry name="value" type="attribute" inpkey="49"/>
-											</entry>
-											<entry name="code" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="50"/>
-											</entry>
-											<entry name="display" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="51"/>
-											</entry>
-										</entry>
-									</entry>
-									<entry name="subject" ns="1">
-										<entry name="reference" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="90"/>
-										</entry>
-									</entry>
-									<entry name="author" ns="1" inpkey="100">
-										<entry name="reference" ns="1" expanded="1"/>
-										<entry name="type" ns="1" expanded="1"/>
-										<entry name="display" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="104"/>
-										</entry>
-									</entry>
-									<entry name="description" ns="1">
-										<entry name="value" type="attribute" inpkey="53"/>
-									</entry>
-									<entry name="content" ns="1">
-										<entry name="attachment" ns="1" expanded="1">
-											<entry name="contentType" ns="1" expanded="1"/>
-											<entry name="data" ns="1" expanded="1"/>
-										</entry>
-									</entry>
-									<entry name="content" ns="1" inpkey="57" expanded="1" clone="1">
-										<entry name="attachment" ns="1" expanded="1">
-											<entry name="contentType" ns="1">
-												<entry name="value" type="attribute" inpkey="58"/>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="DocumentReference" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
 				</component>
 				<component name="constant" library="core" uid="2821" kind="2">
 					<targets>
@@ -10760,6 +10528,113 @@
 								<entry name="entry" ns="http://hl7.org/fhir"/>
 							</root>
 						</parameter>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="5832" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="657" lty="199" rbx="957" rby="645"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.w3.org/1999/xhtml"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+								<entry name="DocumentReference" ns="1" outkey="43" expanded="1">
+									<entry name="id" ns="1" inpkey="44">
+										<entry name="value" type="attribute" inpkey="45"/>
+									</entry>
+									<entry name="meta" ns="1" inpkey="46" expanded="1">
+										<entry name="versionId" ns="1">
+											<entry name="value" type="attribute" inpkey="47"/>
+										</entry>
+										<entry name="tag" ns="1" expanded="1">
+											<entry name="system" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="108"/>
+											</entry>
+											<entry name="code" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="78"/>
+											</entry>
+										</entry>
+									</entry>
+									<entry name="text" ns="1">
+										<entry name="status" ns="1" expanded="1">
+											<entry name="value" type="attribute" inpkey="93"/>
+										</entry>
+										<entry name="div" ns="2" expanded="1">
+											<entry name="#text" inpkey="94"/>
+										</entry>
+									</entry>
+									<entry name="status" ns="1">
+										<entry name="value" type="attribute" inpkey="48"/>
+									</entry>
+									<entry name="type" ns="1">
+										<entry name="coding" ns="1" expanded="1">
+											<entry name="system" ns="1">
+												<entry name="value" type="attribute" inpkey="49"/>
+											</entry>
+											<entry name="code" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="50"/>
+											</entry>
+											<entry name="display" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="51"/>
+											</entry>
+										</entry>
+									</entry>
+									<entry name="subject" ns="1">
+										<entry name="reference" ns="1" expanded="1">
+											<entry name="value" type="attribute" inpkey="90"/>
+										</entry>
+									</entry>
+									<entry name="author" ns="1" inpkey="100">
+										<entry name="reference" ns="1" expanded="1"/>
+										<entry name="type" ns="1" expanded="1"/>
+										<entry name="display" ns="1" expanded="1">
+											<entry name="value" type="attribute" inpkey="104"/>
+										</entry>
+									</entry>
+									<entry name="description" ns="1">
+										<entry name="value" type="attribute" inpkey="53"/>
+									</entry>
+									<entry name="content" ns="1">
+										<entry name="attachment" ns="1" expanded="1">
+											<entry name="contentType" ns="1" expanded="1"/>
+											<entry name="data" ns="1" expanded="1"/>
+										</entry>
+									</entry>
+									<entry name="content" ns="1" inpkey="57" expanded="1" clone="1">
+										<entry name="attachment" ns="1" expanded="1">
+											<entry name="contentType" ns="1">
+												<entry name="value" type="attribute" inpkey="58"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="variable">
+							<root>
+								<entry name="DocumentReference" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="tag" library="core" uid="5837" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="79"/>
+					</targets>
+					<view ltx="69" lty="541" rbx="143" rby="579"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="tag" optional="1"/>
 					</data>
 				</component>
 			</children>
@@ -11823,75 +11698,6 @@
 						<constant value="http://loinc.org" datatype="string"/>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="2877" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="1696" lty="61" rbx="1996" rby="305"/>
-					<data>
-						<root scrollposition="511">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.w3.org/1999/xhtml"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="section" ns="1" expanded="1">
-								<entry name="title" ns="1">
-									<entry name="value" type="attribute" inpkey="27"/>
-								</entry>
-								<entry name="code" ns="1" expanded="1">
-									<entry name="coding" ns="1" expanded="1">
-										<entry name="system" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="180"/>
-										</entry>
-										<entry name="code" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="20"/>
-										</entry>
-										<entry name="display" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="29"/>
-										</entry>
-									</entry>
-									<entry name="text" ns="1" expanded="1"/>
-								</entry>
-								<entry name="text" ns="1">
-									<entry name="status" ns="1" expanded="1">
-										<entry name="value" type="attribute" inpkey="231"/>
-									</entry>
-									<entry name="div" ns="2" expanded="1">
-										<entry name="#text" inpkey="232"/>
-									</entry>
-								</entry>
-								<entry name="entry" ns="1" inpkey="22">
-									<entry name="reference" ns="1" expanded="1">
-										<entry name="value" type="attribute" inpkey="21"/>
-									</entry>
-								</entry>
-								<entry name="emptyReason" ns="1" inpkey="241" expanded="1">
-									<entry name="coding" ns="1" expanded="1">
-										<entry name="system" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="242"/>
-										</entry>
-										<entry name="code" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="243"/>
-										</entry>
-										<entry name="display" ns="1" expanded="1">
-											<entry name="value" type="attribute" inpkey="244"/>
-										</entry>
-									</entry>
-								</entry>
-								<entry name="section" ns="1" expanded="1"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="output" name="section">
-							<root>
-								<entry name="Composition" ns="http://hl7.org/fhir"/>
-								<entry name="section" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
 				<component name="substitute-missing" library="core" uid="5052" kind="5">
 					<sources>
 						<datapoint pos="0" key="41"/>
@@ -12209,6 +12015,75 @@
 						<datapoint/>
 					</targets>
 					<view ltx="1228" lty="170" rbx="1341" rby="224"/>
+				</component>
+				<component name="document" library="xml" uid="2877" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="1696" lty="61" rbx="1996" rby="305"/>
+					<data>
+						<root scrollposition="627">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.w3.org/1999/xhtml"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="section" ns="1" expanded="1">
+								<entry name="title" ns="1">
+									<entry name="value" type="attribute" inpkey="27"/>
+								</entry>
+								<entry name="code" ns="1" expanded="1">
+									<entry name="coding" ns="1" expanded="1">
+										<entry name="system" ns="1" expanded="1">
+											<entry name="value" type="attribute" inpkey="180"/>
+										</entry>
+										<entry name="code" ns="1" expanded="1">
+											<entry name="value" type="attribute" inpkey="20"/>
+										</entry>
+										<entry name="display" ns="1" expanded="1">
+											<entry name="value" type="attribute" inpkey="29"/>
+										</entry>
+									</entry>
+									<entry name="text" ns="1" expanded="1"/>
+								</entry>
+								<entry name="text" ns="1">
+									<entry name="status" ns="1" expanded="1">
+										<entry name="value" type="attribute" inpkey="231"/>
+									</entry>
+									<entry name="div" ns="2" expanded="1">
+										<entry name="#text" inpkey="232"/>
+									</entry>
+								</entry>
+								<entry name="entry" ns="1" inpkey="22">
+									<entry name="reference" ns="1" expanded="1">
+										<entry name="value" type="attribute" inpkey="21"/>
+									</entry>
+								</entry>
+								<entry name="emptyReason" ns="1" inpkey="241">
+									<entry name="coding" ns="1" expanded="1">
+										<entry name="system" ns="1" expanded="1">
+											<entry name="value" type="attribute" inpkey="242"/>
+										</entry>
+										<entry name="code" ns="1" expanded="1">
+											<entry name="value" type="attribute" inpkey="243"/>
+										</entry>
+										<entry name="display" ns="1" expanded="1">
+											<entry name="value" type="attribute" inpkey="244"/>
+										</entry>
+									</entry>
+								</entry>
+								<entry name="section" ns="1" expanded="1"/>
+							</entry>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="output" name="section">
+							<root>
+								<entry name="Composition" ns="http://hl7.org/fhir"/>
+								<entry name="section" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
 				</component>
 			</children>
 		</structure>
@@ -13423,35 +13298,6 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="ku_z_propz_urg_v" library="provisio" uid="5057" kind="19" visible="0">
-					<view ltx="493" lty="388" rbx="1065" rby="497"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ku_z_propz_urg_vType" ns="1" componentid="5060" expanded="1">
-								<entry name="ku_z_propz_urg_vType" type="xml-type" inpkey="19"/>
-							</entry>
-							<entry name="practitionerReference" ns="1" inpkey="25" componentid="5174"/>
-							<entry name="patientReference" ns="1" inpkey="28" componentid="6332" expanded="1"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="5059" expanded="1">
-								<entry name="entry" outkey="16"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="ku_z_propz_urg_alerg_int" library="provisio" uid="5039" kind="19" visible="0">
 					<view ltx="493" lty="215" rbx="1065" rby="331"/>
 					<data>
@@ -13479,6 +13325,35 @@
 							</header>
 							<entry name="entry" ns="1" componentid="6909" expanded="1">
 								<entry name="entry" outkey="9"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="ku_z_propz_urg_v" library="provisio" uid="5057" kind="19" visible="0">
+					<view ltx="493" lty="388" rbx="1065" rby="497"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ku_z_propz_urg_vType" ns="1" componentid="6930" expanded="1">
+								<entry name="ku_z_propz_urg_vType" type="xml-type" inpkey="19"/>
+							</entry>
+							<entry name="practitionerReference" ns="1" inpkey="25" componentid="6925"/>
+							<entry name="patientReference" ns="1" inpkey="28" componentid="6922" expanded="1"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="6931" expanded="1">
+								<entry name="entry" outkey="16"/>
 							</entry>
 						</root>
 					</data>
@@ -14239,17 +14114,17 @@
 	<component name="ku_z_propz_urg_v" library="provisio" uid="5054">
 		<structure>
 			<children>
-				<component name="constant" library="core" uid="5065" kind="2">
+				<component name="constant" library="core" uid="6919" kind="2">
 					<targets>
-						<datapoint pos="0" key="47"/>
+						<datapoint pos="0" key="135"/>
 					</targets>
-					<view ltx="837" lty="203" rbx="908" rby="220"/>
+					<view ltx="867" lty="233" rbx="938" rby="250"/>
 					<data>
 						<constant value="active" datatype="string"/>
 					</data>
 				</component>
-				<component name="FullURL_Flag" library="provisio" uid="5597" kind="19" visible="0">
-					<view ltx="848" lty="70" rbx="986" rby="87"/>
+				<component name="FullURL_Flag" library="provisio" uid="6920" kind="19" visible="0">
+					<view ltx="878" lty="100" rbx="1016" rby="117"/>
 					<data>
 						<root>
 							<header>
@@ -14257,7 +14132,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="GUID" inpkey="93" componentid="5592"/>
+							<entry name="GUID" inpkey="121" componentid="5592"/>
 						</root>
 						<root>
 							<header>
@@ -14265,67 +14140,91 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="FullURL_Flag" outkey="94" componentid="5594"/>
+							<entry name="FullURL_Flag" outkey="122" componentid="5594"/>
 						</root>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="5064" kind="2">
-					<targets>
-						<datapoint pos="0" key="48"/>
-					</targets>
-					<view ltx="837" lty="187" rbx="986" rby="204"/>
-					<data>
-						<constant value="https://hl7.cz/fhir/hdr/StructureDefinition/cz-flag-hdr" datatype="string"/>
-					</data>
-				</component>
-				<component name="patientReference" library="core" uid="6332" kind="6">
+				<component name="patientReference" library="core" uid="6922" kind="6">
 					<sources>
 						<datapoint/>
 					</sources>
 					<targets>
-						<datapoint pos="0" key="97"/>
+						<datapoint pos="0" key="185"/>
 					</targets>
-					<view ltx="197" lty="737" rbx="342" rby="775"/>
+					<view ltx="227" lty="767" rbx="372" rby="805"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6334" kind="2">
+				<component name="constant" library="core" uid="6923" kind="2">
 					<targets>
-						<datapoint pos="0" key="101"/>
+						<datapoint pos="0" key="139"/>
 					</targets>
-					<view ltx="837" lty="350" rbx="984" rby="367"/>
+					<view ltx="867" lty="380" rbx="1014" rby="397"/>
 					<data>
 						<constant value="http://hl7.org/fhir/sid/icd-10" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="5066" kind="2">
+				<component name="constant" library="core" uid="6924" kind="2">
 					<targets>
-						<datapoint pos="0" key="61"/>
+						<datapoint pos="0" key="188"/>
 					</targets>
-					<view ltx="837" lty="264" rbx="925" rby="281"/>
+					<view ltx="881" lty="335" rbx="976" rby="352"/>
 					<data>
-						<constant value="104605-1" datatype="string"/>
-						<comment>
-							<text>Kód pro composition</text>
-						</comment>
+						<constant value="generated" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6333" kind="2">
+				<component name="practitionerReference" library="core" uid="6925" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
 					<targets>
-						<datapoint pos="0" key="98"/>
+						<datapoint pos="0" key="168"/>
 					</targets>
-					<view ltx="837" lty="248" rbx="958" rby="265"/>
+					<view ltx="205" lty="714" rbx="373" rby="752"/>
 					<data>
-						<constant value="http://loinc.org" datatype="string"/>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="practitionerReference" optional="1" sequence="1"/>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="5060" kind="14">
+				<component name="Reference_Practitioner" library="provisio" uid="6926" kind="19" visible="0">
+					<view ltx="976" lty="534" rbx="1162" rby="568"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="155" componentid="2787"/>
+							<entry name="VGUID" inpkey="181" componentid="2788"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="referencePractitioner" outkey="164" componentid="2791"/>
+						</root>
+					</data>
+				</component>
+				<component name="substitute-missing" library="core" uid="6927" kind="5">
+					<sources>
+						<datapoint pos="0" key="165"/>
+						<datapoint pos="1" key="169"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="116"/>
+					</targets>
+					<view ltx="976" lty="591" rbx="1098" rby="645"/>
+				</component>
+				<component name="document" library="xml" uid="6930" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="175" lty="365" rbx="349" rby="565"/>
+					<view ltx="205" lty="395" rbx="379" rby="595"/>
 					<data>
-						<root scrollposition="52">
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -14333,17 +14232,19 @@
 									<namespace uid="http://www.altova.com/mapforce"/>
 								</namespaces>
 							</header>
-							<entry name="ku_z_propz_urg_vType" ns="1" type="xml-type" outkey="95" expanded="1">
-								<entry name="guid" type="attribute" outkey="59"/>
-								<entry name="vguid" type="attribute" outkey="60"/>
+							<entry name="ku_z_propz_urg_vType" ns="1" type="xml-type" outkey="130" expanded="1">
+								<entry name="guid" type="attribute" outkey="120"/>
+								<entry name="vguid" type="attribute" outkey="125"/>
+								<entry name="var_ozn" ns="1" outkey="156"/>
 								<entry name="var_stav" ns="1" expanded="1">
-									<entry name="kod" ns="1" outkey="64"/>
-									<entry name="kod_text" ns="1" outkey="65"/>
+									<entry name="kod_syst" ns="1" outkey="192"/>
+									<entry name="kod" ns="1" outkey="128"/>
+									<entry name="kod_text" ns="1" outkey="150"/>
 								</entry>
-								<entry name="sp_pracovnik" ns="1" outkey="86"/>
-								<entry name="var_text" ns="1" outkey="66"/>
-								<entry name="var_dat_od" ns="1" outkey="67"/>
-								<entry name="var_dat_do" ns="1" outkey="68"/>
+								<entry name="sp_pracovnik" ns="1" outkey="118"/>
+								<entry name="var_text" ns="1" outkey="152"/>
+								<entry name="var_dat_od" ns="1" outkey="141"/>
+								<entry name="var_dat_do" ns="1" outkey="145"/>
 							</entry>
 						</root>
 						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
@@ -14354,11 +14255,41 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="5059" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="1245" lty="108" rbx="1596" rby="592"/>
+				<component name="constant" library="core" uid="5064" kind="2">
+					<targets>
+						<datapoint pos="0" key="48"/>
+					</targets>
+					<view ltx="837" lty="187" rbx="981" rby="204"/>
 					<data>
-						<root scrollposition="2992">
+						<constant value="https://hl7.cz/fhir/hdr/StructureDefinition/cz-flag-hdr" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6929" kind="2">
+					<targets>
+						<datapoint pos="0" key="132"/>
+					</targets>
+					<view ltx="867" lty="278" rbx="988" rby="295"/>
+					<data>
+						<constant value="http://loinc.org" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6928" kind="2">
+					<targets>
+						<datapoint pos="0" key="137"/>
+					</targets>
+					<view ltx="867" lty="294" rbx="955" rby="311"/>
+					<data>
+						<constant value="104605-1" datatype="string"/>
+						<comment>
+							<text>Kód pro composition</text>
+						</comment>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="6931" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="1275" lty="138" rbx="1626" rby="622"/>
+					<data>
+						<root scrollposition="4764">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -14367,9 +14298,9 @@
 									<namespace uid="http://www.altova.com/mapforce"/>
 								</namespaces>
 							</header>
-							<entry name="entry" ns="1" inpkey="96" expanded="1">
-								<entry name="fullUrl" ns="1" inpkey="35" expanded="1">
-									<entry name="value" type="attribute" inpkey="36"/>
+							<entry name="entry" ns="1" inpkey="131" expanded="1">
+								<entry name="fullUrl" ns="1" inpkey="123" expanded="1">
+									<entry name="value" type="attribute" inpkey="143"/>
 								</entry>
 								<entry name="resource" ns="1" expanded="1">
 									<entry name="AllergyIntolerance" ns="1">
@@ -14433,75 +14364,94 @@
 										</entry>
 									</entry>
 									<entry name="Flag" ns="1" expanded="1">
-										<entry name="id" ns="1" inpkey="52">
-											<entry name="value" type="attribute" inpkey="53"/>
+										<entry name="id" ns="1" inpkey="124">
+											<entry name="value" type="attribute" inpkey="134"/>
 										</entry>
 										<entry name="meta" ns="1" expanded="1">
-											<entry name="versionId" ns="1" inpkey="54" expanded="1">
-												<entry name="value" type="attribute" inpkey="55"/>
+											<entry name="versionId" ns="1" inpkey="126" expanded="1">
+												<entry name="value" type="attribute" inpkey="127"/>
 											</entry>
 											<entry name="profile" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="56"/>
+												<entry name="value" type="attribute" inpkey="149"/>
 											</entry>
 											<entry name="tag" ns="1" expanded="1">
 												<entry name="system" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="102"/>
+													<entry name="value" type="attribute" inpkey="133"/>
 												</entry>
 												<entry name="code" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="62"/>
+													<entry name="value" type="attribute" inpkey="138"/>
 												</entry>
 											</entry>
 										</entry>
 										<entry name="text" ns="1" expanded="1">
 											<entry name="status" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="103"/>
+												<entry name="value" type="attribute" inpkey="189"/>
 											</entry>
 											<entry name="div" ns="2" expanded="1">
-												<entry name="#text" inpkey="104"/>
+												<entry name="#text" inpkey="184"/>
 											</entry>
 										</entry>
 										<entry name="status" ns="1">
-											<entry name="value" type="attribute" inpkey="57"/>
+											<entry name="value" type="attribute" inpkey="136"/>
+										</entry>
+										<entry name="category" ns="1" inpkey="157" expanded="1">
+											<entry name="text" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="187"/>
+											</entry>
 										</entry>
 										<entry name="code" ns="1" expanded="1">
 											<entry name="coding" ns="1" expanded="1">
 												<entry name="system" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="69"/>
+													<entry name="value" type="attribute" inpkey="140"/>
+												</entry>
+												<entry name="version" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="193"/>
 												</entry>
 												<entry name="code" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="70"/>
+													<entry name="value" type="attribute" inpkey="129"/>
 												</entry>
 												<entry name="display" ns="1" expanded="1">
-													<entry name="value" type="attribute" inpkey="71"/>
+													<entry name="value" type="attribute" inpkey="151"/>
 												</entry>
 											</entry>
 											<entry name="text" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="72"/>
+												<entry name="value" type="attribute" inpkey="153"/>
 											</entry>
 										</entry>
 										<entry name="subject" ns="1">
 											<entry name="reference" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="105"/>
+												<entry name="value" type="attribute" inpkey="186"/>
 											</entry>
 										</entry>
-										<entry name="period" ns="1" inpkey="73">
+										<entry name="period" ns="1" inpkey="142">
 											<entry name="start" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="74"/>
+												<entry name="value" type="attribute" inpkey="144"/>
 											</entry>
-											<entry name="end" ns="1" inpkey="75" expanded="1">
-												<entry name="value" type="attribute" inpkey="76"/>
+											<entry name="end" ns="1" inpkey="146" expanded="1">
+												<entry name="value" type="attribute" inpkey="147"/>
 											</entry>
 										</entry>
 										<entry name="author" ns="1" expanded="1">
 											<entry name="reference" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="83"/>
+												<entry name="value" type="attribute" inpkey="117"/>
 											</entry>
+											<entry name="display" ns="1" expanded="1"/>
 										</entry>
 									</entry>
 								</entry>
 							</entry>
-							<entry name="entry" ns="1" inpkey="88" expanded="1" clone="1">
+							<entry name="entry" ns="1" inpkey="115" clone="1">
 								<entry name="fullUrl" ns="1" expanded="1"/>
+								<entry name="resource" ns="1" expanded="1">
+									<entry name="Practitioner" ns="1" expanded="1">
+										<entry name="meta" ns="1" expanded="1">
+											<entry name="tag" ns="1" expanded="1">
+												<entry name="system" ns="1" expanded="1"/>
+												<entry name="code" ns="1" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
 							</entry>
 						</root>
 						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
@@ -14513,62 +14463,8 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="Reference_Practitioner" library="provisio" uid="6339" kind="19" visible="0">
-					<view ltx="946" lty="504" rbx="1132" rby="538"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="106" componentid="2787"/>
-							<entry name="VGUID" inpkey="107" componentid="2788"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="referencePractitioner" outkey="108" componentid="2791"/>
-						</root>
-					</data>
-				</component>
-				<component name="substitute-missing" library="core" uid="6341" kind="5">
-					<sources>
-						<datapoint pos="0" key="109"/>
-						<datapoint pos="1" key="110"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="111"/>
-					</targets>
-					<view ltx="946" lty="561" rbx="1068" rby="615"/>
-				</component>
-				<component name="practitionerReference" library="core" uid="5174" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="92"/>
-					</targets>
-					<view ltx="175" lty="684" rbx="343" rby="722"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="practitionerReference" optional="1" sequence="1"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6335" kind="2">
-					<targets>
-						<datapoint pos="0" key="99"/>
-					</targets>
-					<view ltx="851" lty="305" rbx="946" rby="322"/>
-					<data>
-						<constant value="generated" datatype="string"/>
-					</data>
-				</component>
-				<component name="pracovnik" library="provisio" uid="5121" kind="19" visible="0">
-					<view ltx="583" lty="603" rbx="883" rby="803"/>
+				<component name="pracovnik" library="provisio" uid="6932" kind="19" visible="0">
+					<view ltx="613" lty="633" rbx="913" rby="833"/>
 					<data>
 						<root>
 							<header>
@@ -14578,7 +14474,7 @@
 								</namespaces>
 							</header>
 							<entry name="pracovnikType" ns="1" componentid="104" expanded="1">
-								<entry name="pracovnikType" type="xml-type" inpkey="90"/>
+								<entry name="pracovnikType" type="xml-type" inpkey="119"/>
 							</entry>
 						</root>
 						<root scrollposition="1">
@@ -14589,15 +14485,18 @@
 								</namespaces>
 							</header>
 							<entry name="entry" componentid="105" expanded="1">
-								<entry name="entry" ns="1" outkey="91">
+								<entry name="entry" ns="1" outkey="114">
 									<entry name="resource" ns="1" expanded="1">
 										<entry name="Practitioner" ns="1" expanded="1">
 											<entry name="id" ns="1" expanded="1">
-												<entry name="value" type="attribute" outkey="112"/>
+												<entry name="value" type="attribute" outkey="154"/>
 											</entry>
 											<entry name="meta" ns="1" expanded="1">
 												<entry name="versionId" ns="1" expanded="1">
-													<entry name="value" type="attribute" outkey="113"/>
+													<entry name="value" type="attribute" outkey="180"/>
+												</entry>
+												<entry name="tag" ns="1" expanded="1">
+													<entry name="code" ns="1" expanded="1"/>
 												</entry>
 											</entry>
 										</entry>
@@ -14610,40 +14509,43 @@
 			</children>
 		</structure>
 		<connections>
-			<edge from="94" to="35"/>
-			<edge from="94" to="36"/>
-			<edge from="59" to="52"/>
-			<edge from="59" to="53"/>
-			<edge from="60" to="54"/>
-			<edge from="60" to="55"/>
-			<edge from="48" to="56"/>
-			<edge from="47" to="57"/>
-			<edge from="61" to="62"/>
-			<edge from="101" to="69"/>
-			<edge from="64" to="70"/>
-			<edge from="65" to="71"/>
-			<edge from="66" to="72"/>
-			<edge from="67" to="73"/>
-			<edge from="67" to="74"/>
-			<edge from="68" to="75"/>
-			<edge from="68" to="76"/>
-			<edge from="111" to="83"/>
-			<edge from="91" to="88">
+			<edge from="114" to="115">
 				<data type="2"/>
 			</edge>
-			<edge from="86" to="90">
+			<edge from="116" to="117"/>
+			<edge from="118" to="119">
 				<data type="2"/>
 			</edge>
-			<edge from="59" to="93"/>
-			<edge from="95" to="96"/>
-			<edge from="98" to="102"/>
-			<edge from="99" to="103"/>
-			<edge from="65" to="104"/>
-			<edge from="97" to="105"/>
-			<edge from="112" to="106"/>
-			<edge from="113" to="107"/>
-			<edge from="108" to="109"/>
-			<edge from="92" to="110"/>
+			<edge from="120" to="121"/>
+			<edge from="122" to="123"/>
+			<edge from="120" to="124"/>
+			<edge from="125" to="126"/>
+			<edge from="125" to="127"/>
+			<edge from="128" to="129"/>
+			<edge from="130" to="131"/>
+			<edge from="132" to="133"/>
+			<edge from="120" to="134"/>
+			<edge from="135" to="136"/>
+			<edge from="137" to="138"/>
+			<edge from="139" to="140"/>
+			<edge from="141" to="142"/>
+			<edge from="122" to="143"/>
+			<edge from="141" to="144"/>
+			<edge from="145" to="146"/>
+			<edge from="145" to="147"/>
+			<edge from="48" to="149"/>
+			<edge from="150" to="151"/>
+			<edge from="152" to="153"/>
+			<edge from="154" to="155"/>
+			<edge from="156" to="157"/>
+			<edge from="164" to="165"/>
+			<edge from="168" to="169"/>
+			<edge from="180" to="181"/>
+			<edge from="150" to="184"/>
+			<edge from="185" to="186"/>
+			<edge from="156" to="187"/>
+			<edge from="188" to="189"/>
+			<edge from="192" to="193"/>
 		</connections>
 	</component>
 	<component name="Reference_Flag" library="provisio" uid="5061">
@@ -15266,15 +15168,6 @@
 						<constant value="Body height" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6178" kind="2">
-					<targets>
-						<datapoint pos="0" key="609"/>
-					</targets>
-					<view ltx="496" lty="104" rbx="645" rby="121"/>
-					<data>
-						<constant value="http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu" datatype="string"/>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="6112" kind="2">
 					<targets>
 						<datapoint pos="0" key="555"/>
@@ -15464,18 +15357,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="5092" kind="2">
-					<targets>
-						<datapoint pos="0" key="342"/>
-					</targets>
-					<view ltx="496" lty="123" rbx="592" rby="140"/>
-					<data>
-						<constant value="248326004" datatype="string"/>
-						<comment>
-							<text>Kód pro composition</text>
-						</comment>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="6142" kind="2">
 					<targets>
 						<datapoint pos="0" key="620"/>
@@ -15509,11 +15390,67 @@
 						</parameter>
 					</data>
 				</component>
+				<component name="substitute-missing" library="core" uid="6129" kind="5">
+					<sources>
+						<datapoint pos="0" key="533"/>
+						<datapoint pos="1" key="527"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="524"/>
+					</targets>
+					<view ltx="491" lty="505" rbx="613" rby="559"/>
+				</component>
+				<component name="substitute-missing" library="core" uid="6130" kind="5">
+					<sources>
+						<datapoint pos="0" key="531"/>
+						<datapoint pos="1" key="525"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="382"/>
+					</targets>
+					<view ltx="491" lty="558" rbx="613" rby="612"/>
+				</component>
+				<component name="constant" library="core" uid="6128" kind="2">
+					<targets>
+						<datapoint pos="0" key="491"/>
+					</targets>
+					<view ltx="758" lty="408" rbx="834" rby="425"/>
+					<data>
+						<constant value="8280-0" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6127" kind="2">
+					<targets>
+						<datapoint pos="0" key="493"/>
+					</targets>
+					<view ltx="758" lty="424" rbx="917" rby="441"/>
+					<data>
+						<constant value="Waist Circumference at umbilicus by Tape measure" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6123" kind="2">
+					<targets>
+						<datapoint pos="0" key="503"/>
+					</targets>
+					<view ltx="758" lty="440" rbx="840" rby="457"/>
+					<data>
+						<constant value="56086-2" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6124" kind="2">
+					<targets>
+						<datapoint pos="0" key="499"/>
+					</targets>
+					<view ltx="758" lty="456" rbx="917" rby="473"/>
+					<data>
+						<constant value="Adult Waist Circumference Protocol" datatype="string"/>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="6135" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="286" lty="274" rbx="436" rby="506"/>
 					<data>
-						<root scrollposition="329">
+						<root scrollposition="176">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -15554,31 +15491,20 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="substitute-missing" library="core" uid="6129" kind="5">
-					<sources>
-						<datapoint pos="0" key="533"/>
-						<datapoint pos="1" key="527"/>
-					</sources>
+				<component name="constant" library="core" uid="6178" kind="2">
 					<targets>
-						<datapoint pos="0" key="524"/>
+						<datapoint pos="0" key="609"/>
 					</targets>
-					<view ltx="491" lty="505" rbx="613" rby="559"/>
-				</component>
-				<component name="substitute-missing" library="core" uid="6130" kind="5">
-					<sources>
-						<datapoint pos="0" key="531"/>
-						<datapoint pos="1" key="525"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="382"/>
-					</targets>
-					<view ltx="491" lty="558" rbx="613" rby="612"/>
+					<view ltx="496" lty="104" rbx="645" rby="121"/>
+					<data>
+						<constant value="http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu" datatype="string"/>
+					</data>
 				</component>
 				<component name="document" library="xml" uid="6151" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1532" lty="75" rbx="1895" rby="615"/>
 					<data>
-						<root scrollposition="31562">
+						<root scrollposition="40780">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -15609,6 +15535,7 @@
 												<entry name="system" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="611"/>
 												</entry>
+												<entry name="version" ns="1" expanded="1"/>
 												<entry name="code" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="603"/>
 												</entry>
@@ -15667,7 +15594,7 @@
 											</entry>
 											<entry name="display" ns="1" expanded="1"/>
 										</entry>
-										<entry name="valueQuantity" ns="1">
+										<entry name="valueQuantity" ns="1" expanded="1">
 											<entry name="value" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="572"/>
 											</entry>
@@ -16186,41 +16113,40 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6128" kind="2">
+				<component name="tag" library="core" uid="6911" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
 					<targets>
-						<datapoint pos="0" key="491"/>
+						<datapoint pos="0" key="628"/>
 					</targets>
-					<view ltx="758" lty="408" rbx="834" rby="425"/>
+					<view ltx="286" lty="129" rbx="360" rby="167"/>
 					<data>
-						<constant value="8280-0" datatype="string"/>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="tag" optional="1"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6127" kind="2">
+				<component name="constant" library="core" uid="5092" kind="2">
 					<targets>
-						<datapoint pos="0" key="493"/>
+						<datapoint pos="0" key="342"/>
 					</targets>
-					<view ltx="758" lty="424" rbx="917" rby="441"/>
+					<view ltx="264" lty="167" rbx="360" rby="184"/>
 					<data>
-						<constant value="Waist Circumference at umbilicus by Tape measure" datatype="string"/>
+						<constant value="248326004" datatype="string"/>
+						<comment>
+							<text>Kód pro composition</text>
+						</comment>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6123" kind="2">
+				<component name="substitute-missing" library="core" uid="6918" kind="5">
+					<sources>
+						<datapoint pos="0" key="634"/>
+						<datapoint pos="1" key="633"/>
+					</sources>
 					<targets>
-						<datapoint pos="0" key="503"/>
+						<datapoint pos="0" key="632"/>
 					</targets>
-					<view ltx="758" lty="440" rbx="840" rby="457"/>
-					<data>
-						<constant value="56086-2" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6124" kind="2">
-					<targets>
-						<datapoint pos="0" key="499"/>
-					</targets>
-					<view ltx="758" lty="456" rbx="917" rby="473"/>
-					<data>
-						<constant value="Adult Waist Circumference Protocol" datatype="string"/>
-					</data>
+					<view ltx="452" lty="152" rbx="574" rby="206"/>
 				</component>
 			</children>
 		</structure>
@@ -16394,12 +16320,12 @@
 			<edge from="587" to="600"/>
 			<edge from="587" to="601"/>
 			<edge from="576" to="602"/>
-			<edge from="342" to="603"/>
-			<edge from="342" to="604"/>
-			<edge from="342" to="605"/>
-			<edge from="342" to="606"/>
-			<edge from="342" to="607"/>
-			<edge from="342" to="608"/>
+			<edge from="632" to="603"/>
+			<edge from="632" to="604"/>
+			<edge from="632" to="605"/>
+			<edge from="632" to="606"/>
+			<edge from="632" to="607"/>
+			<edge from="632" to="608"/>
 			<edge from="609" to="610"/>
 			<edge from="609" to="611"/>
 			<edge from="609" to="612"/>
@@ -16412,6 +16338,8 @@
 			<edge from="619" to="625"/>
 			<edge from="620" to="626"/>
 			<edge from="621" to="627"/>
+			<edge from="342" to="633"/>
+			<edge from="628" to="634"/>
 		</connections>
 	</component>
 	<component name="ku_z_propz_sprij_fyznal" library="provisio" uid="5083">
@@ -16904,11 +16832,29 @@
 						<constant value="http://hl7.org/fhir/StructureDefinition/bodytemp" datatype="string"/>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="6256" kind="2">
+					<targets>
+						<datapoint pos="0" key="567"/>
+					</targets>
+					<view ltx="508" lty="239" rbx="664" rby="256"/>
+					<data>
+						<constant value="http://terminology.hl7.org/CodeSystem/observation-category" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6295" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="331" lty="497" rbx="478" rby="514"/>
+					<data>
+						<constant value="http://hl7.org/fhir/StructureDefinition/bp" datatype="string"/>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="6294" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1264" lty="-219" rbx="1682" rby="422"/>
 					<data>
-						<root scrollposition="3265">
+						<root scrollposition="15484">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -17433,32 +17379,37 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6256" kind="2">
-					<targets>
-						<datapoint pos="0" key="567"/>
-					</targets>
-					<view ltx="508" lty="239" rbx="664" rby="256"/>
-					<data>
-						<constant value="http://terminology.hl7.org/CodeSystem/observation-category" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6295" kind="2">
-					<targets>
+				<component name="tag" library="core" uid="6914" kind="6">
+					<sources>
 						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="752"/>
 					</targets>
-					<view ltx="331" lty="497" rbx="478" rby="514"/>
+					<view ltx="106" lty="-154" rbx="180" rby="-116"/>
 					<data>
-						<constant value="http://hl7.org/fhir/StructureDefinition/bp" datatype="string"/>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="tag" optional="1"/>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="5097" kind="2">
 					<targets>
 						<datapoint pos="0" key="290"/>
 					</targets>
-					<view ltx="586" lty="318" rbx="662" rby="335"/>
+					<view ltx="104" lty="-117" rbx="180" rby="-100"/>
 					<data>
 						<constant value="8716-3" datatype="string"/>
 					</data>
+				</component>
+				<component name="substitute-missing" library="core" uid="6915" kind="5">
+					<sources>
+						<datapoint pos="0" key="755"/>
+						<datapoint pos="1" key="753"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="754"/>
+					</targets>
+					<view ltx="270" lty="-154" rbx="392" rby="-100"/>
 				</component>
 			</children>
 		</structure>
@@ -17616,15 +17567,17 @@
 			<edge from="724" to="738"/>
 			<edge from="724" to="739"/>
 			<edge from="557" to="742"/>
-			<edge from="290" to="743"/>
+			<edge from="754" to="743"/>
 			<edge from="557" to="744"/>
-			<edge from="290" to="745"/>
+			<edge from="754" to="745"/>
 			<edge from="557" to="746"/>
-			<edge from="290" to="747"/>
+			<edge from="754" to="747"/>
 			<edge from="557" to="748"/>
-			<edge from="290" to="749"/>
+			<edge from="754" to="749"/>
 			<edge from="557" to="750"/>
-			<edge from="290" to="751"/>
+			<edge from="754" to="751"/>
+			<edge from="290" to="753"/>
+			<edge from="752" to="755"/>
 		</connections>
 	</component>
 	<component name="Reference_Observation" library="provisio" uid="5084">
