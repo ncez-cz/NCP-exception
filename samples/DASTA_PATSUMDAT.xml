@@ -624,7 +624,7 @@
 							<dsip:kodpoj>201</dsip:kodpoj>
 						</dsip:pv_zp>								
 						</dsip:pv_pac> -->
-<!-- 						<dsip:u>
+ 						<dsip:u>
 							<dsip:garant_dat id_garant="7812082113" odbornost="801">MUDr. Pavel Pudr</dsip:garant_dat>
 							<dsip:ua guid ="44308238-381c-409a-84c5-d87f38e7da6b" vguid ="9ccdfbf8-9e52-425d-9cf1-efb1f5a248bd" typ="AF" dat_ab="2024-12-01T12:53:12+01:00" ind_oprav_sd="N">
 								<dsip:uaf guid ="568c7194-05d5-4866-bc9d-ea925b084c0e" vguid ="46b3dbd9-cda4-4881-b437-b98703fcb46d" typ_agens="P" typ_reakce="A" ar_klic="271807003" ar_text="Eruption of skin" szp_klic="255604002" szp_text="Mírný/á">
@@ -680,7 +680,7 @@
 								<dsip:dat_du format="D" typ="I">1995-04-18</dsip:dat_du>
 								<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
 							</dsip:uot>
-						</dsip:u> -->
+						</dsip:u>
   						<dsip:an guid ="f2b67b11-3634-4f69-b37a-7a48d317bb8f" vguid ="5db4ea5c-0db5-4b75-b7eb-9445013f5607" dat_ab="2007-12-05T05:06:56+01:00">
 							<ds:garant_dat guid="5779af5b-5dd3-40d8-9f7a-cbbd202485c0" vguid="c61f54b8-684c-4d08-a1ba-1efa406207a0" id_zp="9988776655" id_garant="450124145" odbornost="001" id_clk="1122334455" role_klic="2211" role_text="Praktičtí lékaři">MUDr. Dasta Garant</ds:garant_dat>
 							<dsip:text><dsip:ptext> RA: bezvýznamná OA: recentně zjištěn vyšší TK u dr. Kramáře /2/02/

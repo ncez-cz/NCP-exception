@@ -98,27 +98,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="fixDate" library="user" uid="5718" kind="19" visible="0" blackbox="0">
-					<view ltx="450" lty="-62" rbx="611" rby="-45"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="date" inpkey="293" componentid="1989"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="hl7DateTimeString" outkey="292" componentid="2000"/>
-						</root>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="3149" kind="2">
 					<targets>
 						<datapoint pos="0" key="241"/>
@@ -155,6 +134,76 @@
 						<datapoint pos="0" key="288"/>
 					</targets>
 					<view ltx="1106" lty="-15" rbx="1181" rby="39"/>
+				</component>
+				<component name="ip_ip" library="provisio" uid="6055" kind="19" visible="0" blackbox="0">
+					<view ltx="394" lty="95" rbx="679" rby="134"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ip" ns="1" componentid="5690" expanded="1">
+								<entry name="ip" inpkey="307"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="5689" expanded="1">
+								<entry name="entry" outkey="308"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="Reference_Patient" library="provisio" uid="5706" kind="19" visible="0" blackbox="0">
+					<view ltx="395" lty="225" rbx="556" rby="258"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="276" componentid="4957"/>
+							<entry name="VGUID" inpkey="277" componentid="4958"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="referencePatient" outkey="278" componentid="4953"/>
+						</root>
+					</data>
+				</component>
+				<component name="fixDate" library="user" uid="5718" kind="19" visible="0" blackbox="0">
+					<view ltx="450" lty="-62" rbx="611" rby="-45"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="date" inpkey="293" componentid="1989"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="hl7DateTimeString" outkey="292" componentid="2000"/>
+						</root>
+					</data>
 				</component>
 				<component name="bundle" library="xml" uid="3151" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
@@ -208,60 +257,11 @@
 						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle" outputinstance="..\schemas\hl7-fhir\bundle.xml"/>
 					</data>
 				</component>
-				<component name="ip_ip" library="provisio" uid="6055" kind="19" visible="0" blackbox="0">
-					<view ltx="394" lty="95" rbx="679" rby="134"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ip" ns="1" componentid="5690" expanded="1">
-								<entry name="ip" inpkey="307"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="5689" expanded="1">
-								<entry name="entry" outkey="308"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="Reference_Patient" library="provisio" uid="5706" kind="19" visible="0" blackbox="0">
-					<view ltx="395" lty="225" rbx="556" rby="258"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="276" componentid="4957"/>
-							<entry name="VGUID" inpkey="277" componentid="4958"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="referencePatient" outkey="278" componentid="4953"/>
-						</root>
-					</data>
-				</component>
 				<component name="ds_dasta-4.03.31" library="xml" uid="3500" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="27" lty="1" rbx="313" rby="602"/>
 					<data>
-						<root scrollposition="1616">
+						<root scrollposition="1200">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -303,7 +303,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\DASTA_ip-ku_z_lab_v4 - All Attribute - All_VRi.xml"/>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\DASTA_ip-ku_z_lab_v5 - All Attribute - All_VRi.xml"/>
 					</data>
 				</component>
 				<component name="ku_z_lab" library="provisio" uid="3146" kind="19" visible="0" blackbox="0">
@@ -520,111 +520,10 @@
 						</root>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="3123" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="1140" lty="-22" rbx="1682" rby="595"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="entry" inpkey="431" expanded="1"/>
-							<entry name="entry" inpkey="350" clone="1">
-								<entry name="resource" expanded="1"/>
-							</entry>
-							<entry name="entry" inpkey="315" clone="1">
-								<entry name="resource" expanded="1"/>
-							</entry>
-							<entry name="entry" inpkey="316" clone="1"/>
-							<entry name="entry" inpkey="368" clone="1"/>
-							<entry name="entry" inpkey="381" clone="1"/>
-							<entry name="entry" inpkey="382" clone="1"/>
-							<entry name="entry" inpkey="393" clone="1"/>
-							<entry name="entry" inpkey="395" clone="1"/>
-							<entry name="entry" inpkey="403" clone="1"/>
-							<entry name="entry" inpkey="410" clone="1"/>
-							<entry name="entry" inpkey="417" clone="1"/>
-							<entry name="entry" inpkey="429" clone="1"/>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="output" name="entry" sequence="1">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="vrk" library="provisio" uid="3341" kind="19" visible="0" blackbox="0">
-					<view ltx="639" lty="137" rbx="968" rby="212"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="referencePracoviste" inpkey="443" componentid="5808"/>
-							<entry name="patientReference" inpkey="446" componentid="6064" expanded="1"/>
-							<entry name="vrkType" componentid="3329" expanded="1">
-								<entry name="vrkType" ns="1" type="xml-type" inpkey="413"/>
-							</entry>
-							<entry name="ku_z_labType" componentid="3323" expanded="1">
-								<entry name="ku_z_labType" ns="1" type="xml-type" inpkey="414"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="3328" expanded="1">
-								<entry name="entry" outkey="415"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="Specimen" library="provisio" uid="3659" kind="19" visible="0" blackbox="0">
-					<view ltx="659" lty="6" rbx="939" rby="84"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="patientReference" inpkey="447" componentid="6063" expanded="1"/>
-							<entry name="vrkType" componentid="3656" expanded="1">
-								<entry name="vrkType" ns="1" type="xml-type" inpkey="436"/>
-							</entry>
-							<entry name="ku_z_labType" componentid="3652" expanded="1">
-								<entry name="ku_z_labType" ns="1" type="xml-type" inpkey="434"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="3654" expanded="1">
-								<entry name="entry" outkey="435"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="vrf" library="provisio" uid="3160" kind="19" visible="0" blackbox="0">
 					<view ltx="639" lty="382" rbx="971" rby="453"/>
 					<data>
-						<root>
+						<root scrollposition="12">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -921,83 +820,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="3122" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="10" lty="171" rbx="312" rby="442"/>
-					<data>
-						<root scrollposition="678">
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="ku_z_labType" type="xml-type" outkey="361" expanded="1">
-								<entry name="dat_du" outkey="161" expanded="1"/>
-								<entry name="vrn" outkey="286">
-									<entry name="nejistota">
-										<entry name="nejist_var1" expanded="1"/>
-										<entry name="nejist_var2" expanded="1"/>
-									</entry>
-								</entry>
-								<entry name="vrf" outkey="317"/>
-								<entry name="vrs" outkey="318"/>
-								<entry name="vrx" outkey="367"/>
-								<entry name="vrk" outkey="409"/>
-								<entry name="vrb" outkey="379"/>
-								<entry name="vrr" outkey="380"/>
-								<entry name="vrd" outkey="402"/>
-								<entry name="vrp" outkey="388"/>
-								<entry name="vro" outkey="416"/>
-								<entry name="vrz" outkey="423"/>
-								<entry name="vrc" outkey="401"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="input" name="ku_z_labType">
-							<root>
-								<entry name="ku_z_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="vro" library="provisio" uid="3355" kind="19" visible="0" blackbox="0">
-					<view ltx="639" lty="1358" rbx="967" rby="1431"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="patientReference" inpkey="457" componentid="6081" expanded="1"/>
-							<entry name="effectiveDateTime" componentid="3348" expanded="1">
-								<entry name="effectiveDateTime" ns="1">
-									<entry name="value" type="attribute" inpkey="419"/>
-								</entry>
-							</entry>
-							<entry name="vroType" componentid="3352" expanded="1">
-								<entry name="vroType" ns="2" type="xml-type" inpkey="420"/>
-							</entry>
-							<entry name="ku_z_labType" componentid="3349" expanded="1">
-								<entry name="ku_z_labType" ns="2" type="xml-type" inpkey="421"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="3353" expanded="1">
-								<entry name="entry" outkey="422"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="vrz" library="provisio" uid="3369" kind="19" visible="0" blackbox="0">
 					<view ltx="638" lty="1463" rbx="966" rby="1537"/>
 					<data>
@@ -1038,7 +860,7 @@
 				<component name="vrn" library="provisio" uid="3174" kind="19" visible="0" blackbox="0">
 					<view ltx="640" lty="274" rbx="971" rby="346"/>
 					<data>
-						<root>
+						<root scrollposition="12">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -1086,6 +908,184 @@
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3123" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="1140" lty="-22" rbx="1682" rby="595"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="entry" inpkey="431"/>
+							<entry name="entry" inpkey="350" clone="1">
+								<entry name="resource" expanded="1"/>
+							</entry>
+							<entry name="entry" inpkey="315" clone="1">
+								<entry name="resource" expanded="1"/>
+							</entry>
+							<entry name="entry" inpkey="316" clone="1"/>
+							<entry name="entry" inpkey="368" clone="1"/>
+							<entry name="entry" inpkey="381" clone="1"/>
+							<entry name="entry" inpkey="382" clone="1"/>
+							<entry name="entry" inpkey="393" clone="1"/>
+							<entry name="entry" inpkey="395" clone="1"/>
+							<entry name="entry" inpkey="403" clone="1"/>
+							<entry name="entry" inpkey="410" clone="1"/>
+							<entry name="entry" inpkey="417" clone="1"/>
+							<entry name="entry" inpkey="429" clone="1"/>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="output" name="entry" sequence="1">
+							<root>
+								<entry name="Bundle" ns="http://hl7.org/fhir"/>
+								<entry name="entry" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="vro" library="provisio" uid="3355" kind="19" visible="0" blackbox="0">
+					<view ltx="639" lty="1358" rbx="967" rby="1431"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="patientReference" inpkey="457" componentid="6081" expanded="1"/>
+							<entry name="effectiveDateTime" componentid="3348" expanded="1">
+								<entry name="effectiveDateTime" ns="1">
+									<entry name="value" type="attribute" inpkey="419"/>
+								</entry>
+							</entry>
+							<entry name="vroType" componentid="3352" expanded="1">
+								<entry name="vroType" ns="2" type="xml-type" inpkey="420"/>
+							</entry>
+							<entry name="ku_z_labType" componentid="3349" expanded="1">
+								<entry name="ku_z_labType" ns="2" type="xml-type" inpkey="421"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="3353" expanded="1">
+								<entry name="entry" outkey="422"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="Specimen" library="provisio" uid="3659" kind="19" visible="0" blackbox="0">
+					<view ltx="659" lty="6" rbx="939" rby="84"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="patientReference" inpkey="447" componentid="6063" expanded="1"/>
+							<entry name="vrkType" componentid="3656" expanded="1">
+								<entry name="vrkType" ns="1" type="xml-type" inpkey="436"/>
+							</entry>
+							<entry name="ku_z_labType" componentid="3652" expanded="1">
+								<entry name="ku_z_labType" ns="1" type="xml-type" inpkey="434"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="3654" expanded="1">
+								<entry name="entry" outkey="435"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3122" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view lty="156" rbx="302" rby="427"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="ku_z_labType" type="xml-type" outkey="361" expanded="1">
+								<entry name="dat_du" outkey="161" expanded="1"/>
+								<entry name="vrn" outkey="286">
+									<entry name="nejistota">
+										<entry name="nejist_var1" expanded="1"/>
+										<entry name="nejist_var2" expanded="1"/>
+									</entry>
+								</entry>
+								<entry name="vrf" outkey="317"/>
+								<entry name="vrs" outkey="318"/>
+								<entry name="vrx" outkey="367"/>
+								<entry name="vrk" outkey="409"/>
+								<entry name="vrb" outkey="379"/>
+								<entry name="vrr" outkey="380"/>
+								<entry name="vrd" outkey="402"/>
+								<entry name="vrp" outkey="388"/>
+								<entry name="vro" outkey="416"/>
+								<entry name="vrz" outkey="423"/>
+								<entry name="vrc" outkey="401"/>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="input" name="ku_z_labType">
+							<root>
+								<entry name="ku_z_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="vrk" library="provisio" uid="3341" kind="19" visible="0" blackbox="0">
+					<view ltx="639" lty="137" rbx="968" rby="212"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="referencePracoviste" inpkey="443" componentid="5808"/>
+							<entry name="patientReference" inpkey="446" componentid="6064" expanded="1"/>
+							<entry name="vrkType" componentid="3329" expanded="1">
+								<entry name="vrkType" ns="1" type="xml-type" inpkey="413"/>
+							</entry>
+							<entry name="ku_z_labType" componentid="3323" expanded="1">
+								<entry name="ku_z_labType" ns="1" type="xml-type" inpkey="414"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="3328" expanded="1">
+								<entry name="entry" outkey="415"/>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -1537,27 +1537,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="FullURL_Observation" library="provisio" uid="3716" kind="19" visible="0" blackbox="0">
-					<view ltx="734" lty="73" rbx="908" rby="90"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="30" componentid="3673"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="FullURL_Observation" outkey="31" componentid="3675"/>
-						</root>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="3229" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-40" lty="620" rbx="98" rby="796"/>
@@ -1577,6 +1556,89 @@
 								<entry name="ku_z_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
 							</root>
 						</parameter>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5736" kind="2">
+					<targets>
+						<datapoint pos="0" key="39"/>
+					</targets>
+					<view ltx="913" lty="308" rbx="1016" rby="325"/>
+					<data>
+						<constant value="Observation/" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5737" kind="2">
+					<targets>
+						<datapoint pos="0" key="38"/>
+					</targets>
+					<view ltx="913" lty="292" rbx="1003" rby="309"/>
+					<data>
+						<constant value="generated" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3200" kind="2">
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="348" lty="1" rbx="407" rby="18"/>
+					<data>
+						<constant value="final" datatype="string"/>
+					</data>
+				</component>
+				<component name="referencePracoviste" library="core" uid="5802" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="42"/>
+					</targets>
+					<view ltx="338" lty="52" rbx="483" rby="89"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="referencePracoviste" sequence="1"/>
+					</data>
+				</component>
+				<component name="patientReference" library="core" uid="6071" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="45"/>
+					</targets>
+					<view ltx="-9" lty="52" rbx="122" rby="89"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6091" kind="2">
+					<targets>
+						<datapoint pos="0" key="48"/>
+					</targets>
+					<view ltx="491" lty="136" rbx="624" rby="153"/>
+					<data>
+						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
+					</data>
+				</component>
+				<component name="FullURL_Observation" library="provisio" uid="3716" kind="19" visible="0" blackbox="0">
+					<view ltx="734" lty="73" rbx="909" rby="89"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="30" componentid="3673"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="FullURL_Observation" outkey="31" componentid="3675"/>
+						</root>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="3157" kind="14">
@@ -1608,64 +1670,11 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="5736" kind="2">
-					<targets>
-						<datapoint pos="0" key="39"/>
-					</targets>
-					<view ltx="913" lty="308" rbx="1014" rby="324"/>
-					<data>
-						<constant value="Observation/" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5737" kind="2">
-					<targets>
-						<datapoint pos="0" key="38"/>
-					</targets>
-					<view ltx="913" lty="292" rbx="1000" rby="308"/>
-					<data>
-						<constant value="generated" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3200" kind="2">
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="348" lty="1" rbx="408" rby="17"/>
-					<data>
-						<constant value="final" datatype="string"/>
-					</data>
-				</component>
-				<component name="referencePracoviste" library="core" uid="5802" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="42"/>
-					</targets>
-					<view ltx="338" lty="52" rbx="479" rby="89"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="referencePracoviste" sequence="1"/>
-					</data>
-				</component>
-				<component name="patientReference" library="core" uid="6071" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="45"/>
-					</targets>
-					<view ltx="-9" lty="52" rbx="119" rby="89"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="3158" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1234" lty="2" rbx="1744" rby="781"/>
 					<data>
-						<root scrollposition="1604">
+						<root scrollposition="3270">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -1711,10 +1720,16 @@
 												<entry name="value" type="attribute" inpkey="44"/>
 											</entry>
 										</entry>
-										<entry name="valueCodeableConcept" ns="1" inpkey="15">
+										<entry name="valueCodeableConcept" ns="1" inpkey="15" expanded="1">
 											<entry name="coding" ns="1" expanded="1">
+												<entry name="system" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="49"/>
+												</entry>
 												<entry name="code" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="16"/>
+												</entry>
+												<entry name="display" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="51"/>
 												</entry>
 											</entry>
 											<entry name="coding" ns="1" inpkey="17" expanded="1" clone="1">
@@ -1730,11 +1745,9 @@
 											<entry name="coding" ns="1" clone="1"/>
 											<entry name="coding" ns="1" clone="1"/>
 											<entry name="coding" ns="1" clone="1"/>
-											<entry name="text" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="19"/>
-											</entry>
+											<entry name="text" ns="1" expanded="1"/>
 										</entry>
-										<entry name="note" ns="1" inpkey="20">
+										<entry name="note" ns="1" inpkey="20" expanded="1">
 											<entry name="text" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="21"/>
 											</entry>
@@ -1755,13 +1768,13 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6091" kind="2">
+				<component name="constant" library="core" uid="6666" kind="2">
 					<targets>
-						<datapoint pos="0" key="48"/>
+						<datapoint pos="0" key="50"/>
 					</targets>
-					<view ltx="491" lty="136" rbx="621" rby="152"/>
+					<view ltx="454" lty="377" rbx="596" rby="394"/>
 					<data>
-						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
+						<constant value="https://dasta.mzcr.cz/DSAJT.htm" datatype="string"/>
 					</data>
 				</component>
 			</children>
@@ -1825,11 +1838,6 @@
 							<edge vertexkey="18"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="24">
-						<edges>
-							<edge vertexkey="19"/>
-						</edges>
-					</vertex>
 					<vertex vertexkey="25">
 						<edges>
 							<edge vertexkey="20"/>
@@ -1878,6 +1886,16 @@
 							<edge vertexkey="47"/>
 						</edges>
 					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="49"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="51"/>
+						</edges>
+					</vertex>
 				</vertices>
 			</graph>
 		</structure>
@@ -1885,15 +1903,6 @@
 	<component name="vrs" library="provisio" uid="3161" editable="1" blackbox="0">
 		<structure>
 			<children>
-				<component name="constant" library="core" uid="3231" kind="2">
-					<targets>
-						<datapoint pos="0" key="14"/>
-					</targets>
-					<view ltx="383" lty="44" rbx="519" rby="60"/>
-					<data>
-						<constant value="https://dasta.mzcr.cz/DSAJT.htm" datatype="string"/>
-					</data>
-				</component>
 				<component name="ku_z_lab_code" library="provisio" uid="3226" kind="19" visible="0" blackbox="0">
 					<view ltx="359" lty="546" rbx="659" rby="746"/>
 					<data>
@@ -1988,39 +1997,6 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="3163" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-15" lty="302" rbx="292" rby="450"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="vrsType" ns="1" type="xml-type" expanded="1">
-								<entry name="guid" type="attribute" outkey="38"/>
-								<entry name="nazvy" ns="1" outkey="13"/>
-								<entry name="vrs_h" ns="1" expanded="1">
-									<entry name="hodnota1_klic" type="attribute" outkey="28"/>
-									<entry name="hodnota1_text" type="attribute" outkey="29"/>
-									<entry name="priznak2_kvant" type="attribute" outkey="30"/>
-									<entry name="hodnota2_cislo" type="attribute" outkey="31"/>
-									<entry name="hodnota2_klic" type="attribute" outkey="32"/>
-									<entry name="hodnota2_text" type="attribute" outkey="33"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="input" name="vrsType">
-							<root>
-								<entry name="vrsType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="5747" kind="2">
 					<targets>
 						<datapoint pos="0" key="46"/>
@@ -2037,25 +2013,6 @@
 					<view ltx="1057" lty="207" rbx="1158" rby="223"/>
 					<data>
 						<constant value="Observation/" datatype="string"/>
-					</data>
-				</component>
-				<component name="value-map" library="core" uid="3232" kind="23">
-					<sources>
-						<datapoint pos="0" key="16"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="15"/>
-					</targets>
-					<view ltx="359" lty="484" rbx="434" rby="521"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="M" to="&lt;"/>
-								<entry from="V" to="&gt;"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="3204" kind="2">
@@ -2093,11 +2050,81 @@
 						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="6098" kind="2">
+					<targets>
+						<datapoint pos="0" key="57"/>
+					</targets>
+					<view ltx="660" lty="336" rbx="790" rby="352"/>
+					<data>
+						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3231" kind="2">
+					<targets>
+						<datapoint pos="0" key="14"/>
+					</targets>
+					<view ltx="383" lty="44" rbx="519" rby="60"/>
+					<data>
+						<constant value="https://dasta.mzcr.cz/DSAJT.htm" datatype="string"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="3232" kind="23">
+					<sources>
+						<datapoint pos="0" key="16"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="15"/>
+					</targets>
+					<view ltx="519" lty="402" rbx="594" rby="439"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="M" to="&lt;"/>
+								<entry from="V" to="&gt;"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3163" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-15" lty="302" rbx="292" rby="450"/>
+					<data>
+						<root scrollposition="100">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="vrsType" ns="1" type="xml-type" expanded="1">
+								<entry name="guid" type="attribute" outkey="38"/>
+								<entry name="nazvy" ns="1" outkey="13"/>
+								<entry name="vrs_h" ns="1" expanded="1">
+									<entry name="hodnota1_klic" type="attribute" outkey="28"/>
+									<entry name="hodnota1_text" type="attribute" outkey="29"/>
+									<entry name="priznak2_kvant" type="attribute" outkey="30"/>
+									<entry name="hodnota2_cislo" type="attribute" outkey="31"/>
+									<entry name="hodnota2_klic" type="attribute" outkey="32"/>
+									<entry name="hodnota2_text" type="attribute" outkey="33"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="input" name="vrsType">
+							<root>
+								<entry name="vrsType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="3164" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1215" lty="6" rbx="1649" rby="803"/>
 					<data>
-						<root scrollposition="1566">
+						<root scrollposition="5115">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -2167,7 +2194,7 @@
 												</entry>
 											</entry>
 										</entry>
-										<entry name="component" ns="1" clone="1">
+										<entry name="component" ns="1" expanded="1" clone="1">
 											<entry name="code" ns="1" expanded="1">
 												<entry name="coding" ns="1" expanded="1">
 													<entry name="system" ns="1" expanded="1">
@@ -2198,15 +2225,6 @@
 								<entry name="entry" ns="http://hl7.org/fhir"/>
 							</root>
 						</parameter>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6098" kind="2">
-					<targets>
-						<datapoint pos="0" key="57"/>
-					</targets>
-					<view ltx="660" lty="336" rbx="790" rby="352"/>
-					<data>
-						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
 					</data>
 				</component>
 			</children>
@@ -2352,7 +2370,7 @@
 					<targets>
 						<datapoint pos="0" key="117"/>
 					</targets>
-					<view ltx="374" lty="-110" rbx="434" rby="-94"/>
+					<view ltx="374" lty="-110" rbx="433" rby="-93"/>
 					<data>
 						<constant value="final" datatype="string"/>
 					</data>
@@ -2361,13 +2379,13 @@
 					<targets>
 						<datapoint pos="0" key="10"/>
 					</targets>
-					<view ltx="373" lty="-57" rbx="509" rby="-41"/>
+					<view ltx="373" lty="-57" rbx="515" rby="-40"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/MZAYE.htm" datatype="string"/>
 					</data>
 				</component>
 				<component name="FullURL_Observation" library="provisio" uid="3714" kind="19" visible="0" blackbox="0">
-					<view ltx="789" lty="-15" rbx="963" rby="2"/>
+					<view ltx="789" lty="-15" rbx="964" rby="1"/>
 					<data>
 						<root>
 							<header>
@@ -2391,7 +2409,7 @@
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-11" lty="479" rbx="292" rby="633"/>
 					<data>
-						<root>
+						<root scrollposition="49">
 							<header>
 								<namespaces>
 									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -2412,53 +2430,25 @@
 					<targets>
 						<datapoint pos="0" key="142"/>
 					</targets>
-					<view ltx="973" lty="-122" rbx="1074" rby="-106"/>
+					<view ltx="973" lty="-122" rbx="1076" rby="-105"/>
 					<data>
 						<constant value="Observation/" datatype="string"/>
-					</data>
-				</component>
-				<component name="value-map" library="core" uid="3189" kind="23">
-					<sources>
-						<datapoint pos="0" key="16"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="15"/>
-					</targets>
-					<view ltx="373" lty="97" rbx="448" rby="134"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="M" to="&lt;"/>
-								<entry from="V" to="&gt;"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="3178" kind="2">
 					<targets>
 						<datapoint pos="0" key="9"/>
 					</targets>
-					<view ltx="392" lty="6" rbx="484" rby="22"/>
+					<view ltx="392" lty="6" rbx="486" rby="23"/>
 					<data>
 						<constant value="therapeutic" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3181" kind="2">
-					<targets>
-						<datapoint pos="0" key="4"/>
-					</targets>
-					<view ltx="392" lty="38" rbx="478" rby="54"/>
-					<data>
-						<constant value="treatment" datatype="string"/>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="3179" kind="2">
 					<targets>
 						<datapoint pos="0" key="2"/>
 					</targets>
-					<view ltx="392" lty="22" rbx="500" rby="38"/>
+					<view ltx="392" lty="22" rbx="502" rby="39"/>
 					<data>
 						<constant value="recommended" datatype="string"/>
 					</data>
@@ -2467,25 +2457,16 @@
 					<targets>
 						<datapoint pos="0" key="5"/>
 					</targets>
-					<view ltx="392" lty="-10" rbx="466" rby="6"/>
+					<view ltx="392" lty="-10" rbx="466" rby="7"/>
 					<data>
 						<constant value="normal" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3180" kind="2">
-					<targets>
-						<datapoint pos="0" key="1"/>
-					</targets>
-					<view ltx="374" lty="-26" rbx="514" rby="-10"/>
-					<data>
-						<constant value="http://terminology.hl7.org/CodeSystem/referencerange-meaning" datatype="string"/>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="5730" kind="2">
 					<targets>
 						<datapoint pos="0" key="143"/>
 					</targets>
-					<view ltx="973" lty="-138" rbx="1060" rby="-122"/>
+					<view ltx="973" lty="-138" rbx="1063" rby="-121"/>
 					<data>
 						<constant value="generated" datatype="string"/>
 					</data>
@@ -2520,11 +2501,123 @@
 						</root>
 					</data>
 				</component>
+				<component name="referencePracoviste" library="core" uid="5801" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="148"/>
+					</targets>
+					<view ltx="422" lty="-158" rbx="567" rby="-121"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="referencePracoviste" sequence="1"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3197" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-12" lty="96" rbx="288" rby="177"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="effectiveDateTime" outkey="123" expanded="1"/>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="input" name="effectiveDateTime">
+							<root>
+								<entry name="Observation" ns="http://hl7.org/fhir"/>
+								<entry name="effectiveDateTime" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6059" kind="2">
+					<targets>
+						<datapoint pos="0" key="149"/>
+					</targets>
+					<view ltx="746" lty="-105" rbx="860" rby="-88"/>
+					<data>
+						<constant value="http://loing.org" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6060" kind="2">
+					<targets>
+						<datapoint pos="0" key="150"/>
+					</targets>
+					<view ltx="746" lty="-121" rbx="825" rby="-104"/>
+					<data>
+						<constant value="30954-2" datatype="string"/>
+					</data>
+				</component>
+				<component name="patientReference" library="core" uid="6070" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="154"/>
+					</targets>
+					<view ltx="22" lty="-77" rbx="153" rby="-40"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6096" kind="2">
+					<targets>
+						<datapoint pos="0" key="156"/>
+					</targets>
+					<view ltx="914" lty="138" rbx="1047" rby="155"/>
+					<data>
+						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="3189" kind="23">
+					<sources>
+						<datapoint pos="0" key="16"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="15"/>
+					</targets>
+					<view ltx="373" lty="97" rbx="449" rby="134"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="M" to="&lt;"/>
+								<entry from="V" to="&gt;"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3181" kind="2">
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="392" lty="38" rbx="478" rby="55"/>
+					<data>
+						<constant value="treatment" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3180" kind="2">
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="374" lty="-26" rbx="518" rby="-9"/>
+					<data>
+						<constant value="http://terminology.hl7.org/CodeSystem/referencerange-meaning" datatype="string"/>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="3171" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-11" lty="216" rbx="293" rby="445"/>
 					<data>
-						<root>
+						<root scrollposition="550">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -2535,8 +2628,7 @@
 							<entry name="vrnType" ns="1" type="xml-type" outkey="92" expanded="1">
 								<entry name="guid" type="attribute" outkey="134"/>
 								<entry name="priznak_kvant" type="attribute" outkey="93"/>
-								<entry name="nazvy" ns="1" outkey="128" expanded="1"/>
-								<entry name="prepocet" ns="1" expanded="1"/>
+								<entry name="nazvy" ns="1" outkey="128"/>
 								<entry name="hodnota" ns="1" outkey="94"/>
 								<entry name="jednotka" ns="1" outkey="95"/>
 								<entry name="nejistota" ns="1" expanded="1">
@@ -2578,86 +2670,11 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="referencePracoviste" library="core" uid="5801" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="148"/>
-					</targets>
-					<view ltx="422" lty="-158" rbx="563" rby="-121"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="referencePracoviste" sequence="1"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3197" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-12" lty="96" rbx="288" rby="177"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="effectiveDateTime" outkey="123" expanded="1"/>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="effectiveDateTime">
-							<root>
-								<entry name="Observation" ns="http://hl7.org/fhir"/>
-								<entry name="effectiveDateTime" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6059" kind="2">
-					<targets>
-						<datapoint pos="0" key="149"/>
-					</targets>
-					<view ltx="746" lty="-105" rbx="856" rby="-89"/>
-					<data>
-						<constant value="http://loing.org" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6060" kind="2">
-					<targets>
-						<datapoint pos="0" key="150"/>
-					</targets>
-					<view ltx="746" lty="-121" rbx="826" rby="-105"/>
-					<data>
-						<constant value="30954-2" datatype="string"/>
-					</data>
-				</component>
-				<component name="patientReference" library="core" uid="6070" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="154"/>
-					</targets>
-					<view ltx="22" lty="-77" rbx="150" rby="-40"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6096" kind="2">
-					<targets>
-						<datapoint pos="0" key="156"/>
-					</targets>
-					<view ltx="914" lty="138" rbx="1044" rby="154"/>
-					<data>
-						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="3172" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1273" lty="-150" rbx="1709" rby="632"/>
 					<data>
-						<root scrollposition="1458">
+						<root scrollposition="3061">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -2708,13 +2725,13 @@
 											</entry>
 										</entry>
 										<entry name="effectiveDateTime" ns="1" inpkey="122"/>
-										<entry name="performer" ns="1" expanded="1">
+										<entry name="performer" ns="1">
 											<entry name="reference" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="147"/>
 											</entry>
 										</entry>
 										<entry name="valueQuantity" ns="1" inpkey="20">
-											<entry name="value" ns="1">
+											<entry name="value" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="21"/>
 											</entry>
 											<entry name="comparator" ns="1" inpkey="141" expanded="1">
@@ -2808,17 +2825,18 @@
 											</entry>
 										</entry>
 										<entry name="referenceRange" ns="1" inpkey="54" clone="1">
-											<entry name="low" ns="1" inpkey="55">
+											<entry name="low" ns="1" inpkey="55" expanded="1">
 												<entry name="value" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="56"/>
 												</entry>
+												<entry name="comparator" ns="1" expanded="1"/>
 											</entry>
 											<entry name="high" ns="1" inpkey="57">
 												<entry name="value" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="58"/>
 												</entry>
 											</entry>
-											<entry name="type" ns="1" expanded="1">
+											<entry name="type" ns="1">
 												<entry name="coding" ns="1" expanded="1">
 													<entry name="system" ns="1" expanded="1">
 														<entry name="value" type="attribute" inpkey="59"/>
@@ -3258,33 +3276,6 @@
 	<component name="ku_z_lab_code" library="provisio" uid="3207" editable="1" blackbox="0">
 		<structure>
 			<children>
-				<component name="constant" library="core" uid="3219" kind="2">
-					<targets>
-						<datapoint pos="0" key="10"/>
-					</targets>
-					<view ltx="404" lty="514" rbx="540" rby="530"/>
-					<data>
-						<constant value="https://dasta.mzcr.cz/DSAIV.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3220" kind="2">
-					<targets>
-						<datapoint pos="0" key="21"/>
-					</targets>
-					<view ltx="404" lty="530" rbx="540" rby="546"/>
-					<data>
-						<constant value="https://dasta.mzcr.cz/DSAIW.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3218" kind="2">
-					<targets>
-						<datapoint pos="0" key="26"/>
-					</targets>
-					<view ltx="404" lty="498" rbx="540" rby="514"/>
-					<data>
-						<constant value="https://dasta.mzcr.cz/DSAJN.htm" datatype="string"/>
-					</data>
-				</component>
 				<component name="value-map" library="core" uid="3373" kind="23">
 					<sources>
 						<datapoint pos="0" key="103"/>
@@ -3292,7 +3283,7 @@
 					<targets>
 						<datapoint pos="0" key="104"/>
 					</targets>
-					<view ltx="405" lty="325" rbx="480" rby="362"/>
+					<view ltx="405" lty="325" rbx="481" rby="362"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -3308,7 +3299,7 @@
 					<targets>
 						<datapoint pos="0" key="105"/>
 					</targets>
-					<view ltx="405" lty="564" rbx="541" rby="580"/>
+					<view ltx="405" lty="564" rbx="547" rby="581"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAIY.htm" datatype="string"/>
 					</data>
@@ -3317,7 +3308,7 @@
 					<targets>
 						<datapoint pos="0" key="106"/>
 					</targets>
-					<view ltx="405" lty="580" rbx="541" rby="596"/>
+					<view ltx="405" lty="580" rbx="547" rby="597"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAIZ.htm" datatype="string"/>
 					</data>
@@ -3329,7 +3320,7 @@
 					<targets>
 						<datapoint pos="0" key="108"/>
 					</targets>
-					<view ltx="405" lty="288" rbx="480" rby="325"/>
+					<view ltx="405" lty="288" rbx="481" rby="325"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -3351,7 +3342,7 @@
 					<targets>
 						<datapoint pos="0" key="110"/>
 					</targets>
-					<view ltx="405" lty="252" rbx="480" rby="289"/>
+					<view ltx="405" lty="252" rbx="481" rby="289"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -3370,7 +3361,7 @@
 					<targets>
 						<datapoint pos="0" key="111"/>
 					</targets>
-					<view ltx="405" lty="596" rbx="541" rby="612"/>
+					<view ltx="405" lty="596" rbx="547" rby="613"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAIT.htm" datatype="string"/>
 					</data>
@@ -3382,7 +3373,7 @@
 					<targets>
 						<datapoint pos="0" key="113"/>
 					</targets>
-					<view ltx="405" lty="216" rbx="480" rby="253"/>
+					<view ltx="405" lty="216" rbx="481" rby="253"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -3403,7 +3394,7 @@
 					<targets>
 						<datapoint pos="0" key="115"/>
 					</targets>
-					<view ltx="404" lty="180" rbx="479" rby="217"/>
+					<view ltx="404" lty="180" rbx="480" rby="217"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -3420,7 +3411,7 @@
 					<targets>
 						<datapoint pos="0" key="40"/>
 					</targets>
-					<view ltx="404" lty="548" rbx="540" rby="564"/>
+					<view ltx="404" lty="548" rbx="546" rby="565"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAJW.htm" datatype="string"/>
 					</data>
@@ -3429,7 +3420,7 @@
 					<targets>
 						<datapoint pos="0" key="116"/>
 					</targets>
-					<view ltx="405" lty="612" rbx="541" rby="628"/>
+					<view ltx="405" lty="612" rbx="547" rby="629"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAJT.htm" datatype="string"/>
 					</data>
@@ -3441,7 +3432,7 @@
 					<targets>
 						<datapoint pos="0" key="184"/>
 					</targets>
-					<view ltx="404" lty="144" rbx="479" rby="181"/>
+					<view ltx="404" lty="144" rbx="480" rby="181"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -3457,7 +3448,7 @@
 					<targets>
 						<datapoint pos="0" key="117"/>
 					</targets>
-					<view ltx="405" lty="658" rbx="543" rby="674"/>
+					<view ltx="405" lty="658" rbx="548" rby="675"/>
 					<data>
 						<constant value="https://covid-19-diagnostics.jrc.ec.europa.eu/devices?target_type=6" datatype="string"/>
 					</data>
@@ -3466,7 +3457,7 @@
 					<targets>
 						<datapoint pos="0" key="185"/>
 					</targets>
-					<view ltx="405" lty="628" rbx="541" rby="644"/>
+					<view ltx="405" lty="628" rbx="547" rby="645"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAJU.htm" datatype="string"/>
 					</data>
@@ -3475,7 +3466,7 @@
 					<targets>
 						<datapoint pos="0" key="101"/>
 					</targets>
-					<view ltx="405" lty="421" rbx="541" rby="437"/>
+					<view ltx="405" lty="421" rbx="547" rby="438"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAKQ.htm" datatype="string"/>
 					</data>
@@ -3484,7 +3475,7 @@
 					<targets>
 						<datapoint pos="0" key="100"/>
 					</targets>
-					<view ltx="405" lty="437" rbx="541" rby="453"/>
+					<view ltx="405" lty="437" rbx="547" rby="454"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSALE.htm" datatype="string"/>
 					</data>
@@ -3493,7 +3484,7 @@
 					<targets>
 						<datapoint pos="0" key="7"/>
 					</targets>
-					<view ltx="404" lty="465" rbx="540" rby="481"/>
+					<view ltx="404" lty="465" rbx="546" rby="482"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAKB.htm" datatype="string"/>
 					</data>
@@ -3502,36 +3493,9 @@
 					<targets>
 						<datapoint pos="0" key="5"/>
 					</targets>
-					<view ltx="404" lty="481" rbx="540" rby="497"/>
+					<view ltx="404" lty="481" rbx="546" rby="498"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAJQ.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3210" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="145" lty="572" rbx="295" rby="772"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="nazvyType" ns="1" type="xml-type" expanded="1">
-								<entry name="typ_cispol" type="attribute" outkey="41"/>
-								<entry name="system" type="attribute" outkey="42"/>
-								<entry name="komponenta" type="attribute" outkey="43"/>
-								<entry name="procedura" type="attribute" outkey="44"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="input" name="nazvyType" optional="1">
-							<root>
-								<entry name="nazvyType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
 					</data>
 				</component>
 				<component name="value-map" library="core" uid="3225" kind="23">
@@ -3541,7 +3505,7 @@
 					<targets>
 						<datapoint pos="0" key="39"/>
 					</targets>
-					<view ltx="476" lty="38" rbx="551" rby="75"/>
+					<view ltx="476" lty="38" rbx="552" rby="75"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -3553,11 +3517,85 @@
 						</valuemap>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="5822" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="740" lty="12" rbx="852" rby="29"/>
+					<data>
+						<constant value="http://loinc.org" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3372" kind="2">
+					<targets>
+						<datapoint pos="0" key="102"/>
+					</targets>
+					<view ltx="405" lty="405" rbx="547" rby="422"/>
+					<data>
+						<constant value="https://dasta.mzcr.cz/DSAKT.htm" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3215" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="455" lty="-4" rbx="588" rby="13"/>
+					<data>
+						<constant value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5823" kind="2">
+					<targets>
+						<datapoint pos="0" key="194"/>
+					</targets>
+					<view ltx="449" lty="11" rbx="591" rby="28"/>
+					<data>
+						<constant value="https://dasta.mzcr.cz/cz-nclp-labpol-vs" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3218" kind="2">
+					<targets>
+						<datapoint pos="0" key="26"/>
+					</targets>
+					<view ltx="404" lty="498" rbx="546" rby="515"/>
+					<data>
+						<constant value="https://dasta.mzcr.cz/DSAJN.htm" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3219" kind="2">
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="404" lty="514" rbx="546" rby="531"/>
+					<data>
+						<constant value="https://dasta.mzcr.cz/DSAIV.htm" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3220" kind="2">
+					<targets>
+						<datapoint pos="0" key="21"/>
+					</targets>
+					<view ltx="404" lty="530" rbx="546" rby="547"/>
+					<data>
+						<constant value="https://dasta.mzcr.cz/DSAIW.htm" datatype="string"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="3223" kind="4">
+					<sources>
+						<datapoint pos="0" key="34"/>
+						<datapoint pos="1" key="35"/>
+						<datapoint pos="2" key="36"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="37"/>
+					</targets>
+					<view ltx="615" lty="38" rbx="710" rby="111"/>
+				</component>
 				<component name="document" library="xml" uid="3209" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="148" lty="26" rbx="298" rby="526"/>
 					<data>
-						<root scrollposition="200">
+						<root>
 							<header>
 								<namespaces>
 									<namespace/>
@@ -3606,49 +3644,38 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="if-else" library="core" uid="3223" kind="4">
-					<sources>
-						<datapoint pos="0" key="34"/>
-						<datapoint pos="1" key="35"/>
-						<datapoint pos="2" key="36"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="37"/>
-					</targets>
-					<view ltx="615" lty="38" rbx="709" rby="109"/>
-				</component>
-				<component name="constant" library="core" uid="5822" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="740" lty="12" rbx="849" rby="28"/>
+				<component name="document" library="xml" uid="3210" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="145" lty="572" rbx="295" rby="772"/>
 					<data>
-						<constant value="http://loinc.org" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3372" kind="2">
-					<targets>
-						<datapoint pos="0" key="102"/>
-					</targets>
-					<view ltx="405" lty="405" rbx="541" rby="421"/>
-					<data>
-						<constant value="https://dasta.mzcr.cz/DSAKT.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3215" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="455" lty="-4" rbx="585" rby="12"/>
-					<data>
-						<constant value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs" datatype="string"/>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="nazvyType" ns="1" type="xml-type" expanded="1">
+								<entry name="typ_cispol" type="attribute" outkey="41"/>
+								<entry name="system" type="attribute" outkey="42"/>
+								<entry name="komponenta" type="attribute" outkey="43"/>
+								<entry name="procedura" type="attribute" outkey="44"/>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="input" name="nazvyType" optional="1">
+							<root>
+								<entry name="nazvyType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="3211" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1207" lty="27" rbx="1685" rby="772"/>
 					<data>
-						<root scrollposition="438">
+						<root scrollposition="988">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -3677,7 +3704,7 @@
 										<entry name="value" type="attribute" inpkey="120"/>
 									</entry>
 								</entry>
-								<entry name="coding" ns="1" clone="1">
+								<entry name="coding" ns="1" expanded="1" clone="1">
 									<entry name="system" ns="1" expanded="1">
 										<entry name="value" type="attribute" inpkey="49"/>
 									</entry>
@@ -3691,7 +3718,7 @@
 										<entry name="value" type="attribute" inpkey="54"/>
 									</entry>
 								</entry>
-								<entry name="coding" ns="1" clone="1">
+								<entry name="coding" ns="1" expanded="1" clone="1">
 									<entry name="system" ns="1" expanded="1">
 										<entry name="value" type="attribute" inpkey="55"/>
 									</entry>
@@ -3716,7 +3743,7 @@
 										<entry name="value" type="attribute" inpkey="125"/>
 									</entry>
 								</entry>
-								<entry name="coding" ns="1" clone="1">
+								<entry name="coding" ns="1" expanded="1" clone="1">
 									<entry name="system" ns="1" expanded="1"/>
 									<entry name="code" ns="1" expanded="1">
 										<entry name="value" type="attribute" inpkey="61"/>
@@ -3769,7 +3796,7 @@
 										<entry name="value" type="attribute" inpkey="75"/>
 									</entry>
 								</entry>
-								<entry name="coding" ns="1" inpkey="76" clone="1">
+								<entry name="coding" ns="1" inpkey="76" expanded="1" clone="1">
 									<entry name="system" ns="1" expanded="1">
 										<entry name="value" type="attribute" inpkey="77"/>
 									</entry>
@@ -3783,12 +3810,12 @@
 										<entry name="value" type="attribute" inpkey="82"/>
 									</entry>
 								</entry>
-								<entry name="coding" ns="1" inpkey="93" expanded="1" clone="1">
+								<entry name="coding" ns="1" inpkey="93" clone="1">
 									<entry name="display" ns="1" expanded="1">
 										<entry name="value" type="attribute" inpkey="94"/>
 									</entry>
 								</entry>
-								<entry name="coding" ns="1" inpkey="131" expanded="1" clone="1">
+								<entry name="coding" ns="1" inpkey="131" clone="1">
 									<entry name="system" ns="1" expanded="1">
 										<entry name="value" type="attribute" inpkey="132"/>
 									</entry>
@@ -3909,15 +3936,6 @@
 								<entry name="code" ns="http://hl7.org/fhir"/>
 							</root>
 						</parameter>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5823" kind="2">
-					<targets>
-						<datapoint pos="0" key="194"/>
-					</targets>
-					<view ltx="449" lty="11" rbx="585" rby="27"/>
-					<data>
-						<constant value="https://dasta.mzcr.cz/cz-nclp-labpol-vs" datatype="string"/>
 					</data>
 				</component>
 			</children>
@@ -4634,118 +4652,6 @@
 	<component name="vrb" library="provisio" uid="3248" editable="1" blackbox="0">
 		<structure>
 			<children>
-				<component name="ku_z_lab_code" library="provisio" uid="3253" kind="19" visible="0" blackbox="0">
-					<view ltx="452" lty="371" rbx="752" rby="571"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ku_z_labType" ns="1" componentid="3209" expanded="1">
-								<entry name="ku_z_labType" type="xml-type" inpkey="7"/>
-							</entry>
-							<entry name="nazvyType" ns="1" componentid="3210" expanded="1">
-								<entry name="nazvyType" type="xml-type" inpkey="4"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="code" ns="1" componentid="3211" expanded="1">
-								<entry name="code" outkey="8"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3254" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view lty="178" rbx="300" rby="259"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="effectiveDateTime" outkey="5" expanded="1"/>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="effectiveDateTime">
-							<root>
-								<entry name="Observation" ns="http://hl7.org/fhir"/>
-								<entry name="effectiveDateTime" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="value-map" library="core" uid="3261" kind="23">
-					<sources>
-						<datapoint pos="0" key="10"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="12"/>
-					</targets>
-					<view ltx="535" lty="303" rbx="610" rby="340"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="N" to="Neuveden"/>
-								<entry from="A" to="Automaticky"/>
-								<entry from="R" to="Ručně"/>
-								<entry from="O" to="Automaticky a Ručně"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
-				</component>
-				<component name="value-map" library="core" uid="3260" kind="23">
-					<sources>
-						<datapoint pos="0" key="11"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="15"/>
-					</targets>
-					<view ltx="534" lty="255" rbx="609" rby="292"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="L" to="v rámci LIS laboratoře"/>
-								<entry from="A" to="mimo LIS laboratoře a mimo IS příjemce"/>
-								<entry from="P" to="v rámci IS příjemce"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
-				</component>
-				<component name="value-map" library="core" uid="3262" kind="23">
-					<sources>
-						<datapoint pos="0" key="13"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="14"/>
-					</targets>
-					<view ltx="534" lty="208" rbx="609" rby="245"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="N" to="Autorizováno"/>
-								<entry from="A" to="Neautorizováno"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="3252" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1" lty="477" rbx="304" rby="631"/>
@@ -4765,55 +4671,6 @@
 								<entry name="ku_z_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
 							</root>
 						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3250" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="1" lty="303" rbx="153" rby="441"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="vrbType" ns="1" type="xml-type" expanded="1">
-								<entry name="guid" type="attribute" outkey="37"/>
-								<entry name="typ_vzniku" type="attribute" outkey="27"/>
-								<entry name="misto_vzniku" type="attribute" outkey="28"/>
-								<entry name="autorizace" type="attribute" outkey="29"/>
-								<entry name="nazvy" ns="1" outkey="30"/>
-								<entry name="text" ns="1">
-									<entry name="ptext" ns="1" outkey="31"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="input" name="vrbType">
-							<root>
-								<entry name="vrbType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5729" kind="2">
-					<targets>
-						<datapoint pos="0" key="47"/>
-					</targets>
-					<view ltx="684" lty="162" rbx="771" rby="178"/>
-					<data>
-						<constant value="generated" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3257" kind="2">
-					<targets>
-						<datapoint pos="0" key="9"/>
-					</targets>
-					<view ltx="384" lty="1" rbx="444" rby="17"/>
-					<data>
-						<constant value="final" datatype="string"/>
 					</data>
 				</component>
 				<component name="FullURL_Observation" library="provisio" uid="3722" kind="19" visible="0" blackbox="0">
@@ -4859,11 +4716,145 @@
 						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="6089" kind="2">
+					<targets>
+						<datapoint pos="0" key="54"/>
+					</targets>
+					<view ltx="531" lty="1" rbx="661" rby="17"/>
+					<data>
+						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="3261" kind="23">
+					<sources>
+						<datapoint pos="0" key="10"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="535" lty="303" rbx="610" rby="340"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="N" to="Neuveden"/>
+								<entry from="A" to="Automaticky"/>
+								<entry from="R" to="Ručně"/>
+								<entry from="O" to="Automaticky a Ručně"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="3260" kind="23">
+					<sources>
+						<datapoint pos="0" key="11"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="15"/>
+					</targets>
+					<view ltx="534" lty="255" rbx="609" rby="292"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="L" to="v rámci LIS laboratoře"/>
+								<entry from="A" to="mimo LIS laboratoře a mimo IS příjemce"/>
+								<entry from="P" to="v rámci IS příjemce"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="6664" kind="23">
+					<sources>
+						<datapoint pos="0" key="55"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="56"/>
+					</targets>
+					<view ltx="530" lty="190" rbx="605" rby="227"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="N" to="partial"/>
+								<entry from="A" to="final"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+						<comment>
+							<text>Autorizace</text>
+						</comment>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5729" kind="2">
+					<targets>
+						<datapoint pos="0" key="47"/>
+					</targets>
+					<view ltx="684" lty="162" rbx="771" rby="178"/>
+					<data>
+						<constant value="generated" datatype="string"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3254" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view lty="144" rbx="300" rby="225"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="effectiveDateTime" outkey="5" expanded="1"/>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="input" name="effectiveDateTime">
+							<root>
+								<entry name="Observation" ns="http://hl7.org/fhir"/>
+								<entry name="effectiveDateTime" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3250" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="1" lty="303" rbx="153" rby="441"/>
+					<data>
+						<root scrollposition="66">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="vrbType" ns="1" type="xml-type" expanded="1">
+								<entry name="guid" type="attribute" outkey="37"/>
+								<entry name="typ_vzniku" type="attribute" outkey="27"/>
+								<entry name="misto_vzniku" type="attribute" outkey="28"/>
+								<entry name="autorizace" type="attribute" outkey="29"/>
+								<entry name="nazvy" ns="1" outkey="30"/>
+								<entry name="text" ns="1" expanded="1">
+									<entry name="ptext" ns="1" outkey="31"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="input" name="vrbType">
+							<root>
+								<entry name="vrbType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="3251" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="848" lty="1" rbx="1257" rby="631"/>
 					<data>
-						<root scrollposition="1602">
+						<root scrollposition="1594">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -4878,15 +4869,15 @@
 								</entry>
 								<entry name="resource" ns="1" expanded="1">
 									<entry name="Observation" ns="1" expanded="1">
-										<entry name="id" ns="1" inpkey="42" expanded="1">
+										<entry name="id" ns="1" inpkey="42">
 											<entry name="value" type="attribute" inpkey="43"/>
 										</entry>
-										<entry name="meta" ns="1" expanded="1">
+										<entry name="meta" ns="1">
 											<entry name="profile" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="53"/>
 											</entry>
 										</entry>
-										<entry name="text" ns="1" expanded="1">
+										<entry name="text" ns="1">
 											<entry name="status" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="44"/>
 											</entry>
@@ -4894,11 +4885,11 @@
 												<entry name="#text" inpkey="45"/>
 											</entry>
 										</entry>
-										<entry name="status" ns="1" expanded="1">
+										<entry name="status" ns="1">
 											<entry name="value" type="attribute" inpkey="48"/>
 										</entry>
 										<entry name="code" ns="1" inpkey="17"/>
-										<entry name="subject" ns="1" expanded="1">
+										<entry name="subject" ns="1">
 											<entry name="reference" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="52"/>
 											</entry>
@@ -4921,19 +4912,15 @@
 											</entry>
 										</entry>
 										<entry name="performer" ns="1" clone="1">
-											<entry name="reference" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="24"/>
-											</entry>
-											<entry name="display" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="25"/>
-											</entry>
+											<entry name="reference" ns="1" expanded="1"/>
+											<entry name="display" ns="1" expanded="1"/>
 										</entry>
-										<entry name="note" ns="1">
+										<entry name="note" ns="1" expanded="1">
 											<entry name="text" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="26"/>
 											</entry>
 										</entry>
-										<entry name="specimen" ns="1" expanded="1">
+										<entry name="specimen" ns="1">
 											<entry name="reference" ns="1" expanded="1"/>
 										</entry>
 									</entry>
@@ -4949,13 +4936,36 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6089" kind="2">
-					<targets>
-						<datapoint pos="0" key="54"/>
-					</targets>
-					<view ltx="531" lty="1" rbx="661" rby="17"/>
+				<component name="ku_z_lab_code" library="provisio" uid="3253" kind="19" visible="0" blackbox="0">
+					<view ltx="452" lty="371" rbx="752" rby="571"/>
 					<data>
-						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ku_z_labType" ns="1" componentid="3209" expanded="1">
+								<entry name="ku_z_labType" type="xml-type" inpkey="7"/>
+							</entry>
+							<entry name="nazvyType" ns="1" componentid="3210" expanded="1">
+								<entry name="nazvyType" type="xml-type" inpkey="4"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="code" ns="1" componentid="3211" expanded="1">
+								<entry name="code" outkey="8" expanded="1">
+									<entry name="text" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -5005,12 +5015,6 @@
 							<edge vertexkey="22"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="29">
-						<edges>
-							<edge vertexkey="13"/>
-							<edge vertexkey="24"/>
-						</edges>
-					</vertex>
 					<vertex vertexkey="8">
 						<edges>
 							<edge vertexkey="17" edgekey="17"/>
@@ -5029,11 +5033,6 @@
 					<vertex vertexkey="15">
 						<edges>
 							<edge vertexkey="23"/>
-						</edges>
-					</vertex>
-					<vertex vertexkey="14">
-						<edges>
-							<edge vertexkey="25"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="31">
@@ -5064,7 +5063,7 @@
 							<edge vertexkey="45"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="9">
+					<vertex vertexkey="56">
 						<edges>
 							<edge vertexkey="48"/>
 						</edges>
@@ -5077,6 +5076,11 @@
 					<vertex vertexkey="54">
 						<edges>
 							<edge vertexkey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="55"/>
 						</edges>
 					</vertex>
 				</vertices>
@@ -5108,53 +5112,6 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="value-map" library="core" uid="3274" kind="23">
-					<sources>
-						<datapoint pos="0" key="13"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="14"/>
-					</targets>
-					<view ltx="482" lty="222" rbx="557" rby="259"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="N" to="Autorizováno"/>
-								<entry from="A" to="Neautorizováno"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
-				</component>
-				<component name="ku_z_lab_code" library="provisio" uid="3267" kind="19" visible="0" blackbox="0">
-					<view ltx="394" lty="302" rbx="694" rby="502"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ku_z_labType" ns="1" componentid="3209" expanded="1">
-								<entry name="ku_z_labType" type="xml-type" inpkey="12"/>
-							</entry>
-							<entry name="nazvyType" ns="1" componentid="3210" expanded="1"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="code" ns="1" componentid="3211" expanded="1">
-								<entry name="code" outkey="19"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="3266" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="6" lty="326" rbx="144" rby="502"/>
@@ -5176,26 +5133,17 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="3270" kind="2">
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="396" lty="-145" rbx="456" rby="-129"/>
-					<data>
-						<constant value="final" datatype="string"/>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="3275" kind="2">
 					<targets>
 						<datapoint pos="0" key="31"/>
 					</targets>
-					<view ltx="397" lty="-128" rbx="484" rby="-112"/>
+					<view ltx="397" lty="-128" rbx="487" rby="-111"/>
 					<data>
 						<constant value="generated" datatype="string"/>
 					</data>
 				</component>
 				<component name="FullURL_DiagnosticReport" library="provisio" uid="3708" kind="19" visible="0" blackbox="0">
-					<view ltx="434" lty="58" rbx="635" rby="75"/>
+					<view ltx="434" lty="58" rbx="636" rby="74"/>
 					<data>
 						<root>
 							<header>
@@ -5215,11 +5163,80 @@
 						</root>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="5833" kind="2">
+					<targets>
+						<datapoint pos="0" key="65"/>
+					</targets>
+					<view ltx="170" lty="202" rbx="298" rby="219"/>
+					<data>
+						<constant value="DiagnosticReport/" datatype="string"/>
+					</data>
+				</component>
+				<component name="patientReference" library="core" uid="6076" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="69"/>
+					</targets>
+					<view ltx="17" lty="-65" rbx="148" rby="-28"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6087" kind="2">
+					<targets>
+						<datapoint pos="0" key="72"/>
+					</targets>
+					<view ltx="567" lty="-42" rbx="700" rby="-25"/>
+					<data>
+						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-diagnostic-report-lab" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3270" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="396" lty="-145" rbx="455" rby="-128"/>
+					<data>
+						<constant value="final" datatype="string"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="3274" kind="23">
+					<sources>
+						<datapoint pos="0" key="13"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="14"/>
+					</targets>
+					<view ltx="482" lty="222" rbx="558" rby="259"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="N" to="partial"/>
+								<entry from="A" to="final"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="5832" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="66"/>
+						<datapoint pos="1" key="67"/>
+					</sources>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="348" lty="181" rbx="422" rby="236"/>
+				</component>
 				<component name="document" library="xml" uid="3265" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="6" lty="159" rbx="161" rby="285"/>
 					<data>
-						<root scrollposition="124">
+						<root>
 							<header>
 								<namespaces>
 									<namespace/>
@@ -5250,43 +5267,11 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="5833" kind="2">
-					<targets>
-						<datapoint pos="0" key="65"/>
-					</targets>
-					<view ltx="170" lty="202" rbx="294" rby="218"/>
-					<data>
-						<constant value="DiagnosticReport/" datatype="string"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="5832" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="66"/>
-						<datapoint pos="1" key="67"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="68"/>
-					</targets>
-					<view ltx="318" lty="189" rbx="393" rby="243"/>
-				</component>
-				<component name="patientReference" library="core" uid="6076" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="69"/>
-					</targets>
-					<view ltx="17" lty="-65" rbx="145" rby="-28"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="3271" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="866" lty="-144" rbx="1166" rby="502"/>
 					<data>
-						<root scrollposition="774">
+						<root scrollposition="2091">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -5313,7 +5298,7 @@
 												<entry name="value" type="attribute" inpkey="71"/>
 											</entry>
 										</entry>
-										<entry name="text" ns="1">
+										<entry name="text" ns="1" expanded="1">
 											<entry name="status" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="33"/>
 											</entry>
@@ -5322,11 +5307,11 @@
 												<entry name="#text" inpkey="35"/>
 											</entry>
 										</entry>
-										<entry name="status" ns="1">
+										<entry name="status" ns="1" expanded="1">
 											<entry name="value" type="attribute" inpkey="60"/>
 										</entry>
-										<entry name="category" ns="1">
-											<entry name="coding" ns="1" inpkey="37">
+										<entry name="category" ns="1" expanded="1">
+											<entry name="coding" ns="1" inpkey="37" expanded="1">
 												<entry name="code" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="38"/>
 												</entry>
@@ -5349,13 +5334,9 @@
 											</entry>
 										</entry>
 										<entry name="effectiveDateTime" ns="1" inpkey="45"/>
-										<entry name="performer" ns="1">
-											<entry name="reference" ns="1" expanded="1">
-												<entry name="value" type="attribute" inpkey="46"/>
-											</entry>
-											<entry name="display" ns="1">
-												<entry name="value" type="attribute" inpkey="47"/>
-											</entry>
+										<entry name="performer" ns="1" expanded="1">
+											<entry name="reference" ns="1" expanded="1"/>
+											<entry name="display" ns="1" expanded="1"/>
 										</entry>
 										<entry name="specimen" ns="1">
 											<entry name="reference" ns="1" expanded="1"/>
@@ -5395,13 +5376,32 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6087" kind="2">
-					<targets>
-						<datapoint pos="0" key="72"/>
-					</targets>
-					<view ltx="567" lty="-42" rbx="697" rby="-26"/>
+				<component name="ku_z_lab_code" library="provisio" uid="3267" kind="19" visible="0" blackbox="0">
+					<view ltx="397" lty="339" rbx="697" rby="539"/>
 					<data>
-						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-diagnostic-report-lab" datatype="string"/>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ku_z_labType" ns="1" componentid="3209" expanded="1">
+								<entry name="ku_z_labType" type="xml-type" inpkey="12"/>
+							</entry>
+							<entry name="nazvyType" ns="1" componentid="3210" expanded="1"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="code" ns="1" componentid="3211" expanded="1">
+								<entry name="code" outkey="19"/>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -5432,7 +5432,6 @@
 					<vertex vertexkey="17">
 						<edges>
 							<edge vertexkey="13"/>
-							<edge vertexkey="46"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="31">
@@ -5445,9 +5444,10 @@
 							<edge vertexkey="34"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="68">
+					<vertex vertexkey="30">
 						<edges>
 							<edge vertexkey="35"/>
+							<edge vertexkey="67"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="27">
@@ -5478,11 +5478,6 @@
 							<edge vertexkey="45" edgekey="45"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="14">
-						<edges>
-							<edge vertexkey="47"/>
-						</edges>
-					</vertex>
 					<vertex vertexkey="55">
 						<edges>
 							<edge vertexkey="53"/>
@@ -5496,7 +5491,7 @@
 							<edge vertexkey="59"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="3">
+					<vertex vertexkey="14">
 						<edges>
 							<edge vertexkey="60"/>
 						</edges>
@@ -5510,11 +5505,6 @@
 					<vertex vertexkey="65">
 						<edges>
 							<edge vertexkey="66"/>
-						</edges>
-					</vertex>
-					<vertex vertexkey="30">
-						<edges>
-							<edge vertexkey="67"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="69">
@@ -5876,7 +5866,7 @@
 					<targets>
 						<datapoint pos="0" key="6"/>
 					</targets>
-					<view ltx="388" lty="-68" rbx="448" rby="-52"/>
+					<view ltx="388" lty="-68" rbx="447" rby="-51"/>
 					<data>
 						<constant value="final" datatype="string"/>
 					</data>
@@ -5912,7 +5902,7 @@
 					</data>
 				</component>
 				<component name="FullURL_Observation" library="provisio" uid="3720" kind="19" visible="0" blackbox="0">
-					<view ltx="522" lty="89" rbx="696" rby="106"/>
+					<view ltx="522" lty="89" rbx="697" rby="105"/>
 					<data>
 						<root>
 							<header>
@@ -5957,7 +5947,7 @@
 					<targets>
 						<datapoint pos="0" key="37"/>
 					</targets>
-					<view ltx="838" lty="73" rbx="925" rby="89"/>
+					<view ltx="838" lty="73" rbx="928" rby="90"/>
 					<data>
 						<constant value="generated" datatype="string"/>
 					</data>
@@ -5966,9 +5956,44 @@
 					<targets>
 						<datapoint pos="0" key="38"/>
 					</targets>
-					<view ltx="838" lty="89" rbx="939" rby="105"/>
+					<view ltx="838" lty="89" rbx="941" rby="106"/>
 					<data>
 						<constant value="Observation/" datatype="string"/>
+					</data>
+				</component>
+				<component name="patientReference" library="core" uid="6079" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="47"/>
+					</targets>
+					<view ltx="3" lty="-18" rbx="134" rby="19"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6090" kind="2">
+					<targets>
+						<datapoint pos="0" key="50"/>
+					</targets>
+					<view ltx="434" rbx="567" rby="17"/>
+					<data>
+						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
+					</data>
+				</component>
+				<component name="referencePracoviste" library="core" uid="5805" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="45"/>
+					</targets>
+					<view ltx="3" lty="29" rbx="148" rby="66"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="referencePracoviste" sequence="1"/>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="3303" kind="14">
@@ -5998,37 +6023,11 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="referencePracoviste" library="core" uid="5805" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="45"/>
-					</targets>
-					<view ltx="3" lty="29" rbx="144" rby="66"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="referencePracoviste" sequence="1"/>
-					</data>
-				</component>
-				<component name="patientReference" library="core" uid="6079" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="47"/>
-					</targets>
-					<view ltx="3" lty="-18" rbx="131" rby="19"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="3296" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="976" lty="-102" rbx="1276" rby="438"/>
 					<data>
-						<root scrollposition="1604">
+						<root scrollposition="3459">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -6102,15 +6101,6 @@
 								<entry name="entry" ns="http://hl7.org/fhir"/>
 							</root>
 						</parameter>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6090" kind="2">
-					<targets>
-						<datapoint pos="0" key="50"/>
-					</targets>
-					<view ltx="434" rbx="564" rby="16"/>
-					<data>
-						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
 					</data>
 				</component>
 			</children>
@@ -6592,7 +6582,7 @@
 					<targets>
 						<datapoint pos="0" key="369"/>
 					</targets>
-					<view ltx="556" lty="-224" rbx="700" rby="-208"/>
+					<view ltx="556" lty="-224" rbx="706" rby="-207"/>
 					<data>
 						<constant value="Mikrobiologické laboratorní vyšetření" datatype="string"/>
 					</data>
@@ -6601,7 +6591,7 @@
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="393" lty="-141" rbx="529" rby="-125"/>
+					<view ltx="393" lty="-141" rbx="535" rby="-124"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAKT.htm" datatype="string"/>
 					</data>
@@ -6610,41 +6600,9 @@
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="393" lty="-118" rbx="529" rby="-102"/>
+					<view ltx="393" lty="-118" rbx="535" rby="-101"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAKR.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3425" kind="2">
-					<targets>
-						<datapoint pos="0" key="149"/>
-					</targets>
-					<view ltx="389" lty="-45" rbx="468" rby="-29"/>
-					<data>
-						<constant value="Subspec" datatype="string"/>
-					</data>
-				</component>
-				<component name="value-map" library="core" uid="3588" kind="23">
-					<sources>
-						<datapoint pos="0" key="373"/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="393" lty="44" rbx="468" rby="81"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="KONTAMIN" to="Kontaminováno"/>
-								<entry from="NEVHODBE" to="Nevhodný způsob odběru"/>
-								<entry from="NEVHTRME" to="Nevhodné transportní médium"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-						<comment>
-							<text>stav_mat</text>
-						</comment>
 					</data>
 				</component>
 				<component name="value-map" library="core" uid="3334" kind="23">
@@ -6654,7 +6612,7 @@
 					<targets>
 						<datapoint pos="0" key="14"/>
 					</targets>
-					<view ltx="393" lty="102" rbx="468" rby="139"/>
+					<view ltx="393" lty="102" rbx="469" rby="139"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -6675,7 +6633,7 @@
 					<targets>
 						<datapoint pos="0" key="129"/>
 					</targets>
-					<view ltx="556" lty="-240" rbx="636" rby="-224"/>
+					<view ltx="556" lty="-240" rbx="635" rby="-223"/>
 					<data>
 						<constant value="18725-2" datatype="string"/>
 					</data>
@@ -6684,41 +6642,9 @@
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="393" lty="-95" rbx="529" rby="-79"/>
+					<view ltx="393" lty="-95" rbx="535" rby="-78"/>
 					<data>
 						<constant value="https://dasta.mzcr.cz/DSAHU.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="ku_z_lab_code" library="provisio" uid="3324" kind="19" visible="0" blackbox="0">
-					<view ltx="577" lty="404" rbx="877" rby="604"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ku_z_labType" ns="1" componentid="3209" expanded="1">
-								<entry name="ku_z_labType" type="xml-type" inpkey="5"/>
-							</entry>
-							<entry name="nazvyType" ns="1" componentid="3210" expanded="1">
-								<entry name="nazvyType" type="xml-type" inpkey="6"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="code" ns="1" componentid="3211" expanded="1">
-								<entry name="code" expanded="1">
-									<entry name="coding" outkey="128"/>
-								</entry>
-							</entry>
-						</root>
 					</data>
 				</component>
 				<component name="value-map" library="core" uid="3597" kind="23">
@@ -6728,7 +6654,7 @@
 					<targets>
 						<datapoint pos="0" key="395"/>
 					</targets>
-					<view ltx="393" lty="-8" rbx="468" rby="29"/>
+					<view ltx="393" lty="-8" rbx="469" rby="29"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -6744,38 +6670,11 @@
 						</comment>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="3330" kind="2">
-					<targets>
-						<datapoint pos="0" key="9"/>
-					</targets>
-					<view ltx="393" lty="-164" rbx="529" rby="-148"/>
-					<data>
-						<constant value="https://dasta.mzcr.cz/DSAKQ.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3327" kind="2">
-					<targets>
-						<datapoint pos="0" key="7"/>
-					</targets>
-					<view ltx="393" lty="-240" rbx="453" rby="-224"/>
-					<data>
-						<constant value="final" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3601" kind="2">
-					<targets>
-						<datapoint pos="0" key="401"/>
-					</targets>
-					<view ltx="556" lty="-148" rbx="708" rby="-132"/>
-					<data>
-						<constant value="automatické hodnocení kompletního nálezu" datatype="string"/>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="3602" kind="2">
 					<targets>
 						<datapoint pos="0" key="402"/>
 					</targets>
-					<view ltx="556" lty="-132" rbx="704" rby="-116"/>
+					<view ltx="556" lty="-132" rbx="711" rby="-115"/>
 					<data>
 						<constant value="laboratorní poznámka k celému nálezu" datatype="string"/>
 					</data>
@@ -6784,7 +6683,7 @@
 					<targets>
 						<datapoint pos="0" key="403"/>
 					</targets>
-					<view ltx="556" lty="-116" rbx="702" rby="-100"/>
+					<view ltx="556" lty="-116" rbx="709" rby="-99"/>
 					<data>
 						<constant value="závěrečné hodnocení kompletního nálezu lékařem" datatype="string"/>
 					</data>
@@ -6793,7 +6692,7 @@
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="556" lty="-197" rbx="703" rby="-181"/>
+					<view ltx="556" lty="-197" rbx="708" rby="-180"/>
 					<data>
 						<constant value="Kompletní mikrobiologický nález" datatype="string"/>
 					</data>
@@ -6802,7 +6701,7 @@
 					<targets>
 						<datapoint pos="0" key="399"/>
 					</targets>
-					<view ltx="556" lty="-164" rbx="690" rby="-148"/>
+					<view ltx="556" lty="-164" rbx="693" rby="-147"/>
 					<data>
 						<constant value="Mikroskopický nález" datatype="string"/>
 					</data>
@@ -6811,7 +6710,7 @@
 					<targets>
 						<datapoint pos="0" key="451"/>
 					</targets>
-					<view ltx="890" lty="268" rbx="977" rby="284"/>
+					<view ltx="890" lty="268" rbx="980" rby="285"/>
 					<data>
 						<constant value="generated" datatype="string"/>
 					</data>
@@ -6820,13 +6719,13 @@
 					<targets>
 						<datapoint pos="0" key="452"/>
 					</targets>
-					<view ltx="890" lty="284" rbx="991" rby="300"/>
+					<view ltx="890" lty="284" rbx="993" rby="301"/>
 					<data>
 						<constant value="Observation/" datatype="string"/>
 					</data>
 				</component>
 				<component name="FullURL_Observation" library="provisio" uid="5765" kind="19" visible="0" blackbox="0">
-					<view ltx="702" lty="43" rbx="876" rby="60"/>
+					<view ltx="702" lty="43" rbx="877" rby="59"/>
 					<data>
 						<root>
 							<header>
@@ -6847,7 +6746,7 @@
 					</data>
 				</component>
 				<component name="FullURL_Observation" library="provisio" uid="5757" kind="19" visible="0" blackbox="0">
-					<view ltx="702" lty="82" rbx="876" rby="99"/>
+					<view ltx="702" lty="82" rbx="877" rby="98"/>
 					<data>
 						<root>
 							<header>
@@ -6868,7 +6767,7 @@
 					</data>
 				</component>
 				<component name="FullURL_Observation" library="provisio" uid="5760" kind="19" visible="0" blackbox="0">
-					<view ltx="702" lty="119" rbx="876" rby="136"/>
+					<view ltx="702" lty="119" rbx="877" rby="135"/>
 					<data>
 						<root>
 							<header>
@@ -6889,7 +6788,7 @@
 					</data>
 				</component>
 				<component name="FullURL_Observation" library="provisio" uid="5763" kind="19" visible="0" blackbox="0">
-					<view ltx="702" lty="156" rbx="876" rby="173"/>
+					<view ltx="702" lty="156" rbx="877" rby="172"/>
 					<data>
 						<root>
 							<header>
@@ -6909,50 +6808,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="fixDate" library="user" uid="3623" kind="19" visible="0" blackbox="0">
-					<view ltx="423" lty="156" rbx="584" rby="173"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="date" inpkey="442" componentid="1989"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="hl7DateTimeString" outkey="443" componentid="2000"/>
-						</root>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3323" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="7" lty="370" rbx="310" rby="524"/>
-					<data>
-						<root scrollposition="596">
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="ku_z_labType" type="xml-type" outkey="4" expanded="1">
-								<entry name="dat_vv" outkey="433"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="input" name="ku_z_labType">
-							<root>
-								<entry name="ku_z_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
 				<component name="referencePracoviste" library="core" uid="5808" kind="6">
 					<sources>
 						<datapoint/>
@@ -6960,140 +6815,37 @@
 					<targets>
 						<datapoint pos="0" key="514"/>
 					</targets>
-					<view ltx="738" lty="-108" rbx="879" rby="-71"/>
+					<view ltx="738" lty="-108" rbx="883" rby="-71"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="referencePracoviste" sequence="1"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3329" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="7" lty="112" rbx="152" rby="328"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="vrkType" ns="1" type="xml-type" expanded="1">
-								<entry name="guid" type="attribute" outkey="363"/>
-								<entry name="systspec_kod" type="attribute" outkey="58"/>
-								<entry name="spec_text" type="attribute" outkey="59"/>
-								<entry name="subspec_text" type="attribute" outkey="60"/>
-								<entry name="guid_specimen" type="attribute" outkey="512"/>
-								<entry name="vguid_specimen" type="attribute" outkey="513"/>
-								<entry name="stav_mat" type="attribute" outkey="64"/>
-								<entry name="info_s" type="attribute" outkey="66"/>
-								<entry name="sez" type="attribute" outkey="396"/>
-								<entry name="nazvy" ns="1" outkey="8"/>
-								<entry name="vrmp" ns="1" outkey="67"/>
-								<entry name="vrmmn" ns="1" outkey="69" expanded="1">
-									<entry name="guid" type="attribute" outkey="466"/>
-									<entry name="vguid" type="attribute" outkey="467"/>
-								</entry>
-								<entry name="vrkpa" ns="1" outkey="364">
-									<entry name="kvantita" ns="1" expanded="1"/>
-									<entry name="vrac" ns="1" expanded="1">
-										<entry name="kvantita" ns="1" expanded="1"/>
-									</entry>
-								</entry>
-								<entry name="vrmahn" ns="1" outkey="404">
-									<entry name="guid" type="attribute" outkey="468"/>
-									<entry name="vguid" type="attribute" outkey="469"/>
-								</entry>
-								<entry name="vrmlpn" ns="1" outkey="405">
-									<entry name="guid" type="attribute" outkey="470"/>
-									<entry name="vguid" type="attribute" outkey="471"/>
-								</entry>
-								<entry name="vrmzhl" ns="1" outkey="406" expanded="1">
-									<entry name="guid" type="attribute" outkey="472"/>
-									<entry name="vguid" type="attribute" outkey="473"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="input" name="vrkType">
-							<root>
-								<entry name="vrkType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="Reference_Specimen" library="provisio" uid="3595" kind="19" visible="0" blackbox="0">
-					<view ltx="545" lty="213" rbx="719" rby="246"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="454" componentid="3510"/>
-							<entry name="VGUID" inpkey="455" componentid="3761"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="referenceSpecimen" outkey="456" componentid="3512"/>
-						</root>
-					</data>
-				</component>
-				<component name="FullURL_DiagnosticReport" library="provisio" uid="3688" kind="19" visible="0" blackbox="0">
-					<view ltx="584" lty="-44" rbx="785" rby="-27"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="444" componentid="3677"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="FullURL_DiagnosticReport" outkey="445" componentid="3679"/>
-						</root>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="5829" kind="2">
 					<targets>
 						<datapoint pos="0" key="531"/>
 					</targets>
-					<view ltx="980" lty="-65" rbx="1067" rby="-49"/>
+					<view ltx="980" lty="-65" rbx="1070" rby="-48"/>
 					<data>
 						<constant value="generated" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="5830" kind="2">
+				<component name="constant" library="core" uid="6085" kind="2">
 					<targets>
-						<datapoint pos="0" key="532"/>
+						<datapoint pos="0" key="540"/>
 					</targets>
-					<view ltx="980" lty="-49" rbx="1100" rby="-33"/>
+					<view ltx="738" lty="-157" rbx="871" rby="-140"/>
 					<data>
-						<constant value="DiagnosticReport" datatype="string"/>
+						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-diagnostic-report-lab" datatype="string"/>
 					</data>
 				</component>
-				<component name="patientReference" library="core" uid="6064" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
+				<component name="constant" library="core" uid="6092" kind="2">
 					<targets>
-						<datapoint pos="0" key="533"/>
+						<datapoint pos="0" key="541"/>
 					</targets>
-					<view ltx="7" lty="2" rbx="135" rby="39"/>
+					<view ltx="773" lty="235" rbx="906" rby="252"/>
 					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
 					</data>
 				</component>
 				<component name="vrk_vrkpa" library="provisio" uid="3561" kind="19" visible="0" blackbox="0">
@@ -7127,29 +6879,181 @@
 						</root>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6085" kind="2">
+				<component name="constant" library="core" uid="5830" kind="2">
 					<targets>
-						<datapoint pos="0" key="540"/>
+						<datapoint pos="0" key="532"/>
 					</targets>
-					<view ltx="738" lty="-157" rbx="868" rby="-141"/>
+					<view ltx="963" lty="-45" rbx="1087" rby="-28"/>
 					<data>
-						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-diagnostic-report-lab" datatype="string"/>
+						<constant value="DiagnosticReport" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6092" kind="2">
-					<targets>
-						<datapoint pos="0" key="541"/>
-					</targets>
-					<view ltx="773" lty="235" rbx="903" rby="251"/>
+				<component name="FullURL_DiagnosticReport" library="provisio" uid="3688" kind="19" visible="0" blackbox="0">
+					<view ltx="584" lty="-44" rbx="786" rby="-28"/>
 					<data>
-						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="444" componentid="3677"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="FullURL_DiagnosticReport" outkey="445" componentid="3679"/>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3327" kind="2">
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="393" lty="-240" rbx="452" rby="-223"/>
+					<data>
+						<constant value="final" datatype="string"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="6663" kind="23">
+					<sources>
+						<datapoint pos="0" key="547"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="548"/>
+					</targets>
+					<view ltx="243" lty="-94" rbx="319" rby="-57"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="R" to="registered"/>
+								<entry from="D" to="partial"/>
+								<entry from="P" to="preliminary"/>
+								<entry from="N" to="preliminary"/>
+								<entry from="A" to="final"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+						<comment>
+							<text>stav_zprac</text>
+						</comment>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3330" kind="2">
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="393" lty="-164" rbx="535" rby="-147"/>
+					<data>
+						<constant value="https://dasta.mzcr.cz/DSAKQ.htm" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3425" kind="2">
+					<targets>
+						<datapoint pos="0" key="149"/>
+					</targets>
+					<view ltx="389" lty="-45" rbx="469" rby="-28"/>
+					<data>
+						<constant value="Subspec" datatype="string"/>
+					</data>
+				</component>
+				<component name="Reference_Specimen" library="provisio" uid="3595" kind="19" visible="0" blackbox="0">
+					<view ltx="545" lty="213" rbx="719" rby="246"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="454" componentid="3510"/>
+							<entry name="VGUID" inpkey="455" componentid="3761"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="referenceSpecimen" outkey="456" componentid="3512"/>
+						</root>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="3588" kind="23">
+					<sources>
+						<datapoint pos="0" key="373"/>
+					</sources>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="393" lty="44" rbx="469" rby="81"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="KONTAMIN" to="Kontaminováno"/>
+								<entry from="NEVHODBE" to="Nevhodný způsob odběru"/>
+								<entry from="NEVHTRME" to="Nevhodné transportní médium"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+						<comment>
+							<text>stav_mat</text>
+						</comment>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3601" kind="2">
+					<targets>
+						<datapoint pos="0" key="401"/>
+					</targets>
+					<view ltx="556" lty="-148" rbx="713" rby="-131"/>
+					<data>
+						<constant value="automatické hodnocení kompletního nálezu" datatype="string"/>
+					</data>
+				</component>
+				<component name="patientReference" library="core" uid="6064" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="533"/>
+					</targets>
+					<view ltx="7" lty="2" rbx="138" rby="39"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="fixDate" library="user" uid="3623" kind="19" visible="0" blackbox="0">
+					<view ltx="423" lty="156" rbx="585" rby="172"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="date" inpkey="442" componentid="1989"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="hl7DateTimeString" outkey="443" componentid="2000"/>
+						</root>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="3328" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1112" lty="-242" rbx="1683" rby="524"/>
 					<data>
-						<root scrollposition="1846">
+						<root scrollposition="1545">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -7158,13 +7062,13 @@
 									<namespace uid="http://www.altova.com/mapforce"/>
 								</namespaces>
 							</header>
-							<entry name="entry" ns="1">
+							<entry name="entry" ns="1" expanded="1">
 								<entry name="fullUrl" ns="1" inpkey="457" expanded="1">
 									<entry name="value" type="attribute" inpkey="446"/>
 								</entry>
 								<entry name="resource" ns="1" expanded="1">
-									<entry name="DiagnosticReport" ns="1">
-										<entry name="id" ns="1" inpkey="450">
+									<entry name="DiagnosticReport" ns="1" expanded="1">
+										<entry name="id" ns="1" inpkey="450" expanded="1">
 											<entry name="value" type="attribute" inpkey="365"/>
 										</entry>
 										<entry name="meta" ns="1" expanded="1">
@@ -7180,10 +7084,10 @@
 												<entry name="#text" inpkey="530"/>
 											</entry>
 										</entry>
-										<entry name="status" ns="1">
+										<entry name="status" ns="1" expanded="1">
 											<entry name="value" type="attribute" inpkey="434"/>
 										</entry>
-										<entry name="code" ns="1">
+										<entry name="code" ns="1" expanded="1">
 											<entry name="coding" ns="1">
 												<entry name="code" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="130"/>
@@ -7192,15 +7096,15 @@
 													<entry name="value" type="attribute" inpkey="381"/>
 												</entry>
 											</entry>
-											<entry name="coding" ns="1" inpkey="20" clone="1">
+											<entry name="coding" ns="1" inpkey="20" expanded="1" clone="1">
 												<entry name="system" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="21"/>
 												</entry>
-												<entry name="code" ns="1">
+												<entry name="code" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="22"/>
 												</entry>
 											</entry>
-											<entry name="coding" ns="1" inpkey="23" clone="1">
+											<entry name="coding" ns="1" inpkey="23" expanded="1" clone="1">
 												<entry name="system" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="24"/>
 												</entry>
@@ -7228,6 +7132,7 @@
 												</entry>
 											</entry>
 											<entry name="coding" ns="1" inpkey="168" clone="1"/>
+											<entry name="text" ns="1" inpkey="550"/>
 										</entry>
 										<entry name="subject" ns="1" expanded="1">
 											<entry name="reference" ns="1" expanded="1">
@@ -7336,15 +7241,15 @@
 									</entry>
 								</entry>
 							</entry>
-							<entry name="entry" ns="1" inpkey="366" clone="1">
+							<entry name="entry" ns="1" inpkey="366" expanded="1" clone="1">
 								<entry name="resource" ns="1" expanded="1"/>
 							</entry>
-							<entry name="entry" ns="1" clone="1">
+							<entry name="entry" ns="1" expanded="1" clone="1">
 								<entry name="fullUrl" ns="1" inpkey="508" expanded="1">
 									<entry name="value" type="attribute" inpkey="509"/>
 								</entry>
 								<entry name="resource" ns="1" expanded="1">
-									<entry name="Observation" ns="1">
+									<entry name="Observation" ns="1" expanded="1">
 										<entry name="id" ns="1">
 											<entry name="value" type="attribute" inpkey="474"/>
 										</entry>
@@ -7388,7 +7293,7 @@
 										<entry name="valueString" ns="1">
 											<entry name="value" type="attribute" inpkey="476"/>
 										</entry>
-										<entry name="specimen" ns="1">
+										<entry name="specimen" ns="1" expanded="1">
 											<entry name="reference" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="441"/>
 											</entry>
@@ -7421,7 +7326,7 @@
 									</entry>
 								</entry>
 							</entry>
-							<entry name="entry" ns="1" clone="1">
+							<entry name="entry" ns="1" expanded="1" clone="1">
 								<entry name="fullUrl" ns="1" inpkey="477" expanded="1">
 									<entry name="value" type="attribute" inpkey="478"/>
 								</entry>
@@ -7449,7 +7354,7 @@
 										<entry name="status" ns="1">
 											<entry name="value" type="attribute" inpkey="483"/>
 										</entry>
-										<entry name="code" ns="1">
+										<entry name="code" ns="1" expanded="1">
 											<entry name="text" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="484"/>
 											</entry>
@@ -7467,7 +7372,7 @@
 												<entry name="value" type="attribute" inpkey="518"/>
 											</entry>
 										</entry>
-										<entry name="valueString" ns="1">
+										<entry name="valueString" ns="1" expanded="1">
 											<entry name="value" type="attribute" inpkey="485"/>
 										</entry>
 										<entry name="specimen" ns="1" expanded="1">
@@ -7478,7 +7383,7 @@
 									</entry>
 								</entry>
 							</entry>
-							<entry name="entry" ns="1" clone="1">
+							<entry name="entry" ns="1" expanded="1" clone="1">
 								<entry name="fullUrl" ns="1" inpkey="487" expanded="1">
 									<entry name="value" type="attribute" inpkey="488"/>
 								</entry>
@@ -7544,7 +7449,7 @@
 										<entry name="id" ns="1">
 											<entry name="value" type="attribute" inpkey="507"/>
 										</entry>
-										<entry name="meta" ns="1" expanded="1">
+										<entry name="meta" ns="1">
 											<entry name="versionId" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="500"/>
 											</entry>
@@ -7568,12 +7473,12 @@
 												<entry name="value" type="attribute" inpkey="504"/>
 											</entry>
 										</entry>
-										<entry name="subject" ns="1" expanded="1">
+										<entry name="subject" ns="1">
 											<entry name="reference" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="538"/>
 											</entry>
 										</entry>
-										<entry name="effectiveDateTime" ns="1" expanded="1">
+										<entry name="effectiveDateTime" ns="1">
 											<entry name="value" type="attribute" inpkey="527"/>
 										</entry>
 										<entry name="performer" ns="1">
@@ -7581,7 +7486,7 @@
 												<entry name="value" type="attribute" inpkey="516"/>
 											</entry>
 										</entry>
-										<entry name="valueString" ns="1" expanded="1">
+										<entry name="valueString" ns="1">
 											<entry name="value" type="attribute" inpkey="505"/>
 										</entry>
 										<entry name="specimen" ns="1" expanded="1">
@@ -7600,6 +7505,119 @@
 								<entry name="entry" ns="http://hl7.org/fhir"/>
 							</root>
 						</parameter>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3323" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="7" lty="370" rbx="310" rby="524"/>
+					<data>
+						<root scrollposition="700">
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="ku_z_labType" type="xml-type" outkey="4" expanded="1">
+								<entry name="dat_vv" outkey="433"/>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="input" name="ku_z_labType">
+							<root>
+								<entry name="ku_z_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3329" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="7" lty="112" rbx="152" rby="328"/>
+					<data>
+						<root scrollposition="100">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="vrkType" ns="1" type="xml-type" expanded="1">
+								<entry name="guid" type="attribute" outkey="363"/>
+								<entry name="systspec_kod" type="attribute" outkey="58"/>
+								<entry name="spec_text" type="attribute" outkey="59"/>
+								<entry name="subspec_text" type="attribute" outkey="60"/>
+								<entry name="guid_specimen" type="attribute" outkey="512"/>
+								<entry name="vguid_specimen" type="attribute" outkey="513"/>
+								<entry name="stav_mat" type="attribute" outkey="64"/>
+								<entry name="stav_zprac" type="attribute" outkey="549"/>
+								<entry name="info_s" type="attribute" outkey="66"/>
+								<entry name="sez" type="attribute" outkey="396"/>
+								<entry name="nazvy" ns="1" outkey="8"/>
+								<entry name="vrmp" ns="1" outkey="67"/>
+								<entry name="vrmmn" ns="1" outkey="69">
+									<entry name="guid" type="attribute" outkey="466"/>
+									<entry name="vguid" type="attribute" outkey="467"/>
+								</entry>
+								<entry name="vrkpa" ns="1" outkey="364">
+									<entry name="kvantita" ns="1" expanded="1"/>
+									<entry name="vrac" ns="1" expanded="1">
+										<entry name="kvantita" ns="1" expanded="1"/>
+									</entry>
+								</entry>
+								<entry name="vrmahn" ns="1" outkey="404">
+									<entry name="guid" type="attribute" outkey="468"/>
+									<entry name="vguid" type="attribute" outkey="469"/>
+								</entry>
+								<entry name="vrmlpn" ns="1" outkey="405" expanded="1">
+									<entry name="guid" type="attribute" outkey="470"/>
+									<entry name="vguid" type="attribute" outkey="471"/>
+								</entry>
+								<entry name="vrmzhl" ns="1" outkey="406">
+									<entry name="guid" type="attribute" outkey="472"/>
+									<entry name="vguid" type="attribute" outkey="473"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="input" name="vrkType">
+							<root>
+								<entry name="vrkType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="ku_z_lab_code" library="provisio" uid="3324" kind="19" visible="0" blackbox="0">
+					<view ltx="450" lty="432" rbx="750" rby="632"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ku_z_labType" ns="1" componentid="3209" expanded="1">
+								<entry name="ku_z_labType" type="xml-type" inpkey="5"/>
+							</entry>
+							<entry name="nazvyType" ns="1" componentid="3210" expanded="1">
+								<entry name="nazvyType" type="xml-type" inpkey="6"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="code" ns="1" componentid="3211" expanded="1">
+								<entry name="code" expanded="1">
+									<entry name="coding" outkey="128"/>
+									<entry name="text" outkey="551" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -7626,6 +7644,11 @@
 						</data>
 					</edge>
 					<edge edgekey="367">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="550">
 						<data>
 							<dataconnection type="2"/>
 						</data>
@@ -7747,7 +7770,6 @@
 					<vertex vertexkey="7">
 						<edges>
 							<edge vertexkey="407"/>
-							<edge vertexkey="434"/>
 							<edge vertexkey="483"/>
 							<edge vertexkey="493"/>
 							<edge vertexkey="503"/>
@@ -7756,6 +7778,11 @@
 					<vertex vertexkey="399">
 						<edges>
 							<edge vertexkey="408"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="548">
+						<edges>
+							<edge vertexkey="434"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="443">
@@ -7951,6 +7978,16 @@
 							<edge vertexkey="546"/>
 						</edges>
 					</vertex>
+					<vertex vertexkey="549">
+						<edges>
+							<edge vertexkey="547"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="551">
+						<edges>
+							<edge vertexkey="550" edgekey="550"/>
+						</edges>
+					</vertex>
 				</vertices>
 			</graph>
 		</structure>
@@ -8090,41 +8127,26 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="3352" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-3" lty="72" rbx="151" rby="200"/>
+				<component name="patientReference" library="core" uid="6081" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="62"/>
+					</targets>
+					<view ltx="-2" lty="-130" rbx="126" rby="-93"/>
 					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="vroType" ns="1" type="xml-type" expanded="1">
-								<entry name="guid" type="attribute" outkey="48"/>
-								<entry name="nazvy" ns="1" outkey="30"/>
-								<entry name="text" ns="1" expanded="1">
-									<entry name="ptext" ns="1" outkey="31" expanded="1"/>
-								</entry>
-								<entry name="priloha" ns="1" outkey="32" expanded="1">
-									<entry name="zdroj" type="attribute" outkey="33"/>
-									<entry name="typ" type="attribute" outkey="34"/>
-								</entry>
-								<entry name="int_pril" ns="1" outkey="35" expanded="1">
-									<entry name="nazev" type="attribute" outkey="36"/>
-									<entry name="encode" type="attribute" outkey="37"/>
-									<entry name="typ" type="attribute" outkey="38"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="input" name="vroType">
-							<root>
-								<entry name="vroType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6086" kind="2">
+					<targets>
+						<datapoint pos="0" key="65"/>
+					</targets>
+					<view ltx="629" lty="-210" rbx="759" rby="-194"/>
+					<data>
+						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-diagnostic-report-lab" datatype="string"/>
 					</data>
 				</component>
 				<component name="ku_z_lab_code" library="provisio" uid="3351" kind="19" visible="0" blackbox="0">
@@ -8157,24 +8179,48 @@
 						</root>
 					</data>
 				</component>
-				<component name="patientReference" library="core" uid="6081" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="62"/>
-					</targets>
-					<view ltx="-2" lty="-130" rbx="126" rby="-93"/>
+				<component name="document" library="xml" uid="3352" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-3" lty="72" rbx="151" rby="200"/>
 					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
+						<root scrollposition="298">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="vroType" ns="1" type="xml-type" expanded="1">
+								<entry name="guid" type="attribute" outkey="48"/>
+								<entry name="nazvy" ns="1" outkey="30"/>
+								<entry name="text" ns="1" expanded="1">
+									<entry name="ptext" ns="1" outkey="31" expanded="1"/>
+								</entry>
+								<entry name="priloha" ns="1" outkey="32" expanded="1">
+									<entry name="zdroj" type="attribute" outkey="33"/>
+									<entry name="typ" type="attribute" outkey="34"/>
+								</entry>
+								<entry name="int_pril" ns="1" outkey="35" expanded="1">
+									<entry name="nazev" type="attribute" outkey="36"/>
+									<entry name="encode" type="attribute" outkey="37"/>
+									<entry name="typ" type="attribute" outkey="38"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="input" name="vroType">
+							<root>
+								<entry name="vroType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="3353" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1005" lty="-222" rbx="1369" rby="391"/>
 					<data>
-						<root scrollposition="680">
+						<root scrollposition="1361">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -8257,15 +8303,6 @@
 								<entry name="entry" ns="http://hl7.org/fhir"/>
 							</root>
 						</parameter>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="6086" kind="2">
-					<targets>
-						<datapoint pos="0" key="65"/>
-					</targets>
-					<view ltx="629" lty="-210" rbx="759" rby="-194"/>
-					<data>
-						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-diagnostic-report-lab" datatype="string"/>
 					</data>
 				</component>
 			</children>
@@ -9386,28 +9423,6 @@
 						<constant value="https://dasta.mzcr.cz/DSAHR.htm" datatype="string"/>
 					</data>
 				</component>
-				<component name="value-map" library="core" uid="3570" kind="23">
-					<sources>
-						<datapoint pos="0" key="102"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="103"/>
-					</targets>
-					<view ltx="460" lty="161" rbx="535" rby="198"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="A" to="Ano"/>
-								<entry from="N" to="Ne"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-						<comment>
-							<text>Detekce Ano/Ne</text>
-						</comment>
-					</data>
-				</component>
 				<component name="value-map" library="core" uid="3573" kind="23">
 					<sources>
 						<datapoint pos="0" key="105"/>
@@ -9473,15 +9488,6 @@
 					<view ltx="234" lty="157" rbx="379" rby="173"/>
 					<data>
 						<constant value="Vyšetření provedeno PCR stanovením" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3577" kind="2">
-					<targets>
-						<datapoint pos="0" key="117"/>
-					</targets>
-					<view ltx="234" lty="173" rbx="379" rby="189"/>
-					<data>
-						<constant value="Vyšetření provedeno sekvenačně" datatype="string"/>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="3579" kind="2">
@@ -9678,28 +9684,6 @@
 						<parameter usageKind="input" name="SpecimenReference"/>
 					</data>
 				</component>
-				<component name="Reference_Observation" library="provisio" uid="3565" kind="19" visible="0" blackbox="0">
-					<view ltx="424" lty="730" rbx="610" rby="763"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="92" componentid="3504"/>
-							<entry name="VGUID" inpkey="190" componentid="3759"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="referenceObservation" outkey="93" componentid="3506"/>
-						</root>
-					</data>
-				</component>
 				<component name="value-map" library="core" uid="3541" kind="23">
 					<sources>
 						<datapoint pos="0" key="16"/>
@@ -9773,61 +9757,6 @@
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="referencePracoviste" sequence="1"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3522" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="10" lty="393" rbx="161" rby="704"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="vrkpa" ns="1" outkey="100" expanded="1">
-								<entry name="guid" type="attribute" outkey="63"/>
-								<entry name="agens_kod" type="attribute" outkey="64"/>
-								<entry name="agens_text" type="attribute" outkey="65"/>
-								<entry name="agens_snmd_k" type="attribute" outkey="66"/>
-								<entry name="dalsi_vys" type="attribute" outkey="67"/>
-								<entry name="pritomnost" type="attribute" outkey="68"/>
-								<entry name="v_mikro" type="attribute" outkey="69"/>
-								<entry name="v_kultiv" type="attribute" outkey="70"/>
-								<entry name="v_pcr" type="attribute" outkey="71"/>
-								<entry name="v_seq" type="attribute" outkey="72"/>
-								<entry name="v_antig" type="attribute" outkey="73"/>
-								<entry name="jednotka" type="attribute" outkey="74"/>
-								<entry name="sez" type="attribute" outkey="174"/>
-								<entry name="multiplex" ns="1" outkey="75"/>
-								<entry name="antigen" ns="1" outkey="76"/>
-								<entry name="kvantita" ns="1" outkey="77" expanded="1">
-									<entry name="priznak" type="attribute" outkey="78"/>
-								</entry>
-								<entry name="vrav" ns="1" outkey="79" expanded="1">
-									<entry name="guid" type="attribute" outkey="94"/>
-									<entry name="vguid" type="attribute" outkey="191"/>
-								</entry>
-								<entry name="vrac" ns="1" outkey="87" expanded="1">
-									<entry name="guid" type="attribute" outkey="95"/>
-									<entry name="vguid" type="attribute" outkey="192"/>
-								</entry>
-								<entry name="dourceni" ns="1" outkey="80"/>
-								<entry name="vrmahn" ns="1" outkey="81"/>
-								<entry name="vrmlpn" ns="1" outkey="82"/>
-								<entry name="vrmzhl" ns="1" outkey="83"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
-						<parameter usageKind="input" name="vrkpa">
-							<root>
-								<entry name="ku_z_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-								<entry name="vrk" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								<entry name="vrkpa" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-							</root>
-						</parameter>
 					</data>
 				</component>
 				<component name="value-map" library="core" uid="3586" kind="23">
@@ -9980,11 +9909,119 @@
 						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-observation-result-laboratory" datatype="string"/>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="3577" kind="2">
+					<targets>
+						<datapoint pos="0" key="117"/>
+					</targets>
+					<view ltx="234" lty="173" rbx="379" rby="189"/>
+					<data>
+						<constant value="Vyšetření provedeno sekvenačně" datatype="string"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="3570" kind="23">
+					<sources>
+						<datapoint pos="0" key="102"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="103"/>
+					</targets>
+					<view ltx="460" lty="161" rbx="535" rby="198"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="A" to="Ano"/>
+								<entry from="N" to="Ne"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+						<comment>
+							<text>Detekce Ano/Ne</text>
+						</comment>
+					</data>
+				</component>
+				<component name="Reference_Observation" library="provisio" uid="3565" kind="19" visible="0" blackbox="0">
+					<view ltx="424" lty="730" rbx="610" rby="763"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="92" componentid="3504"/>
+							<entry name="VGUID" inpkey="190" componentid="3759"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="referenceObservation" outkey="93" componentid="3506"/>
+						</root>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3522" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="10" lty="393" rbx="161" rby="704"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="vrkpa" ns="1" outkey="100" expanded="1">
+								<entry name="guid" type="attribute" outkey="63"/>
+								<entry name="agens_kod" type="attribute" outkey="64"/>
+								<entry name="agens_text" type="attribute" outkey="65"/>
+								<entry name="agens_snmd_k" type="attribute" outkey="66"/>
+								<entry name="dalsi_vys" type="attribute" outkey="67"/>
+								<entry name="pritomnost" type="attribute" outkey="68"/>
+								<entry name="v_mikro" type="attribute" outkey="69"/>
+								<entry name="v_kultiv" type="attribute" outkey="70"/>
+								<entry name="v_pcr" type="attribute" outkey="71"/>
+								<entry name="v_seq" type="attribute" outkey="72"/>
+								<entry name="v_antig" type="attribute" outkey="73"/>
+								<entry name="jednotka" type="attribute" outkey="74"/>
+								<entry name="sez" type="attribute" outkey="174"/>
+								<entry name="multiplex" ns="1" outkey="75"/>
+								<entry name="antigen" ns="1" outkey="76"/>
+								<entry name="kvantita" ns="1" outkey="77" expanded="1">
+									<entry name="priznak" type="attribute" outkey="78"/>
+								</entry>
+								<entry name="vrav" ns="1" outkey="79" expanded="1">
+									<entry name="guid" type="attribute" outkey="94"/>
+									<entry name="vguid" type="attribute" outkey="191"/>
+								</entry>
+								<entry name="vrac" ns="1" outkey="87" expanded="1">
+									<entry name="guid" type="attribute" outkey="95"/>
+									<entry name="vguid" type="attribute" outkey="192"/>
+								</entry>
+								<entry name="dourceni" ns="1" outkey="80"/>
+								<entry name="vrmahn" ns="1" outkey="81"/>
+								<entry name="vrmlpn" ns="1" outkey="82"/>
+								<entry name="vrmzhl" ns="1" outkey="83"/>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<parameter usageKind="input" name="vrkpa">
+							<root>
+								<entry name="ku_z_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+								<entry name="vrk" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								<entry name="vrkpa" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="3523" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1015" lty="26" rbx="1327" rby="596"/>
 					<data>
-						<root scrollposition="1654">
+						<root scrollposition="2358">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -10018,8 +10055,8 @@
 										<entry name="status" ns="1">
 											<entry name="value" type="attribute" inpkey="21"/>
 										</entry>
-										<entry name="code" ns="1">
-											<entry name="coding" ns="1">
+										<entry name="code" ns="1" expanded="1">
+											<entry name="coding" ns="1" expanded="1">
 												<entry name="system" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="22"/>
 												</entry>
@@ -10084,7 +10121,7 @@
 												<entry name="value" type="attribute" inpkey="97"/>
 											</entry>
 										</entry>
-										<entry name="hasMember" ns="1" inpkey="98" clone="1">
+										<entry name="hasMember" ns="1" inpkey="98" expanded="1" clone="1">
 											<entry name="reference" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="99"/>
 											</entry>
@@ -10110,7 +10147,7 @@
 												</entry>
 											</entry>
 										</entry>
-										<entry name="component" ns="1" inpkey="132" clone="1">
+										<entry name="component" ns="1" inpkey="132" expanded="1" clone="1">
 											<entry name="code" ns="1" expanded="1">
 												<entry name="text" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="133"/>
@@ -10164,7 +10201,7 @@
 												</entry>
 											</entry>
 										</entry>
-										<entry name="component" ns="1" inpkey="141" clone="1">
+										<entry name="component" ns="1" inpkey="141" expanded="1" clone="1">
 											<entry name="code" ns="1" expanded="1">
 												<entry name="text" ns="1" expanded="1">
 													<entry name="value" type="attribute" inpkey="121"/>
@@ -11844,91 +11881,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="document" library="xml" uid="3652" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="14" lty="356" rbx="317" rby="510"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="ku_z_labType" ns="1" type="xml-type" expanded="1">
-								<entry name="id_lis" type="attribute" outkey="5"/>
-								<entry name="id_lo_is" type="attribute" outkey="107"/>
-								<entry name="dat_du" ns="1" outkey="97"/>
-								<entry name="dat_pl" ns="1" outkey="62"/>
-								<entry name="dat_vv" ns="1" outkey="64"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="input" name="ku_z_labType">
-							<root>
-								<entry name="ku_z_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="FullURL_Specimen" library="provisio" uid="5711" kind="19" visible="0" blackbox="0">
-					<view ltx="642" lty="-146" rbx="804" rby="-129"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="129" componentid="3669"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="FullURL_Specimen" outkey="130" componentid="3672"/>
-						</root>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3656" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="14" lty="98" rbx="159" rby="314"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="vrkType" ns="1" type="xml-type" expanded="1">
-								<entry name="guid" type="attribute" outkey="128"/>
-								<entry name="guid_specimen" type="attribute" outkey="134"/>
-								<entry name="ziskmat_kod" type="attribute" outkey="118"/>
-								<entry name="ziskmat_text" type="attribute" outkey="119"/>
-								<entry name="lokal_mo" type="attribute" outkey="120"/>
-								<entry name="stav_mat" type="attribute" outkey="121"/>
-								<entry name="stav_zprac" type="attribute" outkey="122"/>
-								<entry name="vrkpa" ns="1">
-									<entry name="kvantita" ns="1" expanded="1"/>
-									<entry name="vrac" ns="1" expanded="1">
-										<entry name="kvantita" ns="1" expanded="1"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="input" name="vrkType" optional="1">
-							<root>
-								<entry name="vrkType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="5827" kind="2">
 					<targets>
 						<datapoint pos="0" key="137"/>
@@ -11987,11 +11939,32 @@
 						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-specimen-lab" datatype="string"/>
 					</data>
 				</component>
+				<component name="FullURL_Specimen" library="provisio" uid="5711" kind="19" visible="0" blackbox="0">
+					<view ltx="642" lty="-146" rbx="804" rby="-129"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="129" componentid="3669"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="FullURL_Specimen" outkey="130" componentid="3672"/>
+						</root>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="3654" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1036" lty="-241" rbx="1607" rby="525"/>
 					<data>
-						<root scrollposition="2000">
+						<root scrollposition="3082">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -12006,7 +11979,7 @@
 								</entry>
 								<entry name="resource" ns="1" expanded="1">
 									<entry name="Specimen" ns="1" expanded="1">
-										<entry name="id" ns="1" inpkey="133">
+										<entry name="id" ns="1" inpkey="133" expanded="1">
 											<entry name="value" type="attribute" inpkey="52"/>
 										</entry>
 										<entry name="meta" ns="1" expanded="1">
@@ -12030,7 +12003,7 @@
 												<entry name="#text" inpkey="136"/>
 											</entry>
 										</entry>
-										<entry name="identifier" ns="1" inpkey="6">
+										<entry name="identifier" ns="1" inpkey="6" expanded="1">
 											<entry name="value" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="115"/>
 											</entry>
@@ -12052,7 +12025,7 @@
 											<entry name="collectedDateTime" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="117"/>
 											</entry>
-											<entry name="method" ns="1" inpkey="125">
+											<entry name="method" ns="1" inpkey="125" expanded="1">
 												<entry name="coding" ns="1" expanded="1">
 													<entry name="system" ns="1" expanded="1">
 														<entry name="value" type="attribute" inpkey="87"/>
@@ -12102,6 +12075,70 @@
 						</parameter>
 					</data>
 				</component>
+				<component name="document" library="xml" uid="3656" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="14" lty="98" rbx="159" rby="314"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="vrkType" ns="1" type="xml-type" expanded="1">
+								<entry name="guid" type="attribute" outkey="128"/>
+								<entry name="guid_specimen" type="attribute" outkey="134"/>
+								<entry name="ziskmat_kod" type="attribute" outkey="118"/>
+								<entry name="ziskmat_text" type="attribute" outkey="119"/>
+								<entry name="lokal_mo" type="attribute" outkey="120"/>
+								<entry name="stav_mat" type="attribute" outkey="121"/>
+								<entry name="stav_zprac" type="attribute" outkey="122"/>
+								<entry name="vrkpa" ns="1">
+									<entry name="kvantita" ns="1" expanded="1"/>
+									<entry name="vrac" ns="1" expanded="1">
+										<entry name="kvantita" ns="1" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="input" name="vrkType" optional="1">
+							<root>
+								<entry name="vrkType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3652" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="14" lty="356" rbx="317" rby="510"/>
+					<data>
+						<root scrollposition="100">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="ku_z_labType" ns="1" type="xml-type" expanded="1">
+								<entry name="id_lis" type="attribute" outkey="5"/>
+								<entry name="id_lo_is" type="attribute" outkey="107"/>
+								<entry name="dat_du" ns="1" outkey="97"/>
+								<entry name="dat_pl" ns="1" outkey="62"/>
+								<entry name="dat_vv" ns="1" outkey="64"/>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="input" name="ku_z_labType">
+							<root>
+								<entry name="ku_z_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
 			</children>
 			<graph directed="1">
 				<edges/>
@@ -12133,13 +12170,8 @@
 					<vertex vertexkey="134">
 						<edges>
 							<edge vertexkey="20"/>
-							<edge vertexkey="129"/>
-						</edges>
-					</vertex>
-					<vertex vertexkey="128">
-						<edges>
 							<edge vertexkey="52"/>
-							<edge vertexkey="133"/>
+							<edge vertexkey="129"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="54">
@@ -12221,6 +12253,11 @@
 						<edges>
 							<edge vertexkey="131"/>
 							<edge vertexkey="132"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="128">
+						<edges>
+							<edge vertexkey="133"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="137">
@@ -12588,27 +12625,6 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="FullURL_Composition" library="provisio" uid="5726" kind="19" visible="0" blackbox="0">
-					<view ltx="666" lty="26" rbx="844" rby="43"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" inpkey="78" componentid="5721"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="FullURL_Composition" outkey="79" componentid="5723"/>
-						</root>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="3745" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="37" lty="-12" rbx="339" rby="125"/>
@@ -12668,15 +12684,6 @@
 						<constant value="section:lab-no-subsections" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="3742" kind="2">
-					<targets>
-						<datapoint pos="0" key="17"/>
-					</targets>
-					<view ltx="441" lty="21" rbx="563" rby="37"/>
-					<data>
-						<constant value="Laboratory report" datatype="string"/>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="3762" kind="2">
 					<targets>
 						<datapoint/>
@@ -12684,15 +12691,6 @@
 					<view ltx="780" lty="118" rbx="913" rby="134"/>
 					<data>
 						<constant value="http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3741" kind="2">
-					<targets>
-						<datapoint pos="0" key="16"/>
-					</targets>
-					<view ltx="441" lty="5" rbx="521" rby="21"/>
-					<data>
-						<constant value="11502-2" datatype="string"/>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="3736" kind="2">
@@ -12743,15 +12741,6 @@
 						<constant value="26436-6" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="3753" kind="2">
-					<targets>
-						<datapoint pos="0" key="66"/>
-					</targets>
-					<view ltx="434" lty="229" rbx="543" rby="245"/>
-					<data>
-						<constant value="http://loinc.org" datatype="string"/>
-					</data>
-				</component>
 				<component name="value" library="core" uid="5774" kind="3">
 					<sources>
 						<datapoint pos="0" key="92"/>
@@ -12779,43 +12768,6 @@
 					<view ltx="234" lty="213" rbx="384" rby="229"/>
 					<data>
 						<constant value="Composition_diagnosticReport" datatype="string"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3725" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="37" lty="154" rbx="187" rby="654"/>
-					<data>
-						<root scrollposition="1616">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="ku" ns="1" expanded="1">
-								<entry name="ku_z" ns="1" expanded="1">
-									<entry name="guid" type="attribute" outkey="10"/>
-									<entry name="dat_prov" ns="1" outkey="22" expanded="1"/>
-									<entry name="ku_z_lab" ns="1" expanded="1">
-										<entry name="vrx" ns="1" expanded="1"/>
-										<entry name="vrk" ns="1" expanded="1">
-											<entry name="vrmmn" ns="1" outkey="38"/>
-											<entry name="vrmahn" ns="1" outkey="39"/>
-											<entry name="vrmlpn" ns="1" outkey="40"/>
-											<entry name="vrmzhl" ns="1" outkey="41"/>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="input" name="ku_Type">
-							<root>
-								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								<entry name="ku" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-							</root>
-						</parameter>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="3739" kind="14">
@@ -12881,11 +12833,106 @@
 						<constant value="DiagnosticReport/" datatype="string"/>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="6083" kind="2">
+					<targets>
+						<datapoint pos="0" key="116"/>
+					</targets>
+					<view ltx="726" lty="-10" rbx="856" rby="6"/>
+					<data>
+						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-composition-lab-report" datatype="string"/>
+					</data>
+				</component>
+				<component name="FullURL_Composition" library="provisio" uid="5726" kind="19" visible="0" blackbox="0">
+					<view ltx="666" lty="26" rbx="844" rby="43"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="78" componentid="5721"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="FullURL_Composition" outkey="79" componentid="5723"/>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3753" kind="2">
+					<targets>
+						<datapoint pos="0" key="66"/>
+					</targets>
+					<view ltx="434" lty="229" rbx="543" rby="245"/>
+					<data>
+						<constant value="http://loinc.org" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3741" kind="2">
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="441" lty="5" rbx="521" rby="21"/>
+					<data>
+						<constant value="11502-2" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="3742" kind="2">
+					<targets>
+						<datapoint pos="0" key="17"/>
+					</targets>
+					<view ltx="441" lty="21" rbx="563" rby="37"/>
+					<data>
+						<constant value="Laboratory report" datatype="string"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3725" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="37" lty="154" rbx="187" rby="654"/>
+					<data>
+						<root scrollposition="100">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="ku" ns="1" expanded="1">
+								<entry name="ku_z" ns="1" expanded="1">
+									<entry name="guid" type="attribute" outkey="10"/>
+									<entry name="dat_prov" ns="1" outkey="22" expanded="1"/>
+									<entry name="p_pracoviste" ns="1" outkey="117"/>
+									<entry name="ku_z_lab" ns="1" expanded="1">
+										<entry name="vrx" ns="1" expanded="1"/>
+										<entry name="vrk" ns="1" expanded="1">
+											<entry name="vrmmn" ns="1" outkey="38"/>
+											<entry name="vrmahn" ns="1" outkey="39"/>
+											<entry name="vrmlpn" ns="1" outkey="40"/>
+											<entry name="vrmzhl" ns="1" outkey="41"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="input" name="ku_Type">
+							<root>
+								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								<entry name="ku" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
 				<component name="document" library="xml" uid="3726" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1023" lty="12" rbx="1431" rby="510"/>
 					<data>
-						<root scrollposition="652">
+						<root>
 							<header>
 								<namespaces>
 									<namespace/>
@@ -12894,7 +12941,7 @@
 									<namespace uid="http://www.altova.com/mapforce"/>
 								</namespaces>
 							</header>
-							<entry name="entry" ns="1" inpkey="12" expanded="1">
+							<entry name="entry" ns="1" inpkey="12">
 								<entry name="fullUrl" ns="1" inpkey="82" expanded="1">
 									<entry name="value" type="attribute" inpkey="83"/>
 								</entry>
@@ -13095,7 +13142,7 @@
 											<entry name="title" ns="1" expanded="1">
 												<entry name="value" type="attribute" inpkey="107"/>
 											</entry>
-											<entry name="code" ns="1">
+											<entry name="code" ns="1" expanded="1">
 												<entry name="coding" ns="1" expanded="1">
 													<entry name="system" ns="1" expanded="1">
 														<entry name="value" type="attribute" inpkey="108"/>
@@ -13123,9 +13170,10 @@
 									</entry>
 								</entry>
 							</entry>
+							<entry name="entry" ns="1" inpkey="118" clone="1"/>
 						</root>
 						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="output" name="entry">
+						<parameter usageKind="output" name="entry" sequence="1">
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
 								<entry name="entry" ns="http://hl7.org/fhir"/>
@@ -13133,13 +13181,31 @@
 						</parameter>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6083" kind="2">
-					<targets>
-						<datapoint pos="0" key="116"/>
-					</targets>
-					<view ltx="726" lty="-10" rbx="856" rby="6"/>
+				<component name="pracoviste" library="provisio" uid="6661" kind="19" visible="0" blackbox="0">
+					<view ltx="626" lty="610" rbx="926" rby="810"/>
 					<data>
-						<constant value="https://hl7.cz/fhir/lab/StructureDefinition/cz-composition-lab-report" datatype="string"/>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="pracovisteType" ns="1" componentid="6375" expanded="1">
+								<entry name="pracovisteType" type="xml-type" inpkey="119"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="6372" expanded="1">
+								<entry name="entry" outkey="120"/>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -13151,6 +13217,16 @@
 						</data>
 					</edge>
 					<edge edgekey="29">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="118">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="119">
 						<data>
 							<dataconnection type="2"/>
 						</data>
@@ -13371,6 +13447,16 @@
 					<vertex vertexkey="116">
 						<edges>
 							<edge vertexkey="115"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="120">
+						<edges>
+							<edge vertexkey="118" edgekey="118"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="117">
+						<edges>
+							<edge vertexkey="119" edgekey="119"/>
 						</edges>
 					</vertex>
 				</vertices>
@@ -18659,6 +18745,594 @@
 						<edges>
 							<edge vertexkey="10"/>
 							<edge vertexkey="11"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="pracoviste" library="provisio" uid="6659" editable="1" blackbox="0">
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="6383" kind="2">
+					<targets>
+						<datapoint pos="0" key="82"/>
+					</targets>
+					<view ltx="594" lty="130" rbx="727" rby="146"/>
+					<data>
+						<constant value="http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core" datatype="string"/>
+					</data>
+				</component>
+				<component name="adresa_spojeni" library="provisio" uid="6378" kind="19" visible="0" blackbox="0">
+					<view ltx="472" lty="519" rbx="790" rby="545"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="as" ns="1" componentid="2708" expanded="1">
+								<entry name="as" inpkey="58"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ContactPoint" ns="1" componentid="2705" expanded="1">
+								<entry name="ContactPoint" type="xml-type" outkey="56"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6384" kind="2">
+					<targets>
+						<datapoint pos="0" key="74"/>
+					</targets>
+					<view ltx="666" lty="186" rbx="737" rby="202"/>
+					<data>
+						<constant value="official" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6387" kind="2">
+					<targets>
+						<datapoint pos="0" key="77"/>
+					</targets>
+					<view ltx="592" lty="235" rbx="728" rby="251"/>
+					<data>
+						<constant value="https://ncez.mzcr.cz/fhir/sid/icp" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6386" kind="2">
+					<targets>
+						<datapoint pos="0" key="76"/>
+					</targets>
+					<view ltx="591" lty="218" rbx="727" rby="234"/>
+					<data>
+						<constant value="https://ncez.mzcr.cz/fhir/sid/icz" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6389" kind="2">
+					<targets>
+						<datapoint pos="0" key="79"/>
+					</targets>
+					<view ltx="592" lty="250" rbx="728" rby="266"/>
+					<data>
+						<constant value="https://ncez.mzcr.cz/fhir/sid/oddel" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6395" kind="2">
+					<targets>
+						<datapoint pos="0" key="84"/>
+					</targets>
+					<view ltx="648" lty="282" rbx="735" rby="298"/>
+					<data>
+						<constant value="generated" datatype="string"/>
+					</data>
+				</component>
+				<component name="FullURL_Organization" library="provisio" uid="6653" kind="19" visible="0" blackbox="0">
+					<view ltx="554" lty="25" rbx="733" rby="42"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="GUID" inpkey="114" componentid="5845"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="FullURL_Organization" outkey="115" componentid="5846"/>
+						</root>
+					</data>
+				</component>
+				<component name="adresa" library="provisio" uid="6377" kind="19" visible="0" blackbox="0">
+					<view ltx="472" lty="443" rbx="790" rby="489"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="a" ns="1" componentid="88" expanded="1">
+								<entry name="a" inpkey="62"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Address" ns="1" componentid="2667" expanded="1">
+								<entry name="Address" type="xml-type" outkey="59"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6385" kind="2">
+					<targets>
+						<datapoint pos="0" key="75"/>
+					</targets>
+					<view ltx="592" lty="202" rbx="728" rby="218"/>
+					<data>
+						<constant value="https://ncez.mzcr.cz/fhir/sid/ico" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6388" kind="2">
+					<targets>
+						<datapoint pos="0" key="78"/>
+					</targets>
+					<view ltx="591" lty="266" rbx="727" rby="282"/>
+					<data>
+						<constant value="https://ncez.mzcr.cz/fhir/sid/pcz" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6658" kind="2">
+					<targets>
+						<datapoint pos="0" key="117"/>
+					</targets>
+					<view ltx="594" lty="298" rbx="730" rby="314"/>
+					<data>
+						<constant value="https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar" datatype="string"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="6372" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="1113" lty="70" rbx="1516" rby="649"/>
+					<data>
+						<root scrollposition="1924">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.w3.org/1999/xhtml"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" inpkey="21" expanded="1">
+								<entry name="fullUrl" ns="1" inpkey="34" expanded="1">
+									<entry name="value" type="attribute" inpkey="39"/>
+								</entry>
+								<entry name="resource" ns="1" expanded="1">
+									<entry name="Organization" ns="1" expanded="1">
+										<entry name="id" ns="1">
+											<entry name="value" type="attribute" inpkey="85"/>
+										</entry>
+										<entry name="meta" ns="1">
+											<entry name="versionId" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="86"/>
+											</entry>
+											<entry name="profile" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="87"/>
+											</entry>
+										</entry>
+										<entry name="text" ns="1">
+											<entry name="status" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="88"/>
+											</entry>
+											<entry name="div" ns="2" expanded="1">
+												<entry name="#text" inpkey="89"/>
+											</entry>
+										</entry>
+										<entry name="identifier" ns="1" inpkey="90">
+											<entry name="use" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="91"/>
+											</entry>
+											<entry name="type" ns="1" expanded="1">
+												<entry name="coding" ns="1" expanded="1">
+													<entry name="system" ns="1" expanded="1"/>
+													<entry name="code" ns="1" expanded="1"/>
+												</entry>
+											</entry>
+											<entry name="system" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="92"/>
+											</entry>
+											<entry name="value" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="93"/>
+											</entry>
+										</entry>
+										<entry name="identifier" ns="1" inpkey="94" clone="1">
+											<entry name="use" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="95"/>
+											</entry>
+											<entry name="system" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="96"/>
+											</entry>
+											<entry name="value" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="97"/>
+											</entry>
+										</entry>
+										<entry name="identifier" ns="1" inpkey="98" clone="1">
+											<entry name="use" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="99"/>
+											</entry>
+											<entry name="system" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="100"/>
+											</entry>
+											<entry name="value" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="101"/>
+											</entry>
+										</entry>
+										<entry name="identifier" ns="1" inpkey="102" clone="1">
+											<entry name="use" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="103"/>
+											</entry>
+											<entry name="system" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="104"/>
+											</entry>
+											<entry name="value" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="105"/>
+											</entry>
+										</entry>
+										<entry name="identifier" ns="1" inpkey="106" clone="1">
+											<entry name="use" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="107"/>
+											</entry>
+											<entry name="system" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="108"/>
+											</entry>
+											<entry name="value" ns="1" expanded="1">
+												<entry name="value" type="attribute" inpkey="109"/>
+											</entry>
+										</entry>
+										<entry name="type" ns="1" expanded="1">
+											<entry name="coding" ns="1" expanded="1">
+												<entry name="system" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="120"/>
+												</entry>
+												<entry name="code" ns="1" expanded="1">
+													<entry name="value" type="attribute" inpkey="121"/>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="name" ns="1" inpkey="110" expanded="1">
+											<entry name="value" type="attribute" inpkey="111"/>
+										</entry>
+										<entry name="telecom" ns="1" inpkey="112"/>
+										<entry name="address" ns="1" inpkey="113"/>
+									</entry>
+									<entry name="Practitioner" ns="1">
+										<entry name="id" ns="1" expanded="1"/>
+										<entry name="meta" ns="1" expanded="1">
+											<entry name="versionId" ns="1" expanded="1"/>
+											<entry name="profile" ns="1" expanded="1"/>
+										</entry>
+										<entry name="text" ns="1" expanded="1">
+											<entry name="status" ns="1" expanded="1"/>
+											<entry name="div" ns="2" expanded="1"/>
+										</entry>
+										<entry name="identifier" ns="1" expanded="1">
+											<entry name="value" ns="1" expanded="1"/>
+										</entry>
+										<entry name="identifier" ns="1" clone="1">
+											<entry name="value" ns="1" expanded="1"/>
+										</entry>
+										<entry name="identifier" ns="1" expanded="1" clone="1">
+											<entry name="value" ns="1" expanded="1"/>
+										</entry>
+										<entry name="identifier" ns="1" clone="1">
+											<entry name="value" ns="1" expanded="1"/>
+										</entry>
+										<entry name="name" ns="1">
+											<entry name="given" ns="1" expanded="1"/>
+											<entry name="prefix" ns="1" expanded="1"/>
+											<entry name="suffix" ns="1" expanded="1"/>
+										</entry>
+										<entry name="qualification" ns="1">
+											<entry name="code" ns="1" expanded="1">
+												<entry name="coding" ns="1" expanded="1">
+													<entry name="system" ns="1" expanded="1"/>
+													<entry name="code" ns="1" expanded="1"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
+						<parameter usageKind="output" name="entry" sequence="1">
+							<root>
+								<entry name="Bundle" ns="http://hl7.org/fhir"/>
+								<entry name="entry" ns="http://hl7.org/fhir"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="6375" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="154" lty="137" rbx="304" rby="386"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="pracovisteType" ns="1" type="xml-type" outkey="83" expanded="1">
+								<entry name="guid" type="attribute" outkey="66"/>
+								<entry name="vguid" type="attribute" outkey="63"/>
+								<entry name="ico" type="attribute" outkey="55"/>
+								<entry name="icz" type="attribute" outkey="50"/>
+								<entry name="icp" type="attribute" outkey="53"/>
+								<entry name="odb" type="attribute" outkey="116"/>
+								<entry name="oddel" type="attribute" outkey="49"/>
+								<entry name="pcz" type="attribute" outkey="52"/>
+								<entry name="nazev" ns="1" outkey="60"/>
+								<entry name="a" ns="2" outkey="61" expanded="1">
+									<entry name="as" ns="2" outkey="57"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<parameter usageKind="input" name="pracovisteType" optional="1" sequence="1">
+							<root>
+								<entry name="pracovisteType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="58">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="62">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="112">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="113">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="83">
+						<edges>
+							<edge vertexkey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="115">
+						<edges>
+							<edge vertexkey="34"/>
+							<edge vertexkey="39"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="57">
+						<edges>
+							<edge vertexkey="58" edgekey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="61">
+						<edges>
+							<edge vertexkey="62" edgekey="62"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="66">
+						<edges>
+							<edge vertexkey="85"/>
+							<edge vertexkey="114"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="86"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82">
+						<edges>
+							<edge vertexkey="87"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84">
+						<edges>
+							<edge vertexkey="88"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="60">
+						<edges>
+							<edge vertexkey="89"/>
+							<edge vertexkey="110"/>
+							<edge vertexkey="111"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="55">
+						<edges>
+							<edge vertexkey="90"/>
+							<edge vertexkey="93"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="74">
+						<edges>
+							<edge vertexkey="91"/>
+							<edge vertexkey="95"/>
+							<edge vertexkey="99"/>
+							<edge vertexkey="103"/>
+							<edge vertexkey="107"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="75">
+						<edges>
+							<edge vertexkey="92"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="94"/>
+							<edge vertexkey="97"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="76">
+						<edges>
+							<edge vertexkey="96"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="53">
+						<edges>
+							<edge vertexkey="98"/>
+							<edge vertexkey="101"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="77">
+						<edges>
+							<edge vertexkey="100"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="102"/>
+							<edge vertexkey="105"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="79">
+						<edges>
+							<edge vertexkey="104"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="106"/>
+							<edge vertexkey="109"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="78">
+						<edges>
+							<edge vertexkey="108"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="56">
+						<edges>
+							<edge vertexkey="112" edgekey="112"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="59">
+						<edges>
+							<edge vertexkey="113" edgekey="113"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="117">
+						<edges>
+							<edge vertexkey="120"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="116">
+						<edges>
+							<edge vertexkey="121"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="FullURL_Organization" library="provisio" uid="6662" editable="1" blackbox="0">
+		<structure>
+			<children>
+				<component name="GUID" library="core" uid="5845" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="350" lty="317" rbx="425" rby="354"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="GUID"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="5848" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="4"/>
+						<datapoint pos="1" key="2"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="565" lty="277" rbx="640" rby="331"/>
+				</component>
+				<component name="FullURL_Organization" library="core" uid="5846" kind="7">
+					<sources>
+						<datapoint pos="0" key="6"/>
+					</sources>
+					<view ltx="789" lty="286" rbx="916" rby="323"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="FullURL_Organization"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5847" kind="2">
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="351" lty="252" rbx="432" rby="268"/>
+					<data>
+						<constant value="urn:uuid:" datatype="string"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="4"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="6"/>
 						</edges>
 					</vertex>
 				</vertices>

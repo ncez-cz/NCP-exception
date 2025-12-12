@@ -122,11 +122,15 @@
 				</dsip:ku_z>
 			</dsip:ku> -->
 			<dsip:ku>
-				<dsip:ku_z guid="324029d0-deec-40c9-83a8-049b3e2b9aa3" vguid="324029d0-deec-40c9-83a8-049b3e2b9da9">
+				<dsip:ku_z guid="324029d0-deec-40c9-83a8-049b3e2b9aa3" vguid="324029d0-deec-40c9-83a8-049b3e2b9da9" duverne="N" fazespec="ZF" idku="MEDICALC.FNPL.1234567890" typku="AMB.VYS">
 					<dsip:p_pracoviste guid="0542eb97-c14b-4aef-bc13-555a25a3513a" vguid="5b5fa5ad-19af-4297-92d2-3b2e850dd11f" icz="44101000" icp="44101882" odb="501">
 						<dsip:nazev>Chirurgická ambulance</dsip:nazev>
 					</dsip:p_pracoviste>
 					<dsip:dat_prov>2006-12-04T12:12:12+02:00</dsip:dat_prov>
+					<dsip:dat_vydani>2006-12-05T11:00:00+02:00</dsip:dat_vydani>
+					<dsip:text>
+						<dsip:ptext xml:space="preserve">Nález normální, za 3 týdny doporučena kontrola u praktického lékaře.</dsip:ptext>
+					</dsip:text>
 					<!-- jen atributy a elementy pro ku_z_lab 1********************************************************************************** -->
 					<!-- 			 						
 			<dsip:ku_z_lab guid="6251b13b-c824-442b-81ec-923ba700f16b" klic_nclp="00123"
@@ -167,16 +171,16 @@
 				</dsip:vrn>
 			</dsip:ku_z_lab> -->
 					<!-- vrn 1********************************************************************************** -->
-					<!-- <dsip:ku_z_lab guid="f82742b9-5b90-4456-a48c-ff03b56f0b4d" vguid="966a9d2d-1df1-4479-8cad-b2fff4c1af11" klic_nclp="00123" syst_klic="S" komp_klic="A2G" typ_cispol="N" typpol_fh="2" stav_vys="A" typ_sdel_vys="N"> -->
-					<!-- <dsip:dat_du typ="A">2006-01-01T12:00:00+02:00</dsip:dat_du> -->
-					<!-- <dsip:nazev_lclp>AST</dsip:nazev_lclp> -->
-					<!-- <dsip:vrn guid="765df452-7a15-4272-9313-060a3f34f328" vguid="50e9e844-eeb8-4eff-b587-c776bd376340" priznak_kvant="R" formrm="1"> -->
-					<!-- <dsip:hodnota>0.2</dsip:hodnota> -->
-					<!-- <dsip:jednotka>g/l</dsip:jednotka> -->
-					<!-- </dsip:vrn> -->
-					<!-- </dsip:ku_z_lab> -->
+<!-- 					<dsip:ku_z_lab guid="f82742b9-5b90-4456-a48c-ff03b56f0b4d" vguid="966a9d2d-1df1-4479-8cad-b2fff4c1af11" klic_nclp="00123" syst_klic="S" komp_klic="A2G" typ_cispol="N" typpol_fh="2" stav_vys="A" typ_sdel_vys="N">
+					<dsip:dat_du typ="A">2006-01-01T12:00:00+02:00</dsip:dat_du>
+					<dsip:nazev_lclp>AST</dsip:nazev_lclp>
+					<dsip:vrn guid="765df452-7a15-4272-9313-060a3f34f328" vguid="50e9e844-eeb8-4eff-b587-c776bd376340" priznak_kvant="M" formrm="1">
+					<dsip:hodnota>0.2</dsip:hodnota>
+					<dsip:jednotka>g/l</dsip:jednotka>
+					</dsip:vrn>
+					</dsip:ku_z_lab> -->
 					<!-- vrn 2 ********************************************************************************** -->
-<!-- 					<dsip:ku_z_lab guid="df5c58aa-0240-4b2a-b129-9797aba6a4a9" vguid="23cf1e50-a1c1-4311-a377-5c3fc0ae7bf4" klic_nclp="00634"
+ 					<dsip:ku_z_lab guid="df5c58aa-0240-4b2a-b129-9797aba6a4a9" vguid="23cf1e50-a1c1-4311-a377-5c3fc0ae7bf4" klic_nclp="00634"
 					syst_klic="S"
 					komp_klic="AMS"
 					typ_cispol="N"
@@ -216,9 +220,9 @@
 					<dsip:s8>8</dsip:s8>
 					</dsip:skala>
 					</dsip:vrn>
-					</dsip:ku_z_lab> -->
+					</dsip:ku_z_lab>
 					<!-- vrf ********************************************************************************** -->
-<!-- 					<dsip:ku_z_lab guid="540f16c2-f91f-47bc-91ad-b215a6874658" vguid="c7d3fba0-cd9c-4d38-ab57-02aa1450cecf" klic_nclp="03399"
+<!--  					<dsip:ku_z_lab guid="540f16c2-f91f-47bc-91ad-b215a6874658" vguid="c7d3fba0-cd9c-4d38-ab57-02aa1450cecf" klic_nclp="03399"
 			               syst_klic="U"
 			               komp_klic="NITRITSQ"
 			               typ_cispol="N"
@@ -240,9 +244,9 @@
 					<dsip:hodnota_text>negativní</dsip:hodnota_text>
 					<dsip:pozn>Nejaka poznámka TEST</dsip:pozn>
 				</dsip:vrf>
-			</dsip:ku_z_lab> --> 
+			</dsip:ku_z_lab>  -->
 					<!-- vrs ********************************************************************************** -->
-<!--  					<dsip:ku_z_lab guid="b7aa4fee-ae6e-4f60-a854-926874e021a5" vguid="8d4507f4-92f0-454a-a63a-1e63f0fa4e26" klic_nclp="01654"
+<!--   					<dsip:ku_z_lab guid="b7aa4fee-ae6e-4f60-a854-926874e021a5" vguid="8d4507f4-92f0-454a-a63a-1e63f0fa4e26" klic_nclp="01654"
 					syst_klic="P"
 					komp_klic="ELPHO"
 					typ_cispol="N"
@@ -262,7 +266,7 @@
 					priznak2_kvant="M"
 					hodnota2_cislo="10"/>
 					</dsip:vrs>
-					</dsip:ku_z_lab>    -->
+					</dsip:ku_z_lab>  -->   
 				<!-- 	vrx **********************************************************************************--> 
 	<!-- 				<dsip:ku_z_lab guid="4b846ba6-d1a0-41ea-a7ad-fa4831031ae9" vguid="3199b694-d075-4787-b49a-27b7e2730515" klic_nclp="02385"
 					syst_klic="CAL(U)"
@@ -281,7 +285,7 @@
 					</dsip:vrx>
 					</dsip:ku_z_lab> -->
 				<!-- 	vrb ******************************************************************************* --> 
-<!-- 					<dsip:ku_z_lab guid="f81ebb3a-b989-4a0e-a6b9-0556b57b57a2" vguid="edf9076a-9520-4edf-8f7d-663be3dfd516" klic_nclp="20045"
+<!--   				 	<dsip:ku_z_lab guid="f81ebb3a-b989-4a0e-a6b9-0556b57b57a2" vguid="edf9076a-9520-4edf-8f7d-663be3dfd516" klic_nclp="20045"
 					syst_klic="REPI"
 					komp_klic="LABPOZN"
 					typ_cispol="N"
@@ -301,9 +305,9 @@
 					<dsip:ptext xml:space="preserve">Dyslipoproteinemie s rizikem pro pacienta ve skupině D/EAS. Bližší určení, diferenciace, určení rizika, genetická prevalence a navedení odpovídající léčby je možné domluvit v naší poradně.</dsip:ptext>
 					</dsip:text>
 					</dsip:vrb>
-					</dsip:ku_z_lab>	 -->	  
+					</dsip:ku_z_lab>	 -->  	  
 					<!-- vrr ********************************************************************************** -->
-<!-- 					 					 			<dsip:ku_z_lab guid="f88f5b57-8ae7-4276-8d40-288c5ca6c2ba" vguid="3cfd0c2c-2509-456d-ad62-3577ab7c4000" klic_nclp="20006"
+<!--  					 					 			<dsip:ku_z_lab guid="f88f5b57-8ae7-4276-8d40-288c5ca6c2ba" vguid="3cfd0c2c-2509-456d-ad62-3577ab7c4000" klic_nclp="20006"
 			               syst_klic="REP"
 			               komp_klic="BRUT"
 			               typ_cispol="N"
@@ -318,16 +322,16 @@
 				          rad_zahlavi="9"
 				          rad_paty="2">
 					<dsip:text>
-						<dsip:ptext xml:space="preserve"> Material cislo 46 ze dne 02/12/2005-14:51 OKB 02/12-15:00 Prijmeni Jmeno 2000 MUDR. Jmeno Prijmeni MUDr. Jmeno Prijmeni 10002145/107/107 Narozen(a) 01/01/1976 Diagnoza...E78.0 Rodne cislo..760101/9998 Vyska... 0 cm Komentar... Pojistka.....111 Hmotnost 0.0 kg Odber dne..02/12/2005-14:38 ******************************************************************************** Nazev vysetreni Vysledek Jednotky Referencni interval Hodnoceni ******************************************************************************** Cholesterol 5.14 mmol/l ( 3.50... 5.20) (..x) Triacylglyceroly 1.12 mmol/l ( 0.10... 1.80) (.x.) HDL-cholesterol 1.47 mmol/l ( 1.40... 2.80) (x..) LDL-cholesterol 3.16 mmol/l ( ) (.x.) ******************************************************************************** výsledky prošly kontrolou výsledky odeslal(a) PEST </dsip:ptext>
+						<dsip:ptext xml:space="preserve">Material cislo 46 ze dne 02/12/2005-14:51 OKB 02/12-15:00 Prijmeni Jmeno 2000 MUDR. Jmeno Prijmeni MUDr. Jmeno Prijmeni 10002145/107/107 Narozen(a) 01/01/1976 Diagnoza...E78.0 Rodne cislo..760101/9998 Vyska... 0 cm Komentar... Pojistka.....111 Hmotnost 0.0 kg Odber dne..02/12/2005-14:38 ******************************************************************************** Nazev vysetreni Vysledek Jednotky Referencni interval Hodnoceni ******************************************************************************** Cholesterol 5.14 mmol/l ( 3.50... 5.20) (..x) Triacylglyceroly 1.12 mmol/l ( 0.10... 1.80) (.x.) HDL-cholesterol 1.47 mmol/l ( 1.40... 2.80) (x..) LDL-cholesterol 3.16 mmol/l ( ) (.x.) ******************************************************************************** výsledky prošly kontrolou výsledky odeslal(a) PEST </dsip:ptext>
 					</dsip:text>
 				</dsip:vrr>
 			</dsip:ku_z_lab> -->
 					<!-- vrc********************************************************************************** -->
-<!-- 					<dsip:ku_z_lab guid="d3b6eda5-9c6e-4cea-86c0-9cdd8f37dddb"  vguid="8a92adbe-0a0c-40ae-8b10-32ff239ff373" klic_nclp="20006"
+<!--  					<dsip:ku_z_lab guid="d3b6eda5-9c6e-4cea-86c0-9cdd8f37dddb"  vguid="8a92adbe-0a0c-40ae-8b10-32ff239ff373" klic_nclp="20006"
 					syst_klic="REP"
 					komp_klic="BRUT"
 					typ_cispol="N"
-					typpol_fh="R"
+					typpol_fh="C"
 					stav_vys="A"
 					typ_sdel_vys="N"
 					id_lis="46/2/12/2005"
@@ -343,7 +347,7 @@
 					syst_klic="REP"
 					komp_klic="BRUT"
 					typ_cispol="N"
-					typpol_fh="R"
+					typpol_fh="D"
 					stav_vys="A"
 					typ_sdel_vys="N"
 					id_lis="46/2/12/2005"
@@ -355,7 +359,7 @@
 					</dsip:vrd>
 					</dsip:ku_z_lab> -->
 					<!-- vrk********************************************************************************** -->
- 				<!-- 	<dsip:ku_z_lab guid="cd3e1986-ab81-4f5f-9239-4275cdba432e" vguid="cd3e1986-ab81-4f5f-9239-4275cdba4111" klic_nclp="11963" syst_klic="U" komp_klic="AGENS" klic_nclp_o="11963" typ_cispol="N" typpol_fh="K" stav_vys="A" typ_sdel_vys="N" id_lis="1456/2005">
+<!--  				   	 <dsip:ku_z_lab guid="cd3e1986-ab81-4f5f-9239-4275cdba432e" vguid="cd3e1986-ab81-4f5f-9239-4275cdba4111" klic_nclp="11963" syst_klic="U" komp_klic="AGENS" klic_nclp_o="11922" typ_cispol="N" typpol_fh="K" stav_vys="A" typ_sdel_vys="N" id_lis="1456/2005">
 						<dsip:dat_du typ="I">2005-12-13T06:20:00+02:00</dsip:dat_du>
 						<dsip:dat_vv typ="I">2005-12-14T10:26:12+02:00</dsip:dat_vv>
 						<dsip:autor>Bohuslav Autor Nováček</dsip:autor>
@@ -406,7 +410,7 @@
 			               komp_klic="AGENS"
 			               klic_nclp_o="11963"
 			               typ_cispol="N"
-			               typpol_fh="K"
+			               typpol_fh="O"
 			               stav_vys="A"
 			               typ_sdel_vys="N"
 			               id_lis="1456/2005">

@@ -15,6 +15,7 @@
 			<Composition>
 				<id value="286eb0ba-6b26-4757-b196-118940760823"/>
 				<meta>
+					<versionId value="Nějaká verze 1.6.12.3"/>
 					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr"/>
 				</meta>
 				<text>
@@ -42,14 +43,14 @@
 				<encounter>
 					<reference value="urn:uuid:cd913146-9367-4fc1-921d-f1f468f411a0"/>
 				</encounter>
-				<date value="2025-05-01T11:00:00+02:00"/>
+				<date value="2025-05-02T15:00:11+02:00"/>
 				<author>
 					<reference value="urn:uuid:dcecb109-5ac2-4804-ac4c-393299bf41d0"/>
 					<display value="Bláhaxx"/>
 				</author>
 				<title value="Hospital Discharge Report"/>
 				<attester>
-					<mode value="official"/>
+					<mode value="personal"/>
 					<time value="2025-05-02T13:51:23+02:00"/>
 					<party>
 						<reference value="urn:uuid:53a01d28-b620-4a96-98e6-89147271abf2"/>
@@ -62,6 +63,22 @@
 					<party>
 						<reference value="urn:uuid:8b435244-c9d3-4ab0-a732-198045485327"/>
 						<display value="Padnakušnov"/>
+					</party>
+				</attester>
+				<attester>
+					<mode value="official"/>
+					<time value="2025-05-02T13:51:23+02:00"/>
+					<party>
+						<reference value="urn:uuid:851d8e0a-6958-4fad-9be1-f5584fdf7d21"/>
+						<display value="Interní ambulance O"/>
+					</party>
+				</attester>
+				<attester>
+					<mode value="professional"/>
+					<time value="2025-05-02T13:51:23+02:00"/>
+					<party>
+						<reference value="urn:uuid:ba4e4b03-8541-4a0a-a71c-24c2c4389802"/>
+						<display value="Interní ambulance Z"/>
 					</party>
 				</attester>
 				<custodian>
@@ -170,7 +187,7 @@
 						<xhtml:div>Physical findings</xhtml:div>
 					</text>
 					<entry>
-						<reference value="urn:uuid:05af2d42-4520-4ce1-b6b4-cb21694392da"/>
+						<reference value="urn:uuid:177d5498-0583-4ab1-b745-eac0fe8834a9"/>
 					</entry>
 					<entry>
 						<reference value="urn:uuid:79df4c3a-04b5-4987-ac16-b1dc5a859eab"/>
@@ -896,6 +913,40 @@
 		</resource>
 	</entry>
 	<entry>
+		<fullUrl value="urn:uuid:25e7c1b9-3c33-4709-88ef-0e750aceb6d3"/>
+		<resource>
+			<Provenance>
+				<id value="25e7c1b9-3c33-4709-88ef-0e750aceb6d3"/>
+				<meta>
+					<versionId value="d89d0439-c44d-49c2-be40-16804f55947d"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>-</xhtml:div>
+				</text>
+				<target>
+					<reference value="urn:uuid:286eb0ba-6b26-4757-b196-118940760823"/>
+				</target>
+				<recorded value="2025-05-01T11:00:00+02:00"/>
+				<agent>
+					<role>
+						<coding>
+							<system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+							<code value="IRCP"/>
+							<display value="information recipient"/>
+						</coding>
+					</role>
+					<who>
+						<reference value="urn:uuid:f5d817d5-2ba3-4fff-8ad7-f74171b31999"/>
+					</who>
+					<onBehalfOf>
+						<reference value="urn:uuid:cf62d6c7-1a33-4a5c-9f4a-5428d68a2fe3"/>
+					</onBehalfOf>
+				</agent>
+			</Provenance>
+		</resource>
+	</entry>
+	<entry>
 		<fullUrl value="urn:uuid:f5d817d5-2ba3-4fff-8ad7-f74171b31999"/>
 		<resource>
 			<Practitioner>
@@ -909,16 +960,32 @@
 					<xhtml:div>-</xhtml:div>
 				</text>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
 					<value value="666666"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
 					<value value="366"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
 					<value value="Primar_001"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
 					<value value="23547"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="3888"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P"/>
 				</identifier>
 				<name>
 					<family value="Hanousek"/>
@@ -927,6 +994,60 @@
 					<suffix value="Phd."/>
 				</name>
 			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:cf62d6c7-1a33-4a5c-9f4a-5428d68a2fe3"/>
+		<resource>
+			<Organization>
+				<id value="cf62d6c7-1a33-4a5c-9f4a-5428d68a2fe3"/>
+				<meta>
+					<versionId value="54ca472e-402c-4788-aaa7-151920a2add8"/>
+					<profile value="http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Interní ambulance P</xhtml:div>
+				</text>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/kod_lok"/>
+					<value value="nějaký kod_lok P"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/ico"/>
+					<value value="00233200"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icz"/>
+					<value value="44101000"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icp"/>
+					<value value="44101882"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odb"/>
+					<value value="101"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/ns"/>
+					<value value="1300254"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/oddel"/>
+					<value value="IA1JJ"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/pcz"/>
+					<value value="006"/>
+				</identifier>
+				<name value="Interní ambulance P"/>
+			</Organization>
 		</resource>
 	</entry>
 	<entry>
@@ -943,16 +1064,32 @@
 					<xhtml:div>-</xhtml:div>
 				</text>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
 					<value value="123655"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
 					<value value="300"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
 					<value value="Primar_002"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
 					<value value="23222"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="3122"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení A"/>
 				</identifier>
 				<name>
 					<family value="Bláhaxx"/>
@@ -997,6 +1134,10 @@
 					<xhtml:div>Interní ambulance A</xhtml:div>
 				</text>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/kod_lok"/>
+					<value value="nějaký kod_lok A"/>
+				</identifier>
+				<identifier>
 					<use value="official"/>
 					<system value="https://ncez.mzcr.cz/fhir/sid/ico"/>
 					<value value="44336655"/>
@@ -1010,6 +1151,14 @@
 					<use value="official"/>
 					<system value="https://ncez.mzcr.cz/fhir/sid/icp"/>
 					<value value="44336012"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odb"/>
+					<value value="102"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/ns"/>
+					<value value="1300288"/>
 				</identifier>
 				<identifier>
 					<use value="official"/>
@@ -1044,16 +1193,32 @@
 					<xhtml:div>-</xhtml:div>
 				</text>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
 					<value value="333333"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
 					<value value="366"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
 					<value value="Primar_003"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
 					<value value="58744"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="3611"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení O"/>
 				</identifier>
 				<name>
 					<family value="Mokrá"/>
@@ -1062,6 +1227,60 @@
 					<suffix value="Phd."/>
 				</name>
 			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:851d8e0a-6958-4fad-9be1-f5584fdf7d21"/>
+		<resource>
+			<Organization>
+				<id value="851d8e0a-6958-4fad-9be1-f5584fdf7d21"/>
+				<meta>
+					<versionId value="27508df0-6d54-44d8-b5ef-865eed6867b8"/>
+					<profile value="http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Interní ambulance O</xhtml:div>
+				</text>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/kod_lok"/>
+					<value value="nějaký kod_lok O"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/ico"/>
+					<value value="00233200"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icz"/>
+					<value value="44101000"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icp"/>
+					<value value="44101882"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odb"/>
+					<value value="101"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/ns"/>
+					<value value="1300254"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/oddel"/>
+					<value value="URG11"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/pcz"/>
+					<value value="006"/>
+				</identifier>
+				<name value="Interní ambulance O"/>
+			</Organization>
 		</resource>
 	</entry>
 	<entry>
@@ -1078,16 +1297,32 @@
 					<xhtml:div>-</xhtml:div>
 				</text>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
 					<value value="111111"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
 					<value value="401"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
 					<value value="Primar_004"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
 					<value value="58134"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="6231"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení Z"/>
 				</identifier>
 				<name>
 					<family value="Padnakušnov"/>
@@ -1096,6 +1331,60 @@
 					<suffix value="Phd."/>
 				</name>
 			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:ba4e4b03-8541-4a0a-a71c-24c2c4389802"/>
+		<resource>
+			<Organization>
+				<id value="ba4e4b03-8541-4a0a-a71c-24c2c4389802"/>
+				<meta>
+					<versionId value="807b8849-6e9d-4005-aaf7-4fba44ac7580"/>
+					<profile value="http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Interní ambulance Z</xhtml:div>
+				</text>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/kod_lok"/>
+					<value value="nějaký kod_lok Z"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/ico"/>
+					<value value="64887732"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icz"/>
+					<value value="67770399"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icp"/>
+					<value value="15966767"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odb"/>
+					<value value="234"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/ns"/>
+					<value value="2560132"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/oddel"/>
+					<value value="NOS15"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/pcz"/>
+					<value value="016"/>
+				</identifier>
+				<name value="Interní ambulance Z"/>
+			</Organization>
 		</resource>
 	</entry>
 	<entry>
@@ -1171,6 +1460,7 @@
 					</coding>
 					<coding>
 						<system value="http://hl7.org/fhir/sid/icd-10"/>
+						<version value="MKN-10"/>
 						<code value="R52"/>
 						<display value="Pain, not elsewhere classified"/>
 					</coding>
@@ -1184,6 +1474,9 @@
 							<display value="Protection of surroundings from individual (procedure)"/>
 						</coding>
 					</specialCourtesy>
+					<destination>
+						<reference value="urn:uuid:3765719f-5fc8-445b-a99c-64398cc74184"/>
+					</destination>
 					<dischargeDisposition>
 						<text value="Nějaký cíl propuštění"/>
 					</dischargeDisposition>
@@ -1208,16 +1501,32 @@
 					<xhtml:div>-</xhtml:div>
 				</text>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
 					<value value="342115"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
 					<value value="114"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="001"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
 					<value value="Doktor_008"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
 					<value value="56322"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="4511"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Praktický lékař"/>
 				</identifier>
 				<name>
 					<family value="Netolický"/>
@@ -1267,7 +1576,37 @@
 					<system value="https://ncez.mzcr.cz/fhir/sid/icp"/>
 					<value value="23446800"/>
 				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odb"/>
+					<value value="304"/>
+				</identifier>
 				<name value="Doporučující klinika"/>
+			</Organization>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:3765719f-5fc8-445b-a99c-64398cc74184"/>
+		<resource>
+			<Organization>
+				<id value="3765719f-5fc8-445b-a99c-64398cc74184"/>
+				<meta>
+					<versionId value="e1922d41-97a1-453c-a6cc-b479b6ef37ec"/>
+					<profile value="http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Cílová klinika</xhtml:div>
+				</text>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icp"/>
+					<value value="23446801"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odb"/>
+					<value value="314"/>
+				</identifier>
+				<name value="Cílová klinika"/>
 			</Organization>
 		</resource>
 	</entry>
@@ -1454,16 +1793,32 @@
 					<xhtml:div>-</xhtml:div>
 				</text>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
 					<value value="123655"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
 					<value value="300"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
 					<value value="Primar_002"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
 					<value value="23222"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="3122"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení A"/>
 				</identifier>
 				<name>
 					<family value="Dlaha"/>
@@ -1487,36 +1842,6 @@
 					</period>
 				</address>
 			</Practitioner>
-		</resource>
-	</entry>
-	<entry>
-		<fullUrl value="urn:uuid:05af2d42-4520-4ce1-b6b4-cb21694392da"/>
-		<resource>
-			<DiagnosticReport>
-				<meta>
-					<versionId value="e51e69ad-ddd2-435d-b2fb-5c5e3366aeb8"/>
-					<tag>
-						<system value="http://loinc.org"/>
-						<code value="29545-1"/>
-					</tag>
-				</meta>
-				<text>
-					<status value="generated"/>
-					<xhtml:div>DiagnosticReport</xhtml:div>
-				</text>
-				<status value="final"/>
-				<code>
-					<coding>
-						<system value="http://loinc.org"/>
-						<code value="11503-0"/>
-						<display value="Medical records"/>
-					</coding>
-				</code>
-				<subject>
-					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
-				</subject>
-				<conclusion value="Toto je vlastní text 001, Má více řádků. ..."/>
-			</DiagnosticReport>
 		</resource>
 	</entry>
 	<entry id="cb9a8cd8-9106-4e03-bee4-39a462d0eab3">
@@ -1557,7 +1882,7 @@
 				</subject>
 				<effectiveDateTime value="2005-12-30T10:46:25+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:d0da1615-2691-458c-95d3-b6c14bfee389"/>
 				</performer>
 				<valueQuantity>
 					<value value="185"/>
@@ -1609,7 +1934,7 @@
 				</subject>
 				<effectiveDateTime value="2005-12-30T10:46:25+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:d0da1615-2691-458c-95d3-b6c14bfee389"/>
 				</performer>
 				<valueQuantity>
 					<value value="83.5"/>
@@ -1658,7 +1983,7 @@
 				</subject>
 				<effectiveDateTime value="2005-12-30T10:46:25+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:d0da1615-2691-458c-95d3-b6c14bfee389"/>
 				</performer>
 				<valueQuantity>
 					<value value="25"/>
@@ -1707,7 +2032,7 @@
 				</subject>
 				<effectiveDateTime value="2005-12-30T10:46:25+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:d0da1615-2691-458c-95d3-b6c14bfee389"/>
 				</performer>
 				<valueQuantity>
 					<value value="50"/>
@@ -1756,7 +2081,7 @@
 				</subject>
 				<effectiveDateTime value="2005-12-30T10:46:25+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:d0da1615-2691-458c-95d3-b6c14bfee389"/>
 				</performer>
 				<valueQuantity>
 					<value value="90"/>
@@ -1805,7 +2130,7 @@
 				</subject>
 				<effectiveDateTime value="2005-12-30T10:46:25+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:d0da1615-2691-458c-95d3-b6c14bfee389"/>
 				</performer>
 				<valueQuantity>
 					<value value="60"/>
@@ -1814,6 +2139,56 @@
 					<code value="cm"/>
 				</valueQuantity>
 			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:d0da1615-2691-458c-95d3-b6c14bfee389"/>
+		<resource>
+			<Practitioner>
+				<id value="d0da1615-2691-458c-95d3-b6c14bfee389"/>
+				<meta>
+					<versionId value="4b045adc-f9a3-4b3b-96c7-652cb76835fc"/>
+					<profile value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu-core"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>-</xhtml:div>
+				</text>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
+					<value value="666112"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
+					<value value="235"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
+					<value value="Doktor_003"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
+					<value value="64231"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="3888"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P"/>
+				</identifier>
+				<name>
+					<family value="Podrazilová"/>
+					<given value="Jana"/>
+					<prefix value="MUDr."/>
+					<suffix value="Phd."/>
+				</name>
+			</Practitioner>
 		</resource>
 	</entry>
 	<entry>
@@ -1852,7 +2227,7 @@
 				</subject>
 				<effectiveDateTime value="2025-12-05T11:00:11+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:b3fa7d95-b42f-4607-9cf7-84051925f68b"/>
 				</performer>
 				<note>
 					<text value="měřeno dopoledne"/>
@@ -1926,7 +2301,7 @@
 				</subject>
 				<effectiveDateTime value="2025-12-05T11:00:11+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:b3fa7d95-b42f-4607-9cf7-84051925f68b"/>
 				</performer>
 				<valueQuantity>
 					<value value="85"/>
@@ -1973,7 +2348,7 @@
 				</subject>
 				<effectiveDateTime value="2025-12-05T11:00:11+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:b3fa7d95-b42f-4607-9cf7-84051925f68b"/>
 				</performer>
 				<valueQuantity>
 					<value value="60"/>
@@ -2020,7 +2395,7 @@
 				</subject>
 				<effectiveDateTime value="2025-12-05T11:00:11+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:b3fa7d95-b42f-4607-9cf7-84051925f68b"/>
 				</performer>
 				<valueQuantity>
 					<value value="40"/>
@@ -2069,7 +2444,7 @@
 				</subject>
 				<effectiveDateTime value="2025-12-05T11:00:11+01:00"/>
 				<performer>
-					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<reference value="urn:uuid:b3fa7d95-b42f-4607-9cf7-84051925f68b"/>
 				</performer>
 				<valueQuantity>
 					<value value="38.4"/>
@@ -2078,6 +2453,140 @@
 					<code value="Cel"/>
 				</valueQuantity>
 			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:b3fa7d95-b42f-4607-9cf7-84051925f68b"/>
+		<resource>
+			<Practitioner>
+				<id value="b3fa7d95-b42f-4607-9cf7-84051925f68b"/>
+				<meta>
+					<versionId value="0d2388da-a7d4-4aae-aa45-e1c333b186cc"/>
+					<profile value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu-core"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>-</xhtml:div>
+				</text>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
+					<value value="1238456"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
+					<value value="345"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
+					<value value="Doktor_005"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
+					<value value="64231"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="3888"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P"/>
+				</identifier>
+				<name>
+					<family value="Kvapilová"/>
+					<given value="Ivana"/>
+					<prefix value="Dr."/>
+					<suffix value="Phd."/>
+				</name>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:177d5498-0583-4ab1-b745-eac0fe8834a9"/>
+		<resource>
+			<DiagnosticReport>
+				<id value="177d5498-0583-4ab1-b745-eac0fe8834a9"/>
+				<meta>
+					<versionId value="2d786f33-0f40-439c-8bdf-ec61961c5b56"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="29545-1"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>DiagnosticReport</xhtml:div>
+				</text>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="11503-0"/>
+						<display value="Medical records"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<performer>
+					<reference value="urn:uuid:2b337d60-85f4-479f-a722-74484f40af37"/>
+				</performer>
+				<conclusion value="Toto je vlastní vys_s_text 003"/>
+			</DiagnosticReport>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:2b337d60-85f4-479f-a722-74484f40af37"/>
+		<resource>
+			<Practitioner>
+				<id value="2b337d60-85f4-479f-a722-74484f40af37"/>
+				<meta>
+					<versionId value="1392dab9-18cf-427c-ab21-87625ee04104"/>
+					<profile value="http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu-core"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>-</xhtml:div>
+				</text>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
+					<value value="654855"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
+					<value value="361"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
+					<value value="Doktor_006"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
+					<value value="64231"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="3888"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P"/>
+				</identifier>
+				<name>
+					<family value="Pazderka"/>
+					<given value="Petr"/>
+					<prefix value="Dr."/>
+					<suffix value="Phd."/>
+				</name>
+			</Practitioner>
 		</resource>
 	</entry>
 	<entry>
@@ -2457,6 +2966,7 @@
 		<fullUrl value="urn:uuid:79df4c3a-04b5-4987-ac16-b1dc5a859eab"/>
 		<resource>
 			<DiagnosticReport>
+				<id value="79df4c3a-04b5-4987-ac16-b1dc5a859eab"/>
 				<meta>
 					<versionId value="38a96049-b920-47a0-9d06-90adf87cd52b"/>
 					<tag>
@@ -2490,6 +3000,7 @@
 		<fullUrl value="urn:uuid:8cfddbf8-9fd8-45ae-98e8-f75d9dc2c93c"/>
 		<resource>
 			<DiagnosticReport>
+				<id value="8cfddbf8-9fd8-45ae-98e8-f75d9dc2c93c"/>
 				<meta>
 					<versionId value="321ecaaa-0a79-4d55-a510-b98e73396266"/>
 					<tag>
@@ -2688,6 +3199,7 @@
 		<fullUrl value="urn:uuid:05af2d42-4520-4ce1-b6b4-cb21694392ca"/>
 		<resource>
 			<DiagnosticReport>
+				<id value="05af2d42-4520-4ce1-b6b4-cb21694392ca"/>
 				<meta>
 					<versionId value="e51e69ad-ddd2-435d-b2fb-5c5e3366aef8"/>
 					<tag>
@@ -3100,16 +3612,32 @@
 					<xhtml:div>-</xhtml:div>
 				</text>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
 					<value value="666112"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
 					<value value="235"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
 					<value value="Doktor_003"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
 					<value value="64231"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="3888"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P"/>
 				</identifier>
 				<name>
 					<family value="Podrazilová"/>
@@ -3124,6 +3652,7 @@
 		<fullUrl value="urn:uuid:dcb4606f-ee12-40fa-99b7-b373cce97de5"/>
 		<resource>
 			<DiagnosticReport>
+				<id value="dcb4606f-ee12-40fa-99b7-b373cce97de5"/>
 				<meta>
 					<versionId value="32dce12b-beb0-4b8e-8c91-7ef6ab7a3f18"/>
 					<tag>
@@ -3431,16 +3960,32 @@
 					<xhtml:div>-</xhtml:div>
 				</text>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
 					<value value="1238456"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
 					<value value="345"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
 					<value value="Doktor_005"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
 					<value value="64231"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="3888"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P"/>
 				</identifier>
 				<name>
 					<family value="Kvapilová"/>
@@ -3455,6 +4000,7 @@
 		<fullUrl value="urn:uuid:eb5fa69c-b1e7-4e91-b707-9007981caf23"/>
 		<resource>
 			<DiagnosticReport>
+				<id value="eb5fa69c-b1e7-4e91-b707-9007981caf23"/>
 				<meta>
 					<versionId value="9e1f7e3f-3262-42f2-9fbb-d92b9323e06b"/>
 					<tag>
@@ -3498,16 +4044,32 @@
 					<xhtml:div>-</xhtml:div>
 				</text>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
 					<value value="654855"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icl"/>
 					<value value="361"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/odbornost"/>
+					<value value="SOBD"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/id_pracovnik"/>
 					<value value="Doktor_006"/>
 				</identifier>
 				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
 					<value value="64231"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_klic"/>
+					<value value="3888"/>
+				</identifier>
+				<identifier>
+					<system value="https://ncez.mzcr.cz/fhir/sid/role_text"/>
+					<value value="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P"/>
 				</identifier>
 				<name>
 					<family value="Pazderka"/>
@@ -3522,6 +4084,7 @@
 		<fullUrl value="urn:uuid:02a4aa96-5419-4ad4-bf21-a774859ff4ad"/>
 		<resource>
 			<DiagnosticReport>
+				<id value="02a4aa96-5419-4ad4-bf21-a774859ff4ad"/>
 				<meta>
 					<versionId value="6cab5404-10a7-45f1-bc22-c1026a0d4b22"/>
 					<tag>

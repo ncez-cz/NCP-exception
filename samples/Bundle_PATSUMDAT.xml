@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:schemaLocation="http://hl7.org/fhir file:///C:/PROVISIO/Mapping/schemas/hl7-fhir/bundle.xsd">
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:schemaLocation="http://hl7.org/fhir file:///C:/PROVISIO/converters/schemas/hl7-fhir/bundle.xsd">
 	<id value="9c0154b6-c392-4d0a-a01e-1bc5ff473fce"/>
 	<meta>
 		<versionId value="6771ad56-a844-46b9-8130-e68b37b39ea9"/>
@@ -78,9 +78,6 @@
 						</xhtml:div>
 					</text>
 					<entry>
-						<reference value="urn:uuid:2b0b6d0a-2d69-4370-b0c1-6d9154b54b21"/>
-					</entry>
-					<entry>
 						<reference value="urn:uuid:91ed7c63-d890-46d4-b769-b9ba51bc4c4e"/>
 					</entry>
 					<entry>
@@ -111,13 +108,12 @@
 							<xhtml:p>Allergies section</xhtml:p>
 						</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:568c7194-05d5-4866-bc9d-ea925b084c0e"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:f2dfcea6-22d0-4095-b6c5-174d9ec55f34"/>
+					</entry>
 				</section>
 				<section>
 					<title value="Medication section"/>
@@ -179,6 +175,9 @@
 						</xhtml:div>
 					</text>
 					<entry>
+						<reference value="urn:uuid:f6ad420c-b534-461c-bb22-56938106e18d"/>
+					</entry>
+					<entry>
 						<reference value="urn:uuid:f2b67b11-3634-4f69-b37a-7a48d317bb8f"/>
 					</entry>
 				</section>
@@ -217,13 +216,9 @@
 							<xhtml:p>MedicalDevices section</xhtml:p>
 						</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:04baeeb6-5481-40d8-8f35-169b412d6c62"/>
+					</entry>
 				</section>
 				<section>
 					<title value="AdvanceDirectives section"/>
@@ -256,13 +251,18 @@
 							<xhtml:p>Alerts section</xhtml:p>
 						</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:652723f5-2352-4df5-93d8-c66f66e42e6f"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:ba4fe891-8b25-4f5a-be23-464e4adf4036"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:4a27d7bd-e940-4cc5-94f6-42c778dc24bb"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:907d5a10-dd6d-4923-b167-c36999abfd15"/>
+					</entry>
 				</section>
 				<section>
 					<title value="FunctionalStatus section"/>
@@ -298,6 +298,9 @@
 							<xhtml:p>PastIllnessHx section</xhtml:p>
 						</xhtml:div>
 					</text>
+					<entry>
+						<reference value="urn:uuid:2b0b6d0a-2d69-4370-b0c1-6d9154b54b21"/>
+					</entry>
 				</section>
 				<section>
 					<title value="PatientStory section"/>
@@ -1066,6 +1069,378 @@
 				</performer>
 				<valueDateTime value="2025-12-30"/>
 			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:568c7194-05d5-4866-bc9d-ea925b084c0e"/>
+		<resource>
+			<AllergyIntolerance>
+				<id value="568c7194-05d5-4866-bc9d-ea925b084c0e"/>
+				<meta>
+					<versionId value="46b3dbd9-cda4-4881-b437-b98703fcb46d"/>
+					<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>AllergyIntolerance</xhtml:div>
+				</text>
+				<clinicalStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+						<code value="inactive"/>
+					</coding>
+				</clinicalStatus>
+				<verificationStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+						<code value="confirmed"/>
+					</coding>
+				</verificationStatus>
+				<type value="allergy"/>
+				<category value="food"/>
+				<criticality value="low"/>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="47703008"/>
+						<display value="Lactose"/>
+					</coding>
+				</code>
+				<patient>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</patient>
+				<onsetPeriod>
+					<start value="1999-09-11"/>
+					<end value="2000-09-11"/>
+				</onsetPeriod>
+				<recordedDate value="2024-12-01T12:53:12+01:00"/>
+				<recorder>
+					<reference value="urn:uuid:5779af5b-5dd3-40d8-9f7a-cbbd202485c0"/>
+					<display value="MUDr. Jmeno Prijmeni"/>
+				</recorder>
+				<reaction>
+					<manifestation>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<code value="271807003"/>
+							<display value="Eruption of skin"/>
+						</coding>
+					</manifestation>
+				</reaction>
+			</AllergyIntolerance>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:f2dfcea6-22d0-4095-b6c5-174d9ec55f34"/>
+		<resource>
+			<AllergyIntolerance>
+				<id value="f2dfcea6-22d0-4095-b6c5-174d9ec55f34"/>
+				<meta>
+					<versionId value="2a4fc7ed-cf94-48ed-bdac-ad3264b33da0"/>
+					<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>AllergyIntolerance</xhtml:div>
+				</text>
+				<clinicalStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+						<code value="active"/>
+					</coding>
+				</clinicalStatus>
+				<verificationStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+						<code value="confirmed"/>
+					</coding>
+				</verificationStatus>
+				<type value="allergy"/>
+				<category value="food"/>
+				<criticality value="low"/>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="44027008"/>
+						<display value="Seafood"/>
+					</coding>
+				</code>
+				<patient>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</patient>
+				<onsetPeriod>
+					<start value="1999-09-11"/>
+					<end value="2000-09-11"/>
+				</onsetPeriod>
+				<recordedDate value="2023-12-01T12:53:12+01:00"/>
+				<recorder>
+					<reference value="urn:uuid:5779af5b-5dd3-40d8-9f7a-cbbd202485c0"/>
+					<display value="MUDr. Jmeno Prijmeni"/>
+				</recorder>
+				<reaction>
+					<manifestation>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<code value="418363000"/>
+							<display value="Itching of skin"/>
+						</coding>
+					</manifestation>
+				</reaction>
+			</AllergyIntolerance>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:652723f5-2352-4df5-93d8-c66f66e42e6f"/>
+		<resource>
+			<Flag>
+				<id value="652723f5-2352-4df5-93d8-c66f66e42e6f"/>
+				<meta>
+					<versionId value="a6558b7e-90d3-4e13-be51-ca19802bf6ca"/>
+					<lastUpdated value="2005-12-01T12:53:12+01:00"/>
+					<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"/>
+					<tag>
+						<version value="urf"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Flag</xhtml:div>
+				</text>
+				<status value="active"/>
+				<code>
+					<text value="Hyperlipoproteinemie"/>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<period>
+					<start value="1999-09-11"/>
+				</period>
+				<author>
+					<reference value="urn:uuid:5779af5b-5dd3-40d8-9f7a-cbbd202485c0"/>
+					<display value="MUDr. Jmeno Prijmeni"/>
+				</author>
+			</Flag>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:ba4fe891-8b25-4f5a-be23-464e4adf4036"/>
+		<resource>
+			<Flag>
+				<id value="ba4fe891-8b25-4f5a-be23-464e4adf4036"/>
+				<meta>
+					<versionId value="3476eeb2-49bc-4483-8c5c-1aa0fefc05b5"/>
+					<lastUpdated value="2006-12-01T12:53:12+01:00"/>
+					<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"/>
+					<tag>
+						<version value="urf"/>
+						<display value="255604002"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Flag</xhtml:div>
+				</text>
+				<status value="active"/>
+				<code>
+					<coding>
+						<system value="http://hl7.org/fhir/sid/icd-10"/>
+						<code value="I46.9"/>
+						<display value="Cardiac arrest, unspecified"/>
+					</coding>
+					<text value="History of cardiac arrest"/>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<period>
+					<start value="1999-09-11"/>
+				</period>
+				<author>
+					<reference value="urn:uuid:5779af5b-5dd3-40d8-9f7a-cbbd202485c0"/>
+					<display value="MUDr. Jmeno Prijmeni"/>
+				</author>
+			</Flag>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:04baeeb6-5481-40d8-8f35-169b412d6c62"/>
+		<resource>
+			<DeviceUseStatement>
+				<id value="04baeeb6-5481-40d8-8f35-169b412d6c62"/>
+				<meta>
+					<versionId value="a7c34f7f-c002-480f-a3ae-4999693a5bb8"/>
+					<lastUpdated value="2005-12-01T12:53:12+01:00"/>
+					<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"/>
+					<tag>
+						<version value="uniz"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>DeviceUseStatement</xhtml:div>
+				</text>
+				<status value="active"/>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<timingPeriod>
+					<start value="1999-09-11"/>
+					<end value="2000-09-11"/>
+				</timingPeriod>
+				<source>
+					<reference value="urn:uuid:5779af5b-5dd3-40d8-9f7a-cbbd202485c0"/>
+					<display value="MUDr. Jmeno Prijmeni"/>
+				</source>
+				<device>
+					<reference value="urn:uuid:12b30d45-cccf-46a1-a838-d3f6502533c5"/>
+				</device>
+			</DeviceUseStatement>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:12b30d45-cccf-46a1-a838-d3f6502533c5"/>
+		<resource>
+			<Device>
+				<id value="12b30d45-cccf-46a1-a838-d3f6502533c5"/>
+				<meta>
+					<versionId value="16aade2a-ddcf-4be5-8348-649c19d3cda9"/>
+					<lastUpdated value="2005-12-01T12:53:12+01:00"/>
+					<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"/>
+					<tag>
+						<version value="uniz"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Device</xhtml:div>
+				</text>
+				<status value="active"/>
+				<modelNumber value="identifikátor prostředku"/>
+				<type>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="14106009"/>
+						<display value="Cardiac pacemaker"/>
+					</coding>
+				</type>
+				<patient>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</patient>
+				<note>
+					<text value="doplňující informace a poznámky"/>
+				</note>
+			</Device>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:4a27d7bd-e940-4cc5-94f6-42c778dc24bb"/>
+		<resource>
+			<Flag>
+				<id value="4a27d7bd-e940-4cc5-94f6-42c778dc24bb"/>
+				<meta>
+					<versionId value="21f02bd2-e4c9-433e-9d3c-7500f55f2129"/>
+					<lastUpdated value="2005-12-01T12:53:12+01:00"/>
+					<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"/>
+					<tag>
+						<version value="utm"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Flag</xhtml:div>
+				</text>
+				<status value="active"/>
+				<code>
+					<text value="Lipanthyl 1-0-0"/>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<period>
+					<start value="1999-09-11"/>
+				</period>
+				<author>
+					<reference value="urn:uuid:5779af5b-5dd3-40d8-9f7a-cbbd202485c0"/>
+					<display value="MUDr. Jmeno Prijmeni"/>
+				</author>
+			</Flag>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:f6ad420c-b534-461c-bb22-56938106e18d"/>
+		<resource>
+			<Observation>
+				<id value="f6ad420c-b534-461c-bb22-56938106e18d"/>
+				<meta>
+					<versionId value="a1ad9b26-9fc4-40f7-bfed-503769ce09fc"/>
+					<lastUpdated value="2005-12-01T12:53:12+01:00"/>
+					<tag>
+						<version value="uks"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Observation</xhtml:div>
+				</text>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="https://dasta.mzcr.cz/DSAJQ.htm"/>
+						<code value="PKS"/>
+						<display value="Krevní skupina - popis"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<effectiveDateTime value="1999-09-11"/>
+				<performer>
+					<reference value="urn:uuid:5779af5b-5dd3-40d8-9f7a-cbbd202485c0"/>
+					<display value="MUDr. Jmeno Prijmeni"/>
+				</performer>
+				<valueCodeableConcept>
+					<coding>
+						<system value="https://dasta.mzcr.cz/DSAIR.htm"/>
+						<code value="AB+"/>
+						<display value="AB RhD pozitivní"/>
+					</coding>
+				</valueCodeableConcept>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:907d5a10-dd6d-4923-b167-c36999abfd15"/>
+		<resource>
+			<Flag>
+				<id value="907d5a10-dd6d-4923-b167-c36999abfd15"/>
+				<meta>
+					<versionId value="903ac880-9af1-46f0-9b52-6cbbb2180d61"/>
+					<lastUpdated value="2005-12-01T12:53:12+01:00"/>
+					<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"/>
+					<tag>
+						<version value="uot"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Flag</xhtml:div>
+				</text>
+				<status value="active"/>
+				<code>
+					<text value="Očkování proti tetanu"/>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<period>
+					<start value="1995-04-18"/>
+				</period>
+				<author>
+					<reference value="urn:uuid:5779af5b-5dd3-40d8-9f7a-cbbd202485c0"/>
+					<display value="MUDr. Jmeno Prijmeni"/>
+				</author>
+			</Flag>
 		</resource>
 	</entry>
 	<entry>

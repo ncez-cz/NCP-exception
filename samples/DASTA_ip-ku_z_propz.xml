@@ -318,34 +318,30 @@ Má více řádků.
 							<dsip:po_prij_text>Protection of surroundings from individual (procedure)</dsip:po_prij_text> -->
 							<dsip:dat_prop>2025-06-27T10:03:00+01:00</dsip:dat_prop>
 							<dsip:cil_prop>Nějaký cíl propuštění</dsip:cil_prop>
-							<!-- 						<dsip:prop_pracoviste guid="3765719f-5fc8-445b-a99c-64398cc74184"
-							                      vguid="e1922d41-97a1-453c-a6cc-b479b6ef37ec"
-							                      icp="23446801"
-							                      odb="314">
+							<dsip:prop_pracoviste guid="3765719f-5fc8-445b-a99c-64398cc74184" vguid="e1922d41-97a1-453c-a6cc-b479b6ef37ec" icp="23446801" odb="314">
 							<dsip:nazev>Cílová klinika</dsip:nazev>
-							</dsip:prop_pracoviste> -->
-							<dsip:ku_z_propz_h_p/>
+							</dsip:prop_pracoviste>
 						</dsip:ku_z_propz_hosp>
 						<!-- sprij ********************************************************************************** -->
  						<dsip:ku_z_propz_sprij guid="a7606c5b-7569-437a-aeb6-15b66d6b16fd" vguid="0a0760cd-9a1c-4af3-aeb0-66489ef60d56">
 							<dsip:dat_vys_prij>2025-05-05T10:36:12+01:00</dsip:dat_vys_prij>
-							<dsip:prij_pracovnik guid="a7ffa34f-5676-40d8-a75a-778ec6d76a5a" vguid="46dbe2b8-3c37-41ab-8dd6-91f4c20cf2fb" id_zp="666632" icl="321" odbornost="SOBD" id_pracovnik="Primar_004" id_clk="28456" role_klic="3888" role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P">
+<!-- 							<dsip:prij_pracovnik guid="a7ffa34f-5676-40d8-a75a-778ec6d76a5a" vguid="46dbe2b8-3c37-41ab-8dd6-91f4c20cf2fb" id_zp="666632" icl="321" odbornost="SOBD" id_pracovnik="Primar_004" id_clk="28456" role_klic="3888" role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P">
 								<dsip:titul_pred>MUDr.</dsip:titul_pred>
 								<dsip:jmeno>Jiří</dsip:jmeno>
 								<dsip:prijmeni>Prdousek</dsip:prijmeni>
 								<dsip:titul_za>Phd.</dsip:titul_za>
-							</dsip:prij_pracovnik>
-							<dsip:vys_a_text guid="05af2d42-4520-4ce1-b6b4-cb21694392da" vguid="e51e69ad-ddd2-435d-b2fb-5c5e3366aeb8">
+							</dsip:prij_pracovnik> -->
+<!-- 							<dsip:vys_a_text guid="05af2d42-4520-4ce1-b6b4-cb21694392da" vguid="e51e69ad-ddd2-435d-b2fb-5c5e3366aeb8">
 								<dsip:autor>Dr. Souček</dsip:autor>
 								<dsip:ptext xml:space="preserve">Toto je vlastní text 001,
 
 Má více řádků.
 
-...</dsip:ptext>
+...</dsip:ptext> -->
 								<!--<dsip:ktext encode="base64" typ="text/rtf">bmVqYWt5IGJhc2U2NA==</dsip:ktext>
 						<dsip:priloha zdroj="vysledky001.rtf"
-								              typ="text/rtf">Výsledek vyšetření 001</dsip:priloha> -->
- 							</dsip:vys_a_text>
+								              typ="text/rtf">Výsledek vyšetření 001</dsip:priloha>
+ 							</dsip:vys_a_text> -->
 							<dsip:h guid_vyska="cb9a8cd8-9106-4e03-bee4-39a462d0eab3" vguid_vyska="bc0decd1-5f40-4b5a-8e3d-ce473515502b" vyska="185" guid_hmotnost="50e925c1-c406-4b51-b202-c77b95791063" vguid_hmotnost="37ee07f3-faa7-4b5b-9fed-e9e9c645ada9" hmotnost="83.5" guid_bmi="2b0991b3-dbbb-4066-93fc-b8f1f71c7385" vguid_bmi="ada4193e-4473-4649-b3da-3c350b25b26d" bmi="25" guid_o_hlava="37b80666-cb66-407d-8951-e4e194271872" vguid_o_hlava="a9b97e83-670f-4197-b4a0-e18bf899fa66" o_hlava="50" guid_o_hrudnik="ee01395f-4041-4d18-afb2-3ffd5233a5d5" vguid_o_hrudnik="6d356111-4ddf-4ca6-b561-a4ebfc1bfdab" o_hrudnik="90" guid_o_pas="45794650-76fa-446e-9a39-e5108f763886" vguid_o_pas="0677529b-ab0a-4076-8e94-a68db954a257" o_pas="60" dat_ab="2005-12-30T10:46:25+01:00">
 								<dsip:pozn>měřeno v ordinaci</dsip:pozn>
 								<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
@@ -372,16 +368,16 @@ Má více řádků.
 										<dsip:nazev>FN-Motol</dsip:nazev>
 									</dsip:vysl_pracoviste>
 								</dsip:vys_v_snomed>
-							</dsip:vys_a_param>
+							</dsip:vys_a_param> -->
 							<dsip:vys_a_pracovnik guid="d0da1615-2691-458c-95d3-b6c14bfee389" vguid="4b045adc-f9a3-4b3b-96c7-652cb76835fc" id_zp="666112" icl="235" odbornost="SOBD" id_pracovnik="Doktor_003" id_clk="64231" role_klic="3888" role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P">
 								<dsip:titul_pred>MUDr.</dsip:titul_pred>
 								<dsip:jmeno>Jana</dsip:jmeno>
 								<dsip:prijmeni>Podrazilová</dsip:prijmeni>
 								<dsip:titul_za>Phd.</dsip:titul_za>
 							</dsip:vys_a_pracovnik>
-							<dsip:vys_f_typ>vital-signs</dsip:vys_f_typ>
+<!-- 						<dsip:vys_f_typ>vital-signs</dsip:vys_f_typ>
 							<dsip:vys_f_text guid="7a8ee9cf-8096-4b2b-8d6d-15dee8748a0c" vguid="adc07ad7-e34f-4d44-ab97-72b75d3f1587">
-								<dsip:autor>Dr. Mrkalová</dsip:autor>
+								<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
 								<dsip:ptext xml:space="preserve">Toto je vlastní text 002,
 
 Má více řádků.
@@ -423,7 +419,7 @@ Má více řádků.
 										<dsip:nazev>FN-Motol</dsip:nazev>
 									</dsip:vysl_pracoviste>
 								</dsip:vys_v_snomed>
-							</dsip:vys_f_param>
+							</dsip:vys_f_param> -->
 							<dsip:vys_f_pracovnik guid="b3fa7d95-b42f-4607-9cf7-84051925f68b" vguid="0d2388da-a7d4-4aae-aa45-e1c333b186cc" id_zp="1238456" icl="345" odbornost="SOBD" id_pracovnik="Doktor_005" id_clk="64231" role_klic="3888" role_text="Odborní pracovníci v oblasti zdravotnictví jinde neuvedení P">
 								<dsip:titul_pred>Dr.</dsip:titul_pred>
 								<dsip:jmeno>Ivana</dsip:jmeno>
@@ -439,7 +435,7 @@ Má více řádků.
 								<dsip:prijmeni>Pazderka</dsip:prijmeni>
 								<dsip:titul_za>Phd.</dsip:titul_za>
 							</dsip:vys_s_pracovnik>
-							<dsip:dat_hodn_fs>2025-05-05T11:12:06+02:00</dsip:dat_hodn_fs>
+<!--							<dsip:dat_hodn_fs>2025-05-05T11:12:06+02:00</dsip:dat_hodn_fs>
 							<dsip:vys_fs_text guid="fde536ad-03ee-4132-a28f-99a5fba45432" vguid="f0215e2a-34ac-4208-8d3d-a6fb3e9ef111">
 								<dsip:ptext xml:space="preserve">Toto je vlastní sprij vys_fs_text 004</dsip:ptext> -->
 								<!-- <dsip:ktext encode="base64" typ="text/rtf">bmVqYWt5IGJhc2U2NA==</dsip:ktext -->
