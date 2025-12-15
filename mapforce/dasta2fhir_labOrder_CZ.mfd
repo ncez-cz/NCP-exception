@@ -10,7 +10,7 @@
 					<targets>
 						<datapoint pos="0" key="50"/>
 					</targets>
-					<view ltx="696" lty="70" rbx="786" rby="87"/>
+					<view ltx="696" lty="70" rbx="777" rby="86"/>
 					<data>
 						<constant value="urn:uuid:" datatype="string"/>
 					</data>
@@ -23,13 +23,13 @@
 					<targets>
 						<datapoint pos="0" key="53"/>
 					</targets>
-					<view ltx="825" lty="53" rbx="907" rby="109"/>
+					<view ltx="825" lty="53" rbx="900" rby="107"/>
 				</component>
 				<component name="constant" library="core" uid="5757" kind="2">
 					<targets>
 						<datapoint pos="0" key="60"/>
 					</targets>
-					<view ltx="1029" lty="23" rbx="1152" rby="40"/>
+					<view ltx="1029" lty="23" rbx="1142" rby="39"/>
 					<data>
 						<constant value="urn:ietf:rfc:3986" datatype="string"/>
 					</data>
@@ -38,13 +38,13 @@
 					<targets>
 						<datapoint pos="0" key="1"/>
 					</targets>
-					<view ltx="1045" lty="62" rbx="1139" rby="79"/>
+					<view ltx="1045" lty="62" rbx="1132" rby="78"/>
 					<data>
 						<constant value="document" datatype="string"/>
 					</data>
 				</component>
 				<component name="fixDate" library="user" uid="5756" kind="19" visible="0" blackbox="0">
-					<view ltx="402" lty="23" rbx="565" rby="40"/>
+					<view ltx="402" lty="23" rbx="563" rby="40"/>
 					<data>
 						<root>
 							<header>
@@ -52,7 +52,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="54" componentid="6847"/>
+							<entry name="date" inpkey="54" componentid="1989"/>
 						</root>
 						<root>
 							<header>
@@ -60,7 +60,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="55" componentid="6846"/>
+							<entry name="hl7DateTimeString" outkey="55" componentid="2000"/>
 						</root>
 					</data>
 				</component>
@@ -92,7 +92,7 @@
 					</data>
 				</component>
 				<component name="Reference_Patient" library="provisio" uid="5705" kind="19" visible="0" blackbox="0">
-					<view ltx="83" lty="493" rbx="246" rby="527"/>
+					<view ltx="83" lty="493" rbx="244" rby="526"/>
 					<data>
 						<root>
 							<header>
@@ -127,7 +127,7 @@
 								<entry name="garant_dat" inpkey="27"/>
 							</entry>
 						</root>
-						<root scrollposition="1">
+						<root>
 							<header>
 								<namespaces>
 									<namespace/>
@@ -145,7 +145,7 @@
 					</data>
 				</component>
 				<component name="Reference_Organization" library="provisio" uid="5767" kind="19" visible="0" blackbox="0">
-					<view ltx="346" lty="318" rbx="539" rby="352"/>
+					<view ltx="346" lty="318" rbx="537" rby="351"/>
 					<data>
 						<root>
 							<header>
@@ -247,47 +247,6 @@
 						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle" outputinstance="..\schemas\hl7-fhir\bundle.xml"/>
 					</data>
 				</component>
-				<component name="ku_o_lab_generalAttribute" library="provisio" uid="3239" kind="19" visible="0" blackbox="0">
-					<view ltx="767" lty="151" rbx="1067" rby="351"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://hl7.org/fhir"/>
-								</namespaces>
-							</header>
-							<entry name="ku___GUID" inpkey="45" componentid="5718"/>
-							<entry name="patientReference" inpkey="68" componentid="6061" expanded="1"/>
-							<entry name="ku_o____typku" inpkey="43" componentid="5714"/>
-							<entry name="ku_o_labType" componentid="3049" expanded="1">
-								<entry name="ku_o_labType" ns="1" type="xml-type" inpkey="16"/>
-							</entry>
-							<entry name="title" inpkey="17" componentid="3235"/>
-							<entry name="authorReference" componentid="3236" expanded="1">
-								<entry name="Reference" ns="2" type="xml-type" inpkey="31">
-									<entry name="reference" ns="2" expanded="1">
-										<entry name="value" type="attribute" inpkey="30"/>
-									</entry>
-								</entry>
-							</entry>
-							<entry name="referencePracoviste" inpkey="46" componentid="5732"/>
-							<entry name="referenceCasu" inpkey="47" componentid="5734"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="3101" expanded="1">
-								<entry name="entry" outkey="18"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="ds_dasta-4.03.31" library="xml" uid="3252" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" AddSchemaLocation="0"/>
 					<view ltx="23" lty="106" rbx="248" rby="399"/>
@@ -336,6 +295,47 @@
 							</entry>
 						</root>
 						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\DASTA_ip-ku_o_lab.xml"/>
+					</data>
+				</component>
+				<component name="ku_o_lab_generalAttribute" library="provisio" uid="3239" kind="19" visible="0" blackbox="0">
+					<view ltx="767" lty="151" rbx="1067" rby="351"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://hl7.org/fhir"/>
+								</namespaces>
+							</header>
+							<entry name="ku___GUID" inpkey="45" componentid="5718"/>
+							<entry name="patientReference" inpkey="68" componentid="6061" expanded="1"/>
+							<entry name="ku_o____typku" inpkey="43" componentid="5714"/>
+							<entry name="ku_o_labType" componentid="3049" expanded="1">
+								<entry name="ku_o_labType" ns="1" type="xml-type" inpkey="16"/>
+							</entry>
+							<entry name="title" inpkey="17" componentid="3235"/>
+							<entry name="authorReference" componentid="3236" expanded="1">
+								<entry name="Reference" ns="2" type="xml-type" inpkey="31">
+									<entry name="reference" ns="2" expanded="1">
+										<entry name="value" type="attribute" inpkey="30"/>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="referencePracoviste" inpkey="46" componentid="5732"/>
+							<entry name="referenceCasu" inpkey="47" componentid="5734"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="3101" expanded="1">
+								<entry name="entry" outkey="18"/>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -596,22 +596,23 @@
 							<header>
 								<namespaces>
 									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
 									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://hl7.org/fhir"/>
 								</namespaces>
 							</header>
 							<entry name="ku___GUID" componentid="5718"/>
-							<entry name="patientReference" componentid="3055" expanded="1">
-								<entry name="Reference" ns="1" type="xml-type" inpkey="4"/>
-							</entry>
+							<entry name="patientReference" componentid="6061" expanded="1"/>
 							<entry name="ku_o____typku" componentid="5714"/>
 							<entry name="ku_o_labType" componentid="3049" expanded="1">
-								<entry name="ku_o_labType" ns="2" type="xml-type" inpkey="5"/>
+								<entry name="ku_o_labType" ns="1" type="xml-type" inpkey="5"/>
 							</entry>
 							<entry name="title" componentid="3235"/>
 							<entry name="authorReference" componentid="3236" expanded="1"/>
 							<entry name="referencePracoviste" componentid="5732"/>
 							<entry name="referenceCasu" componentid="5734"/>
+							<entry name="patientReference" componentid="3055" expanded="1">
+								<entry name="Reference" ns="2" type="xml-type" inpkey="4"/>
+							</entry>
 						</root>
 						<root>
 							<header>
@@ -748,7 +749,7 @@ http://hl7.org/fhir/ValueSet/request-priority</text>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="13" componentid="6847"/>
+							<entry name="date" inpkey="13" componentid="1989"/>
 						</root>
 						<root>
 							<header>
@@ -756,7 +757,7 @@ http://hl7.org/fhir/ValueSet/request-priority</text>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="14" componentid="6846"/>
+							<entry name="hl7DateTimeString" outkey="14" componentid="2000"/>
 						</root>
 					</data>
 				</component>
@@ -1482,7 +1483,7 @@ http://hl7.org/fhir/ValueSet/request-priority</text>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="11" componentid="6847"/>
+							<entry name="date" inpkey="11" componentid="1989"/>
 						</root>
 						<root>
 							<header>
@@ -1490,7 +1491,7 @@ http://hl7.org/fhir/ValueSet/request-priority</text>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="12" componentid="6846"/>
+							<entry name="hl7DateTimeString" outkey="12" componentid="2000"/>
 						</root>
 					</data>
 				</component>
@@ -11459,7 +11460,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="44" componentid="6847"/>
+							<entry name="date" inpkey="44" componentid="1989"/>
 						</root>
 						<root>
 							<header>
@@ -11467,7 +11468,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="57" componentid="6846"/>
+							<entry name="hl7DateTimeString" outkey="57" componentid="2000"/>
 						</root>
 					</data>
 				</component>
@@ -11620,7 +11621,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="42" componentid="6847"/>
+							<entry name="date" inpkey="42" componentid="1989"/>
 						</root>
 						<root>
 							<header>
@@ -11628,7 +11629,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="56" componentid="6846"/>
+							<entry name="hl7DateTimeString" outkey="56" componentid="2000"/>
 						</root>
 					</data>
 				</component>

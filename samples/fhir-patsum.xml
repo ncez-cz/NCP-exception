@@ -1,0 +1,2761 @@
+<Bundle xmlns="http://hl7.org/fhir"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://hl7.org/fhir file:///C:/converters/schemas/hl7-fhir/bundle.xsd">
+   <meta>
+      <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"/>
+   </meta>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:d06bd71a-1445-4377-9100-9d7aba02905c"/>
+   </identifier>
+   <type value="document"/>
+   <timestamp value="2006-12-03T11:00:00+01:00"/>
+   <entry>
+      <fullUrl value="urn:uuid:d06bd71a-1445-4377-9100-9d7aba02905c"/>
+      <resource>
+         <Composition>
+            <id value="d06bd71a-1445-4377-9100-9d7aba02905c"/>
+            <meta>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Patient summary Document</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="final"/>
+            <type>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="60591-5"/>
+                  <display value="Patient summary Document"/>
+               </coding>
+            </type>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <date value="2006-12-03T11:00:00+01:00"/>
+            <author>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </author>
+            <title value="Patient Summary"/>
+            <section>
+               <title value="Problems section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="11450-4"/>
+                     <display value="Problem list - Reported"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>Problems section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8d-7262-8000-39dc9e925be3"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-72a9-8000-d9b13acafdf7"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-740a-8000-9ff49da9fc73"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-749f-8000-90556a8c9a71"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-7532-8000-58d8b264e896"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-75c9-8000-36ef9bcdca58"/>
+               </entry>
+            </section>
+            <section>
+               <title value="Allergies section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="48765-2"/>
+                     <display value="Allergies and adverse reactions Document"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>Allergies section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8c-7903-8000-6a816c161a77"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8c-7a75-8000-677afafe36e2"/>
+               </entry>
+            </section>
+            <section>
+               <title value="Medication section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="10160-0"/>
+                     <display value="History of Medication use Narrative"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>Medication section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-76af-8000-b85de2b5b8bf"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-77a4-8000-996f67c97ab4"/>
+               </entry>
+            </section>
+            <section>
+               <title value="Immunizations section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="11369-6"/>
+                     <display value="History of Immunization note"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>Immunizations section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-7025-8000-4ecd0e2337ec"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-7151-8000-05dd270f5591"/>
+               </entry>
+            </section>
+            <section>
+               <title value="Results section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="30954-2"/>
+                     <display value="Relevant diagnostic tests/laboratory data note"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>Results section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8c-7f27-8000-13547534d0f2"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8d-70ea-8000-588bc18e8c60"/>
+               </entry>
+            </section>
+            <section>
+               <title value="ProceduresHx section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="47519-4"/>
+                     <display value="History of Procedures Document"/>
+                  </coding>
+                  <text value="ProceduresHx section"/>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>ProceduresHx section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-78b2-8000-0e2a61a8d81a"/>
+               </entry>
+            </section>
+            <section>
+               <title value="MedicalDevices section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="46264-8"/>
+                     <display value="History of medical device use"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>MedicalDevices section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8c-7d33-8000-cf0923e8b869"/>
+               </entry>
+            </section>
+            <section>
+               <title value="AdvanceDirectives section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="42348-3"/>
+                     <display value="Advance healthcare directives"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>AdvanceDirectives section</xhtml:p>
+                  </xhtml:div>
+               </text>
+            </section>
+            <section>
+               <title value="Alerts section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="104605-1"/>
+                     <display value="Alert"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>Alerts section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8c-7b8f-8000-cc468e57bbf9"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8c-7c49-8000-2b8ff421133c"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8c-7e64-8000-fcf65df21383"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8d-7045-8000-22df5ff2a124"/>
+               </entry>
+            </section>
+            <section>
+               <title value="FunctionalStatus section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="47420-5"/>
+                     <display value="Functional status assessment note"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>FunctionalStatus section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-7c16-8000-313a8e08d630"/>
+               </entry>
+            </section>
+            <section>
+               <title value="PastIllnessHx section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="11348-0"/>
+                     <display value="History of Past illness note"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>PastIllnessHx section</xhtml:p>
+                  </xhtml:div>
+               </text>
+            </section>
+            <section>
+               <title value="PatientStory section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="81338-6"/>
+                     <display value="Patient Goals, preferences, and priorities for care experience"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>PatientStory section</xhtml:p>
+                  </xhtml:div>
+               </text>
+            </section>
+            <section>
+               <title value="PregnancyHx section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="10162-6"/>
+                     <display value="History of pregnancies Narrative"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>PregnancyHx section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8c-772d-8000-e3fe9c2c515d"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8c-777d-8000-a69a60c0eb33"/>
+               </entry>
+            </section>
+            <section>
+               <title value="PlanOfCare section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="18776-5"/>
+                     <display value="Plan of care note"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>PlanOfCare section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-7b5f-8000-d7519e096a37"/>
+               </entry>
+            </section>
+            <section>
+               <title value="SocialHistory section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="29762-2"/>
+                     <display value="Social history note"/>
+                  </coding>
+                  <text value="SocialHistory section"/>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>SocialHistory section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8d-74ba-8000-7eb6dd5cd9d6"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8d-77e0-8000-0deab3c2bd94"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8d-7a98-8000-95f756c19ca1"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8d-7bd7-8000-31aea2cadfa0"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8d-7cef-8000-f0639563924c"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8d-7e94-8000-4b2a7e2236e7"/>
+               </entry>
+            </section>
+            <section>
+               <title value="VitalSigns section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="8716-3"/>
+                     <display value="Vital signs note"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>VitalSigns section</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-7f83-8000-d597208f7173"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8e-7ffe-8000-2447a25fc952"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8f-7061-8000-2870d15014d0"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8f-70bf-8000-3da931fc2356"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8f-7114-8000-fe483753554d"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8f-7168-8000-f91edd5d7aed"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:82b3d99b-3ccd-42f4-b551-135bcaaedb13"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:775cb281-58e3-47ea-acdc-9ee6611f2db3"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:a2224ed4-b989-4a2c-9e85-da504ac449c3"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:809ebbad-1943-4675-8f5b-34953a57171e"/>
+               </entry>
+               <entry>
+                  <reference value="urn:uuid:82345754-3b67-4866-ada5-4acd22aee6be"/>
+               </entry>
+            </section>
+            <section>
+               <title value="Family History Section"/>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="10157-6"/>
+                     <display value="History of family member diseases note"/>
+                  </coding>
+               </code>
+               <text>
+                  <status value="generated"/>
+                  <xhtml:div>
+                     <xhtml:p>History of family member diseases note</xhtml:p>
+                  </xhtml:div>
+               </text>
+               <entry>
+                  <reference value="urn:uuid:069402b4-de8d-75c0-8000-3a359026f3cd"/>
+               </entry>
+            </section>
+         </Composition>
+      </resource>
+   </entry>
+   <entry id="069402b4-de8e-7f83-8000-d597208f7173">
+      <fullUrl value="urn:uuid:069402b4-de8e-7f83-8000-d597208f7173"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8e-7f83-8000-d597208f7173"/>
+            <meta>
+               <versionId value="069402b4-de8e-7f83-8000-d597208f7173"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Body height</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="8302-2"/>
+                  <display value="Body height"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueQuantity>
+               <value value="185"/>
+               <unit value="cm"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="cm"/>
+            </valueQuantity>
+            <note>
+               <text value="měřeno v ordinaci"/>
+            </note>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-7ffe-8000-2447a25fc952"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8e-7ffe-8000-2447a25fc952"/>
+            <meta>
+               <versionId value="069402b4-de8e-7ffe-8000-2447a25fc952"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Body weight</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="29463-7"/>
+                  <display value="Body weight"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueQuantity>
+               <value value="83.5"/>
+               <unit value="kg"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="kg"/>
+            </valueQuantity>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8f-7061-8000-2870d15014d0"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8f-7061-8000-2870d15014d0"/>
+            <meta>
+               <versionId value="069402b4-de8f-7061-8000-2870d15014d0"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Body mass index (BMI) [Ratio]</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="39156-5"/>
+                  <display value="Body mass index (BMI) [Ratio]"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueQuantity>
+               <value value="25"/>
+               <unit value="kg/m2"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="kg/m2"/>
+            </valueQuantity>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8f-70bf-8000-3da931fc2356"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8f-70bf-8000-3da931fc2356"/>
+            <meta>
+               <versionId value="069402b4-de8f-70bf-8000-3da931fc2356"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Head Occipital-frontal circumference</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="9843-4"/>
+                  <display value="Head Occipital-frontal circumference"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueQuantity>
+               <value value="50"/>
+               <unit value="cm"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="cm"/>
+            </valueQuantity>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8f-7114-8000-fe483753554d"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8f-7114-8000-fe483753554d"/>
+            <meta>
+               <versionId value="069402b4-de8f-7114-8000-fe483753554d"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Waist Circumference at umbilicus by Tape measure</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="8280-0"/>
+                  <display value="Waist Circumference at umbilicus by Tape measure"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueQuantity>
+               <value value="90"/>
+               <unit value="cm"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="cm"/>
+            </valueQuantity>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8f-7168-8000-f91edd5d7aed"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8f-7168-8000-f91edd5d7aed"/>
+            <meta>
+               <versionId value="069402b4-de8f-7168-8000-f91edd5d7aed"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Adult Waist Circumference Protocol</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="56086-2"/>
+                  <display value="Adult Waist Circumference Protocol"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueQuantity>
+               <value value="60"/>
+               <unit value="cm"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="cm"/>
+            </valueQuantity>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:82b3d99b-3ccd-42f4-b551-135bcaaedb13"/>
+      <resource>
+         <Observation>
+            <id value="82b3d99b-3ccd-42f4-b551-135bcaaedb13"/>
+            <meta>
+               <versionId value="48876d44-64ce-4a5f-9e3c-acae80a728e6"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Blood pressure panel with all children optional</xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="85354-9"/>
+                  <display value="Blood pressure panel with all children optional"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <note>
+               <text value="měřeno dopoledne"/>
+            </note>
+            <component>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="8480-6"/>
+                     <display value="Systolic blood pressure"/>
+                  </coding>
+               </code>
+               <valueQuantity>
+                  <value value="120"/>
+                  <unit value="mmHg"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mm[Hg]"/>
+               </valueQuantity>
+            </component>
+            <component>
+               <code>
+                  <coding>
+                     <system value="http://loinc.org"/>
+                     <code value="8462-4"/>
+                     <display value="Diastolic blood pressure"/>
+                  </coding>
+               </code>
+               <valueQuantity>
+                  <value value="80"/>
+                  <unit value="mmHg"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mm[Hg]"/>
+               </valueQuantity>
+            </component>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:775cb281-58e3-47ea-acdc-9ee6611f2db3"/>
+      <resource>
+         <Observation>
+            <id value="775cb281-58e3-47ea-acdc-9ee6611f2db3"/>
+            <meta>
+               <versionId value="0437038d-13ec-4450-abb4-7900f302dae0"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Heart rate</xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="8867-4"/>
+                  <display value="Heart rate"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueQuantity>
+               <value value="85"/>
+               <unit value="/min"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="/min"/>
+            </valueQuantity>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:a2224ed4-b989-4a2c-9e85-da504ac449c3"/>
+      <resource>
+         <Observation>
+            <id value="a2224ed4-b989-4a2c-9e85-da504ac449c3"/>
+            <meta>
+               <versionId value="216458ee-b349-4222-8f41-b65f3865532c"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Oxygen saturation in Arterial blood</xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="2708-6"/>
+                  <display value="Oxygen saturation in Arterial blood"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueQuantity>
+               <value value="60"/>
+               <unit value="%"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="%"/>
+            </valueQuantity>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:809ebbad-1943-4675-8f5b-34953a57171e"/>
+      <resource>
+         <Observation>
+            <id value="809ebbad-1943-4675-8f5b-34953a57171e"/>
+            <meta>
+               <versionId value="6ba953ce-62da-4a62-8d2c-bff6f1dd4baf"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Respiratory rate</xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="9279-1"/>
+                  <display value="Respiratory rate"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueQuantity>
+               <value value="40"/>
+               <unit value="/min"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="/min"/>
+            </valueQuantity>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:82345754-3b67-4866-ada5-4acd22aee6be"/>
+      <resource>
+         <Observation>
+            <id value="82345754-3b67-4866-ada5-4acd22aee6be"/>
+            <meta>
+               <versionId value="7aa645d7-7466-44d0-ad89-cf4d2e4ccdcc"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Body temperature</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="vital-signs"/>
+                  <display value="Vital Signs"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="8310-5"/>
+                  <display value="Body temperature"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueQuantity>
+               <value value="38.4"/>
+               <unit value="°C"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="Cel"/>
+            </valueQuantity>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8c-772d-8000-e3fe9c2c515d"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8c-772d-8000-e3fe9c2c515d"/>
+            <meta>
+               <versionId value="069402b4-de8c-772d-8000-e3fe9c2c515d"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Pregnancy status</xhtml:div>
+            </text>
+            <status value="final"/>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="82810-3"/>
+                  <display value="Pregnancy status"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueCodeableConcept>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="60001007"/>
+                  <display value="Not pregnant"/>
+               </coding>
+            </valueCodeableConcept>
+            <hasMember>
+               <reference value="urn:uuid:069402b4-de8c-777d-8000-a69a60c0eb33"/>
+            </hasMember>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8c-777d-8000-a69a60c0eb33"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8c-777d-8000-a69a60c0eb33"/>
+            <meta>
+               <versionId value="069402b4-de8c-777d-8000-a69a60c0eb33"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Delivery date Estimated</xhtml:div>
+            </text>
+            <status value="final"/>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="11778-8"/>
+                  <display value="Delivery date Estimated"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueDateTime value="2025-12-30"/>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8c-7903-8000-6a816c161a77"/>
+      <resource>
+         <AllergyIntolerance>
+            <id value="069402b4-de8c-7903-8000-6a816c161a77"/>
+            <meta>
+               <versionId value="069402b4-de8c-7903-8000-6a816c161a77"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>AllergyIntolerance</xhtml:div>
+            </text>
+            <clinicalStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+                  <code value="inactive"/>
+               </coding>
+            </clinicalStatus>
+            <verificationStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+                  <code value="confirmed"/>
+               </coding>
+            </verificationStatus>
+            <type value="allergy"/>
+            <category value="food"/>
+            <criticality value="low"/>
+            <code>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="47703008"/>
+                  <display value="Lactose"/>
+               </coding>
+            </code>
+            <patient>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </patient>
+            <onsetPeriod>
+               <start value="1999-09-11"/>
+               <end value="2000-09-11"/>
+            </onsetPeriod>
+            <recordedDate value="2024-12-01T12:53:12+01:00"/>
+            <recorder>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </recorder>
+            <reaction>
+               <manifestation>
+                  <coding>
+                     <system value="http://snomed.info/sct"/>
+                     <code value="271807003"/>
+                     <display value="Eruption of skin"/>
+                  </coding>
+               </manifestation>
+            </reaction>
+         </AllergyIntolerance>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8c-7a75-8000-677afafe36e2"/>
+      <resource>
+         <AllergyIntolerance>
+            <id value="069402b4-de8c-7a75-8000-677afafe36e2"/>
+            <meta>
+               <versionId value="069402b4-de8c-7a75-8000-677afafe36e2"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>AllergyIntolerance</xhtml:div>
+            </text>
+            <clinicalStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+                  <code value="active"/>
+               </coding>
+            </clinicalStatus>
+            <verificationStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+                  <code value="confirmed"/>
+               </coding>
+            </verificationStatus>
+            <type value="allergy"/>
+            <category value="food"/>
+            <criticality value="low"/>
+            <code>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="44027008"/>
+                  <display value="Seafood"/>
+               </coding>
+            </code>
+            <patient>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </patient>
+            <onsetPeriod>
+               <start value="1999-09-11"/>
+               <end value="2000-09-11"/>
+            </onsetPeriod>
+            <recordedDate value="2023-12-01T12:53:12+01:00"/>
+            <recorder>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </recorder>
+            <reaction>
+               <manifestation>
+                  <coding>
+                     <system value="http://snomed.info/sct"/>
+                     <code value="418363000"/>
+                     <display value="Itching of skin"/>
+                  </coding>
+               </manifestation>
+            </reaction>
+         </AllergyIntolerance>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8c-7b8f-8000-cc468e57bbf9"/>
+      <resource>
+         <Flag>
+            <id value="069402b4-de8c-7b8f-8000-cc468e57bbf9"/>
+            <meta>
+               <versionId value="069402b4-de8c-7b8f-8000-cc468e57bbf9"/>
+               <lastUpdated value="2005-12-01T12:53:12+01:00"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Flag</xhtml:div>
+            </text>
+            <status value="active"/>
+            <code>
+               <text value="Hyperlipoproteinemie"/>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <period>
+               <start value="1999-09-11"/>
+            </period>
+            <author>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </author>
+         </Flag>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8c-7c49-8000-2b8ff421133c"/>
+      <resource>
+         <Flag>
+            <id value="069402b4-de8c-7c49-8000-2b8ff421133c"/>
+            <meta>
+               <versionId value="069402b4-de8c-7c49-8000-2b8ff421133c"/>
+               <lastUpdated value="2006-12-01T12:53:12+01:00"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Flag</xhtml:div>
+            </text>
+            <status value="active"/>
+            <code>
+               <coding>
+                  <system value="http://hl7.org/fhir/sid/icd-10"/>
+                  <code value="I46.9"/>
+                  <display value="Cardiac arrest, unspecified"/>
+               </coding>
+               <text value="History of cardiac arrest"/>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <period>
+               <start value="1999-09-11"/>
+            </period>
+            <author>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </author>
+         </Flag>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8c-7d33-8000-cf0923e8b869"/>
+      <resource>
+         <DeviceUseStatement>
+            <id value="069402b4-de8c-7d33-8000-cf0923e8b869"/>
+            <meta>
+               <versionId value="069402b4-de8c-7d33-8000-cf0923e8b869"/>
+               <lastUpdated value="2005-12-01T12:53:12+01:00"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>DeviceUseStatement</xhtml:div>
+            </text>
+            <status value="active"/>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <timingPeriod>
+               <start value="1999-09-11"/>
+               <end value="2000-09-11"/>
+            </timingPeriod>
+            <source>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </source>
+            <device>
+               <reference value="urn:uuid:069402b4-de8c-7d9e-8000-bcd47125c94a"/>
+            </device>
+         </DeviceUseStatement>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8c-7d9e-8000-bcd47125c94a"/>
+      <resource>
+         <Device>
+            <id value="069402b4-de8c-7d9e-8000-bcd47125c94a"/>
+            <meta>
+               <versionId value="069402b4-de8c-7d9e-8000-bcd47125c94a"/>
+               <lastUpdated value="2005-12-01T12:53:12+01:00"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Device</xhtml:div>
+            </text>
+            <status value="active"/>
+            <modelNumber value="identifikátor prostředku"/>
+            <type>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="14106009"/>
+                  <display value="Cardiac pacemaker"/>
+               </coding>
+            </type>
+            <patient>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </patient>
+         </Device>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8c-7e64-8000-fcf65df21383"/>
+      <resource>
+         <Flag>
+            <id value="069402b4-de8c-7e64-8000-fcf65df21383"/>
+            <meta>
+               <versionId value="069402b4-de8c-7e64-8000-fcf65df21383"/>
+               <lastUpdated value="2005-12-01T12:53:12+01:00"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Flag</xhtml:div>
+            </text>
+            <status value="active"/>
+            <code>
+               <text value="Lipanthyl 1-0-0"/>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <period>
+               <start value="1999-09-11"/>
+            </period>
+            <author>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </author>
+         </Flag>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8c-7f27-8000-13547534d0f2"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8c-7f27-8000-13547534d0f2"/>
+            <meta>
+               <versionId value="069402b4-de8c-7f27-8000-13547534d0f2"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Observation</xhtml:div>
+            </text>
+            <status value="final"/>
+            <code>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/DSAJQ.htm"/>
+                  <code value="PKS"/>
+                  <display value="Krevní skupina - popis"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2005-12-01T12:53:12+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueCodeableConcept>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/DSAIR.htm"/>
+                  <code value="AB+"/>
+                  <display value="AB RhD pozitivní"/>
+               </coding>
+            </valueCodeableConcept>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8d-7045-8000-22df5ff2a124"/>
+      <resource>
+         <Flag>
+            <id value="069402b4-de8d-7045-8000-22df5ff2a124"/>
+            <meta>
+               <versionId value="069402b4-de8d-7045-8000-22df5ff2a124"/>
+               <lastUpdated value="2005-12-01T12:53:12+01:00"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Flag</xhtml:div>
+            </text>
+            <status value="active"/>
+            <code>
+               <text value="Očkování proti tetanu"/>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <period>
+               <start value="1995-04-18"/>
+            </period>
+            <author>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </author>
+         </Flag>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8d-70ea-8000-588bc18e8c60"/>
+      <resource>
+         <DiagnosticReport>
+            <id value="069402b4-de8d-70ea-8000-588bc18e8c60"/>
+            <meta>
+               <versionId value="069402b4-de8d-70ea-8000-588bc18e8c60"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>History and physical note</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+                  <code value="OTH"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="34117-2"/>
+                  <display value="History and physical note"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2007-12-05T05:06:56+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <conclusion value="RA: bezvýznamná OA: recentně zjištěn vyšší TK u dr. Kramáře /2/02/ cukrovka není CMP 1999 s pravostrannou hemiparesou léčí na osteoporosu 01/02 odstranění 2 polypů colon /Po Petřínem/ katarakta - operace před 20 a 3 roky na obou očích FA: Inhibace, Biston, Anopyrin, Enelbin, Euphyllin SPA: důchodce Abusus: kouřil do roku 1992"/>
+         </DiagnosticReport>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8d-7262-8000-39dc9e925be3"/>
+      <resource>
+         <Condition>
+            <id value="069402b4-de8d-7262-8000-39dc9e925be3"/>
+            <meta>
+               <versionId value="069402b4-de8d-7262-8000-39dc9e925be3"/>
+               <lastUpdated value="2006-12-03T11:00:00+01:00"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Condition</xhtml:div>
+            </text>
+            <clinicalStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                  <code value="active"/>
+               </coding>
+            </clinicalStatus>
+            <verificationStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+                  <code value="confirmed"/>
+               </coding>
+            </verificationStatus>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                  <code value="encounter-diagnosis"/>
+                  <display value="Encounter Diagnosis"/>
+               </coding>
+            </category>
+            <severity>
+               <text value="závažnost - text"/>
+            </severity>
+            <code>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/WWBWI.htm"/>
+                  <code value="59621000"/>
+                  <display value="Essential hypertension"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <onsetPeriod>
+               <start value="2005-12-05T05:06:56+01:00"/>
+               <end value="2006-12-05T05:06:56+01:00"/>
+            </onsetPeriod>
+            <recorder>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </recorder>
+            <stage>
+               <summary>
+                  <coding>
+                     <system value="https://dasta.mzcr.cz/WWBWI.htm"/>
+                     <code value="443883004"/>
+                     <display value="Secondary hypertension"/>
+                  </coding>
+               </summary>
+            </stage>
+            <note>
+               <text value="Volný text - popis problému"/>
+            </note>
+            <note>
+               <text value="okolnosti vyřešení - anf"/>
+            </note>
+            <note>
+               <text value="stádium onemocnění - text"/>
+            </note>
+         </Condition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8d-74ba-8000-7eb6dd5cd9d6"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8d-74ba-8000-7eb6dd5cd9d6"/>
+            <meta>
+               <versionId value="069402b4-de8d-74ba-8000-7eb6dd5cd9d6"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Observation</xhtml:div>
+            </text>
+            <status value="final"/>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="82753-5"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectivePeriod>
+               <start value="2010-12-05T05:06:56+01:00"/>
+               <end value="2012-12-05T05:06:56+01:00"/>
+            </effectivePeriod>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueCodeableConcept>
+               <coding>
+                  <system value="urn:iso:std:iso:3166"/>
+                  <code value="CZE"/>
+                  <display value="Czechia"/>
+               </coding>
+               <text value="Poznámky k pobytu."/>
+            </valueCodeableConcept>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8d-75c0-8000-3a359026f3cd"/>
+      <resource>
+         <FamilyMemberHistory>
+            <id value="069402b4-de8d-75c0-8000-3a359026f3cd"/>
+            <meta>
+               <versionId value="069402b4-de8d-75c0-8000-3a359026f3cd"/>
+               <lastUpdated value="2006-12-03T11:00:00+01:00"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>FamilyMemberHistory</xhtml:div>
+            </text>
+            <status value="completed"/>
+            <patient>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </patient>
+            <relationship>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+                  <code value="GRMTH"/>
+                  <display value="grandmother"/>
+               </coding>
+            </relationship>
+            <bornDate value="1905-04-18"/>
+            <deceasedDate value="1999"/>
+            <note>
+               <authorReference>
+                  <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+               </authorReference>
+               <text value="VŠ"/>
+            </note>
+            <condition>
+               <code>
+                  <coding>
+                     <system value="http://snomed.info/sct"/>
+                     <code value="363346000"/>
+                     <display value="Malignant neoplastic disease"/>
+                  </coding>
+               </code>
+               <outcome>
+                  <coding>
+                     <system value="http://snomed.info/sct"/>
+                     <code value="38605008"/>
+                     <display value="Natural death"/>
+                  </coding>
+               </outcome>
+            </condition>
+         </FamilyMemberHistory>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8d-77e0-8000-0deab3c2bd94"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8d-77e0-8000-0deab3c2bd94"/>
+            <meta>
+               <versionId value="069402b4-de8d-77e0-8000-0deab3c2bd94"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Observation</xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="social-history"/>
+               </coding>
+            </category>
+            <code>
+               <text value="Sociální anamnéza"/>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <component>
+               <code>
+                  <text value="Pracovní zapojení"/>
+               </code>
+               <valueString value="Pracuje jako dobrovolník v komunitním centru"/>
+            </component>
+            <component>
+               <code>
+                  <text value="Koníčky"/>
+               </code>
+               <valueString value="Turistika, čtení knih, zahradničení"/>
+            </component>
+            <component>
+               <code>
+                  <text value="Sociální síť"/>
+               </code>
+               <valueString value="Rodina, přátelé, dobré vztahy se sousedy"/>
+            </component>
+            <component>
+               <code>
+                  <coding>
+                     <system value="http://terminology.hl7.org/CodeSystem/v3-EducationLevel"/>
+                     <code value="HS"/>
+                     <display value="High School or secondary school degree complete"/>
+                  </coding>
+               </code>
+               <valueString value="stále studuje a studuje"/>
+            </component>
+            <component>
+               <code>
+                  <coding>
+                     <system value="https://dasta.mzcr.cz/WWBWB.htm"/>
+                     <code value="365508006"/>
+                     <display value="Residence and accommodation circumstances"/>
+                  </coding>
+                  <text value="Způsob bydlení"/>
+               </code>
+               <valueString value="Druh bydlení, ve kterém pacient žije"/>
+            </component>
+            <component>
+               <code>
+                  <coding>
+                     <system value="https://dasta.mzcr.cz/WWBWC.htm"/>
+                     <code value="BSCH"/>
+                     <display value="Vana / sprchové křeslo"/>
+                  </coding>
+                  <text value="Přizpůsobení domácnosti"/>
+               </code>
+               <valueString value="Úpravy přítomné v domácnosti, které byly provedeny v souvislosti s nemocí nebo postižením, aby bylo fungování pacienta bezpečnější a pohodlnější a umožnilo nezávislý život"/>
+            </component>
+            <component>
+               <code>
+                  <coding>
+                     <system value="https://dasta.mzcr.cz/WWBWD.htm"/>
+                     <code value="STHO"/>
+                     <display value="Schody v domě"/>
+                  </coding>
+                  <text value="Bariéry"/>
+               </code>
+               <valueString value="Podmínky, které mají vliv na bezbariérovost domova nebo pobyt v domově"/>
+            </component>
+            <component>
+               <code>
+                  <text value="Rodinná situace"/>
+               </code>
+               <valueString value="komentář k rodinné situaci"/>
+            </component>
+            <component>
+               <code>
+                  <text value="Složení rodiny"/>
+               </code>
+               <valueString value="složení rodiny"/>
+            </component>
+            <component>
+               <code>
+                  <text value="Rodinný stav"/>
+               </code>
+               <valueString value="rodinný stav"/>
+            </component>
+            <component>
+               <code>
+                  <text value="Počet dětí"/>
+               </code>
+               <valueString value="5"/>
+            </component>
+            <component>
+               <code>
+                  <text value="Počet dětí ve společné domácnosti"/>
+               </code>
+               <valueString value="3"/>
+            </component>
+            <component>
+               <code>
+                  <text value="Podrobnosti o dítěti"/>
+               </code>
+               <valueString value="podrobnosti o dítěti"/>
+            </component>
+            <component>
+               <code>
+                  <text value="Pečuje o závislého člena"/>
+               </code>
+               <valueString value="Činnosti, které pacient vykonává při péči o závislého člena rodiny"/>
+            </component>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8d-7a98-8000-95f756c19ca1"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8d-7a98-8000-95f756c19ca1"/>
+            <meta>
+               <versionId value="069402b4-de8d-7a98-8000-95f756c19ca1"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Observation</xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="social-history"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="74013-4"/>
+                  <display value="Alcoholic drinks per day"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueCodeableConcept>
+               <text value="4"/>
+            </valueCodeableConcept>
+            <note>
+               <text value="komentář"/>
+            </note>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8d-7bd7-8000-31aea2cadfa0"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8d-7bd7-8000-31aea2cadfa0"/>
+            <meta>
+               <versionId value="069402b4-de8d-7bd7-8000-31aea2cadfa0"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Observation</xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="social-history"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="72166-2"/>
+                  <display value="Tobacco smoking status"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueCodeableConcept>
+               <text value="0.5"/>
+            </valueCodeableConcept>
+            <note>
+               <text value="komentář"/>
+            </note>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8d-7cef-8000-f0639563924c"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8d-7cef-8000-f0639563924c"/>
+            <meta>
+               <versionId value="069402b4-de8d-7cef-8000-f0639563924c"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Observation</xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="social-history"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/WWBWG.htm"/>
+                  <code value="417284009"/>
+                  <display value="Současný uživatel drog"/>
+               </coding>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/WWBWH.htm"/>
+                  <code value="703842006"/>
+                  <display value="Amfetamin"/>
+               </coding>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/WWBSE.htm"/>
+                  <code value="20020000"/>
+                  <display value="Inhalační podání"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectivePeriod>
+               <start value="2024-12-05T05:06:56+01:00"/>
+               <end value="2025-12-05T05:06:56+01:00"/>
+            </effectivePeriod>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueCodeableConcept>
+               <text value="množství - text"/>
+            </valueCodeableConcept>
+            <note>
+               <text value="komentář"/>
+            </note>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8d-7e94-8000-4b2a7e2236e7"/>
+      <resource>
+         <Observation>
+            <id value="069402b4-de8d-7e94-8000-4b2a7e2236e7"/>
+            <meta>
+               <versionId value="069402b4-de8d-7e94-8000-4b2a7e2236e7"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Observation</xhtml:div>
+            </text>
+            <status value="final"/>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+                  <code value="social-history"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="66590003"/>
+                  <display value="Alcohol dependence"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2006-12-03T11:00:00+01:00"/>
+            <performer>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </performer>
+            <valueCodeableConcept>
+               <text value="popis problému"/>
+            </valueCodeableConcept>
+         </Observation>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-7025-8000-4ecd0e2337ec"/>
+      <resource>
+         <Immunization>
+            <id value="069402b4-de8e-7025-8000-4ecd0e2337ec"/>
+            <meta>
+               <versionId value="069402b4-de8e-7025-8000-4ecd0e2337ec"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Očkování proti tetanu</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/DSAHW.htm"/>
+                  <code value="TETP"/>
+                  <display value="Očkování proti tetanu"/>
+               </coding>
+               <coding>
+                  <system value="http://www.sukl.cz"/>
+                  <code value="0250256"/>
+                  <display value="COMIRNATY"/>
+               </coding>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/DSAKM.htm"/>
+                  <code value="J07AE"/>
+                  <display value="Cholera vaccines"/>
+               </coding>
+               <text value="poznámky k očkovací dávce"/>
+            </vaccineCode>
+            <patient>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </patient>
+            <occurrenceDateTime value="2001-12-02T09:30:50+01:00"/>
+            <manufacturer>
+               <display value="název výrobce"/>
+            </manufacturer>
+            <lotNumber value="111"/>
+            <expirationDate value="2001-12-02"/>
+            <site>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/WWBUU.htm"/>
+                  <code value="LH"/>
+                  <display value="levá ruka"/>
+               </coding>
+            </site>
+            <route>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/WWBUT.htm"/>
+                  <code value="IVN"/>
+                  <display value="Intravenózní podání"/>
+               </coding>
+            </route>
+            <performer>
+               <actor>
+                  <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+               </actor>
+            </performer>
+            <protocolApplied>
+               <doseNumberPositiveInt value="1"/>
+               <seriesDosesString value="1"/>
+            </protocolApplied>
+         </Immunization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-7151-8000-05dd270f5591"/>
+      <resource>
+         <Immunization>
+            <id value="069402b4-de8e-7151-8000-05dd270f5591"/>
+            <meta>
+               <versionId value="069402b4-de8e-7151-8000-05dd270f5591"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Očkování proti chřipce</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/DSAHW.htm"/>
+                  <code value="CHRI"/>
+                  <display value="Očkování proti chřipce"/>
+               </coding>
+               <coding>
+                  <system value="http://www.sukl.cz"/>
+                  <code value="225792"/>
+                  <display value="INFLUVAC TETRA"/>
+               </coding>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/DSAKM.htm"/>
+                  <code value="J07AH"/>
+                  <display value="Meningococcal vaccines"/>
+               </coding>
+               <text value="poznámky k očkovací dávce"/>
+            </vaccineCode>
+            <patient>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </patient>
+            <occurrenceDateTime value="2001-12-03T09:30:50+01:00"/>
+            <manufacturer>
+               <display value="název výrobce"/>
+            </manufacturer>
+            <lotNumber value="456"/>
+            <site>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/WWBUU.htm"/>
+                  <code value="PH"/>
+                  <display value="pravá ruka"/>
+               </coding>
+            </site>
+            <route>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/WWBUT.htm"/>
+                  <code value="IVN"/>
+                  <display value="Intravenózní podání"/>
+               </coding>
+            </route>
+            <performer>
+               <actor>
+                  <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+               </actor>
+            </performer>
+            <protocolApplied>
+               <doseNumberPositiveInt value="1"/>
+               <seriesDosesString value="3"/>
+            </protocolApplied>
+         </Immunization>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-72a9-8000-d9b13acafdf7"/>
+      <resource>
+         <Condition>
+            <id value="069402b4-de8e-72a9-8000-d9b13acafdf7"/>
+            <meta>
+               <versionId value="069402b4-de8e-72a9-8000-d9b13acafdf7"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>I50</xhtml:p>
+               </xhtml:div>
+            </text>
+            <clinicalStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                  <code value="active"/>
+               </coding>
+            </clinicalStatus>
+            <verificationStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+                  <code value="confirmed"/>
+               </coding>
+            </verificationStatus>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                  <code value="encounter-diagnosis"/>
+                  <display value="Encounter Diagnosis"/>
+               </coding>
+            </category>
+            <severity>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="24484000"/>
+                  <display value="Severe"/>
+               </coding>
+            </severity>
+            <code>
+               <coding>
+                  <system value="http://hl7.org/fhir/sid/icd-10"/>
+                  <code value="I50"/>
+                  <display value="Heart failure"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <onsetDateTime value="2001-09-28T15:29:00+01:00"/>
+            <recorder>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </recorder>
+            <note>
+               <text value="poznámka k diagnóze"/>
+            </note>
+         </Condition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-740a-8000-9ff49da9fc73"/>
+      <resource>
+         <Condition>
+            <id value="069402b4-de8e-740a-8000-9ff49da9fc73"/>
+            <meta>
+               <versionId value="069402b4-de8e-740a-8000-9ff49da9fc73"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>I15.1</xhtml:p>
+               </xhtml:div>
+            </text>
+            <clinicalStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                  <code value="active"/>
+               </coding>
+            </clinicalStatus>
+            <verificationStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+                  <code value="confirmed"/>
+               </coding>
+            </verificationStatus>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                  <code value="encounter-diagnosis"/>
+                  <display value="Encounter Diagnosis"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://hl7.org/fhir/sid/icd-10"/>
+                  <code value="I15.1"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <onsetDateTime value="2006-12-03T11:00:00+01:00"/>
+            <recorder>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </recorder>
+         </Condition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-749f-8000-90556a8c9a71"/>
+      <resource>
+         <Condition>
+            <id value="069402b4-de8e-749f-8000-90556a8c9a71"/>
+            <meta>
+               <versionId value="069402b4-de8e-749f-8000-90556a8c9a71"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>A02.9</xhtml:p>
+               </xhtml:div>
+            </text>
+            <clinicalStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                  <code value="active"/>
+               </coding>
+            </clinicalStatus>
+            <verificationStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+                  <code value="confirmed"/>
+               </coding>
+            </verificationStatus>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                  <code value="encounter-diagnosis"/>
+                  <display value="Encounter Diagnosis"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://hl7.org/fhir/sid/icd-10"/>
+                  <code value="A02.9"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <onsetDateTime value="2006-12-03T11:00:00+01:00"/>
+            <recorder>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </recorder>
+         </Condition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-7532-8000-58d8b264e896"/>
+      <resource>
+         <Condition>
+            <id value="069402b4-de8e-7532-8000-58d8b264e896"/>
+            <meta>
+               <versionId value="069402b4-de8e-7532-8000-58d8b264e896"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>A26.0</xhtml:p>
+               </xhtml:div>
+            </text>
+            <clinicalStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                  <code value="active"/>
+               </coding>
+            </clinicalStatus>
+            <verificationStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+                  <code value="confirmed"/>
+               </coding>
+            </verificationStatus>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                  <code value="encounter-diagnosis"/>
+                  <display value="Encounter Diagnosis"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://hl7.org/fhir/sid/icd-10"/>
+                  <code value="A26.0"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <onsetDateTime value="2006-12-03T11:00:00+01:00"/>
+            <recorder>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </recorder>
+         </Condition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-75c9-8000-36ef9bcdca58"/>
+      <resource>
+         <Condition>
+            <id value="069402b4-de8e-75c9-8000-36ef9bcdca58"/>
+            <meta>
+               <versionId value="069402b4-de8e-75c9-8000-36ef9bcdca58"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>A51.0</xhtml:p>
+               </xhtml:div>
+            </text>
+            <clinicalStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                  <code value="active"/>
+               </coding>
+            </clinicalStatus>
+            <verificationStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+                  <code value="confirmed"/>
+               </coding>
+            </verificationStatus>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                  <code value="encounter-diagnosis"/>
+                  <display value="Encounter Diagnosis"/>
+               </coding>
+            </category>
+            <code>
+               <coding>
+                  <system value="http://hl7.org/fhir/sid/icd-10"/>
+                  <code value="A51.0"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <onsetDateTime value="2006-12-03T11:00:00+01:00"/>
+            <recorder>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </recorder>
+         </Condition>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-76af-8000-b85de2b5b8bf"/>
+      <resource>
+         <MedicationAdministration>
+            <id value="069402b4-de8e-76af-8000-b85de2b5b8bf"/>
+            <meta>
+               <versionId value="069402b4-de8e-76af-8000-b85de2b5b8bf"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>PENICILIN G 1.0 DRAS. SOL BIOT.</xhtml:div>
+            </text>
+            <status value="completed"/>
+            <medicationCodeableConcept>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/LEKY.htm"/>
+                  <code value="01093"/>
+                  <display value="PENICILIN G 1.0 DRAS. SOL BIOT."/>
+               </coding>
+            </medicationCodeableConcept>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2005-12-30T19:46:25+01:00"/>
+            <performer>
+               <actor>
+                  <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+               </actor>
+            </performer>
+            <note>
+               <text value="před jídlem"/>
+            </note>
+            <dosage>
+               <rateQuantity>
+                  <value value="3"/>
+               </rateQuantity>
+            </dosage>
+         </MedicationAdministration>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-77a4-8000-996f67c97ab4"/>
+      <resource>
+         <MedicationAdministration>
+            <id value="069402b4-de8e-77a4-8000-996f67c97ab4"/>
+            <meta>
+               <versionId value="069402b4-de8e-77a4-8000-996f67c97ab4"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>ANTIREVMATICKÝ ČAJ spc 20x1.5gm</xhtml:div>
+            </text>
+            <status value="completed"/>
+            <medicationCodeableConcept>
+               <coding>
+                  <system value="https://dasta.mzcr.cz/LEKY.htm"/>
+                  <code value="53341"/>
+                  <display value="ANTIREVMATICKÝ ČAJ spc 20x1.5gm"/>
+               </coding>
+            </medicationCodeableConcept>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <effectiveDateTime value="2005-12-30T19:46:25+01:00"/>
+            <performer>
+               <actor>
+                  <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+               </actor>
+            </performer>
+            <note>
+               <text value="po jídle"/>
+            </note>
+            <dosage>
+               <rateQuantity>
+                  <value value="6"/>
+               </rateQuantity>
+            </dosage>
+         </MedicationAdministration>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-78b2-8000-0e2a61a8d81a"/>
+      <resource>
+         <Procedure>
+            <id value="069402b4-de8e-78b2-8000-0e2a61a8d81a"/>
+            <meta>
+               <versionId value="069402b4-de8e-78b2-8000-0e2a61a8d81a"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>Appendectomy</xhtml:div>
+            </text>
+            <status value="completed"/>
+            <code>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="80146002"/>
+                  <display value="Appendectomy"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <performedDateTime value="2005-12-30T11:00:00+01:00"/>
+            <performer>
+               <actor>
+                  <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+               </actor>
+            </performer>
+            <reasonCode>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="74400008"/>
+                  <display value="Appendicitis"/>
+               </coding>
+            </reasonCode>
+            <bodySite>
+               <text value="Structure of appendix"/>
+            </bodySite>
+            <outcome>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="385670004"/>
+                  <display value="Partially successful"/>
+               </coding>
+            </outcome>
+            <complication>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="48661000"/>
+                  <display value="Peritonitis"/>
+               </coding>
+            </complication>
+         </Procedure>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-7b5f-8000-d7519e096a37"/>
+      <resource>
+         <CarePlan>
+            <id value="069402b4-de8e-7b5f-8000-d7519e096a37"/>
+            <meta>
+               <versionId value="069402b4-de8e-7b5f-8000-d7519e096a37"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Pacientovi bylo doporučeno pravidelné sledování krevního tlaku a hladiny cholesterolu každých 6 měsíců. Vzhledem k rodinné anamnéze diabetu je doporučeno provádět test glykemie nalačno jednou ročně.</xhtml:p>
+               </xhtml:div>
+            </text>
+            <status value="completed"/>
+            <intent value="plan"/>
+            <description value="Pacientovi bylo doporučeno pravidelné sledování krevního tlaku a hladiny cholesterolu každých 6 měsíců. Vzhledem k rodinné anamnéze diabetu je doporučeno provádět test glykemie nalačno jednou ročně."/>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <created value="2006-12-03T11:00:00+01:00"/>
+            <author>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </author>
+         </CarePlan>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="urn:uuid:069402b4-de8e-7c16-8000-313a8e08d630"/>
+      <resource>
+         <Condition>
+            <id value="069402b4-de8e-7c16-8000-313a8e08d630"/>
+            <meta>
+               <versionId value="069402b4-de8e-7c16-8000-313a8e08d630"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Pacient trpí chronickou obstrukční plicní nemocí (CHOPN) ve středním stadiu. Při fyzické námaze se objevuje dušnost, omezená tolerance zátěže.</xhtml:p>
+               </xhtml:div>
+            </text>
+            <clinicalStatus>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                  <code value="active"/>
+                  <display value="Active"/>
+               </coding>
+            </clinicalStatus>
+            <category>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+                  <code value="problem-list-item"/>
+                  <display value="Problem List Item"/>
+               </coding>
+            </category>
+            <code>
+               <text value="Pacient trpí chronickou obstrukční plicní nemocí (CHOPN) ve středním stadiu. Při fyzické námaze se objevuje dušnost, omezená tolerance zátěže."/>
+            </code>
+            <subject>
+               <reference value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </subject>
+            <recordedDate value="2006-12-03T11:00:00+01:00"/>
+            <recorder>
+               <reference value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+            </recorder>
+         </Condition>
+      </resource>
+   </entry>
+   <entry id="069402b4-de8a-7445-8000-5188b708b7d3">
+      <fullUrl value="urn:uuid:069402b4-de8a-7445-8000-5188b708b7d3"/>
+      <resource>
+         <Patient>
+            <id value="069402b4-de8a-7445-8000-5188b708b7d3"/>
+            <meta>
+               <versionId value="069402b4-de8a-7445-8000-5188b708b7d3"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>Tomáš Ukázka 7601019998</xhtml:p>
+               </xhtml:div>
+            </text>
+            <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+               <valueAddress>
+                  <city value="Praha"/>
+               </valueAddress>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+               <extension url="code">
+                  <valueCodeableConcept>
+                     <coding>
+                        <system value="urn:iso:std:iso:3166"/>
+                        <code value="CZE"/>
+                     </coding>
+                  </valueCodeableConcept>
+               </extension>
+            </extension>
+            <identifier>
+               <use value="official"/>
+               <system value="https://ncez.mzcr.cz/fhir/sid/cpoj"/>
+               <value value="7601019998"/>
+            </identifier>
+            <identifier>
+               <use value="official"/>
+               <system value="https://ncez.mzcr.cz/fhir/sid/rcis"/>
+               <value value="7601019998"/>
+            </identifier>
+            <identifier>
+               <use value="official"/>
+               <system value="https://ncez.mzcr.cz/fhir/sid/rid"/>
+               <value value="7601019998"/>
+            </identifier>
+            <identifier>
+               <use value="official"/>
+               <system value="https://ncez.mzcr.cz/fhir/sid/op"/>
+               <value value="9988776655"/>
+               <period>
+                  <end value="2026-02-19"/>
+               </period>
+            </identifier>
+            <identifier>
+               <use value="official"/>
+               <type>
+                  <coding>
+                     <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                     <code value="PPN"/>
+                  </coding>
+               </type>
+               <system value="http://hl7.org/fhir/sid/passport-CZE"/>
+               <value value="1122334455"/>
+               <period>
+                  <end value="2020-11-29"/>
+               </period>
+               <assigner>
+                  <display value="Czech Republic (CZE)"/>
+               </assigner>
+            </identifier>
+            <active value="true"/>
+            <name>
+               <use value="official"/>
+               <family value="Ukázka"/>
+               <given value="Tomáš"/>
+               <prefix value="Ing."/>
+               <suffix value="MBA"/>
+            </name>
+            <name>
+               <use value="maiden"/>
+               <family value="Poloprd"/>
+            </name>
+            <telecom>
+               <system value="phone"/>
+               <value value="+420603123456"/>
+               <use value="mobile"/>
+               <rank value="1"/>
+            </telecom>
+            <telecom>
+               <system value="phone"/>
+               <value value="+420247814589"/>
+               <rank value="1"/>
+            </telecom>
+            <telecom>
+               <system value="email"/>
+               <value value="email@email.cz"/>
+               <rank value="1"/>
+            </telecom>
+            <gender value="male"/>
+            <birthDate value="1976-01-01"/>
+            <deceasedDateTime value="2021-10-15"/>
+            <address>
+               <use value="home"/>
+               <text value="Trvalé bydliště pacienta"/>
+               <line value="Tomáš Ukázka"/>
+               <line value="Plzeňská 145/8"/>
+               <line value="Smíchov"/>
+               <line value="3. patro"/>
+               <city value="Praha 5"/>
+               <postalCode value="15000"/>
+               <country value="CZE"/>
+               <period>
+                  <start value="2005-12-30"/>
+                  <end value="2024-12-31"/>
+               </period>
+            </address>
+            <contact>
+               <relationship>
+                  <coding>
+                     <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+                     <code value="C"/>
+                     <display value="Emergency Contact"/>
+                  </coding>
+               </relationship>
+               <telecom>
+                  <system value="email"/>
+                  <value value="otec@gmail.com"/>
+                  <rank value="1"/>
+               </telecom>
+               <telecom>
+                  <system value="phone"/>
+                  <value value="+420999888777"/>
+                  <use value="mobile"/>
+                  <rank value="1"/>
+               </telecom>
+               <address>
+                  <use value="home"/>
+                  <text value="Kontaktní osoba (ve vazbě k pacientovi)"/>
+                  <line value="Jaroslav Ukázka"/>
+                  <line value="Rumová 20"/>
+                  <city value="Praha 8"/>
+                  <postalCode value="18000"/>
+                  <country value="203"/>
+                  <period>
+                     <start value="2005-12-30"/>
+                     <end value="2024-12-31"/>
+                  </period>
+               </address>
+            </contact>
+            <contact>
+               <relationship>
+                  <coding>
+                     <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+                     <code value="N"/>
+                     <display value="Next-of-Kin"/>
+                  </coding>
+               </relationship>
+               <telecom>
+                  <system value="email"/>
+                  <value value="otec@qmail.com"/>
+                  <rank value="1"/>
+               </telecom>
+               <telecom>
+                  <system value="phone"/>
+                  <value value="+420999888777"/>
+                  <use value="mobile"/>
+                  <rank value="1"/>
+               </telecom>
+               <address>
+                  <use value="home"/>
+                  <text value="Zákonný zástupce pacienta"/>
+                  <line value="Jaroslav Ukázka"/>
+                  <line value="Rumová 20"/>
+                  <city value="Praha 8"/>
+                  <postalCode value="18000"/>
+                  <country value="203"/>
+                  <period>
+                     <start value="2005-12-30"/>
+                     <end value="2024-12-31"/>
+                  </period>
+               </address>
+            </contact>
+            <communication>
+               <language>
+                  <coding>
+                     <system value="https://dasta.mzcr.cz/WWBRX.htm"/>
+                     <code value="cs-CZ"/>
+                     <display value="čeština-Česko"/>
+                  </coding>
+                  <text value="poznámka"/>
+               </language>
+               <preferred value="true"/>
+            </communication>
+         </Patient>
+         <RelatedPerson>
+            <patient>
+               <reference value="Patient/069402b4-de8a-7445-8000-5188b708b7d3/_history/069402b4-de8a-7445-8000-5188b708b7d3"/>
+            </patient>
+            <relationship>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+                  <code value="FAMMEMB"/>
+                  <display value="family member"/>
+               </coding>
+            </relationship>
+            <telecom>
+               <system value="email"/>
+               <value value="pribuzny@gmail.com"/>
+               <rank value="1"/>
+            </telecom>
+            <telecom>
+               <system value="phone"/>
+               <value value="+420666555444"/>
+               <use value="mobile"/>
+               <rank value="1"/>
+            </telecom>
+            <address>
+               <use value="home"/>
+               <text value="Příbuzný pacienta"/>
+               <line value="Merlin Mrakomor"/>
+               <line value="Trmalova 64"/>
+               <city value="Říčany,Jažlovice"/>
+               <postalCode value="25101"/>
+               <country value="203"/>
+               <period>
+                  <start value="2005-12-30"/>
+                  <end value="2024-12-31"/>
+               </period>
+            </address>
+         </RelatedPerson>
+      </resource>
+   </entry>
+   <entry id="069402b4-de8a-7077-8000-191997dd40f8">
+      <fullUrl value="urn:uuid:069402b4-de8a-7077-8000-191997dd40f8"/>
+      <resource>
+         <Practitioner>
+            <id value="069402b4-de8a-7077-8000-191997dd40f8"/>
+            <meta>
+               <versionId value="069402b4-de8a-7077-8000-191997dd40f8"/>
+               <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"/>
+            </meta>
+            <text>
+               <status value="generated"/>
+               <xhtml:div>
+                  <xhtml:p>MUDr. Dasta Garant</xhtml:p>
+               </xhtml:div>
+            </text>
+            <identifier>
+               <value value="9988776655"/>
+            </identifier>
+            <identifier>
+               <value value="450124145"/>
+            </identifier>
+            <identifier>
+               <value value="1122334455"/>
+            </identifier>
+            <name>
+               <text value="MUDr. Dasta Garant"/>
+            </name>
+         </Practitioner>
+      </resource>
+   </entry>
+</Bundle>
