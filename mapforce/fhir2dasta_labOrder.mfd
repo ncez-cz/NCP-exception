@@ -7,7 +7,7 @@
 		<structure>
 			<children>
 				<component name="Reference_Patient" library="provisio" uid="5705" kind="19" visible="0">
-					<view ltx="83" lty="493" rbx="246" rby="527"/>
+					<view ltx="83" lty="493" rbx="244" rby="526"/>
 					<data>
 						<root>
 							<header>
@@ -40,7 +40,7 @@
 								</namespaces>
 							</header>
 							<entry name="FileInstance" ns="1" expanded="1">
-								<file role="inputinstance" name="..\samples\FHIR_ku_o_lab - v18.xml"/>
+								<file role="inputinstance" name="..\samples\FHIR2DASTA\input\FHIR_ku_o_lab - v18..xml"/>
 								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
 									<entry name="Bundle" expanded="1">
 										<entry name="identifier">
@@ -59,7 +59,7 @@
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" TnsPrefix="ds" AddSchemaLocation="0" WriteXMLStandalone="1"/>
 					<view ltx="1173" lty="91" rbx="1398" rby="384"/>
 					<data>
-						<root scrollposition="1">
+						<root>
 							<header>
 								<namespaces>
 									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
@@ -1339,7 +1339,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<view ltx="780" lty="263" rbx="881" rby="316"/>
 				</component>
 				<component name="document" library="xml" uid="9510" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="50" lty="90" rbx="350" rby="590"/>
 					<data>
 						<root scrollposition="329">
@@ -1684,7 +1684,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9423" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="2" lty="167" rbx="302" rby="667"/>
 					<data>
 						<root scrollposition="350">
@@ -1987,7 +1987,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<view ltx="618" lty="255" rbx="669" rby="308"/>
 				</component>
 				<component name="document" library="xml" uid="9380" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="79" lty="169" rbx="379" rby="669"/>
 					<data>
 						<root scrollposition="94">
@@ -2100,7 +2100,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<view ltx="898" lty="294" rbx="999" rby="347"/>
 				</component>
 				<component name="document" library="xml" uid="9404" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="83" lty="89" rbx="383" rby="589"/>
 					<data>
 						<root>
@@ -2300,7 +2300,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9414" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="154" lty="125" rbx="454" rby="625"/>
 					<data>
 						<root>
@@ -3070,7 +3070,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9524" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="-132" lty="-31" rbx="168" rby="347"/>
 					<data>
 						<root>
@@ -3158,7 +3158,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9525" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="-131" lty="395" rbx="177" rby="471"/>
 					<data>
 						<root>
@@ -6514,7 +6514,7 @@ Povinný prvek</text>
 					<view ltx="482" lty="872" rbx="559" rby="926"/>
 				</component>
 				<component name="document" library="xml" uid="9405" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="763" lty="974" rbx="911" rby="1055"/>
 					<data>
 						<root>
@@ -6811,7 +6811,7 @@ Povinný prvek</text>
 					<view ltx="518" lty="257" rbx="593" rby="310"/>
 				</component>
 				<component name="document" library="xml" uid="9379" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="763" lty="831" rbx="911" rby="913"/>
 					<data>
 						<root>
@@ -6835,7 +6835,7 @@ Povinný prvek</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9505" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="747" lty="689" rbx="906" rby="773"/>
 					<data>
 						<root>
@@ -7150,7 +7150,7 @@ Povinný prvek</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9530" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="782" lty="330" rbx="929" rby="414"/>
 					<data>
 						<root>
@@ -7346,7 +7346,7 @@ Povinný prvek</text>
 					<view ltx="595" lty="366" rbx="696" rby="419"/>
 				</component>
 				<component name="document" library="xml" uid="9376" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="-44" lty="48" rbx="256" rby="252"/>
 					<data>
 						<root>
@@ -7837,7 +7837,7 @@ Povinný prvek</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9375" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties/>
 					<view ltx="20" lty="271" rbx="320" rby="475"/>
 					<data>
 						<root>
