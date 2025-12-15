@@ -131,6 +131,9 @@
 					<entry>
 						<reference value="urn:uuid:82345754-3b67-4866-ada5-4acd22aee6be"/>
 					</entry>
+					<entry>
+						<reference value="urn:uuid:177d5498-0583-4ab1-b745-eac0fe8834a9"/>
+					</entry>
 				</section>
 				<section>
 					<title value="Anthropometric observations"/>
@@ -242,6 +245,18 @@
 						<status value="generated"/>
 						<xhtml:div>Significant information about course of hospital stay</xhtml:div>
 					</text>
+					<entry>
+						<reference value="urn:uuid:de4f166d-a24f-4cb7-85fc-865602807e60"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:4e2d016a-d4a0-4d49-8733-06efc60a5f39"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:e6f96f37-0c1d-42b3-8953-d8285a228bd6"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:a357d32b-b9d3-40e7-8ec5-29f02a34faa8"/>
+					</entry>
 					<entry>
 						<reference value="urn:uuid:326d65ea-95df-40d3-8d16-cb79d2248507"/>
 					</entry>
@@ -539,7 +554,7 @@
 						<xhtml:div>Problem List Section</xhtml:div>
 					</text>
 					<entry>
-						<reference value="urn:uuid:de4f166d-a24f-4cb7-85fc-865602807e60"/>
+						<reference value="urn:uuid:2b0b6d0a-2d69-4370-b0c1-6d9154b54b21"/>
 					</entry>
 				</section>
 				<section>
@@ -577,7 +592,10 @@
 						<xhtml:div>History of Medical devices and implants</xhtml:div>
 					</text>
 					<entry>
-						<reference value="urn:uuid:e6f96f37-0c1d-42b3-8953-d8285a228bd6"/>
+						<reference value="urn:uuid:04baeeb6-5481-40d8-8f35-169b412d6c62"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:12b30d45-cccf-46a1-a838-d3f6502533c5"/>
 					</entry>
 				</section>
 				<section>
@@ -594,7 +612,7 @@
 						<xhtml:div>History of Procedures Section</xhtml:div>
 					</text>
 					<entry>
-						<reference value="urn:uuid:4e2d016a-d4a0-4d49-8733-06efc60a5f39"/>
+						<reference value="urn:uuid:9c45ee64-edc4-472d-883b-5d43ee6cc308"/>
 					</entry>
 				</section>
 				<section>
@@ -610,13 +628,12 @@
 						<status value="generated"/>
 						<xhtml:div>Immunizations Section</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:dbd79264-3e89-4f43-aa5b-d9c7e0d0aeee"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:1ca424bd-6a48-45e8-bbaf-49339d9b3aae"/>
+					</entry>
 				</section>
 				<section>
 					<title value="Infectious contacts"/>
@@ -631,13 +648,9 @@
 						<status value="generated"/>
 						<xhtml:div>Infectious contacts</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:a5bfc1a2-87f1-4f96-9bda-dce884b28181"/>
+					</entry>
 				</section>
 				<section>
 					<title value="Travel History Section"/>
@@ -652,13 +665,9 @@
 						<status value="generated"/>
 						<xhtml:div>Travel History Section</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:5e61b4e4-d0cc-410c-ad7b-6d96609dc7fc"/>
+					</entry>
 				</section>
 				<section>
 					<title value="Family History Section"/>
@@ -673,13 +682,9 @@
 						<status value="generated"/>
 						<xhtml:div>Family History Section</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:bbc6766d-a602-4831-8da9-cb2f1578d1eb"/>
+					</entry>
 				</section>
 				<section>
 					<title value="Social History Section"/>
@@ -694,13 +699,12 @@
 						<status value="generated"/>
 						<xhtml:div>Social History Section</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:22ac546a-b5cb-41d7-b134-d9d3827a593f"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:534247f0-76cb-436f-a642-33d78662a855"/>
+					</entry>
 				</section>
 				<section>
 					<title value="Use of Substances Section"/>
@@ -736,13 +740,9 @@
 						<status value="generated"/>
 						<xhtml:div>Alcohol use Section</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:3af45f2d-fba2-4e03-89dd-51e5ced6721d"/>
+					</entry>
 				</section>
 				<section>
 					<title value="Tobacco use Section"/>
@@ -757,13 +757,9 @@
 						<status value="generated"/>
 						<xhtml:div>Tobacco use Section</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:0ab4514c-8976-4791-aac5-34db99ec4ba9"/>
+					</entry>
 				</section>
 				<section>
 					<title value="Drug use Section"/>
@@ -778,13 +774,9 @@
 						<status value="generated"/>
 						<xhtml:div>Drug use Section</xhtml:div>
 					</text>
-					<emptyReason>
-						<coding>
-							<system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
-							<code value="not-applicable"/>
-							<display value="Not Applicable"/>
-						</coding>
-					</emptyReason>
+					<entry>
+						<reference value="urn:uuid:61b3d087-9133-4d65-a65c-83016afea1c0"/>
+					</entry>
 				</section>
 				<section>
 					<title value="Discharge details"/>
@@ -2516,6 +2508,10 @@
 						<system value="http://loinc.org"/>
 						<code value="29545-1"/>
 					</tag>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="67851-6"/>
+					</tag>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -2590,6 +2586,902 @@
 		</resource>
 	</entry>
 	<entry>
+		<fullUrl value="urn:uuid:2b0b6d0a-2d69-4370-b0c1-6d9154b54b21"/>
+		<resource>
+			<Condition>
+				<id value="2b0b6d0a-2d69-4370-b0c1-6d9154b54b21"/>
+				<meta>
+					<versionId value="e0c2903e-e6d6-40ee-af9b-6a307a358ae6"/>
+					<lastUpdated value="2025-12-05T11:00:11+01:00"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/condition-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="11450-4"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Condition</xhtml:div>
+				</text>
+				<clinicalStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+						<code value="active"/>
+					</coding>
+				</clinicalStatus>
+				<verificationStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+						<code value="confirmed"/>
+					</coding>
+				</verificationStatus>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+						<code value="problem-list-item"/>
+					</coding>
+				</category>
+				<severity>
+					<text value="závažnost - text"/>
+				</severity>
+				<code>
+					<coding>
+						<system value="https://dasta.mzcr.cz/WWBWI.htm"/>
+						<version value="SNOMED CT"/>
+						<code value="59621000"/>
+						<display value="Essential hypertension"/>
+					</coding>
+					<text value="Volný text - popis problému"/>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<onsetDateTime value="2005-12-05T05:06:56+01:00"/>
+				<abatementDateTime value="2006-12-05T05:06:56+01:00"/>
+				<recorder>
+					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+				</recorder>
+				<stage>
+					<summary>
+						<coding>
+							<system value="https://dasta.mzcr.cz/WWBWI.htm"/>
+							<version value="SNOMED CT"/>
+							<code value="443883004"/>
+							<display value="Secondary hypertension"/>
+						</coding>
+						<text value="stádium onemocnění - text"/>
+					</summary>
+				</stage>
+				<note>
+					<text value="okolnosti vyřešení - anf"/>
+				</note>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:04baeeb6-5481-40d8-8f35-169b412d6c62"/>
+		<resource>
+			<DeviceUseStatement>
+				<id value="04baeeb6-5481-40d8-8f35-169b412d6c62"/>
+				<meta>
+					<versionId value="a7c34f7f-c002-480f-a3ae-4999693a5bb8"/>
+					<lastUpdated value="2005-12-01T12:53:12+01:00"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="46264-8"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>DeviceUseStatement</xhtml:div>
+				</text>
+				<status value="active"/>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<timingPeriod>
+					<start value="1999-09-11"/>
+					<end value="2000-09-11"/>
+				</timingPeriod>
+				<source>
+					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<display value="MUDr. Jmeno Prijmeni"/>
+				</source>
+				<device>
+					<reference value="urn:uuid:12b30d45-cccf-46a1-a838-d3f6502533c5"/>
+				</device>
+			</DeviceUseStatement>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:12b30d45-cccf-46a1-a838-d3f6502533c5"/>
+		<resource>
+			<Device>
+				<id value="12b30d45-cccf-46a1-a838-d3f6502533c5"/>
+				<meta>
+					<versionId value="16aade2a-ddcf-4be5-8348-649c19d3cda9"/>
+					<lastUpdated value="2005-12-01T12:53:12+01:00"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/device-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="46264-8"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Device</xhtml:div>
+				</text>
+				<status value="active"/>
+				<modelNumber value="identifikátor prostředku"/>
+				<type>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="14106009"/>
+						<display value="Cardiac pacemaker"/>
+					</coding>
+				</type>
+				<patient>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</patient>
+				<note>
+					<text value="doplňující informace a poznámky"/>
+				</note>
+			</Device>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:9c45ee64-edc4-472d-883b-5d43ee6cc308"/>
+		<resource>
+			<Procedure>
+				<id value="9c45ee64-edc4-472d-883b-5d43ee6cc308"/>
+				<meta>
+					<versionId value="8e660d89-904f-4209-a02a-49566b496164"/>
+					<lastUpdated value="2006-12-03T11:00:00+01:00"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/procedure-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="47519-4"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Appendectomy</xhtml:div>
+				</text>
+				<status value="completed"/>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="80146002"/>
+						<display value="Appendectomy"/>
+					</coding>
+					<text value="doplňující informace a poznámky k výkonu"/>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<performedDateTime value="2005-12-30T11:00:00+01:00"/>
+				<performer>
+					<actor>
+						<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+						<display value="MUDr. Jmeno Prijmeni"/>
+					</actor>
+				</performer>
+				<reasonCode>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="74400008"/>
+						<display value="Appendicitis"/>
+					</coding>
+					<text value="důvod provedení výkonu - text"/>
+				</reasonCode>
+				<bodySite>
+					<text value="Structure of appendix"/>
+				</bodySite>
+				<outcome>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="385670004"/>
+						<display value="Partially successful"/>
+					</coding>
+				</outcome>
+				<complication>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="48661000"/>
+						<display value="Peritonitis"/>
+					</coding>
+				</complication>
+				<note>
+					<text value="anatomická lokalizace výkonu - text"/>
+				</note>
+				<usedReference>
+					<display value="zdravotnický prostředek"/>
+				</usedReference>
+			</Procedure>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:dbd79264-3e89-4f43-aa5b-d9c7e0d0aeee"/>
+		<resource>
+			<Immunization>
+				<id value="dbd79264-3e89-4f43-aa5b-d9c7e0d0aeee"/>
+				<meta>
+					<versionId value="dbd79264-3e89-4f43-aa5b-d9c7e0d0aeef"/>
+					<lastUpdated value="2025-12-05T11:00:11+01:00"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/immunization-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="11369-6"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>
+						<xhtml:p>Očkování proti tetanu</xhtml:p>
+					</xhtml:div>
+				</text>
+				<status value="completed"/>
+				<vaccineCode>
+					<coding>
+						<system value="https://dasta.mzcr.cz/DSAHW.htm"/>
+						<code value="TETP"/>
+						<display value="Očkování proti tetanu"/>
+					</coding>
+					<coding>
+						<system value="http://www.sukl.cz"/>
+						<code value="0250256"/>
+						<display value="COMIRNATY"/>
+					</coding>
+					<text value="poznámky k očkovací dávce"/>
+				</vaccineCode>
+				<patient>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</patient>
+				<occurrenceDateTime value="2001-12-02T09:30:50+01:00"/>
+				<manufacturer>
+					<display value="název výrobce"/>
+				</manufacturer>
+				<lotNumber value="111"/>
+				<expirationDate value="2001-12-02"/>
+				<site>
+					<coding>
+						<system value="https://dasta.mzcr.cz/WWBUU.htm"/>
+						<code value="LH"/>
+						<display value="levá ruka"/>
+					</coding>
+				</site>
+				<route>
+					<coding>
+						<system value="https://dasta.mzcr.cz/WWBUT.htm"/>
+						<code value="IVN"/>
+						<display value="Intravenózní podání"/>
+					</coding>
+				</route>
+				<performer>
+					<actor>
+						<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+						<display value="MUDr. Jmeno Prijmeni"/>
+					</actor>
+				</performer>
+				<protocolApplied>
+					<doseNumberPositiveInt value="1"/>
+					<seriesDosesString value="1"/>
+				</protocolApplied>
+			</Immunization>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:1ca424bd-6a48-45e8-bbaf-49339d9b3aae"/>
+		<resource>
+			<Immunization>
+				<id value="1ca424bd-6a48-45e8-bbaf-49339d9b3aae"/>
+				<meta>
+					<versionId value="a33010cc-682b-41f8-a0c0-94ee9c0d634f"/>
+					<lastUpdated value="2025-12-05T11:00:11+01:00"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/immunization-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="11369-6"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>
+						<xhtml:p>Očkování proti chřipce</xhtml:p>
+					</xhtml:div>
+				</text>
+				<status value="completed"/>
+				<vaccineCode>
+					<coding>
+						<system value="https://dasta.mzcr.cz/DSAHW.htm"/>
+						<code value="CHRI"/>
+						<display value="Očkování proti chřipce"/>
+					</coding>
+					<coding>
+						<system value="http://www.sukl.cz"/>
+						<code value="225792"/>
+						<display value="INFLUVAC TETRA"/>
+					</coding>
+					<text value="poznámky k očkovací dávce"/>
+				</vaccineCode>
+				<patient>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</patient>
+				<occurrenceDateTime value="2001-12-03T09:30:50+01:00"/>
+				<manufacturer>
+					<display value="název výrobce"/>
+				</manufacturer>
+				<lotNumber value="456"/>
+				<site>
+					<coding>
+						<system value="https://dasta.mzcr.cz/WWBUU.htm"/>
+						<code value="PH"/>
+						<display value="pravá ruka"/>
+					</coding>
+				</site>
+				<route>
+					<coding>
+						<system value="https://dasta.mzcr.cz/WWBUT.htm"/>
+						<code value="IVN"/>
+						<display value="Intravenózní podání"/>
+					</coding>
+				</route>
+				<performer>
+					<actor>
+						<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					</actor>
+				</performer>
+				<protocolApplied>
+					<doseNumberPositiveInt value="1"/>
+					<seriesDosesString value="3"/>
+				</protocolApplied>
+			</Immunization>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:a5bfc1a2-87f1-4f96-9bda-dce884b28181"/>
+		<resource>
+			<Observation>
+				<id value="a5bfc1a2-87f1-4f96-9bda-dce884b28181"/>
+				<meta>
+					<versionId value="a5f0b42a-226e-464c-8000-fad558098696"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/observation-infectious-contact-eu-hdr"/>
+					<tag>
+						<system value="http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu"/>
+						<code value="infection-contact"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Observation</xhtml:div>
+				</text>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="social-history"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="SNOMED CT"/>
+						<code value="840539006"/>
+						<display value="Disease caused by SARS-CoV-2"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<effectivePeriod>
+					<start value="2005-12-05T05:06:56+01:00"/>
+					<end value="2006-12-05T05:06:56+01:00"/>
+				</effectivePeriod>
+				<performer>
+					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+				</performer>
+				<note>
+					<text value="Textová poznámka obsahující poznámky či podrobnosti o infekčním kontaktu a jeho okolnostech."/>
+				</note>
+				<component>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<code value="11341-5"/>
+							<display value="History of Occupation"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<code value="255589003"/>
+							<display value="Direct"/>
+						</coding>
+						<text value="Přímý kontakt s osobou s COVID-19 během pracovní směny."/>
+					</valueCodeableConcept>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<code value="77984-3"/>
+							<display value="Country of exposure to illness [Location]"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<system value="urn:iso:std:iso:3166"/>
+							<code value="AFG"/>
+							<display value="Afghanistan"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:5e61b4e4-d0cc-410c-ad7b-6d96609dc7fc"/>
+		<resource>
+			<Observation>
+				<id value="5e61b4e4-d0cc-410c-ad7b-6d96609dc7fc"/>
+				<meta>
+					<versionId value="5f0ead58-41d5-43d2-92df-0ddbccc981db"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="10182-4"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Observation</xhtml:div>
+				</text>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="82753-5"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<effectivePeriod>
+					<start value="2010-12-05T05:06:56+01:00"/>
+					<end value="2012-12-05T05:06:56+01:00"/>
+				</effectivePeriod>
+				<performer>
+					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+				</performer>
+				<valueCodeableConcept>
+					<coding>
+						<system value="urn:iso:std:iso:3166"/>
+						<code value="CZ"/>
+						<display value="Czechia"/>
+					</coding>
+					<text value="Poznámky k pobytu."/>
+				</valueCodeableConcept>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:bbc6766d-a602-4831-8da9-cb2f1578d1eb"/>
+		<resource>
+			<FamilyMemberHistory>
+				<id value="bbc6766d-a602-4831-8da9-cb2f1578d1eb"/>
+				<meta>
+					<versionId value="b04b59ae-4c72-4100-bfd0-2ee44135f601"/>
+					<lastUpdated value="2025-12-05T11:00:11+01:00"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/familyMemberHistory-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="10157-6"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>FamilyMemberHistory</xhtml:div>
+				</text>
+				<status value="completed"/>
+				<patient>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</patient>
+				<relationship>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+						<code value="GRMTH"/>
+						<display value="grandmother"/>
+					</coding>
+				</relationship>
+				<bornDate value="1905-04-18"/>
+				<deceasedDate value="1999"/>
+				<note>
+					<authorReference>
+						<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					</authorReference>
+					<text value="VŠ"/>
+				</note>
+				<condition>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="SNOMED CT"/>
+							<code value="363346000"/>
+							<display value="Malignant neoplastic disease"/>
+						</coding>
+					</code>
+					<outcome>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="SNOMED CT"/>
+							<code value="38605008"/>
+							<display value="Natural death"/>
+						</coding>
+					</outcome>
+				</condition>
+			</FamilyMemberHistory>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:22ac546a-b5cb-41d7-b134-d9d3827a593f"/>
+		<resource>
+			<Observation>
+				<id value="22ac546a-b5cb-41d7-b134-d9d3827a593f"/>
+				<meta>
+					<versionId value="b182c100-0427-45cc-bde7-8ffec9ce8b10"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/observation-sdoh-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="29762-2"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Observation</xhtml:div>
+				</text>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="social-history"/>
+					</coding>
+				</category>
+				<code>
+					<text value="Sociální anamnéza"/>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<effectiveDateTime value="2025-12-05T11:00:11+01:00"/>
+				<performer>
+					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+				</performer>
+				<component>
+					<code>
+						<text value="Pracovní zapojení"/>
+					</code>
+					<valueString value="Pracuje jako dobrovolník v komunitním centru"/>
+				</component>
+				<component>
+					<code>
+						<text value="Koníčky"/>
+					</code>
+					<valueString value="Turistika, čtení knih, zahradničení"/>
+				</component>
+				<component>
+					<code>
+						<text value="Sociální síť"/>
+					</code>
+					<valueString value="Rodina, přátelé, dobré vztahy se sousedy"/>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="http://terminology.hl7.org/CodeSystem/v3-EducationLevel"/>
+							<code value="HS"/>
+							<display value="High School or secondary school degree complete"/>
+						</coding>
+					</code>
+					<valueString value="stále studuje a studuje"/>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="https://dasta.mzcr.cz/WWBWB.htm"/>
+							<code value="365508006"/>
+							<display value="Residence and accommodation circumstances"/>
+						</coding>
+						<text value="Způsob bydlení"/>
+					</code>
+					<valueString value="Druh bydlení, ve kterém pacient žije"/>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="https://dasta.mzcr.cz/WWBWC.htm"/>
+							<code value="BSCH"/>
+							<display value="Vana / sprchové křeslo"/>
+						</coding>
+						<text value="Přizpůsobení domácnosti"/>
+					</code>
+					<valueString value="Úpravy přítomné v domácnosti, které byly provedeny v souvislosti s nemocí nebo postižením, aby bylo fungování pacienta bezpečnější a pohodlnější a umožnilo nezávislý život"/>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="https://dasta.mzcr.cz/WWBWD.htm"/>
+							<code value="STHO"/>
+							<display value="Schody v domě"/>
+						</coding>
+						<text value="Bariéry"/>
+					</code>
+					<valueString value="Podmínky, které mají vliv na bezbariérovost domova nebo pobyt v domově"/>
+				</component>
+				<component>
+					<code>
+						<text value="Rodinná situace"/>
+					</code>
+					<valueString value="komentář k rodinné situaci"/>
+				</component>
+				<component>
+					<code>
+						<text value="Složení rodiny"/>
+					</code>
+					<valueString value="složení rodiny"/>
+				</component>
+				<component>
+					<code>
+						<text value="Rodinný stav"/>
+					</code>
+					<valueString value="rodinný stav"/>
+				</component>
+				<component>
+					<code>
+						<text value="Počet dětí"/>
+					</code>
+					<valueString value="5"/>
+				</component>
+				<component>
+					<code>
+						<text value="Počet dětí ve společné domácnosti"/>
+					</code>
+					<valueString value="3"/>
+				</component>
+				<component>
+					<code>
+						<text value="Podrobnosti o dítěti"/>
+					</code>
+					<valueString value="podrobnosti o dítěti"/>
+				</component>
+				<component>
+					<code>
+						<text value="Pečuje o závislého člena"/>
+					</code>
+					<valueString value="Činnosti, které pacient vykonává při péči o závislého člena rodiny"/>
+				</component>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:3af45f2d-fba2-4e03-89dd-51e5ced6721d"/>
+		<resource>
+			<Observation>
+				<id value="3af45f2d-fba2-4e03-89dd-51e5ced6721d"/>
+				<meta>
+					<versionId value="72308869-4460-4e75-ac0c-0da4e80cf43f"/>
+					<lastUpdated value="2025-12-05T11:00:11+01:00"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/observation-sdoh-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="11331-6"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Observation</xhtml:div>
+				</text>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="social-history"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="74013-4"/>
+						<display value="Alcoholic drinks per day"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<effectiveDateTime value="2025-12-05T11:00:11+01:00"/>
+				<performer>
+					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+				</performer>
+				<valueCodeableConcept>
+					<coding>
+						<extension url="http://dasta.cz/StructureDefinition/aba_dat_period">
+							<valuePeriod>
+								<start value="2019-12-05T05:06:56+01:00"/>
+								<end value="2023-12-05T05:06:56+01:00"/>
+							</valuePeriod>
+						</extension>
+						<version value="SNOMED CT"/>
+						<code value="160573003"/>
+						<display value="Alcohol intake"/>
+					</coding>
+					<text value="4"/>
+				</valueCodeableConcept>
+				<note>
+					<text value="komentář"/>
+				</note>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0ab4514c-8976-4791-aac5-34db99ec4ba9"/>
+		<resource>
+			<Observation>
+				<id value="0ab4514c-8976-4791-aac5-34db99ec4ba9"/>
+				<meta>
+					<versionId value="b82d38e7-6339-448d-a9aa-385788ce8e0a"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/observation-sdoh-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="11367-0"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Observation</xhtml:div>
+				</text>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="social-history"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="72166-2"/>
+						<display value="Tobacco smoking status"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<effectiveDateTime value="2025-12-05T11:00:11+01:00"/>
+				<performer>
+					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+				</performer>
+				<valueCodeableConcept>
+					<extension url="http://dasta.cz/StructureDefinition/abk_dat_period">
+						<valuePeriod>
+							<start value="2019-12-05T05:06:56+01:00"/>
+							<end value="2023-12-05T05:06:56+01:00"/>
+						</valuePeriod>
+					</extension>
+					<coding>
+						<code value="229819007"/>
+						<display value="Tobacco use and exposure"/>
+					</coding>
+					<text value="0.5"/>
+				</valueCodeableConcept>
+				<note>
+					<text value="komentář"/>
+				</note>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:61b3d087-9133-4d65-a65c-83016afea1c0"/>
+		<resource>
+			<Observation>
+				<id value="61b3d087-9133-4d65-a65c-83016afea1c0"/>
+				<meta>
+					<versionId value="4a97caab-ea22-4007-a676-42f2d488150d"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/observation-sdoh-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="11343-1"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Observation</xhtml:div>
+				</text>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="social-history"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="https://dasta.mzcr.cz/WWBWG.htm"/>
+						<code value="417284009"/>
+						<display value="Současný uživatel drog"/>
+					</coding>
+					<coding>
+						<system value="https://dasta.mzcr.cz/WWBWH.htm"/>
+						<code value="703842006"/>
+						<display value="Amfetamin"/>
+					</coding>
+					<coding>
+						<system value="https://dasta.mzcr.cz/WWBSE.htm"/>
+						<code value="20020000"/>
+						<display value="Inhalační podání"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<effectivePeriod>
+					<start value="2024-12-05T05:06:56+01:00"/>
+					<end value="2025-12-05T05:06:56+01:00"/>
+				</effectivePeriod>
+				<performer>
+					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+				</performer>
+				<valueCodeableConcept>
+					<text value="množství - text"/>
+				</valueCodeableConcept>
+				<note>
+					<text value="komentář"/>
+				</note>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:534247f0-76cb-436f-a642-33d78662a855"/>
+		<resource>
+			<Observation>
+				<id value="534247f0-76cb-436f-a642-33d78662a855"/>
+				<meta>
+					<versionId value="08e76bbc-178d-4161-8a1b-b5af48853563"/>
+					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/observation-sdoh-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="29762-2"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>Observation</xhtml:div>
+				</text>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+						<code value="social-history"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="SNOMED CT"/>
+						<code value="66590003"/>
+						<display value="Alcohol dependence"/>
+					</coding>
+					<text value="popis problému"/>
+				</code>
+				<subject>
+					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
+				</subject>
+				<effectiveDateTime value="2025-12-05T11:00:11+01:00"/>
+				<performer>
+					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+				</performer>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
 		<fullUrl value="urn:uuid:de4f166d-a24f-4cb7-85fc-865602807e60"/>
 		<resource>
 			<Condition>
@@ -2599,7 +3491,7 @@
 					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/condition-eu-hdr"/>
 					<tag>
 						<system value="http://loinc.org"/>
-						<code value="11450-4"/>
+						<code value="8648-8"/>
 					</tag>
 				</meta>
 				<text>
@@ -2670,10 +3562,11 @@
 				<id value="4e2d016a-d4a0-4d49-8733-06efc60a5f39"/>
 				<meta>
 					<versionId value="b3823357-cf8c-4649-aeaa-d7281338d7c0"/>
+					<lastUpdated value="2006-12-03T11:00:00+01:00"/>
 					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/procedure-eu-hdr"/>
 					<tag>
 						<system value="http://loinc.org"/>
-						<code value="47519-4"/>
+						<code value="8648-8"/>
 					</tag>
 				</meta>
 				<text>
@@ -2687,6 +3580,7 @@
 						<code value="80146002"/>
 						<display value="Appendectomy"/>
 					</coding>
+					<text value="doplňující informace a poznámky k výkonu"/>
 				</code>
 				<subject>
 					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
@@ -2695,6 +3589,7 @@
 				<performer>
 					<actor>
 						<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+						<display value="MUDr. Jmeno Prijmeni"/>
 					</actor>
 				</performer>
 				<reasonCode>
@@ -2703,6 +3598,7 @@
 						<code value="74400008"/>
 						<display value="Appendicitis"/>
 					</coding>
+					<text value="důvod provedení výkonu - text"/>
 				</reasonCode>
 				<bodySite>
 					<text value="Structure of appendix"/>
@@ -2721,6 +3617,12 @@
 						<display value="Peritonitis"/>
 					</coding>
 				</complication>
+				<note>
+					<text value="anatomická lokalizace výkonu - text"/>
+				</note>
+				<usedReference>
+					<display value="zdravotnický prostředek"/>
+				</usedReference>
 			</Procedure>
 		</resource>
 	</entry>
@@ -2735,7 +3637,7 @@
 					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-eu-hdr"/>
 					<tag>
 						<system value="http://loinc.org"/>
-						<code value="46264-8"/>
+						<code value="8648-8"/>
 					</tag>
 				</meta>
 				<text>
@@ -2752,6 +3654,7 @@
 				</timingPeriod>
 				<source>
 					<reference value="urn:uuid:6669b3fb-afbc-4004-bda5-5fa938b327e6"/>
+					<display value="MUDr. Jmeno Prijmeni"/>
 				</source>
 				<device>
 					<reference value="urn:uuid:a357d32b-b9d3-40e7-8ec5-29f02a34faa8"/>
@@ -2768,6 +3671,10 @@
 					<versionId value="a34c5a35-d346-4cfd-aed2-d23656450149"/>
 					<lastUpdated value="2005-12-01T12:53:12+01:00"/>
 					<profile value="http://hl7.eu/fhir/hdr/StructureDefinition/device-eu-hdr"/>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code value="8648-8"/>
+					</tag>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -2785,6 +3692,9 @@
 				<patient>
 					<reference value="urn:uuid:e627d3d8-c6c6-446b-b63b-87da47b888a0"/>
 				</patient>
+				<note>
+					<text value="doplňující informace a poznámky"/>
+				</note>
 			</Device>
 		</resource>
 	</entry>
@@ -2973,6 +3883,10 @@
 						<system value="http://loinc.org"/>
 						<code value="29545-1"/>
 					</tag>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code/>
+					</tag>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -3006,6 +3920,10 @@
 					<tag>
 						<system value="http://loinc.org"/>
 						<code value="29545-1"/>
+					</tag>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code/>
 					</tag>
 				</meta>
 				<text>
@@ -3205,6 +4123,10 @@
 					<tag>
 						<system value="http://loinc.org"/>
 						<code value="29545-1"/>
+					</tag>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code/>
 					</tag>
 				</meta>
 				<text>
@@ -3659,6 +4581,10 @@
 						<system value="http://loinc.org"/>
 						<code value="29545-1"/>
 					</tag>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code/>
+					</tag>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -4007,6 +4933,10 @@
 						<system value="http://loinc.org"/>
 						<code value="29545-1"/>
 					</tag>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code/>
+					</tag>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -4090,6 +5020,10 @@
 					<tag>
 						<system value="http://loinc.org"/>
 						<code value="29545-1"/>
+					</tag>
+					<tag>
+						<system value="http://loinc.org"/>
+						<code/>
 					</tag>
 				</meta>
 				<text>

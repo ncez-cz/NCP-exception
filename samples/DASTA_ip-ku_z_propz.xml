@@ -460,7 +460,7 @@ Má více řádků.
 							</dsip:vy_fs_pracovnik> -->
 						</dsip:ku_z_propz_sprij>
 						<!-- anam ********************************************************************************** -->
-						<!-- <dsip:ku_z_propz_anam guid="0a9746cc-ef5e-45ea-b751-cdf2043777ef" vguid="96493ecf-6480-4299-a5ff-7c76a45d92cb">
+						<dsip:ku_z_propz_anam guid="0a9746cc-ef5e-45ea-b751-cdf2043777ef" vguid="96493ecf-6480-4299-a5ff-7c76a45d92cb">
 							<dsip:garant_dat id_garant="7812082113" odbornost="606">MUDr. ANF</dsip:garant_dat>
 							<dsip:anam_prob guid="2b0b6d0a-2d69-4370-b0c1-6d9154b54b21" vguid="e0c2903e-e6d6-40ee-af9b-6a307a358ae6">
 								<dsip:prob_popis>Volný text - popis problému</dsip:prob_popis>
@@ -481,7 +481,7 @@ Má více řádků.
 									<dsip:kod_text>Secondary hypertension</dsip:kod_text>
 								</dsip:prob_stad_kod>
 							</dsip:anam_prob>
-							<dsip:anam_zpi>
+ 							<dsip:anam_zpi>
 								<dsip:uniz guid="04baeeb6-5481-40d8-8f35-169b412d6c62" vguid="a7c34f7f-c002-480f-a3ae-4999693a5bb8" typ="SF" dat_ab="2005-12-01T12:53:12+01:00" ind_oprav_sd="N">
 									<dsip:unizf guid="12b30d45-cccf-46a1-a838-d3f6502533c5" vguid="16aade2a-ddcf-4be5-8348-649c19d3cda9" niz_klic="14106009" niz_text="Cardiac pacemaker" niz_ident="identifikátor prostředku" info_text="doplňující informace a poznámky"/>
 									<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
@@ -489,7 +489,7 @@ Má více řádků.
 									<dsip:dat_up format="D" typ="I">2000-09-11</dsip:dat_up>
 								</dsip:uniz>
 							</dsip:anam_zpi>
-							<dsip:anam_vyk>
+						<dsip:anam_vyk>
 								<dsip:chv guid="9c45ee64-edc4-472d-883b-5d43ee6cc308" vguid="8e660d89-904f-4209-a02a-49566b496164" typ="A" chvps_klic="80146002" chvps_text="Appendectomy" info_text="doplňující informace a poznámky k výkonu" dat_ab="2006-12-03T11:00:00+01:00" ind_oprav_sd="N">
 									<dsip:alv_text>anatomická lokalizace výkonu - text</dsip:alv_text>
 									<dsip:alv_form>
@@ -513,7 +513,7 @@ Má více řádků.
 									<dsip:dat_vyk format="D">2005-12-30T11:00:00+01:00</dsip:dat_vyk>
 								</dsip:chv>
 							</dsip:anam_vyk>
-							<dsip:anam_oc guid="8d864a1e-1a97-4081-b3fe-916b0137797d" vguid="ef384867-fe56-4cc2-a87d-90477730166f" typ="A" dat_ab="2005-12-05T09:41:36+01:00">
+						<dsip:anam_oc guid="8d864a1e-1a97-4081-b3fe-916b0137797d" vguid="ef384867-fe56-4cc2-a87d-90477730166f" typ="A" dat_ab="2005-12-05T09:41:36+01:00">
 								<dsip:ocz guid="dbd79264-3e89-4f43-aa5b-d9c7e0d0aeee" vguid="dbd79264-3e89-4f43-aa5b-d9c7e0d0aeef" typ_oc_kod="TETP" typ_oc_text="Očkování proti tetanu">
 									<dsip:davka guid="202279ba-8de6-4d07-8e02-aa90262d936a" vguid="d5922137-5066-493e-8bbd-91002ea39074" cis_davky="1" poc_davek="1" ind_oprav_sd="N" kod_ol="0250256" nazev_ol="COMIRNATY" nazev_vyrobce="název výrobce" cis_sarze="111" apl_cesta_klic="IVN" apl_cesta_text="Intravenózní podání" misto_apl_klic="LH" misto_apl_text="levá ruka" pozn="poznámky k očkovací dávce">
 										<dsip:dat_expirace format="D" typ="I">2001-12-02</dsip:dat_expirace>
@@ -528,7 +528,7 @@ Má více řádků.
 								</dsip:ocz>
 								<dsip:dat_ak>2006-12-11T12:00:00+01:00</dsip:dat_ak>
 							</dsip:anam_oc>
- 							<dsip:anam_inf guid ="a5bfc1a2-87f1-4f96-9bda-dce884b28181" vguid ="a5f0b42a-226e-464c-8000-fad558098696">
+						<dsip:anam_inf guid ="a5bfc1a2-87f1-4f96-9bda-dce884b28181" vguid ="a5f0b42a-226e-464c-8000-fad558098696">
 								<dsip:inf_dat_od>2005-12-05T05:06:56+01:00</dsip:inf_dat_od>
 								<dsip:inf_dat_do>2006-12-05T05:06:56+01:00</dsip:inf_dat_do>
 								<dsip:inf_agens>
@@ -542,7 +542,7 @@ Má více řádků.
 								<dsip:inf_stat_kod>AFG</dsip:inf_stat_kod>
 								<dsip:inf_koment>Textová poznámka obsahující poznámky či podrobnosti o infekčním kontaktu a jeho okolnostech.</dsip:inf_koment>
 							</dsip:anam_inf>
-							<dsip:anam_infc guid="5e61b4e4-d0cc-410c-ad7b-6d96609dc7fc" vguid="5f0ead58-41d5-43d2-92df-0ddbccc981db">
+						<dsip:anam_infc guid="5e61b4e4-d0cc-410c-ad7b-6d96609dc7fc" vguid="5f0ead58-41d5-43d2-92df-0ddbccc981db">
 								<dsip:infc_dat_od>2010-12-05T05:06:56+01:00</dsip:infc_dat_od>
 								<dsip:infc_dat_do>2012-12-05T05:06:56+01:00</dsip:infc_dat_do>
 								<dsip:infc_stat_text>Czechia</dsip:infc_stat_text>
@@ -621,10 +621,10 @@ Má více řádků.
 									<dsip:kod>66590003</dsip:kod>
 									<dsip:kod_text>Alcohol dependence</dsip:kod_text>
 								</dsip:abj_kod>
-							</dsip:anam_abj>
+							</dsip:anam_abj> -->
 							<dsip:autor>MUDr. Jmeno Prijmeni</dsip:autor>
 							<dsip:dat_ab>1111-12-05T05:06:56+01:00</dsip:dat_ab>
-						</dsip:ku_z_propz_anam> -->
+						</dsip:ku_z_propz_anam>
 						<!-- prubh ********************************************************************************** -->
 						<dsip:ku_z_propz_prubh>
 							<dsip:ku_z_propz_prubh_p guid ="de4f166d-a24f-4cb7-85fc-865602807e60" vguid ="de4f166d-a24f-4cb7-85fc-865602807e61">
