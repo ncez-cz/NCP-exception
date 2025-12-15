@@ -7964,7 +7964,7 @@ Povinný prvek u jazyka</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ip" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
