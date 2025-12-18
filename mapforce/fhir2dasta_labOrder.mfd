@@ -7,7 +7,7 @@
 		<structure>
 			<children>
 				<component name="Reference_Patient" library="provisio" uid="5705" kind="19" visible="0">
-					<view ltx="83" lty="493" rbx="244" rby="526"/>
+					<view ltx="83" lty="493" rbx="246" rby="527"/>
 					<data>
 						<root>
 							<header>
@@ -68,33 +68,6 @@
 						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta"/>
 					</data>
 				</component>
-				<component name="bundle" library="xml" uid="6" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-35" lty="83" rbx="313" rby="579"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<file role="inputinstance" name="..\samples\FHIR2DASTA\input\labOrder-fhir_marek.xml"/>
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="Bundle" expanded="1">
-										<entry name="identifier">
-											<entry name="system" expanded="1"/>
-											<entry name="value" expanded="1"/>
-										</entry>
-										<entry name="entry" outkey="62" expanded="1"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle"/>
-					</data>
-				</component>
 				<component name="ip_ip" library="provisio" uid="6056" kind="19" visible="0">
 					<view ltx="607" lty="377" rbx="891" rby="442"/>
 					<data>
@@ -120,6 +93,33 @@
 								<entry name="ip" outkey="61"/>
 							</entry>
 						</root>
+					</data>
+				</component>
+				<component name="bundle" library="xml" uid="6" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-35" lty="83" rbx="313" rby="579"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<file role="inputinstance" name="..\samples\bundle_labOrder.xml"/>
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Bundle" expanded="1">
+										<entry name="identifier">
+											<entry name="system" expanded="1"/>
+											<entry name="value" expanded="1"/>
+										</entry>
+										<entry name="entry" outkey="62" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle"/>
 					</data>
 				</component>
 			</children>
@@ -4556,7 +4556,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ip" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -5465,7 +5465,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -5752,7 +5752,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -5840,7 +5840,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -5983,7 +5983,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -7066,7 +7066,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -7679,7 +7679,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>

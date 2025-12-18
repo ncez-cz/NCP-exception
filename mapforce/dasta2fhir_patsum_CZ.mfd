@@ -251,62 +251,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="ds_dasta-4.03.31" library="xml" uid="3119" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" AddSchemaLocation="0"/>
-					<view ltx="-30" lty="-476" rbx="195" rby="-183"/>
-					<data>
-						<root scrollposition="341">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="3" expanded="1">
-								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="dasta" ns="1" outkey="2187" expanded="1">
-										<entry name="guid" type="attribute" outkey="2153"/>
-										<entry name="vguid" type="attribute" outkey="2168"/>
-										<entry name="id_soubor" type="attribute" outkey="2169"/>
-										<entry name="verze_ds" type="attribute" outkey="2170"/>
-										<entry name="verze_nclp" type="attribute" outkey="2171"/>
-										<entry name="ur" type="attribute" outkey="2172"/>
-										<entry name="typ_odesm" type="attribute" outkey="2173"/>
-										<entry name="ozn_soub" type="attribute" outkey="2183"/>
-										<entry name="dat_vb" type="attribute" outkey="2132"/>
-										<entry name="zdroj_is" ns="1" expanded="1"/>
-										<entry name="garant_dat" ns="1" outkey="87" expanded="1">
-											<entry name="guid" type="attribute" outkey="2147"/>
-										</entry>
-										<entry name="is" ns="1" outkey="81" expanded="1">
-											<entry name="guid" type="attribute" outkey="2218"/>
-											<entry name="*">
-												<selections>
-													<qname QNameAsString="{urn:cz-mzcr:ns:dasta:ds4:ds_ip}ip"/>
-												</selections>
-											</entry>
-											<entry name="ip" ns="2" outkey="2087" expanded="1">
-												<entry name="guid" type="attribute" outkey="2138"/>
-												<entry name="ku" ns="2" expanded="1">
-													<entry name="ku_z" ns="2" expanded="1">
-														<entry name="dat_prov" ns="2" outkey="2133"/>
-														<entry name="p_pracoviste" ns="2" expanded="1">
-															<entry name="guid" type="attribute" outkey="2214"/>
-														</entry>
-														<entry name="p_pracovnik" ns="2" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\DASTA_PATSUMDAT.xml"/>
-					</data>
-				</component>
 				<component name="FullURL_Practitioner" library="provisio" uid="5781" kind="19" visible="0" blackbox="0">
 					<view ltx="337" lty="-176" rbx="513" rby="-159"/>
 					<data>
@@ -474,6 +418,62 @@
 								</entry>
 							</entry>
 						</root>
+					</data>
+				</component>
+				<component name="ds_dasta-4.03.31" library="xml" uid="3119" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" AddSchemaLocation="0"/>
+					<view ltx="-30" lty="-476" rbx="195" rby="-183"/>
+					<data>
+						<root scrollposition="341">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="dasta" ns="1" outkey="2187" expanded="1">
+										<entry name="guid" type="attribute" outkey="2153"/>
+										<entry name="vguid" type="attribute" outkey="2168"/>
+										<entry name="id_soubor" type="attribute" outkey="2169"/>
+										<entry name="verze_ds" type="attribute" outkey="2170"/>
+										<entry name="verze_nclp" type="attribute" outkey="2171"/>
+										<entry name="ur" type="attribute" outkey="2172"/>
+										<entry name="typ_odesm" type="attribute" outkey="2173"/>
+										<entry name="ozn_soub" type="attribute" outkey="2183"/>
+										<entry name="dat_vb" type="attribute" outkey="2132"/>
+										<entry name="zdroj_is" ns="1" expanded="1"/>
+										<entry name="garant_dat" ns="1" outkey="87" expanded="1">
+											<entry name="guid" type="attribute" outkey="2147"/>
+										</entry>
+										<entry name="is" ns="1" outkey="81" expanded="1">
+											<entry name="guid" type="attribute" outkey="2218"/>
+											<entry name="*">
+												<selections>
+													<qname QNameAsString="{urn:cz-mzcr:ns:dasta:ds4:ds_ip}ip"/>
+												</selections>
+											</entry>
+											<entry name="ip" ns="2" outkey="2087" expanded="1">
+												<entry name="guid" type="attribute" outkey="2138"/>
+												<entry name="ku" ns="2" expanded="1">
+													<entry name="ku_z" ns="2" expanded="1">
+														<entry name="dat_prov" ns="2" outkey="2133"/>
+														<entry name="p_pracoviste" ns="2" expanded="1">
+															<entry name="guid" type="attribute" outkey="2214"/>
+														</entry>
+														<entry name="p_pracovnik" ns="2" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\dasta_patsumdat.xml"/>
 					</data>
 				</component>
 			</children>

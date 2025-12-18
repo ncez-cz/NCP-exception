@@ -463,188 +463,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="bundle" library="xml" uid="9027" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="28" lty="103" rbx="327" rby="864"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="2" expanded="1">
-								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="Bundle" outkey="84" expanded="1">
-										<entry name="id" expanded="1"/>
-										<entry name="meta" expanded="1">
-											<entry name="versionId" expanded="1"/>
-											<entry name="lastUpdated" expanded="1"/>
-											<entry name="tag">
-												<entry name="system" expanded="1"/>
-												<entry name="code" expanded="1"/>
-											</entry>
-										</entry>
-										<entry name="identifier">
-											<entry name="type" expanded="1"/>
-										</entry>
-										<entry name="timestamp" expanded="1">
-											<entry name="value" ns="1" type="attribute" outkey="1114"/>
-										</entry>
-										<entry name="entry" outkey="2">
-											<entry name="resource" expanded="1">
-												<entry name="DiagnosticReport">
-													<entry name="id">
-														<entry name="value" ns="1" type="attribute" expanded="1"/>
-													</entry>
-													<entry name="meta">
-														<entry name="versionId">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-													</entry>
-													<entry name="effectiveDateTime">
-														<entry name="value" ns="1" type="attribute" expanded="1"/>
-													</entry>
-													<entry name="conclusion">
-														<entry name="value" ns="1" type="attribute" expanded="1"/>
-													</entry>
-												</entry>
-												<entry name="Observation">
-													<entry name="meta">
-														<entry name="profile">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-													</entry>
-													<entry name="text">
-														<entry name="status">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-													</entry>
-													<entry name="status">
-														<entry name="value" ns="1" type="attribute" expanded="1"/>
-													</entry>
-													<entry name="category">
-														<entry name="coding">
-															<entry name="system">
-																<entry name="value" ns="1" type="attribute" expanded="1"/>
-															</entry>
-															<entry name="code">
-																<entry name="value" ns="1" type="attribute" expanded="1"/>
-															</entry>
-															<entry name="display">
-																<entry name="value" ns="1" type="attribute" expanded="1"/>
-															</entry>
-														</entry>
-													</entry>
-													<entry name="code">
-														<entry name="coding">
-															<entry name="system">
-																<entry name="value" ns="1" type="attribute" expanded="1"/>
-															</entry>
-															<entry name="code">
-																<entry name="value" ns="1" type="attribute" expanded="1"/>
-															</entry>
-															<entry name="display">
-																<entry name="value" ns="1" type="attribute" expanded="1"/>
-															</entry>
-														</entry>
-													</entry>
-													<entry name="effectiveDateTime">
-														<entry name="value" ns="1" type="attribute" expanded="1"/>
-													</entry>
-													<entry name="valueQuantity">
-														<entry name="unit">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-														<entry name="system">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-														<entry name="code">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-													</entry>
-													<entry name="valueCodeableConcept">
-														<entry name="coding">
-															<entry name="system">
-																<entry name="value" ns="1" type="attribute" expanded="1"/>
-															</entry>
-														</entry>
-													</entry>
-												</entry>
-												<entry name="Patient">
-													<entry name="extension">
-														<entry name="extension">
-															<entry name="valueCodeableConcept">
-																<entry name="coding">
-																	<entry name="code">
-																		<entry name="value" ns="1" type="attribute" expanded="1"/>
-																	</entry>
-																</entry>
-															</entry>
-														</entry>
-														<entry name="valueAddress">
-															<entry name="city">
-																<entry name="value" ns="1" type="attribute" expanded="1"/>
-															</entry>
-														</entry>
-													</entry>
-													<entry name="identifier">
-														<entry name="system">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-														<entry name="value">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-														<entry name="period">
-															<entry name="end">
-																<entry name="value" ns="1" type="attribute" expanded="1"/>
-															</entry>
-														</entry>
-														<entry name="assigner">
-															<entry name="identifier">
-																<entry name="system">
-																	<entry name="value" ns="1" type="attribute" expanded="1"/>
-																</entry>
-																<entry name="value">
-																	<entry name="value" ns="1" type="attribute" expanded="1"/>
-																</entry>
-															</entry>
-														</entry>
-													</entry>
-													<entry name="name">
-														<entry name="use">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-														<entry name="family">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-														<entry name="given">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-														<entry name="prefix">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-														<entry name="suffix">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-													</entry>
-													<entry name="communication">
-														<entry name="preferred">
-															<entry name="value" ns="1" type="attribute" expanded="1"/>
-														</entry>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle" inputinstance="..\samples\Bundle_PATSUMDAT.xml"/>
-					</data>
-				</component>
 				<component name="ds_dasta-4.03.31" library="xml" uid="9026" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
 					<view ltx="1795" lty="103" rbx="2039" rby="864"/>
@@ -996,6 +814,188 @@
 								<entry name="anfType" type="xml-type" outkey="1101"/>
 							</entry>
 						</root>
+					</data>
+				</component>
+				<component name="bundle" library="xml" uid="9027" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="28" lty="103" rbx="327" rby="864"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Bundle" outkey="84" expanded="1">
+										<entry name="id" expanded="1"/>
+										<entry name="meta" expanded="1">
+											<entry name="versionId" expanded="1"/>
+											<entry name="lastUpdated" expanded="1"/>
+											<entry name="tag">
+												<entry name="system" expanded="1"/>
+												<entry name="code" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="identifier">
+											<entry name="type" expanded="1"/>
+										</entry>
+										<entry name="timestamp" expanded="1">
+											<entry name="value" ns="1" type="attribute" outkey="1114"/>
+										</entry>
+										<entry name="entry" outkey="2">
+											<entry name="resource" expanded="1">
+												<entry name="DiagnosticReport">
+													<entry name="id">
+														<entry name="value" ns="1" type="attribute" expanded="1"/>
+													</entry>
+													<entry name="meta">
+														<entry name="versionId">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+													</entry>
+													<entry name="effectiveDateTime">
+														<entry name="value" ns="1" type="attribute" expanded="1"/>
+													</entry>
+													<entry name="conclusion">
+														<entry name="value" ns="1" type="attribute" expanded="1"/>
+													</entry>
+												</entry>
+												<entry name="Observation">
+													<entry name="meta">
+														<entry name="profile">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+													</entry>
+													<entry name="text">
+														<entry name="status">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+													</entry>
+													<entry name="status">
+														<entry name="value" ns="1" type="attribute" expanded="1"/>
+													</entry>
+													<entry name="category">
+														<entry name="coding">
+															<entry name="system">
+																<entry name="value" ns="1" type="attribute" expanded="1"/>
+															</entry>
+															<entry name="code">
+																<entry name="value" ns="1" type="attribute" expanded="1"/>
+															</entry>
+															<entry name="display">
+																<entry name="value" ns="1" type="attribute" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="code">
+														<entry name="coding">
+															<entry name="system">
+																<entry name="value" ns="1" type="attribute" expanded="1"/>
+															</entry>
+															<entry name="code">
+																<entry name="value" ns="1" type="attribute" expanded="1"/>
+															</entry>
+															<entry name="display">
+																<entry name="value" ns="1" type="attribute" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="effectiveDateTime">
+														<entry name="value" ns="1" type="attribute" expanded="1"/>
+													</entry>
+													<entry name="valueQuantity">
+														<entry name="unit">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+														<entry name="system">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+														<entry name="code">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+													</entry>
+													<entry name="valueCodeableConcept">
+														<entry name="coding">
+															<entry name="system">
+																<entry name="value" ns="1" type="attribute" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="Patient">
+													<entry name="extension">
+														<entry name="extension">
+															<entry name="valueCodeableConcept">
+																<entry name="coding">
+																	<entry name="code">
+																		<entry name="value" ns="1" type="attribute" expanded="1"/>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+														<entry name="valueAddress">
+															<entry name="city">
+																<entry name="value" ns="1" type="attribute" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="identifier">
+														<entry name="system">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+														<entry name="value">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+														<entry name="period">
+															<entry name="end">
+																<entry name="value" ns="1" type="attribute" expanded="1"/>
+															</entry>
+														</entry>
+														<entry name="assigner">
+															<entry name="identifier">
+																<entry name="system">
+																	<entry name="value" ns="1" type="attribute" expanded="1"/>
+																</entry>
+																<entry name="value">
+																	<entry name="value" ns="1" type="attribute" expanded="1"/>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="name">
+														<entry name="use">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+														<entry name="family">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+														<entry name="given">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+														<entry name="prefix">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+														<entry name="suffix">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+													</entry>
+													<entry name="communication">
+														<entry name="preferred">
+															<entry name="value" ns="1" type="attribute" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle" inputinstance="..\samples\bundle_patsumdat.xml"/>
 					</data>
 				</component>
 			</children>

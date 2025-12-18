@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Provisio/Mapping/schemas/hl7-fhir/bundle.xsd">
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:uuid:bc5309b4-85c2-4751-82cf-73023df051a3"/>
+	</identifier>
+	<type value="document"/>
+	<timestamp value="2025-06-12T13:26:49+01:00"/>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-76ea-8000-126116a54c2e"/>
+		<resource>
+			<Composition>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-CompositionLabOrder"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>...</xhtml:div>
+				</text>
+				<identifier>
+					<value value="2500007"/>
+				</identifier>
+				<status value="final"/>
+				<type>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab-order/CodeSystem/cz-typeClinicalEvent-cs"/>
+						<code value="LAB.ODBER.LAB"/>
+					</coding>
+				</type>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+				<date value="2025-06-12T13:26:49+02:00"/>
+				<author>
+					<reference value="urn:uuid:0694011c-0856-724b-8000-68aaa11239c3"/>
+				</author>
+				<title value="MEDISOAR_1_1_20250612T132649_6F7ACC7.1"/>
+				<section>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<code value="104987-3"/>
+							<display value="Supporting clinical information"/>
+						</coding>
+					</code>
+					<text>
+						<status value="generated"/>
+						<xhtml:div>Supporting clinical information</xhtml:div>
+					</text>
+				</section>
+				<section>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<code value="31208-2"/>
+							<display value="Specimen source identified"/>
+						</coding>
+					</code>
+					<text>
+						<status value="generated"/>
+						<xhtml:div>Specimen source identified</xhtml:div>
+					</text>
+				</section>
+				<section>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<code value="64286-8"/>
+							<display value="Deprecated Diagnostic imaging order"/>
+						</coding>
+					</code>
+					<text>
+						<status value="generated"/>
+						<xhtml:div>Deprecated Diagnostic imaging order</xhtml:div>
+					</text>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-796e-8000-1773fafd971d"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-79ef-8000-2c5de443d233"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7a0f-8000-c24fcbb7d4ce"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7a2d-8000-b5445bcce6ec"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7a4f-8000-bcd8b3638acc"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7a7a-8000-2c7acc09b9ae"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7a9e-8000-1304044d67cb"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7abd-8000-d650c6ea2053"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7add-8000-d65b85cd903b"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7afd-8000-99dbea9797e7"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7b1f-8000-b3940f3f1c2d"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7b40-8000-05f596825753"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7b60-8000-cc90de249cf0"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7b82-8000-0efe2c1c2f63"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7ba0-8000-0dba492a12fa"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7bc3-8000-6191678e69ad"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7be5-8000-cdfbc2c33226"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7c03-8000-1e2dbd89018f"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7c24-8000-c2a7ec336d8b"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7c43-8000-ac1f1d52e24e"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7c62-8000-5f0d089c524e"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7c84-8000-6c3cdcf8e0e9"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7ca2-8000-a9c84e3db612"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7cc2-8000-0f6c7287e361"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7ce4-8000-0b50517bca92"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7d04-8000-18c48a7fda8d"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7d23-8000-47cf682d1f12"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7d43-8000-4c8c93ef7aae"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7d63-8000-2f5f6e092567"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7d83-8000-88f4a219272a"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7da3-8000-3052542f9dcb"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7dc3-8000-62185e639a19"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7de3-8000-ff7a7b36b0a9"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7e03-8000-a7a06fa6a41c"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7e24-8000-19b059171a46"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7e44-8000-96bff08003ed"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7e64-8000-22a0e7ae34f5"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7e87-8000-ea97fd3a45b7"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7ea5-8000-b1d715c3b983"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7ec5-8000-7155293568c2"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7ee5-8000-24c0da628aec"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7f05-8000-8cd622c04b85"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7f25-8000-19439185f247"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7f43-8000-56d640deb41c"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7f63-8000-73327aa997db"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7f83-8000-253656a3b230"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7fa3-8000-a8d678737186"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-7fc3-8000-d193372535ad"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-79b1-8000-ece7fd1bb30e"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:0694011c-0856-79cf-8000-ed1eeb5c1a23"/>
+					</entry>
+				</section>
+			</Composition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-796e-8000-1773fafd971d"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-796e-8000-1773fafd971d"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>ServiceRequest</xhtml:div>
+				</text>
+				<identifier>
+					<value value="2500007"/>
+				</identifier>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://dasta.mzcr.cz/DSAIB.htm"/>
+						<code value="L"/>
+						<display value="Realizace odběru v laboratoři"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+				<authoredOn value="2025-06-12T13:26:49+02:00"/>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-79ef-8000-2c5de443d233"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-79ef-8000-2c5de443d233"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="05272"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7a0f-8000-c24fcbb7d4ce"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7a0f-8000-c24fcbb7d4ce"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="05254"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7a2d-8000-b5445bcce6ec"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7a2d-8000-b5445bcce6ec"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="05187"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7a4f-8000-bcd8b3638acc"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7a4f-8000-bcd8b3638acc"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="03482"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7a7a-8000-2c7acc09b9ae"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7a7a-8000-2c7acc09b9ae"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="02618"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7a9e-8000-1304044d67cb"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7a9e-8000-1304044d67cb"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="03940"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7abd-8000-d650c6ea2053"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7abd-8000-d650c6ea2053"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="01783"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7add-8000-d65b85cd903b"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7add-8000-d65b85cd903b"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="12355"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7afd-8000-99dbea9797e7"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7afd-8000-99dbea9797e7"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="03086"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7b1f-8000-b3940f3f1c2d"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7b1f-8000-b3940f3f1c2d"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="08574"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7b40-8000-05f596825753"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7b40-8000-05f596825753"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="03078"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7b60-8000-cc90de249cf0"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7b60-8000-cc90de249cf0"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="01154"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7b82-8000-0efe2c1c2f63"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7b82-8000-0efe2c1c2f63"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="01158"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7ba0-8000-0dba492a12fa"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7ba0-8000-0dba492a12fa"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="00921"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7bc3-8000-6191678e69ad"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7bc3-8000-6191678e69ad"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="00582"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7be5-8000-cdfbc2c33226"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7be5-8000-cdfbc2c33226"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="00543"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7c03-8000-1e2dbd89018f"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7c03-8000-1e2dbd89018f"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="01961"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7c24-8000-c2a7ec336d8b"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7c24-8000-c2a7ec336d8b"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="00634"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7c43-8000-ac1f1d52e24e"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7c43-8000-ac1f1d52e24e"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="02290"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7c62-8000-5f0d089c524e"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7c62-8000-5f0d089c524e"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="01350"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7c84-8000-6c3cdcf8e0e9"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7c84-8000-6c3cdcf8e0e9"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="02036"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7ca2-8000-a9c84e3db612"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7ca2-8000-a9c84e3db612"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="02325"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7cc2-8000-0f6c7287e361"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7cc2-8000-0f6c7287e361"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="12374"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7ce4-8000-0b50517bca92"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7ce4-8000-0b50517bca92"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="00749"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7d04-8000-18c48a7fda8d"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7d04-8000-18c48a7fda8d"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="00763"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7d23-8000-47cf682d1f12"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7d23-8000-47cf682d1f12"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="02757"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7d43-8000-4c8c93ef7aae"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7d43-8000-4c8c93ef7aae"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="00507"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7d63-8000-2f5f6e092567"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7d63-8000-2f5f6e092567"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="01522"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7d83-8000-88f4a219272a"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7d83-8000-88f4a219272a"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="04999"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7da3-8000-3052542f9dcb"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7da3-8000-3052542f9dcb"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="03016"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7dc3-8000-62185e639a19"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7dc3-8000-62185e639a19"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="11478"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7de3-8000-ff7a7b36b0a9"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7de3-8000-ff7a7b36b0a9"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="11446"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7e03-8000-a7a06fa6a41c"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7e03-8000-a7a06fa6a41c"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="02144"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7e24-8000-19b059171a46"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7e24-8000-19b059171a46"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="02179"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7e44-8000-96bff08003ed"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7e44-8000-96bff08003ed"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="02226"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7e64-8000-22a0e7ae34f5"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7e64-8000-22a0e7ae34f5"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="05132"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7e87-8000-ea97fd3a45b7"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7e87-8000-ea97fd3a45b7"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="05006"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7ea5-8000-b1d715c3b983"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7ea5-8000-b1d715c3b983"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="07346"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7ec5-8000-7155293568c2"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7ec5-8000-7155293568c2"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="09478"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7ee5-8000-24c0da628aec"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7ee5-8000-24c0da628aec"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="09481"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7f05-8000-8cd622c04b85"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7f05-8000-8cd622c04b85"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="12305"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7f25-8000-19439185f247"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7f25-8000-19439185f247"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="05107"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7f43-8000-56d640deb41c"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7f43-8000-56d640deb41c"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="05113"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7f63-8000-73327aa997db"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7f63-8000-73327aa997db"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="07967"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7f83-8000-253656a3b230"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7f83-8000-253656a3b230"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="31184"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7fa3-8000-a8d678737186"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7fa3-8000-a8d678737186"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="03957"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7fc3-8000-d193372535ad"/>
+		<resource>
+			<ServiceRequest>
+				<id value="0694011c-0856-7fc3-8000-d193372535ad"/>
+				<meta>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest"/>
+					<tag>
+						<system value="https://dastacr.cz/dasta/hypertext/ZAVINACGNPN_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="MDVGSQBNO"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>objednávky a požadavky</xhtml:div>
+				</text>
+				<status value="active"/>
+				<intent value="order"/>
+				<priority value="stat"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="02461"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-79b1-8000-ece7fd1bb30e"/>
+		<resource>
+			<Observation>
+				<id value="0694011c-0856-79b1-8000-ece7fd1bb30e"/>
+				<meta>
+					<versionId value="0694011c-0856-79b1-8000-ece7fd1bb30e"/>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-observation"/>
+					<tag>
+						<system value="https://dastacr.cz/ZAVINACGNPV_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="PUI"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>...</xhtml:div>
+				</text>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="03142"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+				<effectiveDateTime value="2025-06-12T13:26:49+02:00"/>
+				<performer>
+					<reference value="urn:uuid:0694011c-0856-7730-8000-d0c9dc31ca0e"/>
+				</performer>
+				<valueQuantity>
+					<value value="100"/>
+				</valueQuantity>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-79cf-8000-ed1eeb5c1a23"/>
+		<resource>
+			<Observation>
+				<id value="0694011c-0856-79cf-8000-ed1eeb5c1a23"/>
+				<meta>
+					<versionId value="0694011c-0856-79cf-8000-ed1eeb5c1a23"/>
+					<profile value="https://hl7.cz/fhir/lab-order/StructureDefinition/cz-observation"/>
+					<tag>
+						<system value="https://dastacr.cz/ZAVINACGNPV_202507160837NVEZENIRVEZENI.htm"/>
+						<code value="PUI"/>
+					</tag>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>...</xhtml:div>
+				</text>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="02994"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+				</subject>
+				<effectiveDateTime value="2025-06-12T13:26:49+02:00"/>
+				<performer>
+					<reference value="urn:uuid:0694011c-0856-7730-8000-d0c9dc31ca0e"/>
+				</performer>
+				<valueQuantity>
+					<value value="2"/>
+				</valueQuantity>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-724b-8000-68aaa11239c3"/>
+		<resource>
+			<Practitioner>
+				<id value="0694011c-0856-724b-8000-68aaa11239c3"/>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>MUDr. Dasta Garant</xhtml:div>
+				</text>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/krzp"/>
+					<value value="9988776655"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clk"/>
+					<value value="1122334455"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/clek"/>
+				</identifier>
+				<name>
+					<text value="MUDr. Dasta Garant"/>
+				</name>
+				<qualification>
+					<code>
+						<coding>
+							<system value="https://dastacr.cz/dasta/hypertext/UZAGT.htm"/>
+							<code value="001"/>
+							<display value="všeobecné praktické lékařství"/>
+						</coding>
+					</code>
+				</qualification>
+			</Practitioner>
+			<PractitionerRole>
+				<code>
+					<coding>
+						<system value="https://dastacr.cz/dasta/hypertext/WWBSK.htm"/>
+						<code value="2211"/>
+						<display value="Praktičtí lékaři"/>
+					</coding>
+				</code>
+			</PractitionerRole>
+		</resource>
+	</entry>
+	<entry id="0694011c-0856-73b2-8000-a163790c6cb7">
+		<fullUrl value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
+		<resource>
+			<Patient>
+				<id value="0694011c-0856-73b2-8000-a163790c6cb7"/>
+				<meta>
+					<versionId value="0694011c-0856-73b2-8000-a163790c6cb7"/>
+					<profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>
+						<xhtml:p>Maryna Veselá 6162131679</xhtml:p>
+					</xhtml:div>
+				</text>
+				<extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+					<extension url="code">
+						<valueCodeableConcept>
+							<coding>
+								<system value="urn:iso:std:iso:3166"/>
+								<code value="CZE"/>
+							</coding>
+						</valueCodeableConcept>
+					</extension>
+				</extension>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/cpoj"/>
+					<value value="6162131679"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/rcis"/>
+					<value value="6162131679"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+							<code value="NIIP"/>
+							<display value="National Insurance Payor Identifier (Payor)"/>
+						</coding>
+					</type>
+					<assigner>
+						<identifier>
+							<system value="https://www.vzp.cz/poskytovatele/ciselniky/zdravotni-pojistovny"/>
+							<value value="111"/>
+						</identifier>
+						<display value="Všeobecná zdravotní pojišťovna České republiky"/>
+					</assigner>
+				</identifier>
+				<active value="true"/>
+				<name>
+					<use value="official"/>
+					<family value="Veselá"/>
+					<given value="Maryna"/>
+				</name>
+				<gender value="female"/>
+				<birthDate value="1961-12-13"/>
+				<address>
+					<use value="home"/>
+					<line value="Maryna Veselá"/>
+					<line value="Porubská 120/7"/>
+					<city value="Děhylov"/>
+					<postalCode value="74794"/>
+				</address>
+			</Patient>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0694011c-0856-7730-8000-d0c9dc31ca0e"/>
+		<resource>
+			<Organization>
+				<id value="0694011c-0856-7730-8000-d0c9dc31ca0e"/>
+				<meta>
+					<versionId value="0694011c-0856-7730-8000-d0c9dc31ca0e"/>
+					<profile value="http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<xhtml:div>interna - ambulance</xhtml:div>
+				</text>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/ico"/>
+					<value value="25815709"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icz"/>
+					<value value="78006000"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="https://ncez.mzcr.cz/fhir/sid/icp"/>
+					<value value="78006093"/>
+				</identifier>
+				<type>
+					<coding>
+						<system value="https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar"/>
+						<code value="101"/>
+					</coding>
+				</type>
+				<name value="interna - ambulance"/>
+			</Organization>
+		</resource>
+	</entry>
+</Bundle>

@@ -352,62 +352,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="ds_dasta-4.03.31" library="xml" uid="3119" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" AddSchemaLocation="0"/>
-					<view ltx="-30" lty="-476" rbx="195" rby="-183"/>
-					<data>
-						<root scrollposition="341">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="3" expanded="1">
-								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="dasta" ns="1" outkey="2187" expanded="1">
-										<entry name="guid" type="attribute" outkey="2153"/>
-										<entry name="vguid" type="attribute" outkey="2168"/>
-										<entry name="id_soubor" type="attribute" outkey="2169"/>
-										<entry name="verze_ds" type="attribute" outkey="2170"/>
-										<entry name="verze_nclp" type="attribute" outkey="2171"/>
-										<entry name="ur" type="attribute" outkey="2172"/>
-										<entry name="typ_odesm" type="attribute" outkey="2173"/>
-										<entry name="ozn_soub" type="attribute" outkey="2183"/>
-										<entry name="dat_vb" type="attribute" outkey="2132"/>
-										<entry name="zdroj_is" ns="1" expanded="1"/>
-										<entry name="garant_dat" ns="1" outkey="87" expanded="1">
-											<entry name="guid" type="attribute" outkey="2147"/>
-										</entry>
-										<entry name="is" ns="1" outkey="81" expanded="1">
-											<entry name="guid" type="attribute" outkey="2218"/>
-											<entry name="*">
-												<selections>
-													<qname QNameAsString="{urn:cz-mzcr:ns:dasta:ds4:ds_ip}ip"/>
-												</selections>
-											</entry>
-											<entry name="ip" ns="2" outkey="2087" expanded="1">
-												<entry name="guid" type="attribute" outkey="2138"/>
-												<entry name="ku" ns="2" expanded="1">
-													<entry name="ku_z" ns="2" expanded="1">
-														<entry name="dat_prov" ns="2" outkey="2133"/>
-														<entry name="p_pracoviste" ns="2" expanded="1">
-															<entry name="guid" type="attribute" outkey="2214"/>
-														</entry>
-														<entry name="p_pracovnik" ns="2" expanded="1"/>
-													</entry>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\DASTA_PATSUMDAT.xml"/>
-					</data>
-				</component>
 				<component name="FullURL_Practitioner" library="provisio" uid="5781" kind="19" visible="0" blackbox="0">
 					<view ltx="337" lty="-176" rbx="513" rby="-159"/>
 					<data>
@@ -474,6 +418,62 @@
 								</entry>
 							</entry>
 						</root>
+					</data>
+				</component>
+				<component name="ds_dasta-4.03.31" library="xml" uid="3119" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" AddSchemaLocation="0"/>
+					<view ltx="-30" lty="-476" rbx="195" rby="-183"/>
+					<data>
+						<root scrollposition="341">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="dasta" ns="1" outkey="2187" expanded="1">
+										<entry name="guid" type="attribute" outkey="2153"/>
+										<entry name="vguid" type="attribute" outkey="2168"/>
+										<entry name="id_soubor" type="attribute" outkey="2169"/>
+										<entry name="verze_ds" type="attribute" outkey="2170"/>
+										<entry name="verze_nclp" type="attribute" outkey="2171"/>
+										<entry name="ur" type="attribute" outkey="2172"/>
+										<entry name="typ_odesm" type="attribute" outkey="2173"/>
+										<entry name="ozn_soub" type="attribute" outkey="2183"/>
+										<entry name="dat_vb" type="attribute" outkey="2132"/>
+										<entry name="zdroj_is" ns="1" expanded="1"/>
+										<entry name="garant_dat" ns="1" outkey="87" expanded="1">
+											<entry name="guid" type="attribute" outkey="2147"/>
+										</entry>
+										<entry name="is" ns="1" outkey="81" expanded="1">
+											<entry name="guid" type="attribute" outkey="2218"/>
+											<entry name="*">
+												<selections>
+													<qname QNameAsString="{urn:cz-mzcr:ns:dasta:ds4:ds_ip}ip"/>
+												</selections>
+											</entry>
+											<entry name="ip" ns="2" outkey="2087" expanded="1">
+												<entry name="guid" type="attribute" outkey="2138"/>
+												<entry name="ku" ns="2" expanded="1">
+													<entry name="ku_z" ns="2" expanded="1">
+														<entry name="dat_prov" ns="2" outkey="2133"/>
+														<entry name="p_pracoviste" ns="2" expanded="1">
+															<entry name="guid" type="attribute" outkey="2214"/>
+														</entry>
+														<entry name="p_pracovnik" ns="2" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\dasta_patsumdat.xml"/>
 					</data>
 				</component>
 			</children>
@@ -2548,85 +2548,6 @@
 					</targets>
 					<view ltx="730" lty="689" rbx="843" rby="743"/>
 				</component>
-				<component name="anf - all" library="provisio" uid="5062" kind="19" visible="0" blackbox="0">
-					<view ltx="438" lty="153" rbx="683" rby="271"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="patientReference" inpkey="1171" componentid="5757" expanded="1"/>
-							<entry name="ip_anf" componentid="4054" expanded="1">
-								<entry name="anfType" ns="1" type="xml-type" inpkey="793"/>
-							</entry>
-							<entry name="organizatinReference" inpkey="1010" componentid="5135"/>
-							<entry name="practitionerReference" inpkey="1011" componentid="5136"/>
-							<entry name="patsumdat_anf" componentid="4034" expanded="1">
-								<entry name="anfType" ns="1" type="xml-type" inpkey="794"/>
-							</entry>
-							<entry name="dat_prov" componentid="5018" expanded="1">
-								<entry name="dat_prov" ns="1" inpkey="788"/>
-							</entry>
-						</root>
-						<root scrollposition="1070">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.w3.org/1999/xhtml"/>
-								</namespaces>
-							</header>
-							<entry name="entry" componentid="5134" expanded="1">
-								<entry name="entry" ns="1" outkey="1012" expanded="1">
-									<entry name="fullUrl" ns="1" expanded="1">
-										<entry name="value" type="attribute" outkey="1013"/>
-									</entry>
-									<entry name="resource" ns="1" expanded="1">
-										<entry name="Condition" ns="1" expanded="1">
-											<entry name="meta" ns="1" expanded="1">
-												<entry name="versionId" ns="1" expanded="1">
-													<entry name="value" type="attribute" outkey="1108"/>
-												</entry>
-											</entry>
-											<entry name="text" ns="1" expanded="1">
-												<entry name="div" ns="2" expanded="1">
-													<entry name="#text" outkey="1192"/>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="FamilyMemberHistory" ns="1" expanded="1">
-											<entry name="meta" ns="1" expanded="1">
-												<entry name="versionId" ns="1" expanded="1">
-													<entry name="value" type="attribute" outkey="1109"/>
-												</entry>
-											</entry>
-											<entry name="text" ns="1" expanded="1">
-												<entry name="div" ns="2" expanded="1">
-													<entry name="#text" outkey="1194"/>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="Observation" ns="1" expanded="1">
-											<entry name="meta" ns="1" expanded="1">
-												<entry name="versionId" ns="1" expanded="1">
-													<entry name="value" type="attribute" outkey="1110"/>
-												</entry>
-											</entry>
-											<entry name="text" ns="1" expanded="1">
-												<entry name="div" ns="2" expanded="1">
-													<entry name="#text" outkey="1193"/>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="constant" library="core" uid="5075" kind="2">
 					<targets>
 						<datapoint pos="0" key="758"/>
@@ -2791,6 +2712,85 @@
 							</header>
 							<entry name="entry" ns="1" componentid="4296" expanded="1">
 								<entry name="entry" outkey="757"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="anf - all" library="provisio" uid="5062" kind="19" visible="0" blackbox="0">
+					<view ltx="438" lty="153" rbx="683" rby="271"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="patientReference" inpkey="1171" componentid="5757" expanded="1"/>
+							<entry name="ip_anf" componentid="4054" expanded="1">
+								<entry name="anfType" ns="1" type="xml-type" inpkey="793"/>
+							</entry>
+							<entry name="organizatinReference" inpkey="1010" componentid="5135"/>
+							<entry name="practitionerReference" inpkey="1011" componentid="5136"/>
+							<entry name="patsumdat_anf" componentid="4034" expanded="1">
+								<entry name="anfType" ns="1" type="xml-type" inpkey="794"/>
+							</entry>
+							<entry name="dat_prov" componentid="5018" expanded="1">
+								<entry name="dat_prov" ns="1" inpkey="788"/>
+							</entry>
+						</root>
+						<root scrollposition="1070">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.w3.org/1999/xhtml"/>
+								</namespaces>
+							</header>
+							<entry name="entry" componentid="5134" expanded="1">
+								<entry name="entry" ns="1" outkey="1012" expanded="1">
+									<entry name="fullUrl" ns="1" expanded="1">
+										<entry name="value" type="attribute" outkey="1013"/>
+									</entry>
+									<entry name="resource" ns="1" expanded="1">
+										<entry name="Condition" ns="1" expanded="1">
+											<entry name="meta" ns="1" expanded="1">
+												<entry name="versionId" ns="1" expanded="1">
+													<entry name="value" type="attribute" outkey="1108"/>
+												</entry>
+											</entry>
+											<entry name="text" ns="1" expanded="1">
+												<entry name="div" ns="2" expanded="1">
+													<entry name="#text" outkey="1192"/>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="FamilyMemberHistory" ns="1" expanded="1">
+											<entry name="meta" ns="1" expanded="1">
+												<entry name="versionId" ns="1" expanded="1">
+													<entry name="value" type="attribute" outkey="1109"/>
+												</entry>
+											</entry>
+											<entry name="text" ns="1" expanded="1">
+												<entry name="div" ns="2" expanded="1">
+													<entry name="#text" outkey="1194"/>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="Observation" ns="1" expanded="1">
+											<entry name="meta" ns="1" expanded="1">
+												<entry name="versionId" ns="1" expanded="1">
+													<entry name="value" type="attribute" outkey="1110"/>
+												</entry>
+											</entry>
+											<entry name="text" ns="1" expanded="1">
+												<entry name="div" ns="2" expanded="1">
+													<entry name="#text" outkey="1193"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
 							</entry>
 						</root>
 					</data>
@@ -11286,6 +11286,24 @@
 						<constant value="https://dasta.mzcr.cz/WWBWI.htm" datatype="string"/>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="6693" kind="2">
+					<targets>
+						<datapoint pos="0" key="132"/>
+					</targets>
+					<view ltx="1038" lty="344" rbx="1138" rby="361"/>
+					<data>
+						<constant value="anam_prob" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="4657" kind="2">
+					<targets>
+						<datapoint pos="0" key="103"/>
+					</targets>
+					<view ltx="435" lty="157" rbx="565" rby="174"/>
+					<data>
+						<constant value="problem-list-item" datatype="string"/>
+					</data>
+				</component>
 				<component name="value-map" library="core" uid="3483" kind="23">
 					<sources>
 						<datapoint pos="0" key="19"/>
@@ -11305,29 +11323,53 @@
 						</valuemap>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="6693" kind="2">
-					<targets>
-						<datapoint pos="0" key="132"/>
-					</targets>
-					<view ltx="1038" lty="344" rbx="1138" rby="361"/>
+				<component name="document" library="xml" uid="3484" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="48" lty="256" rbx="294" rby="554"/>
 					<data>
-						<constant value="anam_prob" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="4657" kind="2">
-					<targets>
-						<datapoint pos="0" key="103"/>
-					</targets>
-					<view ltx="435" lty="157" rbx="565" rby="174"/>
-					<data>
-						<constant value="problem-list-item" datatype="string"/>
+						<root scrollposition="77">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="anam_probType" ns="1" type="xml-type" outkey="17" expanded="1">
+								<entry name="guid" type="attribute" outkey="76"/>
+								<entry name="vguid" type="attribute" outkey="105"/>
+								<entry name="prob_popis" ns="1" outkey="24"/>
+								<entry name="prob_kod" ns="1" outkey="10" expanded="1">
+									<entry name="kod_syst" ns="1" outkey="130"/>
+									<entry name="kod" ns="1" outkey="58"/>
+									<entry name="kod_text" ns="1" outkey="29"/>
+								</entry>
+								<entry name="prob_dat_od" ns="1" outkey="41"/>
+								<entry name="prob_dat_do" ns="1" outkey="48"/>
+								<entry name="prob_klin" ns="1" outkey="1"/>
+								<entry name="prob_okol" ns="1" outkey="37"/>
+								<entry name="prob_zav_text" ns="1" outkey="5"/>
+								<entry name="prob_stad_text" ns="1" outkey="43"/>
+								<entry name="prob_stad_kod" ns="1" outkey="39" expanded="1">
+									<entry name="kod_syst" ns="1" outkey="131"/>
+									<entry name="kod" ns="1" outkey="31"/>
+									<entry name="kod_text" ns="1" outkey="51"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
+						<parameter usageKind="input" name="anam_probType" sequence="1">
+							<root>
+								<entry name="anam_probType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+							</root>
+						</parameter>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="3486" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1230" lty="35" rbx="1659" rby="708"/>
 					<data>
-						<root scrollposition="2935">
+						<root scrollposition="4703">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -11422,7 +11464,7 @@
 													<entry name="value" type="attribute" inpkey="59"/>
 												</entry>
 											</entry>
-											<entry name="text" ns="1" expanded="1">
+											<entry name="text" ns="1" inpkey="144" expanded="1">
 												<entry name="value" type="attribute" inpkey="136"/>
 											</entry>
 										</entry>
@@ -11431,14 +11473,14 @@
 												<entry name="value" type="attribute" inpkey="121"/>
 											</entry>
 										</entry>
-										<entry name="onsetDateTime" ns="1" inpkey="137">
+										<entry name="onsetDateTime" ns="1" inpkey="137" expanded="1">
 											<entry name="value" type="attribute" inpkey="138"/>
 										</entry>
 										<entry name="onsetPeriod" ns="1">
 											<entry name="start" ns="1" expanded="1"/>
 											<entry name="end" ns="1" expanded="1"/>
 										</entry>
-										<entry name="abatementDateTime" ns="1" inpkey="139">
+										<entry name="abatementDateTime" ns="1" inpkey="139" expanded="1">
 											<entry name="value" type="attribute" inpkey="140"/>
 										</entry>
 										<entry name="abatementPeriod" ns="1">
@@ -11451,7 +11493,7 @@
 											</entry>
 											<entry name="display" ns="1" expanded="1"/>
 										</entry>
-										<entry name="stage" ns="1" inpkey="40" expanded="1">
+										<entry name="stage" ns="1" expanded="1">
 											<entry name="summary" ns="1" expanded="1">
 												<entry name="coding" ns="1" inpkey="55" expanded="1">
 													<entry name="system" ns="1" expanded="1">
@@ -11486,48 +11528,6 @@
 							<root>
 								<entry name="Bundle" ns="http://hl7.org/fhir"/>
 								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3484" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="48" lty="256" rbx="294" rby="554"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="anam_probType" ns="1" type="xml-type" outkey="17" expanded="1">
-								<entry name="guid" type="attribute" outkey="76"/>
-								<entry name="vguid" type="attribute" outkey="105"/>
-								<entry name="prob_popis" ns="1" outkey="24"/>
-								<entry name="prob_kod" ns="1" outkey="10" expanded="1">
-									<entry name="kod_syst" ns="1" outkey="130"/>
-									<entry name="kod" ns="1" outkey="58"/>
-									<entry name="kod_text" ns="1" outkey="29"/>
-								</entry>
-								<entry name="prob_dat_od" ns="1" outkey="41"/>
-								<entry name="prob_dat_do" ns="1" outkey="48"/>
-								<entry name="prob_klin" ns="1" outkey="1"/>
-								<entry name="prob_okol" ns="1" outkey="37"/>
-								<entry name="prob_zav_text" ns="1" outkey="5"/>
-								<entry name="prob_stad_text" ns="1" outkey="43"/>
-								<entry name="prob_stad_kod" ns="1" outkey="39" expanded="1">
-									<entry name="kod_syst" ns="1" outkey="131"/>
-									<entry name="kod" ns="1" outkey="31"/>
-									<entry name="kod_text" ns="1" outkey="51"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
-						<parameter usageKind="input" name="anam_probType" sequence="1">
-							<root>
-								<entry name="anam_probType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
 							</root>
 						</parameter>
 					</data>
@@ -11599,7 +11599,6 @@
 					</vertex>
 					<vertex vertexkey="39">
 						<edges>
-							<edge vertexkey="40"/>
 							<edge vertexkey="55"/>
 						</edges>
 					</vertex>
@@ -11690,6 +11689,7 @@
 					<vertex vertexkey="24">
 						<edges>
 							<edge vertexkey="136"/>
+							<edge vertexkey="144"/>
 						</edges>
 					</vertex>
 					<vertex vertexkey="41">
