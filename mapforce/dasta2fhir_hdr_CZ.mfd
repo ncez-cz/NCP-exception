@@ -208,46 +208,6 @@
 						<constant value="document" datatype="string"/>
 					</data>
 				</component>
-				<component name="ds_dasta-4.03.31" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="25" lty="16" rbx="245" rby="574"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="3" expanded="1">
-								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="dasta" ns="1" expanded="1">
-										<entry name="guid" type="attribute" outkey="46"/>
-										<entry name="dat_vb" type="attribute" outkey="47"/>
-										<entry name="garant_dat" ns="1" outkey="23"/>
-										<entry name="is" ns="1" outkey="22" expanded="1">
-											<entry name="*">
-												<selections>
-													<qname QNameAsString="{urn:cz-mzcr:ns:dasta:ds4:ds_ip}ip"/>
-												</selections>
-											</entry>
-											<entry name="ip" ns="2" outkey="61" expanded="1">
-												<entry name="guid" type="attribute" outkey="54"/>
-												<entry name="vguid" type="attribute" outkey="55"/>
-												<entry name="ku" ns="2" expanded="1">
-													<entry name="ku_z" ns="2" outkey="15"/>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\DASTA_ip-ku_z_propz.xml"/>
-					</data>
-				</component>
 				<component name="bundle" library="xml" uid="3" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
 					<view ltx="1076" lty="16" rbx="1386" rby="604"/>
@@ -322,6 +282,46 @@
 								<entry name="entry" outkey="11"/>
 							</entry>
 						</root>
+					</data>
+				</component>
+				<component name="ds_dasta-4.03.31" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="25" lty="16" rbx="245" rby="574"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="dasta" ns="1" expanded="1">
+										<entry name="guid" type="attribute" outkey="46"/>
+										<entry name="dat_vb" type="attribute" outkey="47"/>
+										<entry name="garant_dat" ns="1" outkey="23"/>
+										<entry name="is" ns="1" outkey="22" expanded="1">
+											<entry name="*">
+												<selections>
+													<qname QNameAsString="{urn:cz-mzcr:ns:dasta:ds4:ds_ip}ip"/>
+												</selections>
+											</entry>
+											<entry name="ip" ns="2" outkey="61" expanded="1">
+												<entry name="guid" type="attribute" outkey="54"/>
+												<entry name="vguid" type="attribute" outkey="55"/>
+												<entry name="ku" ns="2" expanded="1">
+													<entry name="ku_z" ns="2" outkey="15"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\dasta_ip-ku_z_propz.xml"/>
 					</data>
 				</component>
 			</children>

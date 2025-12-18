@@ -10,7 +10,7 @@
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="450" lty="33" rbx="521" rby="49"/>
+					<view ltx="450" lty="33" rbx="527" rby="50"/>
 					<data>
 						<constant value="official" datatype="string"/>
 					</data>
@@ -19,13 +19,13 @@
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="449" lty="1" rbx="585" rby="17"/>
+					<view ltx="449" lty="1" rbx="600" rby="18"/>
 					<data>
 						<constant value="https://ncez.mzcr.cz/fhir/sid/cpoj" datatype="string"/>
 					</data>
 				</component>
 				<component name="Reference_Organization" library="provisio" uid="5791" kind="19" visible="0" blackbox="0">
-					<view ltx="394" lty="374" rbx="585" rby="407"/>
+					<view ltx="394" lty="374" rbx="587" rby="408"/>
 					<data>
 						<root>
 							<header>
@@ -102,7 +102,7 @@
 					<targets>
 						<datapoint pos="0" key="241"/>
 					</targets>
-					<view ltx="450" lty="18" rbx="537" rby="34"/>
+					<view ltx="450" lty="18" rbx="544" rby="35"/>
 					<data>
 						<constant value="document" datatype="string"/>
 					</data>
@@ -111,7 +111,7 @@
 					<targets>
 						<datapoint pos="0" key="290"/>
 					</targets>
-					<view ltx="977" lty="2" rbx="1058" rby="18"/>
+					<view ltx="977" lty="2" rbx="1067" rby="19"/>
 					<data>
 						<constant value="urn:uuid:" datatype="string"/>
 					</data>
@@ -120,7 +120,7 @@
 					<targets>
 						<datapoint pos="0" key="287"/>
 					</targets>
-					<view ltx="991" lty="-41" rbx="1104" rby="-25"/>
+					<view ltx="991" lty="-41" rbx="1114" rby="-24"/>
 					<data>
 						<constant value="urn:ietf:rfc:3986" datatype="string"/>
 					</data>
@@ -133,7 +133,7 @@
 					<targets>
 						<datapoint pos="0" key="288"/>
 					</targets>
-					<view ltx="1106" lty="-15" rbx="1181" rby="39"/>
+					<view ltx="1106" lty="-15" rbx="1188" rby="41"/>
 				</component>
 				<component name="ip_ip" library="provisio" uid="6055" kind="19" visible="0" blackbox="0">
 					<view ltx="394" lty="95" rbx="679" rby="134"/>
@@ -163,7 +163,7 @@
 					</data>
 				</component>
 				<component name="Reference_Patient" library="provisio" uid="5706" kind="19" visible="0" blackbox="0">
-					<view ltx="395" lty="225" rbx="556" rby="258"/>
+					<view ltx="395" lty="225" rbx="558" rby="259"/>
 					<data>
 						<root>
 							<header>
@@ -185,7 +185,7 @@
 					</data>
 				</component>
 				<component name="fixDate" library="user" uid="5718" kind="19" visible="0" blackbox="0">
-					<view ltx="450" lty="-62" rbx="611" rby="-45"/>
+					<view ltx="450" lty="-62" rbx="613" rby="-45"/>
 					<data>
 						<root>
 							<header>
@@ -193,7 +193,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="293" componentid="1989"/>
+							<entry name="date" inpkey="293" componentid="6847"/>
 						</root>
 						<root>
 							<header>
@@ -201,7 +201,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="292" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="292" componentid="6846"/>
 						</root>
 					</data>
 				</component>
@@ -257,6 +257,37 @@
 						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle" outputinstance="..\schemas\hl7-fhir\bundle.xml"/>
 					</data>
 				</component>
+				<component name="ku_z_lab" library="provisio" uid="3146" kind="19" visible="0" blackbox="0">
+					<view ltx="663" lty="297" rbx="1117" rby="648"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+								</namespaces>
+							</header>
+							<entry name="patientReference" inpkey="309" componentid="6062" expanded="1"/>
+							<entry name="referencePracoviste" inpkey="306" componentid="5800"/>
+							<entry name="ku_z_labType" componentid="3122" expanded="1">
+								<entry name="ku_z_labType" ns="1" type="xml-type" inpkey="246"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="3123" expanded="1">
+								<entry name="entry" outkey="247">
+									<entry name="fullUrl" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+					</data>
+				</component>
 				<component name="ds_dasta-4.03.31" library="xml" uid="3500" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="27" lty="1" rbx="313" rby="602"/>
@@ -303,38 +334,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\DASTA_ip-ku_z_lab_v5 - All Attribute - All_VRi.xml"/>
-					</data>
-				</component>
-				<component name="ku_z_lab" library="provisio" uid="3146" kind="19" visible="0" blackbox="0">
-					<view ltx="663" lty="297" rbx="1117" rby="648"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-								</namespaces>
-							</header>
-							<entry name="patientReference" inpkey="309" componentid="6062" expanded="1"/>
-							<entry name="referencePracoviste" inpkey="306" componentid="5800"/>
-							<entry name="ku_z_labType" componentid="3122" expanded="1">
-								<entry name="ku_z_labType" ns="1" type="xml-type" inpkey="246"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="3123" expanded="1">
-								<entry name="entry" outkey="247">
-									<entry name="fullUrl" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
+						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta" inputinstance="..\samples\dasta_ip-ku_z_lab.xml"/>
 					</data>
 				</component>
 			</children>
@@ -508,7 +508,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="99" componentid="1989"/>
+							<entry name="date" inpkey="99" componentid="6847"/>
 						</root>
 						<root>
 							<header>
@@ -516,7 +516,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="24" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="24" componentid="6846"/>
 						</root>
 					</data>
 				</component>
@@ -6309,7 +6309,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="8" componentid="1989"/>
+							<entry name="date" inpkey="8" componentid="6847"/>
 						</root>
 						<root>
 							<header>
@@ -6317,7 +6317,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" componentid="2000"/>
+							<entry name="hl7DateTimeString" componentid="6846"/>
 						</root>
 					</data>
 				</component>
@@ -7037,7 +7037,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="442" componentid="1989"/>
+							<entry name="date" inpkey="442" componentid="6847"/>
 						</root>
 						<root>
 							<header>
@@ -7045,7 +7045,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="443" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="443" componentid="6846"/>
 						</root>
 					</data>
 				</component>
@@ -11792,7 +11792,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="98" componentid="1989"/>
+							<entry name="date" inpkey="98" componentid="6847"/>
 						</root>
 						<root>
 							<header>
@@ -11800,7 +11800,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="116" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="116" componentid="6846"/>
 						</root>
 					</data>
 				</component>
@@ -11813,7 +11813,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="65" componentid="1989"/>
+							<entry name="date" inpkey="65" componentid="6847"/>
 						</root>
 						<root>
 							<header>
@@ -11821,7 +11821,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" componentid="2000"/>
+							<entry name="hl7DateTimeString" componentid="6846"/>
 						</root>
 					</data>
 				</component>
@@ -11869,7 +11869,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="63" componentid="1989"/>
+							<entry name="date" inpkey="63" componentid="6847"/>
 						</root>
 						<root>
 							<header>
@@ -11877,7 +11877,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="113" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="113" componentid="6846"/>
 						</root>
 					</data>
 				</component>
@@ -12565,7 +12565,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="23" componentid="1989"/>
+							<entry name="date" inpkey="23" componentid="6847"/>
 						</root>
 						<root>
 							<header>
@@ -12573,7 +12573,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="24" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="24" componentid="6846"/>
 						</root>
 					</data>
 				</component>
@@ -15540,7 +15540,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="44" componentid="1989"/>
+							<entry name="date" inpkey="44" componentid="6847"/>
 						</root>
 						<root>
 							<header>
@@ -15548,7 +15548,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="57" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="57" componentid="6846"/>
 						</root>
 					</data>
 				</component>
@@ -15701,7 +15701,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="date" inpkey="42" componentid="1989"/>
+							<entry name="date" inpkey="42" componentid="6847"/>
 						</root>
 						<root>
 							<header>
@@ -15709,7 +15709,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="hl7DateTimeString" outkey="56" componentid="2000"/>
+							<entry name="hl7DateTimeString" outkey="56" componentid="6846"/>
 						</root>
 					</data>
 				</component>

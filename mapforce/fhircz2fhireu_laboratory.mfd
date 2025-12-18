@@ -10,7 +10,7 @@
 					<targets>
 						<datapoint pos="0" key="1030"/>
 					</targets>
-					<view ltx="330" lty="64" rbx="460" rby="80"/>
+					<view ltx="330" lty="64" rbx="475" rby="81"/>
 					<data>
 						<constant value="http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab" datatype="string"/>
 						<comment>
@@ -22,7 +22,7 @@
 					<targets>
 						<datapoint pos="0" key="1031"/>
 					</targets>
-					<view ltx="330" lty="114" rbx="460" rby="130"/>
+					<view ltx="330" lty="114" rbx="475" rby="131"/>
 					<data>
 						<constant value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" datatype="string"/>
 						<comment>
@@ -34,7 +34,7 @@
 					<targets>
 						<datapoint pos="0" key="1032"/>
 					</targets>
-					<view ltx="330" lty="156" rbx="463" rby="172"/>
+					<view ltx="330" lty="156" rbx="479" rby="173"/>
 					<data>
 						<constant value="http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core" datatype="string"/>
 						<comment>
@@ -46,7 +46,7 @@
 					<targets>
 						<datapoint pos="0" key="1033"/>
 					</targets>
-					<view ltx="330" lty="198" rbx="462" rby="214"/>
+					<view ltx="330" lty="198" rbx="477" rby="215"/>
 					<data>
 						<constant value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips" datatype="string"/>
 						<comment>
@@ -55,7 +55,7 @@
 					</data>
 				</component>
 				<component name="bundle" library="xml" uid="11029" kind="14">
-					<properties XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
 					<view ltx="1039" lty="64" rbx="1343" rby="590"/>
 					<data>
 						<root scrollposition="2281">
@@ -492,11 +492,23 @@
 					<targets>
 						<datapoint pos="0" key="1034"/>
 					</targets>
-					<view ltx="330" lty="240" rbx="460" rby="256"/>
+					<view ltx="330" lty="240" rbx="475" rby="257"/>
 					<data>
 						<constant value="http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab" datatype="string"/>
 						<comment>
 							<text>Profile - Specimen</text>
+						</comment>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="11030" kind="2">
+					<targets>
+						<datapoint pos="0" key="1029"/>
+					</targets>
+					<view ltx="330" lty="22" rbx="475" rby="39"/>
+					<data>
+						<constant value="http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab" datatype="string"/>
+						<comment>
+							<text>Profile - composition</text>
 						</comment>
 					</data>
 				</component>
@@ -1094,19 +1106,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle" inputinstance="..\samples\FHIR2DASTA\input\FHIR_ku_z_lab - v1.xml"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="11030" kind="2">
-					<targets>
-						<datapoint pos="0" key="1029"/>
-					</targets>
-					<view ltx="330" lty="22" rbx="460" rby="38"/>
-					<data>
-						<constant value="http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab" datatype="string"/>
-						<comment>
-							<text>Profile - composition</text>
-						</comment>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle" inputinstance="..\samples\bundle_laboratory.xml"/>
 					</data>
 				</component>
 			</children>

@@ -7,7 +7,7 @@
 		<structure>
 			<children>
 				<component name="Reference_Patient" library="provisio" uid="2" kind="19" visible="0">
-					<view ltx="248" lty="514" rbx="277" rby="518"/>
+					<view ltx="248" lty="514" rbx="280" rby="519"/>
 					<data>
 						<root>
 							<header>
@@ -25,7 +25,7 @@
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" TnsPrefix="ds" AddSchemaLocation="0" WriteXMLStandalone="1"/>
 					<view ltx="1338" lty="112" rbx="1563" rby="405"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -66,7 +66,7 @@
 								</namespaces>
 							</header>
 							<entry name="FileInstance" ns="1" expanded="1">
-								<file role="inputinstance" name="..\samples\FHIR2DASTA\input\FHIR_ku_z_lab - v1.xml"/>
+								<file role="inputinstance" name="..\samples\bundle_laboratory.xml"/>
 								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
 									<entry name="Bundle" expanded="1">
 										<entry name="entry" outkey="1" expanded="1"/>
@@ -126,7 +126,7 @@
 					<targets>
 						<datapoint pos="0" key="547"/>
 					</targets>
-					<view ltx="690" lty="-634" rbx="742" rby="-580"/>
+					<view ltx="690" lty="-634" rbx="746" rby="-580"/>
 				</component>
 				<component name="value" library="core" uid="9119" kind="3">
 					<sources>
@@ -137,7 +137,7 @@
 						<datapoint pos="0" key="581"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-375" rbx="882" rby="-321"/>
+					<view ltx="779" lty="-375" rbx="892" rby="-321"/>
 					<data>
 						<comment>
 							<text>Národnost</text>
@@ -153,7 +153,7 @@
 						<datapoint pos="0" key="546"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-635" rbx="882" rby="-581"/>
+					<view ltx="779" lty="-635" rbx="892" rby="-581"/>
 					<data>
 						<comment>
 							<text>Rodné číslo</text>
@@ -168,7 +168,7 @@
 					<targets>
 						<datapoint pos="0" key="558"/>
 					</targets>
-					<view ltx="690" lty="-539" rbx="742" rby="-485"/>
+					<view ltx="690" lty="-539" rbx="746" rby="-485"/>
 				</component>
 				<component name="equal" library="core" uid="9122" kind="5">
 					<sources>
@@ -178,13 +178,13 @@
 					<targets>
 						<datapoint pos="0" key="587"/>
 					</targets>
-					<view ltx="690" lty="-294" rbx="742" rby="-240"/>
+					<view ltx="690" lty="-294" rbx="746" rby="-240"/>
 				</component>
 				<component name="constant" library="core" uid="9208" kind="2">
 					<targets>
 						<datapoint pos="0" key="747"/>
 					</targets>
-					<view ltx="875" lty="-150" rbx="918" rby="-133"/>
+					<view ltx="875" lty="-150" rbx="920" rby="-133"/>
 					<data>
 						<constant value=" " datatype="string"/>
 					</data>
@@ -198,7 +198,7 @@
 						<datapoint pos="0" key="556"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-540" rbx="882" rby="-486"/>
+					<view ltx="779" lty="-540" rbx="892" rby="-486"/>
 					<data>
 						<comment>
 							<text>Číslo pojišťovny</text>
@@ -209,7 +209,7 @@
 					<targets>
 						<datapoint pos="0" key="654"/>
 					</targets>
-					<view ltx="1019" lty="-635" rbx="1070" rby="-618"/>
+					<view ltx="1019" lty="-635" rbx="1073" rby="-618"/>
 					<data>
 						<constant value="ZP" datatype="string"/>
 						<comment>
@@ -227,7 +227,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="542"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-726" rbx="882" rby="-672"/>
+					<view ltx="779" lty="-726" rbx="892" rby="-672"/>
 					<data>
 						<comment>
 							<text>číslo pojištěnce</text>
@@ -243,7 +243,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="586"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-295" rbx="882" rby="-241"/>
+					<view ltx="779" lty="-295" rbx="892" rby="-241"/>
 					<data>
 						<comment>
 							<text>RIP/RID</text>
@@ -287,13 +287,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="617"/>
 					</targets>
-					<view ltx="1019" lty="-724" rbx="1071" rby="-670"/>
+					<view ltx="1019" lty="-724" rbx="1075" rby="-670"/>
 				</component>
 				<component name="constant" library="core" uid="5672" kind="2">
 					<targets>
 						<datapoint pos="0" key="627"/>
 					</targets>
-					<view ltx="911" lty="-736" rbx="986" rby="-719"/>
+					<view ltx="911" lty="-736" rbx="991" rby="-719"/>
 					<data>
 						<constant value="maiden" datatype="string"/>
 					</data>
@@ -306,13 +306,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="539"/>
 					</targets>
-					<view ltx="690" lty="-725" rbx="742" rby="-671"/>
+					<view ltx="690" lty="-725" rbx="746" rby="-671"/>
 				</component>
 				<component name="constant" library="core" uid="5651" kind="2">
 					<targets>
 						<datapoint pos="0" key="545"/>
 					</targets>
-					<view ltx="486" lty="-702" rbx="628" rby="-685"/>
+					<view ltx="486" lty="-702" rbx="637" rby="-685"/>
 					<data>
 						<constant value="https://ncez.mzcr.cz/fhir/sid/cpoj" datatype="string"/>
 					</data>
@@ -321,7 +321,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="552"/>
 					</targets>
-					<view ltx="486" lty="-614" rbx="628" rby="-597"/>
+					<view ltx="486" lty="-614" rbx="637" rby="-597"/>
 					<data>
 						<constant value="https://ncez.mzcr.cz/fhir/sid/rcis" datatype="string"/>
 					</data>
@@ -330,7 +330,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="562"/>
 					</targets>
-					<view ltx="486" lty="-524" rbx="633" rby="-507"/>
+					<view ltx="486" lty="-524" rbx="646" rby="-507"/>
 					<data>
 						<constant value="https://www.vzp.cz/poskytovatele/ciselniky/zdravotni-pojistovny" datatype="string"/>
 					</data>
@@ -339,7 +339,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="652"/>
 					</targets>
-					<view ltx="493" lty="-276" rbx="635" rby="-259"/>
+					<view ltx="493" lty="-276" rbx="644" rby="-259"/>
 					<data>
 						<constant value="https://ncez.mzcr.cz/fhir/sid/rid" datatype="string"/>
 					</data>
@@ -348,7 +348,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="583"/>
 					</targets>
-					<view ltx="493" lty="-346" rbx="628" rby="-329"/>
+					<view ltx="493" lty="-346" rbx="640" rby="-329"/>
 					<data>
 						<constant value="http://hl7.org/fhir/StructureDefinition/patient-nationality" datatype="string"/>
 					</data>
@@ -391,7 +391,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="572"/>
 					</targets>
-					<view ltx="486" lty="-440" rbx="621" rby="-423"/>
+					<view ltx="486" lty="-440" rbx="633" rby="-423"/>
 					<data>
 						<constant value="http://hl7.org/fhir/StructureDefinition/patient-birthPlace" datatype="string"/>
 					</data>
@@ -405,7 +405,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="569"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-454" rbx="882" rby="-400"/>
+					<view ltx="779" lty="-454" rbx="892" rby="-400"/>
 					<data>
 						<comment>
 							<text>místo narození</text>
@@ -506,7 +506,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="623"/>
 						<datapoint pos="1" key="656"/>
 					</targets>
-					<view ltx="1109" lty="-724" rbx="1212" rby="-670"/>
+					<view ltx="1109" lty="-724" rbx="1222" rby="-670"/>
 					<data>
 						<comment>
 							<text>Příjmení / Rodné příjmení</text>
@@ -526,7 +526,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="755"/>
 					</targets>
-					<view ltx="944" lty="-223" rbx="1027" rby="-80"/>
+					<view ltx="944" lty="-223" rbx="1036" rby="-82"/>
 					<data>
 						<comment>
 							<text>Povinná část jména adresy</text>
@@ -541,7 +541,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="570"/>
 					</targets>
-					<view ltx="690" lty="-453" rbx="742" rby="-399"/>
+					<view ltx="690" lty="-453" rbx="746" rby="-399"/>
 				</component>
 				<component name="equal" library="core" uid="9120" kind="5">
 					<sources>
@@ -551,7 +551,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="579"/>
 					</targets>
-					<view ltx="690" lty="-374" rbx="742" rby="-320"/>
+					<view ltx="690" lty="-374" rbx="746" rby="-320"/>
 				</component>
 				<component name="value-map" library="core" uid="9135" kind="23">
 					<sources>
@@ -560,7 +560,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="629"/>
 					</targets>
-					<view ltx="1019" lty="-524" rbx="1095" rby="-487"/>
+					<view ltx="1019" lty="-524" rbx="1099" rby="-486"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -576,7 +576,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="655"/>
 					</targets>
-					<view ltx="1019" lty="-582" rbx="1067" rby="-565"/>
+					<view ltx="1019" lty="-582" rbx="1069" rby="-565"/>
 					<data>
 						<constant value="N" datatype="string"/>
 						<comment>
@@ -3269,7 +3269,7 @@ https://dastacr.cz/dasta/hypertext/ZAVINACGTYPKU.htm</text>
 					<view ltx="702" lty="249" rbx="805" rby="303"/>
 				</component>
 				<component name="document" library="xml" uid="9821" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="856" lty="315" rbx="1004" rby="361"/>
 					<data>
 						<root>
@@ -3644,7 +3644,7 @@ https://dastacr.cz/dasta/hypertext/ZAVINACGTYPKU.htm</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9913" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="873" lty="745" rbx="1012" rby="795"/>
 					<data>
 						<root scrollposition="160">
@@ -4802,7 +4802,7 @@ https://dastacr.cz/dasta/hypertext/ZAVINACGTYPKU.htm</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9706" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="38" lty="387" rbx="351" rby="700"/>
 					<data>
 						<root scrollposition="130">
@@ -6190,7 +6190,7 @@ https://dastacr.cz/dasta/hypertext/ZAVINACGTYPKU.htm</text>
 					<view ltx="832" lty="609" rbx="935" rby="663"/>
 				</component>
 				<component name="document" library="xml" uid="9774" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1112" lty="363" rbx="1243" rby="439"/>
 					<data>
 						<root scrollposition="20">
@@ -6246,7 +6246,7 @@ https://dastacr.cz/dasta/hypertext/ZAVINACGTYPKU.htm</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9746" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1648" lty="41" rbx="1798" rby="541"/>
 					<data>
 						<root scrollposition="852">
@@ -6291,7 +6291,7 @@ https://dastacr.cz/dasta/hypertext/ZAVINACGTYPKU.htm</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9678" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="71" lty="411" rbx="355" rby="641"/>
 					<data>
 						<root scrollposition="431">
@@ -6346,7 +6346,7 @@ https://dastacr.cz/dasta/hypertext/ZAVINACGTYPKU.htm</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9773" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="72" lty="141" rbx="372" rby="345"/>
 					<data>
 						<root scrollposition="2955">
@@ -6523,7 +6523,7 @@ https://dastacr.cz/dasta/hypertext/ZAVINACGTYPKU.htm</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9829" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="140" lty="143" rbx="440" rby="643"/>
 					<data>
 						<root>
@@ -8235,7 +8235,6 @@ https://dastacr.cz/dasta/hypertext/ZAVINACGTYPKU.htm</text>
 		<connections/>
 	</component>
 	<component name="specimen_to_ku_z_lab" library="provisio" uid="9720">
-		<description/>
 		<structure>
 			<children>
 				<component name="equal" library="core" uid="9725" kind="5">
@@ -8513,7 +8512,7 @@ https://dastacr.cz/dasta/hypertext/ZAVINACGTYPKU.htm</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9722" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="95" lty="-7" rbx="395" rby="273"/>
 					<data>
 						<root>
