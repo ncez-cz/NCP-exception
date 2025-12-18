@@ -7,7 +7,7 @@
 		<structure>
 			<children>
 				<component name="Reference_Patient" library="provisio" uid="5705" kind="19" visible="0">
-					<view ltx="83" lty="493" rbx="244" rby="526"/>
+					<view ltx="83" lty="493" rbx="246" rby="527"/>
 					<data>
 						<root>
 							<header>
@@ -28,45 +28,11 @@
 						</root>
 					</data>
 				</component>
-<<<<<<< HEAD
-				<component name="bundle" library="xml" uid="6" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-35" lty="83" rbx="313" rby="579"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<file role="inputinstance" name="..\samples\FHIR2DASTA\input\FHIR_ku_o_lab - v18..xml"/>
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="Bundle" expanded="1">
-										<entry name="identifier">
-											<entry name="system" expanded="1"/>
-											<entry name="value" expanded="1"/>
-										</entry>
-										<entry name="entry" outkey="62" expanded="1"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle"/>
-					</data>
-				</component>
-=======
->>>>>>> 0e3d50c997c7fee4338e9a6d311a806d49a55d15
 				<component name="ds_dasta-4.03.31" library="xml" uid="3252" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" TnsPrefix="ds" AddSchemaLocation="0" WriteXMLStandalone="1"/>
 					<view ltx="1173" lty="91" rbx="1398" rby="384"/>
 					<data>
-<<<<<<< HEAD
-						<root>
-=======
 						<root scrollposition="550">
->>>>>>> 0e3d50c997c7fee4338e9a6d311a806d49a55d15
 							<header>
 								<namespaces>
 									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
@@ -102,33 +68,6 @@
 						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta"/>
 					</data>
 				</component>
-				<component name="bundle" library="xml" uid="6" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-35" lty="83" rbx="313" rby="579"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<file role="inputinstance" name="..\samples\FHIR2DASTA\input\labOrder-fhir_marek.xml"/>
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="Bundle" expanded="1">
-										<entry name="identifier">
-											<entry name="system" expanded="1"/>
-											<entry name="value" expanded="1"/>
-										</entry>
-										<entry name="entry" outkey="62" expanded="1"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle"/>
-					</data>
-				</component>
 				<component name="ip_ip" library="provisio" uid="6056" kind="19" visible="0">
 					<view ltx="607" lty="377" rbx="891" rby="442"/>
 					<data>
@@ -154,6 +93,33 @@
 								<entry name="ip" outkey="61"/>
 							</entry>
 						</root>
+					</data>
+				</component>
+				<component name="bundle" library="xml" uid="6" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-35" lty="83" rbx="313" rby="579"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<file role="inputinstance" name="..\samples\bundle_labOrder.xml"/>
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Bundle" expanded="1">
+										<entry name="identifier">
+											<entry name="system" expanded="1"/>
+											<entry name="value" expanded="1"/>
+										</entry>
+										<entry name="entry" outkey="62" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle"/>
 					</data>
 				</component>
 			</children>
@@ -1376,7 +1342,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<view ltx="780" lty="263" rbx="881" rby="316"/>
 				</component>
 				<component name="document" library="xml" uid="9510" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="50" lty="90" rbx="350" rby="590"/>
 					<data>
 						<root scrollposition="329">
@@ -1710,7 +1676,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<view ltx="751" lty="154" rbx="802" rby="207"/>
 				</component>
 				<component name="document" library="xml" uid="9423" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="2" lty="167" rbx="302" rby="667"/>
 					<data>
 						<root>
@@ -2024,7 +1990,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<view ltx="618" lty="255" rbx="669" rby="308"/>
 				</component>
 				<component name="document" library="xml" uid="9380" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="79" lty="169" rbx="379" rby="669"/>
 					<data>
 						<root scrollposition="94">
@@ -2137,7 +2103,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<view ltx="898" lty="294" rbx="999" rby="347"/>
 				</component>
 				<component name="document" library="xml" uid="9404" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="83" lty="89" rbx="383" rby="589"/>
 					<data>
 						<root>
@@ -2337,7 +2303,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9414" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="154" lty="125" rbx="454" rby="625"/>
 					<data>
 						<root>
@@ -2880,7 +2846,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9524" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-132" lty="-31" rbx="168" rby="347"/>
 					<data>
 						<root>
@@ -2940,89 +2906,6 @@ http://hl7.org/fhir/quantity-comparator</text>
 						</parameter>
 					</data>
 				</component>
-<<<<<<< HEAD
-				<component name="lopk" library="provisio" uid="3196" kind="19" visible="0">
-					<view ltx="466" lty="797" rbx="762" rby="850"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ServiceRequest" ns="1" componentid="9380" expanded="1">
-								<entry name="ServiceRequest" inpkey="183"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="lopk" ns="1" componentid="3122" expanded="1">
-								<entry name="lopk" outkey="180"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9525" kind="14">
-					<properties/>
-					<view ltx="-131" lty="395" rbx="177" rby="471"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="ServiceRequest" ns="1" outkey="181" expanded="1">
-									<entry name="priority" ns="1" expanded="1">
-										<entry name="value" type="attribute" outkey="172"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="ServiceRequest_lop" sequence="1">
-							<root>
-								<entry name="ServiceRequest" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9552" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-131" lty="519" rbx="177" rby="595"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="ServiceRequest" outkey="199" expanded="1">
-									<entry name="priority" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="ServiceRequest_lopk" sequence="1">
-							<root>
-								<entry name="ServiceRequest" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-=======
->>>>>>> 0e3d50c997c7fee4338e9a6d311a806d49a55d15
 			</children>
 		</structure>
 		<connections>
@@ -4673,7 +4556,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ip" sequence="1">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -5582,7 +5465,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -5869,7 +5752,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -5957,7 +5840,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -6100,7 +5983,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -6247,13 +6130,8 @@ Povinný prvek</text>
 					<view ltx="500" lty="1095" rbx="577" rby="1149"/>
 				</component>
 				<component name="document" library="xml" uid="9405" kind="14">
-<<<<<<< HEAD
-					<properties/>
-					<view ltx="763" lty="974" rbx="911" rby="1055"/>
-=======
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="781" lty="1197" rbx="929" rby="1278"/>
->>>>>>> 0e3d50c997c7fee4338e9a6d311a806d49a55d15
 					<data>
 						<root>
 							<header>
@@ -6465,13 +6343,8 @@ Povinný prvek</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9379" kind="14">
-<<<<<<< HEAD
-					<properties/>
-					<view ltx="763" lty="831" rbx="911" rby="913"/>
-=======
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="781" lty="1054" rbx="929" rby="1136"/>
->>>>>>> 0e3d50c997c7fee4338e9a6d311a806d49a55d15
 					<data>
 						<root>
 							<header>
@@ -6494,13 +6367,8 @@ Povinný prvek</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9505" kind="14">
-<<<<<<< HEAD
-					<properties/>
-					<view ltx="747" lty="689" rbx="906" rby="773"/>
-=======
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="765" lty="912" rbx="924" rby="996"/>
->>>>>>> 0e3d50c997c7fee4338e9a6d311a806d49a55d15
 					<data>
 						<root>
 							<header>
@@ -6720,7 +6588,7 @@ Povinný prvek</text>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9530" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="782" lty="330" rbx="929" rby="414"/>
 					<data>
 						<root>
@@ -7087,7 +6955,7 @@ Povinný prvek</text>
 					<view ltx="493" lty="743" rbx="544" rby="796"/>
 				</component>
 				<component name="document" library="xml" uid="9376" kind="14">
-					<properties/>
+					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-44" lty="48" rbx="256" rby="252"/>
 					<data>
 						<root scrollposition="1700">
@@ -7198,7 +7066,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -7811,7 +7679,7 @@ Povinný prvek</text>
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<document schema="C:\Provisio\Mapping\schemas\DS042704\ds_ip-4.15.07.xsd"/>
 						<parameter usageKind="output" name="ds_ip41507">
 							<root>
 								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
@@ -7821,92 +7689,6 @@ Povinný prvek</text>
 						</parameter>
 					</data>
 				</component>
-<<<<<<< HEAD
-				<component name="document" library="xml" uid="9375" kind="14">
-					<properties/>
-					<view ltx="20" lty="271" rbx="320" rby="475"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry" outkey="50" expanded="1"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="entry" optional="1" sequence="1">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="equal" library="core" uid="9311" kind="5">
-					<sources>
-						<datapoint pos="0" key="4"/>
-						<datapoint pos="1" key="2"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="548" lty="95" rbx="599" rby="148"/>
-				</component>
-				<component name="if-else" library="core" uid="9333" kind="4">
-					<sources>
-						<datapoint pos="0" key="18"/>
-						<datapoint pos="1" key="19"/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="20"/>
-					</targets>
-					<view ltx="850" lty="215" rbx="944" rby="286"/>
-				</component>
-				<component name="document" library="xml" uid="9315" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="20" lty="-97" rbx="328" rby="2"/>
-					<data>
-						<root scrollposition="480">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="Composition" ns="1" expanded="1">
-									<entry name="type" ns="1" expanded="1">
-										<entry name="coding" ns="1" expanded="1">
-											<entry name="code" ns="1" expanded="1">
-												<entry name="value" type="attribute" outkey="14"/>
-											</entry>
-										</entry>
-									</entry>
-									<entry name="date" ns="1" expanded="1">
-										<entry name="value" type="attribute" outkey="21"/>
-									</entry>
-									<entry name="title" ns="1">
-										<entry name="value" type="attribute" outkey="44"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="Composition">
-							<root>
-								<entry name="Composition" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-=======
->>>>>>> 0e3d50c997c7fee4338e9a6d311a806d49a55d15
 				<component name="filter_ku_o_lab" library="provisio" uid="9371" kind="19" visible="0">
 					<view ltx="530" lty="516" rbx="838" rby="553"/>
 					<data>
