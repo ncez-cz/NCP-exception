@@ -343,19 +343,49 @@ def getType(instanceroot):
 def getTypeNS(name, ns):
     return name
 
-def findGraph(component,graph,graphinv):
+def isLeaf(component,key):
+    node = component.find(f".//*[@inpkey='{key}']")
+    if node is None:
+        node = component.find(f".//*[@outkey='{key}']")
+    if node is None:
+        node = component.find(f".//*[@key='{key}']")
+    if node is None:
+        raise Exception(f"Node '{key}' not found in {component.tag}{component.attrib}") 
+    return (node.find("./*") is None)
+
+def findGraph(component,graph,graphinv,edgekeys):
     # targetvertexes = dict()
     for vertex in component.findall("./structure/graph/vertices/vertex"):
         key = vertex.get("vertexkey")
         values = []
         for edge in vertex.findall("./edges/edge"):
             to = edge.get("vertexkey")
+            edgekey = edge.get("edgekey")
+            if edgekey:
+                edgekeys[(key,to)]=edgekey
             values.append(to)
             if not to in graphinv.keys():
                 graphinv[to]=[key]
             else:
-                graphinv.append(key)
+                graphinv[to].append(key)
         graph[key]=values
+    for edge in component.findall("./connections/edge"):
+        key = edge.get("from")
+        to = edge.get("to")
+        if  not key in graph.keys():
+                graph[key]=[to]
+        else:
+                graph[key].append(to)
+        if not to in graphinv.keys():
+                graphinv[to]=[key]
+        else:
+                graphinv[to].append(key)
+        
+    for newTargetKey in graph.keys():
+        if len(graph[newTargetKey])>1:
+            for newSourceKey in graph[newTargetKey]:
+                if not isLeaf(component,newSourceKey):
+                    graphinv[newSourceKey].remove(newTargetKey) 
     
 
 def findInputNodes(component, inputNodes):
@@ -1020,13 +1050,14 @@ def generate_fml_for_component(component_library,component_name,component,blocks
     fml_lines = []
     graph=dict() # from sources to targets
     graphinv=dict() # from targets to sources
+    edgekeys=dict()
     inputNodes=dict() # all target vertexes 
     outputNodes=dict() # all sources vertexes
     findInputNodes(component, inputNodes)
     findOutputNodes(component, outputNodes)
     
     parent_map = {c: p for p in component.iter() for c in p}
-    findGraph(component,graph,graphinv)
+    findGraph(component,graph,graphinv,edgekeys)
     # displayGraph(graph)
     groupDef=f"group {name(component_name)}("
     
@@ -1096,9 +1127,10 @@ def main():
         #output_file = '.\\mapforce\\output\\laboratoryOrder.map'
         #mfd_file = '.\\mapforce\\final\\patsum.mfd'
         #output_file = '.\\mapforce\\output\\patsum.map'
-        mfd_file = '.\\mapforce\\final\\hdr.mfd'
-        output_file = '.\\mapforce\\output\\hdr.map'
-        
+        #mfd_file = '.\\mapforce\\final\\hdr.mfd'
+        #output_file = '.\\mapforce\\output\\hdr.map'
+        mfd_file = "..\\mapforce\\fhir2dasta_labOrder.mfd"
+        output_file = ".\\fml\\fhir2dasta_labOrder.map"
     else:
         mfd_file = sys.argv[1]
         output_file = sys.argv[2]
@@ -1109,11 +1141,11 @@ def main():
     functions = dict()
     findComponents(root, blocks, functions)
     
-    map_name = "hdr"
+    map_name = "fhir2dasta_laboratoryOrder"
     with open(output_file, 'w', encoding="utf-8") as f:
         f.write(f"/// url = 'https://ncez.mzcr.cz/model/StructureMap/{map_name}'\n")
-        #f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR HL7-CZ https://build.fhir.org/ig/hl7-cz/ (June 2025)'\n")
-        f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR HL7-EU https://build.fhir.org/ig/hl7-eu/ (June 2025)'\n")
+        f.write(f"/// name = 'Mapování {map_name} z FHIR HL7-CZ https://build.fhir.org/ig/hl7-cz/ (June 2025) do DASTA 4'\n")
+        #f.write(f"/// name = 'Mapování {map_name} z DASTA 4 do FHIR HL7-EU https://build.fhir.org/ig/hl7-eu/ (June 2025)'\n")
         f.write(f"/// title = 'Mapování {map_name}'\n")
         tr = str.maketrans("\\","/")
         f.write(f"/// descrition = 'This file is generated from MapForge file {mfd_file.translate(tr)}'\n")
