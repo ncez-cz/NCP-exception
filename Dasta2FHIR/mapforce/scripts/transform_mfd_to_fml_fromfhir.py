@@ -87,7 +87,7 @@ class Node:
         self.ns2entry[prefix]=cur
         cur = self.entry
         if name.count(".")>0 and self.isSource and cur.get('type')!='attribute' and len(list(cur))==0 and not self.isFunctionParameter:
-            name += ".txt"
+            # name += ".txt"
             self.ns2entry[name_mdf2fml(name)]=cur
             self.isLeaf  = True
         return name
@@ -977,7 +977,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
       sourceNode.valuemapUid = source.valuemapUid
     
     ind='\t'*(path+1)
-    fml_lines.append(f"{ind}// {sourceNode.getDescription()} {path}-> {targetNode.getDescription()}")
+    #fml_lines.append(f"{ind}// {sourceNode.getDescription()} {path}-> {targetNode.getDescription()}")
     if len(sourceNode.inpkeys)>0:
         fml.pathLevel[path+1] = fml.level
         fml_lines.append(fml.exitNamespace(path+1,sourceNode,targetNode))      
@@ -1133,6 +1133,8 @@ def main():
         #output_file = ".\\fml\\fhir2dasta_labOrder.map"
         mfd_file = "..\\mapforce\\fhircz2fhireu_hdr.mfd"
         output_file = ".\\fml\\fhircz2fhireu_hdr_generated.map"
+        #mfd_file = "..\\mapforce\\fhircz2fhireu_laboratory.mfd"
+        #output_file = ".\\fml\\fhircz2fhireu_laboratory.map"
     else:
         mfd_file = sys.argv[1]
         output_file = sys.argv[2]
