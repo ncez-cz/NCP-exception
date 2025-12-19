@@ -1,0 +1,2542 @@
+/// url = 'https://ncez.mzcr.cz/model/StructureMap/fhircz2fhireu_hdr'
+/// name = 'Mapování hdr HL7 FHIR 4.0.1, CZ HDR(0.1.0 - ci-build 2025-11-7) do FHIR HL7-EU https://build.fhir.org/ig/hl7-eu/ (June 2025)'
+/// title = 'Mapování hdr'
+/// descrition = 'This file is generated from MapForge file ./mapforce/fhircz2fhireu_hdr.mfd'
+
+uses "https://hl7.cz/fhir/hdr/StructureDefinition/cz-bundle-hdr" alias BundleCZ as source
+uses "https://hl7.cz/fhir/hdr/StructureDefinition/cz-deviceUseStatement-hdr" alias DeviceUseStatementCZ as source
+uses "http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr" alias Bundle as target
+uses "http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-eu-hdr" alias DeviceUseStatement as target
+
+conceptmap "cm30" {
+  prefix s ="https://provisio.cz/dasta/30"
+  prefix t ="https://provisio.cz/fhir/30"
+
+  s:"https://hl7.cz/fhir/hdr/CodeSystem/temporarySystem-hdr-cz" == t:"http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu"
+}
+
+conceptmap "cm32" {
+  prefix s ="https://provisio.cz/dasta/32"
+  prefix t ="https://provisio.cz/fhir/32"
+
+  s:"https://hl7.cz/fhir/hdr/CodeSystem/temporarySystem-hdr-cz" == t:"http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu"
+}
+
+conceptmap "cm29" {
+  prefix s ="https://provisio.cz/dasta/29"
+  prefix t ="https://provisio.cz/fhir/29"
+
+  s:"https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-sdoh-hdr" == t:"http://hl7.eu/fhir/hdr/StructureDefinition/observation-sdoh-eu-hdr"
+  s:"https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-weight-hdr" == t:"http://hl7.org/fhir/StructureDefinition/bodyweight"
+  s:"https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-height-hdr" == t:"http://hl7.org/fhir/StructureDefinition/bodyheight"
+  s:"https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-BMI-hdr" == t:"http://hl7.org/fhir/StructureDefinition/bmi"
+  s:"https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-headCircumference-hdr" == t:"http://hl7.org/fhir/StructureDefinition/headcircum"
+  s:"https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-infectious-contact-hdr" == t:"http://hl7.eu/fhir/hdr/StructureDefinition/observation-infectious-contact-eu-hdr"
+  s:"https://hl7.cz/fhir/hdr/StructureDefinition/cz-observation-travel-hdr" == t:"http://hl7.eu/fhir/hdr/StructureDefinition/observation-travel-eu-hdr"
+}
+
+
+group defaultmap(source cz: BundleCZ, target eu: Bundle){
+    cz.id -> eu.id;
+    cz.meta -> eu.meta;
+    
+    cz.implicitRules as x -> eu.implicitRules=x "";
+    cz.language as x -> eu.language=x "";
+
+    cz.identifier -> eu.identifier;
+    cz.type as x -> eu.type=x "";
+    cz.timestamp as x -> eu.timestamp=x "";
+    cz.total as x -> eu.total=x "";
+    cz.link as x -> eu.link=x "";
+
+    cz.entry as e -> eu.entry as et then{
+        e.id as x-> et.id=x "";
+        e.extension as x -> et.extension=x "";
+        e.modifierExtension as x -> et.modifierExtension=x "";
+        e.resource -> et.resource; 
+        e.link as x -> et.link =x "";
+        e.fullUrl as x -> et.fullUrl =x "";
+        e.search as x -> et.search =x "";
+        e.request as x -> et.request =x "";
+        e.response as x -> et.response =x "";
+    } "entry";
+}
+
+group Coverage(source s2:Coverage, target t2:Coverage) <<type+>>{
+						s2.id as x -> t2.id = x "rule333";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule335";
+
+
+								s3.extension as x -> t3.extension = x "rule336";
+
+
+								s3.versionId as x -> t3.versionId = x "rule337";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule338";
+
+
+								s3.source as x -> t3.source = x "rule339";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule341";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/base/StructureDefinition/Coverage-eu-ehic' "rule342";
+
+
+										s4.extension as x -> t4.extension = x "rule343";
+									} "rule344";
+								} "rule345";
+
+								s3.security as x -> t3.security = x "rule346";
+
+
+								s3.tag as x -> t3.tag = x "rule347";
+							} "rule348";
+						} "rule349";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule350";
+
+
+						s2.language as x -> t2.language = x "rule351";
+
+
+						s2.text as x -> t2.text = x "rule352";
+
+
+						s2.contained as x -> t2.contained = x "rule353";
+
+
+						s2.extension as x -> t2.extension = x "rule354";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule355";
+
+
+						s2.identifier as x -> t2.identifier = x "rule356";
+
+
+						s2.status as x -> t2.status = x "rule357";
+
+
+						s2.type as x -> t2.type = x "rule358";
+
+
+						s2.policyHolder as x -> t2.policyHolder = x "rule359";
+
+
+						s2.subscriber as x -> t2.subscriber = x "rule360";
+
+
+						s2.subscriberId as x -> t2.subscriberId = x "rule361";
+
+
+						s2.beneficiary as x -> t2.beneficiary = x "rule362";
+
+
+						s2.dependent as x -> t2.dependent = x "rule363";
+
+
+						s2.relationship as x -> t2.relationship = x "rule364";
+
+
+						s2.period as x -> t2.period = x "rule365";
+
+
+						s2.payor as x -> t2.payor = x "rule366";
+
+
+						s2.class as x -> t2.class = x "rule367";
+
+
+						s2.order as x -> t2.order = x "rule368";
+
+
+						s2.network as x -> t2.network = x "rule369";
+
+
+						s2.costToBeneficiary as x -> t2.costToBeneficiary = x "rule370";
+
+
+						s2.subrogation as x -> t2.subrogation = x "rule371";
+
+
+						s2.contract as x -> t2.contract = x "rule372";
+}
+group Specimen(source s2:Specimen, target t2:Specimen) <<type+>>{
+						s2.id as x -> t2.id = x "rule1157";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule1159";
+
+
+								s3.extension as x -> t3.extension = x "rule1160";
+
+
+								s3.versionId as x -> t3.versionId = x "rule1161";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule1162";
+
+
+								s3.source as x -> t3.source = x "rule1163";
+
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule1165";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/base/StructureDefinition/Specimen-eu-lab' "rule1166";
+
+
+										s4.extension as x -> t4.extension = x "rule1167";
+									} "rule1168";
+								} "rule1169";
+
+								s3.security as x -> t3.security = x "rule1170";
+
+
+								s3.tag as x -> t3.tag = x "rule1171";
+							} "rule1172";
+						} "rule1173";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule1174";
+
+
+						s2.language as x -> t2.language = x "rule1175";
+
+
+						s2.text as x -> t2.text = x "rule1176";
+
+
+						s2.contained as x -> t2.contained = x "rule1177";
+
+
+						s2.extension as x -> t2.extension = x "rule1178";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule1179";
+
+
+						s2.identifier as x -> t2.identifier = x "rule1180";
+
+
+						s2.accessionIdentifier as x -> t2.accessionIdentifier = x "rule1181";
+
+
+						s2.status as x -> t2.status = x "rule1182";
+
+
+						s2.type as x -> t2.type = x "rule1183";
+
+
+						s2.subject as x -> t2.subject = x "rule1184";
+
+
+						s2.receivedTime as x -> t2.receivedTime = x "rule1185";
+
+
+						s2.parent as x -> t2.parent = x "rule1186";
+
+
+						s2.request as x -> t2.request = x "rule1187";
+
+
+						s2.collection as x -> t2.collection = x "rule1188";
+
+
+						s2.processing as x -> t2.processing = x "rule1189";
+
+
+						s2.container as x -> t2.container = x "rule1190";
+
+
+						s2.condition as x -> t2.condition = x "rule1191";
+
+
+						s2.note as x -> t2.note = x "rule1192";
+}
+group MedicationAdministration(source s2:MedicationAdministration, target t2:MedicationAdministration) <<type+>>{
+						s2.id as x -> t2.id = x "rule757";
+
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule759";
+
+
+								s3.extension as x -> t3.extension = x "rule760";
+
+
+								s3.versionId as x -> t3.versionId = x "rule761";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule762";
+
+
+								s3.source as x -> t3.source = x "rule763";
+
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule765";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/base/StructureDefinition/medicationAdministration-eu-hdr' "rule766";
+
+
+										s4.extension as x -> t4.extension = x "rule767";
+									} "rule768";
+								} "rule769";
+
+								s3.security as x -> t3.security = x "rule770";
+
+
+								s3.tag as x -> t3.tag = x "rule771";
+							} "rule772";
+						} "rule773";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule774";
+
+
+						s2.language as x -> t2.language = x "rule775";
+
+
+						s2.text as x -> t2.text = x "rule776";
+
+
+						s2.contained as x -> t2.contained = x "rule777";
+
+
+						s2.extension as x -> t2.extension = x "rule778";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule779";
+
+
+						s2.identifier as x -> t2.identifier = x "rule780";
+
+
+						s2.instantiates as x -> t2.instantiates = x "rule781";
+
+
+						s2.partOf as x -> t2.partOf = x "rule782";
+
+
+						s2.status as x -> t2.status = x "rule783";
+
+
+						s2.statusReason as x -> t2.statusReason = x "rule784";
+
+
+						s2.category as x -> t2.category = x "rule785";
+
+
+						s2.medicationCodeableConcept as x -> t2.medicationCodeableConcept = x "rule786";
+
+
+						s2.medicationReference as x -> t2.medicationReference = x "rule787";
+
+
+						s2.subject as x -> t2.subject = x "rule788";
+
+
+						s2.context as x -> t2.context = x "rule789";
+
+
+						s2.supportingInformation as x -> t2.supportingInformation = x "rule790";
+
+
+						s2.effectiveDateTime as x -> t2.effectiveDateTime = x "rule791";
+
+
+						s2.effectivePeriod as x -> t2.effectivePeriod = x "rule792";
+
+
+						s2.performer as x -> t2.performer = x "rule793";
+
+
+						s2.reasonCode as x -> t2.reasonCode = x "rule794";
+
+
+						s2.reasonReference as x -> t2.reasonReference = x "rule795";
+
+
+						s2.request as x -> t2.request = x "rule796";
+
+
+						s2.device as x -> t2.device = x "rule797";
+
+
+						s2.note as x -> t2.note = x "rule798";
+
+
+						s2.dosage as x -> t2.dosage = x "rule799";
+
+
+						s2.eventHistory as x -> t2.eventHistory = x "rule800";
+}
+group Device(source s2:Device, target t2:Device) <<type+>>{
+						s2.id as x -> t2.id = x "rule381";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule383";
+
+
+								s3.extension as x -> t3.extension = x "rule384";
+
+
+								s3.versionId as x -> t3.versionId = x "rule385";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule386";
+
+
+								s3.source as x -> t3.source = x "rule387";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule389";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/base/StructureDefinition/device-eu-hdr' "rule390";
+
+
+										s4.extension as x -> t4.extension = x "rule391";
+									} "rule392";
+								} "rule393";
+
+								s3.security as x -> t3.security = x "rule394";
+
+
+								s3.tag as x -> t3.tag = x "rule395";
+							} "rule396";
+						} "rule397";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule398";
+
+
+						s2.language as x -> t2.language = x "rule399";
+
+
+						s2.text as x -> t2.text = x "rule400";
+
+
+						s2.contained as x -> t2.contained = x "rule401";
+
+
+						s2.extension as x -> t2.extension = x "rule402";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule403";
+
+
+						s2.identifier as x -> t2.identifier = x "rule404";
+
+
+						s2.definition as x -> t2.definition = x "rule405";
+
+
+						s2.udiCarrier as x -> t2.udiCarrier = x "rule406";
+
+
+						s2.status as x -> t2.status = x "rule407";
+
+
+						s2.statusReason as x -> t2.statusReason = x "rule408";
+
+
+						s2.distinctIdentifier as x -> t2.distinctIdentifier = x "rule409";
+
+
+						s2.manufacturer as x -> t2.manufacturer = x "rule410";
+
+
+						s2.manufactureDate as x -> t2.manufactureDate = x "rule411";
+
+
+						s2.expirationDate as x -> t2.expirationDate = x "rule412";
+
+
+						s2.lotNumber as x -> t2.lotNumber = x "rule413";
+
+
+						s2.serialNumber as x -> t2.serialNumber = x "rule414";
+
+
+						s2.deviceName as x -> t2.deviceName = x "rule415";
+
+
+						s2.modelNumber as x -> t2.modelNumber = x "rule416";
+
+
+						s2.partNumber as x -> t2.partNumber = x "rule417";
+
+
+						s2.type as x -> t2.type = x "rule418";
+
+
+						s2.specialization as x -> t2.specialization = x "rule419";
+
+
+						s2.version as x -> t2.version = x "rule420";
+
+
+						s2.property as x -> t2.property = x "rule421";
+
+
+						s2.patient as x -> t2.patient = x "rule422";
+
+
+						s2.owner as x -> t2.owner = x "rule423";
+
+
+						s2.contact as x -> t2.contact = x "rule424";
+
+
+						s2.location as x -> t2.location = x "rule425";
+
+
+						s2.url as x -> t2.url = x "rule426";
+
+
+						s2.note as x -> t2.note = x "rule427";
+
+
+						s2.safety as x -> t2.safety = x "rule428";
+
+
+						s2.parent as x -> t2.parent = x "rule429";
+}
+group DiagnosticReport(source s2:DiagnosticReport, target t2:DiagnosticReport) <<type+>>{
+						s2.id as x -> t2.id = x "rule481";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule483";
+
+
+								s3.extension as x -> t3.extension = x "rule484";
+
+
+								s3.versionId as x -> t3.versionId = x "rule485";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule486";
+
+
+								s3.source as x -> t3.source = x "rule487";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule489";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/base/StructureDefinition/DiagnosticReport-eu-lab' "rule490";
+
+
+										s4.extension as x -> t4.extension = x "rule491";
+									} "rule492";
+								} "rule493";
+
+								s3.security as x -> t3.security = x "rule494";
+
+
+								s3.tag as x -> t3.tag = x "rule495";
+							} "rule496";
+						} "rule497";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule498";
+
+
+						s2.language as x -> t2.language = x "rule499";
+
+
+						s2.text as x -> t2.text = x "rule500";
+
+
+						s2.contained as x -> t2.contained = x "rule501";
+
+
+						s2.extension as x -> t2.extension = x "rule502";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule503";
+
+
+						s2.identifier as x -> t2.identifier = x "rule504";
+
+
+						s2.basedOn as x -> t2.basedOn = x "rule505";
+
+
+						s2.status as x -> t2.status = x "rule506";
+
+
+						s2.category as x -> t2.category = x "rule507";
+
+
+						s2.code as x -> t2.code = x "rule508";
+
+
+						s2.subject as x -> t2.subject = x "rule509";
+
+
+						s2.encounter as x -> t2.encounter = x "rule510";
+
+
+						s2.effectiveDateTime as x -> t2.effectiveDateTime = x "rule511";
+
+
+						s2.effectivePeriod as x -> t2.effectivePeriod = x "rule512";
+
+
+						s2.issued as x -> t2.issued = x "rule513";
+
+
+						s2.performer as x -> t2.performer = x "rule514";
+
+
+						s2.resultsInterpreter as x -> t2.resultsInterpreter = x "rule515";
+
+
+						s2.specimen as x -> t2.specimen = x "rule516";
+
+
+						s2.result as x -> t2.result = x "rule517";
+
+
+						s2.imagingStudy as x -> t2.imagingStudy = x "rule518";
+
+
+						s2.media as x -> t2.media = x "rule519";
+
+
+						s2.conclusion as x -> t2.conclusion = x "rule520";
+
+
+						s2.conclusionCode as x -> t2.conclusionCode = x "rule521";
+
+
+						s2.presentedForm as x -> t2.presentedForm = x "rule522";
+}
+group DeviceUseStatement(source s2:DeviceUseStatement, target t2:DeviceUseStatement) <<type+>>{
+						s2.id as x -> t2.id = x "rule341";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule343";
+
+
+								s3.extension as x -> t3.extension = x "rule344";
+
+
+								s3.versionId as x -> t3.versionId = x "rule345";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule346";
+
+
+								s3.source as x -> t3.source = x "rule347";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule349";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-eu-hdr' "rule350";
+
+
+										s4.extension as x -> t4.extension = x "rule351";
+									} "rule352";
+								} "rule353";
+
+								s3.security as x -> t3.security = x "rule354";
+
+
+								s3.tag as x -> t3.tag = x "rule355";
+							} "rule356";
+						} "rule357";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule358";
+
+
+						s2.language as x -> t2.language = x "rule359";
+
+
+						s2.text as x -> t2.text = x "rule360";
+
+
+						s2.contained as x -> t2.contained = x "rule361";
+
+
+						s2.extension as x -> t2.extension = x "rule362";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule363";
+
+
+						s2.identifier as x -> t2.identifier = x "rule364";
+
+
+						s2.basedOn as x -> t2.basedOn = x "rule365";
+
+
+						s2.status as x -> t2.status = x "rule366";
+
+
+						s2.subject as x -> t2.subject = x "rule367";
+
+
+						s2.derivedFrom as x -> t2.derivedFrom = x "rule368";
+
+
+						s2.timingTiming as x -> t2.timingTiming = x "rule369";
+
+
+						s2.timingPeriod as x -> t2.timingPeriod = x "rule370";
+
+
+						s2.timingDateTime as x -> t2.timingDateTime = x "rule371";
+
+
+						s2.recordedOn as x -> t2.recordedOn = x "rule372";
+
+
+						s2.source as x -> t2.source = x "rule373";
+
+
+						s2.device as x -> t2.device = x "rule374";
+
+
+						s2.reasonCode as x -> t2.reasonCode = x "rule375";
+
+
+						s2.reasonReference as x -> t2.reasonReference = x "rule376";
+
+
+						s2.bodySite as x -> t2.bodySite = x "rule377";
+
+
+						s2.note as x -> t2.note = x "rule378";
+}
+group Patient(source s2:Patient, target t2:Patient) <<type+>>{
+						s2.id as x -> t2.id = x "rule802";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule804";
+
+
+								s3.extension as x -> t3.extension = x "rule805";
+
+
+								s3.versionId as x -> t3.versionId = x "rule806";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule807";
+
+
+								s3.source as x -> t3.source = x "rule808";
+
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule810";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/base/StructureDefinition/patient-eu' "rule811";
+
+
+										s4.extension as x -> t4.extension = x "rule812";
+									} "rule813";
+								} "rule814";
+
+								s3.security as x -> t3.security = x "rule815";
+
+
+								s3.tag as x -> t3.tag = x "rule816";
+							} "rule817";
+						} "rule818";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule819";
+
+
+						s2.language as x -> t2.language = x "rule820";
+
+
+						s2.text as x -> t2.text = x "rule821";
+
+
+						s2.contained as x -> t2.contained = x "rule822";
+
+
+						s2.extension as x -> t2.extension = x "rule823";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule824";
+
+
+						s2.identifier as x -> t2.identifier = x "rule825";
+
+
+						s2.active as x -> t2.active = x "rule826";
+
+
+						s2.name as x -> t2.name = x "rule827";
+
+
+						s2.telecom as x -> t2.telecom = x "rule828";
+
+
+						s2.gender as x -> t2.gender = x "rule829";
+
+
+						s2.birthDate as x -> t2.birthDate = x "rule830";
+
+
+						s2.deceasedBoolean as x -> t2.deceasedBoolean = x "rule831";
+
+
+						s2.deceasedDateTime as x -> t2.deceasedDateTime = x "rule832";
+
+
+						s2.address as x -> t2.address = x "rule833";
+
+
+						s2.maritalStatus as x -> t2.maritalStatus = x "rule834";
+
+
+						s2.multipleBirthBoolean as x -> t2.multipleBirthBoolean = x "rule835";
+
+
+						s2.multipleBirthInteger as x -> t2.multipleBirthInteger = x "rule836";
+
+
+						s2.photo as x -> t2.photo = x "rule837";
+
+
+						s2.contact as x -> t2.contact = x "rule838";
+
+
+						s2.communication as x -> t2.communication = x "rule839";
+
+
+						s2.generalPractitioner as x -> t2.generalPractitioner = x "rule840";
+
+
+						s2.managingOrganization as x -> t2.managingOrganization = x "rule841";
+
+
+						s2.link as x -> t2.link = x "rule842";
+}
+
+group CarePlan(source s2:CarePlan, target t2:CarePlan) <<type+>>{
+						s2.id as x -> t2.id = x "rule95";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule97";
+
+								s3.extension as x -> t3.extension = x "rule98";
+
+
+								s3.versionId as x -> t3.versionId = x "rule99";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule100";
+
+
+								s3.source as x -> t3.source = x "rule101";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule103";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/carePlan-eu-hdr' "rule104";
+
+
+										s4.extension as x -> t4.extension = x "rule105";
+									} "rule106";
+								} "rule107";
+
+								s3.security as x -> t3.security = x "rule108";
+
+
+								s3.tag as x -> t3.tag = x "rule109";
+							} "rule110";
+						} "rule111";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule112";
+
+
+						s2.language as x -> t2.language = x "rule113";
+
+
+						s2.text as x -> t2.text = x "rule114";
+
+
+						s2.contained as x -> t2.contained = x "rule115";
+
+
+						s2.extension as x -> t2.extension = x "rule116";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule117";
+
+
+						s2.identifier as x -> t2.identifier = x "rule118";
+
+
+						s2.instantiatesCanonical as x -> t2.instantiatesCanonical = x "rule119";
+
+
+						s2.instantiatesUri as x -> t2.instantiatesUri = x "rule120";
+
+
+						s2.basedOn as x -> t2.basedOn = x "rule121";
+
+
+						s2.replaces as x -> t2.replaces = x "rule122";
+
+
+						s2.partOf as x -> t2.partOf = x "rule123";
+
+
+						s2.status as x -> t2.status = x "rule124";
+
+
+						s2.intent as x -> t2.intent = x "rule125";
+
+
+						s2.category as x -> t2.category = x "rule126";
+
+
+						s2.title as x -> t2.title = x "rule127";
+
+
+						s2.description as x -> t2.description = x "rule128";
+
+
+						s2.subject as x -> t2.subject = x "rule129";
+
+
+						s2.encounter as x -> t2.encounter = x "rule130";
+
+
+						s2.period as x -> t2.period = x "rule131";
+
+
+						s2.created as x -> t2.created = x "rule132";
+
+
+						s2.author as x -> t2.author = x "rule133";
+
+
+						s2.contributor as x -> t2.contributor = x "rule134";
+
+
+						s2.careTeam as x -> t2.careTeam = x "rule135";
+
+
+						s2.addresses as x -> t2.addresses = x "rule136";
+
+
+						s2.supportingInfo as x -> t2.supportingInfo = x "rule137";
+
+
+						s2.goal as x -> t2.goal = x "rule138";
+
+
+						s2.activity as x -> t2.activity = x "rule139";
+
+
+						s2.note as x -> t2.note = x "rule140";
+}
+
+
+group FamilyMemberHistory(source s2:FamilyMemberHistory, target t2:FamilyMemberHistory) <<type+>>{
+						s2.id as x -> t2.id = x "rule448";
+
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule450";
+
+
+								s3.extension as x -> t3.extension = x "rule451";
+
+
+								s3.versionId as x -> t3.versionId = x "rule452";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule453";
+
+
+								s3.source as x -> t3.source = x "rule454";
+
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule456";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/familyMemberHistory-eu-hdr' "rule457";
+
+
+										s4.extension as x -> t4.extension = x "rule458";
+									} "rule459";
+								} "rule460";
+
+								s3.security as x -> t3.security = x "rule461";
+
+
+								s3.tag as x -> t3.tag = x "rule462";
+							} "rule463";
+						} "rule464";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule465";
+
+
+						s2.language as x -> t2.language = x "rule466";
+
+
+						s2.text as x -> t2.text = x "rule467";
+
+
+						s2.contained as x -> t2.contained = x "rule468";
+
+
+						s2.extension as x -> t2.extension = x "rule469";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule470";
+
+
+						s2.identifier as x -> t2.identifier = x "rule471";
+
+
+						s2.instantiatesCanonical as x -> t2.instantiatesCanonical = x "rule472";
+
+
+						s2.instantiatesUri as x -> t2.instantiatesUri = x "rule473";
+
+
+						s2.status as x -> t2.status = x "rule474";
+
+
+						s2.dataAbsentReason as x -> t2.dataAbsentReason = x "rule475";
+
+
+						s2.patient as x -> t2.patient = x "rule476";
+
+
+						s2.date as x -> t2.date = x "rule477";
+
+
+						s2.name as x -> t2.name = x "rule478";
+
+
+						s2.relationship as x -> t2.relationship = x "rule479";
+
+
+						s2.sex as x -> t2.sex = x "rule480";
+
+
+						s2.bornPeriod as x -> t2.bornPeriod = x "rule481";
+
+
+						s2.bornDate as x -> t2.bornDate = x "rule482";
+
+
+						s2.bornString as x -> t2.bornString = x "rule483";
+
+
+						s2.ageAge as x -> t2.ageAge = x "rule484";
+
+
+						s2.ageRange as x -> t2.ageRange = x "rule485";
+
+
+						s2.ageString as x -> t2.ageString = x "rule486";
+
+
+						s2.estimatedAge as x -> t2.estimatedAge = x "rule487";
+
+
+						s2.deceasedBoolean as x -> t2.deceasedBoolean = x "rule488";
+
+
+						s2.deceasedAge as x -> t2.deceasedAge = x "rule489";
+
+
+						s2.deceasedRange as x -> t2.deceasedRange = x "rule490";
+
+
+						s2.deceasedDate as x -> t2.deceasedDate = x "rule491";
+
+
+						s2.deceasedString as x -> t2.deceasedString = x "rule492";
+
+
+						s2.reasonCode as x -> t2.reasonCode = x "rule493";
+
+
+						s2.reasonReference as x -> t2.reasonReference = x "rule494";
+
+
+						s2.note as x -> t2.note = x "rule495";
+
+
+						s2.condition as x -> t2.condition = x "rule496";
+}
+group Flag(source s2:Flag, target t2:Flag) <<type+>>{
+						s2.id as x -> t2.id = x "rule502";
+
+
+						s2.meta as x -> t2.meta = x "rule503";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule504";
+
+
+								s3.extension as x -> t3.extension = x "rule505";
+
+
+								s3.versionId as x -> t3.versionId = x "rule506";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule507";
+
+
+								s3.source as x -> t3.source = x "rule508";
+
+
+								s3.profile as x -> t3.profile = x "rule509";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule510";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/flag-eu-hdr' "rule511";
+
+
+										s4.extension as x -> t4.extension = x "rule512";
+									} "rule513";
+								} "rule514";
+
+								s3.security as x -> t3.security = x "rule515";
+
+
+								s3.tag as x -> t3.tag = x "rule516";
+							} "rule517";
+						} "rule518";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule519";
+
+
+						s2.language as x -> t2.language = x "rule520";
+
+
+						s2.text as x -> t2.text = x "rule521";
+
+
+						s2.contained as x -> t2.contained = x "rule522";
+
+
+						s2.extension as x -> t2.extension = x "rule523";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule524";
+
+
+						s2.identifier as x -> t2.identifier = x "rule525";
+
+
+						s2.status as x -> t2.status = x "rule526";
+
+
+						s2.category as x -> t2.category = x "rule527";
+
+
+						s2.code as x -> t2.code = x "rule528";
+
+
+						s2.subject as x -> t2.subject = x "rule529";
+
+
+						s2.period as x -> t2.period = x "rule530";
+
+
+						s2.encounter as x -> t2.encounter = x "rule531";
+
+
+						s2.author as x -> t2.author = x "rule532";
+}
+group Encounter(source s2:Encounter, target t2:Encounter) <<type+>>{
+						s2.id as x -> t2.id = x "rule388";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule390";
+
+
+								s3.extension as x -> t3.extension = x "rule391";
+
+
+								s3.versionId as x -> t3.versionId = x "rule392";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule393";
+
+
+								s3.source as x -> t3.source = x "rule394";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule396";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/encounter-eu-hdr' "rule397";
+
+
+										s4.extension as x -> t4.extension = x "rule398";
+									} "rule399";
+								} "rule400";
+
+								s3.security as x -> t3.security = x "rule401";
+
+
+								s3.tag as x -> t3.tag = x "rule402";
+							} "rule403";
+						} "rule404";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule405";
+
+
+						s2.language as x -> t2.language = x "rule406";
+
+
+						s2.text as x -> t2.text = x "rule407";
+
+
+						s2.contained as x -> t2.contained = x "rule408";
+
+
+						s2.extension as x -> t2.extension = x "rule409";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule410";
+
+
+						s2.identifier as x -> t2.identifier = x "rule411";
+
+
+						s2.status as x -> t2.status = x "rule412";
+
+
+						s2.statusHistory as x -> t2.statusHistory = x "rule413";
+
+
+						s2.class as x -> t2.class = x "rule414";
+
+
+						s2.classHistory as x -> t2.classHistory = x "rule415";
+
+
+						s2.type as x -> t2.type = x "rule416";
+
+
+						s2.serviceType as x -> t2.serviceType = x "rule417";
+
+
+						s2.priority as x -> t2.priority = x "rule418";
+
+
+						s2.subject as x -> t2.subject = x "rule419";
+
+
+						s2.episodeOfCare as x -> t2.episodeOfCare = x "rule420";
+
+
+						s2.basedOn as x -> t2.basedOn = x "rule421";
+
+
+						s2.participant as x -> t2.participant = x "rule422";
+
+
+						s2.appointment as x -> t2.appointment = x "rule423";
+
+
+						s2.period as x -> t2.period = x "rule424";
+
+
+						s2.length as x -> t2.length = x "rule425";
+
+
+						s2.reasonCode as x -> t2.reasonCode = x "rule426";
+
+
+						s2.reasonReference as x -> t2.reasonReference = x "rule427";
+
+
+						s2.diagnosis as x -> t2.diagnosis = x "rule428";
+
+
+						s2.account as x -> t2.account = x "rule429";
+
+
+						s2.hospitalization as x -> t2.hospitalization = x "rule430";
+
+
+						s2.location as x -> t2.location = x "rule431";
+
+
+						s2.serviceProvider as x -> t2.serviceProvider = x "rule432";
+
+
+						s2.partOf as x -> t2.partOf = x "rule433";
+}
+
+group Procedure(source s2:Procedure, target t2:Procedure) <<type+>>{
+						s2.id as x -> t2.id = x "rule891";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule893";
+
+
+								s3.extension as x -> t3.extension = x "rule894";
+
+
+								s3.versionId as x -> t3.versionId = x "rule895";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule896";
+
+
+								s3.source as x -> t3.source = x "rule897";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule899";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/procedure-eu-hdr' "rule900";
+
+
+										s4.extension as x -> t4.extension = x "rule901";
+									} "rule902";
+								} "rule903";
+
+								s3.security as x -> t3.security = x "rule904";
+
+
+								s3.tag as x -> t3.tag = x "rule905";
+							} "rule906";
+						} "rule907";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule908";
+
+
+						s2.language as x -> t2.language = x "rule909";
+
+
+						s2.text as x -> t2.text = x "rule910";
+
+
+						s2.contained as x -> t2.contained = x "rule911";
+
+
+						s2.extension as x -> t2.extension = x "rule912";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule913";
+
+
+						s2.identifier as x -> t2.identifier = x "rule914";
+
+
+						s2.instantiatesCanonical as x -> t2.instantiatesCanonical = x "rule915";
+
+
+						s2.instantiatesUri as x -> t2.instantiatesUri = x "rule916";
+
+
+						s2.basedOn as x -> t2.basedOn = x "rule917";
+
+
+						s2.partOf as x -> t2.partOf = x "rule918";
+
+
+						s2.status as x -> t2.status = x "rule919";
+
+
+						s2.statusReason as x -> t2.statusReason = x "rule920";
+
+
+						s2.category as x -> t2.category = x "rule921";
+
+
+						s2.code as x -> t2.code = x "rule922";
+
+
+						s2.subject as x -> t2.subject = x "rule923";
+
+
+						s2.encounter as x -> t2.encounter = x "rule924";
+
+
+						s2.performedDateTime as x -> t2.performedDateTime = x "rule925";
+
+
+						s2.performedPeriod as x -> t2.performedPeriod = x "rule926";
+
+
+						s2.performedString as x -> t2.performedString = x "rule927";
+
+
+						s2.performedAge as x -> t2.performedAge = x "rule928";
+
+
+						s2.performedRange as x -> t2.performedRange = x "rule929";
+
+
+						s2.recorder as x -> t2.recorder = x "rule930";
+
+
+						s2.asserter as x -> t2.asserter = x "rule931";
+
+
+						s2.performer as x -> t2.performer = x "rule932";
+
+
+						s2.location as x -> t2.location = x "rule933";
+
+
+						s2.reasonCode as x -> t2.reasonCode = x "rule934";
+
+
+						s2.reasonReference as x -> t2.reasonReference = x "rule935";
+
+
+						s2.bodySite as x -> t2.bodySite = x "rule936";
+
+
+						s2.outcome as x -> t2.outcome = x "rule937";
+
+
+						s2.report as x -> t2.report = x "rule938";
+
+
+						s2.complication as x -> t2.complication = x "rule939";
+
+
+						s2.complicationDetail as x -> t2.complicationDetail = x "rule940";
+
+
+						s2.followUp as x -> t2.followUp = x "rule941";
+
+
+						s2.note as x -> t2.note = x "rule942";
+
+
+						s2.focalDevice as x -> t2.focalDevice = x "rule943";
+
+
+						s2.usedReference as x -> t2.usedReference = x "rule944";
+
+
+						s2.usedCode as x -> t2.usedCode = x "rule945";
+}
+
+group Immunization(source s2:Immunization, target t2:Immunization) <<type+>>{
+						s2.id as x -> t2.id = x "rule544";
+
+
+						
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule546";
+
+
+								s3.extension as x -> t3.extension = x "rule547";
+
+
+								s3.versionId as x -> t3.versionId = x "rule548";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule549";
+
+
+								s3.source as x -> t3.source = x "rule550";
+
+
+						
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule552";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/immunization-eu-hdr' "rule553";
+
+
+										s4.extension as x -> t4.extension = x "rule554";
+									} "rule555";
+								} "rule556";
+
+								s3.security as x -> t3.security = x "rule557";
+
+
+								s3.tag as x -> t3.tag = x "rule558";
+							} "rule559";
+						} "rule560";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule561";
+
+
+						s2.language as x -> t2.language = x "rule562";
+
+
+						s2.text as x -> t2.text = x "rule563";
+
+
+						s2.contained as x -> t2.contained = x "rule564";
+
+
+						s2.extension as x -> t2.extension = x "rule565";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule566";
+
+
+						s2.identifier as x -> t2.identifier = x "rule567";
+
+
+						s2.status as x -> t2.status = x "rule568";
+
+
+						s2.statusReason as x -> t2.statusReason = x "rule569";
+
+
+						s2.vaccineCode as x -> t2.vaccineCode = x "rule570";
+
+
+						s2.patient as x -> t2.patient = x "rule571";
+
+
+						s2.encounter as x -> t2.encounter = x "rule572";
+
+
+						s2.occurrenceDateTime as x -> t2.occurrenceDateTime = x "rule573";
+
+
+						s2.occurrenceString as x -> t2.occurrenceString = x "rule574";
+
+
+						s2.recorded as x -> t2.recorded = x "rule575";
+
+
+						s2.primarySource as x -> t2.primarySource = x "rule576";
+
+
+						s2.reportOrigin as x -> t2.reportOrigin = x "rule577";
+
+
+						s2.location as x -> t2.location = x "rule578";
+
+
+						s2.manufacturer as x -> t2.manufacturer = x "rule579";
+
+
+						s2.lotNumber as x -> t2.lotNumber = x "rule580";
+
+
+						s2.expirationDate as x -> t2.expirationDate = x "rule581";
+
+
+						s2.site as x -> t2.site = x "rule582";
+
+
+						s2.route as x -> t2.route = x "rule583";
+
+
+						s2.doseQuantity as x -> t2.doseQuantity = x "rule584";
+
+
+						s2.performer as x -> t2.performer = x "rule585";
+
+
+						s2.note as x -> t2.note = x "rule586";
+
+
+						s2.reasonCode as x -> t2.reasonCode = x "rule587";
+
+
+						s2.reasonReference as x -> t2.reasonReference = x "rule588";
+
+
+						s2.isSubpotent as x -> t2.isSubpotent = x "rule589";
+
+
+						s2.subpotentReason as x -> t2.subpotentReason = x "rule590";
+
+
+						s2.education as x -> t2.education = x "rule591";
+
+
+						s2.programEligibility as x -> t2.programEligibility = x "rule592";
+
+
+						s2.fundingSource as x -> t2.fundingSource = x "rule593";
+
+
+						s2.reaction as x -> t2.reaction = x "rule594";
+
+
+						s2.protocolApplied as x -> t2.protocolApplied = x "rule595";
+}
+
+group Condition(source s2:Condition, target t2:Condition) <<type+>>{
+						s2.id as x -> t2.id = x "rule237";
+
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule239";
+
+
+								s3.extension as x -> t3.extension = x "rule240";
+
+
+								s3.versionId as x -> t3.versionId = x "rule241";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule242";
+
+
+								s3.source as x -> t3.source = x "rule243";
+
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule245";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/condition-eu-hdr' "rule246";
+
+
+										s4.extension as x -> t4.extension = x "rule247";
+									} "rule248";
+								} "rule249";
+
+								s3.security as x -> t3.security = x "rule250";
+
+
+								s3.tag as x -> t3.tag = x "rule251";
+							} "rule252";
+						} "rule253";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule254";
+
+
+						s2.language as x -> t2.language = x "rule255";
+
+
+						s2.text as x -> t2.text = x "rule256";
+
+
+						s2.contained as x -> t2.contained = x "rule257";
+
+
+						s2.extension as x -> t2.extension = x "rule258";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule259";
+
+
+						s2.identifier as x -> t2.identifier = x "rule260";
+
+
+						s2.clinicalStatus as x -> t2.clinicalStatus = x "rule261";
+
+
+						s2.verificationStatus as x -> t2.verificationStatus = x "rule262";
+
+
+						s2.category as x -> t2.category = x "rule263";
+
+
+						s2.severity as x -> t2.severity = x "rule264";
+
+
+						s2.code as x -> t2.code = x "rule265";
+
+
+						s2.bodySite as x -> t2.bodySite = x "rule266";
+
+
+						s2.subject as x -> t2.subject = x "rule267";
+
+
+						s2.encounter as x -> t2.encounter = x "rule268";
+
+
+						s2.onsetDateTime as x -> t2.onsetDateTime = x "rule269";
+
+
+						s2.onsetAge as x -> t2.onsetAge = x "rule270";
+
+
+						s2.onsetPeriod as x -> t2.onsetPeriod = x "rule271";
+
+
+						s2.onsetRange as x -> t2.onsetRange = x "rule272";
+
+
+						s2.onsetString as x -> t2.onsetString = x "rule273";
+
+
+						s2.abatementDateTime as x -> t2.abatementDateTime = x "rule274";
+
+
+						s2.abatementAge as x -> t2.abatementAge = x "rule275";
+
+
+						s2.abatementPeriod as x -> t2.abatementPeriod = x "rule276";
+
+
+						s2.abatementRange as x -> t2.abatementRange = x "rule277";
+
+
+						s2.abatementString as x -> t2.abatementString = x "rule278";
+
+
+						s2.recordedDate as x -> t2.recordedDate = x "rule279";
+
+
+						s2.recorder as x -> t2.recorder = x "rule280";
+
+
+						s2.asserter as x -> t2.asserter = x "rule281";
+
+
+						s2.stage as x -> t2.stage = x "rule282";
+
+
+						s2.evidence as x -> t2.evidence = x "rule283";
+
+
+						s2.note as x -> t2.note = x "rule284";
+}
+group Observation(source s2:Observation, target t2:Observation) <<type+>>{
+						s2.id as x -> t2.id = x "rule680";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule682";
+
+
+								s3.extension as x -> t3.extension = x "rule683";
+
+
+								s3.versionId as x -> t3.versionId = x "rule684";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule685";
+
+
+								s3.source as x -> t3.source = x "rule686";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule687";
+									} "rule688";
+
+									s3.profile as x -> t3.profile = translate(x,'#cm29','code') "rule689";
+
+									s3.profile as s4 -> t4 then {
+										s4.extension as x -> t4.extension = x "rule690";
+									} "rule691";
+								} "rule692";
+
+								s3.security as x -> t3.security = x "rule693";
+
+
+								s3.tag as x -> t3.tag = x "rule694";
+
+								s2 -> t3.tag as t4 then {
+									s3.tag as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule695";
+
+
+										s4.extension as x -> t4.extension = x "rule696";
+
+
+										s4.system as x -> t4.system = x "rule697";
+
+										s2 -> t4.system as t5 then {
+											s4.system as s5 -> t5 then {
+												s5.id as x -> t5.id = x "rule698";
+											} "rule699";
+
+											s4.system as x -> t4.system = translate(x,'#cm32','code') "rule700";
+
+											s4.system as s5 -> t5 then {
+												s5.extension as x -> t5.extension = x "rule701";
+											} "rule702";
+										} "rule703";
+
+										s4.version as x -> t4.version = x "rule704";
+
+
+										s4.code as x -> t4.code = x "rule705";
+
+
+										s4.display as x -> t4.display = x "rule706";
+
+
+										s4.userSelected as x -> t4.userSelected = x "rule707";
+									} "rule708";
+								} "rule709";
+							} "rule710";
+						} "rule711";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule712";
+
+
+						s2.language as x -> t2.language = x "rule713";
+
+
+						s2.text as x -> t2.text = x "rule714";
+
+
+						s2.contained as x -> t2.contained = x "rule715";
+
+
+						s2.extension as x -> t2.extension = x "rule716";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule717";
+
+
+						s2.identifier as x -> t2.identifier = x "rule718";
+
+
+						s2.basedOn as x -> t2.basedOn = x "rule719";
+
+
+						s2.partOf as x -> t2.partOf = x "rule720";
+
+
+						s2.status as x -> t2.status = x "rule721";
+
+
+						s2.category as x -> t2.category = x "rule722";
+
+
+						s2.code as x -> t2.code = x "rule723";
+
+
+						s2.subject as x -> t2.subject = x "rule724";
+
+
+						s2.focus as x -> t2.focus = x "rule725";
+
+
+						s2.encounter as x -> t2.encounter = x "rule726";
+
+
+						s2.effectiveDateTime as x -> t2.effectiveDateTime = x "rule727";
+
+
+						s2.effectivePeriod as x -> t2.effectivePeriod = x "rule728";
+
+
+						s2.effectiveTiming as x -> t2.effectiveTiming = x "rule729";
+
+
+						s2.effectiveInstant as x -> t2.effectiveInstant = x "rule730";
+
+
+						s2.issued as x -> t2.issued = x "rule731";
+
+
+						s2.performer as x -> t2.performer = x "rule732";
+
+
+						s2.valueQuantity as x -> t2.valueQuantity = x "rule733";
+
+
+						s2.valueCodeableConcept as x -> t2.valueCodeableConcept = x "rule734";
+
+
+						s2.valueString as x -> t2.valueString = x "rule735";
+
+
+						s2.valueBoolean as x -> t2.valueBoolean = x "rule736";
+
+
+						s2.valueInteger as x -> t2.valueInteger = x "rule737";
+
+
+						s2.valueRange as x -> t2.valueRange = x "rule738";
+
+
+						s2.valueRatio as x -> t2.valueRatio = x "rule739";
+
+
+						s2.valueSampledData as x -> t2.valueSampledData = x "rule740";
+
+
+						s2.valueTime as x -> t2.valueTime = x "rule741";
+
+
+						s2.valueDateTime as x -> t2.valueDateTime = x "rule742";
+
+
+						s2.valuePeriod as x -> t2.valuePeriod = x "rule743";
+
+
+						s2.dataAbsentReason as x -> t2.dataAbsentReason = x "rule744";
+
+
+						s2.interpretation as x -> t2.interpretation = x "rule745";
+
+
+						s2.note as x -> t2.note = x "rule746";
+
+
+						s2.bodySite as x -> t2.bodySite = x "rule747";
+
+
+						s2.method as x -> t2.method = x "rule748";
+
+
+						s2.specimen as x -> t2.specimen = x "rule749";
+
+
+						s2.device as x -> t2.device = x "rule750";
+
+
+						s2.referenceRange as x -> t2.referenceRange = x "rule751";
+
+
+						s2.hasMember as x -> t2.hasMember = x "rule752";
+
+
+						s2.derivedFrom as x -> t2.derivedFrom = x "rule753";
+
+
+						s2.component as x -> t2.component = x "rule754";
+}
+group AllergyIntolerance(source s2:AllergyIntolerance, target t2: AllergyIntolerance) <<type+>>{
+						s2.id as x -> t2.id = x "rule38";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule40";
+
+
+								s3.extension as x -> t3.extension = x "rule41";
+
+
+								s3.versionId as x -> t3.versionId = x "rule42";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule43";
+
+
+								s3.source as x -> t3.source = x "rule44";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule46";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/allergyIntolerance-eu-hdr' "rule47";
+
+
+										s4.extension as x -> t4.extension = x "rule48";
+									} "rule49";
+								} "rule50";
+
+								s3.security as x -> t3.security = x "rule51";
+
+
+								s3.tag as x -> t3.tag = x "rule52";
+							} "rule53";
+						} "rule54";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule55";
+
+
+						s2.language as x -> t2.language = x "rule56";
+
+
+						s2.text as x -> t2.text = x "rule57";
+
+
+						s2.contained as x -> t2.contained = x "rule58";
+
+
+						s2.extension as x -> t2.extension = x "rule59";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule60";
+
+
+						s2.identifier as x -> t2.identifier = x "rule61";
+
+
+						s2.clinicalStatus as x -> t2.clinicalStatus = x "rule62";
+
+
+						s2.verificationStatus as x -> t2.verificationStatus = x "rule63";
+
+
+						s2.type as x -> t2.type = x "rule64";
+
+
+						s2.category as x -> t2.category = x "rule65";
+
+
+						s2.criticality as x -> t2.criticality = x "rule66";
+
+
+						s2.code as x -> t2.code = x "rule67";
+
+
+						s2.patient as x -> t2.patient = x "rule68";
+
+
+						s2.encounter as x -> t2.encounter = x "rule69";
+
+
+						s2.onsetDateTime as x -> t2.onsetDateTime = x "rule70";
+
+
+						s2.onsetAge as x -> t2.onsetAge = x "rule71";
+
+
+						s2.onsetPeriod as x -> t2.onsetPeriod = x "rule72";
+
+
+						s2.onsetRange as x -> t2.onsetRange = x "rule73";
+
+
+						s2.onsetString as x -> t2.onsetString = x "rule74";
+
+
+						s2.recordedDate as x -> t2.recordedDate = x "rule75";
+
+
+						s2.recorder as x -> t2.recorder = x "rule76";
+
+
+						s2.asserter as x -> t2.asserter = x "rule77";
+
+
+						s2.lastOccurrence as x -> t2.lastOccurrence = x "rule78";
+
+
+						s2.note as x -> t2.note = x "rule79";
+
+
+						s2.reaction as x -> t2.reaction = x "rule80";
+}
+
+
+
+group Consent(source s2:Consent, target t2:Consent) <<type+>>{
+						s2.id as x -> t2.id = x "rule290";
+
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule292";
+
+
+								s3.extension as x -> t3.extension = x "rule293";
+
+
+								s3.versionId as x -> t3.versionId = x "rule294";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule295";
+
+
+								s3.source as x -> t3.source = x "rule296";
+
+
+						
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule298";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/consent-eu-hdr' "rule299";
+
+
+										s4.extension as x -> t4.extension = x "rule300";
+									} "rule301";
+								} "rule302";
+
+								s3.security as x -> t3.security = x "rule303";
+
+
+								s3.tag as x -> t3.tag = x "rule304";
+							} "rule305";
+						} "rule306";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule307";
+
+
+						s2.language as x -> t2.language = x "rule308";
+
+
+						s2.text as x -> t2.text = x "rule309";
+
+
+						s2.contained as x -> t2.contained = x "rule310";
+
+
+						s2.extension as x -> t2.extension = x "rule311";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule312";
+
+
+						s2.identifier as x -> t2.identifier = x "rule313";
+
+
+						s2.status as x -> t2.status = x "rule314";
+
+
+						s2.scope as x -> t2.scope = x "rule315";
+
+
+						s2.category as x -> t2.category = x "rule316";
+
+
+						s2.patient as x -> t2.patient = x "rule317";
+
+
+						s2.dateTime as x -> t2.dateTime = x "rule318";
+
+
+						s2.performer as x -> t2.performer = x "rule319";
+
+
+						s2.organization as x -> t2.organization = x "rule320";
+
+
+						s2.sourceAttachment as x -> t2.sourceAttachment = x "rule321";
+
+
+						s2.sourceReference as x -> t2.sourceReference = x "rule322";
+
+
+						s2.policy as x -> t2.policy = x "rule323";
+
+
+						s2.policyRule as x -> t2.policyRule = x "rule324";
+
+
+						s2.verification as x -> t2.verification = x "rule325";
+
+
+						s2.provision as x -> t2.provision = x "rule326";
+}
+
+group Organization(source s2:Organization, target t2:Organization) <<type+>>{
+						s2.id as x -> t2.id = x "rule763";
+
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule765";
+
+
+								s3.extension as x -> t3.extension = x "rule766";
+
+
+								s3.versionId as x -> t3.versionId = x "rule767";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule768";
+
+
+								s3.source as x -> t3.source = x "rule769";
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule771";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/base/StructureDefinition/organization-eu' "rule772";
+
+
+										s4.extension as x -> t4.extension = x "rule773";
+									} "rule774";
+								} "rule775";
+
+								s3.security as x -> t3.security = x "rule776";
+
+
+								s3.tag as x -> t3.tag = x "rule777";
+							} "rule778";
+						} "rule779";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule780";
+
+
+						s2.language as x -> t2.language = x "rule781";
+
+
+						s2.text as x -> t2.text = x "rule782";
+
+
+						s2.contained as x -> t2.contained = x "rule783";
+
+
+						s2.extension as x -> t2.extension = x "rule784";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule785";
+
+
+						s2.identifier as x -> t2.identifier = x "rule786";
+
+
+						s2.active as x -> t2.active = x "rule787";
+
+
+						s2.type as x -> t2.type = x "rule788";
+
+
+						s2.name as x -> t2.name = x "rule789";
+
+
+						s2.alias as x -> t2.alias = x "rule790";
+
+
+						s2.telecom as x -> t2.telecom = x "rule791";
+
+
+						s2.address as x -> t2.address = x "rule792";
+
+
+						s2.partOf as x -> t2.partOf = x "rule793";
+
+
+						s2.contact as x -> t2.contact = x "rule794";
+
+
+						s2.endpoint as x -> t2.endpoint = x "rule795";
+}
+
+group Practitioner(source s2:Practitioner, target t2:Practitioner) <<type+>>{
+						s2.id as x -> t2.id = x "rule852";
+
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule854";
+
+
+								s3.extension as x -> t3.extension = x "rule855";
+
+
+								s3.versionId as x -> t3.versionId = x "rule856";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule857";
+
+
+								s3.source as x -> t3.source = x "rule858";
+
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule860";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu' "rule861";
+
+
+										s4.extension as x -> t4.extension = x "rule862";
+									} "rule863";
+								} "rule864";
+
+								s3.security as x -> t3.security = x "rule865";
+
+
+								s3.tag as x -> t3.tag = x "rule866";
+							} "rule867";
+						} "rule868";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule869";
+
+
+						s2.language as x -> t2.language = x "rule870";
+
+
+						s2.text as x -> t2.text = x "rule871";
+
+
+						s2.contained as x -> t2.contained = x "rule872";
+
+
+						s2.extension as x -> t2.extension = x "rule873";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule874";
+
+
+						s2.identifier as x -> t2.identifier = x "rule875";
+
+
+						s2.active as x -> t2.active = x "rule876";
+
+
+						s2.name as x -> t2.name = x "rule877";
+
+
+						s2.telecom as x -> t2.telecom = x "rule878";
+
+
+						s2.address as x -> t2.address = x "rule879";
+
+
+						s2.gender as x -> t2.gender = x "rule880";
+
+
+						s2.birthDate as x -> t2.birthDate = x "rule881";
+
+
+						s2.photo as x -> t2.photo = x "rule882";
+
+
+						s2.qualification as x -> t2.qualification = x "rule883";
+
+
+						s2.communication as x -> t2.communication = x "rule884";
+}
+
+group Composition(source s2:Composition, target t2:Composition) <<type+>>{
+						s2.id as x -> t2.id = x "rule157";
+
+						s2 -> t2.meta as t3 then {
+							s2.meta as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule159";
+
+
+								s3.extension as x -> t3.extension = x "rule160";
+
+
+								s3.versionId as x -> t3.versionId = x "rule161";
+
+
+								s3.lastUpdated as x -> t3.lastUpdated = x "rule162";
+
+
+								s3.source as x -> t3.source = x "rule163";
+
+
+								s2 -> t3.profile as t4 then {
+									s3.profile as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule165";
+
+
+										s2 -> t3.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr' "rule166";
+
+
+										s4.extension as x -> t4.extension = x "rule167";
+									} "rule168";
+								} "rule169";
+
+								s3.security as x -> t3.security = x "rule170";
+
+
+								s3.tag as x -> t3.tag = x "rule171";
+							} "rule172";
+						} "rule173";
+
+						s2.implicitRules as x -> t2.implicitRules = x "rule174";
+
+
+						s2.language as x -> t2.language = x "rule175";
+
+
+						s2.text as x -> t2.text = x "rule176";
+
+
+						s2.contained as x -> t2.contained = x "rule177";
+
+
+						s2.extension as x -> t2.extension = x "rule178";
+
+
+						s2.modifierExtension as x -> t2.modifierExtension = x "rule179";
+
+
+						s2.identifier as x -> t2.identifier = x "rule180";
+
+
+						s2.status as x -> t2.status = x "rule181";
+
+
+						s2.type as x -> t2.type = x "rule182";
+
+
+						s2.category as x -> t2.category = x "rule183";
+
+
+						s2.subject as x -> t2.subject = x "rule184";
+
+
+						s2.encounter as x -> t2.encounter = x "rule185";
+
+
+						s2.date as x -> t2.date = x "rule186";
+
+
+						s2.author as x -> t2.author = x "rule187";
+
+
+						s2.title as x -> t2.title = x "rule188";
+
+
+						s2.confidentiality as x -> t2.confidentiality = x "rule189";
+
+
+						s2.attester as x -> t2.attester = x "rule190";
+
+
+						s2.custodian as x -> t2.custodian = x "rule191";
+
+
+						s2.relatesTo as x -> t2.relatesTo = x "rule192";
+
+
+						s2.event as x -> t2.event = x "rule193";
+
+
+						s2 -> t2.section as t3 then {
+							s2.section as s3 -> t3 then {
+								s3.id as x -> t3.id = x "rule195";
+
+
+								s3.extension as x -> t3.extension = x "rule196";
+
+
+								s3.modifierExtension as x -> t3.modifierExtension = x "rule197";
+
+
+								s3.title as x -> t3.title = x "rule198";
+
+
+								s2 -> t3.code as t4 then {
+									s3.code as s4 -> t4 then {
+										s4.id as x -> t4.id = x "rule200";
+
+
+										s4.extension as x -> t4.extension = x "rule201";
+
+
+										s2 -> t4.coding as t5 then {
+											s4.coding as s5 -> t5 then {
+												s5.id as x -> t5.id = x "rule203";
+
+
+												s5.extension as x -> t5.extension = x "rule204";
+
+
+												s2 -> t5.system as t6 then {
+													s5.system as s6 -> t6 then {
+														s6.id as x -> t6.id = x "rule206";
+													} "rule207";
+
+													s5.system as x -> t5.system = translate(x,'#cm30','code') "rule208";
+
+													s5.system as s6 -> t6 then {
+														s6.extension as x -> t6.extension = x "rule209";
+													} "rule210";
+												} "rule211";
+
+												s5.version as x -> t5.version = x "rule212";
+
+
+												s5.code as x -> t5.code = x "rule213";
+
+
+												s5.display as x -> t5.display = x "rule214";
+
+
+												s5.userSelected as x -> t5.userSelected = x "rule215";
+											} "rule216";
+										} "rule217";
+
+										s4.text as x -> t4.text = x "rule218";
+									} "rule219";
+								} "rule220";
+
+								s3.author as x -> t3.author = x "rule221";
+
+
+								s3.focus as x -> t3.focus = x "rule222";
+
+
+								s3.text as x -> t3.text = x "rule223";
+
+
+								s3.mode as x -> t3.mode = x "rule224";
+
+
+								s3.orderedBy as x -> t3.orderedBy = x "rule225";
+
+
+								s3.entry as x -> t3.entry = x "rule226";
+
+
+								s3.emptyReason as x -> t3.emptyReason = x "rule227";
+
+
+								s3.section as x -> t3.section = x "rule228";
+							} "rule229";
+						} "rule230";
+}
+
+
+group Identifier(source src: Identifier, target tgt:Identifier) <<type+>>{
+        src.id as x -> tgt.id =x "";
+        src.extension as x -> tgt.extension=x "";
+        src.use as x -> tgt.use=x "";
+        src.type as x -> tgt.type=x "";
+        src.system as x -> tgt.system=x "";
+        src.value as x -> tgt.value=x "";
+        src.period as x -> tgt.period=x "";
+        src.assigner as x -> tgt.assigner=x "";
+}
+
+group Meta(source src: Meta, target tgt: Meta) <<type+>> {
+        src.versionId as x -> tgt.versionId = x "";
+        src.lastUpdated as x -> tgt.lastUpdated = x "";
+        src.source as x -> tgt.source = x "";
+        src.profile -> tgt.profile = 'http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr' "profile";
+        src.security as x -> tgt.security = x "";
+        src.tag as x -> tgt.tag = x "";
+}
+

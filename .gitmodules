@@ -49,3 +49,6 @@
 [submodule "schemas/ds4"]
 	path = schemas/ds4
 	url = https://github.com/kruzikh/ds4.git
+[submodule "hl7-cz/hdr"]
+	path = hl7-cz/hdr
+	url = https://github.com/HL7-cz/hdr.git
