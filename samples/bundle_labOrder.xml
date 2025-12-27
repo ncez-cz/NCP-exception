@@ -228,6 +228,14 @@
 		</resource>
 	</entry>
 	<entry>
+	    <fullUrl value="urn:uuid:0694011c-0856-796e-8000-1773fafd971e"/>
+		<resource>
+			<Specimen>
+			   <id value="0694011c-0856-796e-8000-1773fafd971e"/>
+			</Specimen>
+		</resource>
+	</entry>
+	<entry>
 		<fullUrl value="urn:uuid:0694011c-0856-796e-8000-1773fafd971d"/>
 		<resource>
 			<ServiceRequest>
@@ -246,16 +254,20 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://dasta.mzcr.cz/DSAIB.htm"/>
 						<code value="L"/>
 						<display value="Realizace odběru v laboratoři"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
 				<authoredOn value="2025-06-12T13:26:49+02:00"/>
+				
+				
 			</ServiceRequest>
 		</resource>
 	</entry>
@@ -279,14 +291,19 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="05272"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
+				<specimen>
+					<reference value="urn:uuid:0694011c-0856-796e-8000-1773fafd971e"/>
+				</specimen>
 			</ServiceRequest>
 		</resource>
 	</entry>
@@ -310,10 +327,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="05254"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -341,10 +360,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="05187"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -372,10 +393,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="03482"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -403,10 +426,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="02618"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -434,10 +459,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="03940"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -465,10 +492,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="01783"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -496,10 +525,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="12355"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -527,10 +558,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="03086"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -558,10 +591,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="08574"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -588,12 +623,12 @@
 				<status value="active"/>
 				<intent value="order"/>
 				<priority value="stat"/>
-				<code>
+				<code><concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="03078"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -620,11 +655,11 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
-					<coding>
+					<concept><coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="01154"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -651,11 +686,11 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
-					<coding>
+					<concept><coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="01158"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -682,11 +717,11 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
-					<coding>
+					<concept><coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="00921"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -713,11 +748,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="00582"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -744,11 +780,11 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
-					<coding>
+					<concept><coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="00543"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -775,11 +811,11 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
-					<coding>
+					<concept><coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="01961"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -806,11 +842,11 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
-					<coding>
+					<concept><coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="00634"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -837,11 +873,11 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
-					<coding>
+					<concept><coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="02290"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -868,11 +904,11 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
-					<coding>
+					<concept><coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="01350"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -899,11 +935,11 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
-					<coding>
+					<concept><coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="02036"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -930,11 +966,11 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
-					<coding>
+					<concept><coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="02325"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -961,11 +997,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="12374"/>
 					</coding>
-				</code>
+				</concept></code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
 				</subject>
@@ -992,10 +1029,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="00749"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1023,10 +1062,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="00763"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1054,10 +1095,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="02757"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1085,10 +1128,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="00507"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1116,10 +1161,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="01522"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1147,10 +1194,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="04999"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1178,10 +1227,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="03016"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1209,10 +1260,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="11478"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1240,10 +1293,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="11446"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1271,10 +1326,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="02144"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1302,10 +1359,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="02179"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1333,10 +1392,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="02226"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1364,10 +1425,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="05132"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1395,10 +1458,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="05006"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1426,10 +1491,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="07346"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1457,10 +1524,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="09478"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1488,10 +1557,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="09481"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1519,10 +1590,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="12305"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1550,10 +1623,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="05107"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1581,10 +1656,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				 <concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="05113"/>
 					</coding>
+				 </concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1612,6 +1689,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				    <concept>
+				      <coding>
+						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
+						<code value="07967"/>
+					  </coding>
+					</concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="07967"/>
@@ -1643,10 +1726,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				    <concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="31184"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1674,10 +1759,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+					<concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="03957"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1705,10 +1792,12 @@
 				<intent value="order"/>
 				<priority value="stat"/>
 				<code>
+				    <concept>
 					<coding>
 						<system value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs"/>
 						<code value="02461"/>
 					</coding>
+					</concept>
 				</code>
 				<subject>
 					<reference value="urn:uuid:0694011c-0856-73b2-8000-a163790c6cb7"/>
@@ -1861,6 +1950,14 @@
 							</coding>
 						</valueCodeableConcept>
 					</extension>
+				</extension>
+				<extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+					<valueCodeableConcept>
+							<coding>
+								<system value="urn:iso:std:iso:3166"/>
+								<code value="CZE"/>
+							</coding>
+					</valueCodeableConcept>
 				</extension>
 				<identifier>
 					<use value="official"/>

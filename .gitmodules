@@ -52,3 +52,6 @@
 [submodule "hl7-cz/hdr"]
 	path = hl7-cz/hdr
 	url = https://github.com/HL7-cz/hdr.git
+[submodule "cda-fhir-maps"]
+	path = cda-fhir-maps
+	url = https://github.com/hl7ch/cda-fhir-maps.git

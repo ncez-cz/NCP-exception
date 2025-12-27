@@ -1,0 +1,804 @@
+/// url = 'https://ncez.mzcr.cz/model/StructureMap/fhir2dasta_labOrder'
+/// name = 'Mapování fhir2dasta_labOrder z FHIR HL7-CZ https://build.fhir.org/ig/hl7-cz/ (June 2025) do DASTA 4'
+/// title = 'Mapování fhir2dasta_labOrder'
+/// descrition = 'This file is generated from MapForge file ./mapforce/fhir2dasta_labOrder.mfd'
+
+uses "https://dasta.mzcr.cz/model/StructureDefinition/dasta" alias dasta as target
+uses "https://dasta.mzcr.cz/model/StructureDefinition/ip" alias ip as target
+uses "https://dasta.mzcr.cz/model/StructureDefinition/ku_o" alias ku_o as target
+uses "https://dasta.mzcr.cz/model/StructureDefinition/ku_o_labType" alias ku_o_labType as target
+uses "https://dasta.mzcr.cz/model/StructureDefinition/pracovisteType" alias pracovisteType as target
+uses "https://dasta.mzcr.cz/model/StructureDefinition/lip" alias lip as target
+uses "https://dasta.mzcr.cz/model/StructureDefinition/loptype" alias loptype as target
+uses "https://dasta.mzcr.cz/model/StructureDefinition/lopk" alias lopk as target
+uses "https://dasta.mzcr.cz/model/StructureDefinition/lopz" alias lopz as target
+uses "https://hl7.cz/fhir/lab-order/StructureDefinition/BundleLabOrderCz" alias Bundle as source
+uses "https://hl7.cz/fhir/lab-order/StructureDefinition/cz-serviceRequest" alias ServiceRequest as source
+uses "https://hl7.cz/fhir/lab-order/StructureDefinition/SpecimenCz" alias Specimen as source
+
+conceptmap "cm5715" {
+  prefix s ="https://provisio.cz/dasta/5715"
+  prefix t ="https://provisio.cz/fhir/5715"
+
+  s:"stat" == t:"V"
+  s:"stat" == t:"S"
+  s:"asap" == t:"P"
+  s:"routine" == t:"R"
+  s:"urgent" == t:"K"
+}
+
+conceptmap "cm3060" {
+  prefix s ="https://provisio.cz/dasta/3060"
+  prefix t ="https://provisio.cz/fhir/3060"
+
+  s:"Běžnou cestou (donáška, svoz) " == t:"B"
+  s:"Potrubní poštou" == t:"R"
+  s:"Pacientem" == t:"P"
+  s:"Realizace odběru v laboratoři" == t:"L"
+  s:"Realizace odběru pracovníkem laboratoře na oddělení " == t:"O"
+  s:"Uloženo v laboratoři, doobjednávka " == t:"U"
+  s:"Vzorky se v této situaci nedodávají" == t:"N"
+}
+
+conceptmap "cm3061" {
+  prefix s ="https://provisio.cz/dasta/3061"
+  prefix t ="https://provisio.cz/fhir/3061"
+
+  s:"Běžné vyšetření (implicitně)" == t:"B"
+  s:"Preventivní vyšetření" == t:"P"
+  s:"Screeningové vyšetření " == t:"S"
+  s:"Epidemiologická studie " == t:"E"
+  s:"Zhoršení stavu " == t:"UZ"
+  s:"Neodkladné přijetí " == t:"UP"
+  s:"Po operaci " == t:"UO"
+  s:"Dlouhodobé sledování " == t:"D"
+  s:"Výzkum " == t:"V"
+  s:"Před dialýzou" == t:"DS"
+  s:"Po dialýze " == t:"DE"
+  s:" " == t:"None"
+}
+
+conceptmap "cm3190" {
+  prefix s ="https://provisio.cz/dasta/3190"
+  prefix t ="https://provisio.cz/fhir/3190"
+
+  s:"<" == t:"M"
+  s:">" == t:"V"
+}
+
+conceptmap "cm3191" {
+  prefix s ="https://provisio.cz/dasta/3191"
+  prefix t ="https://provisio.cz/fhir/3191"
+
+  s:"sekunda" == t:"S"
+  s:"minuta" == t:"M"
+  s:"hodina" == t:"H"
+  s:"den" == t:"D"
+  s:"tyden" == t:"T"
+  s:"rok" == t:"R"
+}
+
+conceptmap "cm3111" {
+  prefix s ="https://provisio.cz/dasta/3111"
+  prefix t ="https://provisio.cz/fhir/3111"
+
+  s:"stat" == t:"S"
+  s:"asap" == t:"P"
+  s:"routine" == t:"R"
+  s:"urgent" == t:"K"
+}
+
+conceptmap "cm3121" {
+  prefix s ="https://provisio.cz/dasta/3121"
+  prefix t ="https://provisio.cz/fhir/3121"
+
+  s:"stat" == t:"S"
+  s:"asap" == t:"P"
+  s:"routine" == t:"R"
+  s:"urgent" == t:"K"
+}
+
+conceptmap "cm9214" {
+  prefix s ="https://provisio.cz/dasta/9214"
+  prefix t ="https://provisio.cz/fhir/9214"
+
+  s:"20031" == t:"true"
+  s:"20033" == t:"true"
+  s:"20035" == t:"true"
+  s:"20037" == t:"true"
+}
+
+conceptmap "cm3133" {
+  prefix s ="https://provisio.cz/dasta/3133"
+  prefix t ="https://provisio.cz/fhir/3133"
+
+  s:"stat" == t:"S"
+  s:"asap" == t:"P"
+  s:"routine" == t:"R"
+  s:"urgent" == t:"K"
+}
+
+conceptmap "cm9410" {
+  prefix s ="https://provisio.cz/dasta/9410"
+  prefix t ="https://provisio.cz/fhir/9410"
+
+  s:"stat" == t:"S"
+  s:"asap" == t:"P"
+  s:"routine" == t:"R"
+  s:"urgent" == t:"K"
+}
+
+conceptmap "cm3170" {
+  prefix s ="https://provisio.cz/dasta/3170"
+  prefix t ="https://provisio.cz/fhir/3170"
+
+  s:"active" == t:"Z"
+  s:"active" == t:"P"
+  s:"completed" == t:"K"
+}
+
+conceptmap "cm3211" {
+  prefix s ="https://provisio.cz/dasta/3211"
+  prefix t ="https://provisio.cz/fhir/3211"
+
+  s:"=" == t:"R"
+  s:"<" == t:"M"
+  s:">" == t:"V"
+}
+
+conceptmap "cm3192" {
+  prefix s ="https://provisio.cz/dasta/3192"
+  prefix t ="https://provisio.cz/fhir/3192"
+
+  s:"všeobecné praktické lékařství" == t:"001"
+  s:"praktické lékařství pro děti a dorost a pediatrie" == t:"002"
+}
+
+conceptmap "cm9135" {
+  prefix s ="https://provisio.cz/dasta/9135"
+  prefix t ="https://provisio.cz/fhir/9135"
+
+  s:"true" == t:"P"
+  s:"false" == t:"M"
+}
+
+conceptmap "cm2691" {
+  prefix s ="https://provisio.cz/dasta/2691"
+  prefix t ="https://provisio.cz/fhir/2691"
+
+  s:"home" == t:"1"
+  s:"work" == t:"A"
+  s:"temp" == t:"2"
+  s:"old" == t:"X"
+  s:"billing" == t:"B"
+}
+
+conceptmap "cm9171" {
+  prefix s ="https://provisio.cz/dasta/9171"
+  prefix t ="https://provisio.cz/fhir/9171"
+
+  s:"postal" == t:"K"
+}
+
+conceptmap "cm2706" {
+  prefix s ="https://provisio.cz/dasta/2706"
+  prefix t ="https://provisio.cz/fhir/2706"
+
+  s:"phone" == t:"T"
+  s:"fax" == t:"F"
+  s:"email" == t:"E"
+  s:"sms" == t:"B"
+}
+
+conceptmap "cm2707" {
+  prefix s ="https://provisio.cz/dasta/2707"
+  prefix t ="https://provisio.cz/fhir/2707"
+
+  s:"home" == t:"None"
+  s:"work" == t:"None"
+  s:"temp" == t:"None"
+  s:"old" == t:"None"
+  s:"mobile" == t:"B"
+}
+
+conceptmap "cm9372" {
+  prefix s ="https://provisio.cz/dasta/9372"
+  prefix t ="https://provisio.cz/fhir/9372"
+
+  s:"OR" == t:"true"
+  s:"OO" == t:"true"
+  s:"OS" == t:"true"
+  s:"OD" == t:"true"
+}
+
+conceptmap "cm9612" {
+  prefix s ="https://provisio.cz/dasta/9612"
+  prefix t ="https://provisio.cz/fhir/9612"
+
+  s:"P" == t:"active"
+  s:"K" == t:"completed"
+}
+
+
+
+group defaultmap(source bundle: Bundle, target ds: dasta){
+    bundle as b -> ds.is as is then {
+		b -> is.ip as ip then ip_ip(b,ip) "";
+	} "";
+
+}
+
+group ip_id_card(source platnost_Do: string, source system: anyURI, source value: string, target ds_ip41507: ip){
+    value  as val where system='https://ncez.mzcr.cz/fhir/sid/op' -> ds_ip41507 then {
+		platnost_Do as dt -> ds_ip41507.id_card as t1 then {
+			val -> t1.id_number as t2 then{
+				val -> t2.txt = val "rule1";
+			} "";
+		    dt -> t1.dat_pl as t2 then {
+				dt -> t2.txt = dt "";
+			} "";
+
+		} "rule3";
+	} "";
+}
+group ip_passport(source platnost_Do: string, source system: anyURI, source value: string, target ds_ip41507: ip){
+	value  as val where system='http://hl7.org/fhir/sid/passport-CZE' -> ds_ip41507 then {
+		platnost_Do as dt -> ds_ip41507.passport as t1 then {
+			val -> t1.id_number as t2 then{
+				val -> t2.txt = val "rule1";
+			} "";
+		    dt -> t1.dat_pl as t2 then {
+				dt -> t2.txt = dt "";
+			} "";
+		} "rule3";
+	} "";
+}
+
+group adresa_spojeni(source ContactPoint: ContactPoint, target as: as){
+
+		ContactPoint.value as x -> as.obsah as tt then {
+			x->tt.txt = x "rule1";
+		}"";
+
+
+		ContactPoint.rank as x -> as.poradi = x "rule2";
+
+
+		ContactPoint.system as x -> as.typ = translate(x,'#cm2706','code') "rule3";
+
+}
+
+
+group ip_ip(source bundle: Bundle, target ip: ip){
+	bundle.entry as e -> ip then {
+		e.resource as s1 where $this.ofType(FHIR.Patient) -> ip then {
+			//s1.id as x -> ip.guid = x "rule1";
+
+			s1.identifier as s2 where 'https://ncez.mzcr.cz/fhir/sid/cpoj'=$this.system -> ip then {
+				s2.value as x -> ip.id_pac = x "rule2";
+			} "";
+
+	 		s1.identifier as s2 -> ip then {
+				s2.period as s3 -> ip then {
+					s2.value as x1, s2.system as x2, s3.end as x3 -> ip.id_card as y then ip_id_card(x3,x2,x1,y) "rule3";
+					s2.value as x1, s2.system as x2, s3.end as x3 -> ip.passport as y then ip_passport(x3,x2,x1,y) "rule7";
+				} "rule4";
+			} "rule5";
+			
+			s1.name as s2 where 'maiden'=$this.use -> ip.rod_prijm as tt then {
+				s2.family as x -> tt.txt =x "";
+			} "rule17";
+			s1.name as s2 where 'maiden'!=$this.use -> ip.prijmeni as tt then {
+				s2.family as x -> tt.txt =x "";
+			} "rule17";
+			s1.extension as s2 where 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace'=$this.url -> ip then {
+				s2.valueAddress as s3  -> ip then {
+					s3.city as s4 -> ip.misto_nar as tt then {
+						s4 -> tt.txt = s4 "";
+					} "";
+				} "rule12";
+			} "rule16";
+			s1.extension as s2 where $this.url='http://hl7.org/fhir/StructureDefinition/patient-nationality' -> ip then {
+				s2.valueCodeableConcept as s3 -> ip then {
+					s3.coding as s4  -> ip.stat_pris as tt then {
+						s4.code as x -> tt.txt = x "";
+					} "rule14";
+				} "rule15";
+			} "rule16";
+
+			s1 -> ip.jazyk as t1 then {
+				s1.communication as s2 -> t1 then {
+					s2.language as s3 -> t1 then {
+						s3.coding as s4 -> t1 then {
+							s4.code as x -> t1.jazyk_klic = x "rule19";
+							s4.display as x -> t1.jazyk_text = x "rule20";
+						} "rule21";
+					} "rule22";
+
+					s2.preferred as x -> t1.pref = translate(x,'#cm9135','code') "rule23";
+
+					s2.language as s3 -> t1 then {
+						s3.text as x -> t1.pozn = x "rule24";
+						e -> t1.ind_oprav_sd = 'N' "rule25";
+					} "";
+				}"";
+			}"";
+			s1.name as s2 -> ip.a as a then{
+				s2.given as x2 -> a.jmeno as j then {
+					s2.family as x22 ->  append(x2, ' ', x22) as xx  then {
+						x22 -> j.txt = xx "";
+					}"";
+				}"";
+			}"";
+			s1.address as Address -> ip.a as a then{
+				Address.use as x -> a.typ = translate(x,'#cm2691','code') "rule1";
+				Address.type as x -> a.ind_kont = translate(x,'#cm9171','code') "rule2";
+				Address.period as s3 -> a then {
+					s3.start as x -> a.dat_od as tt then {
+						x -> tt.txt=x "";
+					}"";
+					s3.end as x -> a.dat_do as tt then {
+						x -> tt.txt=x "";
+					}"";
+				} "rule3";
+
+				Address.line as l ->  a.adr as adr then {
+					l-> adr.txt = l "";
+				} "";
+
+				Address.city as s -> a.mesto as tt then {
+					s -> tt.txt =s "";
+				} "";
+
+				Address.country as s -> a.stat as tt then {
+					s -> tt.txt =s "";
+				} "";
+			}"";
+		    s1.telecom as ContactPoint -> a.as as y then adresa_spojeni(ContactPoint,y) "rule6";
+
+			s1.identifier as s2  -> ip.ipi_o as t2 then{
+				s2.value as x where s2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/nem_cis' -> t2.nem_cis = x "";
+				s2.value as x where s2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/kat_pac' -> t2.kat_pac = x "";
+				s2.value as x where s2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_chor' -> t2.cis_chor = x "";
+				s2.value as x where s2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_is' -> t2.cis_is = x "";
+			} "";
+			s1.identifier as s2  -> ip.ipi_v as t2 then{
+				s2.value as x where s2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/nem_cis' -> t2.nem_cis = x "";
+				s2.value as x where s2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/kat_pac' -> t2.kat_pac = x "";
+				s2.value as x where s2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_chor' -> t2.cis_chor = x "";
+				s2.value as x where s2.system = 'urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_is' -> t2.cis_is = x "";
+			} "";
+			s1 -> ip.pv_pac as t1 then {
+				s1 -> t1.typ_pv = 'ZP' "rule39";
+				s1 -> t1.pv_zp as t2 then {
+					s1.identifier as s2 where 'https://ncez.mzcr.cz/fhir/sid/cpoj'=$this.system -> t2 then { 
+						s2.value as x -> t2.cispoj as tt then {
+							x->tt.txt = x "";
+						}"";
+					}"";
+					s1.identifier as s2 where 'https://www.vzp.cz/poskytovatele/ciselniky/zdravotni-pojistovny'=$this.system -> t2 then { 
+						s2.value as x -> t2.kodpoj as tt then {
+							x->tt.txt = x "";
+						}"";
+					}"";
+					
+				} "";
+			} "";
+
+		} "rule6";
+		 
+	}"";
+    bundle.entry as ec -> ip then {
+		ec.resource as composition where $this.ofType(FHIR.Composition) -> ip then {
+			bundle.entry as eo -> ip.ku as ku then {
+				eo.resource as organization where $this.ofType(FHIR.Organization) -> 
+					ku.ku_o as ku_o then ku_o(organization,bundle,composition,ku_o) "rule43";
+			}"";
+		}"";
+	}"";
+
+}
+
+group pracoviste(source organization: Organization, target pracovisteType: pracovisteType){
+
+	organization.identifier as s1 -> pracovisteType then {
+		s1.value as x where s1.system='https://ncez.mzcr.cz/fhir/sid/icp' -> pracovisteType.ico = x "";
+		s1.value as x where s1.system='https://ncez.mzcr.cz/fhir/sid/icz' -> pracovisteType.icz = x "";
+		s1.value as x where s1.system='https://ncez.mzcr.cz/fhir/sid/odb' -> pracovisteType.odb = x "";
+		s1.value as x where s1.system='https://ncez.mzcr.cz/fhir/sid/oddel' -> pracovisteType.oddel = x "";
+		s1.value as x where s1.system='https://ncez.mzcr.cz/fhir/sid/pcz' -> pracovisteType.pcz = x "";
+    }"";
+
+}
+
+group ku_o(source organization: Organization, source bundle: Bundle, source composition: Composition, target ku_o: ku_o){
+
+		composition.type as t -> ku_o then {
+			t.coding as c -> ku_o then{
+				c.code as x where $this.value = 'LAB.ODBER.LAB' -> ku_o.typku = x "";
+			} "";
+			
+		} "";
+		
+		organization -> ku_o.fazespec = 'OR' "rule3";
+
+
+		composition.title as x -> ku_o.idku = x "rule4";
+
+
+		composition.date as x -> ku_o.dat_poz as dt then{
+			x -> dt.txt =x "";
+		}"";
+
+
+		organization -> ku_o.z_pracoviste as y then pracoviste(organization,y) "rule7";
+		
+
+		composition.date as dt -> ku_o.ku_o_lab as y then filter_ku_o_lab(bundle,dt,y) "rule10";
+		
+
+}
+group lip(source observation: Observation, target lip: lip){
+
+		//observation.id as x -> lip.guid = x "rule1";
+
+		observation.code as s1 where $this.coding.system='https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' -> lip then{
+			s1.coding as s2 -> lip then {
+				s2.code as x -> lip.klic_nclp = x "";
+			}"";
+		}"";
+
+		observation.code as s1 where $this.coding.system='https://dastacr.cz/dasta/hypertext/DSAJT.htm' -> lip then{
+			s1.coding as s2 -> lip then {
+				s2.code as x -> lip.mtv_klic = x "";
+			}"";
+		}"";
+		
+		observation.valueQuantity as s1 -> lip then {
+			s1.comparator as x -> lip.priznak_kvant = translate(x,'#cm3190','code') "rule3";
+			s1.value as x -> lip.hodnota = x "rule4";
+			s1.unit as x -> lip.jednotka = translate(x,'#cm3191','code') "rule7";
+		} "rule8";
+		 
+}
+group lop(source serviceRequest: ServiceRequest, target lop: loptype){
+
+		//serviceRequest.id as x -> lop.guid = x "rule1";
+
+		serviceRequest.priority as x -> lop.urg = translate(x,'#cm3111','code') "rule2";
+		serviceRequest.code as s1 where $this.concept.coding.system='https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs'-> lop then{
+			s1.concept as s2 -> lop then{
+				s2.coding as s3 -> lop then {
+					s3.code as x -> lop.klic_nclp = x "";
+				}"";
+			}"";
+		}"";
+		
+		serviceRequest.code as s1 where $this.concept.coding.system='https://dastacr.cz/dasta/hypertext/DSAKB.htm' -> lop then{
+			s1.concept as s2 -> lop then{	
+				s2.coding as s3 -> lop then {
+					s3.code as x -> lop.systspec_klic = x "";
+					s3.display as x -> lop.subsp_text = x "";
+				}"";
+			}"";
+		}"";
+		serviceRequest.code as s1 where $this.coding.system='https://dastacr.cz/dasta/hypertext/DSAKT.htm' -> lop then{
+			s1.concept as s2 -> lop then{	
+				s2.coding as s3 -> lop then {
+					s3.code as x -> lop.ziskmat_klic = x "";
+				}"";
+			}"";
+		}"";
+		serviceRequest.code as s1 where $this.coding.system='https://dastacr.cz/dasta/hypertext/DSAJW.htm' -> lop then{
+			s1.concept as s2 -> lop then{	
+				s2.coding as s3 -> lop then {
+					s3.code as x -> lop.spec_proc = x "";
+				}"";
+			}"";
+		}"";
+
+		serviceRequest.note first as s1 -> lop then {
+			s1.text as x -> lop.pozn_lop = x "rule8";
+		}"";
+
+		serviceRequest.note last as s1 -> lop then {
+			s1.text as x -> lop.pozn_lop_lab = x "rule8";
+		}"";
+
+}
+
+group lopk(source ServiceRequest: ServiceRequest, target lopk: ku_o_labType){
+
+
+		ServiceRequest.id as x -> lopk.guid = x "rule1";
+
+
+		ServiceRequest.code as s1 where $this.concept.coding.system='https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs'-> lopk then{
+			s1.concept as s2 -> lopk then{
+				s2.coding as s3 -> lopk then {
+					s3.code as x -> lopk.klic_nclp = x "";
+				}"";
+			}"";
+		}"";
+
+
+		ServiceRequest.priority as x -> lopk.urg = translate(x,'#cm3121','code') "rule3";
+
+		ServiceRequest.code as s1 where $this.concept.coding.system='https://dastacr.cz/dasta/hypertext/DSAKB.htm' -> lopk then{
+			s1.concept as s2 -> lopk then{	
+				s2.coding as s3 -> lopk then {
+					s3.code as x -> lopk.systspec_kod = x "";			
+				}"";
+			}"";
+		}"";
+		ServiceRequest.code as s1 where $this.coding.system='https://dastacr.cz/dasta/hypertext/DSAKT.htm' -> lopk then{
+			s1.concept as s2 -> lopk then{	
+				s2.coding as s3 -> lopk then {
+					s3.code as x -> lopk.ziskmat_kod = x "";
+					s3.display as x ->lopk.ziskmat_text = x "";
+				}"";
+			}"";
+		}"";
+		ServiceRequest.code as s1 where $this.coding.system='https://dastacr.cz/dasta/hypertext/DSAJW.htm' -> lopk then{
+			s1.concept as s2 -> lopk then{	
+				s2.coding as s3 -> lopk then {
+					s3.code as x -> lopk.spec_proc = x "";
+				}"";
+			}"";
+		}"";
+		ServiceRequest.code as s1 where $this.coding.system='https://dastacr.cz/dasta/hypertext/DSAKP.htm' -> lopk then{
+			s1.concept as s2 -> lopk then{	
+				s2.coding as s3 -> lopk then {
+					s3.code as x -> lopk.obj_mv_kod = x "";
+					s3.display as x -> lopk.obj_mv_text = x "";
+				}"";
+			}"";
+		}"";
+		
+}
+group lopz(source ServiceRequest: ServiceRequest, target lopz: ku_o_labType){
+
+
+		ServiceRequest.id as x -> lopz.guid = x "rule1";
+
+
+		ServiceRequest.priority as x -> lopz.urg = translate(x,'#cm3133','code') "rule2";
+
+
+		ServiceRequest.code as s1 where $this.concept.coding.system='https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs'-> lopz then{
+			s1.concept as s2 -> lopz then{
+				s2.coding as s3 -> lopz then {
+					s3.code as x -> lopz.klic_nclp = x "";
+				}"";
+			}"";
+		}"";
+
+		ServiceRequest.note as s1 -> lopz.text as t1 then {
+			s1.text as x -> t1.ptext as t2 then{
+				x->t2.txt=x "";
+			}"";
+		}"";
+		
+}
+group lopr(source ServiceRequest: ServiceRequest, target lopr: ku_o_labType){
+
+
+		ServiceRequest.id as x -> lopr.guid = x "rule1";
+
+
+		ServiceRequest.priority as x -> lopr.urg = translate(x,'#cm9410','code') "rule2";
+
+
+		ServiceRequest.code as s1 where $this.concept.coding.system='https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs'-> lopr then{
+			s1.concept as s2 -> lopr then{
+				s2.coding as s3 -> lopr then {
+					s3.code as x -> lopr.klic_nclp = x "";
+				}"";
+			}"";
+		}"";
+
+		ServiceRequest.note as s1 -> lopz.text as t1 then {
+			s1.text as x -> t1.ptext as t2 then{
+				x->t2.txt=x "";
+			}"";
+		}"";
+		
+}
+
+group loi(source specimen: Specimen, source bundle: Bundle, target loi: loi){
+
+	specimen.id as sid -> loi then {
+		sid -> loi.guid = sid "rule1";
+
+	    bundle.entry as e -> loi then {
+			e.resource as s1 where ($this.is(ServiceRequest) and ($this.specimen.reference.value = 'urn:uuid:'&sid)) -> loi then {
+				s1.meta as s2 -> loi then {
+					s2.tag as s3 -> loi then {
+						s3.code where $this.value.startsWith('M') -> loi.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('V') -> loi.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('D') -> loi.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('G') -> loi.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('S') -> loi.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('Q') -> loi.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('B') -> loi.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('N') -> loi.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('O') -> loi.lop as y then lop(s1,y);
+					} "";
+				} "";
+			}"";
+		}"";
+		bundle.entry as e -> loi then {
+			e.resource as s1 where $this.is(ServiceRequest) and ($this.specimen.reference.value = 'urn:uuid:'&sid) -> loi then {
+				s1.meta as s2 -> loi then {
+					s2.tag as s3 -> loi then {
+						s3.code where $this.value.startsWith('K') -> loi.lopk as y then lopk(s1,y);
+					} "";
+				} "";
+			}"";
+		}"";
+		bundle.entry as e -> loi then {
+			e.resource as s1 where $this.is(ServiceRequest) and ($this.specimen.reference.value = 'urn:uuid:'&sid) -> loi then {
+				s1.meta as s2 -> loi then {
+					s2.tag as s3 -> loi then {
+						s3.code where $this.value.startsWith('Q') -> loi.sci as y then sci(s1,y);
+					} "";
+				} "";
+			}"";
+		}"";
+		bundle.entry as e -> loi then {
+			e.resource as s1 where $this.ofType(FHIR.Observation) and ($this.specimen.reference.value = 'urn:uuid:'&sid) -> loi then {
+				s1.meta as s2 -> loi then {
+					s2.tag as s3 -> loi then {
+						s3.code where $this.value.startsWith('L') -> loi.lod as y then lod(s1,y);
+					} "";
+				} "";
+			}"";
+		}"";
+	}"";
+
+	specimen.type as s1 -> loi then{
+		s1.coding as s2 where $this.system='https://dastacr.cz/dasta/hypertext/DSAIC.htm' -> loi then{
+			s2.code as x -> loi.typ_znac = x "rule2";
+		}"";
+		s1.coding as s2 where $this.system='https://dastacr.cz/dasta/hypertext/DSAJS.htm' -> loi then{
+			s2.code as x -> loi.material = x "rule9";
+		}"";
+		s1.coding as s2 where $this.system='https://dastacr.cz/dasta/hypertext/DSALQ.htm' -> loi then{
+			s2.code as x -> loi.anal_vzorek = x "rule10";
+		}"";
+	}"";
+
+	specimen.identifier as s5 -> loi then {
+			s5.value as x -> loi.id_loi_is = x "rule3";
+	} "rule4";
+
+	specimen.container as s1 -> loi then{
+		s1.type as s2 -> loi then{
+			s2.coding as s3 where $this.system='https://dastacr.cz/dasta/hypertext/DSAJU.htm' -> loi then{
+				s3.code as x -> loi.typ_obalu = x "rule5";
+			}"";
+		}"";
+		s1.capacity as s2 -> loi then{
+			s2.value as x -> loi.poc_obalu = x "rule6";
+		}"";
+	}"";
+	
+}
+
+group sci(source ServiceRequest: ServiceRequest, target sciType: sciType){
+
+
+		ServiceRequest.id as x -> sciType.guid = x "rule1";
+
+		ServiceRequest.identifier as s1 -> sciType then {
+			s1.value as x -> sciType.id_sci_is = x "rule2";
+		} "rule3";
+		ServiceRequest.code as s1 -> sciType then {
+			s1.coding as s2 -> sciType then {
+				s2.code as x -> sciType.klic_nclp = x "rule4";
+			} "rule5";
+		} "rule6";
+		ServiceRequest.note as s1 -> sciType then {
+			s1.text as x -> sciType.krok = x "rule7";
+		} "rule8";
+
+		ServiceRequest.status as x -> sciType.prubeh = translate(x,'#cm9612','code') "rule9";
+
+}
+
+group lod(source Observation: Observation, target lod: ku_o_labType){
+
+
+		Observation.id as x -> lod.guid = x "rule1";
+
+		Observation.code as s1 where $this.coding.system='https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs' -> lod then{
+			s1.coding as s2 -> lod then {
+				s2.code as x -> lod.klic_nclp = x "";
+			}"";
+		}"";
+
+		Observation.code as s1 where $this.coding.system='https://dastacr.cz/dasta/hypertext/DSAJT.htm' -> lod then{
+			s1.coding as s2 -> lod then {
+				s2.code as x -> lod.mtv_klic = x "";
+			}"";
+		}"";
+		
+		Observation.valueQuantity as s1 -> lod then {
+			s1.comparator as x -> lod.priznak_kvant = translate(x,'#cm3190','code') "rule3";
+			s1.value as x -> lod.hodnota = x "rule4";
+			//s1.unit as x -> lod.jednotka = translate(x,'#cm3191','code') "rule7";
+		} "rule8";
+
+
+		Observation.note as s1 -> lod then {
+			s1.text as x -> lod.text = x "rule7";
+		} "rule8";
+}
+
+group filter_ku_o_lab(source bundle: Bundle, source dat_du: dateTime, target ku_o_lab: ku_o_labType){
+
+		dat_du -> ku_o_lab.dat_du as t1 then {
+			dat_du as x -> t1.txt = x "rule1";
+			dat_du -> t1.typ = 'A' "rule2";
+		}"";
+		bundle.entry as e -> ku_o_lab then {
+			e.resource as s1 where $this.ofType(FHIR.Observation) -> ku_o_lab then {
+				s1.meta as s2 -> ku_o_lab then {
+					s2.tag as s3 -> ku_o_lab then {
+						s3.code where $this.value.startsWith('P') -> ku_o_lab.lip as y then lip(s1,y);
+						s3.code where $this.value.startsWith('U') -> ku_o_lab.lip as y then lip(s1,y);
+						s3.code where $this.value.startsWith('I') -> ku_o_lab.lip as y then lip(s1,y);
+					} "";
+				} "";
+			}"";
+		}"";
+		bundle.entry as e -> ku_o_lab then {
+			e.resource as s1 where $this.is(ServiceRequest) and $this.specimen.exists().not() -> ku_o_lab then {
+				s1.meta as s2 -> ku_o_lab then {
+					s2.tag as s3 -> ku_o_lab then {
+						s3.code where $this.value.startsWith('M') -> ku_o_lab.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('V') -> ku_o_lab.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('D') -> ku_o_lab.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('G') -> ku_o_lab.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('S') -> ku_o_lab.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('Q') -> ku_o_lab.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('B') -> ku_o_lab.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('N') -> ku_o_lab.lop as y then lop(s1,y);
+						s3.code where $this.value.startsWith('O') -> ku_o_lab.lop as y then lop(s1,y);
+					} "";
+				} "";
+			}"";
+		}"";
+		bundle.entry as e -> ku_o_lab then {
+			e.resource as s1 where $this.is(ServiceRequest) and $this.specimen.exists().not() -> ku_o_lab then {
+				s1.meta as s2 -> ku_o_lab then {
+					s2.tag as s3 -> ku_o_lab then {
+						s3.code where $this.value.startsWith('K') -> ku_o_lab.lopk as y then lopk(s1,y);
+					} "";
+				} "";
+			}"";
+		}"";
+		bundle.entry as e -> ku_o_lab then {
+			e.resource as s1 where $this.is(ServiceRequest) -> ku_o_lab then {
+				s1.meta as s2 -> ku_o_lab then {
+					s2.tag as s3 -> ku_o_lab then {
+						s3.code where $this.value.startsWith('Z') -> ku_o_lab.lopz as y then lopz(s1,y);
+					} "";
+				} "";
+			}"";
+		}"";
+		bundle.entry as e -> ku_o_lab then {
+			e.resource as s1 where $this.is(ServiceRequest) -> ku_o_lab then {
+				s1.meta as s2 -> ku_o_lab then {
+					s2.tag as s3 -> ku_o_lab then {
+						s3.code where $this.value.startsWith('R') -> ku_o_lab.lopz as y then lopz(s1,y);
+					} "";
+				} "";
+			}"";
+		}"";
+
+		bundle.entry as e -> ku_o_lab then {
+			e.resource as specimen where $this.is(Specimen) -> ku_o_lab.loi as y then loi(specimen,bundle,y);
+		}"";
+      
+}

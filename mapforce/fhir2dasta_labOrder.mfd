@@ -68,33 +68,6 @@
 						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd" instanceroot="{urn:cz-mzcr:ns:dasta:ds4:ds_dasta}dasta"/>
 					</data>
 				</component>
-				<component name="ip_ip" library="provisio" uid="6056" kind="19" visible="0">
-					<view ltx="607" lty="377" rbx="891" rby="442"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" ns="1" componentid="5689" expanded="1">
-								<entry name="entry" inpkey="60"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ip" ns="1" componentid="5690" expanded="1">
-								<entry name="ip" outkey="61"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="bundle" library="xml" uid="6" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-35" lty="83" rbx="313" rby="579"/>
@@ -120,6 +93,33 @@
 							</entry>
 						</root>
 						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle"/>
+					</data>
+				</component>
+				<component name="ip_ip" library="provisio" uid="6056" kind="19" visible="0">
+					<view ltx="607" lty="377" rbx="891" rby="442"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="entry" ns="1" componentid="5689" expanded="1">
+								<entry name="entry" inpkey="60"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ip" ns="1" componentid="5690" expanded="1">
+								<entry name="ip" outkey="61"/>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -1262,21 +1262,10 @@ http://hl7.org/fhir/ValueSet/request-priority</text>
 					<targets>
 						<datapoint pos="0" key="531"/>
 					</targets>
-					<view ltx="401" lty="82" rbx="531" rby="98"/>
+					<view ltx="401" lty="82" rbx="545" rby="99"/>
 					<data>
 						<constant value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs" datatype="string"/>
 					</data>
-				</component>
-				<component name="value" library="core" uid="9520" kind="3">
-					<sources>
-						<datapoint pos="0" key="530"/>
-						<datapoint pos="1" key="526"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="529"/>
-						<datapoint/>
-					</targets>
-					<view ltx="780" lty="196" rbx="881" rby="249"/>
 				</component>
 				<component name="value-map" library="core" uid="3190" kind="23">
 					<sources>
@@ -1285,7 +1274,7 @@ http://hl7.org/fhir/ValueSet/request-priority</text>
 					<targets>
 						<datapoint pos="0" key="24"/>
 					</targets>
-					<view ltx="648" lty="449" rbx="723" rby="486"/>
+					<view ltx="648" lty="449" rbx="728" rby="487"/>
 					<data>
 						<valuemap defaultValueMode="custom">
 							<valuemapTable>
@@ -1301,16 +1290,6 @@ http://hl7.org/fhir/quantity-comparator</text>
 						</comment>
 					</data>
 				</component>
-				<component name="equal" library="core" uid="9521" kind="5">
-					<sources>
-						<datapoint pos="0" key="527"/>
-						<datapoint pos="1" key="528"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="525"/>
-					</targets>
-					<view ltx="672" lty="205" rbx="723" rby="258"/>
-				</component>
 				<component name="equal" library="core" uid="9523" kind="5">
 					<sources>
 						<datapoint pos="0" key="539"/>
@@ -1319,15 +1298,38 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="534"/>
 					</targets>
-					<view ltx="672" lty="272" rbx="723" rby="325"/>
+					<view ltx="672" lty="272" rbx="728" rby="326"/>
 				</component>
 				<component name="constant" library="core" uid="3192" kind="2">
 					<targets>
 						<datapoint pos="0" key="540"/>
 					</targets>
-					<view ltx="402" lty="111" rbx="536" rby="127"/>
+					<view ltx="402" lty="111" rbx="552" rby="128"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSAJT.htm" datatype="string"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="3191" kind="23">
+					<sources>
+						<datapoint pos="0" key="12"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="545"/>
+					</targets>
+					<view ltx="648" lty="534" rbx="728" rby="572"/>
+					<data>
+						<valuemap defaultValueMode="input">
+							<valuemapTable>
+								<entry from="sekunda" to="S"/>
+								<entry from="minuta" to="M"/>
+								<entry from="hodina" to="H"/>
+								<entry from="den" to="D"/>
+								<entry from="tyden" to="T"/>
+								<entry from="rok" to="R"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
 					</data>
 				</component>
 				<component name="value" library="core" uid="9522" kind="3">
@@ -1339,13 +1341,24 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="536"/>
 						<datapoint/>
 					</targets>
-					<view ltx="780" lty="263" rbx="881" rby="316"/>
+					<view ltx="780" lty="263" rbx="893" rby="317"/>
+				</component>
+				<component name="value" library="core" uid="9520" kind="3">
+					<sources>
+						<datapoint pos="0" key="530"/>
+						<datapoint pos="1" key="526"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="529"/>
+						<datapoint/>
+					</targets>
+					<view ltx="780" lty="196" rbx="893" rby="250"/>
 				</component>
 				<component name="document" library="xml" uid="9510" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="50" lty="90" rbx="350" rby="590"/>
 					<data>
-						<root scrollposition="329">
+						<root scrollposition="227">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -1358,7 +1371,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 									<entry name="id" ns="1" expanded="1">
 										<entry name="value" type="attribute" outkey="541"/>
 									</entry>
-									<entry name="code" ns="1">
+									<entry name="code" ns="1" expanded="1">
 										<entry name="coding" ns="1" expanded="1">
 											<entry name="system" ns="1" expanded="1">
 												<entry name="value" type="attribute" outkey="533"/>
@@ -1390,28 +1403,15 @@ http://hl7.org/fhir/quantity-comparator</text>
 						</parameter>
 					</data>
 				</component>
-				<component name="value-map" library="core" uid="3191" kind="23">
+				<component name="equal" library="core" uid="9521" kind="5">
 					<sources>
-						<datapoint pos="0" key="12"/>
+						<datapoint pos="0" key="527"/>
+						<datapoint pos="1" key="528"/>
 					</sources>
 					<targets>
-						<datapoint pos="0" key="545"/>
+						<datapoint pos="0" key="525"/>
 					</targets>
-					<view ltx="648" lty="534" rbx="723" rby="571"/>
-					<data>
-						<valuemap defaultValueMode="input">
-							<valuemapTable>
-								<entry from="sekunda" to="S"/>
-								<entry from="minuta" to="M"/>
-								<entry from="hodina" to="H"/>
-								<entry from="den" to="D"/>
-								<entry from="tyden" to="T"/>
-								<entry from="rok" to="R"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
+					<view ltx="672" lty="205" rbx="728" rby="259"/>
 				</component>
 			</children>
 		</structure>
@@ -4038,7 +4038,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="547"/>
 					</targets>
-					<view ltx="690" lty="-634" rbx="741" rby="-581"/>
+					<view ltx="690" lty="-634" rbx="746" rby="-580"/>
 				</component>
 				<component name="value" library="core" uid="9119" kind="3">
 					<sources>
@@ -4049,7 +4049,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="581"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-375" rbx="880" rby="-322"/>
+					<view ltx="779" lty="-375" rbx="892" rby="-321"/>
 					<data>
 						<comment>
 							<text>Národnost</text>
@@ -4060,7 +4060,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="655"/>
 					</targets>
-					<view ltx="1019" lty="-582" rbx="1067" rby="-566"/>
+					<view ltx="1019" lty="-582" rbx="1069" rby="-565"/>
 					<data>
 						<constant value="N" datatype="string"/>
 						<comment>
@@ -4076,7 +4076,7 @@ Povinný prvek u jazyka</text>
 					<targets>
 						<datapoint pos="0" key="629"/>
 					</targets>
-					<view ltx="1019" lty="-524" rbx="1094" rby="-487"/>
+					<view ltx="1019" lty="-524" rbx="1099" rby="-486"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -4097,7 +4097,7 @@ Povinný prvek u jazyka</text>
 						<datapoint pos="0" key="546"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-635" rbx="880" rby="-582"/>
+					<view ltx="779" lty="-635" rbx="892" rby="-581"/>
 					<data>
 						<comment>
 							<text>Rodné číslo</text>
@@ -4112,7 +4112,7 @@ Povinný prvek u jazyka</text>
 					<targets>
 						<datapoint pos="0" key="558"/>
 					</targets>
-					<view ltx="690" lty="-539" rbx="741" rby="-486"/>
+					<view ltx="690" lty="-539" rbx="746" rby="-485"/>
 				</component>
 				<component name="equal" library="core" uid="9120" kind="5">
 					<sources>
@@ -4122,7 +4122,7 @@ Povinný prvek u jazyka</text>
 					<targets>
 						<datapoint pos="0" key="579"/>
 					</targets>
-					<view ltx="690" lty="-374" rbx="741" rby="-321"/>
+					<view ltx="690" lty="-374" rbx="746" rby="-320"/>
 				</component>
 				<component name="equal" library="core" uid="9122" kind="5">
 					<sources>
@@ -4132,13 +4132,13 @@ Povinný prvek u jazyka</text>
 					<targets>
 						<datapoint pos="0" key="587"/>
 					</targets>
-					<view ltx="690" lty="-294" rbx="741" rby="-241"/>
+					<view ltx="690" lty="-294" rbx="746" rby="-240"/>
 				</component>
 				<component name="constant" library="core" uid="9208" kind="2">
 					<targets>
 						<datapoint pos="0" key="747"/>
 					</targets>
-					<view ltx="875" lty="-150" rbx="918" rby="-134"/>
+					<view ltx="875" lty="-150" rbx="920" rby="-133"/>
 					<data>
 						<constant value=" " datatype="string"/>
 					</data>
@@ -4152,7 +4152,7 @@ Povinný prvek u jazyka</text>
 						<datapoint pos="0" key="556"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-540" rbx="880" rby="-487"/>
+					<view ltx="779" lty="-540" rbx="892" rby="-486"/>
 					<data>
 						<comment>
 							<text>Číslo pojišťovny</text>
@@ -4163,28 +4163,12 @@ Povinný prvek u jazyka</text>
 					<targets>
 						<datapoint pos="0" key="654"/>
 					</targets>
-					<view ltx="1019" lty="-635" rbx="1071" rby="-619"/>
+					<view ltx="1019" lty="-635" rbx="1073" rby="-618"/>
 					<data>
 						<constant value="ZP" datatype="string"/>
 						<comment>
 							<text>Typ platebního vztahu - Pacientova zdravotní pojišťovna
 Povinný prvek</text>
-						</comment>
-					</data>
-				</component>
-				<component name="value" library="core" uid="9107" kind="3">
-					<sources>
-						<datapoint pos="0" key="540"/>
-						<datapoint pos="1" key="541"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="542"/>
-						<datapoint/>
-					</targets>
-					<view ltx="779" lty="-726" rbx="880" rby="-673"/>
-					<data>
-						<comment>
-							<text>číslo pojištěnce</text>
 						</comment>
 					</data>
 				</component>
@@ -4197,39 +4181,10 @@ Povinný prvek</text>
 						<datapoint pos="0" key="586"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-295" rbx="880" rby="-242"/>
+					<view ltx="779" lty="-295" rbx="892" rby="-241"/>
 					<data>
 						<comment>
 							<text>RIP/RID</text>
-						</comment>
-					</data>
-				</component>
-				<component name="ip_passport" library="provisio" uid="9275" kind="19" visible="0">
-					<view ltx="519" lty="-81" rbx="839" rby="-24"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="value" inpkey="790" componentid="9271"/>
-							<entry name="system" inpkey="792" componentid="9273"/>
-							<entry name="platnost_Do" inpkey="793" componentid="9272"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ds_ip41507" ns="1" componentid="9270" expanded="1">
-								<entry name="passport" outkey="794"/>
-							</entry>
-						</root>
-						<comment>
-							<text>Pas</text>
 						</comment>
 					</data>
 				</component>
@@ -4241,32 +4196,22 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="617"/>
 					</targets>
-					<view ltx="1019" lty="-724" rbx="1070" rby="-671"/>
+					<view ltx="1019" lty="-724" rbx="1075" rby="-670"/>
 				</component>
 				<component name="constant" library="core" uid="5672" kind="2">
 					<targets>
 						<datapoint pos="0" key="627"/>
 					</targets>
-					<view ltx="911" lty="-736" rbx="986" rby="-720"/>
+					<view ltx="911" lty="-736" rbx="991" rby="-719"/>
 					<data>
 						<constant value="maiden" datatype="string"/>
 					</data>
-				</component>
-				<component name="equal" library="core" uid="9109" kind="5">
-					<sources>
-						<datapoint pos="0" key="537"/>
-						<datapoint pos="1" key="538"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="539"/>
-					</targets>
-					<view ltx="690" lty="-725" rbx="741" rby="-672"/>
 				</component>
 				<component name="constant" library="core" uid="5651" kind="2">
 					<targets>
 						<datapoint pos="0" key="545"/>
 					</targets>
-					<view ltx="486" lty="-702" rbx="622" rby="-686"/>
+					<view ltx="486" lty="-702" rbx="637" rby="-685"/>
 					<data>
 						<constant value="https://ncez.mzcr.cz/fhir/sid/cpoj" datatype="string"/>
 					</data>
@@ -4275,7 +4220,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="552"/>
 					</targets>
-					<view ltx="486" lty="-614" rbx="622" rby="-598"/>
+					<view ltx="486" lty="-614" rbx="637" rby="-597"/>
 					<data>
 						<constant value="https://ncez.mzcr.cz/fhir/sid/rcis" datatype="string"/>
 					</data>
@@ -4284,7 +4229,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="562"/>
 					</targets>
-					<view ltx="486" lty="-524" rbx="629" rby="-508"/>
+					<view ltx="486" lty="-524" rbx="646" rby="-507"/>
 					<data>
 						<constant value="https://www.vzp.cz/poskytovatele/ciselniky/zdravotni-pojistovny" datatype="string"/>
 					</data>
@@ -4293,7 +4238,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="652"/>
 					</targets>
-					<view ltx="493" lty="-276" rbx="629" rby="-260"/>
+					<view ltx="493" lty="-276" rbx="644" rby="-259"/>
 					<data>
 						<constant value="https://ncez.mzcr.cz/fhir/sid/rid" datatype="string"/>
 					</data>
@@ -4302,50 +4247,16 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="583"/>
 					</targets>
-					<view ltx="493" lty="-346" rbx="625" rby="-330"/>
+					<view ltx="493" lty="-346" rbx="640" rby="-329"/>
 					<data>
 						<constant value="http://hl7.org/fhir/StructureDefinition/patient-nationality" datatype="string"/>
-					</data>
-				</component>
-				<component name="adresa" library="provisio" uid="9183" kind="19" visible="0">
-					<view ltx="1064" lty="-211" rbx="1382" rby="-146"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="Address" ns="1" componentid="2667" expanded="1">
-								<entry name="Address" type="xml-type" inpkey="756"/>
-							</entry>
-							<entry name="ContactPoint" ns="1" componentid="9211" expanded="1">
-								<entry name="ContactPoint" type="xml-type" inpkey="760"/>
-							</entry>
-							<entry name="Name" ns="1" inpkey="757" componentid="9203"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="a" ns="1" componentid="88" expanded="1">
-								<entry name="a" outkey="758"/>
-							</entry>
-						</root>
-						<comment>
-							<text>Adresa pacienta</text>
-						</comment>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="5679" kind="2">
 					<targets>
 						<datapoint pos="0" key="572"/>
 					</targets>
-					<view ltx="486" lty="-440" rbx="618" rby="-424"/>
+					<view ltx="486" lty="-440" rbx="633" rby="-423"/>
 					<data>
 						<constant value="http://hl7.org/fhir/StructureDefinition/patient-birthPlace" datatype="string"/>
 					</data>
@@ -4358,7 +4269,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="570"/>
 					</targets>
-					<view ltx="690" lty="-453" rbx="741" rby="-400"/>
+					<view ltx="690" lty="-453" rbx="746" rby="-399"/>
 				</component>
 				<component name="value" library="core" uid="9118" kind="3">
 					<sources>
@@ -4369,12 +4280,107 @@ Povinný prvek</text>
 						<datapoint pos="0" key="569"/>
 						<datapoint/>
 					</targets>
-					<view ltx="779" lty="-454" rbx="880" rby="-401"/>
+					<view ltx="779" lty="-454" rbx="892" rby="-400"/>
 					<data>
 						<comment>
 							<text>místo narození</text>
 						</comment>
 					</data>
+				</component>
+				<component name="value" library="core" uid="9132" kind="3">
+					<sources>
+						<datapoint pos="0" key="624"/>
+						<datapoint pos="1" key="625"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="623"/>
+						<datapoint pos="1" key="656"/>
+					</targets>
+					<view ltx="1109" lty="-724" rbx="1222" rby="-670"/>
+					<data>
+						<comment>
+							<text>Příjmení / Rodné příjmení</text>
+						</comment>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="9207" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="748"/>
+						<datapoint pos="1" key="749"/>
+						<datapoint pos="2" key="750"/>
+						<datapoint pos="3" key="751"/>
+						<datapoint pos="4" key="752"/>
+						<datapoint pos="5" key="753"/>
+						<datapoint pos="6" key="754"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="755"/>
+					</targets>
+					<view ltx="944" lty="-223" rbx="1036" rby="-82"/>
+					<data>
+						<comment>
+							<text>Povinná část jména adresy</text>
+						</comment>
+					</data>
+				</component>
+				<component name="value" library="core" uid="9107" kind="3">
+					<sources>
+						<datapoint pos="0" key="540"/>
+						<datapoint pos="1" key="541"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="542"/>
+						<datapoint/>
+					</targets>
+					<view ltx="779" lty="-726" rbx="892" rby="-672"/>
+					<data>
+						<comment>
+							<text>číslo pojištěnce</text>
+						</comment>
+					</data>
+				</component>
+				<component name="ku_o" library="provisio" uid="9314" kind="19" visible="0">
+					<view ltx="519" lty="45" rbx="819" rby="245"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Composition" ns="1" componentid="9315" expanded="1">
+								<entry name="Composition" inpkey="815"/>
+							</entry>
+							<entry name="Organization" ns="1" componentid="9363" expanded="1">
+								<entry name="Organization" inpkey="818"/>
+							</entry>
+							<entry name="entry" ns="1" componentid="9375" expanded="1">
+								<entry name="entry" inpkey="819"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ds_ip41507" ns="1" componentid="9312" expanded="1">
+								<entry name="ku_o" outkey="816"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="9109" kind="5">
+					<sources>
+						<datapoint pos="0" key="537"/>
+						<datapoint pos="1" key="538"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="539"/>
+					</targets>
+					<view ltx="690" lty="-725" rbx="746" rby="-671"/>
 				</component>
 				<component name="ip_ipi_o" library="provisio" uid="9235" kind="19" visible="0">
 					<view ltx="1019" lty="-458" rbx="1319" rby="-412"/>
@@ -4432,143 +4438,45 @@ Povinný prvek</text>
 						</comment>
 					</data>
 				</component>
-				<component name="ip_id_card" library="provisio" uid="9265" kind="19" visible="0">
-					<view ltx="509" lty="-218" rbx="829" rby="-146"/>
+				<component name="adresa" library="provisio" uid="9183" kind="19" visible="0">
+					<view ltx="1064" lty="-211" rbx="1382" rby="-146"/>
 					<data>
 						<root>
 							<header>
 								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="value" inpkey="785" componentid="9261"/>
-							<entry name="system" inpkey="787" componentid="9263"/>
-							<entry name="platnost_Do" inpkey="788" componentid="9262"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ds_ip41507" ns="1" componentid="9260" expanded="1">
-								<entry name="id_card" outkey="789"/>
+							<entry name="Address" ns="1" componentid="2667" expanded="1">
+								<entry name="Address" type="xml-type" inpkey="756"/>
 							</entry>
+							<entry name="ContactPoint" ns="1" componentid="9211" expanded="1">
+								<entry name="ContactPoint" type="xml-type" inpkey="760"/>
+							</entry>
+							<entry name="Name" ns="1" inpkey="757" componentid="9203"/>
 						</root>
-						<comment>
-							<text>Občanský průkaz</text>
-						</comment>
-					</data>
-				</component>
-				<component name="value" library="core" uid="9132" kind="3">
-					<sources>
-						<datapoint pos="0" key="624"/>
-						<datapoint pos="1" key="625"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="623"/>
-						<datapoint pos="1" key="656"/>
-					</targets>
-					<view ltx="1109" lty="-724" rbx="1210" rby="-671"/>
-					<data>
-						<comment>
-							<text>Příjmení / Rodné příjmení</text>
-						</comment>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="9207" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="748"/>
-						<datapoint pos="1" key="749"/>
-						<datapoint pos="2" key="750"/>
-						<datapoint pos="3" key="751"/>
-						<datapoint pos="4" key="752"/>
-						<datapoint pos="5" key="753"/>
-						<datapoint pos="6" key="754"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="755"/>
-					</targets>
-					<view ltx="944" lty="-223" rbx="1028" rby="-85"/>
-					<data>
-						<comment>
-							<text>Povinná část jména adresy</text>
-						</comment>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="5690" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" SaveRelativePaths="0"/>
-					<view ltx="1441" lty="-635" rbx="1591" rby="-135"/>
-					<data>
-						<root scrollposition="766">
+						<root>
 							<header>
 								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
 									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="ip" ns="1" expanded="1">
-									<entry name="guid" type="attribute" inpkey="531"/>
-									<entry name="id_pac" type="attribute" inpkey="273"/>
-									<entry name="rodcis" ns="1" inpkey="553"/>
-									<entry name="rip" ns="1" inpkey="675"/>
-									<entry name="id_card" ns="1" inpkey="761" expanded="1">
-										<entry name="dat_pl" ns="1" expanded="1"/>
-									</entry>
-									<entry name="passport" ns="1" inpkey="762" expanded="1"/>
-									<entry name="jmeno" ns="1" inpkey="532"/>
-									<entry name="prijmeni" ns="1" inpkey="533"/>
-									<entry name="titul_pred" ns="1" inpkey="534"/>
-									<entry name="titul_za" ns="1" inpkey="535"/>
-									<entry name="dat_dn" ns="1" inpkey="678"/>
-									<entry name="misto_nar" ns="1" inpkey="575"/>
-									<entry name="stat_pris" ns="1" inpkey="582"/>
-									<entry name="dat_de" ns="1" inpkey="679"/>
-									<entry name="sex" ns="1" inpkey="680"/>
-									<entry name="sex_klin" ns="1" inpkey="681"/>
-									<entry name="rod_prijm" ns="1" inpkey="622"/>
-									<entry name="jazyk" ns="1">
-										<entry name="jazyk_klic" type="attribute" inpkey="682"/>
-										<entry name="jazyk_text" type="attribute" inpkey="683"/>
-										<entry name="pref" type="attribute" inpkey="684"/>
-										<entry name="pozn" type="attribute" inpkey="685"/>
-										<entry name="ind_oprav_sd" type="attribute" inpkey="686"/>
-										<entry name="a" ns="2" inpkey="745" expanded="1"/>
-									</entry>
-									<entry name="ipi_o" ns="1" inpkey="637"/>
-									<entry name="ipi_v" ns="1" inpkey="722"/>
-									<entry name="pv_pac" ns="1">
-										<entry name="typ_pv" type="attribute" inpkey="536"/>
-										<entry name="pv_zp" ns="1" expanded="1">
-											<entry name="cispoj" ns="1" inpkey="615"/>
-											<entry name="kodpoj" ns="1" inpkey="565"/>
-										</entry>
-									</entry>
-									<entry name="ku" ns="1" expanded="1">
-										<entry name="ku_o" ns="1" inpkey="813" expanded="1">
-											<entry name="ku_o_lab" ns="1" expanded="1"/>
-										</entry>
-									</entry>
-								</entry>
+							<entry name="a" ns="1" componentid="88" expanded="1">
+								<entry name="a" outkey="758"/>
 							</entry>
 						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="output" name="ip" sequence="1">
-							<root>
-								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-							</root>
-						</parameter>
+						<comment>
+							<text>Adresa pacienta</text>
+						</comment>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="5689" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="62" lty="-727" rbx="247" rby="-91"/>
 					<data>
-						<root scrollposition="1550">
+						<root scrollposition="4391">
 							<header>
 								<namespaces>
 									<namespace uid="http://hl7.org/fhir"/>
@@ -4757,25 +4665,85 @@ Povinný prvek</text>
 						</parameter>
 					</data>
 				</component>
-				<component name="ku_o" library="provisio" uid="9314" kind="19" visible="0">
-					<view ltx="519" lty="45" rbx="819" rby="245"/>
+				<component name="document" library="xml" uid="5690" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" SaveRelativePaths="0"/>
+					<view ltx="1441" lty="-635" rbx="1591" rby="-135"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+								<entry name="ip" ns="1" expanded="1">
+									<entry name="guid" type="attribute" inpkey="531"/>
+									<entry name="id_pac" type="attribute" inpkey="273"/>
+									<entry name="rodcis" ns="1" inpkey="553"/>
+									<entry name="rip" ns="1" inpkey="675"/>
+									<entry name="id_card" ns="1" inpkey="761" expanded="1">
+										<entry name="dat_pl" ns="1" expanded="1"/>
+									</entry>
+									<entry name="passport" ns="1" inpkey="762" expanded="1"/>
+									<entry name="jmeno" ns="1" inpkey="532"/>
+									<entry name="prijmeni" ns="1" inpkey="533"/>
+									<entry name="titul_pred" ns="1" inpkey="534"/>
+									<entry name="titul_za" ns="1" inpkey="535"/>
+									<entry name="dat_dn" ns="1" inpkey="678"/>
+									<entry name="misto_nar" ns="1" inpkey="575"/>
+									<entry name="stat_pris" ns="1" inpkey="582"/>
+									<entry name="dat_de" ns="1" inpkey="679"/>
+									<entry name="sex" ns="1" inpkey="680"/>
+									<entry name="sex_klin" ns="1" inpkey="681"/>
+									<entry name="rod_prijm" ns="1" inpkey="622"/>
+									<entry name="jazyk" ns="1">
+										<entry name="jazyk_klic" type="attribute" inpkey="682"/>
+										<entry name="jazyk_text" type="attribute" inpkey="683"/>
+										<entry name="pref" type="attribute" inpkey="684"/>
+										<entry name="pozn" type="attribute" inpkey="685"/>
+										<entry name="ind_oprav_sd" type="attribute" inpkey="686"/>
+										<entry name="a" ns="2" inpkey="745" expanded="1"/>
+									</entry>
+									<entry name="ipi_o" ns="1" inpkey="637"/>
+									<entry name="ipi_v" ns="1" inpkey="722"/>
+									<entry name="pv_pac" ns="1">
+										<entry name="typ_pv" type="attribute" inpkey="536"/>
+										<entry name="pv_zp" ns="1" expanded="1">
+											<entry name="cispoj" ns="1" inpkey="615"/>
+											<entry name="kodpoj" ns="1" inpkey="565"/>
+										</entry>
+									</entry>
+									<entry name="ku" ns="1" expanded="1">
+										<entry name="ku_o" ns="1" inpkey="813" expanded="1">
+											<entry name="ku_o_lab" ns="1" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="output" name="ip" sequence="1">
+							<root>
+								<entry name="ip" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="ip_passport" library="provisio" uid="9275" kind="19" visible="0">
+					<view ltx="519" lty="-81" rbx="839" rby="-24"/>
 					<data>
 						<root>
 							<header>
 								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="Composition" ns="1" componentid="9315" expanded="1">
-								<entry name="Composition" inpkey="815"/>
-							</entry>
-							<entry name="Organization" ns="1" componentid="9363" expanded="1">
-								<entry name="Organization" inpkey="818"/>
-							</entry>
-							<entry name="entry" ns="1" componentid="9375" expanded="1">
-								<entry name="entry" inpkey="819"/>
-							</entry>
+							<entry name="value" inpkey="845" componentid="9271"/>
+							<entry name="system" inpkey="846" componentid="9273"/>
+							<entry name="platnost_Do" inpkey="847" componentid="9272"/>
 						</root>
 						<root>
 							<header>
@@ -4784,10 +4752,42 @@ Povinný prvek</text>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="ds_ip41507" ns="1" componentid="9312" expanded="1">
-								<entry name="ku_o" outkey="816"/>
+							<entry name="ds_ip41507" ns="1" componentid="9270" expanded="1">
+								<entry name="passport" outkey="848"/>
 							</entry>
 						</root>
+						<comment>
+							<text>Pas</text>
+						</comment>
+					</data>
+				</component>
+				<component name="ip_id_card" library="provisio" uid="9265" kind="19" visible="0">
+					<view ltx="509" lty="-218" rbx="829" rby="-146"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="value" inpkey="849" componentid="9261"/>
+							<entry name="system" inpkey="850" componentid="9263"/>
+							<entry name="platnost_Do" inpkey="851" componentid="9262"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ds_ip41507" ns="1" componentid="9260" expanded="1">
+								<entry name="id_card" outkey="852"/>
+							</entry>
+						</root>
+						<comment>
+							<text>Občanský průkaz</text>
+						</comment>
 					</data>
 				</component>
 			</children>
@@ -4868,22 +4868,16 @@ Povinný prvek</text>
 			<edge from="759" to="760">
 				<data type="2"/>
 			</edge>
-			<edge from="789" to="761">
+			<edge from="852" to="761">
 				<data type="2"/>
 			</edge>
-			<edge from="794" to="762">
+			<edge from="848" to="762">
 				<data type="2"/>
 			</edge>
 			<edge from="543" to="763"/>
 			<edge from="544" to="765"/>
 			<edge from="543" to="774"/>
 			<edge from="544" to="776"/>
-			<edge from="543" to="785"/>
-			<edge from="544" to="787"/>
-			<edge from="601" to="788"/>
-			<edge from="543" to="790"/>
-			<edge from="544" to="792"/>
-			<edge from="601" to="793"/>
 			<edge from="816" to="813">
 				<data type="2"/>
 			</edge>
@@ -4896,6 +4890,12 @@ Povinný prvek</text>
 			<edge from="820" to="819">
 				<data type="2"/>
 			</edge>
+			<edge from="543" to="845"/>
+			<edge from="544" to="846"/>
+			<edge from="601" to="847"/>
+			<edge from="543" to="849"/>
+			<edge from="544" to="850"/>
+			<edge from="601" to="851"/>
 		</connections>
 	</component>
 	<component name="adresa" library="provisio" uid="6057">
@@ -4905,7 +4905,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="80"/>
 					</targets>
-					<view ltx="435" lty="370" rbx="480" rby="386"/>
+					<view ltx="435" lty="370" rbx="483" rby="387"/>
 					<data>
 						<constant value=", " datatype="string"/>
 					</data>
@@ -4917,7 +4917,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="70"/>
 					</targets>
-					<view ltx="547" lty="190" rbx="622" rby="227"/>
+					<view ltx="547" lty="190" rbx="627" rby="228"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -4942,7 +4942,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="79"/>
 					</targets>
-					<view ltx="547" lty="257" rbx="622" rby="294"/>
+					<view ltx="547" lty="257" rbx="627" rby="295"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -4976,38 +4976,11 @@ Povinný prvek</text>
 						</parameter>
 					</data>
 				</component>
-				<component name="adresa_spojeni" library="provisio" uid="9213" kind="19" visible="0">
-					<view ltx="446" lty="468" rbx="746" rby="668"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ContactPoint" ns="1" componentid="2705" expanded="1">
-								<entry name="ContactPoint" type="xml-type" inpkey="99"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="as" ns="1" componentid="2708" expanded="1">
-								<entry name="as" outkey="100"/>
-							</entry>
-						</root>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="2667" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-162" lty="42" rbx="370" rby="355"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -5063,7 +5036,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="90"/>
 					</targets>
-					<view ltx="518" lty="317" rbx="630" rby="386"/>
+					<view ltx="518" lty="317" rbx="643" rby="387"/>
 				</component>
 				<component name="Name" library="core" uid="9203" kind="6">
 					<sources>
@@ -5072,7 +5045,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="91"/>
 					</targets>
-					<view ltx="-162" lty="618" rbx="-84" rby="655"/>
+					<view ltx="-162" lty="618" rbx="-76" rby="656"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="Name" optional="1"/>
@@ -5082,7 +5055,7 @@ Povinný prvek</text>
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1093" lty="140" rbx="1249" rby="640"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -5111,6 +5084,33 @@ Povinný prvek</text>
 								<entry name="a" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
 							</root>
 						</parameter>
+					</data>
+				</component>
+				<component name="adresa_spojeni" library="provisio" uid="9213" kind="19" visible="0">
+					<view ltx="446" lty="468" rbx="746" rby="668"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ContactPoint" ns="1" componentid="2705" expanded="1">
+								<entry name="ContactPoint" type="xml-type" inpkey="99"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="as" ns="1" componentid="2708" expanded="1">
+								<entry name="as" outkey="100"/>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -5147,7 +5147,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="2"/>
 					</targets>
-					<view ltx="562" lty="163" rbx="637" rby="200"/>
+					<view ltx="562" lty="163" rbx="642" rby="201"/>
 					<data>
 						<valuemap defaultValueMode="custom">
 							<valuemapTable>
@@ -5205,7 +5205,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="562" lty="264" rbx="637" rby="301"/>
+					<view ltx="562" lty="264" rbx="642" rby="302"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -5270,7 +5270,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="9"/>
 					</targets>
-					<view ltx="413" lty="283" rbx="464" rby="336"/>
+					<view ltx="413" lty="283" rbx="469" rby="337"/>
 				</component>
 				<component name="equal" library="core" uid="9218" kind="5">
 					<sources>
@@ -5280,7 +5280,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="7"/>
 					</targets>
-					<view ltx="413" lty="210" rbx="464" rby="263"/>
+					<view ltx="413" lty="210" rbx="469" rby="264"/>
 				</component>
 				<component name="filter" library="core" uid="9220" kind="3">
 					<sources>
@@ -5291,7 +5291,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="13"/>
 						<datapoint/>
 					</targets>
-					<view ltx="499" lty="55" rbx="600" rby="108"/>
+					<view ltx="499" lty="55" rbx="612" rby="109"/>
 					<data>
 						<comment>
 							<text>ipi_o - Nemocniční číslo</text>
@@ -5306,7 +5306,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="6"/>
 					</targets>
-					<view ltx="988" lty="198" rbx="1099" rby="251"/>
+					<view ltx="988" lty="198" rbx="1110" rby="252"/>
 				</component>
 				<component name="substitute-missing" library="core" uid="9222" kind="5">
 					<sources>
@@ -5316,7 +5316,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="28"/>
 					</targets>
-					<view ltx="839" lty="146" rbx="950" rby="199"/>
+					<view ltx="839" lty="146" rbx="961" rby="200"/>
 				</component>
 				<component name="filter" library="core" uid="9223" kind="3">
 					<sources>
@@ -5327,7 +5327,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="24"/>
 						<datapoint/>
 					</targets>
-					<view ltx="501" lty="205" rbx="602" rby="258"/>
+					<view ltx="501" lty="205" rbx="614" rby="259"/>
 					<data>
 						<comment>
 							<text>ipi_o - číslo chorobopisu</text>
@@ -5343,7 +5343,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="22"/>
 						<datapoint/>
 					</targets>
-					<view ltx="501" lty="129" rbx="602" rby="182"/>
+					<view ltx="501" lty="129" rbx="614" rby="183"/>
 					<data>
 						<comment>
 							<text>ipi_o - Kategorie pacienta</text>
@@ -5359,7 +5359,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="25"/>
 						<datapoint/>
 					</targets>
-					<view ltx="501" lty="278" rbx="602" rby="331"/>
+					<view ltx="501" lty="278" rbx="614" rby="332"/>
 					<data>
 						<comment>
 							<text>ipi_o - číslo v IS</text>
@@ -5374,13 +5374,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="16"/>
 					</targets>
-					<view ltx="413" lty="134" rbx="464" rby="187"/>
+					<view ltx="413" lty="134" rbx="469" rby="188"/>
 				</component>
 				<component name="constant" library="core" uid="9303" kind="2">
 					<targets>
 						<datapoint pos="0" key="45"/>
 					</targets>
-					<view ltx="105" lty="186" rbx="235" rby="202"/>
+					<view ltx="105" lty="186" rbx="251" rby="203"/>
 					<data>
 						<constant value="urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/nem_cis" datatype="string"/>
 					</data>
@@ -5389,7 +5389,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="48"/>
 					</targets>
-					<view ltx="105" lty="218" rbx="235" rby="234"/>
+					<view ltx="105" lty="218" rbx="251" rby="235"/>
 					<data>
 						<constant value="urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/kat_pac" datatype="string"/>
 					</data>
@@ -5398,7 +5398,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="47"/>
 					</targets>
-					<view ltx="106" lty="250" rbx="236" rby="266"/>
+					<view ltx="106" lty="250" rbx="252" rby="267"/>
 					<data>
 						<constant value="urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_chor" datatype="string"/>
 					</data>
@@ -5407,7 +5407,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="46"/>
 					</targets>
-					<view ltx="106" lty="282" rbx="236" rby="298"/>
+					<view ltx="106" lty="282" rbx="252" rby="299"/>
 					<data>
 						<constant value="urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_is" datatype="string"/>
 					</data>
@@ -5419,7 +5419,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="40"/>
 					</targets>
-					<view ltx="106" lty="43" rbx="181" rby="80"/>
+					<view ltx="106" lty="43" rbx="190" rby="81"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="value"/>
@@ -5435,7 +5435,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="39"/>
 					</targets>
-					<view ltx="106" lty="111" rbx="189" rby="148"/>
+					<view ltx="106" lty="111" rbx="197" rby="149"/>
 					<data>
 						<input datatype="anyURI"/>
 						<parameter usageKind="input" name="system"/>
@@ -5482,7 +5482,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="26"/>
 					</targets>
-					<view ltx="693" lty="90" rbx="804" rby="143"/>
+					<view ltx="693" lty="90" rbx="815" rby="144"/>
 				</component>
 				<component name="equal" library="core" uid="9219" kind="5">
 					<sources>
@@ -5492,7 +5492,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="1"/>
 					</targets>
-					<view ltx="411" lty="60" rbx="462" rby="113"/>
+					<view ltx="411" lty="60" rbx="467" rby="114"/>
 				</component>
 			</children>
 		</structure>
@@ -5537,7 +5537,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="20"/>
 					</targets>
-					<view ltx="431" lty="300" rbx="482" rby="353"/>
+					<view ltx="431" lty="300" rbx="487" rby="354"/>
 				</component>
 				<component name="equal" library="core" uid="9238" kind="5">
 					<sources>
@@ -5547,7 +5547,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="5"/>
 					</targets>
-					<view ltx="431" lty="373" rbx="482" rby="426"/>
+					<view ltx="431" lty="373" rbx="487" rby="427"/>
 				</component>
 				<component name="equal" library="core" uid="9239" kind="5">
 					<sources>
@@ -5557,7 +5557,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="29"/>
 					</targets>
-					<view ltx="431" lty="224" rbx="482" rby="277"/>
+					<view ltx="431" lty="224" rbx="487" rby="278"/>
 				</component>
 				<component name="substitute-missing" library="core" uid="9240" kind="5">
 					<sources>
@@ -5567,7 +5567,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="23"/>
 					</targets>
-					<view ltx="917" lty="130" rbx="1028" rby="183"/>
+					<view ltx="917" lty="130" rbx="1039" rby="184"/>
 				</component>
 				<component name="filter" library="core" uid="9242" kind="3">
 					<sources>
@@ -5578,7 +5578,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="13"/>
 						<datapoint/>
 					</targets>
-					<view ltx="519" lty="219" rbx="620" rby="272"/>
+					<view ltx="519" lty="219" rbx="632" rby="273"/>
 					<data>
 						<comment>
 							<text>ipi_v - Kategorie pacienta</text>
@@ -5594,7 +5594,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="11"/>
 						<datapoint/>
 					</targets>
-					<view ltx="519" lty="295" rbx="620" rby="348"/>
+					<view ltx="519" lty="295" rbx="632" rby="349"/>
 					<data>
 						<comment>
 							<text>ipi_v -  číslo chorobopisu</text>
@@ -5610,7 +5610,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="14"/>
 						<datapoint/>
 					</targets>
-					<view ltx="519" lty="368" rbx="620" rby="421"/>
+					<view ltx="519" lty="368" rbx="632" rby="422"/>
 					<data>
 						<comment>
 							<text>ipi_v - číslo v IS</text>
@@ -5625,13 +5625,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="25"/>
 					</targets>
-					<view ltx="1071" lty="177" rbx="1182" rby="230"/>
+					<view ltx="1071" lty="177" rbx="1193" rby="231"/>
 				</component>
 				<component name="constant" library="core" uid="9297" kind="2">
 					<targets>
 						<datapoint pos="0" key="47"/>
 					</targets>
-					<view ltx="119" lty="449" rbx="249" rby="465"/>
+					<view ltx="119" lty="449" rbx="265" rby="466"/>
 					<data>
 						<constant value="urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/kat_pac" datatype="string"/>
 					</data>
@@ -5640,7 +5640,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="48"/>
 					</targets>
-					<view ltx="120" lty="481" rbx="250" rby="497"/>
+					<view ltx="120" lty="481" rbx="266" rby="498"/>
 					<data>
 						<constant value="urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_chor" datatype="string"/>
 					</data>
@@ -5649,7 +5649,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="45"/>
 					</targets>
-					<view ltx="120" lty="513" rbx="250" rby="529"/>
+					<view ltx="120" lty="513" rbx="266" rby="530"/>
 					<data>
 						<constant value="urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/cis_is" datatype="string"/>
 					</data>
@@ -5658,7 +5658,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="46"/>
 					</targets>
-					<view ltx="119" lty="417" rbx="249" rby="433"/>
+					<view ltx="119" lty="417" rbx="265" rby="434"/>
 					<data>
 						<constant value="urn:ietf:rfc:3986:http://doménanemocnice.cz/sid/nem_cis" datatype="string"/>
 					</data>
@@ -5672,7 +5672,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="18"/>
 						<datapoint/>
 					</targets>
-					<view ltx="517" lty="145" rbx="618" rby="198"/>
+					<view ltx="517" lty="145" rbx="630" rby="199"/>
 					<data>
 						<comment>
 							<text>ipi_v - Nemocniční číslo</text>
@@ -5687,7 +5687,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="31"/>
 					</targets>
-					<view ltx="429" lty="150" rbx="480" rby="203"/>
+					<view ltx="429" lty="150" rbx="485" rby="204"/>
 				</component>
 				<component name="value" library="core" uid="9251" kind="6">
 					<sources>
@@ -5696,7 +5696,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="41"/>
 					</targets>
-					<view ltx="119" lty="106" rbx="194" rby="143"/>
+					<view ltx="119" lty="106" rbx="203" rby="144"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="value"/>
@@ -5712,7 +5712,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="43"/>
 					</targets>
-					<view ltx="118" lty="177" rbx="201" rby="214"/>
+					<view ltx="118" lty="177" rbx="209" rby="215"/>
 					<data>
 						<input datatype="anyURI"/>
 						<parameter usageKind="input" name="system"/>
@@ -5729,7 +5729,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="27"/>
 					</targets>
-					<view ltx="765" lty="90" rbx="876" rby="143"/>
+					<view ltx="765" lty="90" rbx="887" rby="144"/>
 				</component>
 				<component name="document" library="xml" uid="9248" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" SaveRelativePaths="0"/>
@@ -5805,7 +5805,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="9"/>
 						<datapoint/>
 					</targets>
-					<view ltx="389" rbx="490" rby="53"/>
+					<view ltx="389" rbx="502" rby="54"/>
 					<data>
 						<comment>
 							<text>Občanský průkaz</text>
@@ -5820,7 +5820,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="5"/>
 					</targets>
-					<view ltx="300" lty="11" rbx="351" rby="64"/>
+					<view ltx="300" lty="11" rbx="356" rby="65"/>
 				</component>
 				<component name="document" library="xml" uid="9260" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" SaveRelativePaths="0"/>
@@ -5858,7 +5858,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="7"/>
 						<datapoint/>
 					</targets>
-					<view ltx="389" lty="72" rbx="490" rby="125"/>
+					<view ltx="389" lty="72" rbx="502" rby="126"/>
 					<data>
 						<comment>
 							<text>Platnost OP</text>
@@ -5872,7 +5872,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="14"/>
 					</targets>
-					<view lty="165" rbx="106" rby="202"/>
+					<view lty="165" rbx="120" rby="203"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="platnost_Do"/>
@@ -5888,7 +5888,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="15"/>
 					</targets>
-					<view lty="100" rbx="83" rby="137"/>
+					<view lty="100" rbx="91" rby="138"/>
 					<data>
 						<input datatype="anyURI"/>
 						<parameter usageKind="input" name="system"/>
@@ -5901,7 +5901,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="17"/>
 					</targets>
-					<view lty="72" rbx="136" rby="88"/>
+					<view lty="72" rbx="151" rby="89"/>
 					<data>
 						<constant value="https://ncez.mzcr.cz/fhir/sid/op" datatype="string"/>
 					</data>
@@ -5913,7 +5913,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="13"/>
 					</targets>
-					<view rbx="75" rby="37"/>
+					<view rbx="84" rby="38"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="value"/>
@@ -5947,7 +5947,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="1"/>
 					</targets>
-					<view ltx="238" lty="37" rbx="289" rby="90"/>
+					<view ltx="238" lty="37" rbx="294" rby="91"/>
 				</component>
 				<component name="filter" library="core" uid="9269" kind="3">
 					<sources>
@@ -5958,7 +5958,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="7"/>
 						<datapoint/>
 					</targets>
-					<view ltx="389" rbx="490" rby="53"/>
+					<view ltx="389" rbx="502" rby="54"/>
 					<data>
 						<comment>
 							<text>Pas</text>
@@ -6001,7 +6001,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="9"/>
 						<datapoint/>
 					</targets>
-					<view ltx="389" lty="72" rbx="490" rby="125"/>
+					<view ltx="389" lty="72" rbx="502" rby="126"/>
 					<data>
 						<comment>
 							<text>Platnost Pasu</text>
@@ -6015,7 +6015,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="14"/>
 					</targets>
-					<view lty="157" rbx="106" rby="194"/>
+					<view lty="157" rbx="120" rby="195"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="platnost_Do"/>
@@ -6028,7 +6028,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="17"/>
 					</targets>
-					<view lty="64" rbx="132" rby="80"/>
+					<view lty="64" rbx="147" rby="81"/>
 					<data>
 						<constant value="http://hl7.org/fhir/sid/passport-CZE" datatype="string"/>
 					</data>
@@ -6040,7 +6040,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="15"/>
 					</targets>
-					<view lty="88" rbx="83" rby="125"/>
+					<view lty="88" rbx="91" rby="126"/>
 					<data>
 						<input datatype="anyURI"/>
 						<parameter usageKind="input" name="system"/>
@@ -6056,7 +6056,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="13"/>
 					</targets>
-					<view rbx="75" rby="37"/>
+					<view rbx="84" rby="38"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="value"/>
@@ -6090,13 +6090,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="19"/>
 					</targets>
-					<view ltx="399" lty="1362" rbx="450" rby="1415"/>
+					<view ltx="399" lty="1362" rbx="455" rby="1416"/>
 				</component>
 				<component name="constant" library="core" uid="9291" kind="2">
 					<targets>
 						<datapoint pos="0" key="17"/>
 					</targets>
-					<view ltx="314" lty="1399" rbx="361" rby="1415"/>
+					<view ltx="314" lty="1399" rbx="363" rby="1416"/>
 					<data>
 						<constant value="R" datatype="string"/>
 					</data>
@@ -6105,7 +6105,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="11"/>
 					</targets>
-					<view ltx="314" lty="1293" rbx="360" rby="1309"/>
+					<view ltx="314" lty="1293" rbx="362" rby="1310"/>
 					<data>
 						<constant value="Z" datatype="string"/>
 					</data>
@@ -6114,7 +6114,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="4"/>
 					</targets>
-					<view ltx="314" lty="1165" rbx="360" rby="1181"/>
+					<view ltx="314" lty="1165" rbx="362" rby="1182"/>
 					<data>
 						<constant value="K" datatype="string"/>
 					</data>
@@ -6127,13 +6127,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="44"/>
 					</targets>
-					<view ltx="500" lty="1095" rbx="577" rby="1149"/>
+					<view ltx="500" lty="1095" rbx="585" rby="1151"/>
 				</component>
 				<component name="document" library="xml" uid="9405" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="781" lty="1197" rbx="929" rby="1278"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://www.altova.com/mapforce"/>
@@ -6184,7 +6184,7 @@ Povinný prvek</text>
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="780" lty="1336" rbx="929" rby="1400"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://www.altova.com/mapforce"/>
@@ -6213,7 +6213,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="27"/>
 						<datapoint/>
 					</targets>
-					<view ltx="511" lty="1323" rbx="612" rby="1376"/>
+					<view ltx="511" lty="1323" rbx="624" rby="1377"/>
 				</component>
 				<component name="lopr" library="provisio" uid="9416" kind="19" visible="0">
 					<view ltx="976" lty="1344" rbx="1292" rby="1395"/>
@@ -6246,7 +6246,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="75"/>
 					</targets>
-					<view ltx="980" lty="282" rbx="1027" rby="298"/>
+					<view ltx="980" lty="282" rbx="1029" rby="299"/>
 					<data>
 						<constant value="A" datatype="string"/>
 					</data>
@@ -6259,7 +6259,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="13"/>
 					</targets>
-					<view ltx="399" lty="1256" rbx="450" rby="1309"/>
+					<view ltx="399" lty="1256" rbx="455" rby="1310"/>
 				</component>
 				<component name="lopk" library="provisio" uid="9378" kind="19" visible="0">
 					<view ltx="976" lty="1074" rbx="1289" rby="1128"/>
@@ -6292,7 +6292,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="108"/>
 					</targets>
-					<view ltx="320" lty="142" rbx="368" rby="158"/>
+					<view ltx="320" lty="142" rbx="370" rby="159"/>
 					<data>
 						<constant value="G" datatype="string"/>
 					</data>
@@ -6301,7 +6301,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="135"/>
 					</targets>
-					<view ltx="320" lty="157" rbx="366" rby="173"/>
+					<view ltx="320" lty="157" rbx="368" rby="174"/>
 					<data>
 						<constant value="S" datatype="string"/>
 					</data>
@@ -6310,7 +6310,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="136"/>
 					</targets>
-					<view ltx="321" lty="174" rbx="369" rby="190"/>
+					<view ltx="321" lty="174" rbx="371" rby="191"/>
 					<data>
 						<constant value="Q" datatype="string"/>
 					</data>
@@ -6319,7 +6319,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="137"/>
 					</targets>
-					<view ltx="321" lty="190" rbx="367" rby="206"/>
+					<view ltx="321" lty="190" rbx="370" rby="207"/>
 					<data>
 						<constant value="B" datatype="string"/>
 					</data>
@@ -6328,7 +6328,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="118"/>
 					</targets>
-					<view ltx="321" lty="205" rbx="369" rby="221"/>
+					<view ltx="321" lty="205" rbx="371" rby="222"/>
 					<data>
 						<constant value="N" datatype="string"/>
 					</data>
@@ -6337,7 +6337,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="138"/>
 					</targets>
-					<view ltx="322" lty="222" rbx="370" rby="238"/>
+					<view ltx="322" lty="222" rbx="373" rby="239"/>
 					<data>
 						<constant value="O" datatype="string"/>
 					</data>
@@ -6346,7 +6346,7 @@ Povinný prvek</text>
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="781" lty="1054" rbx="929" rby="1136"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://www.altova.com/mapforce"/>
@@ -6370,7 +6370,7 @@ Povinný prvek</text>
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="765" lty="912" rbx="924" rby="996"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://www.altova.com/mapforce"/>
@@ -6394,7 +6394,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="82"/>
 					</targets>
-					<view ltx="318" lty="93" rbx="368" rby="109"/>
+					<view ltx="318" lty="93" rbx="370" rby="110"/>
 					<data>
 						<constant value="M" datatype="string"/>
 					</data>
@@ -6403,7 +6403,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="103"/>
 					</targets>
-					<view ltx="319" lty="110" rbx="366" rby="126"/>
+					<view ltx="319" lty="110" rbx="368" rby="127"/>
 					<data>
 						<constant value="V" datatype="string"/>
 					</data>
@@ -6412,7 +6412,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="109"/>
 					</targets>
-					<view ltx="319" lty="125" rbx="367" rby="141"/>
+					<view ltx="319" lty="125" rbx="369" rby="142"/>
 					<data>
 						<constant value="D" datatype="string"/>
 					</data>
@@ -6425,7 +6425,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="155"/>
 					</targets>
-					<view ltx="355" lty="912" rbx="430" rby="965"/>
+					<view ltx="355" lty="912" rbx="437" rby="966"/>
 				</component>
 				<component name="starts-with" library="core" uid="9516" kind="5">
 					<sources>
@@ -6435,13 +6435,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="178"/>
 					</targets>
-					<view ltx="371" lty="938" rbx="446" rby="991"/>
+					<view ltx="371" lty="938" rbx="453" rby="992"/>
 				</component>
 				<component name="constant" library="core" uid="9511" kind="2">
 					<targets>
 						<datapoint pos="0" key="171"/>
 					</targets>
-					<view ltx="264" lty="931" rbx="310" rby="947"/>
+					<view ltx="264" lty="931" rbx="312" rby="948"/>
 					<data>
 						<constant value="P" datatype="string"/>
 					</data>
@@ -6450,7 +6450,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="160"/>
 					</targets>
-					<view ltx="265" lty="948" rbx="313" rby="964"/>
+					<view ltx="265" lty="948" rbx="315" rby="965"/>
 					<data>
 						<constant value="U" datatype="string"/>
 					</data>
@@ -6459,7 +6459,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="157"/>
 					</targets>
-					<view ltx="265" lty="963" rbx="308" rby="979"/>
+					<view ltx="265" lty="963" rbx="310" rby="980"/>
 					<data>
 						<constant value="I" datatype="string"/>
 					</data>
@@ -6471,7 +6471,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="124"/>
 					</targets>
-					<view ltx="757" lty="64" rbx="827" rby="101"/>
+					<view ltx="757" lty="64" rbx="834" rby="102"/>
 					<data>
 						<comment>
 							<text>Neexistuje identifikator k sci (vznik Q mají totiž stejný s LOP)</text>
@@ -6487,7 +6487,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="174"/>
 					</targets>
-					<view ltx="478" lty="896" rbx="562" rby="967"/>
+					<view ltx="478" lty="896" rbx="570" rby="969"/>
 				</component>
 				<component name="entry" library="core" uid="9518" kind="3">
 					<sources>
@@ -6498,7 +6498,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="173"/>
 						<datapoint/>
 					</targets>
-					<view ltx="614" lty="903" rbx="715" rby="956"/>
+					<view ltx="614" lty="903" rbx="727" rby="957"/>
 				</component>
 				<component name="logical-and" library="core" uid="9482" kind="5" growable="1" growablebasename="value">
 					<sources>
@@ -6509,7 +6509,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="154"/>
 					</targets>
-					<view ltx="902" rbx="986" rby="71"/>
+					<view ltx="902" rbx="994" rby="73"/>
 				</component>
 				<component name="not-exists" library="core" uid="9480" kind="5">
 					<sources>
@@ -6518,7 +6518,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="120"/>
 					</targets>
-					<view ltx="757" rbx="827" rby="37"/>
+					<view ltx="757" rbx="834" rby="38"/>
 					<data>
 						<comment>
 							<text>Neexistuje k tomu specimen</text>
@@ -6534,13 +6534,13 @@ Povinný prvek</text>
 						<datapoint pos="0" key="150"/>
 						<datapoint/>
 					</targets>
-					<view ltx="1028" rbx="1129" rby="53"/>
+					<view ltx="1028" rbx="1141" rby="54"/>
 				</component>
 				<component name="document" library="xml" uid="9419" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="803" lty="114" rbx="951" rby="196"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://www.altova.com/mapforce"/>
@@ -6591,7 +6591,7 @@ Povinný prvek</text>
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="782" lty="330" rbx="929" rby="414"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://hl7.org/fhir"/>
@@ -6625,7 +6625,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="134"/>
 					</targets>
-					<view ltx="635" lty="17" rbx="719" rby="188"/>
+					<view ltx="635" lty="17" rbx="727" rby="192"/>
 				</component>
 				<component name="logical-and" library="core" uid="9541" kind="5" growable="1" growablebasename="value">
 					<sources>
@@ -6635,7 +6635,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="215"/>
 					</targets>
-					<view ltx="483" lty="364" rbx="560" rby="418"/>
+					<view ltx="483" lty="364" rbx="568" rby="420"/>
 				</component>
 				<component name="not-exists" library="core" uid="9383" kind="5">
 					<sources>
@@ -6644,7 +6644,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="41"/>
 					</targets>
-					<view ltx="398" lty="1074" rbx="468" rby="1111"/>
+					<view ltx="398" lty="1074" rbx="475" rby="1112"/>
 					<data>
 						<comment>
 							<text>Neexistuje k tomu specimen</text>
@@ -6659,13 +6659,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="176"/>
 					</targets>
-					<view ltx="340" lty="886" rbx="415" rby="939"/>
+					<view ltx="340" lty="886" rbx="422" rby="940"/>
 				</component>
 				<component name="document" library="xml" uid="9528" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="782" lty="444" rbx="935" rby="496"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://www.altova.com/mapforce"/>
@@ -6696,7 +6696,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="228"/>
 					</targets>
-					<view ltx="493" lty="538" rbx="570" rby="592"/>
+					<view ltx="493" lty="538" rbx="578" rby="594"/>
 				</component>
 				<component name="exists" library="core" uid="9559" kind="5">
 					<sources>
@@ -6705,7 +6705,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="235"/>
 					</targets>
-					<view ltx="376" lty="509" rbx="444" rby="546"/>
+					<view ltx="376" lty="509" rbx="452" rby="547"/>
 					<data>
 						<comment>
 							<text>Existuje k tomu specimen</text>
@@ -6720,7 +6720,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="1"/>
 					</targets>
-					<view ltx="399" lty="1120" rbx="450" rby="1173"/>
+					<view ltx="399" lty="1120" rbx="455" rby="1174"/>
 				</component>
 				<component name="exists" library="core" uid="9543" kind="5">
 					<sources>
@@ -6729,7 +6729,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="219"/>
 					</targets>
-					<view ltx="360" lty="366" rbx="428" rby="403"/>
+					<view ltx="360" lty="366" rbx="436" rby="404"/>
 				</component>
 				<component name="entry" library="core" uid="9557" kind="3">
 					<sources>
@@ -6740,7 +6740,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="227"/>
 						<datapoint/>
 					</targets>
-					<view ltx="609" lty="538" rbx="710" rby="591"/>
+					<view ltx="609" lty="538" rbx="722" rby="592"/>
 				</component>
 				<component name="entry" library="core" uid="9540" kind="3">
 					<sources>
@@ -6751,34 +6751,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="212"/>
 						<datapoint/>
 					</targets>
-					<view ltx="595" lty="366" rbx="696" rby="419"/>
-				</component>
-				<component name="lip" library="provisio" uid="9507" kind="19" visible="0">
-					<view ltx="985" lty="925" rbx="1295" rby="991"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="Observation" ns="1" componentid="9510" expanded="1">
-								<entry name="Observation" inpkey="190"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="lip" ns="1" componentid="3175" expanded="1">
-								<entry name="lip" outkey="191"/>
-							</entry>
-						</root>
-					</data>
+					<view ltx="595" lty="366" rbx="708" rby="420"/>
 				</component>
 				<component name="equal" library="core" uid="9556" kind="5">
 					<sources>
@@ -6788,7 +6761,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="230"/>
 					</targets>
-					<view ltx="392" lty="563" rbx="443" rby="616"/>
+					<view ltx="392" lty="563" rbx="448" rby="617"/>
 				</component>
 				<component name="entry" library="core" uid="9287" kind="3">
 					<sources>
@@ -6799,13 +6772,13 @@ Povinný prvek</text>
 						<datapoint pos="0" key="28"/>
 						<datapoint/>
 					</targets>
-					<view ltx="511" lty="1217" rbx="612" rby="1270"/>
+					<view ltx="511" lty="1217" rbx="624" rby="1271"/>
 				</component>
 				<component name="constant" library="core" uid="9607" kind="2">
 					<targets>
 						<datapoint pos="0" key="249"/>
 					</targets>
-					<view ltx="409" lty="681" rbx="457" rby="697"/>
+					<view ltx="409" lty="681" rbx="459" rby="698"/>
 					<data>
 						<constant value="Q" datatype="string"/>
 					</data>
@@ -6814,7 +6787,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="223"/>
 					</targets>
-					<view ltx="305" lty="600" rbx="351" rby="616"/>
+					<view ltx="305" lty="600" rbx="353" rby="617"/>
 					<data>
 						<constant value="K" datatype="string"/>
 					</data>
@@ -6823,7 +6796,7 @@ Povinný prvek</text>
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="782" lty="538" rbx="935" rby="590"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://www.altova.com/mapforce"/>
@@ -6850,7 +6823,7 @@ Povinný prvek</text>
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="776" lty="644" rbx="929" rby="696"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://www.altova.com/mapforce"/>
@@ -6882,13 +6855,13 @@ Povinný prvek</text>
 						<datapoint pos="0" key="238"/>
 						<datapoint/>
 					</targets>
-					<view ltx="603" lty="644" rbx="704" rby="697"/>
+					<view ltx="603" lty="644" rbx="716" rby="698"/>
 				</component>
 				<component name="constant" library="core" uid="9619" kind="2">
 					<targets>
 						<datapoint pos="0" key="255"/>
 					</targets>
-					<view ltx="410" lty="779" rbx="456" rby="795"/>
+					<view ltx="410" lty="779" rbx="457" rby="796"/>
 					<data>
 						<constant value="L" datatype="string"/>
 					</data>
@@ -6901,13 +6874,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="240"/>
 					</targets>
-					<view ltx="492" lty="645" rbx="543" rby="698"/>
+					<view ltx="492" lty="645" rbx="548" rby="699"/>
 				</component>
 				<component name="document" library="xml" uid="9624" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="776" lty="742" rbx="935" rby="807"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://www.altova.com/mapforce"/>
@@ -6942,7 +6915,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="257"/>
 						<datapoint/>
 					</targets>
-					<view ltx="604" lty="742" rbx="705" rby="795"/>
+					<view ltx="604" lty="742" rbx="717" rby="796"/>
 				</component>
 				<component name="equal" library="core" uid="9621" kind="5">
 					<sources>
@@ -6952,7 +6925,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="253"/>
 					</targets>
-					<view ltx="493" lty="743" rbx="544" rby="796"/>
+					<view ltx="493" lty="743" rbx="549" rby="797"/>
 				</component>
 				<component name="document" library="xml" uid="9376" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
@@ -7025,7 +6998,7 @@ Povinný prvek</text>
 						<datapoint pos="0" key="32"/>
 						<datapoint/>
 					</targets>
-					<view ltx="616" lty="1095" rbx="717" rby="1148"/>
+					<view ltx="616" lty="1095" rbx="729" rby="1149"/>
 				</component>
 				<component name="dat_du" library="core" uid="9424" kind="6">
 					<sources>
@@ -7034,7 +7007,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="71"/>
 					</targets>
-					<view ltx="31" lty="318" rbx="113" rby="355"/>
+					<view ltx="31" lty="318" rbx="124" rby="356"/>
 					<data>
 						<input datatype="dateTime"/>
 						<parameter usageKind="input" name="dat_du"/>
@@ -7085,7 +7058,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="139"/>
 					</targets>
-					<view ltx="394" lty="48" rbx="469" rby="101"/>
+					<view ltx="394" lty="48" rbx="476" rby="102"/>
 				</component>
 				<component name="starts-with" library="core" uid="9470" kind="5">
 					<sources>
@@ -7095,7 +7068,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="140"/>
 					</targets>
-					<view ltx="409" lty="74" rbx="484" rby="127"/>
+					<view ltx="409" lty="74" rbx="491" rby="128"/>
 				</component>
 				<component name="starts-with" library="core" uid="9472" kind="5">
 					<sources>
@@ -7105,7 +7078,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="141"/>
 					</targets>
-					<view ltx="425" lty="100" rbx="500" rby="153"/>
+					<view ltx="425" lty="100" rbx="507" rby="154"/>
 				</component>
 				<component name="starts-with" library="core" uid="9471" kind="5">
 					<sources>
@@ -7115,7 +7088,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="142"/>
 					</targets>
-					<view ltx="440" lty="126" rbx="515" rby="179"/>
+					<view ltx="440" lty="126" rbx="522" rby="180"/>
 				</component>
 				<component name="starts-with" library="core" uid="9476" kind="5">
 					<sources>
@@ -7125,7 +7098,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="143"/>
 					</targets>
-					<view ltx="454" lty="152" rbx="529" rby="205"/>
+					<view ltx="454" lty="152" rbx="536" rby="206"/>
 				</component>
 				<component name="starts-with" library="core" uid="9475" kind="5">
 					<sources>
@@ -7135,7 +7108,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="144"/>
 					</targets>
-					<view ltx="469" lty="178" rbx="544" rby="231"/>
+					<view ltx="469" lty="178" rbx="551" rby="232"/>
 				</component>
 				<component name="starts-with" library="core" uid="9473" kind="5">
 					<sources>
@@ -7145,7 +7118,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="145"/>
 					</targets>
-					<view ltx="485" lty="204" rbx="560" rby="257"/>
+					<view ltx="485" lty="204" rbx="567" rby="258"/>
 				</component>
 				<component name="starts-with" library="core" uid="9474" kind="5">
 					<sources>
@@ -7155,7 +7128,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="146"/>
 					</targets>
-					<view ltx="500" lty="230" rbx="575" rby="283"/>
+					<view ltx="500" lty="230" rbx="582" rby="284"/>
 				</component>
 				<component name="starts-with" library="core" uid="9477" kind="5">
 					<sources>
@@ -7165,7 +7138,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="148"/>
 					</targets>
-					<view ltx="518" lty="257" rbx="593" rby="310"/>
+					<view ltx="518" lty="257" rbx="600" rby="311"/>
 				</component>
 				<component name="loi" library="provisio" uid="9527" kind="19" visible="0">
 					<view ltx="1028" lty="366" rbx="1329" rby="479"/>
@@ -7202,6 +7175,33 @@ Povinný prvek</text>
 							</header>
 							<entry name="loi" ns="1" componentid="3154" expanded="1">
 								<entry name="loi" outkey="204"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="lip" library="provisio" uid="9507" kind="19" visible="0">
+					<view ltx="985" lty="925" rbx="1295" rby="991"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Observation" ns="1" componentid="9510" expanded="1">
+								<entry name="Observation" inpkey="190"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="lip" ns="1" componentid="3175" expanded="1">
+								<entry name="lip" outkey="191"/>
 							</entry>
 						</root>
 					</data>
@@ -7387,7 +7387,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="29"/>
 					</targets>
-					<view ltx="410" lty="-119" rbx="466" rby="-103"/>
+					<view ltx="410" lty="-119" rbx="470" rby="-102"/>
 					<data>
 						<constant value="OO" datatype="string"/>
 						<comment>
@@ -7399,7 +7399,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="30"/>
 					</targets>
-					<view ltx="411" lty="-84" rbx="465" rby="-68"/>
+					<view ltx="411" lty="-84" rbx="468" rby="-67"/>
 					<data>
 						<constant value="OS" datatype="string"/>
 						<comment>
@@ -7411,7 +7411,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="31"/>
 					</targets>
-					<view ltx="411" lty="-47" rbx="467" rby="-31"/>
+					<view ltx="411" lty="-47" rbx="470" rby="-30"/>
 					<data>
 						<constant value="OD" datatype="string"/>
 						<comment>
@@ -7423,7 +7423,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="1"/>
 					</targets>
-					<view ltx="352" lty="291" rbx="466" rby="307"/>
+					<view ltx="352" lty="291" rbx="475" rby="308"/>
 					<data>
 						<constant value="LAB.ODBER.LAB" datatype="string"/>
 					</data>
@@ -7438,7 +7438,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="36"/>
 					</targets>
-					<view ltx="584" lty="-112" rbx="668" rby="-24"/>
+					<view ltx="584" lty="-112" rbx="676" rby="-22"/>
 				</component>
 				<component name="equal" library="core" uid="9329" kind="5">
 					<sources>
@@ -7448,13 +7448,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="12"/>
 					</targets>
-					<view ltx="733" lty="-71" rbx="784" rby="-18"/>
+					<view ltx="733" lty="-71" rbx="789" rby="-17"/>
 				</component>
 				<component name="true" library="xpath2" uid="9327" kind="5">
 					<targets>
 						<datapoint pos="0" key="37"/>
 					</targets>
-					<view ltx="618" lty="-14" rbx="662" rby="23"/>
+					<view ltx="618" lty="-14" rbx="666" rby="24"/>
 				</component>
 				<component name="boolean" library="core" uid="9634" kind="5">
 					<sources>
@@ -7463,7 +7463,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="618" lty="92" rbx="681" rby="129"/>
+					<view ltx="618" lty="92" rbx="688" rby="130"/>
 				</component>
 				<component name="value-map" library="core" uid="9372" kind="23">
 					<sources>
@@ -7472,7 +7472,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="430" lty="10" rbx="505" rby="47"/>
+					<view ltx="430" lty="10" rbx="510" rby="48"/>
 					<data>
 						<valuemap defaultValueMode="custom">
 							<valuemapTable>
@@ -7493,7 +7493,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="40"/>
 					</targets>
-					<view ltx="410" lty="-155" rbx="465" rby="-139"/>
+					<view ltx="410" lty="-155" rbx="468" rby="-138"/>
 					<data>
 						<constant value="OR" datatype="string"/>
 						<comment>
@@ -7510,7 +7510,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="28"/>
 					</targets>
-					<view ltx="851" lty="209" rbx="945" rby="280"/>
+					<view ltx="851" lty="209" rbx="955" rby="282"/>
 				</component>
 				<component name="equal" library="core" uid="9311" kind="5">
 					<sources>
@@ -7520,7 +7520,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="3"/>
 					</targets>
-					<view ltx="548" lty="254" rbx="599" rby="307"/>
+					<view ltx="548" lty="254" rbx="604" rby="308"/>
 				</component>
 				<component name="if-else" library="core" uid="9333" kind="4">
 					<sources>
@@ -7531,7 +7531,7 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="20"/>
 					</targets>
-					<view ltx="850" lty="374" rbx="944" rby="445"/>
+					<view ltx="850" lty="374" rbx="954" rby="447"/>
 				</component>
 				<component name="if-else" library="core" uid="9334" kind="4">
 					<sources>
@@ -7542,13 +7542,13 @@ Povinný prvek</text>
 					<targets>
 						<datapoint pos="0" key="25"/>
 					</targets>
-					<view ltx="850" lty="291" rbx="944" rby="362"/>
+					<view ltx="850" lty="291" rbx="954" rby="364"/>
 				</component>
 				<component name="document" library="xml" uid="9363" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="12" lty="177" rbx="320" rby="201"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://hl7.org/fhir"/>
