@@ -4,13 +4,16 @@ import os
 import re
 
 
-def getAltovaNameNS(component):
+def getAltovaNameNS(root):
         ns=0
-        for namespace in component.findall("./data/root/header/namespaces/namespace[@uid!='']"):
-            ns+=1
-            if namespace.get('uid')=="http://www.altova.com/mapforce":
+        emptyNS=0
+        for namespace in root.findall("./header/namespaces/namespace"):
+            if not "uid" in namespace.attrib.keys():
+                emptyNS = ns
+            if (namespace.get('uid')=="http://www.altova.com/mapforce"):
                 return str(ns)
-        return str(0)
+            ns+=1
+        return str(emptyNS)
 
 def name_mdf2fml(name_mfd):
             name_fml=name_mfd
@@ -149,7 +152,8 @@ class Node:
             self.component = parent_map[self.component]
             if self.component.tag=='entry':
                 topEntry = self.component
-        self.altovaNS = getAltovaNameNS(self.component)
+        
+        self.altovaNS = getAltovaNameNS(parent_map[topEntry])
         
         self.name=self.findName(firstSource)
 
@@ -194,14 +198,16 @@ class Node:
             # self.name = self.parseName(parent_map[entry],function,parent_map,blocks,isSource,firstSource, sN,1)
             if (entry.get('name')!='value' or entry.get('type')!='attribute'):
                 if (entry.get('type')!=None and entry.get('type')=='attribute') or (parent_map[entry].get('ns')!=None and parent_map[entry].get('ns')!=self.altovaNS):
-                    if isSource and entry.get('type')!='attribute' and len(list(entry))==0 and not isFunctionParameter:
+                    if entry.get('type')!='attribute' and not isFunctionParameter:
+                        self.name += ".txt"
+                    if entry.get('type')!='attribute' and len(list(entry))==0 and not isFunctionParameter:
                         #self.name += "."+entry.get('name')+".txt"
                         self.isLeaf  = True
                     #else:
                         #self.name += "."+entry.get('name')   
             else:
                 self.isLeaf = True
-        elif entry.tag=="datapoint" and (self.component.get("name") in ["value-map", "concat", "value"]):
+        elif entry.tag=="datapoint" and (self.component.get("name") in ["value-map", "concat", "value", "first-items","last-items"]):
             if self.component.get("name")=="value-map":
                 self.valuemapUid = self.component.get("uid")
                 self.name = f"#cm{self.valuemapUid}"
@@ -214,7 +220,7 @@ class Node:
             else:
                 self.coreFunction=self.component
                 if isSource:
-                    for s in self.component.findall("./sources/datapoint"):
+                    for s in self.component.findall("./sources/datapoint[@pos!='']"):
                         self.inpkeys[s.get('key')]="x"+s.get('pos')
                 if len(self.inpkeys)>0:
                     self.functionArg = "x"+entry.get('pos')
@@ -641,7 +647,7 @@ class FmlNamespace:
 
         if (sourceNode!=None and sourceNode.constantValue=="" and self.sourceNamespace!="" and sourceNode.isOutside(self.sourceNamespace) and (self.sourceNamespace.count('.')>0)):
             print("co to je?")
-        while ( self.level>self.pathLevel[path] and (force or (targetNode==None or targetNode.isOutsideByEntry(self.targetNamespace,self.targetNamespaceEntry)) or (sourceNode.constantValue=="" and self.sourceNamespace!="" and sourceNode.isOutside(self.sourceNamespace) and (self.sourceNamespace.count('.')>0)))):
+        while ( self.level>self.pathLevel[path] and (force or (targetNode==None or targetNode.isOutsideByEntry(self.targetNamespace,self.targetNamespaceEntry)) or (sourceNode.whereCondition!="") or (sourceNode.constantValue=="" and self.sourceNamespace!="" and sourceNode.isOutside(self.sourceNamespace) and (self.sourceNamespace.count('.')>0)))):
                             #or targetNode.isOutside(targetPath) ):
             #if targetNode!=None and targetNode.name == "c2683.resource.AllergyIntolerance.clinicalStatus.coding":
             #    print("?")
@@ -884,8 +890,14 @@ class Function:
         self.argumentPrefix = dict()
         # variables in function
         self.variables = []
+        for sourceComponent in component.findall("./structure/children/component/data/root/entry/file[@role='inputinstance']/../../../.."):
+            name = "bundle"
+            self.uid2name[sourceComponent.get('uid')] = name
+            self.arguments.append(f"{name}")
+            self.argumentType[f"{name}"] = getType(sourceComponent.find("./data/document").get("instanceroot"))
+            self.argumentPrefix[f"{name}"] = "source"
         for sourceComponent in component.findall("./structure/children/component/data/document[@inputinstance!='']/../.."):
-            name = "ds"
+            name = "bundle"
             self.uid2name[sourceComponent.get('uid')] = name
             self.arguments.append(f"{name}")
             self.argumentType[f"{name}"] = getType(sourceComponent.find("./data/document").get("instanceroot"))
@@ -907,8 +919,14 @@ class Function:
                 self.argumentType[f"{name}"]=getTypeNS(sourceEntry.get("name"),sourceEntry.get("ns"))
                 self.argumentPrefix[f"{name}"] = "source"
 
+        for targetComponent in component.findall("./structure/children/component/data/root/entry/file[@role='outputinstance']/../../../.."):
+            name = "ds"
+            self.uid2name[targetComponent.get('uid')] = name
+            self.arguments.append(f"{name}")
+            self.argumentType[f"{name}"]= getType(targetComponent.find("./data/document").get("instanceroot"))
+            self.argumentPrefix[f"{name}"] = "target"
         for targetComponent in component.findall("./structure/children/component/data/document[@outputinstance!='']/../.."):
-            name = "bundle"
+            name = "ds"
             self.uid2name[targetComponent.get('uid')] = name
             self.arguments.append(f"{name}")
             self.argumentType[f"{name}"]= getType(targetComponent.find("./data/document").get("instanceroot"))
@@ -916,8 +934,8 @@ class Function:
         for targetComponent in component.findall("./structure/children/component/data/parameter[@usageKind='output']/../.."):
             name = targetComponent.find("./data/parameter").get("name")
             self.uid2name[targetComponent.get('uid')] = name
-            targetEntry = targetComponent.find("./data/parameter/root/entry")
-            if targetEntry==None:
+            targetEntries = targetComponent.findall("./data/parameter/root/entry")
+            if targetEntries==None:
                 output = targetComponent.find("./data/output")
                 if output==None or output.get("datatype")=="":
                     continue
@@ -927,11 +945,11 @@ class Function:
                     self.argumentPrefix[f"{name}"] = "target"
             else:
                 self.arguments.append(f"{name}")
-                self.argumentType[f"{name}"]=getTypeNS(targetEntry.get("name"),targetEntry.get("ns"))
+                self.argumentType[f"{name}"]=getTypeNS(targetEntries[-1].get("name"),targetEntries[-1].get("ns"))
                 self.argumentPrefix[f"{name}"] = "target"
 
         for varComponent in component.findall("./structure/children/component/data/parameter[@usageKind='variable']/../.."):
-            varEntry = varComponent.find("./data/parameter/root/entry")
+            varEntry = varComponent.findall("./data/parameter/root/entry")[-1]
             if varEntry==None:
                 continue
             self.variables.append(f"c{varComponent.get('uid')}")
@@ -981,7 +999,10 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
     
     #if sourceNode.name=="ku_o_labType.dodani":
     #if sourceNode.name=="ku_o_labType.lopk.guid":
-    if targetNode.name=="entry.resource.Composition.section.entry":
+    if targetNode.name=="loi.sci.txt":
+    #if targetNode.name=="lopz.text":
+    #if targetNode.name=="lop.systspec_klic":
+    #entry.resource.Composition.section.entry":
     #"entry.resource.Composition.section.code.coding.system": #entry.resource.Composition.subject":
     #"entry.resource.AllergyIntolerance.meta.lastUpdated":
     #'c3101.resource.ServiceRequest.identifier.value':
@@ -994,8 +1015,12 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
     #"patientReference.identifier.use":
     #"c2683.resource.AllergyIntolerance.meta.tag.code":
         print("!")
+    if targetNode.name.endswith(".txt") and sourceNode.componentType!="" and sourceNode.componentType!="string":
+        targetNode.name = targetNode.name.removesuffix(".txt")
     
-    if sourceNode.functionName=="fixDate" or sourceNode.valuemapUid!="":
+    # TODO: first-items by asi mnelo generovat klicove slovo first ve FML
+    # TODO: last-items by asi mnelo generovat klicove slovo last ve FML 
+    if sourceNode.functionName in ["fixDate","first-items","last-items"] or sourceNode.valuemapUid!="":
       #preskoč speciální funkci
       source = sourceNode
       fromKey=next(iter(sourceNode.inpkeys.keys()))
@@ -1036,7 +1061,8 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
     for fromKey,fromKeyArg in sourceNode.inpkeys.items(): 
         if fromKey in graphinv.keys():
             if graphinv[fromKey][0] in outputNodes.keys():  
-                
+                if fromKey=='206':
+                 print('206')
                 
                 target=Node(inputNodes[fromKey],fml.function,parent_map,blocks,False,True,fml.firstSourceAtLevel[fml.level],False)
                 

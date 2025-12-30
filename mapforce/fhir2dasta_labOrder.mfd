@@ -6,28 +6,6 @@
 		<properties SelectedLanguage="xslt2"/>
 		<structure>
 			<children>
-				<component name="Reference_Patient" library="provisio" uid="5705" kind="19" visible="0">
-					<view ltx="83" lty="493" rbx="246" rby="527"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" componentid="4957"/>
-							<entry name="VGUID" componentid="4958"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="referencePatient" componentid="4953"/>
-						</root>
-					</data>
-				</component>
 				<component name="ds_dasta-4.03.31" library="xml" uid="3252" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" TnsPrefix="ds" AddSchemaLocation="0" WriteXMLStandalone="1"/>
 					<view ltx="1173" lty="91" rbx="1398" rby="384"/>
@@ -95,6 +73,34 @@
 						<document schema="..\schemas\hl7-fhir\bundle.xsd" instanceroot="{http://hl7.org/fhir}Bundle"/>
 					</data>
 				</component>
+				<component name="constant" library="core" uid="9637" kind="2">
+					<targets>
+						<datapoint pos="0" key="64"/>
+					</targets>
+					<view ltx="11" lty="463" rbx="101" rby="480"/>
+					<data>
+						<constant value="urn:uuid:" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="9638" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="65"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="242" lty="480" rbx="324" rby="536"/>
+				</component>
+				<component name="constant" library="core" uid="9639" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="11" lty="541" rbx="101" rby="558"/>
+					<data>
+						<constant value="/_history/" datatype="string"/>
+					</data>
+				</component>
 				<component name="ip_ip" library="provisio" uid="6056" kind="19" visible="0">
 					<view ltx="607" lty="377" rbx="891" rby="442"/>
 					<data>
@@ -131,1097 +137,8 @@
 			<edge from="61" to="63">
 				<data type="2"/>
 			</edge>
+			<edge from="64" to="65"/>
 		</connections>
-	</component>
-	<component name="ku_o_lab_generalAttribute" library="provisio" uid="3047">
-		<structure>
-			<children>
-				<component name="constant" library="core" uid="3057" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="366" lty="8" rbx="502" rby="24"/>
-					<data>
-						<constant value="https://dasta.mzcr.cz/DSAIG.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3058" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="367" lty="25" rbx="503" rby="41"/>
-					<data>
-						<constant value="https://dasta.mzcr.cz/DSAIB.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3053" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="366" lty="-34" rbx="433" rby="-18"/>
-					<data>
-						<constant value="active" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3054" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="366" lty="-18" rbx="432" rby="-2"/>
-					<data>
-						<constant value="order" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3059" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="366" lty="41" rbx="502" rby="57"/>
-					<data>
-						<constant value="https://dasta.mzcr.cz/DSAHX.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3229" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1016" lty="75" rbx="1102" rby="91"/>
-					<data>
-						<constant value="104987-3" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3232" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1016" lty="26" rbx="1076" rby="42"/>
-					<data>
-						<constant value="final" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3265" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="965" lty="387" rbx="1046" rby="403"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3260" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1017" lty="144" rbx="1097" rby="160"/>
-					<data>
-						<constant value="31208-2" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3230" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1017" lty="91" rbx="1152" rby="107"/>
-					<data>
-						<constant value="Supporting clinical information" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5721" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1038" lty="176" rbx="1125" rby="192"/>
-					<data>
-						<constant value="generated" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3261" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1018" lty="160" rbx="1166" rby="176"/>
-					<data>
-						<constant value="Specimen source identified" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5722" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1038" lty="252" rbx="1125" rby="268"/>
-					<data>
-						<constant value="generated" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5719" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1030" lty="107" rbx="1117" rby="123"/>
-					<data>
-						<constant value="generated" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5723" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1245" lty="133" rbx="1291" rby="149"/>
-					<data>
-						<constant value="..." datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3228" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1016" lty="59" rbx="1125" rby="75"/>
-					<data>
-						<constant value="http://loinc.org" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5724" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="145" lty="940" rbx="232" rby="956"/>
-					<data>
-						<constant value="generated" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5725" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="145" lty="956" rbx="256" rby="972"/>
-					<data>
-						<constant value="ServiceRequest" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3269" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1018" lty="219" rbx="1098" rby="235"/>
-					<data>
-						<constant value="64286-8" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3268" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1017" lty="236" rbx="1163" rby="252"/>
-					<data>
-						<constant value="Deprecated Diagnostic imaging order" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3267" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="939" lty="536" rbx="1020" rby="552"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9013" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="450" lty="915" rbx="750" rby="1115"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry">
-									<entry name="resource" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9012" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="480" lty="937" rbx="780" rby="1137"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry">
-									<entry name="resource" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9011" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="502" lty="956" rbx="802" rby="1156"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry">
-									<entry name="resource" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9010" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="535" lty="983" rbx="835" rby="1183"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry">
-									<entry name="resource" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9009" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="562" lty="1003" rbx="862" rby="1203"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry">
-									<entry name="resource" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="FullURL_ServiceRequest" library="provisio" uid="3378" kind="19" visible="0">
-					<view ltx="595" lty="758" rbx="785" rby="775"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="GUID" componentid="3319"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="FullURL_ServiceRequest" componentid="3322"/>
-						</root>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9007" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="609" lty="1041" rbx="909" rby="1241"/>
-					<data>
-						<root scrollposition="1120">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry" expanded="1">
-									<entry name="fullUrl" expanded="1"/>
-									<entry name="resource" expanded="1">
-										<entry name="Composition" expanded="1">
-											<entry name="text">
-												<entry name="status" expanded="1"/>
-											</entry>
-											<entry name="identifier">
-												<entry name="value" expanded="1"/>
-											</entry>
-											<entry name="type">
-												<entry name="coding" expanded="1">
-													<entry name="system" expanded="1"/>
-													<entry name="code" expanded="1"/>
-												</entry>
-											</entry>
-											<entry name="subject" expanded="1">
-												<entry name="reference" expanded="1"/>
-											</entry>
-											<entry name="author" expanded="1">
-												<entry name="reference" expanded="1"/>
-											</entry>
-											<entry name="title" expanded="1"/>
-										</entry>
-										<entry name="ServiceRequest">
-											<entry name="identifier" expanded="1">
-												<entry name="value" expanded="1"/>
-											</entry>
-											<entry name="priority" expanded="1"/>
-											<entry name="code" expanded="1">
-												<entry name="coding">
-													<entry name="system" expanded="1"/>
-													<entry name="code" expanded="1"/>
-													<entry name="display" expanded="1"/>
-												</entry>
-											</entry>
-											<entry name="occurrenceDateTime" expanded="1"/>
-											<entry name="reasonCode">
-												<entry name="coding">
-													<entry name="system" expanded="1"/>
-													<entry name="code" expanded="1"/>
-													<entry name="display" expanded="1"/>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9004" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="672" lty="1093" rbx="972" rby="1293"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="section">
-									<entry name="code">
-										<entry name="coding" expanded="1">
-											<entry name="system" expanded="1"/>
-											<entry name="code" expanded="1"/>
-											<entry name="display" expanded="1"/>
-										</entry>
-									</entry>
-									<entry name="text" expanded="1">
-										<entry name="status" expanded="1"/>
-									</entry>
-									<entry name="emptyReason">
-										<entry name="text" expanded="1"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Composition" ns="http://hl7.org/fhir" type="xml-type"/>
-								<entry name="section" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9014" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="429" lty="901" rbx="729" rby="1101"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry" expanded="1">
-									<entry name="resource" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="starts-with" library="core" uid="3278" kind="5">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="979" lty="288" rbx="1054" rby="341"/>
-				</component>
-				<component name="filter" library="core" uid="3276" kind="3">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-						<datapoint/>
-					</targets>
-					<view ltx="1084" lty="289" rbx="1185" rby="342"/>
-				</component>
-				<component name="document" library="xml" uid="9005" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="650" lty="1073" rbx="950" rby="1273"/>
-					<data>
-						<root scrollposition="230">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="section" expanded="1">
-									<entry name="code">
-										<entry name="coding" expanded="1">
-											<entry name="system" expanded="1"/>
-											<entry name="code" expanded="1"/>
-											<entry name="display" expanded="1"/>
-										</entry>
-									</entry>
-									<entry name="text" expanded="1">
-										<entry name="status" expanded="1"/>
-									</entry>
-									<entry name="entry" expanded="1">
-										<entry name="reference" expanded="1"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Composition" ns="http://hl7.org/fhir" type="xml-type"/>
-								<entry name="section" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="3264" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1093" lty="366" rbx="1168" rby="420"/>
-				</component>
-				<component name="concat" library="core" uid="3270" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1094" lty="499" rbx="1169" rby="553"/>
-				</component>
-				<component name="concat" library="core" uid="3266" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1093" lty="435" rbx="1168" rby="489"/>
-				</component>
-				<component name="concat" library="core" uid="3271" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1094" lty="560" rbx="1169" rby="614"/>
-				</component>
-				<component name="concat" library="core" uid="3380" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1095" lty="697" rbx="1170" rby="751"/>
-				</component>
-				<component name="concat" library="core" uid="5728" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1095" lty="768" rbx="1170" rby="822"/>
-				</component>
-				<component name="document" library="xml" uid="9006" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="628" lty="1057" rbx="928" rby="1257"/>
-					<data>
-						<root scrollposition="564">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="section" expanded="1">
-									<entry name="code" expanded="1">
-										<entry name="coding" expanded="1">
-											<entry name="system" expanded="1"/>
-											<entry name="code" expanded="1"/>
-											<entry name="display" expanded="1"/>
-										</entry>
-									</entry>
-									<entry name="text" expanded="1">
-										<entry name="status" expanded="1"/>
-									</entry>
-									<entry name="entry" expanded="1">
-										<entry name="reference" expanded="1"/>
-									</entry>
-									<entry name="entry" clone="1">
-										<entry name="reference" expanded="1"/>
-									</entry>
-									<entry name="entry" clone="1">
-										<entry name="reference" expanded="1"/>
-									</entry>
-									<entry name="entry" clone="1">
-										<entry name="reference" expanded="1"/>
-									</entry>
-									<entry name="entry" expanded="1" clone="1">
-										<entry name="reference" expanded="1"/>
-									</entry>
-									<entry name="entry" clone="1">
-										<entry name="reference" expanded="1"/>
-									</entry>
-									<entry name="entry" expanded="1" clone="1">
-										<entry name="reference" expanded="1"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Composition" ns="http://hl7.org/fhir" type="xml-type"/>
-								<entry name="section" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="3272" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1095" lty="626" rbx="1170" rby="680"/>
-				</component>
-				<component name="value-map" library="core" uid="5715" kind="23">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1183" lty="-29" rbx="1258" rby="8"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="stat" to="V"/>
-								<entry from="stat" to="S"/>
-								<entry from="asap" to="P"/>
-								<entry from="routine" to="R"/>
-								<entry from="urgent" to="K"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-						<comment>
-							<text>DSAIG
-http://hl7.org/fhir/ValueSet/request-priority</text>
-						</comment>
-					</data>
-				</component>
-				<component name="value-map" library="core" uid="3060" kind="23">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1183" lty="8" rbx="1258" rby="45"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="Běžnou cestou (donáška, svoz) " to="B"/>
-								<entry from="Potrubní poštou" to="R"/>
-								<entry from="Pacientem" to="P"/>
-								<entry from="Realizace odběru v laboratoři" to="L"/>
-								<entry from="Realizace odběru pracovníkem laboratoře na oddělení " to="O"/>
-								<entry from="Uloženo v laboratoři, doobjednávka " to="U"/>
-								<entry from="Vzorky se v této situaci nedodávají" to="N"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
-				</component>
-				<component name="value-map" library="core" uid="3061" kind="23">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="1183" lty="44" rbx="1258" rby="81"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="Běžné vyšetření (implicitně)" to="B"/>
-								<entry from="Preventivní vyšetření" to="P"/>
-								<entry from="Screeningové vyšetření " to="S"/>
-								<entry from="Epidemiologická studie " to="E"/>
-								<entry from="Zhoršení stavu " to="UZ"/>
-								<entry from="Neodkladné přijetí " to="UP"/>
-								<entry from="Po operaci " to="UO"/>
-								<entry from="Dlouhodobé sledování " to="D"/>
-								<entry from="Výzkum " to="V"/>
-								<entry from="Před dialýzou" to="DS"/>
-								<entry from="Po dialýze " to="DE"/>
-								<entry from=" "/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9008" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="83" lty="1133" rbx="383" rby="1333"/>
-					<data>
-						<root scrollposition="2280">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry" expanded="1">
-									<entry name="fullUrl" expanded="1"/>
-									<entry name="resource" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5713" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="651" lty="75" rbx="781" rby="91"/>
-					<data>
-						<constant value="https://hl7.cz/fhir/lab-order/CodeSystem/cz-typeClinicalEvent-cs" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="9103" kind="2">
-					<targets>
-						<datapoint pos="0" key="274"/>
-					</targets>
-					<view ltx="1205" lty="193" rbx="1305" rby="209"/>
-					<data>
-						<constant value="kvuli validaci" datatype="string"/>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3101" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-24" lty="25" rbx="322" rby="774"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry" expanded="1"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="entry" sequence="1">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3049" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="1383" lty="128" rbx="1533" rby="377"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="ku_o_labType" ns="1" type="xml-type" expanded="1">
-									<entry name="guid" type="attribute" inpkey="191"/>
-									<entry name="dat_du" ns="1">
-										<entry name="typ" type="attribute" inpkey="275"/>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="output" name="ku_o_labType">
-							<root>
-								<entry name="ku_o_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="lopz" library="provisio" uid="3137" kind="19" visible="0">
-					<view ltx="597" lty="465" rbx="897" rby="519"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ServiceRequest" componentid="9404" expanded="1"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="lopz" componentid="3135" expanded="1"/>
-						</root>
-					</data>
-				</component>
-				<component name="lopr" library="provisio" uid="3147" kind="19" visible="0">
-					<view ltx="597" lty="547" rbx="897" rby="604"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ServiceRequest" componentid="9414" expanded="1"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="lopr" componentid="3145" expanded="1"/>
-						</root>
-					</data>
-				</component>
-				<component name="lip" library="provisio" uid="3178" kind="19" visible="0">
-					<view ltx="597" lty="635" rbx="908" rby="704"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="Observation" componentid="9510" expanded="1"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="lip" componentid="3175" expanded="1"/>
-						</root>
-					</data>
-				</component>
-				<component name="lopk" library="provisio" uid="3127" kind="19" visible="0">
-					<view ltx="595" lty="376" rbx="898" rby="434"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ServiceRequest" componentid="9380" expanded="1"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="lopk" componentid="3122" expanded="1"/>
-						</root>
-					</data>
-				</component>
-				<component name="lop" library="provisio" uid="3110" kind="19" visible="0">
-					<view ltx="596" lty="289" rbx="908" rby="345"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ServiceRequest" componentid="9423" expanded="1"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="lop" componentid="3104" expanded="1"/>
-						</root>
-					</data>
-				</component>
-				<component name="loi" library="provisio" uid="3160" kind="19" visible="0">
-					<view ltx="597" lty="112" rbx="907" rby="252"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="Specimen" componentid="9524" expanded="1"/>
-							<entry name="ServiceRequest_lop" componentid="9525" expanded="1"/>
-							<entry name="ServiceRequest_lopk" componentid="9552" expanded="1"/>
-							<entry name="ServiceRequest_sci" componentid="9606" expanded="1"/>
-							<entry name="Observation_lod" componentid="9623" expanded="1"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="loi" componentid="3154" expanded="1"/>
-						</root>
-					</data>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="274" to="191"/>
-			<edge from="274" to="275"/>
-		</connections>
-	</component>
-	<component name="los" library="provisio" uid="3067">
-		<structure>
-			<children>
-				<component name="document" library="xml" uid="3071" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="105" lty="400" rbx="255" rby="537"/>
-					<data>
-						<root scrollposition="2">
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="los" expanded="1"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="output" name="los">
-							<root>
-								<entry name="ku_o_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-								<entry name="los" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3087" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="105" lty="217" rbx="267" rby="342"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="ku_o_labType" type="xml-type" expanded="1"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="output" name="ku_o_labType">
-							<root>
-								<entry name="ku_o_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3085" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="871" lty="-20" rbx="1212" rby="514"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry" expanded="1">
-									<entry name="resource" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="entry">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="ku_o_lab_generalAttribute" library="provisio" uid="3089" kind="19" visible="0">
-					<view ltx="418" lty="238" rbx="718" rby="438"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="entry" componentid="3101" expanded="1"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ku_o_labType" componentid="3049" expanded="1"/>
-						</root>
-					</data>
-				</component>
-				<component name="patientReference" library="core" uid="6070" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="105" lty="110" rbx="233" rby="147"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="patientReference" optional="1" sequence="1"/>
-					</data>
-				</component>
-			</children>
-		</structure>
-		<connections/>
 	</component>
 	<component name="lip" library="provisio" uid="3072">
 		<structure>
@@ -1285,8 +202,7 @@ http://hl7.org/fhir/ValueSet/request-priority</text>
 							<result name="result" type="string" defaultValue="R"/>
 						</valuemap>
 						<comment>
-							<text>DSAIU
-http://hl7.org/fhir/quantity-comparator</text>
+							<text>DSAIU http://hl7.org/fhir/quantity-comparator</text>
 						</comment>
 					</data>
 				</component>
@@ -1441,20 +357,10 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="113"/>
 					</targets>
-					<view ltx="486" lty="42" rbx="620" rby="58"/>
+					<view ltx="486" lty="42" rbx="636" rby="59"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSAKB.htm" datatype="string"/>
 					</data>
-				</component>
-				<component name="equal" library="core" uid="9489" kind="5">
-					<sources>
-						<datapoint pos="0" key="106"/>
-						<datapoint pos="1" key="111"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="109"/>
-					</targets>
-					<view ltx="751" lty="364" rbx="802" rby="417"/>
 				</component>
 				<component name="equal" library="core" uid="9492" kind="5">
 					<sources>
@@ -1464,7 +370,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="114"/>
 					</targets>
-					<view ltx="751" lty="416" rbx="802" rby="469"/>
+					<view ltx="751" lty="416" rbx="807" rby="470"/>
 				</component>
 				<component name="value" library="core" uid="9491" kind="3">
 					<sources>
@@ -1475,7 +381,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="117"/>
 						<datapoint/>
 					</targets>
-					<view ltx="859" lty="407" rbx="960" rby="460"/>
+					<view ltx="859" lty="407" rbx="972" rby="461"/>
 				</component>
 				<component name="equal" library="core" uid="9494" kind="5">
 					<sources>
@@ -1485,13 +391,13 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="122"/>
 					</targets>
-					<view ltx="751" lty="512" rbx="802" rby="565"/>
+					<view ltx="751" lty="512" rbx="807" rby="566"/>
 				</component>
 				<component name="constant" library="core" uid="3114" kind="2">
 					<targets>
 						<datapoint pos="0" key="128"/>
 					</targets>
-					<view ltx="486" lty="58" rbx="620" rby="74"/>
+					<view ltx="486" lty="58" rbx="636" rby="75"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSAKT.htm" datatype="string"/>
 					</data>
@@ -1505,13 +411,13 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="126"/>
 						<datapoint/>
 					</targets>
-					<view ltx="859" lty="503" rbx="960" rby="556"/>
+					<view ltx="859" lty="503" rbx="972" rby="557"/>
 				</component>
 				<component name="constant" library="core" uid="3115" kind="2">
 					<targets>
 						<datapoint pos="0" key="153"/>
 					</targets>
-					<view ltx="486" lty="74" rbx="620" rby="90"/>
+					<view ltx="486" lty="74" rbx="636" rby="91"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSAJW.htm" datatype="string"/>
 					</data>
@@ -1524,7 +430,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="130"/>
 					</targets>
-					<view ltx="751" lty="588" rbx="802" rby="641"/>
+					<view ltx="751" lty="588" rbx="807" rby="642"/>
 				</component>
 				<component name="value" library="core" uid="9495" kind="3">
 					<sources>
@@ -1535,68 +441,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="134"/>
 						<datapoint/>
 					</targets>
-					<view ltx="859" lty="579" rbx="960" rby="632"/>
-				</component>
-				<component name="value" library="core" uid="9499" kind="3">
-					<sources>
-						<datapoint pos="0" key="143"/>
-						<datapoint pos="1" key="144"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="142"/>
-						<datapoint/>
-					</targets>
-					<view ltx="859" lty="208" rbx="960" rby="261"/>
-				</component>
-				<component name="value" library="core" uid="9490" kind="3">
-					<sources>
-						<datapoint pos="0" key="108"/>
-						<datapoint pos="1" key="110"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="107"/>
-						<datapoint/>
-					</targets>
-					<view ltx="859" lty="355" rbx="960" rby="408"/>
-				</component>
-				<component name="first-items" library="core" uid="9504" kind="5">
-					<sources>
-						<datapoint pos="0" key="152"/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="151"/>
-					</targets>
-					<view ltx="1013" lty="328" rbx="1117" rby="381"/>
-				</component>
-				<component name="constant" library="core" uid="9483" kind="2">
-					<targets>
-						<datapoint pos="0" key="97"/>
-					</targets>
-					<view ltx="486" lty="11" rbx="616" rby="27"/>
-					<data>
-						<constant value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs" datatype="string"/>
-					</data>
-				</component>
-				<component name="first-items" library="core" uid="9500" kind="5">
-					<sources>
-						<datapoint pos="0" key="146"/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="145"/>
-					</targets>
-					<view ltx="1013" lty="178" rbx="1117" rby="231"/>
-				</component>
-				<component name="last-items" library="core" uid="9502" kind="5">
-					<sources>
-						<datapoint pos="0" key="154"/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="155"/>
-					</targets>
-					<view ltx="1012" lty="246" rbx="1116" rby="299"/>
+					<view ltx="859" lty="579" rbx="972" rby="633"/>
 				</component>
 				<component name="value-map" library="core" uid="3111" kind="23">
 					<sources>
@@ -1605,7 +450,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="95"/>
 					</targets>
-					<view ltx="709" lty="74" rbx="784" rby="111"/>
+					<view ltx="709" lty="74" rbx="789" rby="112"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -1628,7 +473,59 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="102"/>
 						<datapoint/>
 					</targets>
-					<view ltx="859" lty="145" rbx="960" rby="198"/>
+					<view ltx="859" lty="145" rbx="972" rby="199"/>
+				</component>
+				<component name="value" library="core" uid="9503" kind="3">
+					<sources>
+						<datapoint pos="0" key="148"/>
+						<datapoint pos="1" key="149"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="147"/>
+						<datapoint/>
+					</targets>
+					<view ltx="859" lty="86" rbx="972" rby="140"/>
+				</component>
+				<component name="value" library="core" uid="9490" kind="3">
+					<sources>
+						<datapoint pos="0" key="108"/>
+						<datapoint pos="1" key="110"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="107"/>
+						<datapoint/>
+					</targets>
+					<view ltx="859" lty="328" rbx="972" rby="382"/>
+				</component>
+				<component name="equal" library="core" uid="9489" kind="5">
+					<sources>
+						<datapoint pos="0" key="106"/>
+						<datapoint pos="1" key="111"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="109"/>
+					</targets>
+					<view ltx="751" lty="343" rbx="807" rby="397"/>
+				</component>
+				<component name="first-items" library="core" uid="9504" kind="5">
+					<sources>
+						<datapoint pos="0" key="152"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="151"/>
+					</targets>
+					<view ltx="1013" lty="328" rbx="1128" rby="382"/>
+				</component>
+				<component name="first-items" library="core" uid="9500" kind="5">
+					<sources>
+						<datapoint pos="0" key="146"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="145"/>
+					</targets>
+					<view ltx="1013" lty="178" rbx="1128" rby="232"/>
 				</component>
 				<component name="document" library="xml" uid="3104" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
@@ -1665,21 +562,21 @@ http://hl7.org/fhir/quantity-comparator</text>
 						</parameter>
 					</data>
 				</component>
-				<component name="equal" library="core" uid="9485" kind="5">
+				<component name="last-items" library="core" uid="9502" kind="5">
 					<sources>
-						<datapoint pos="0" key="99"/>
-						<datapoint pos="1" key="98"/>
+						<datapoint pos="0" key="154"/>
+						<datapoint/>
 					</sources>
 					<targets>
-						<datapoint pos="0" key="100"/>
+						<datapoint pos="0" key="155"/>
 					</targets>
-					<view ltx="751" lty="154" rbx="802" rby="207"/>
+					<view ltx="1012" lty="246" rbx="1127" rby="300"/>
 				</component>
 				<component name="document" library="xml" uid="9423" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="2" lty="167" rbx="302" rby="667"/>
 					<data>
-						<root>
+						<root scrollposition="853">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -1724,16 +621,35 @@ http://hl7.org/fhir/quantity-comparator</text>
 						</parameter>
 					</data>
 				</component>
-				<component name="value" library="core" uid="9503" kind="3">
+				<component name="value" library="core" uid="9499" kind="3">
 					<sources>
-						<datapoint pos="0" key="148"/>
-						<datapoint pos="1" key="149"/>
+						<datapoint pos="0" key="143"/>
+						<datapoint pos="1" key="144"/>
 					</sources>
 					<targets>
-						<datapoint pos="0" key="147"/>
+						<datapoint pos="0" key="142"/>
 						<datapoint/>
 					</targets>
-					<view ltx="859" lty="86" rbx="960" rby="139"/>
+					<view ltx="859" lty="208" rbx="972" rby="262"/>
+				</component>
+				<component name="equal" library="core" uid="9485" kind="5">
+					<sources>
+						<datapoint pos="0" key="99"/>
+						<datapoint pos="1" key="98"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="100"/>
+					</targets>
+					<view ltx="751" lty="154" rbx="807" rby="208"/>
+				</component>
+				<component name="constant" library="core" uid="9483" kind="2">
+					<targets>
+						<datapoint pos="0" key="97"/>
+					</targets>
+					<view ltx="486" lty="11" rbx="630" rby="28"/>
+					<data>
+						<constant value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs" datatype="string"/>
+					</data>
 				</component>
 			</children>
 		</structure>
@@ -1784,7 +700,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="112"/>
 					</targets>
-					<view ltx="447" lty="385" rbx="581" rby="401"/>
+					<view ltx="447" lty="385" rbx="597" rby="402"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSAKQ.htm" datatype="string"/>
 					</data>
@@ -1793,7 +709,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="120"/>
 					</targets>
-					<view ltx="452" lty="522" rbx="586" rby="538"/>
+					<view ltx="452" lty="522" rbx="602" rby="539"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSAKT.htm" datatype="string"/>
 					</data>
@@ -1802,7 +718,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="140"/>
 					</targets>
-					<view ltx="452" lty="650" rbx="586" rby="666"/>
+					<view ltx="452" lty="650" rbx="602" rby="667"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSAKP.htm" datatype="string"/>
 					</data>
@@ -1816,7 +732,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="129"/>
 						<datapoint/>
 					</targets>
-					<view ltx="726" lty="658" rbx="827" rby="711"/>
+					<view ltx="726" lty="658" rbx="839" rby="712"/>
 				</component>
 				<component name="equal" library="core" uid="9391" kind="5">
 					<sources>
@@ -1826,7 +742,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="117"/>
 					</targets>
-					<view ltx="618" lty="486" rbx="669" rby="539"/>
+					<view ltx="618" lty="486" rbx="674" rby="540"/>
 				</component>
 				<component name="value" library="core" uid="9392" kind="3">
 					<sources>
@@ -1837,7 +753,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="114"/>
 						<datapoint/>
 					</targets>
-					<view ltx="726" lty="477" rbx="827" rby="530"/>
+					<view ltx="726" lty="477" rbx="839" rby="531"/>
 				</component>
 				<component name="value" library="core" uid="9396" kind="3">
 					<sources>
@@ -1848,7 +764,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="133"/>
 						<datapoint/>
 					</targets>
-					<view ltx="726" lty="530" rbx="827" rby="583"/>
+					<view ltx="726" lty="530" rbx="839" rby="584"/>
 				</component>
 				<component name="equal" library="core" uid="9390" kind="5">
 					<sources>
@@ -1858,7 +774,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="107"/>
 					</targets>
-					<view ltx="618" lty="349" rbx="669" rby="402"/>
+					<view ltx="618" lty="349" rbx="674" rby="403"/>
 				</component>
 				<component name="equal" library="core" uid="9393" kind="5">
 					<sources>
@@ -1868,7 +784,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="125"/>
 					</targets>
-					<view ltx="618" lty="615" rbx="669" rby="668"/>
+					<view ltx="618" lty="615" rbx="674" rby="669"/>
 				</component>
 				<component name="value" library="core" uid="9389" kind="3">
 					<sources>
@@ -1879,7 +795,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="109"/>
 						<datapoint/>
 					</targets>
-					<view ltx="726" lty="340" rbx="827" rby="393"/>
+					<view ltx="726" lty="340" rbx="839" rby="394"/>
 				</component>
 				<component name="value" library="core" uid="9388" kind="3">
 					<sources>
@@ -1890,7 +806,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="98"/>
 						<datapoint/>
 					</targets>
-					<view ltx="726" lty="246" rbx="827" rby="299"/>
+					<view ltx="726" lty="246" rbx="839" rby="300"/>
 				</component>
 				<component name="first-items" library="core" uid="9401" kind="5">
 					<sources>
@@ -1900,7 +816,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="144"/>
 					</targets>
-					<view ltx="873" lty="340" rbx="977" rby="393"/>
+					<view ltx="873" lty="340" rbx="988" rby="394"/>
 				</component>
 				<component name="value" library="core" uid="9394" kind="3">
 					<sources>
@@ -1911,7 +827,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="121"/>
 						<datapoint/>
 					</targets>
-					<view ltx="726" lty="606" rbx="827" rby="659"/>
+					<view ltx="726" lty="606" rbx="839" rby="660"/>
 				</component>
 				<component name="document" library="xml" uid="3122" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
@@ -1953,7 +869,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="102"/>
 					</targets>
-					<view ltx="452" lty="291" rbx="582" rby="307"/>
+					<view ltx="452" lty="291" rbx="596" rby="308"/>
 					<data>
 						<constant value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs" datatype="string"/>
 					</data>
@@ -1965,7 +881,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="142"/>
 					</targets>
-					<view ltx="548" lty="176" rbx="623" rby="213"/>
+					<view ltx="548" lty="176" rbx="628" rby="214"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -1987,7 +903,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="101"/>
 					</targets>
-					<view ltx="618" lty="255" rbx="669" rby="308"/>
+					<view ltx="618" lty="255" rbx="674" rby="309"/>
 				</component>
 				<component name="document" library="xml" uid="9380" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
@@ -2076,7 +992,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="68"/>
 					</targets>
-					<view ltx="624" lty="339" rbx="754" rby="355"/>
+					<view ltx="624" lty="339" rbx="768" rby="356"/>
 					<data>
 						<constant value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs" datatype="string"/>
 					</data>
@@ -2089,7 +1005,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="71"/>
 					</targets>
-					<view ltx="790" lty="303" rbx="841" rby="356"/>
+					<view ltx="790" lty="303" rbx="846" rby="357"/>
 				</component>
 				<component name="value" library="core" uid="9409" kind="3">
 					<sources>
@@ -2100,13 +1016,55 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="73"/>
 						<datapoint/>
 					</targets>
-					<view ltx="898" lty="294" rbx="999" rby="347"/>
+					<view ltx="898" lty="294" rbx="1011" rby="348"/>
+				</component>
+				<component name="value-map" library="core" uid="9214" kind="23">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="489" lty="2" rbx="569" rby="40"/>
+					<data>
+						<valuemap defaultValueMode="custom">
+							<valuemapTable>
+								<entry from="20031" to="true"/>
+								<entry from="20033" to="true"/>
+								<entry from="20035" to="true"/>
+								<entry from="20037" to="true"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="boolean" defaultValue="false"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="3133" kind="23">
+					<sources>
+						<datapoint pos="0" key="75"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="76"/>
+					</targets>
+					<view ltx="638" lty="244" rbx="718" rby="282"/>
+					<data>
+						<valuemap>
+							<valuemapTable>
+								<entry from="stat" to="S"/>
+								<entry from="asap" to="P"/>
+								<entry from="routine" to="R"/>
+								<entry from="urgent" to="K"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
 				</component>
 				<component name="document" library="xml" uid="9404" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="83" lty="89" rbx="383" rby="589"/>
 					<data>
-						<root>
+						<root scrollposition="462">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -2148,27 +1106,6 @@ http://hl7.org/fhir/quantity-comparator</text>
 						</parameter>
 					</data>
 				</component>
-				<component name="value-map" library="core" uid="9214" kind="23">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="489" lty="2" rbx="564" rby="39"/>
-					<data>
-						<valuemap defaultValueMode="custom">
-							<valuemapTable>
-								<entry from="20031" to="true"/>
-								<entry from="20033" to="true"/>
-								<entry from="20035" to="true"/>
-								<entry from="20037" to="true"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="boolean" defaultValue="false"/>
-						</valuemap>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="3135" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="1290" lty="114" rbx="1428" rby="596"/>
@@ -2199,27 +1136,6 @@ http://hl7.org/fhir/quantity-comparator</text>
 								<entry name="lopz" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
 							</root>
 						</parameter>
-					</data>
-				</component>
-				<component name="value-map" library="core" uid="3133" kind="23">
-					<sources>
-						<datapoint pos="0" key="75"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="76"/>
-					</targets>
-					<view ltx="638" lty="244" rbx="713" rby="281"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="stat" to="S"/>
-								<entry from="asap" to="P"/>
-								<entry from="routine" to="R"/>
-								<entry from="urgent" to="K"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
 					</data>
 				</component>
 			</children>
@@ -2391,7 +1307,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="201"/>
 					</targets>
-					<view ltx="256" lty="-105" rbx="390" rby="-89"/>
+					<view ltx="256" lty="-105" rbx="406" rby="-88"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSAJU.htm" datatype="string"/>
 					</data>
@@ -2404,7 +1320,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="895" lty="-105" rbx="999" rby="-52"/>
+					<view ltx="895" lty="-105" rbx="1010" rby="-51"/>
 				</component>
 				<component name="value-map" library="core" uid="3170" kind="23">
 					<sources>
@@ -2413,7 +1329,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="489" lty="-19" rbx="564" rby="18"/>
+					<view ltx="489" lty="-19" rbx="569" rby="19"/>
 					<data>
 						<valuemap>
 							<valuemapTable>
@@ -2430,7 +1346,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="622" lty="-6" rbx="722" rby="10"/>
+					<view ltx="622" lty="-6" rbx="729" rby="11"/>
 					<data>
 						<constant value="Kvuli validaci" datatype="string"/>
 					</data>
@@ -2439,20 +1355,10 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="150"/>
 					</targets>
-					<view ltx="256" lty="-121" rbx="390" rby="-105"/>
+					<view ltx="256" lty="-121" rbx="406" rby="-104"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSAIC.htm" datatype="string"/>
 					</data>
-				</component>
-				<component name="equal" library="core" uid="9532" kind="5">
-					<sources>
-						<datapoint pos="0" key="146"/>
-						<datapoint pos="1" key="147"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="144"/>
-					</targets>
-					<view ltx="401" lty="125" rbx="452" rby="178"/>
 				</component>
 				<component name="exists" library="core" uid="3362" kind="5">
 					<sources>
@@ -2461,7 +1367,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint/>
 					</targets>
-					<view ltx="768" lty="-62" rbx="836" rby="-25"/>
+					<view ltx="768" lty="-62" rbx="844" rby="-24"/>
 				</component>
 				<component name="value" library="core" uid="9537" kind="3">
 					<sources>
@@ -2472,13 +1378,13 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="163"/>
 						<datapoint/>
 					</targets>
-					<view ltx="550" lty="345" rbx="651" rby="398"/>
+					<view ltx="550" lty="345" rbx="663" rby="399"/>
 				</component>
 				<component name="constant" library="core" uid="3161" kind="2">
 					<targets>
 						<datapoint pos="0" key="169"/>
 					</targets>
-					<view ltx="256" lty="-73" rbx="390" rby="-57"/>
+					<view ltx="256" lty="-73" rbx="406" rby="-56"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSALQ.htm" datatype="string"/>
 					</data>
@@ -2491,35 +1397,16 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="167"/>
 					</targets>
-					<view ltx="442" lty="354" rbx="493" rby="407"/>
+					<view ltx="442" lty="354" rbx="498" rby="408"/>
 				</component>
 				<component name="constant" library="core" uid="3158" kind="2">
 					<targets>
 						<datapoint pos="0" key="162"/>
 					</targets>
-					<view ltx="256" lty="-89" rbx="390" rby="-73"/>
+					<view ltx="256" lty="-89" rbx="406" rby="-72"/>
 					<data>
 						<constant value="https://dastacr.cz/dasta/hypertext/DSAJS.htm" datatype="string"/>
 					</data>
-				</component>
-				<component name="exists" library="core" uid="9545" kind="5">
-					<sources>
-						<datapoint pos="0" key="184"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="185"/>
-					</targets>
-					<view ltx="384" lty="201" rbx="452" rby="238"/>
-				</component>
-				<component name="logical-and" library="core" uid="9548" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="186"/>
-						<datapoint pos="1" key="187"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="188"/>
-					</targets>
-					<view ltx="480" lty="200" rbx="557" rby="254"/>
 				</component>
 				<component name="equal" library="core" uid="9534" kind="5">
 					<sources>
@@ -2529,18 +1416,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="154"/>
 					</targets>
-					<view ltx="384" lty="273" rbx="435" rby="326"/>
-				</component>
-				<component name="value" library="core" uid="9533" kind="3">
-					<sources>
-						<datapoint pos="0" key="158"/>
-						<datapoint pos="1" key="155"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="153"/>
-						<datapoint/>
-					</targets>
-					<view ltx="606" lty="264" rbx="707" rby="317"/>
+					<view ltx="384" lty="273" rbx="440" rby="327"/>
 				</component>
 				<component name="value" library="core" uid="9549" kind="3">
 					<sources>
@@ -2551,7 +1427,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 						<datapoint pos="0" key="190"/>
 						<datapoint/>
 					</targets>
-					<view ltx="550" lty="412" rbx="651" rby="465"/>
+					<view ltx="550" lty="412" rbx="663" rby="466"/>
 				</component>
 				<component name="equal" library="core" uid="9550" kind="5">
 					<sources>
@@ -2561,7 +1437,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<targets>
 						<datapoint pos="0" key="193"/>
 					</targets>
-					<view ltx="442" lty="421" rbx="493" rby="474"/>
+					<view ltx="442" lty="421" rbx="498" rby="475"/>
 				</component>
 				<component name="lopk" library="provisio" uid="3196" kind="19" visible="0">
 					<view ltx="466" lty="797" rbx="762" rby="850"/>
@@ -2590,43 +1466,147 @@ http://hl7.org/fhir/quantity-comparator</text>
 						</root>
 					</data>
 				</component>
-				<component name="value" library="core" uid="9531" kind="3">
-					<sources>
-						<datapoint pos="0" key="149"/>
-						<datapoint pos="1" key="145"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="148"/>
-						<datapoint/>
-					</targets>
-					<view ltx="509" lty="116" rbx="610" rby="169"/>
-				</component>
-				<component name="pracovnik" library="provisio" uid="9578" kind="19" visible="0">
-					<view ltx="462" lty="518" rbx="744" rby="557"/>
+				<component name="sci" library="provisio" uid="9605" kind="19" visible="0">
+					<view ltx="466" lty="884" rbx="769" rby="924"/>
 					<data>
 						<root>
 							<header>
 								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="Practitioner" componentid="9564" expanded="1"/>
+							<entry name="ServiceRequest" ns="1" componentid="9602" expanded="1">
+								<entry name="ServiceRequest" inpkey="206"/>
+							</entry>
 						</root>
 						<root>
 							<header>
 								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="pracovnikType" componentid="9565" expanded="1"/>
+							<entry name="sciType" ns="1" componentid="9603" expanded="1">
+								<entry name="sciType" type="xml-type" outkey="210"/>
+							</entry>
 						</root>
+					</data>
+				</component>
+				<component name="lod" library="provisio" uid="3219" kind="19" visible="0">
+					<view ltx="466" lty="967" rbx="762" rby="1021"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Observation" ns="1" componentid="9615" expanded="1">
+								<entry name="Observation" inpkey="212"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="lod" ns="1" componentid="3208" expanded="1">
+								<entry name="lod" outkey="213"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3154" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="867" lty="41" rbx="1017" rby="357"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+								<entry name="loi" ns="1" inpkey="214" expanded="1">
+									<entry name="guid" type="attribute" inpkey="98"/>
+									<entry name="typ_znac" type="attribute" inpkey="6"/>
+									<entry name="id_loi_is" type="attribute" inpkey="26"/>
+									<entry name="typ_obalu" type="attribute" inpkey="27"/>
+									<entry name="poc_obalu" type="attribute" inpkey="202"/>
+									<entry name="material" type="attribute" inpkey="143"/>
+									<entry name="anal_vzorek" type="attribute" inpkey="175"/>
+									<entry name="sci" ns="1" inpkey="208"/>
+									<entry name="lod" ns="1" inpkey="209"/>
+									<entry name="lop" ns="1" inpkey="177" expanded="1"/>
+									<entry name="lopk" ns="1" inpkey="178"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
+						<parameter usageKind="output" name="loi">
+							<root>
+								<entry name="ku_o_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
+								<entry name="loi" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+							</root>
+						</parameter>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="9694" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="463" lty="265" rbx="614" rby="282"/>
+					<data>
+						<constant value="https://ncez.mzcr.cz/fhir/sid/krzp" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="9695" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="463" lty="282" rbx="614" rby="299"/>
+					<data>
+						<constant value="https://ncez.mzcr.cz/fhir/sid/clk" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="9696" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="463" lty="299" rbx="614" rby="316"/>
+					<data>
+						<constant value="https://ncez.mzcr.cz/fhir/sid/clek" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="9697" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="462" lty="317" rbx="612" rby="334"/>
+					<data>
+						<constant value="https://dastacr.cz/dasta/hypertext/UZAGT.htm" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="9698" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="462" lty="334" rbx="612" rby="351"/>
+					<data>
+						<constant value="https://dastacr.cz/dasta/hypertext/WWBSK.htm" datatype="string"/>
 					</data>
 				</component>
 				<component name="document" library="xml" uid="9525" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-131" lty="395" rbx="177" rby="471"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://hl7.org/fhir"/>
@@ -2670,47 +1650,11 @@ http://hl7.org/fhir/quantity-comparator</text>
 						</parameter>
 					</data>
 				</component>
-				<component name="sci" library="provisio" uid="9605" kind="19" visible="0">
-					<view ltx="466" lty="884" rbx="769" rby="924"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ServiceRequest" ns="1" componentid="9602" expanded="1">
-								<entry name="ServiceRequest" inpkey="206"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="sciType" ns="1" componentid="9603" expanded="1">
-								<entry name="sciType" type="xml-type" outkey="210"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3169" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="256" lty="-155" rbx="386" rby="-139"/>
-					<data>
-						<constant value="https://hl7.cz/fhir/lab/ValueSet/cz-nclp-labpol-vs" datatype="string"/>
-					</data>
-				</component>
 				<component name="document" library="xml" uid="9606" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-131" lty="632" rbx="177" rby="708"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://hl7.org/fhir"/>
@@ -2735,7 +1679,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-131" lty="755" rbx="179" rby="810"/>
 					<data>
-						<root>
+						<root scrollposition="1">
 							<header>
 								<namespaces>
 									<namespace uid="http://hl7.org/fhir"/>
@@ -2754,102 +1698,31 @@ http://hl7.org/fhir/quantity-comparator</text>
 						</parameter>
 					</data>
 				</component>
-				<component name="lod" library="provisio" uid="3219" kind="19" visible="0">
-					<view ltx="466" lty="967" rbx="762" rby="1021"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="Observation" ns="1" componentid="9615" expanded="1">
-								<entry name="Observation" inpkey="212"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="lod" ns="1" componentid="3208" expanded="1">
-								<entry name="lod" outkey="213"/>
-							</entry>
-						</root>
-					</data>
+				<component name="value" library="core" uid="9531" kind="3">
+					<sources>
+						<datapoint pos="0" key="149"/>
+						<datapoint pos="1" key="145"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="148"/>
+						<datapoint/>
+					</targets>
+					<view ltx="509" lty="116" rbx="622" rby="170"/>
 				</component>
-				<component name="lop" library="provisio" uid="3194" kind="19" visible="0">
-					<view ltx="466" lty="718" rbx="762" rby="775"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ServiceRequest" ns="1" componentid="9423" expanded="1">
-								<entry name="ServiceRequest" inpkey="182"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="lop" ns="1" componentid="3104" expanded="1">
-								<entry name="lop" outkey="179"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3154" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="867" lty="41" rbx="1017" rby="357"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="loi" ns="1" inpkey="214" expanded="1">
-									<entry name="guid" type="attribute" inpkey="98"/>
-									<entry name="typ_znac" type="attribute" inpkey="6"/>
-									<entry name="id_loi_is" type="attribute" inpkey="26"/>
-									<entry name="typ_obalu" type="attribute" inpkey="27"/>
-									<entry name="poc_obalu" type="attribute" inpkey="202"/>
-									<entry name="material" type="attribute" inpkey="143"/>
-									<entry name="anal_vzorek" type="attribute" inpkey="175"/>
-									<entry name="sci" ns="1" inpkey="208"/>
-									<entry name="lod" ns="1" inpkey="209"/>
-									<entry name="lop" ns="1" inpkey="177" expanded="1"/>
-									<entry name="lopk" ns="1" inpkey="178"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_ip-4.15.07.xsd"/>
-						<parameter usageKind="output" name="loi">
-							<root>
-								<entry name="ku_o_labType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-								<entry name="loi" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-							</root>
-						</parameter>
-					</data>
+				<component name="exists" library="core" uid="9545" kind="5">
+					<sources>
+						<datapoint pos="0" key="184"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="185"/>
+					</targets>
+					<view ltx="384" lty="201" rbx="460" rby="239"/>
 				</component>
 				<component name="document" library="xml" uid="9524" kind="14">
 					<properties XSLTTargetEncoding="UTF-8"/>
 					<view ltx="-132" lty="-31" rbx="168" rby="347"/>
 					<data>
-						<root>
+						<root scrollposition="193">
 							<header>
 								<namespaces>
 									<namespace/>
@@ -2867,7 +1740,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 											<entry name="value" type="attribute" outkey="171"/>
 										</entry>
 									</entry>
-									<entry name="type" ns="1">
+									<entry name="type" ns="1" expanded="1">
 										<entry name="coding" ns="1" expanded="1">
 											<entry name="system" ns="1" expanded="1">
 												<entry name="value" type="attribute" outkey="151"/>
@@ -2904,6 +1777,64 @@ http://hl7.org/fhir/quantity-comparator</text>
 								<entry name="Specimen" ns="http://hl7.org/fhir"/>
 							</root>
 						</parameter>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="9532" kind="5">
+					<sources>
+						<datapoint pos="0" key="146"/>
+						<datapoint pos="1" key="147"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="144"/>
+					</targets>
+					<view ltx="401" lty="125" rbx="457" rby="179"/>
+				</component>
+				<component name="logical-and" library="core" uid="9548" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="186"/>
+						<datapoint pos="1" key="187"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="188"/>
+					</targets>
+					<view ltx="480" lty="200" rbx="565" rby="256"/>
+				</component>
+				<component name="value" library="core" uid="9533" kind="3">
+					<sources>
+						<datapoint pos="0" key="158"/>
+						<datapoint pos="1" key="155"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="153"/>
+						<datapoint/>
+					</targets>
+					<view ltx="640" lty="217" rbx="753" rby="271"/>
+				</component>
+				<component name="lop" library="provisio" uid="3194" kind="19" visible="0">
+					<view ltx="466" lty="718" rbx="762" rby="775"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ServiceRequest" ns="1" componentid="9423" expanded="1">
+								<entry name="ServiceRequest" inpkey="182"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="lop" ns="1" componentid="3104" expanded="1">
+								<entry name="lop" outkey="179"/>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -3128,8 +2059,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 							<result name="result" type="string"/>
 						</valuemap>
 						<comment>
-							<text>DSAIU
-http://hl7.org/fhir/quantity-comparator</text>
+							<text>DSAIU http://hl7.org/fhir/quantity-comparator</text>
 						</comment>
 					</data>
 				</component>
@@ -3151,880 +2081,6 @@ http://hl7.org/fhir/quantity-comparator</text>
 			<edge from="86" to="82"/>
 			<edge from="90" to="83"/>
 			<edge from="91" to="84"/>
-		</connections>
-	</component>
-	<component name="Reference_Practitioner" library="provisio" uid="3220">
-		<structure>
-			<children>
-				<component name="constant" library="core" uid="3372" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="221" lty="267" rbx="306" rby="283"/>
-					<data>
-						<constant value="/_history/" datatype="string"/>
-					</data>
-				</component>
-				<component name="VGUID" library="core" uid="3374" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="221" lty="299" rbx="303" rby="336"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="VGUID"/>
-					</data>
-				</component>
-				<component name="referencePractitioner" library="core" uid="3369" kind="7">
-					<sources>
-						<datapoint/>
-					</sources>
-					<view ltx="660" lty="168" rbx="783" rby="205"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="referencePractitioner"/>
-					</data>
-				</component>
-				<component name="GUID" library="core" uid="3373" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="221" lty="199" rbx="296" rby="236"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="GUID"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3370" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="222" lty="134" rbx="303" rby="150"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="3371" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="426" lty="157" rbx="501" rby="211"/>
-				</component>
-			</children>
-		</structure>
-		<connections/>
-	</component>
-	<component name="garant_dat" library="provisio" uid="3247">
-		<structure>
-			<children>
-				<component name="constant" library="core" uid="3188" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="829" lty="45" rbx="965" rby="61"/>
-					<data>
-						<constant value="https://ncez.mzcr.cz/fhir/sid/krzp" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3189" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="829" lty="62" rbx="965" rby="78"/>
-					<data>
-						<constant value="https://ncez.mzcr.cz/fhir/sid/clk" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3190" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="829" lty="79" rbx="965" rby="95"/>
-					<data>
-						<constant value="https://ncez.mzcr.cz/fhir/sid/clek" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3191" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="828" lty="97" rbx="962" rby="113"/>
-					<data>
-						<constant value="https://dastacr.cz/dasta/hypertext/UZAGT.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3193" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="828" lty="114" rbx="962" rby="130"/>
-					<data>
-						<constant value="https://dastacr.cz/dasta/hypertext/WWBSK.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3255" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="513" lty="28" rbx="594" rby="44"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5735" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="869" lty="199" rbx="956" rby="215"/>
-					<data>
-						<constant value="generated" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3187" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="828" lty="28" rbx="899" rby="44"/>
-					<data>
-						<constant value="official" datatype="string"/>
-					</data>
-				</component>
-				<component name="value-map" library="core" uid="3192" kind="23">
-					<sources>
-						<datapoint pos="0" key="25"/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="571" lty="427" rbx="646" rby="464"/>
-					<data>
-						<valuemap>
-							<valuemapTable>
-								<entry from="všeobecné praktické lékařství" to="001"/>
-								<entry from="praktické lékařství pro děti a dorost a pediatrie" to="002"/>
-							</valuemapTable>
-							<input name="input" type="string"/>
-							<result name="result" type="string"/>
-						</valuemap>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3184" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-75" lty="29" rbx="416" rby="611"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.w3.org/1999/xhtml"/>
-									<namespace/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="entry" expanded="1">
-									<entry name="resource">
-										<entry name="Practitioner" expanded="1">
-											<entry name="id" expanded="1"/>
-											<entry name="text" expanded="1">
-												<entry name="status" expanded="1"/>
-												<entry name="div" ns="1" expanded="1"/>
-											</entry>
-											<entry name="name" expanded="1">
-												<entry name="text" expanded="1"/>
-											</entry>
-											<entry name="qualification">
-												<entry name="code" expanded="1">
-													<entry name="coding" expanded="1">
-														<entry name="system" expanded="1"/>
-														<entry name="code" expanded="1"/>
-														<entry name="display" expanded="1">
-															<entry name="value" ns="2" type="attribute" outkey="23"/>
-														</entry>
-													</entry>
-													<entry name="text" expanded="1"/>
-												</entry>
-											</entry>
-										</entry>
-										<entry name="PractitionerRole" expanded="1">
-											<entry name="code" expanded="1">
-												<entry name="coding" expanded="1">
-													<entry name="system" expanded="1"/>
-													<entry name="code" expanded="1"/>
-													<entry name="display" expanded="1"/>
-												</entry>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="entry">
-							<root>
-								<entry name="Bundle" ns="http://hl7.org/fhir"/>
-								<entry name="entry" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9046" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="688" lty="277" rbx="988" rby="477"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="Identifier" type="xml-type">
-									<entry name="use" expanded="1"/>
-									<entry name="system" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Identifier" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9045" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="783" lty="382" rbx="1083" rby="582"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="Identifier" type="xml-type">
-									<entry name="use" expanded="1"/>
-									<entry name="system" expanded="1"/>
-									<entry name="value" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Identifier" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9044" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="853" lty="426" rbx="1153" rby="626"/>
-					<data>
-						<root scrollposition="1">
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="Identifier" type="xml-type">
-									<entry name="use" expanded="1"/>
-									<entry name="system" expanded="1"/>
-									<entry name="value" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="variable">
-							<root>
-								<entry name="Identifier" ns="http://hl7.org/fhir" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="3183" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="1262" lty="164" rbx="1412" rby="364"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="garant_dat" expanded="1"/>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
-						<parameter usageKind="output" name="garant_dat">
-							<root>
-								<entry name="dasta" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-								<entry name="garant_dat" ns="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="23" to="25"/>
-		</connections>
-	</component>
-	<component name="FullURL_DiagnosticReport" library="provisio" uid="3291">
-		<structure>
-			<children>
-				<component name="GUID" library="core" uid="3313" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="520" lty="349" rbx="595" rby="386"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="GUID"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="3314" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="752" lty="301" rbx="827" rby="355"/>
-				</component>
-				<component name="FullURL_DiagnosticReport" library="core" uid="3316" kind="7">
-					<sources>
-						<datapoint/>
-					</sources>
-					<view ltx="959" lty="318" rbx="1106" rby="355"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="FullURL_DiagnosticReport"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3315" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="521" lty="284" rbx="602" rby="300"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-			</children>
-		</structure>
-		<connections/>
-	</component>
-	<component name="FullURL_Observation" library="provisio" uid="3293">
-		<structure>
-			<children>
-				<component name="FullURL_Observation" library="core" uid="3304" kind="7">
-					<sources>
-						<datapoint pos="0" key="1"/>
-					</sources>
-					<view ltx="970" lty="318" rbx="1094" rby="355"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="FullURL_Observation"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3303" kind="2">
-					<targets>
-						<datapoint pos="0" key="2"/>
-					</targets>
-					<view ltx="532" lty="284" rbx="613" rby="300"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="GUID" library="core" uid="3301" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="531" lty="349" rbx="606" rby="386"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="GUID"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="3302" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="4"/>
-						<datapoint pos="1" key="5"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="6"/>
-					</targets>
-					<view ltx="763" lty="301" rbx="838" rby="355"/>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="6" to="1"/>
-			<edge from="2" to="4"/>
-			<edge from="3" to="5"/>
-		</connections>
-	</component>
-	<component name="FullURL_Specimen" library="provisio" uid="3295">
-		<structure>
-			<children>
-				<component name="FullURL_Specimen" library="core" uid="3312" kind="7">
-					<sources>
-						<datapoint pos="0" key="1"/>
-					</sources>
-					<view ltx="976" lty="318" rbx="1088" rby="355"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="FullURL_Specimen"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3311" kind="2">
-					<targets>
-						<datapoint pos="0" key="2"/>
-					</targets>
-					<view ltx="538" lty="284" rbx="619" rby="300"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="GUID" library="core" uid="3309" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="537" lty="349" rbx="612" rby="386"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="GUID"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="3310" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="4"/>
-						<datapoint pos="1" key="5"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="6"/>
-					</targets>
-					<view ltx="742" lty="307" rbx="817" rby="361"/>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="6" to="1"/>
-			<edge from="2" to="4"/>
-			<edge from="3" to="5"/>
-		</connections>
-	</component>
-	<component name="FullURL_ServiceRequest" library="provisio" uid="3317">
-		<structure>
-			<children>
-				<component name="FullURL_ServiceRequest" library="core" uid="3322" kind="7">
-					<sources>
-						<datapoint pos="0" key="1"/>
-					</sources>
-					<view ltx="735" lty="253" rbx="873" rby="290"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="FullURL_ServiceRequest"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3321" kind="2">
-					<targets>
-						<datapoint pos="0" key="2"/>
-					</targets>
-					<view ltx="297" lty="219" rbx="378" rby="235"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="GUID" library="core" uid="3319" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="296" lty="284" rbx="371" rby="321"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="GUID"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="3320" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="4"/>
-						<datapoint pos="1" key="5"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="6"/>
-					</targets>
-					<view ltx="528" lty="236" rbx="603" rby="290"/>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="6" to="1"/>
-			<edge from="2" to="4"/>
-			<edge from="3" to="5"/>
-		</connections>
-	</component>
-	<component name="Reference_Specimen" library="provisio" uid="3348">
-		<structure>
-			<children>
-				<component name="referenceSpecimen" library="core" uid="3363" kind="7">
-					<sources>
-						<datapoint pos="0" key="1"/>
-					</sources>
-					<view ltx="975" lty="70" rbx="1090" rby="107"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="referenceSpecimen"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3366" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="536" lty="169" rbx="621" rby="185"/>
-					<data>
-						<constant value="/_history/" datatype="string"/>
-					</data>
-				</component>
-				<component name="VGUID" library="core" uid="3368" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="536" lty="201" rbx="618" rby="238"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="VGUID"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="3364" kind="2">
-					<targets>
-						<datapoint pos="0" key="2"/>
-					</targets>
-					<view ltx="537" lty="36" rbx="618" rby="52"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="GUID" library="core" uid="3367" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="536" lty="101" rbx="611" rby="138"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="GUID"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="3365" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="4"/>
-						<datapoint pos="1" key="5"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="6"/>
-					</targets>
-					<view ltx="741" lty="59" rbx="816" rby="113"/>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="6" to="1"/>
-			<edge from="2" to="4"/>
-			<edge from="3" to="5"/>
-		</connections>
-	</component>
-	<component name="FullURL_Patient" library="provisio" uid="5702">
-		<structure>
-			<children>
-				<component name="FullURL_Patient" library="core" uid="5696" kind="7">
-					<sources>
-						<datapoint pos="0" key="1"/>
-					</sources>
-					<view ltx="856" lty="303" rbx="955" rby="340"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="FullURL_Patient"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5695" kind="2">
-					<targets>
-						<datapoint pos="0" key="2"/>
-					</targets>
-					<view ltx="418" lty="269" rbx="499" rby="285"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="GUID" library="core" uid="5693" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="417" lty="334" rbx="492" rby="371"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="GUID"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="5694" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="4"/>
-						<datapoint pos="1" key="5"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="6"/>
-					</targets>
-					<view ltx="632" lty="294" rbx="707" rby="348"/>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="6" to="1"/>
-			<edge from="2" to="4"/>
-			<edge from="3" to="5"/>
-		</connections>
-	</component>
-	<component name="Reference_Patient" library="provisio" uid="5703">
-		<structure>
-			<children>
-				<component name="constant" library="core" uid="4956" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="329" lty="298" rbx="414" rby="314"/>
-					<data>
-						<constant value="/_history/" datatype="string"/>
-					</data>
-				</component>
-				<component name="VGUID" library="core" uid="4958" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="329" lty="330" rbx="411" rby="367"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="VGUID"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="4955" kind="2">
-					<targets>
-						<datapoint pos="0" key="1"/>
-					</targets>
-					<view ltx="329" lty="220" rbx="410" rby="236"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="GUID" library="core" uid="4957" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="2"/>
-					</targets>
-					<view ltx="329" lty="245" rbx="404" rby="282"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="GUID"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="4954" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="3"/>
-						<datapoint pos="1" key="4"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="5"/>
-					</targets>
-					<view ltx="560" lty="237" rbx="635" rby="291"/>
-				</component>
-				<component name="referencePatient" library="core" uid="4953" kind="7">
-					<sources>
-						<datapoint pos="0" key="6"/>
-					</sources>
-					<view ltx="767" lty="254" rbx="869" rby="291"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="referencePatient"/>
-					</data>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="1" to="3"/>
-			<edge from="2" to="4"/>
-			<edge from="5" to="6"/>
-		</connections>
-	</component>
-	<component name="FullURL_Composition" library="provisio" uid="5706">
-		<structure>
-			<children>
-				<component name="FullURL_Composition" library="core" uid="5710" kind="7">
-					<sources>
-						<datapoint pos="0" key="1"/>
-					</sources>
-					<view ltx="824" lty="197" rbx="950" rby="234"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="FullURL_Composition"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="5709" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="2"/>
-						<datapoint pos="1" key="3"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="4"/>
-					</targets>
-					<view ltx="617" lty="180" rbx="692" rby="234"/>
-				</component>
-				<component name="constant" library="core" uid="5711" kind="2">
-					<targets>
-						<datapoint pos="0" key="5"/>
-					</targets>
-					<view ltx="386" lty="163" rbx="467" rby="179"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="GUID" library="core" uid="5708" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="6"/>
-					</targets>
-					<view ltx="385" lty="228" rbx="460" rby="265"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="GUID"/>
-					</data>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="4" to="1"/>
-			<edge from="5" to="2"/>
-			<edge from="6" to="3"/>
-		</connections>
-	</component>
-	<component name="Reference_Organization" library="provisio" uid="5758">
-		<structure>
-			<children>
-				<component name="constant" library="core" uid="5760" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="432" lty="350" rbx="517" rby="366"/>
-					<data>
-						<constant value="/_history/" datatype="string"/>
-					</data>
-				</component>
-				<component name="VGUID" library="core" uid="5761" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="432" lty="382" rbx="514" rby="419"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="VGUID"/>
-					</data>
-				</component>
-				<component name="referenceOrganization" library="core" uid="5762" kind="7">
-					<sources>
-						<datapoint pos="0" key="1"/>
-					</sources>
-					<view ltx="871" lty="251" rbx="1001" rby="288"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="referenceOrganization"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="5764" kind="2">
-					<targets>
-						<datapoint pos="0" key="2"/>
-					</targets>
-					<view ltx="433" lty="217" rbx="514" rby="233"/>
-					<data>
-						<constant value="urn:uuid:" datatype="string"/>
-					</data>
-				</component>
-				<component name="GUID" library="core" uid="5763" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="432" lty="282" rbx="507" rby="319"/>
-					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="GUID"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="5765" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="4"/>
-						<datapoint pos="1" key="5"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="6"/>
-					</targets>
-					<view ltx="637" lty="240" rbx="712" rby="294"/>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="6" to="1"/>
-			<edge from="2" to="4"/>
-			<edge from="3" to="5"/>
 		</connections>
 	</component>
 	<component name="ip_ip" library="provisio" uid="6054">
@@ -4064,8 +2120,7 @@ http://hl7.org/fhir/quantity-comparator</text>
 					<data>
 						<constant value="N" datatype="string"/>
 						<comment>
-							<text>Nejedná se o opravu
-Povinný prvek u jazyka</text>
+							<text>Nejedná se o opravu Povinný prvek u jazyka</text>
 						</comment>
 					</data>
 				</component>
@@ -4167,8 +2222,7 @@ Povinný prvek u jazyka</text>
 					<data>
 						<constant value="ZP" datatype="string"/>
 						<comment>
-							<text>Typ platebního vztahu - Pacientova zdravotní pojišťovna
-Povinný prvek</text>
+							<text>Typ platebního vztahu - Pacientova zdravotní pojišťovna Povinný prvek</text>
 						</comment>
 					</data>
 				</component>
@@ -4337,39 +2391,6 @@ Povinný prvek</text>
 						<comment>
 							<text>číslo pojištěnce</text>
 						</comment>
-					</data>
-				</component>
-				<component name="ku_o" library="provisio" uid="9314" kind="19" visible="0">
-					<view ltx="519" lty="45" rbx="819" rby="245"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="Composition" ns="1" componentid="9315" expanded="1">
-								<entry name="Composition" inpkey="815"/>
-							</entry>
-							<entry name="Organization" ns="1" componentid="9363" expanded="1">
-								<entry name="Organization" inpkey="818"/>
-							</entry>
-							<entry name="entry" ns="1" componentid="9375" expanded="1">
-								<entry name="entry" inpkey="819"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="ds_ip41507" ns="1" componentid="9312" expanded="1">
-								<entry name="ku_o" outkey="816"/>
-							</entry>
-						</root>
 					</data>
 				</component>
 				<component name="equal" library="core" uid="9109" kind="5">
@@ -4788,6 +2809,39 @@ Povinný prvek</text>
 						<comment>
 							<text>Občanský průkaz</text>
 						</comment>
+					</data>
+				</component>
+				<component name="ku_o" library="provisio" uid="9314" kind="19" visible="0">
+					<view ltx="519" lty="45" rbx="819" rby="245"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Composition" ns="1" componentid="9315" expanded="1">
+								<entry name="Composition" inpkey="815"/>
+							</entry>
+							<entry name="Organization" ns="1" componentid="9363" expanded="1">
+								<entry name="Organization" inpkey="818"/>
+							</entry>
+							<entry name="entry" ns="1" componentid="9375" expanded="1">
+								<entry name="entry" inpkey="819"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ds_ip41507" ns="1" componentid="9312" expanded="1">
+								<entry name="ku_o" outkey="816"/>
+							</entry>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -7140,6 +5194,33 @@ Povinný prvek</text>
 					</targets>
 					<view ltx="518" lty="257" rbx="600" rby="311"/>
 				</component>
+				<component name="lip" library="provisio" uid="9507" kind="19" visible="0">
+					<view ltx="985" lty="925" rbx="1295" rby="991"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://hl7.org/fhir"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Observation" ns="1" componentid="9510" expanded="1">
+								<entry name="Observation" inpkey="190"/>
+							</entry>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="lip" ns="1" componentid="3175" expanded="1">
+								<entry name="lip" outkey="191"/>
+							</entry>
+						</root>
+					</data>
+				</component>
 				<component name="loi" library="provisio" uid="9527" kind="19" visible="0">
 					<view ltx="1028" lty="366" rbx="1329" rby="479"/>
 					<data>
@@ -7175,33 +5256,6 @@ Povinný prvek</text>
 							</header>
 							<entry name="loi" ns="1" componentid="3154" expanded="1">
 								<entry name="loi" outkey="204"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-				<component name="lip" library="provisio" uid="9507" kind="19" visible="0">
-					<view ltx="985" lty="925" rbx="1295" rby="991"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="Observation" ns="1" componentid="9510" expanded="1">
-								<entry name="Observation" inpkey="190"/>
-							</entry>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="lip" ns="1" componentid="3175" expanded="1">
-								<entry name="lip" outkey="191"/>
 							</entry>
 						</root>
 					</data>
@@ -8049,211 +6103,6 @@ Povinný prvek</text>
 			<edge from="46" to="48"/>
 			<edge from="31" to="49"/>
 			<edge from="52" to="50"/>
-		</connections>
-	</component>
-	<component name="pracovnik" library="provisio" uid="9562">
-		<structure>
-			<children>
-				<component name="constant" library="core" uid="9566" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="525" lty="88" rbx="659" rby="104"/>
-					<data>
-						<constant value="https://dastacr.cz/dasta/hypertext/WWBSK.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="9567" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="525" lty="71" rbx="659" rby="87"/>
-					<data>
-						<constant value="https://dastacr.cz/dasta/hypertext/UZAGT.htm" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="9568" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="526" lty="53" rbx="662" rby="69"/>
-					<data>
-						<constant value="https://ncez.mzcr.cz/fhir/sid/clek" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="9569" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="526" lty="36" rbx="662" rby="52"/>
-					<data>
-						<constant value="https://ncez.mzcr.cz/fhir/sid/clk" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="9570" kind="2">
-					<targets>
-						<datapoint/>
-					</targets>
-					<view ltx="526" lty="19" rbx="662" rby="35"/>
-					<data>
-						<constant value="https://ncez.mzcr.cz/fhir/sid/krzp" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="9575" kind="2">
-					<targets>
-						<datapoint pos="0" key="17"/>
-					</targets>
-					<view ltx="406" lty="498" rbx="449" rby="514"/>
-					<data>
-						<constant value=" " datatype="string"/>
-					</data>
-				</component>
-				<component name="concat" library="core" uid="9576" kind="5" growable="1" growablebasename="value">
-					<sources>
-						<datapoint pos="0" key="16"/>
-						<datapoint pos="1" key="18"/>
-						<datapoint pos="2" key="23"/>
-						<datapoint pos="3" key="19"/>
-						<datapoint pos="4" key="21"/>
-						<datapoint pos="5" key="20"/>
-						<datapoint pos="6" key="24"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="22"/>
-					</targets>
-					<view ltx="499" lty="426" rbx="583" rby="564"/>
-					<data>
-						<comment>
-							<text>Povinná část jména adresy</text>
-						</comment>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9564" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="133" lty="95" rbx="433" rby="435"/>
-					<data>
-						<root scrollposition="50">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="Practitioner" ns="1" expanded="1">
-									<entry name="id" ns="1" expanded="1">
-										<entry name="value" type="attribute" outkey="11"/>
-									</entry>
-									<entry name="name" ns="1">
-										<entry name="family" ns="1" expanded="1">
-											<entry name="value" type="attribute" outkey="12"/>
-										</entry>
-										<entry name="given" ns="1" expanded="1">
-											<entry name="value" type="attribute" outkey="13"/>
-										</entry>
-										<entry name="prefix" ns="1" expanded="1">
-											<entry name="value" type="attribute" outkey="14"/>
-										</entry>
-										<entry name="suffix" ns="1" expanded="1">
-											<entry name="value" type="attribute" outkey="15"/>
-										</entry>
-									</entry>
-									<entry name="address" ns="1" outkey="25"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\hl7-fhir\bundle.xsd"/>
-						<parameter usageKind="input" name="Practitioner" sequence="1">
-							<root>
-								<entry name="Practitioner" ns="http://hl7.org/fhir"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="document" library="xml" uid="9565" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="1133" lty="88" rbx="1283" rby="387"/>
-					<data>
-						<root scrollposition="618">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_ip"/>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
-								<entry name="pracovnikType" ns="1" type="xml-type" expanded="1">
-									<entry name="guid" type="attribute" inpkey="6"/>
-									<entry name="titul_pred" ns="1" inpkey="7"/>
-									<entry name="jmeno" ns="1" inpkey="8"/>
-									<entry name="prijmeni" ns="1" inpkey="9"/>
-									<entry name="titul_za" ns="1" inpkey="10"/>
-									<entry name="a" ns="2" inpkey="26" expanded="1"/>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\schemas\DS042704\ds_dasta-4.03.31.xsd"/>
-						<parameter usageKind="output" name="pracovnikType">
-							<root>
-								<entry name="pracovnikType" ns="urn:cz-mzcr:ns:dasta:ds4:ds_ip" type="xml-type"/>
-							</root>
-						</parameter>
-					</data>
-				</component>
-				<component name="adresa" library="provisio" uid="9572" kind="19" visible="0">
-					<view ltx="640" lty="384" rbx="927" rby="442"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="http://hl7.org/fhir"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="Address" ns="1" componentid="2667" expanded="1">
-								<entry name="Address" type="xml-type" inpkey="27"/>
-							</entry>
-							<entry name="ContactPoint" ns="1" componentid="9211" expanded="1"/>
-							<entry name="Name" ns="1" inpkey="28" componentid="9203"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace uid="urn:cz-mzcr:ns:dasta:ds4:ds_dasta"/>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="a" ns="1" componentid="88" expanded="1">
-								<entry name="a" outkey="29"/>
-							</entry>
-						</root>
-					</data>
-				</component>
-			</children>
-		</structure>
-		<connections>
-			<edge from="11" to="6"/>
-			<edge from="14" to="7"/>
-			<edge from="13" to="8"/>
-			<edge from="12" to="9"/>
-			<edge from="15" to="10"/>
-			<edge from="14" to="16"/>
-			<edge from="17" to="18"/>
-			<edge from="17" to="19"/>
-			<edge from="17" to="20"/>
-			<edge from="12" to="21"/>
-			<edge from="13" to="23"/>
-			<edge from="15" to="24"/>
-			<edge from="29" to="26">
-				<data type="2"/>
-			</edge>
-			<edge from="25" to="27">
-				<data type="2"/>
-			</edge>
-			<edge from="22" to="28"/>
 		</connections>
 	</component>
 	<component name="sci" library="provisio" uid="9579">
