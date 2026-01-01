@@ -309,16 +309,16 @@ def generate_uses():
        # "uses \"http://hl7.eu/fhir/base/StructureDefinition/organization-eu\" alias Organization as target",
        # "uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target"
         "uses \"https://dasta.mzcr.cz/model/StructureDefinition/ip\" alias ip as target",
-        "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/BundleLabOrderCz\" alias Bundle as source",
-        "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/serviceRequestCz\" alias ServiceRequest as source",
-        "uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/specimenCz\" alias Specimen as source"
+        #"uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/BundleLabOrderCz\" alias Bundle as source",
+        #"uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/serviceRequestCz\" alias ServiceRequest as source",
+        #"uses \"https://hl7.cz/fhir/lab-order/StructureDefinition/specimenCz\" alias Specimen as source"
         #"uses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as target",
-        #"uses \"http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr\" alias Bundle as target",
+        "uses \"http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr\" alias Bundle as source",
         #"uses \"http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr\" alias Composition as target"
         #"uses \"http://hl7.eu/fhir/eps/StructureDefinition/allergyIntolerance-eu-eps\" alias AllergyIntolerance as target"     
         #"uses \"http://hl7.eu/fhir/eps/StructureDefinition/bundle-eu-eps\" alias Bundle as target",
         #"uses \"http://hl7.eu/fhir/eps/StructureDefinition/composition-eu-eps\" alias Composition as target"
-        #"uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab\" alias Bundle as target",
+        #"uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab\" alias Bundle as source",
         #"uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab\" alias Composition as target",
         #"uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab\" alias Observation as target",
         #"uses \"http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab\" alias Specimen as target",
@@ -488,6 +488,7 @@ class FmlNamespace:
     def enterNamespace(self, sourceNode, targetNode):
         fml_lines=[]
 
+        forceWhereCondition = False
         sourceNamespace = sourceNode.getNamespace()
         sourceNamespaceEntry = sourceNode.getNamespaceEntry()
         if sourceNamespace != "":
@@ -606,7 +607,11 @@ class FmlNamespace:
                     self.sourceNamespace+="."+nextSourcePathElement
                     self.sourceVars.append(variableName)   
                     self.sourceVarLevel.append(self.level)    
-                    self.sourceVarOfNamespace[self.sourceNamespace] = variableName                      
+                    self.sourceVarOfNamespace[self.sourceNamespace] = variableName           
+                    if self.sourceNamespace.endswith("resource"):
+                        resourceType = sourceNode.name.removeprefix(self.sourceNamespace).split('.')[1]
+                        sourceNode.whereCondition = f"$this.ofType(FHIR.{resourceType})"   
+                        forceWhereCondition = True        
             else:
                 sourceString = sourceBestKnowNamespace
                 #self.firstSource 
@@ -618,9 +623,11 @@ class FmlNamespace:
             self.sourceNamespaceEntryAtLevel[self.level] = self.sourceNamespaceEntry
             self.targetNamespaceAtLevel[self.level] = self.targetNamespace
             self.targetNamespaceEntryAtLevel[self.level] = self.targetNamespaceEntry
-            if (sourceNode.whereCondition != "") and not ((sourceNamespace != "") and (sourceNamespace not in self.sourceVarOfNamespace) and sourceNode.isInside(self.sourceNamespace, targetNode.isLeaf)):
+            if (sourceNode.whereCondition != "") and (forceWhereCondition or (not ((sourceNamespace != "") and (sourceNamespace not in self.sourceVarOfNamespace) and sourceNode.isInside(self.sourceNamespace, targetNode.isLeaf)))):
                 # generuj where podminku do FML
                 sourceString += f" where {sourceNode.whereCondition}"
+            if forceWhereCondition:
+                sourceNode.whereCondition = "";
             fml_lines.append(self.indent+f"{sourceString} -> {targetString} then " + "{")   
         
         if sourceNode.getNamespace()==self.sourceNamespace or sourceNamespace=="":
@@ -771,7 +778,11 @@ class FmlNamespace:
         if sNames=="":
             sNames = self.firstSourceAtLevel[self.level]
         
-        tName=functionResultName 
+        if '.' in functionResultName:
+            tName = functionResultName + " as y"
+            functionResultName = "y"
+        else:
+            tName=functionResultName 
         
         self.ruleNum+=1
         if sourceNode.valuemapUid!="":
@@ -860,6 +871,8 @@ class FmlNamespace:
                     whereCondition=self.generateWhereCondition( datapoint.get('key'), outputNodes, inputNodes, graphinv, parent_map, blocks,functions)+"="
                 else:
                     whereCondition+=self.generateWhereCondition( datapoint.get('key'), outputNodes, inputNodes, graphinv, parent_map, blocks,functions)
+            if sourceNode.whereCondition!="":
+                return sourceNode.whereCondition + " and " + whereCondition
             return whereCondition
         elif sourceComponentName == 'constant':
             return "\'"+sourceNode.component.find("./data/constant").get('value')+"\'"
@@ -868,6 +881,22 @@ class FmlNamespace:
             if entry.get('name') == 'value':
                 entry = parent_map[sourceNode.entry]
             return f"$this.{entry.get('name')}"
+        elif sourceComponentName == 'logical-and':
+            whereCondition=""
+            for datapoint in sourceNode.component.findall("./sources/datapoint"):
+                if whereCondition=="":
+                    whereCondition="("+self.generateWhereCondition( datapoint.get('key'), outputNodes, inputNodes, graphinv, parent_map, blocks,functions)
+                else:
+                    whereCondition+=" and "+self.generateWhereCondition( datapoint.get('key'), outputNodes, inputNodes, graphinv, parent_map, blocks,functions)
+            return whereCondition + ")"   
+        elif sourceComponentName == 'logical-or':
+            whereCondition=""
+            for datapoint in sourceNode.component.findall("./sources/datapoint"):
+                if whereCondition=="":
+                    whereCondition="("+self.generateWhereCondition( datapoint.get('key'), outputNodes, inputNodes, graphinv, parent_map, blocks,functions)
+                else:
+                    whereCondition+=" or "+self.generateWhereCondition( datapoint.get('key'), outputNodes, inputNodes, graphinv, parent_map, blocks,functions)
+            return whereCondition + ")"   
         
         return f"?{sourceComponentName}?"
     
@@ -943,7 +972,7 @@ class Function:
                     self.arguments.append(f"{name}")
                     self.argumentType[f"{name}"]=output.get("datatype")
                     self.argumentPrefix[f"{name}"] = "target"
-            else:
+            elif len(targetEntries)>0:
                 self.arguments.append(f"{name}")
                 self.argumentType[f"{name}"]=getTypeNS(targetEntries[-1].get("name"),targetEntries[-1].get("ns"))
                 self.argumentPrefix[f"{name}"] = "target"
@@ -999,7 +1028,8 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
     
     #if sourceNode.name=="ku_o_labType.dodani":
     #if sourceNode.name=="ku_o_labType.lopk.guid":
-    if targetNode.name=="loi.sci.txt":
+    if sourceNode.name.find("resource")>=0:
+    #if targetNode.name=="loi.sci.txt":
     #if targetNode.name=="lopz.text":
     #if targetNode.name=="lop.systspec_klic":
     #entry.resource.Composition.section.entry":
@@ -1060,7 +1090,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
     functionStartPath = path
     for fromKey,fromKeyArg in sourceNode.inpkeys.items(): 
         if fromKey in graphinv.keys():
-            if graphinv[fromKey][0] in outputNodes.keys():  
+            if len(graphinv[fromKey])>0 and (graphinv[fromKey][0] in outputNodes.keys()):  
                 if fromKey=='206':
                  print('206')
                 
@@ -1086,7 +1116,7 @@ def generate_fml_for_internal_component(fml: FmlNamespace, path, sourceNode: Nod
                     fml_lines.append(generate_fml_for_internal_component(fml,path+1,source,target,outputNodes,inputNodes,graphinv,parent_map,blocks,functions))
     if len(sourceNode.inpkeys)>0:
         ind="\t"*(path+1)
-        fml_lines.append(f"{ind}// {sourceNode.name} {path}-> {targetNode.name}")                
+        #fml_lines.append(f"{ind}// {sourceNode.name} {path}-> {targetNode.name}")                
         fml_lines.append(fml.generateFunctionCall(path,sourceNode,targetNode,functionResultName,functions))
         fml_lines.append(fml.exitNamespace(functionStartPath,sourceNode,targetNode,sourceNode.functionName!="concat"))
     else: 
@@ -1189,12 +1219,15 @@ def main():
         #output_file = '.\\mapforce\\output\\patsum.map'
         #mfd_file = '.\\mapforce\\final\\hdr.mfd'
         #output_file = '.\\mapforce\\output\\hdr.map'
-        mfd_file = "..\\mapforce\\fhir2dasta_labOrder.mfd"
-        output_file = "..\\fml\\fhir2dasta_labOrder.map"
+        #mfd_file = "..\\mapforce\\fhir2dasta_labOrder.mfd"
+        #output_file = "..\\fml\\fhir2dasta_labOrder.map"
         #mfd_file = "..\\mapforce\\fhircz2fhireu_hdr.mfd"
         #output_file = ".\\fml\\fhircz2fhireu_hdr_generated.map"
         #mfd_file = "..\\mapforce\\fhircz2fhireu_laboratory.mfd"
         #output_file = ".\\fml\\fhircz2fhireu_laboratory.map"
+        mfd_file = "..\\mapforce\\fhir2dasta_hdr.mfd"
+        output_file = "..\\fml\\fhir2dasta_hdr.map"
+        
     else:
         mfd_file = sys.argv[1]
         output_file = sys.argv[2]
@@ -1205,7 +1238,7 @@ def main():
     functions = dict()
     findComponents(root, blocks, functions)
     
-    map_name = "fhir2dasta_labOrder"
+    map_name = "fhir2dasta_hdr"
     with open(output_file, 'w', encoding="utf-8") as f:
         f.write(f"/// url = 'https://ncez.mzcr.cz/model/StructureMap/{map_name}'\n")
         f.write(f"/// name = 'Mapování {map_name} z FHIR HL7-CZ https://build.fhir.org/ig/hl7-cz/ (June 2025) do DASTA 4'\n")

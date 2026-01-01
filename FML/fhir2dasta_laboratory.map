@@ -1,0 +1,1266 @@
+/// url = 'https://ncez.mzcr.cz/model/StructureMap/fhir2dasta_laboratory'
+/// name = 'Mapování fhir2dasta_laboratory z FHIR HL7-CZ https://build.fhir.org/ig/hl7-cz/ (June 2025) do DASTA 4'
+/// title = 'Mapování fhir2dasta_laboratory'
+/// descrition = 'This file is generated from MapForge file ../mapforce/fhir2dasta_laboratory.mfd'
+
+uses "https://dasta.mzcr.cz/model/StructureDefinition/dasta" alias dasta as target
+uses "https://dasta.mzcr.cz/model/StructureDefinition/ip" alias ip as target
+uses "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab" alias Bundle as source
+
+conceptmap "cm9135" {
+  prefix s ="https://provisio.cz/dasta/9135"
+  prefix t ="https://provisio.cz/fhir/9135"
+
+  s:"true" == t:"P"
+  s:"false" == t:"M"
+}
+
+conceptmap "cm2691" {
+  prefix s ="https://provisio.cz/dasta/2691"
+  prefix t ="https://provisio.cz/fhir/2691"
+
+  s:"home" == t:"1"
+  s:"work" == t:"A"
+  s:"temp" == t:"2"
+  s:"old" == t:"X"
+  s:"billing" == t:"B"
+}
+
+conceptmap "cm9171" {
+  prefix s ="https://provisio.cz/dasta/9171"
+  prefix t ="https://provisio.cz/fhir/9171"
+
+  s:"postal" == t:"K"
+}
+
+conceptmap "cm2706" {
+  prefix s ="https://provisio.cz/dasta/2706"
+  prefix t ="https://provisio.cz/fhir/2706"
+
+  s:"phone" == t:"T"
+  s:"fax" == t:"F"
+  s:"email" == t:"E"
+  s:"sms" == t:"B"
+}
+
+conceptmap "cm2707" {
+  prefix s ="https://provisio.cz/dasta/2707"
+  prefix t ="https://provisio.cz/fhir/2707"
+
+  s:"home" == t:"None"
+  s:"work" == t:"None"
+  s:"temp" == t:"None"
+  s:"old" == t:"None"
+  s:"mobile" == t:"B"
+}
+
+conceptmap "cm9372" {
+  prefix s ="https://provisio.cz/dasta/9372"
+  prefix t ="https://provisio.cz/fhir/9372"
+
+  s:"ZR" == t:"true"
+  s:"ZP" == t:"true"
+  s:"ZF" == t:"true"
+  s:"ZK" == t:"true"
+  s:"ZO" == t:"true"
+  s:"ZS" == t:"true"
+}
+
+conceptmap "cm9778" {
+  prefix s ="https://provisio.cz/dasta/9778"
+  prefix t ="https://provisio.cz/fhir/9778"
+
+  s:"partial" == t:"N"
+  s:"final" == t:"A"
+}
+
+conceptmap "cm9690" {
+  prefix s ="https://provisio.cz/dasta/9690"
+  prefix t ="https://provisio.cz/fhir/9690"
+
+  s:"registered" == t:"R"
+  s:"partial" == t:"D"
+  s:"preliminary" == t:"P"
+  s:"final" == t:"A"
+}
+
+conceptmap "cm10043" {
+  prefix s ="https://provisio.cz/dasta/10043"
+  prefix t ="https://provisio.cz/fhir/10043"
+
+  s:"<" == t:"M"
+  s:">" == t:"V"
+}
+
+conceptmap "cm9916" {
+  prefix s ="https://provisio.cz/dasta/9916"
+  prefix t ="https://provisio.cz/fhir/9916"
+
+  s:"partial" == t:"N"
+  s:"final" == t:"A"
+}
+
+conceptmap "cm9876" {
+  prefix s ="https://provisio.cz/dasta/9876"
+  prefix t ="https://provisio.cz/fhir/9876"
+
+  s:"<" == t:"M"
+  s:">" == t:"V"
+}
+
+
+
+group defaultmap(source bundle: Bundle, target ds: dasta){
+
+		bundle -> ds.is as t1 then {
+
+
+			bundle.entry as x1 -> t1.ip as y then ip_ip(x1,y) "rule1";
+		} "rule2";
+
+}
+group ip_ip(source entry: Bundle, target ip: ip){
+
+		entry.resource as s1 where $this.ofType(FHIR.Patient) -> ip then {
+			s1.id as x -> ip.guid = x "rule1";
+		} "rule2";
+		entry.resource as s1 where $this.ofType(FHIR.Patient) -> ip then {
+			s1.identifier as s2 -> ip then {
+				s2.value as x -> ip.id_pac = x "rule3";
+			} "rule4";
+		} "rule5";
+		entry -> ip.rodcis as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.identifier as s2 -> t1 then {
+					s2.value as x -> t1.txt = x "rule6";
+				} "rule7";
+			} "rule8";
+		} "rule9";
+		entry -> ip.rip as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.identifier as s2 -> t1 then {
+					s2.value as x -> t1.txt = x "rule10";
+
+
+
+
+
+
+
+					s2.period as s3 -> ip then {
+						s2.value as x1 -> ip then {
+						 s2.system as x2 -> ip then { 
+						   s3.end as x3 -> ip.id_card as y then ip_id_card(x3,x2,x1,y) "rule11";
+						 }"";
+						}"";
+					
+					} "rule12";
+				} "rule13";
+			} "rule14";
+		} "rule15";
+
+		entry.resource as s1 where $this.ofType(FHIR.Patient) -> ip then {
+			s1.identifier as s2 -> ip then {
+
+
+
+
+
+				s2.period as s3 -> ip then {
+					s2.value as x1 -> ip then {
+					 s2.system as x2 -> ip then {
+					  s3.end as x3 -> ip.passport as y then ip_passport(x3,x2,x1,y) "rule16";
+					 }"";
+					}"";
+				} "rule17";
+			} "rule18";
+		} "rule19";
+
+		entry -> ip.jmeno as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.name as s2 -> t1 then {
+					s2.given as x -> t1.txt = x "rule20";
+				} "rule21";
+			} "rule22";
+		} "rule23";
+		entry -> ip.prijmeni as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.name as s2 -> t1 then {
+					s2.family as x -> t1.txt = x "rule24";
+				} "rule25";
+			} "rule26";
+		} "rule27";
+		entry -> ip.titul_pred as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.name as s2 -> t1 then {
+					s2.prefix as x -> t1.txt = x "rule28";
+				} "rule29";
+			} "rule30";
+		} "rule31";
+		entry -> ip.titul_za as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.name as s2 -> t1 then {
+					s2.suffix as x -> t1.txt = x "rule32";
+				} "rule33";
+			} "rule34";
+		} "rule35";
+		entry -> ip.dat_dn as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.birthDate as x -> t1.txt = x "rule36";
+			} "rule37";
+		} "rule38";
+		entry -> ip.misto_nar as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.extension as s2 -> t1 then {
+					s2.valueAddress as s3 -> t1 then {
+						s3.city as x -> t1.txt = x "rule39";
+					} "rule40";
+				} "rule41";
+			} "rule42";
+		} "rule43";
+		entry -> ip.stat_pris as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.extension as s2 -> t1 then {
+					s2.extension as s3 -> t1 then {
+						s3.valueCodeableConcept as s4 -> t1 then {
+							s4.coding as s5 -> t1 then {
+								s5.code as x -> t1.txt = x "rule44";
+							} "rule45";
+						} "rule46";
+					} "rule47";
+				} "rule48";
+			} "rule49";
+		} "rule50";
+		entry -> ip.dat_de as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.deceasedDateTime as x -> t1.txt = x "rule51";
+			} "rule52";
+		} "rule53";
+		entry -> ip.sex as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.gender as x -> t1.txt = x "rule54";
+			} "rule55";
+		} "rule56";
+		entry -> ip.sex_klin as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.gender as x -> t1.txt = x "rule57";
+			} "rule58";
+		} "rule59";
+		entry -> ip.rod_prijm as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.name as s2 -> t1 then {
+					s2.family as x -> t1.txt = x "rule60";
+				} "rule61";
+			} "rule62";
+		} "rule63";
+		entry -> ip.jazyk as t1 then {
+			entry.resource as s1 where $this.ofType(FHIR.Patient) -> t1 then {
+				s1.communication as s2 -> t1 then {
+					s2.language as s3 -> t1 then {
+						s3.coding as s4 -> t1 then {
+							s4.code as x -> t1.jazyk_klic = x "rule64";
+
+
+							s4.display as x -> t1.jazyk_text = x "rule65";
+						} "rule66";
+					} "rule67";
+
+					s2.preferred as x -> t1.pref = translate(x,'#cm9135','code') "rule68";
+
+					s2.language as s3 -> t1 then {
+						s3.text as x -> t1.pozn = x "rule69";
+
+
+						entry -> t1.ind_oprav_sd = 'N' "rule70";
+						/*s1.name as s4 -> t1 then {
+							s4.prefix as x1 -> t1 then{
+								s4.given as x2 -> t1 then{
+							       s4.suffix as x3 -> append(x1, ' ', x2, ' ', ' ', x3) as Name then {
+								      s1.address as adr -> t1 then{
+									   s1.telecom as tel -> t1.a as y then adresa(tel,adr,Name,y) "rule73";
+									  } "";
+								   }"";
+								}"";
+							}"";
+						}"";*/
+					} "rule74";
+				} "rule75";
+			} "rule76";
+		} "rule77";
+
+		entry.resource as s1 where $this.ofType(FHIR.Patient) -> ip then {
+			s1.identifier as s2 -> ip then {
+
+
+
+
+				s2.value as x1 -> ip then{ 
+					s2.system as x2 -> ip.ipi_o as y then ip_ipi_o(x1,x2,y) "rule78";
+				}"";
+			} "rule79";
+		} "rule80";
+
+		entry.resource as s1 where $this.ofType(FHIR.Patient) -> ip then {
+			s1.identifier as s2 -> ip then {
+
+
+
+
+				s2.value as x1 -> ip then {
+				 s2.system as x2 -> ip.ipi_v as y then ip_ipi_v(x1,x2,y) "rule81";
+				}"";
+			} "rule82";
+		} "rule83";
+
+		entry -> ip.pv_pac as t1 then {
+			entry -> t1.typ_pv = 'ZP' "rule84";
+		} "rule85";
+		entry -> ip.pv_pac as t1 then {
+			entry -> t1.pv_zp as t2 then {
+				entry -> t2.cispoj as t3 then {
+					entry.resource as s1 where $this.ofType(FHIR.Patient) -> t3 then {
+						s1.identifier as s2 -> t3 then {
+							s2.value as x -> t3.txt = x "rule86";
+						} "rule87";
+					} "rule88";
+				} "rule89";
+			} "rule90";
+		} "rule91";
+		entry -> ip.pv_pac as t1 then {
+			entry -> t1.pv_zp as t2 then {
+				entry -> t2.kodpoj as t3 then {
+					entry.resource as s1 where $this.ofType(FHIR.Patient) -> t3 then {
+						s1.identifier as s2 -> t3 then {
+							s2.assigner as s3 -> t3 then {
+								s3.identifier as s4 -> t3 then {
+									s4.value as x -> t3.txt = x "rule92";
+
+									entry -> ip.ku as t4 then {
+
+
+
+
+
+
+										entry.Composition as x1 -> t4 then{
+										 entry.Organization as x2 -> t4.ku_z as y then ku_z(x2,x1,bundle,y) "rule93";
+										}"";
+									} "rule94";
+								} "rule95";
+							} "rule96";
+						} "rule97";
+					} "rule98";
+				} "rule99";
+			} "rule100";
+		} "rule101";
+
+}
+group adresa(source ContactPoint: ContactPoint, source Address: Address, source Name: string, target a: a){
+
+
+		Address.use as x -> a.typ = translate(x,'#cm2691','code') "rule1";
+
+
+		Address.type as x -> a.ind_kont = translate(x,'#cm9171','code') "rule2";
+
+		ContactPoint -> a.dat_od as t1 then {
+			Address.period as s3 -> t1 then {
+				s3.start as x -> t1.txt = x "rule3";
+			} "rule4";
+		} "rule5";
+		ContactPoint -> a.dat_do as t1 then {
+			Address.period as s3 -> t1 then {
+				s3.end as x -> t1.txt = x "rule6";
+			} "rule7";
+		} "rule8";
+		ContactPoint -> a.jmeno as t1 then {
+			Name as x -> t1.txt = x "rule9";
+		} "rule10";
+		//ContactPoint -> a.adr as t1 then {
+		//	y0 as x -> t1.txt = x "rule11";
+		//} "rule12";
+		ContactPoint -> a.psc as t1 then {
+			Address.postalCode as x -> t1.txt = x "rule13";
+		} "rule14";
+		ContactPoint -> a.mesto as t1 then {
+			Address.city as x -> t1.txt = x "rule15";
+		} "rule16";
+		ContactPoint -> a.stat as t1 then {
+			Address.country as x -> t1.txt = x "rule17";
+
+
+
+
+			ContactPoint -> a.as as y then adresa_spojeni(ContactPoint,y) "rule18";
+		} "rule19";
+
+}
+group adresa_spojeni(source ContactPoint: ContactPoint, target as: as){
+
+
+		ContactPoint as x -> as = x "rule1";
+
+
+		ContactPoint.rank as x -> as.poradi = x "rule2";
+
+
+		ContactPoint.system as x -> as.typ = translate(x,'#cm2706','code') "rule3";
+
+		ContactPoint -> as.obsah as t1 then {
+			ContactPoint.value as x -> t1.txt = x "rule4";
+		} "rule5";
+}
+group ip_id_card(source platnost_Do: string, source system: anyURI, source value: string, target ds_ip41507: id_card){
+
+
+		//y0 as x -> ds_ip41507.id_number = x "rule1";
+
+
+		//y0 as x -> ds_ip41507.dat_pl = x "rule2";
+
+}
+group ip_ipi_o(source value: string, source system: anyURI, target ds_ip41507: ipi_o){
+
+/*
+		y0 as x -> ds_ip41507 = x "rule1";
+
+
+		y0 as x -> ds_ip41507.nem_cis = x "rule2";
+
+
+		y0 as x -> ds_ip41507.kat_pac = x "rule3";
+
+
+		y0 as x -> ds_ip41507.cis_chor = x "rule4";
+
+
+		y0 as x -> ds_ip41507.cis_is = x "rule5";
+*/
+}
+group ip_ipi_v(source value: string, source system: anyURI, target ds_ip41507: ipi_v){
+/* 
+
+		y0 as x -> ds_ip41507 = x "rule1";
+
+
+		y0 as x -> ds_ip41507.nem_cis = x "rule2";
+
+
+		y0 as x -> ds_ip41507.kat_pac = x "rule3";
+
+
+		y0 as x -> ds_ip41507.cis_chor = x "rule4";
+
+
+		y0 as x -> ds_ip41507.cis_is = x "rule5";
+*/
+}
+group ip_passport(source platnost_Do: string, source system: anyURI, source value: string, target ds_ip41507: passport){
+/* 
+
+		y0 as x -> ds_ip41507.id_number = x "rule1";
+
+
+		y0 as x -> ds_ip41507.dat_pl = x "rule2";
+*/
+}
+group ku_z(source Organization: Organization, source Composition: Composition, source entry: Bundle, target ku_zType: ku_zType){
+
+/* 
+		y0 as x -> ku_zType.guid = x "rule1";
+
+
+		y0 as x -> ku_zType.typku = x "rule2";
+
+*/
+		Organization -> ku_zType.fazespec = 'ZR' "rule3";
+
+
+//		y0 as x -> ku_zType.idku = x "rule4";
+
+		Organization -> ku_zType.dat_prov as t1 then {
+//			y0 as x -> t1.txt = x "rule5";
+
+
+
+
+			Organization -> ku_zType.p_pracoviste as y then pracoviste(Organization,y) "rule6";
+		} "rule7";
+
+		Organization -> ku_zType.text as t1 then {
+			Organization -> t1.ptext as t2 then {
+				Composition.text as s3 -> t2 then {
+					s3.div as s4 -> t2 then {
+						s4.text as s5 -> t2 then {
+							s5.txt as x -> t2.txt = x "rule8";
+
+
+
+
+							Organization -> ku_zType.ku_z_lab as y then ku_z_lab(bundle,y) "rule9";
+						} "rule10";
+					} "rule11";
+				} "rule12";
+			} "rule13";
+		} "rule14";
+
+}
+group pracoviste(source Organization: Organization, target pracovisteType: pracovisteType){
+
+		Organization.identifier as s1 where $this.system='https://ncez.mzcr.cz/fhir/sid/ico' -> pracovisteType then {
+			s1.value as x -> pracovisteType.ico = x "rule1";
+		} "rule2";
+		Organization.identifier as s1 where $this.system='https://ncez.mzcr.cz/fhir/sid/icz' -> pracovisteType then {
+			s1.value as x -> pracovisteType.icz = x "rule3";
+		} "rule4";
+		Organization.identifier as s1 where $this.system='https://ncez.mzcr.cz/fhir/sid/icp' -> pracovisteType then {
+			s1.value as x -> pracovisteType.icp = x "rule5";
+		} "rule6";
+		Organization.type as s1 -> pracovisteType then {
+			s1.coding as s2 where $this.system='https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar' -> pracovisteType then {
+				s2.code as x -> pracovisteType.odb = x "rule7";
+			} "rule8";
+		} "rule9";
+		Organization.identifier as s1 where $this.system='https://ncez.mzcr.cz/fhir/sid/oddel' -> pracovisteType then {
+			s1.value as x -> pracovisteType.oddel = x "rule10";
+		} "rule11";
+		Organization.identifier as s1 where $this.system='https://ncez.mzcr.cz/fhir/sid/pcz' -> pracovisteType then {
+			s1.value as x -> pracovisteType.pcz = x "rule12";
+		} "rule13";
+		Organization -> pracovisteType.nazev as t1 then {
+			Organization.name as x -> t1.txt = x "rule14";
+		} "rule15";
+}
+group pracovnik(source Practitioner: Practitioner, target pracovnikType: pracovnikType){
+
+
+		Practitioner.id as x -> pracovnikType.guid = x "rule1";
+
+		Practitioner -> pracovnikType.titul_pred as t1 then {
+			Practitioner.name as s1 -> t1 then {
+				s1.prefix as x -> t1.txt = x "rule2";
+			} "rule3";
+		} "rule4";
+		Practitioner -> pracovnikType.jmeno as t1 then {
+			Practitioner.name as s1 -> t1 then {
+				s1.given as x -> t1.txt = x "rule5";
+			} "rule6";
+		} "rule7";
+		Practitioner -> pracovnikType.prijmeni as t1 then {
+			Practitioner.name as s1 -> t1 then {
+				s1.family as x -> t1.txt = x "rule8";
+			} "rule9";
+		} "rule10";
+		Practitioner -> pracovnikType.titul_za as t1 then {
+		  Practitioner.telecom as ContactPoint -> t1 then{
+			Practitioner.name as s1 -> t1 then {
+				s1.suffix as x -> t1.txt = x "rule11";
+				s1.prefix as x1 -> t1 then{
+				  s1.given as x2 -> t1 then{
+				   s1.family as x3 -> t1 then{
+				    s1.suffix as x4 -> append(x1, ' ', x2, ' ', x3, ' ', x4) as Name then {
+
+						Practitioner.address as addr -> pracovnikType.a as y then adresa(ContactPoint,addr,Name,y) "rule13";
+					}"";
+				   }"";
+				  }"";					
+				}"";
+			}"";
+		  }"";
+		}"";
+			
+
+}
+group ku_z_lab(source bundle: Bundle, target ku_z_labType: ku_z_labType){
+
+
+		bundle.entry as entry -> ku_z_labType   then {
+
+			entry.resource as DiagnosticReport where $this.ofType(FHIR.DiagnosticReport) -> ku_z_labType then 
+			       vrk(DiagnosticReport,bundle,ku_z_labType) "rule6";
+
+			entry.resource as Observation where $this.ofType(FHIR.Observation) ->  ku_z_labType then 
+			       vrb(bundle,Observation,ku_z_labType) "rule12";
+
+			entry.resource as Observation where $this.ofType(FHIR.Observation) ->  ku_z_labType then 
+			       vrs(bundle,Observation,ku_z_labType) "rule18";
+				   
+		    entry.resource as DiagnosticReport where $this.ofType(FHIR.DiagnosticReport) -> ku_z_labType then 
+			       vrr(DiagnosticReport,bundle,ku_z_labType) "rule24";
+
+			entry.resource as s1 where $this.ofType(FHIR.Observation) -> ku_z_labType then 
+			      vrf(bundle,s1,ku_z_labType) "rule30";
+
+			entry.resource as s1 where $this.ofType(FHIR.Observation) -> ku_z_labType then 
+			    vrc(bundle,s1,ku_z_labType) "rule36";
+
+
+			entry.resource as s1 where $this.ofType(FHIR.Observation) -> ku_z_labType then 
+			    vrn(s1,bundle,ku_z_labType) "rule42";
+
+			entry.resource as s1 where $this.ofType(FHIR.DiagnosticReport) -> ku_z_labType then 
+			    vrz(bundle,s1,ku_z_labType) "rule48";
+
+			entry.resource as s1 where $this.ofType(FHIR.Observation) ->  ku_z_labType then 
+			    vrx(s1,bundle,ku_z_labType) "rule54";
+
+			entry.resource as s1 where $this.ofType(FHIR.DiagnosticReport) ->  ku_z_labType then 
+			    vro(bundle,s1,ku_z_labType) "rule60";
+		}"";
+
+}
+group vrb(source entry: Bundle, source Observation: Observation, target ku_z_lab: ku_z_lab){
+
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/cz-nclp-labpol-vs'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.klic_nclp = x "rule1";
+			} "rule2";
+		} "rule3";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKB.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.syst_klic = x "rule4";
+			} "rule5";
+		} "rule6";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJQ.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.komp_klic = x "rule7";
+
+
+				entry -> ku_z_lab.typ_cispol = 'N' "rule8";
+			} "rule9";
+		} "rule10";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJN.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typpol_fh = x "rule11";
+			} "rule12";
+		} "rule13";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIV.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.stav_vys = x "rule14";
+			} "rule15";
+		} "rule16";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIW.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typ_sdel_vys = x "rule17";
+			} "rule18";
+		} "rule19";
+		entry -> ku_z_lab.nazev_lclp as t1 then {
+			entry.resource as s2 where $this.ofType(FHIR.Observation) -> t1 then {
+				s2.code as s3 -> t1 then {
+					s3.text as x -> t1.txt = x "rule20";
+				} "rule21";
+			} "rule22";
+		} "rule23";
+		entry -> ku_z_lab.vrb as t1 then {
+			Observation.id as x -> t1.guid = x "rule24";
+
+
+			Observation.status as x -> t1.autorizace = translate(x,'#cm9778','code') "rule25";
+
+			entry -> t1.text as t2 then {
+				entry -> t2.ptext as t3 then {
+					Observation.note as s2 -> t3 then {
+						s2.text as x -> t3.txt = x "rule26";
+					} "rule27";
+				} "rule28";
+			} "rule29";
+		} "rule30";
+}
+group vrc(source entry: Bundle, source Observation: Observation, target ku_z_lab: ku_z_lab){
+
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/cz-nclp-labpol-vs'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.klic_nclp = x "rule1";
+			} "rule2";
+		} "rule3";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKB.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.syst_klic = x "rule4";
+			} "rule5";
+		} "rule6";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJQ.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.komp_klic = x "rule7";
+
+
+				entry -> ku_z_lab.typ_cispol = 'N' "rule8";
+			} "rule9";
+		} "rule10";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJN.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typpol_fh = x "rule11";
+			} "rule12";
+		} "rule13";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIV.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.stav_vys = x "rule14";
+			} "rule15";
+		} "rule16";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIW.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typ_sdel_vys = x "rule17";
+			} "rule18";
+		} "rule19";
+		entry -> ku_z_lab.nazev_lclp as t1 then {
+			Observation.code as s2 -> t1 then {
+				s2.text as x -> t1.txt = x "rule20";
+			} "rule21";
+		} "rule22";
+		entry -> ku_z_lab.vrc as t1 then {
+			Observation.id as x -> t1.guid = x "rule23";
+
+			Observation.valueQuantity as s2 -> t1 then {
+				s2.value as x -> t1.hodnota = x "rule24";
+
+
+				s2.unit as x -> t1.jednotka = x "rule25";
+			} "rule26";
+		} "rule27";
+}
+group vrd(target vrdType: vrdType){
+
+}
+group vrf(source entry: Bundle, source Observation: Observation, target ku_z_lab: ku_z_lab){
+
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/cz-nclp-labpol-vs'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.klic_nclp = x "rule1";
+			} "rule2";
+		} "rule3";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKB.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.syst_klic = x "rule4";
+			} "rule5";
+		} "rule6";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJQ.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.komp_klic = x "rule7";
+
+
+				entry -> ku_z_lab.typ_cispol = 'N' "rule8";
+			} "rule9";
+		} "rule10";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJN.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typpol_fh = x "rule11";
+			} "rule12";
+		} "rule13";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIV.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.stav_vys = x "rule14";
+			} "rule15";
+		} "rule16";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIW.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typ_sdel_vys = x "rule17";
+			} "rule18";
+		} "rule19";
+		entry -> ku_z_lab.nazev_lclp as t1 then {
+			Observation.code as s2 -> t1 then {
+				s2.text as x -> t1.txt = x "rule20";
+			} "rule21";
+		} "rule22";
+		entry -> ku_z_lab.vrf as t1 then {
+			Observation.id as x -> t1.guid = x "rule23";
+		} "rule24";
+		entry -> ku_z_lab.vrf as t1 then {
+			entry -> t1.hodnota_kod as t2 then {
+				Observation.valueCodeableConcept as s2 -> t2 then {
+					s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJT.htm'=$this.system -> t2 then {
+						s3.code as x -> t2.txt = x "rule25";
+					} "rule26";
+				} "rule27";
+			} "rule28";
+		} "rule29";
+		entry -> ku_z_lab.vrf as t1 then {
+			entry -> t1.hodnota_text as t2 then {
+				Observation.valueCodeableConcept as s2 -> t2 then {
+					s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJT.htm'=$this.system -> t2 then {
+						s3.display as x -> t2.txt = x "rule30";
+					} "rule31";
+				} "rule32";
+			} "rule33";
+			entry -> t1.pozn as t2 then {
+				Observation.note as s2 -> t2 then {
+					s2.text as x -> t2.txt = x "rule34";
+				} "rule35";
+			} "rule36";
+		} "rule37";
+}
+group vrk(source DiagnosticReport: DiagnosticReport, source entry: Bundle, target ku_z_lab: ku_z_lab){
+
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/cz-nclp-labpol-vs'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.klic_nclp = x "rule1";
+			} "rule2";
+		} "rule3";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKB.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.syst_klic = x "rule4";
+			} "rule5";
+		} "rule6";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJQ.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.komp_klic = x "rule7";
+
+
+				DiagnosticReport -> ku_z_lab.typ_cispol = 'N' "rule8";
+			} "rule9";
+		} "rule10";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJN.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typpol_fh = x "rule11";
+			} "rule12";
+		} "rule13";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIV.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.stav_vys = x "rule14";
+			} "rule15";
+		} "rule16";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIW.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typ_sdel_vys = x "rule17";
+			} "rule18";
+		} "rule19";
+		DiagnosticReport -> ku_z_lab.nazev_lclp as t1 then {
+			DiagnosticReport.code as s2 -> t1 then {
+				s2.text as x -> t1.txt = x "rule20";
+			} "rule21";
+		} "rule22";
+		DiagnosticReport -> ku_z_lab.vrk as t1 then {
+			DiagnosticReport.id as x -> t1.guid = x "rule23";
+		} "rule24";
+		DiagnosticReport -> ku_z_lab.vrk as t1 then {
+			DiagnosticReport.code as s2 -> t1 then {
+				s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKQ.htm'=$this.system -> t1 then {
+					s3.code as x -> t1.systspec_kod = x "rule25";
+				} "rule26";
+			} "rule27";
+		} "rule28";
+		DiagnosticReport -> ku_z_lab.vrk as t1 then {
+			DiagnosticReport.code as s2 -> t1 then {
+				s2.coding as s3 where 'Subspec'=$this.system -> t1 then {
+					s3.code as x -> t1.spec_text = x "rule29";
+				} "rule30";
+			} "rule31";
+		} "rule32";
+		DiagnosticReport -> ku_z_lab.vrk as t1 then {
+			DiagnosticReport.code as s2 -> t1 then {
+				s2.coding as s3 where 'Subspec'=$this.system -> t1 then {
+					s3.display as x -> t1.subspec_text = x "rule33";
+
+				} "rule37";
+			} "rule38";
+		} "rule39";
+
+		DiagnosticReport -> ku_z_lab.vrk as t1 then {
+			DiagnosticReport.status as x -> t1.stav_zprac = translate(x,'#cm9690','code') "rule40";
+
+			DiagnosticReport -> t1.vrmp as t2 then {
+				DiagnosticReport.conclusion as x -> t2.txt = x "rule41";
+			} "rule42";
+		} "rule43";
+}
+group vrk_vrkpa(source Observation: Observation, target vrkpaType: vrkpaType){
+
+		Observation.id as s1 -> vrkpaType then {
+			s1.id as x -> vrkpaType.guid = x "rule1";
+		} "rule2";
+		Observation.code as s1 -> vrkpaType then {
+			s1.coding as s2 where 'https://dasta.mzcr.cz/DSAKM.htm'=$this.system -> vrkpaType then {
+				s2.code as x -> vrkpaType.agens_kod = x "rule3";
+			} "rule4";
+		} "rule5";
+}
+group vrn(source Observation: Observation, source entry: Bundle, target ku_z_lab: ku_z_lab){
+
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/cz-nclp-labpol-vs'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.klic_nclp = x "rule1";
+			} "rule2";
+		} "rule3";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKB.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.syst_klic = x "rule4";
+			} "rule5";
+		} "rule6";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJQ.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.komp_klic = x "rule7";
+
+
+				Observation -> ku_z_lab.typ_cispol = 'N' "rule8";
+			} "rule9";
+		} "rule10";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJN.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typpol_fh = x "rule11";
+			} "rule12";
+		} "rule13";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIV.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.stav_vys = x "rule14";
+			} "rule15";
+		} "rule16";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIW.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typ_sdel_vys = x "rule17";
+			} "rule18";
+		} "rule19";
+		Observation -> ku_z_lab.nazev_lclp as t1 then {
+			Observation.code as s2 -> t1 then {
+				s2.text as x -> t1.txt = x "rule20";
+			} "rule21";
+		} "rule22";
+		Observation -> ku_z_lab.vrn as t1 then {
+			Observation.id as x -> t1.guid = x "rule23";
+
+
+	//		y0 as x -> t1.priznak_kvant = x "rule24";
+
+
+	//		y0 as x -> t1.formrm = x "rule25";
+
+			Observation -> t1.hodnota as t2 then {
+				Observation.valueQuantity as s2 -> t2 then {
+					s2.value as x -> t2.txt = x "rule26";
+				} "rule27";
+			} "rule28";
+			Observation -> t1.jednotka as t2 then {
+				Observation.valueQuantity as s2 -> t2 then {
+					s2.unit as x -> t2.txt = x "rule29";
+				} "rule30";
+			} "rule31";
+		} "rule32";
+}
+group vro(source entry: Bundle, source DiagnosticReport: DiagnosticReport, target ku_z_lab: ku_z_lab){
+
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/cz-nclp-labpol-vs'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.klic_nclp = x "rule1";
+			} "rule2";
+		} "rule3";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKB.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.syst_klic = x "rule4";
+			} "rule5";
+		} "rule6";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJQ.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.komp_klic = x "rule7";
+
+
+				entry -> ku_z_lab.typ_cispol = 'N' "rule8";
+			} "rule9";
+		} "rule10";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJN.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typpol_fh = x "rule11";
+			} "rule12";
+		} "rule13";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIV.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.stav_vys = x "rule14";
+			} "rule15";
+		} "rule16";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIW.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typ_sdel_vys = x "rule17";
+			} "rule18";
+		} "rule19";
+		entry -> ku_z_lab.nazev_lclp as t1 then {
+			DiagnosticReport.code as s2 -> t1 then {
+				s2.text as x -> t1.txt = x "rule20";
+			} "rule21";
+		} "rule22";
+		entry -> ku_z_lab.vro as t1 then {
+			DiagnosticReport.id as x -> t1.guid = x "rule23";
+
+			entry -> t1.text as t2 then {
+				entry -> t2.ptext as t3 then {
+					DiagnosticReport.conclusion as x -> t3.txt = x "rule24";
+				} "rule25";
+			} "rule26";
+		} "rule27";
+		/*entry -> ku_z_lab.vro as t1 then {
+			entry -> t1.priloha as t2 then {
+				DiagnosticReport.presentedForm as s2 where ?exists? -> t2 then {
+
+				} "rule28";
+			} "rule29";
+		} "rule30";
+		entry -> ku_z_lab.vro as t1 then {
+			entry -> t1.priloha as t2 then {
+				DiagnosticReport.presentedForm as s2 where ?exists? -> t2 then {
+					s2.url as x -> t2.zdroj = x "rule31";
+				} "rule32";
+			} "rule33";
+		} "rule34";
+		entry -> ku_z_lab.vro as t1 then {
+			entry -> t1.priloha as t2 then {
+				DiagnosticReport.presentedForm as s2 where ?exists? -> t2 then {
+					s2.contentType as x -> t2.typ = x "rule35";
+				} "rule36";
+			} "rule37";
+		} "rule38";
+		entry -> ku_z_lab.vro as t1 then {
+			entry -> t1.int_pril as t2 then {
+				DiagnosticReport.presentedForm as s2 where ?exists? -> t2 then {
+
+				} "rule39";
+			} "rule40";
+		} "rule41";
+		entry -> ku_z_lab.vro as t1 then {
+			entry -> t1.int_pril as t2 then {
+				DiagnosticReport.presentedForm as s2 where ?exists? -> t2 then {
+					s2.title as x -> t2.nazev = x "rule42";
+				} "rule43";
+
+				y0 as x -> t2.encode = x "rule44";
+			} "rule45";
+		} "rule46";
+		entry -> ku_z_lab.vro as t1 then {
+			entry -> t1.int_pril as t2 then {
+				DiagnosticReport.presentedForm as s2 where ?exists? -> t2 then {
+					s2.contentType as x -> t2.typ = x "rule47";
+				} "rule48";
+			} "rule49";
+		} "rule50";
+		 */
+}
+group vrp(target vrpType: vrpType){
+
+}
+group vrr(source DiagnosticReport: DiagnosticReport, source entry: Bundle, target ku_z_lab: ku_z_lab){
+
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/cz-nclp-labpol-vs'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.klic_nclp = x "rule1";
+			} "rule2";
+		} "rule3";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKB.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.syst_klic = x "rule4";
+			} "rule5";
+		} "rule6";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJQ.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.komp_klic = x "rule7";
+
+
+				DiagnosticReport -> ku_z_lab.typ_cispol = 'N' "rule8";
+			} "rule9";
+		} "rule10";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJN.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typpol_fh = x "rule11";
+			} "rule12";
+		} "rule13";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIV.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.stav_vys = x "rule14";
+			} "rule15";
+		} "rule16";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIW.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typ_sdel_vys = x "rule17";
+			} "rule18";
+		} "rule19";
+		DiagnosticReport -> ku_z_lab.nazev_lclp as t1 then {
+			DiagnosticReport.code as s2 -> t1 then {
+				s2.text as x -> t1.txt = x "rule20";
+			} "rule21";
+		} "rule22";
+		DiagnosticReport -> ku_z_lab.vrr as t1 then {
+			DiagnosticReport.id as x -> t1.guid = x "rule23";
+
+
+			DiagnosticReport.status as x -> t1.autorizace = translate(x,'#cm9916','code') "rule24";
+
+			DiagnosticReport -> t1.text as t2 then {
+				DiagnosticReport -> t2.ptext as t3 then {
+					DiagnosticReport.text as s2 -> t3 then {
+						s2.div as s3 -> t3 then {
+							s3.text as s4 -> t3 then {
+								s4.txt as x -> t3.txt = x "rule25";
+							} "rule26";
+						} "rule27";
+					} "rule28";
+				} "rule29";
+			} "rule30";
+		} "rule31";
+}
+group vrs(source entry: Bundle, source Observation: Observation, target ku_z_lab: ku_z_lab){
+
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/cz-nclp-labpol-vs'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.klic_nclp = x "rule1";
+			} "rule2";
+		} "rule3";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKB.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.syst_klic = x "rule4";
+			} "rule5";
+		} "rule6";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJQ.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.komp_klic = x "rule7";
+
+
+				entry -> ku_z_lab.typ_cispol = 'N' "rule8";
+			} "rule9";
+		} "rule10";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJN.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typpol_fh = x "rule11";
+			} "rule12";
+		} "rule13";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIV.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.stav_vys = x "rule14";
+			} "rule15";
+		} "rule16";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIW.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typ_sdel_vys = x "rule17";
+			} "rule18";
+		} "rule19";
+		entry -> ku_z_lab.nazev_lclp as t1 then {
+			Observation.code as s2 -> t1 then {
+				s2.text as x -> t1.txt = x "rule20";
+			} "rule21";
+		} "rule22";
+		entry -> ku_z_lab.vrs as t1 then {
+			Observation.id as x -> t1.guid = x "rule23";
+		} "rule24";
+		entry -> ku_z_lab.vrs as t1 then {
+			entry -> t1.vrs_h as t2 then {
+				Observation.component as s2 -> t2 then {
+					s2.code as s3 -> t2 then {
+						s3.coding as s4 where 'https://dasta.mzcr.cz/DSAJT.htm'=$this.system -> t2 then {
+							s4.code as x -> t2.hodnota1_klic = x "rule25";
+						} "rule26";
+					} "rule27";
+				} "rule28";
+			} "rule29";
+		} "rule30";
+		entry -> ku_z_lab.vrs as t1 then {
+			entry -> t1.vrs_h as t2 then {
+				Observation.component as s2 -> t2 then {
+					s2.code as s3 where 'https://dasta.mzcr.cz/DSAJT.htm'=$this.system -> t2 then {
+						s3.text as x -> t2.hodnota1_text = x "rule31";
+					} "rule32";
+				} "rule33";
+
+			//	y0 as x -> t2.priznak2_kvant = x "rule34";
+			} "rule35";
+		} "rule36";
+}
+group vrx(source Observation: Observation, source entry: Bundle, target ku_z_lab: ku_z_lab){
+
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/cz-nclp-labpol-vs'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.klic_nclp = x "rule1";
+			} "rule2";
+		} "rule3";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKB.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.syst_klic = x "rule4";
+			} "rule5";
+		} "rule6";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJQ.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.komp_klic = x "rule7";
+
+
+				Observation -> ku_z_lab.typ_cispol = 'N' "rule8";
+			} "rule9";
+		} "rule10";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJN.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typpol_fh = x "rule11";
+			} "rule12";
+		} "rule13";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIV.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.stav_vys = x "rule14";
+			} "rule15";
+		} "rule16";
+		Observation.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIW.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typ_sdel_vys = x "rule17";
+			} "rule18";
+		} "rule19";
+		Observation -> ku_z_lab.nazev_lclp as t1 then {
+			Observation.code as s2 -> t1 then {
+				s2.text as x -> t1.txt = x "rule20";
+			} "rule21";
+		} "rule22";
+		Observation -> ku_z_lab.vrx as t1 then {
+			Observation.id as x -> t1.guid = x "rule23";
+
+			Observation -> t1.hodnota_nt as t2 then {
+				Observation.valueString as x -> t2.txt = x "rule24";
+			} "rule25";
+		} "rule26";
+}
+group vrz(source entry: Bundle, source DiagnosticReport: DiagnosticReport, target ku_z_lab: ku_z_lab){
+
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/cz-nclp-labpol-vs'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.klic_nclp = x "rule1";
+			} "rule2";
+		} "rule3";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAKB.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.syst_klic = x "rule4";
+			} "rule5";
+		} "rule6";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJQ.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.komp_klic = x "rule7";
+
+
+				entry -> ku_z_lab.typ_cispol = 'N' "rule8";
+			} "rule9";
+		} "rule10";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAJN.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typpol_fh = x "rule11";
+			} "rule12";
+		} "rule13";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIV.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.stav_vys = x "rule14";
+			} "rule15";
+		} "rule16";
+		DiagnosticReport.code as s2 -> ku_z_lab then {
+			s2.coding as s3 where 'https://dasta.mzcr.cz/DSAIW.htm'=$this.system -> ku_z_lab then {
+				s3.code as x -> ku_z_lab.typ_sdel_vys = x "rule17";
+			} "rule18";
+		} "rule19";
+		entry -> ku_z_lab.nazev_lclp as t1 then {
+			DiagnosticReport.code as s2 -> t1 then {
+				s2.text as x -> t1.txt = x "rule20";
+			} "rule21";
+		} "rule22";
+		entry -> ku_z_lab.vrz as t1 then {
+			DiagnosticReport.id as x -> t1.guid = x "rule23";
+
+			entry -> t1.text as t2 then {
+				entry -> t2.ptext as t3 then {
+					DiagnosticReport.conclusion as x -> t3.txt = x "rule24";
+				} "rule25";
+			} "rule26";
+		} "rule27";
+}
+group specimen_to_ku_z_lab(source bundle: Bundle, source Specimen: Specimen, target ku_z_labType: ku_z_labType){
+
+	bundle.entry as entry -> ku_z_labType then {
+		entry.resource as s2 where $this.ofType(FHIR.DiagnosticReport) ->  ku_z_labType then 
+		  vrk(s2,bundle,ku_z_labType) "rule6";
+		entry.resource as s2 where $this.ofType(FHIR.Observation) ->  ku_z_labType then 
+		  vrb(bundle,s2,ku_z_labType) "rule13";
+	} "rule14";
+
+}
