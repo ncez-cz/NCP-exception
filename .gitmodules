@@ -55,3 +55,12 @@
 [submodule "cda-fhir-maps"]
 	path = cda-fhir-maps
 	url = https://github.com/hl7ch/cda-fhir-maps.git
+[submodule "fml_examples/FHIRPathMappingLanguage"]
+	path = fml_examples/FHIRPathMappingLanguage
+	url = https://github.com/beda-software/FHIRPathMappingLanguage.git
+[submodule "fml_examples/fhir-transforms"]
+	path = fml_examples/fhir-transforms
+	url = https://github.com/NHSDigital/fhir-transforms.git
+[submodule "fml_examples/fhir-cross-version"]
+	path = fml_examples/fhir-cross-version
+	url = https://github.com/HL7/fhir-cross-version.git
